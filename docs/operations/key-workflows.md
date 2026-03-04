@@ -2,7 +2,7 @@
 
 **Purpose:** Step-by-step guides for common operations in the eight-organ system.
 **Audience:** A competent developer with GitHub experience but no prior knowledge of this system.
-**Last updated:** 2026-02-16
+**Last updated:** 2026-03-04
 
 ---
 
@@ -14,6 +14,7 @@
 4. [Submit an Application](#4-submit-an-application)
 5. [Run the Soak Test Monitor](#5-run-the-soak-test-monitor)
 6. [Add a New Repo to the System](#6-add-a-new-repo-to-the-system)
+7. [Run a Document Audit & Feature Extraction](#7-run-a-document-audit--feature-extraction)
 
 ---
 
@@ -321,6 +322,52 @@ crontab -e
    git commit -m "feat: add <repo-name> to ORGAN-II"
    git push origin main
    ```
+
+---
+
+## 7. Run a Document Audit & Feature Extraction
+
+Systematically read every document in a repo's `docs/` directory, extract product/feature ideas, deduplicate against existing tracking, and create GitHub issues for everything genuinely new.
+
+**Full SOP:** [`sop--document-audit-feature-extraction.md`](./sop--document-audit-feature-extraction.md)
+
+### When to run
+
+- New repo with existing documentation enters the system
+- Major bulk import of research, brainstorm, or reference materials
+- Quarterly review (Week 4 of the monthly cadence)
+- Pre-beta audit for an ORGAN-III product
+
+### Steps (summary)
+
+1. **Inventory** all `docs/` files — classify format, convert unreadable formats (pandoc/Calibre), build or update `MANIFEST.md`.
+
+2. **Read every document word-for-word.** Order: brainstorm → research → legal → architecture → planning → reference library. Extract every product idea, feature concept, or architectural suggestion with source citations.
+
+3. **Deduplicate** extractions against: `FEATURE-BACKLOG.md` (if it exists), all open GitHub issues (`gh issue list`), and the codebase (`grep`). Classify each as SKIP, ENHANCE, or CREATE.
+
+4. **Create GitHub issues** for every CREATE candidate. Title format: `feat: descriptive title`. Body: Source → Problem → Proposed Feature → Cross-References. Labels: `enhancement` + domain labels. Create in thematic batches, maintain a running tally.
+
+5. **Update artifacts:** `FEATURE-BACKLOG.md`, `MANIFEST.md`, reference `SYLLABUS.md` (if reference library was audited). Write an audit summary. Commit and push.
+
+### Quick commands
+
+```bash
+# Pre-audit: inventory existing issues
+gh issue list --repo <org>/<repo> --state open --limit 500
+
+# During audit: create issues
+gh issue create --repo <org>/<repo> --title "feat: ..." --body "..." --label "enhancement"
+
+# During audit: enhance existing issues
+gh issue comment <N> --repo <org>/<repo> --body "Additional context from audit..."
+
+# Format conversion
+pandoc -f epub -t plain input.epub -o output.txt
+pandoc -f pdf -t plain input.pdf -o output.txt
+```
+
+See the full SOP for the issue body template, label taxonomy, parallelization guide, and format conversion reference.
 
 ---
 
