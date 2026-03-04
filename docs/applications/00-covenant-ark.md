@@ -13,7 +13,7 @@
 
 ## A. Ground Truth Metrics
 
-*Updated: 2026-02-18. When these numbers change, update them here FIRST, then propagate.*
+*Updated: 2026-03-04. When these numbers change, update them here FIRST, then propagate.*
 
 | Metric | Value |
 |--------|-------|
@@ -22,16 +22,21 @@
 | GitHub organizations | 8 (7 organ orgs + 1 meta-org) |
 | Published essays | 46 (~404K+ words) |
 | Total documentation | ~410K+ words |
-| Named development sprints | 33 |
-| CI/CD workflows | 94+ repos with workflows |
+| Named development sprints | 33 completed + 48 cataloged |
+| Architecture Decision Records | 16 (ADR-001 through ADR-016) |
+| CI/CD workflows | 94 repos with workflows |
 | Dependency edges | 43 validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
 | CLAUDE.md coverage | 100% of eligible repos |
 | seed.yaml coverage | 100% of eligible repos |
-| Automated tests | 2,349+ across system |
+| Automated tests | 2,349+ across system (288 engine, 24 MCP) |
 | Validation scripts | 5 automated, all passing |
 | Flagship repos | 9 with full community health files |
+| Omega scorecard | 4/17 MET (#5, #6, #8, #13) |
+| Promotion pipeline | 55 CANDIDATE, 29 PUBLIC_PROCESS, 4 GRADUATED |
+| Schema version | v1.0.0 (6 JSON schemas, formalized 2026-03-04) |
+| GitHub issue tracking | 58 issues (omega + sprint catalog) |
 
 ### Organ Breakdown
 
@@ -42,9 +47,9 @@
 | III | Commerce | Ergon | 27 | SaaS, B2B, B2C products |
 | IV | Orchestration | Taxis | 7 | Governance, routing, coordination |
 | V | Public Process | Logos | 2 | Essays, building in public |
-| VI | Community | Koinonia | 4 | Salons, reading groups |
+| VI | Community | Koinonia | 6 | Salons, reading groups |
 | VII | Marketing | Kerygma | 4 | POSSE distribution, announcements |
-| Meta | Umbrella | Meta-Organvm | 6 | Cross-system governance |
+| Meta | Umbrella | Meta-Organvm | 7 | Cross-system governance |
 
 ---
 

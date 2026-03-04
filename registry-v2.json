@@ -1,7 +1,7 @@
 {
       "version": "2.0",
-      "schema_version": "0.5",
-      "schema_note": "Schema v0.5 (VERITAS Sprint 2026-02-13). implementation_status enum: ACTIVE|PROTOTYPE|SKELETON|DESIGN_ONLY|ARCHIVED. Revenue split: revenue_model (subscription|freemium|one-time|none) + revenue_status (pre-launch|beta|live|n/a). ci_workflow: ci-python.yml|ci-typescript.yml|ci-mixed.yml|ci-minimal.yml|null. platinum_status: boolean. Phase 0 schema (v0.2), hardened 2026-02-10. Four fields populated for all repos: dependencies (array of org/repo strings), promotion_status (LOCAL|CANDIDATE|PUBLIC_PROCESS|GRADUATED|ARCHIVED), tier (flagship|standard|stub|archive|infrastructure), last_validated (ISO 8601).",
+      "schema_version": "1.0.0",
+      "schema_note": "Schema v1.0.0 (formalized 2026-03-04). Promoted from v0.5 after 15+ days of production validation. implementation_status enum: ACTIVE|PROTOTYPE|SKELETON|DESIGN_ONLY|ARCHIVED. Revenue split: revenue_model (subscription|freemium|one-time|none) + revenue_status (pre-launch|beta|live|n/a). ci_workflow: ci-python.yml|ci-typescript.yml|ci-mixed.yml|ci-minimal.yml|null. platinum_status: boolean. Phase 0 schema (v0.2), hardened 2026-02-10. Four fields populated for all repos: dependencies (array of org/repo strings), promotion_status (LOCAL|CANDIDATE|PUBLIC_PROCESS|GRADUATED|ARCHIVED), tier (flagship|standard|stub|archive|infrastructure), last_validated (ISO 8601).",
       "deployment_model": "PARALLEL_ALL_ORGANS",
       "launch_date": "2026-02-11",
       "launch_date_note": "Phase -1 complete 2026-02-10. Bronze Sprint COMPLETE 2026-02-10. Silver Sprint COMPLETE 2026-02-10. Gold Sprint COMPLETE 2026-02-10. PHASE 2 MICRO-VALIDATION COMPLETE 2026-02-10. PHASE 3 COMPLETE 2026-02-11. SYSTEM LAUNCHED 2026-02-11. 9/9 launch criteria met. POSSE verified: Mastodon (HTTP 200) + Discord (HTTP 204). Jekyll site live with RSS (5 essays). All validation scripts pass.",
