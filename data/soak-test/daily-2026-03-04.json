@@ -1,0 +1,117 @@
+{
+  "date": "2026-03-04",
+  "collected_at": "2026-03-04T08:30:36.868383+00:00",
+  "validation": {
+    "registry_pass": true,
+    "registry_issues": [],
+    "dependency_pass": true,
+    "dependency_violations": 0,
+    "stale_repos": []
+  },
+  "ci": {
+    "total_checked": 89,
+    "passing": 43,
+    "failing": 26,
+    "unknown": 5,
+    "billing_locked": 15,
+    "billing_locked_repos": [
+      "organvm-i-theoria/recursive-engine--generative-entity",
+      "organvm-i-theoria/organon-noumenon--ontogenetic-morphe",
+      "organvm-i-theoria/auto-revision-epistemic-engine",
+      "organvm-i-theoria/narratological-algorithmic-lenses",
+      "organvm-i-theoria/call-function--ontological",
+      "organvm-i-theoria/sema-metra--alchemica-mundi",
+      "organvm-i-theoria/system-governance-framework",
+      "organvm-i-theoria/cognitive-archaelogy-tribunal",
+      "organvm-i-theoria/a-recursive-root",
+      "organvm-i-theoria/radix-recursiva-solve-coagula-redi",
+      "organvm-i-theoria/reverse-engine-recursive-run",
+      "organvm-i-theoria/collective-persona-operations",
+      "organvm-i-theoria/linguistic-atomization-framework",
+      "organvm-i-theoria/my-knowledge-base",
+      "organvm-i-theoria/scalable-lore-expert"
+    ],
+    "failures": [
+      "organvm-iii-ergon/classroom-rpg-aetheria: failure",
+      "organvm-iii-ergon/gamified-coach-interface: failure",
+      "organvm-iii-ergon/trade-perpetual-future: failure",
+      "organvm-iii-ergon/fetch-familiar-friends: failure",
+      "organvm-iii-ergon/sovereign-ecosystem--real-estate-luxury: failure",
+      "organvm-iii-ergon/public-record-data-scrapper: failure",
+      "organvm-iii-ergon/multi-camera--livestream--framework: failure",
+      "organvm-iii-ergon/universal-mail--automation: failure",
+      "organvm-iii-ergon/tab-bookmark-manager: failure",
+      "organvm-iii-ergon/the-actual-news: failure",
+      "organvm-iii-ergon/your-fit-tailored: failure",
+      "organvm-iii-ergon/my-block-warfare: failure",
+      "organvm-iii-ergon/life-my--midst--in: failure",
+      "organvm-iii-ergon/card-trade-social: failure",
+      "organvm-iii-ergon/hokage-chess: failure",
+      "organvm-iv-taxis/petasum-super-petasum: failure",
+      "organvm-vi-koinonia/koinonia-db: failure",
+      "organvm-vi-koinonia/community-hub: failure",
+      "organvm-vi-koinonia/salon-archive: failure",
+      "organvm-vi-koinonia/reading-group-curriculum: failure",
+      "organvm-vii-kerygma/social-automation: failure",
+      "organvm-vii-kerygma/.github: failure",
+      "meta-organvm/organvm-corpvs-testamentvm: failure",
+      "meta-organvm/organvm-engine: failure",
+      "meta-organvm/system-dashboard: failure",
+      "meta-organvm/organvm-mcp-server: failure"
+    ]
+  },
+  "engagement": {
+    "total_stars": 7,
+    "total_forks": 3,
+    "top_repos": {
+      "organvm-i-theoria/recursive-engine--generative-entity": {
+        "stars": 1,
+        "forks": 0,
+        "views_14d": 5,
+        "clones_14d": 82
+      },
+      "organvm-ii-poiesis/metasystem-master": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 4,
+        "clones_14d": 195
+      },
+      "organvm-ii-poiesis/a-mavs-olevm": {
+        "stars": 1,
+        "forks": 0,
+        "views_14d": 0,
+        "clones_14d": 111
+      },
+      "organvm-iii-ergon/public-record-data-scrapper": {
+        "stars": 2,
+        "forks": 3,
+        "views_14d": 10,
+        "clones_14d": 794
+      },
+      "organvm-iv-taxis/orchestration-start-here": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 8,
+        "clones_14d": 277
+      },
+      "organvm-iv-taxis/agentic-titan": {
+        "stars": 3,
+        "forks": 0,
+        "views_14d": 9,
+        "clones_14d": 279
+      },
+      "organvm-v-logos/public-process": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 11,
+        "clones_14d": 394
+      },
+      "meta-organvm/organvm-corpvs-testamentvm": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 6,
+        "clones_14d": 2005
+      }
+    }
+  }
+}
