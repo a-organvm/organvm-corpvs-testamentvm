@@ -56,8 +56,9 @@ There is no build system, test suite, or runtime code here. Executable artifacts
 
 - **Layer 0 (Genesis):** `docs/genesis/00-a`, `00-b`, `00-c`, `00-d` — conversational source material and audit
 - **Layer 1 (Phase 1 Planning):** `docs/planning/01` through `05`, `docs/standards/10-repository-standards.md`, `docs/standards/11-specification-driven-development.md` — sequential planning toolkit (scoring rubric, inventory, templates, checklists, risk map, repository standards, SDD methodology)
-- **Layer 2 (Execution):** `docs/strategy/phase-1-execution-index.md`, `docs/strategy/parallel-launch-strategy.md`
+- **Layer 2 (Execution):** `docs/strategy/phase-1-execution-index.md`, `docs/strategy/parallel-launch-strategy.md`, `docs/strategy/sprint-catalog.md` (76 named sprints across 18 categories)
 - **Layer 3 (v2 Active):** `docs/implementation/implementation-package-v2.md`, `docs/implementation/orchestration-system-v2.md`, `docs/implementation/public-process-map-v2.md`, `registry-v2.json`, `docs/implementation/github-actions-spec.md`
+- **Operations:** `docs/operations/` — rolling-todo.md (work queue), operational-cadence.md (anti-patterns, review rhythm), concordance.md (invocation symbol table), stranger-test-protocol.md, key-workflows.md
 - **Archive:** `docs/archive/` contains v1 predecessors (superseded by v2 documents)
 
 ### Cross-Document Dependency Map
@@ -140,6 +141,8 @@ All org references in docs, registry, and workflows use the resolved instance na
 - The execution plan is in `docs/strategy/roadmap-there-and-back-again.md` — the phased implementation roadmap from Phase -1 (org architecture) through Phase 3 (launch).
 - The project constitution is at `docs/memory/constitution.md` — immutable principles (Articles I-VI) and post-cross-validation amendments (A-D) that govern all specifications and quality gates.
 - Feature specifications live in `docs/specs/` — each deliverable (e.g., `docs/specs/bronze-sprint/`) contains a `spec.md` (requirements and success criteria) and `checklists/requirements.md` (validation checklist). The SDD methodology is defined in `docs/standards/11-specification-driven-development.md`.
+- The **governance quadrilateral** is: roadmap (`docs/strategy/there+back-again.md`) + cadence (`docs/operations/operational-cadence.md`) + catalog (`docs/strategy/sprint-catalog.md`) + rolling TODO (`docs/operations/rolling-todo.md`). These four documents govern all planning and execution.
+- **GitHub issue tracking:** 58 issues on `meta-organvm/organvm-corpvs-testamentvm` (omega criteria + sprint catalog) and 1 on `meta-organvm/organvm-engine` (scorecard fix). All omega criteria and unexecuted sprints have bidirectional links between issues and documentation.
 
 ## Invocation System
 
@@ -156,7 +159,7 @@ The governance corpus uses short IDs across 6 namespaces. When the user referenc
 | H1–H5 | Horizons | there+back-again.md | H3 = Generate Revenue |
 | AP-1–AP-7 | Anti-patterns | operational-cadence.md | AP-1 = Don't start another sprint |
 | W/SP/BS/LC/BL/ET/LO-II | E2G-II findings | e2g-ii-action-items.md | W1-II = Zero external contact |
-| 01–29 | Completed sprints | docs/specs/sprints/ | 29 = AUTOMATA |
+| 01–33 | Completed sprints | docs/specs/sprints/ | 33 = OPERATIO |
 
 CLI: `python3 scripts/invoke.py <ID>` for terminal lookup. See `docs/operations/concordance.md` for the full symbol table.
 
