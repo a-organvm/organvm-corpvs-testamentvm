@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: System Documentation
+    url: https://github.com/meta-organvm/organvm-corpvs-testamentvm/blob/main/docs/ANNOTATED-MANIFEST.md
+    about: "Full annotated manifest of all documents in this corpus"
+  - name: Invocation Concordance
+    url: https://github.com/meta-organvm/organvm-corpvs-testamentvm/blob/main/docs/operations/concordance.md
+    about: "Symbol table for all invocation IDs (X1, E3, #1-#17, etc.)"
