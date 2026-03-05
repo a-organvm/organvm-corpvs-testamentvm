@@ -10,6 +10,10 @@ on:
       - 'pyproject.toml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -51,13 +55,16 @@ jobs:
 
       - name: Validate Dependency Rules
         id: validate
+        env:
+          CURRENT_REPO: ${{ github.repository }}
         run: |
           python3 - <<'PYEOF'
           import json
+          import os
           import sys
           from collections import defaultdict
 
-          CURRENT_REPO = "${{ github.repository }}"
+          CURRENT_REPO = os.environ["CURRENT_REPO"]
 
           # Load registry
           with open("registry-v2.json") as f:
