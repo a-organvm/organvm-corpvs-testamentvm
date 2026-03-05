@@ -399,6 +399,68 @@ Meta (0 repos) umbrella over all of the above
 
 **No back-edges.** ORGAN-III cannot depend on ORGAN-II output; ORGAN-II cannot depend on ORGAN-III. Unidirectional only (with exception for orchestration/documentation layers).
 
+#### Dependency Graph (from `governance-rules.json`)
+
+```mermaid
+flowchart TD
+    I["ORGAN-I<br/>Theoria"]
+    II["ORGAN-II<br/>Poiesis"]
+    III["ORGAN-III<br/>Ergon"]
+    IV["ORGAN-IV<br/>Taxis"]
+    V["ORGAN-V<br/>Logos"]
+    VI["ORGAN-VI<br/>Koinonia"]
+    VII["ORGAN-VII<br/>Kerygma"]
+    META["META-ORGANVM"]
+
+    %% Core production chain (I -> II -> III)
+    I -->|implements| II
+    I --> III
+    II -->|commercializes| III
+
+    %% Community edges (I/II/III -> VI)
+    I --> VI
+    II --> VI
+    III --> VI
+
+    %% Distribution edge (III -> VII)
+    III --> VII
+
+    %% Orchestration layer (IV observes all)
+    IV --> I
+    IV --> II
+    IV --> III
+    IV --> V
+    IV --> VI
+    IV --> VII
+
+    %% Documentation layer (V documents I-III)
+    V --> I
+    V --> II
+    V --> III
+
+    %% Distribution layer (VII amplifies)
+    VII --> I
+    VII --> II
+    VII --> III
+    VII --> V
+    VII --> VI
+
+    %% Forbidden back-edges (highlighted)
+    II -.-x|FORBIDDEN| I
+    III -.-x|FORBIDDEN| II
+    III -.-x|FORBIDDEN| I
+
+    %% Styling
+    style I fill:#4a90d9,color:#fff
+    style II fill:#7b68ee,color:#fff
+    style III fill:#e67e22,color:#fff
+    style IV fill:#27ae60,color:#fff
+    style V fill:#3498db,color:#fff
+    style VI fill:#9b59b6,color:#fff
+    style VII fill:#e74c3c,color:#fff
+    style META fill:#2c3e50,color:#fff
+```
+
 ---
 
 ## Meta-System Documentation as Strategic Asset
