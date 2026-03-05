@@ -6,6 +6,7 @@ on:
     paths:
       - 'portfolio-site/**'
       - 'scripts/praxis-portfolio-generate.py'
+      - 'scripts/praxis-portfolio-verify-data.py'
       - '.github/workflows/pages-deploy.yml'
   workflow_dispatch:
 
@@ -35,7 +36,7 @@ jobs:
       - name: Build portfolio
         run: |
           cd portfolio-site
-          npm install
+          npm ci
           npm run build
       
       - name: Upload artifact

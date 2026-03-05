@@ -5,14 +5,19 @@
   "description": "ORGANVM — Eight-Organ Creative-Institutional System Portfolio",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "python3 ../scripts/praxis-portfolio-generate.py --output-dir src/data && cp ../system-metrics.json src/data/",
-    "build": "astro build",
+    "check-data": "python3 ../scripts/praxis-portfolio-verify-data.py --data-dir src/data",
+    "build": "npm run check-data && astro build",
+    "build:fresh": "npm run generate-data && npm run build",
     "preview": "astro preview",
     "generate-data": "python3 ../scripts/praxis-portfolio-generate.py --output-dir src/data && cp ../system-metrics.json src/data/"
   },
   "dependencies": {
     "astro": "^5.0.0",
     "@astrojs/sitemap": "^3.0.0"
+  },
+  "overrides": {
+    "svgo": "4.0.1",
+    "sax": "1.4.4"
   },
   "devDependencies": {
     "d3": "^7.9.0"

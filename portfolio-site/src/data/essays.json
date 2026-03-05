@@ -1,6 +1,54 @@
 {
-  "total": 42,
+  "total": 48,
   "essays": [
+    {
+      "path": "_posts/2026-03-05-the-autonomous-sprint.md",
+      "filename": "2026-03-05-the-autonomous-sprint.md",
+      "date": "2026-03-05",
+      "slug": "the-autonomous-sprint",
+      "title": "The Autonomous Sprint",
+      "url": "https://organvm-v-logos.github.io/public-process/2026/03/05/the-autonomous-sprint/"
+    },
+    {
+      "path": "_posts/2026-03-04-precision-over-volume-doctoral-thesis.md",
+      "filename": "2026-03-04-precision-over-volume-doctoral-thesis.md",
+      "date": "2026-03-04",
+      "slug": "precision-over-volume-doctoral-thesis",
+      "title": "Precision Over Volume Doctoral Thesis",
+      "url": "https://organvm-v-logos.github.io/public-process/2026/03/04/precision-over-volume-doctoral-thesis/"
+    },
+    {
+      "path": "_posts/2026-03-02-two-weeks-and-forty-six-essays.md",
+      "filename": "2026-03-02-two-weeks-and-forty-six-essays.md",
+      "date": "2026-03-02",
+      "slug": "two-weeks-and-forty-six-essays",
+      "title": "Two Weeks And Forty Six Essays",
+      "url": "https://organvm-v-logos.github.io/public-process/2026/03/02/two-weeks-and-forty-six-essays/"
+    },
+    {
+      "path": "_posts/2026-02-27-writing-as-system-architecture.md",
+      "filename": "2026-02-27-writing-as-system-architecture.md",
+      "date": "2026-02-27",
+      "slug": "writing-as-system-architecture",
+      "title": "Writing As System Architecture",
+      "url": "https://organvm-v-logos.github.io/public-process/2026/02/27/writing-as-system-architecture/"
+    },
+    {
+      "path": "_posts/2026-02-24-community-infrastructure-for-one.md",
+      "filename": "2026-02-24-community-infrastructure-for-one.md",
+      "date": "2026-02-24",
+      "slug": "community-infrastructure-for-one",
+      "title": "Community Infrastructure For One",
+      "url": "https://organvm-v-logos.github.io/public-process/2026/02/24/community-infrastructure-for-one/"
+    },
+    {
+      "path": "_posts/2026-02-21-the-distribution-problem.md",
+      "filename": "2026-02-21-the-distribution-problem.md",
+      "date": "2026-02-21",
+      "slug": "the-distribution-problem",
+      "title": "The Distribution Problem",
+      "url": "https://organvm-v-logos.github.io/public-process/2026/02/21/the-distribution-problem/"
+    },
     {
       "path": "_posts/2026-02-18-the-solo-auteur-method.md",
       "filename": "2026-02-18-the-solo-auteur-method.md",
@@ -340,5 +388,5 @@
   ],
   "feed_url": "https://organvm-v-logos.github.io/public-process/feed.xml",
   "site_url": "https://organvm-v-logos.github.io/public-process/",
-  "generated": "2026-02-26T15:20:51.983417+00:00"
+  "generated": "2026-03-05T02:26:45.286857+00:00"
 }

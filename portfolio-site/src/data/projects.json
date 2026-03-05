@@ -159,7 +159,7 @@
       "implementation_status": "ACTIVE",
       "ci_workflow": "ci-typescript.yml",
       "dependencies": [],
-      "promotion_status": "CANDIDATE"
+      "promotion_status": "PUBLIC_PROCESS"
     },
     {
       "name": "fetch-familiar-friends",
@@ -173,7 +173,7 @@
       "implementation_status": "ACTIVE",
       "ci_workflow": "ci-typescript.yml",
       "dependencies": [],
-      "promotion_status": "CANDIDATE"
+      "promotion_status": "PUBLIC_PROCESS"
     },
     {
       "name": "public-record-data-scrapper",
@@ -201,7 +201,7 @@
       "implementation_status": "ACTIVE",
       "ci_workflow": "ci-typescript.yml",
       "dependencies": [],
-      "promotion_status": "CANDIDATE"
+      "promotion_status": "PUBLIC_PROCESS"
     },
     {
       "name": "orchestration-start-here",
@@ -329,5 +329,5 @@
       "promotion_status": "LOCAL"
     }
   ],
-  "generated": "2026-02-26T15:20:51.636745+00:00"
+  "generated": "2026-03-05T02:26:44.854446+00:00"
 }

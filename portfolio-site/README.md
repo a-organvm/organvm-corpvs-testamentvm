@@ -13,28 +13,39 @@ The unified front door for the eight-organ creative-institutional system.
 
 | Page | Path | Data Source |
 |------|------|-------------|
-| Landing | `/` | `site-data/landing.json` |
-| Projects | `/projects/` | `site-data/projects.json` |
-| Essays | `/essays/` | `site-data/essays.json` |
-| Architecture | `/architecture/` | `site-data/graph.json` |
-| Dashboard | `/dashboard/` | `system-metrics.json` |
-| About | `/about/` | `site-data/about.json` |
+| Landing | `/` | `src/data/landing.json` |
+| Projects | `/projects/` | `src/data/projects.json` |
+| Essays | `/essays/` | `src/data/essays.json` |
+| Architecture | `/architecture/` | `src/data/graph.json` |
+| Dashboard | `/dashboard/` | `src/data/system-metrics.json` |
+| About | `/about/` | `src/data/about.json` |
 
 ## Development
 
 ```bash
-# Generate site data from registry
-npm run generate-data
-
 # Install dependencies
 npm install
 
 # Development server
 npm run dev
 
-# Production build
+# Production build using committed data snapshot
 npm run build
+
+# Regenerate committed data snapshot intentionally
+npm run generate-data
+
+# Regenerate data, then build
+npm run build:fresh
 ```
+
+## Data Policy
+
+`src/data/*.json` is a committed snapshot, not an ephemeral build artifact.
+
+- `npm run build` is non-mutating and verifies snapshot integrity before Astro builds.
+- `npm run generate-data` is the explicit refresh path.
+- Refreshes should be reviewed and committed intentionally.
 
 ## Data Pipeline
 
@@ -42,7 +53,7 @@ npm run build
 registry-v2.json
        |
        v
-praxis-portfolio-generate.py  -->  site-data/*.json
+praxis-portfolio-generate.py  -->  src/data/*.json (committed snapshot)
        |
        v
     Astro build  -->  dist/  -->  Vercel/GitHub Pages

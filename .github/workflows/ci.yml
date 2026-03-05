@@ -1,4 +1,4 @@
-name: Minimal CI
+name: CI
 
 on:
   push:
@@ -39,3 +39,28 @@ jobs:
 
       - name: Success
         run: echo "::notice::Minimal CI validation passed"
+
+  portfolio-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: portfolio-site/package-lock.json
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build portfolio with committed data snapshot policy
+        run: |
+          cd portfolio-site
+          npm ci
+          npm run build
