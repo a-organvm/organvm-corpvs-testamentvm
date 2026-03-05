@@ -1429,7 +1429,7 @@
                               "deployment_api_url": "https://inmidst-api.onrender.com",
                               "last_validated": "2026-02-28",
                               "note": "Transferred from 4444J99 personal account 2026-02-10. Deployed to Render free tier 2026-02-28 (esbuild API, Next.js web, Neon DB). Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-28.",
-                              "implementation_status": "PRODUCTION",
+                              "implementation_status": "ACTIVE",
                               "ci_workflow": "ci-typescript.yml",
                               "platinum_status": true,
                               "revenue_model": "freemium",
