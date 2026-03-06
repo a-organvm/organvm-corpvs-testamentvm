@@ -9,8 +9,8 @@
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
   "project_status": "PROPULSIO MAXIMA Sprint 2026-02-24. Batch promotion: 48 repos LOCAL\u2192CANDIDATE. Engine hardening: 192 tests, 15 MCP tools, platinum status. Previous sprints: SENSORIA, CONCORDIA, VERITAS, PRAXIS, CONVERGENCE, ALCHEMIA, GENESIS, AUTONOMY, PERFECTION, EXODUS, ASCENSION, PROPULSION, IGNITION.",
   "summary": {
-    "total_repos": 101,
-    "total_repos_note": "100 registry entries, all on GitHub. SENSORIA Sprint 2026-02-17: +3 META-ORGANVM repos (schema-definitions, organvm-engine, system-dashboard). CONCORDIA Sprint 2026-02-16: +6 orphan repos registered (meta-source--ledger-output, alchemical-synthesizer, ivi374ivi027-05, anon-hookup-now, render-second-amendment, select-or-left-or-right-or). 2026-02-14: +2 ORGAN-II repos (chthon-oneiros, krypto-velamen). VERITAS Sprint 2026-02-13: credibility hardening (PRODUCTION\u2192ACTIVE rename, revenue field split, essay date corrections). Previous: PRAXIS, CONVERGENCE, ALCHEMIA, GENESIS, AUTONOMY, PERFECTION, EXODUS, ASCENSION, PROPULSION, IGNITION. 7 explicitly archived.",
+    "total_repos": 102,
+    "total_repos_note": "101 registry entries, all on GitHub. 2026-03-06: +1 peer-audited--behavioral-blockchain (Styx) registered and promoted to flagship. SENSORIA Sprint 2026-02-17: +3 META-ORGANVM repos (schema-definitions, organvm-engine, system-dashboard). CONCORDIA Sprint 2026-02-16: +6 orphan repos registered (meta-source--ledger-output, alchemical-synthesizer, ivi374ivi027-05, anon-hookup-now, render-second-amendment, select-or-left-or-right-or). 2026-02-14: +2 ORGAN-II repos (chthon-oneiros, krypto-velamen). VERITAS Sprint 2026-02-13: credibility hardening (PRODUCTION\u2192ACTIVE rename, revenue field split, essay date corrections). Previous: PRAXIS, CONVERGENCE, ALCHEMIA, GENESIS, AUTONOMY, PERFECTION, EXODUS, ASCENSION, PROPULSION, IGNITION. 7 explicitly archived.",
     "operational_organs": 8,
     "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 \u2014 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
@@ -1002,7 +1002,7 @@
       "completion": "100% \u2014 21/21 non-infrastructure repos documented at 2,000+ words (~74K total)",
       "public_visibility": "MIXED (4 private, 18 public)",
       "portfolio_angle": "Demonstrates product-market thinking, sustained revenue generation, and ability to package systems for external users. Evidence of real-world impact.",
-      "repository_count": 27,
+      "repository_count": 28,
       "repositories": [
         {
           "name": "classroom-rpg-aetheria",
@@ -1580,6 +1580,26 @@
           "revenue_model": "none",
           "revenue_status": "n/a",
           "note": "Added CONCORDIA Sprint 2026-02-16."
+        },
+        {
+          "name": "peer-audited--behavioral-blockchain",
+          "org": "organvm-iii-ergon",
+          "status": "ACTIVE",
+          "public": true,
+          "type": "SaaS",
+          "description": "Styx — peer-audited behavioral market using loss aversion and financial stakes. NestJS API, Next.js web, React Native mobile, Tauri desktop. 499+ tests, formal thesis with 9 theorem proofs, 8 validation gates.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "CRITICAL - Most tested repo in system (499+ tests), formal academic thesis, full business organism with 7 agent departments",
+          "dependencies": [],
+          "promotion_status": "PUBLIC_PROCESS",
+          "tier": "flagship",
+          "last_validated": "2026-03-06",
+          "note": "Registered 2026-03-06 (structural integrity audit). Previously unregistered despite 159 commits. Promoted from standard to flagship tier based on substance: 499+ tests, 147 doc files, 7 CI workflows, 8 validation gates, formal thesis, Terraform IaC, 7 specialist agent departments.",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": "ci-typescript.yml",
+          "platinum_status": false,
+          "revenue_model": "subscription",
+          "revenue_status": "pre-launch"
         }
       ]
     },
@@ -2255,7 +2275,7 @@
       "estimated_total_words": 320000
     },
     "implementation_status_distribution": {
-      "ACTIVE": 90,
+      "ACTIVE": 91,
       "ARCHIVED": 10
     }
   }
