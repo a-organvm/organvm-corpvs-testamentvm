@@ -9,7 +9,7 @@
 
 ## Project Statement
 
-ORGANVM is a living creative-institutional system — eight interconnected organs governing theory, art, commerce, orchestration, public process, community, marketing, and meta-governance. Built by a single operator using an AI-conductor methodology, the system coordinates 103 repositories across 8 GitHub organizations with 43 registry dependency edges, 115 seed.yaml contract edges, and zero back-edge violations.
+ORGANVM is a living creative-institutional system — eight interconnected organs governing theory, art, commerce, orchestration, public process, community, marketing, and meta-governance. Built by a single operator using an AI-conductor methodology, the system coordinates 105 repositories across 8 GitHub organizations with 44 registry dependency edges, 115 seed.yaml contract edges, and zero back-edge violations.
 
 This application highlights the system's relevance to Google Creative Fellowship through:
 

@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-03-06T06:42:11.210152+00:00",
+  "generated": "2026-03-06T20:46:55.054879+00:00",
   "computed": {
-    "total_repos": 103,
-    "active_repos": 94,
+    "total_repos": 105,
+    "active_repos": 96,
     "archived_repos": 9,
     "total_organs": 8,
     "operational_organs": 8,
-    "ci_workflows": 94,
-    "dependency_edges": 43,
+    "ci_workflows": 96,
+    "dependency_edges": 44,
     "per_organ": {
       "ORGAN-I": {
         "name": "Theory",
@@ -20,7 +20,7 @@
       },
       "ORGAN-III": {
         "name": "Commerce",
-        "repos": 27
+        "repos": 28
       },
       "ORGAN-IV": {
         "name": "Orchestration",
@@ -40,11 +40,11 @@
       },
       "META-ORGANVM": {
         "name": "Meta",
-        "repos": 7
+        "repos": 8
       }
     },
     "implementation_status": {
-      "ACTIVE": 94,
+      "ACTIVE": 96,
       "ARCHIVED": 9
     },
     "sprints_completed": 33,
