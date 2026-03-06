@@ -2000,7 +2000,7 @@
       "completion": "100% \u2014 org profile expanded to 1,213 words",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "The meta-system itself is the primary portfolio asset. Demonstrates orchestration capacity, architectural reasoning, and systemic sustainability.",
-      "repository_count": 7,
+      "repository_count": 8,
       "repositories": [
         {
           "name": ".github",
@@ -2129,6 +2129,25 @@
           "note": "Created 2026-02-21. Python package using MCP SDK. Registers 15 tools across 6 groups: registry, seeds, graph, health, context, pitch. 24 passing tests. Enables autonomous cross-repo awareness for AI assistants. Updated 2026-02-24.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
+          "platinum_status": false
+        },
+        {
+          "name": "praxis-perpetua",
+          "org": "meta-organvm",
+          "status": "ACTIVE",
+          "public": false,
+          "description": "Process governance corpus: SOPs, session self-critique logs, derived principles, and continuous improvement templates",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "MEDIUM - Demonstrates process maturity and continuous improvement methodology",
+          "dependencies": [
+            "meta-organvm/organvm-corpvs-testamentvm"
+          ],
+          "promotion_status": "CANDIDATE",
+          "tier": "standard",
+          "last_validated": "2026-03-06",
+          "note": "Created 2026-03-06. Docs-only corpus for process governance. 6 standards (METADOC + 5 SOPs), 4 templates, session logs, derived principles. SOPs moved from superproject root.",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": "ci.yml",
           "platinum_status": false
         }
       ]
