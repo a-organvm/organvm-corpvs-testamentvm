@@ -1,0 +1,97 @@
+{
+  "date": "2026-03-06",
+  "collected_at": "2026-03-06T08:29:18.202560+00:00",
+  "validation": {
+    "registry_pass": true,
+    "registry_issues": [],
+    "dependency_pass": true,
+    "dependency_violations": 0,
+    "stale_repos": []
+  },
+  "ci": {
+    "total_checked": 89,
+    "passing": 67,
+    "failing": 6,
+    "unknown": 1,
+    "billing_locked": 15,
+    "billing_locked_repos": [
+      "organvm-i-theoria/recursive-engine--generative-entity",
+      "organvm-i-theoria/organon-noumenon--ontogenetic-morphe",
+      "organvm-i-theoria/auto-revision-epistemic-engine",
+      "organvm-i-theoria/narratological-algorithmic-lenses",
+      "organvm-i-theoria/call-function--ontological",
+      "organvm-i-theoria/sema-metra--alchemica-mundi",
+      "organvm-i-theoria/system-governance-framework",
+      "organvm-i-theoria/cognitive-archaelogy-tribunal",
+      "organvm-i-theoria/a-recursive-root",
+      "organvm-i-theoria/radix-recursiva-solve-coagula-redi",
+      "organvm-i-theoria/reverse-engine-recursive-run",
+      "organvm-i-theoria/collective-persona-operations",
+      "organvm-i-theoria/linguistic-atomization-framework",
+      "organvm-i-theoria/my-knowledge-base",
+      "organvm-i-theoria/scalable-lore-expert"
+    ],
+    "failures": [
+      "organvm-iv-taxis/agentic-titan: failure",
+      "organvm-v-logos/public-process: failure",
+      "organvm-vi-koinonia/salon-archive: failure",
+      "organvm-vii-kerygma/.github: failure",
+      "meta-organvm/organvm-engine: failure",
+      "meta-organvm/system-dashboard: failure"
+    ]
+  },
+  "engagement": {
+    "total_stars": 7,
+    "total_forks": 4,
+    "top_repos": {
+      "organvm-i-theoria/recursive-engine--generative-entity": {
+        "stars": 1,
+        "forks": 0,
+        "views_14d": 2,
+        "clones_14d": 98
+      },
+      "organvm-ii-poiesis/metasystem-master": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 4,
+        "clones_14d": 98
+      },
+      "organvm-ii-poiesis/a-mavs-olevm": {
+        "stars": 1,
+        "forks": 0,
+        "views_14d": 0,
+        "clones_14d": 383
+      },
+      "organvm-iii-ergon/public-record-data-scrapper": {
+        "stars": 2,
+        "forks": 4,
+        "views_14d": 30,
+        "clones_14d": 1121
+      },
+      "organvm-iv-taxis/orchestration-start-here": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 1,
+        "clones_14d": 184
+      },
+      "organvm-iv-taxis/agentic-titan": {
+        "stars": 3,
+        "forks": 0,
+        "views_14d": 7,
+        "clones_14d": 322
+      },
+      "organvm-v-logos/public-process": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 12,
+        "clones_14d": 384
+      },
+      "meta-organvm/organvm-corpvs-testamentvm": {
+        "stars": 0,
+        "forks": 0,
+        "views_14d": 12,
+        "clones_14d": 1774
+      }
+    }
+  }
+}
