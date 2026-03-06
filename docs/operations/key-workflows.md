@@ -338,17 +338,23 @@ Systematically read every document in a repo's `docs/` directory, extract produc
 - Quarterly review (Week 4 of the monthly cadence)
 - Pre-beta audit for an ORGAN-III product
 
-### Steps (summary)
+### Steps (summary — v2.0, 8 phases)
 
-1. **Inventory** all `docs/` files — classify format, convert unreadable formats (pandoc/Calibre), build or update `MANIFEST.md`.
+0. **Scope & Classify** — determine repo topology (single/multi-repo), classify document types (authored, transcript, reference, RFC/ADR, code/wiki), build routing table if multi-repo, plan agent allocation.
 
-2. **Read every document word-for-word.** Order: brainstorm → research → legal → architecture → planning → reference library. Extract every product idea, feature concept, or architectural suggestion with source citations.
+1. **Inventory & Triage** — list all files, classify format, convert unreadable formats (pandoc/Calibre), assign thematic cohorts or folder order, cluster shared-prompt docs, flag high-density docs, build `MANIFEST.md`.
 
-3. **Deduplicate** extractions against: `FEATURE-BACKLOG.md` (if it exists), all open GitHub issues (`gh issue list`), and the codebase (`grep`). Classify each as SKIP, ENHANCE, or CREATE.
+2. **Read & Extract** — read every document word-for-word using type-specific heuristics. Double-read high-density docs. Self-estimate coverage per document; re-read any below 70%.
 
-4. **Create GitHub issues** for every CREATE candidate. Title format: `feat: descriptive title`. Body: Source → Problem → Proposed Feature → Cross-References. Labels: `enhancement` + domain labels. Create in thematic batches, maintain a running tally.
+3. **Completeness Proof (mandatory gate)** — fresh agents re-read all docs adversarially. Produce coverage table, detect antagonistic tensions. Gate: >=80% overall, >=50% per-doc, all tensions identified. Fail -> return to Phase 2.
 
-5. **Update artifacts:** `FEATURE-BACKLOG.md`, `MANIFEST.md`, reference `SYLLABUS.md` (if reference library was audited). Write an audit summary. Commit and push.
+4. **Dedup & Tension Resolution** — cross-ref against backlog, issues, codebase. Merge source-cluster overlaps. Classify: SKIP / ENHANCE / CREATE / TENSION. Resolve each tension.
+
+5. **Synthesis** — identify cross-cutting themes (3+ docs or 2+ repos). Map theme dependencies, integrate tensions, compile risk data, produce execution order.
+
+6. **Create Issues** — route by Phase 0 routing table. Sequential creation (>=2s delay). Title: `feat: ...`. Body: Source, Problem, Proposed Feature, Tensions, Cross-References. Batch by category, maintain running tally.
+
+7. **Post-Audit Artifacts** — update `FEATURE-BACKLOG.md`, `MANIFEST.md`, `SYLLABUS.md` (variant: academic/tooling/mixed). Commit synthesis doc + completeness proof. Write audit summary with retrospective. File SOP amendment recommendations.
 
 ### Quick commands
 
@@ -367,7 +373,7 @@ pandoc -f epub -t plain input.epub -o output.txt
 pandoc -f pdf -t plain input.pdf -o output.txt
 ```
 
-See the full SOP for the issue body template, label taxonomy, parallelization guide, and format conversion reference.
+See the full SOP for the issue body template, label taxonomy, parallelization guide, format conversion reference, document type heuristics, multi-repo routing guide, completeness proof methodology, SYLLABUS variants, and retrospective template.
 
 ---
 
