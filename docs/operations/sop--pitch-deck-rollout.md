@@ -1,3 +1,5 @@
+> **Canonical location:** `praxis-perpetua/standards/SOP--pitch-deck-rollout.md`. This file is a reference copy retained for local context.
+
 # SOP: Pitch Deck Generation & Rollout
 
 **Created:** 2026-03-04

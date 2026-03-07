@@ -226,19 +226,32 @@ This corpus lives at `~/Workspace/meta-organvm/organvm-corpvs-testamentvm/`, alo
 ## System Context (auto-generated — do not edit)
 
 **Organ:** META-ORGANVM (Meta) | **Tier:** flagship | **Status:** PUBLIC_PROCESS
-**Org:** `unknown` | **Repo:** `organvm-corpvs-testamentvm`
+**Org:** `meta-organvm` | **Repo:** `organvm-corpvs-testamentvm`
 
 ### Edges
-- **Produces** → `unknown`: unknown
-- **Consumes** ← `ORGAN-IV`: unknown
+- **Produces** → `ORGAN-IV`: meta-documentation
+- **Consumes** ← `ORGAN-IV`: orchestration-artifact
 
 ### Siblings in Meta
-`.github`, `alchemia-ingestvm`, `schema-definitions`, `organvm-engine`, `system-dashboard`, `organvm-mcp-server`
+`.github`, `alchemia-ingestvm`, `schema-definitions`, `organvm-engine`, `system-dashboard`, `organvm-mcp-server`, `praxis-perpetua`
 
 ### Governance
 - *Standard ORGANVM governance applies*
 
-*Last synced: 2026-02-24T12:41:28Z*
+*Last synced: 2026-03-07T16:02:12Z*
+
+## Session Review Protocol
+
+At the end of each session that produces or modifies files:
+1. Run `organvm session review --latest` to get a session summary
+2. Check for unimplemented plans: `organvm session plans --project .`
+3. Export significant sessions: `organvm session export <id> --slug <slug>`
+
+Transcripts are on-demand (never committed):
+- `organvm session transcript <id>` — conversation summary
+- `organvm session transcript <id> --unabridged` — full audit trail
+- `organvm session prompts <id>` — human prompts only
+
 <!-- ORGANVM:AUTO:END -->
 
 

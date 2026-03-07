@@ -2,7 +2,14 @@
 
 **Purpose:** Step-by-step guides for common operations in the eight-organ system.
 **Audience:** A competent developer with GitHub experience but no prior knowledge of this system.
-**Last updated:** 2026-03-04
+**Last updated:** 2026-03-07
+
+> **Note:** Sections 2 (Promote a Repo), 3 (Publish an Essay), and 6 (Add a New Repo) have been formalized as governed SOPs in `praxis-perpetua/standards/`. The canonical procedures are:
+> - Section 2 -> `SOP--promotion-and-state-transitions.md`
+> - Section 3 -> `SOP--essay-publishing-and-distribution.md`
+> - Section 6 -> `SOP--repo-onboarding-and-habitat-creation.md`
+>
+> The steps below are retained as quick-reference operational guides tied to this corpus's specific scripts and toolchain.
 
 ---
 

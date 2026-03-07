@@ -6,3 +6,6 @@
 
 # Scratch/working files
 .scratch/
+
+# Bulk atom pipeline outputs (committed summaries + manifest only)
+data/atoms/*.jsonl

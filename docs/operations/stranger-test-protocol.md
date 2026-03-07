@@ -1,3 +1,5 @@
+> **Canonical location:** `praxis-perpetua/standards/SOP--stranger-test-protocol.md`. This file is a reference copy retained for local context.
+
 # Stranger Test Protocol
 
 **Purpose:** Validate that the eight-organ system is navigable by someone encountering it for the first time.

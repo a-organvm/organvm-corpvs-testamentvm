@@ -1,3 +1,5 @@
+> **Canonical location:** `praxis-perpetua/standards/SOP--cicd-resilience-and-recovery.md`. This file is a reference copy retained for local context.
+
 # SOP: CI/CD Pipeline Resilience & Recovery
 
 **Created:** 2026-03-06
