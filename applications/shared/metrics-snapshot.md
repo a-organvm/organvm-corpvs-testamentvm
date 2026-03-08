@@ -8,7 +8,7 @@
 | Active status | 96 |
 | Archived | 9 |
 | Organs operational | 8/8 |
-| CI/CD workflows | 96+ |
+| CI/CD workflows | 100+ |
 | Dependency edges | 44 |
 | Back-edge violations | 0 |
 | Published essays | 48 |

@@ -203,7 +203,7 @@ Grant reviewers evaluate:
 >
 > **Evidence of Capacity:**
 > - 105 repositories across 8 organizations, all operational
-> - 96+ CI/CD pipelines, 11 governance workflows, automated monthly audits
+> - 100+ CI/CD pipelines, 11 governance workflows, automated monthly audits
 > - 42 published essays (~150K words)
 > - Flagship projects with >1,000 tests each
 > - Complete documentation at portfolio quality (~404K+ words)

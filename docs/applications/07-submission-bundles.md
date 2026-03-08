@@ -285,7 +285,7 @@ That's eval infrastructure. I want to build it for the systems that matter most.
 
 *Agent harness design.* agentic-titan is a multi-agent orchestration framework with 1,095 tests across 18 development phases. The test framework itself IS an agent harness. a-i-council--coliseum takes this further: multi-agent deliberation where AI agents debate positions and synthesize conclusions — evaluating the quality of that synthesis requires exactly the kind of multi-turn eval infrastructure this role builds.
 
-*Production systems end-to-end.* I shipped the eight-organ system from architecture through deployment: 96+ CI/CD pipelines, automated health audits, dependency validation, promotion state machine. I own the full lifecycle.
+*Production systems end-to-end.* I shipped the eight-organ system from architecture through deployment: 100+ CI/CD pipelines, automated health audits, dependency validation, promotion state machine. I own the full lifecycle.
 
 *Feedback loops that strengthen systems.* The system uses a tiered documentation approach (Bronze/Silver/Gold) where validation results feed directly into the next sprint. Regression monitoring, golden datasets, and drift detection — these are eval patterns applied to infrastructure.
 

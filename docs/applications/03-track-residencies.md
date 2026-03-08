@@ -301,7 +301,7 @@ See [11-funding-research-exhaustive.md](./11-funding-research-exhaustive.md) Par
 
 1. **The process IS the product.** The 42 essays, the governance specifications, the public documentation — these aren't supplements to the work. They ARE the work. The creative process, made visible and governable, is the primary output.
 
-2. **Solo production at institutional scale.** One person coordinating 105 repositories through documented governance, using AI tools as compositional instruments. 33 named sprints, ~404K+ words, 96+ CI/CD workflows — the system is evidence this mode of production works.
+2. **Solo production at institutional scale.** One person coordinating 105 repositories through documented governance, using AI tools as compositional instruments. 33 named sprints, ~404K+ words, 100+ CI/CD workflows — the system is evidence this mode of production works.
 
 3. **5+ years of sustained practice.** This isn't a proposal — it's an ongoing body of work requesting a context (the residency) to deepen and share. 33 development sprints, ~404K+ words, fully operational.
 

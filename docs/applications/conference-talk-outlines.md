@@ -512,7 +512,7 @@ These metrics appear across all three talks and should be kept consistent. Sourc
 | Documentation volume | ~404K+ words | system metrics |
 | Published essays | 48 | ORGAN-V public-process |
 | Automated tests | 2,349+ | CI aggregation |
-| CI/CD workflows | 96+ | registry-v2.json |
+| CI/CD workflows | 100+ | registry-v2.json |
 | JSON schemas | 6 (all v1.0.0) | schema-definitions |
 | ADRs | 16 | docs/adr/ |
 | Completed sprints | 33 | sprint catalog |

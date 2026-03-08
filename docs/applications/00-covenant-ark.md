@@ -24,7 +24,7 @@
 | Total documentation | ~410K+ words |
 | Named development sprints | 33 completed + 48 cataloged |
 | Architecture Decision Records | 16 (ADR-001 through ADR-016) |
-| CI/CD workflows | 96+ repos with workflows |
+| CI/CD workflows | 100+ repos with workflows |
 | Dependency edges | 44 validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
@@ -188,7 +188,7 @@ Frame the same body of work differently for different audiences:
 
 ### 3. Creative Technologist (tech grants, selective roles)
 - **Narrative:** "Production-grade AI orchestration with creative-artistic applications"
-- **Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 96+ CI/CD workflows
+- **Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 100+ CI/CD workflows
 - **Targets:** Google Creative Lab, Processing Foundation, consulting clients, selective tech roles
 
 ### 4. Community Practitioner (community-focused funding)
@@ -217,7 +217,7 @@ What you can claim, with proof:
 | ~404K+ words in essays | Word count of _posts/ | Measured at deploy |
 | ~410K+ total words | Aggregate across all repos | system-metrics.json |
 | 33 development sprints | docs/specs/sprints/ | 01-ignition through 33-operatio |
-| 96+ CI/CD workflows | Per-repo .github/workflows/ | Counted in MANIFESTATIO audit |
+| 100+ CI/CD workflows | Per-repo .github/workflows/ | Counted in MANIFESTATIO audit |
 | 44 dependency edges, 0 violations | validate-dependencies.yml | Weekly automated check |
 | 2,349+ tests | agentic-titan (1,095) + recursive-engine (1,254) | Package test suites |
 | 100% CLAUDE.md coverage | Per-repo CLAUDE.md files | SENSORIA audit |
