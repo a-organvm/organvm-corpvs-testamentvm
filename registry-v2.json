@@ -256,12 +256,12 @@
           "documentation_status": "INFRASTRUCTURE",
           "portfolio_relevance": "INTERNAL",
           "dependencies": [],
-          "promotion_status": "LOCAL",
+          "promotion_status": "PUBLIC_PROCESS",
           "tier": "infrastructure",
           "last_validated": "2026-02-10",
           "note": "Silver Sprint: org profile README expanded to 620 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
-          "ci_workflow": "",
+          "ci_workflow": "ci.yml",
           "platinum_status": true
         },
         {
@@ -421,12 +421,12 @@
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "MEDIUM - TypeScript monorepo with turbo/pnpm workspace",
           "dependencies": [],
-          "promotion_status": "LOCAL",
+          "promotion_status": "PUBLIC_PROCESS",
           "tier": "standard",
           "last_validated": "2026-02-16",
           "implementation_status": "ACTIVE",
-          "ci_workflow": "",
-          "platinum_status": false,
+          "ci_workflow": "ci.yml",
+          "platinum_status": true,
           "note": "Added CONCORDIA Sprint 2026-02-16. Not part of original documentation sprints."
         }
       ]
@@ -933,12 +933,12 @@
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Demonstrates creative systems design for multimedia horror and reality-blurring narrative",
           "dependencies": [],
-          "promotion_status": "LOCAL",
+          "promotion_status": "PUBLIC_PROCESS",
           "tier": "standard",
           "last_validated": "2026-02-14",
           "implementation_status": "ACTIVE",
-          "ci_workflow": "",
-          "platinum_status": false,
+          "ci_workflow": "ci.yml",
+          "platinum_status": true,
           "note": "Created 2026-02-14. Creative theory document corpus \u2014 ~20 markdown files exploring psychological horror, surrealism, found footage, digital paranoia. Promoted DESIGN_ONLY\u2192ACTIVE: substantive intellectual content (document corpus IS the deliverable, like organvm-corpvs-testamentvm)."
         },
         {
@@ -985,12 +985,12 @@
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - MFA thesis digital artifact, demonstrates creative-technical synthesis",
           "dependencies": [],
-          "promotion_status": "LOCAL",
+          "promotion_status": "PUBLIC_PROCESS",
           "tier": "standard",
           "last_validated": "2026-02-16",
           "implementation_status": "ACTIVE",
-          "ci_workflow": "",
-          "platinum_status": false,
+          "ci_workflow": "ci.yml",
+          "platinum_status": true,
           "note": "Added CONCORDIA Sprint 2026-02-16. MFA thesis project."
         }
       ]
