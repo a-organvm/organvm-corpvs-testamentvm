@@ -36,7 +36,7 @@
 
 **Slide 4 — What I Actually Built**
 - 103 repositories, 8 GitHub organizations, 3 weeks
-- 404,000+ words of documentation
+- 878,651+ words of documentation
 - 46 published essays
 - 2,349 automated tests, 94 CI/CD workflows
 - 6 JSON schemas, 16 ADRs
@@ -239,7 +239,7 @@
 - Process documentation IS the primary deliverable
 - The 46 essays about building the system ARE the system's most visible output
 - Grant reviewers and hiring managers see methodology, not just artifacts
-- The governance corpus (~404K+ words) is evidence of capability
+- The governance corpus (~879K+ words) is evidence of capability
 - "Documenting the building is building"
 
 **SECTION 3: THE DECISIONS (8 min)**
@@ -402,7 +402,7 @@
 - "These organs do not make things. They make the making possible."
 
 **Slide 10 — Organ VIII: Meta**
-- The governance corpus (~404K+ words), the registry, the schemas
+- The governance corpus (~879K+ words), the registry, the schemas
 - Custom CLI (`organvm` — 12 command groups)
 - MCP server (16 tools) exposing the system graph to AI sessions
 - System dashboard with dependency visualization
@@ -509,8 +509,8 @@ These metrics appear across all three talks and should be kept consistent. Sourc
 |--------|-------|--------|
 | Total repositories | 105 | registry-v2.json |
 | GitHub organizations | 8 | registry-v2.json |
-| Documentation volume | ~404K+ words | system metrics |
-| Published essays | 48 | ORGAN-V public-process |
+| Documentation volume | ~879K+ words | system metrics |
+| Published essays | 0 | ORGAN-V public-process |
 | Automated tests | 2,349+ | CI aggregation |
 | CI/CD workflows | 96+ | registry-v2.json |
 | JSON schemas | 6 (all v1.0.0) | schema-definitions |

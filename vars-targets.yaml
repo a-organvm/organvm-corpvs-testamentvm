@@ -1,0 +1,40 @@
+# Files containing <!-- v:KEY --> variable bindings.
+# Resolved by `organvm refresh`.
+#
+# Syntax: <!-- v:VAR_NAME -->value<!-- /v -->
+# See system-vars.json for available variable names.
+
+targets:
+  # Org profile READMEs
+  - root: "~/Workspace/organvm-i-theoria/.github"
+    files: ["profile/README.md"]
+  - root: "~/Workspace/organvm-ii-poiesis/.github"
+    files: ["profile/README.md"]
+  - root: "~/Workspace/organvm-iii-ergon/.github"
+    files: ["profile/README.md"]
+  - root: "~/Workspace/organvm-v-logos/.github"
+    files: ["profile/README.md"]
+  - root: "~/Workspace/organvm-vi-koinonia/.github"
+    files: ["profile/README.md"]
+  - root: "~/Workspace/organvm-vii-kerygma/.github"
+    files: ["profile/README.md"]
+  - root: "~/Workspace/meta-organvm/.github"
+    files: ["profile/README.md"]
+
+  # Workspace context files
+  - root: "~/Workspace"
+    files: ["CLAUDE.md", "GEMINI.md", "AGENTS.md"]
+
+  # Corpus docs
+  - root: "~/Workspace/meta-organvm/organvm-corpvs-testamentvm"
+    files:
+      - "README.md"
+      - "CLAUDE.md"
+
+  # Application pipeline (composable templates only)
+  - root: "~/Workspace/4444J99/application-pipeline"
+    globs:
+      - "blocks/**/*.md"
+      - "strategy/*.md"
+      - "docs/*.md"
+      - "docs/thesis/*.md"

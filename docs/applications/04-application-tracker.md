@@ -367,7 +367,7 @@ No applications needed — build this pipeline through direct outreach and platf
 
 ### 4.3 — Documentation Consulting
 - **Rate:** $2,500–$15,000/project
-- **Credential:** ~404K+ words of portfolio-quality documentation
+- **Credential:** ~879K+ words of portfolio-quality documentation
 - **Action:** Target startups needing technical documentation, open-source projects
 
 ---
@@ -414,7 +414,7 @@ Premium publications that pay professional rates for exactly the kind of essays 
 ### 6.4 — MIT Technology Review / Wired / Aeon
 - **Rate:** MIT TR $1-3/word ($2.5K-12K), Wired $2,500+ starting, Aeon $500-1,500
 - **Topic fit:** AI, creative technology, LLMs. High prestige + high pay.
-- **Pitch angle:** "The AI-Conductor Model: How one person used Claude to coordinate 100 repos, 33 sprints, and ~404K+ words."
+- **Pitch angle:** "The AI-Conductor Model: How one person used Claude to coordinate 100 repos, 33 sprints, and ~879K+ words."
 - **Notes:** Highest-value outlets. Competitive but the story is genuinely unusual.
 
 ---

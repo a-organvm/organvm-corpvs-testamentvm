@@ -1,0 +1,188 @@
+{
+  "score": 4,
+  "total": 17,
+  "in_progress": 3,
+  "generated": "2026-03-08T16:11:39",
+  "criteria": [
+    {
+      "id": 1,
+      "name": "30-day soak test passes (\u22643 incidents)",
+      "horizon": "H1",
+      "measurement": "Soak test report",
+      "auto": true,
+      "status": "IN_PROGRESS",
+      "value": "21/30 days, 0 incidents",
+      "evidence": ""
+    },
+    {
+      "id": 2,
+      "name": "Stranger test score \u226580%",
+      "horizon": "H1",
+      "measurement": "Test protocol results",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "Protocol ready, no participant",
+      "evidence": ""
+    },
+    {
+      "id": 3,
+      "name": "Engagement baseline (30 days of data)",
+      "horizon": "H1",
+      "measurement": "Engagement report",
+      "auto": true,
+      "status": "IN_PROGRESS",
+      "value": "21 days of data",
+      "evidence": ""
+    },
+    {
+      "id": 4,
+      "name": "Runbooks validated by second operator",
+      "horizon": "H1",
+      "measurement": "Validation log",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "Runbooks written, not validated",
+      "evidence": ""
+    },
+    {
+      "id": 5,
+      "name": "\u22651 application submitted",
+      "horizon": "H2",
+      "measurement": "Application tracker",
+      "auto": false,
+      "status": "MET",
+      "value": "1 submitted (Doris Duke / Mozilla AMT)",
+      "evidence": "Doris Duke / Mozilla AMT, submitted 2026-02-24"
+    },
+    {
+      "id": 6,
+      "name": "AI-conductor essay published",
+      "horizon": "H2",
+      "measurement": "Public-process URL",
+      "auto": false,
+      "status": "MET",
+      "value": "Essay #9 published",
+      "evidence": "public-process essay #9, 2026-02-12"
+    },
+    {
+      "id": 7,
+      "name": "\u22653 external feedback collected",
+      "horizon": "H2",
+      "measurement": "Feedback synthesis doc",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "0 feedback",
+      "evidence": ""
+    },
+    {
+      "id": 8,
+      "name": "\u22651 ORGAN-III product live",
+      "horizon": "H3",
+      "measurement": "Product URL + user count",
+      "auto": false,
+      "status": "MET",
+      "value": "12 products live across Netlify/Render",
+      "evidence": "12 products live across Netlify/Render, 2026-02-28"
+    },
+    {
+      "id": 9,
+      "name": "revenue_status: live for \u22651 entry",
+      "horizon": "H3",
+      "measurement": "registry-v2.json",
+      "auto": true,
+      "status": "NOT_MET",
+      "value": "$0 MRR",
+      "evidence": ""
+    },
+    {
+      "id": 10,
+      "name": "MRR \u2265 system operating costs",
+      "horizon": "H3",
+      "measurement": "Financial record",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "$0 MRR",
+      "evidence": ""
+    },
+    {
+      "id": 11,
+      "name": "\u22652 salons/events with external participants",
+      "horizon": "H4",
+      "measurement": "Event records",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "Infrastructure only",
+      "evidence": ""
+    },
+    {
+      "id": 12,
+      "name": "\u22653 external contributions",
+      "horizon": "H4",
+      "measurement": "GitHub activity",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "5 good-first-issues created",
+      "evidence": ""
+    },
+    {
+      "id": 13,
+      "name": "\u22651 organic inbound link",
+      "horizon": "H4",
+      "measurement": "Analytics",
+      "auto": false,
+      "status": "MET",
+      "value": "LobeHub organic indexing of ORGAN-IV skills",
+      "evidence": "LobeHub organic indexing of ORGAN-IV skills, 2026-02-28"
+    },
+    {
+      "id": 14,
+      "name": "\u22651 recognition event",
+      "horizon": "H5",
+      "measurement": "Evidence URL",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "0 external recognition",
+      "evidence": ""
+    },
+    {
+      "id": 15,
+      "name": "Portfolio updated with validation",
+      "horizon": "H5",
+      "measurement": "Portfolio site",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "Portfolio live, no validation data",
+      "evidence": ""
+    },
+    {
+      "id": 16,
+      "name": "Bus factor >1 (validated)",
+      "horizon": "H1+H4",
+      "measurement": "Second operator log",
+      "auto": false,
+      "status": "NOT_MET",
+      "value": "Runbooks written, not tested",
+      "evidence": ""
+    },
+    {
+      "id": 17,
+      "name": "System operates 30+ days autonomously",
+      "horizon": "H1",
+      "measurement": "Soak test data",
+      "auto": true,
+      "status": "IN_PROGRESS",
+      "value": "21/30 days",
+      "evidence": ""
+    }
+  ],
+  "soak": {
+    "total_snapshots": 21,
+    "streak_days": 21,
+    "first_date": "2026-02-16",
+    "last_date": "2026-03-08",
+    "gaps": [],
+    "critical_incidents": 0,
+    "target_days": 30,
+    "start_date": "2026-02-16"
+  }
+}

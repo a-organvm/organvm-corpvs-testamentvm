@@ -1,0 +1,42 @@
+{
+  "generated": "2026-03-08T08:46:03.987032+00:00",
+  "dry_run": false,
+  "filters": {
+    "agent": null,
+    "organ": null
+  },
+  "files": {
+    "atomized-tasks.jsonl": {
+      "count": 2786,
+      "sha256": "264c2cf3d1f39d017a07df34a9ab2355ddcd900ea002baf294acfce090f88299"
+    },
+    "annotated-prompts.jsonl": {
+      "count": 4025,
+      "sha256": "c07f0d0ee936dad59d031a4b640aab89388ddcbd4489355df3e8fa682cc10018"
+    },
+    "atom-links.jsonl": {
+      "count": 1968,
+      "sha256": "a33833d9f994124314d0e03c03704bbb5e5b63555d01bc4fe908ba004d55de68"
+    },
+    "plan-index.json": {
+      "count": 179
+    }
+  },
+  "quality": {
+    "null_organ_tasks": 19,
+    "empty_fingerprint_prompts": 2669,
+    "link_threshold": 0.3
+  },
+  "counts": {
+    "plans_parsed": 192,
+    "tasks": 2786,
+    "prompts": 4025,
+    "noise_skipped": 1611,
+    "sessions": 1440,
+    "threads": 109,
+    "links": 1968,
+    "reconcile_completed": 296,
+    "reconcile_partial": 14,
+    "errors": 0
+  }
+}
