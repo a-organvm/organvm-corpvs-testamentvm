@@ -570,6 +570,14 @@ Progress on omega looks like:
 
 **Test:** "Does this advance an omega criterion, or does it make my dashboard look better?" If dashboard, defer it to Friday review.
 
+### AP-8: Don't Spend Energy Without a Revenue Path
+
+The most insidious anti-pattern: work that feels meaningful but has no traceable line to income. Every TODO item, sprint, and session must declare one of six revenue pathways: `direct-product`, `consulting-service`, `content-ip`, `grant-award`, `employment`, or `infrastructure` (with payoff horizon).
+
+This is Essay 36 ("Construction Addiction") made operational. A sustained, measurable increase in internal metrics that coexists with zero change in the only metrics that actually matter — that's not progress, that's self-soothing.
+
+**Test:** "Which of the six pathways does this advance? If 'infrastructure', when does the payoff arrive?" If you can't answer, you're masturbating.
+
 ---
 
 ## APPENDIX: Quick Reference Card
@@ -625,6 +633,7 @@ Progress on omega looks like:
 ║  "Did something actually change?"                            ║
 ║  "Has an external person motivated this?"                    ║
 ║  "Does this advance an omega criterion?"                     ║
+║  "Which revenue pathway does this serve?"                    ║
 ║                                                              ║
 ║  COMMANDS                                                    ║
 ║  gh run list --repo organvm-iv-taxis/orchestration-start-    ║
