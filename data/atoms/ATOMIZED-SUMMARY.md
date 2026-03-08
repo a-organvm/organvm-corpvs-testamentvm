@@ -1,6 +1,6 @@
 # Plan Atomization Summary
 **Generated**: 2026-03-08
-**Plans parsed**: 192 | **Tasks extracted**: 2786
+**Plans parsed**: 224 | **Tasks extracted**: 3176
 
 ## By Project
 
@@ -11,13 +11,13 @@
 | 4444J99/portfolio/.claude/plans | 7 | 98 | 0 | 98 | 0 |
 | 4444J99/portfolio/.codex/plans | 1 | 1 | 0 | 1 | 0 |
 | 4444J99/portfolio/.gemini/plans | 4 | 30 | 0 | 30 | 0 |
-| _root | 13 | 150 | 0 | 150 | 0 |
-| meta-organvm/.claude/plans | 38 | 613 | 10 | 603 | 0 |
+| _root | 33 | 399 | 0 | 399 | 0 |
+| meta-organvm/.claude/plans | 41 | 672 | 10 | 662 | 0 |
 | meta-organvm/.codex/plans | 3 | 14 | 0 | 14 | 0 |
 | meta-organvm/intake/alchemical-synthesizer/.claude/plans | 1 | 38 | 0 | 38 | 0 |
-| meta-organvm/organvm-engine/.claude/plans | 2 | 29 | 0 | 29 | 0 |
+| meta-organvm/organvm-engine/.claude/plans | 3 | 42 | 0 | 42 | 0 |
 | meta-organvm/organvm-engine/.codex/plans | 1 | 2 | 0 | 2 | 0 |
-| meta-organvm/stakeholder-portal/.claude/plans | 8 | 103 | 0 | 103 | 0 |
+| meta-organvm/stakeholder-portal/.claude/plans | 10 | 132 | 0 | 132 | 0 |
 | meta-organvm/stakeholder-portal/.codex/plans | 4 | 100 | 0 | 100 | 0 |
 | meta-organvm/stakeholder-portal/.gemini/plans | 5 | 22 | 0 | 22 | 0 |
 | organvm-ii-poiesis/.codex/plans | 1 | 4 | 0 | 4 | 0 |
@@ -25,11 +25,12 @@
 | organvm-iii-ergon/fetch-familiar-friends/.gemini/plans | 1 | 4 | 0 | 4 | 0 |
 | organvm-iii-ergon/peer-audited--behavioral-blockchain/.claude/plans | 20 | 295 | 0 | 295 | 0 |
 | organvm-iii-ergon/peer-audited--behavioral-blockchain/.codex/plans | 7 | 35 | 0 | 35 | 0 |
-| organvm-iv-taxis/.claude/plans | 8 | 216 | 0 | 216 | 0 |
+| organvm-iv-taxis/.claude/plans | 12 | 236 | 19 | 217 | 0 |
 | organvm-iv-taxis/domus-semper-palingenesis/.claude/plans | 5 | 63 | 7 | 56 | 0 |
 | organvm-iv-taxis/domus-semper-palingenesis/.gemini/plans | 3 | 15 | 0 | 15 | 0 |
+| organvm-iv-taxis/orchestration-start-here/.claude/plans | 1 | 3 | 0 | 3 | 0 |
 | organvm-iv-taxis/orchestration-start-here/.gemini/plans | 1 | 1 | 0 | 1 | 0 |
-| organvm-iv-taxis/tool-interaction-design/.claude/plans | 19 | 316 | 0 | 316 | 0 |
+| organvm-iv-taxis/tool-interaction-design/.claude/plans | 20 | 333 | 0 | 333 | 0 |
 | organvm-iv-taxis/tool-interaction-design/.codex/plans | 2 | 9 | 0 | 9 | 0 |
 | organvm-iv-taxis/tool-interaction-design/.gemini/plans | 1 | 6 | 0 | 6 | 0 |
 | organvm-v-logos/.claude/plans | 5 | 80 | 0 | 80 | 0 |
@@ -40,39 +41,39 @@
 
 | Type | Count | % |
 |------|-------|---|
-| generic | 1013 | 36% |
-| create_file | 382 | 13% |
-| document | 247 | 8% |
-| write_test | 222 | 7% |
-| modify_file | 221 | 7% |
-| configure | 201 | 7% |
-| verify | 108 | 3% |
-| migrate | 84 | 3% |
-| research | 79 | 2% |
-| deploy | 61 | 2% |
-| git_operation | 61 | 2% |
-| delete_file | 46 | 1% |
-| review | 31 | 1% |
-| exploration | 16 | 0% |
-| refactor | 14 | 0% |
+| generic | 1133 | 35% |
+| create_file | 416 | 13% |
+| document | 319 | 10% |
+| write_test | 261 | 8% |
+| modify_file | 254 | 7% |
+| configure | 218 | 6% |
+| verify | 120 | 3% |
+| migrate | 94 | 2% |
+| deploy | 93 | 2% |
+| research | 85 | 2% |
+| git_operation | 66 | 2% |
+| delete_file | 49 | 1% |
+| review | 32 | 1% |
+| exploration | 19 | 0% |
+| refactor | 17 | 0% |
 
 ## By Status
 
 | Status | Count | % |
 |--------|-------|---|
-| pending | 2768 | 99% |
-| completed | 18 | 0% |
+| pending | 3139 | 98% |
+| completed | 37 | 1% |
 
 ## Largest Plans (by task count)
 
 | Plan | Project | Tasks | Completed % |
 |------|---------|-------|-------------|
+| Department-Mapped SOP Library — Reusable Business  | _root | 74 | 0% |
 | Conversation Summary: Research Ingestion SOP Searc | organvm-iv-taxis/.claude/plans | 64 | 0% |
 | Research Ingestion/Synthesis/Digestion SOP Discove | meta-organvm/.claude/plans | 62 | 0% |
 | Review: `~/.claude/plans/archive/` — Full Audit | meta-organvm/.claude/plans | 59 | 0% |
 | Evaluation-to-Growth: Codebase Study v2 | 4444J99/application-pipeline/.claude/plans | 56 | 0% |
 | ORGANVM-IV Research Ingestion SOP Discovery — Conv | organvm-iv-taxis/.claude/plans | 54 | 0% |
-| Plan: Prompt-to-SOP Distillation Pipeline | _root | 52 | 0% |
 | Portfolio Project: Complete Failure Modes & Invari | 4444J99/portfolio/.claude/plans | 52 | 0% |
 | Part 4: Atom Pipeline Maturation — Quality, Integr | meta-organvm/.claude/plans | 50 | 0% |
 | Plan: Implement All 18 E2G Roadmap Tasks (Alpha →  | organvm-iii-ergon/peer-audited--behavioral-blockchain/.claude/plans | 50 | 0% |
@@ -92,31 +93,43 @@
 
 | Agent | Count | % |
 |-------|-------|---|
-| claude | 2490 | 89% |
-| codex | 218 | 7% |
+| claude | 2880 | 90% |
+| codex | 218 | 6% |
 | gemini | 78 | 2% |
 
 ## By Organ
 
 | Organ | Count | % |
 |-------|-------|---|
-| META | 986 | 35% |
-| IV | 652 | 23% |
-| LIMINAL | 639 | 22% |
-| III | 343 | 12% |
+| META | 1100 | 34% |
+| IV | 734 | 23% |
+| LIMINAL | 644 | 20% |
+| III | 448 | 14% |
 | V | 110 | 3% |
-| I | 33 | 1% |
-| _root | 19 | 0% |
+| _root | 87 | 2% |
+| I | 49 | 1% |
 | II | 4 | 0% |
 
 ## Non-Actionable Documents
 
 | Plan | Project | Classification |
 |------|---------|----------------|
+| Oracle Advisory Attack Plan | meta-organvm/.claude/plans | generic |
 | Phase 2: Activation Pipeline — Research → Implemen | organvm-iv-taxis/tool-interaction-design/.claude/plans | create_file |
 | Research Corpus Activation — Phase 1 Complete + Ba | organvm-iv-taxis/tool-interaction-design/.claude/plans | deploy |
+| CI/CD Pipeline Resilience: Post-Mortem + Cross-Org | 4444J99/portfolio/.claude/plans | generic |
+| Portfolio Project: Unwritten Conventions & House S | 4444J99/portfolio/.claude/plans | document |
+| Behavioral Blockchain Audit Followup — Agent Plan | _root | generic |
+| GitHub Issues Audit Follow-up Plan | _root | generic |
+| my-knowledge-base Federation & Integration Explora | _root | migrate |
+| Styx + Praxis-Perpetua Document Infrastructure Exp | _root | generic |
+| Department-Mapped SOP Library — Reusable Business  | _root | document |
+| Portfolio Consult Page Data Architecture Investiga | _root | generic |
 | ORGAN-IV Research Pipeline Exploration Plan | _root | migrate |
-| Plan: Prompt-to-SOP Distillation Pipeline | _root | generic |
+| Gap Analysis: Conductor Specification vs Implement | _root | review |
+| Plan: Commit & Integrate Uncommitted organvm-engin | _root | write_test |
+| Process Discipline Infrastructure Discovery — ORGA | _root | document |
+| Strategic Options — Next Move After Multi-Agent Co | _root | configure |
 | Chronological User Prompts — Past 48 Hours | meta-organvm/.claude/plans | exploration |
 | 48-Hour Prompt Narrative | meta-organvm/.claude/plans | exploration |
 | Task Triage Report — 2026-03-07 | meta-organvm/.claude/plans | generic |
@@ -128,8 +141,6 @@
 | Conversation Summary: Research Ingestion SOP Searc | organvm-iv-taxis/.claude/plans | document |
 | Plan: Activate the Conductor as the Interaction Bu | organvm-iv-taxis/tool-interaction-design/.claude/plans | generic |
 | Comprehensive AI Session Audit & Unimplemented Pla | organvm-iii-ergon/peer-audited--behavioral-blockchain/.claude/plans | write_test |
-| CI/CD Pipeline Resilience: Post-Mortem + Cross-Org | 4444J99/portfolio/.claude/plans | generic |
-| Portfolio Project: Unwritten Conventions & House S | 4444J99/portfolio/.claude/plans | document |
 | Application Pipeline: Five-Phase Infrastructure En | 4444J99/application-pipeline/.claude/plans | create_file |
 | Process Self-Analysis: What the Pipeline Data Reve | meta-organvm/organvm-engine/.claude/plans | generic |
 | Plan: Complete Plan Catalog Triage — 5 Steps | _root | verify |
