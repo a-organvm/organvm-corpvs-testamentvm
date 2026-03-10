@@ -30,7 +30,7 @@
       "completion": "100% \u2014 17/17 non-infrastructure repos documented at 2,000+ words (~56K total)",
       "public_visibility": "MIXED",
       "portfolio_angle": "Demonstrates intellectual depth and foundational thinking. Evidences systemic theory applied to autonomous creative systems.",
-      "repository_count": 20,
+      "repository_count": 21,
       "repositories": [
         {
           "name": "recursive-engine--generative-entity",
@@ -265,7 +265,7 @@
           "platinum_status": true
         },
         {
-          "name": "nexus--babel-alexandria-",
+          "name": "nexus--babel-alexandria",
           "org": "organvm-i-theoria",
           "status": "ARCHIVED",
           "updated": "2026-02-17",
@@ -428,6 +428,23 @@
           "ci_workflow": "ci.yml",
           "platinum_status": true,
           "note": "Added CONCORDIA Sprint 2026-02-16. Not part of original documentation sprints."
+        },
+        {
+          "name": "hierarchia-mundi",
+          "org": "organvm-i-theoria",
+          "status": "ACTIVE",
+          "public": true,
+          "description": "Hierarchical world-modeling framework for recursive ontological classification and categorical organization",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "MEDIUM - Demonstrates ontological system design",
+          "dependencies": [],
+          "promotion_status": "CANDIDATE",
+          "tier": "standard",
+          "last_validated": "2026-03-10",
+          "note": "Registered 2026-03-10 during three-organ structural audit. Previously untracked despite having seed.yaml and GitHub remote.",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false
         }
       ]
     },
@@ -1610,7 +1627,7 @@
       "completion": "100% \u2014 5/5 non-infrastructure repos documented at 2,000+ words (~18K total)",
       "public_visibility": "SEMI-PUBLIC (Governance visible, implementation details private)",
       "portfolio_angle": "CRITICAL DIFFERENTIATOR. Demonstrates systems architecture, governance design, and organizational capacity to coordinate complex multi-system infrastructure. Central evidence for grant funding and AI hiring.",
-      "repository_count": 7,
+      "repository_count": 8,
       "repositories": [
         {
           "name": "orchestration-start-here",
@@ -1740,6 +1757,23 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true
+        },
+        {
+          "name": "tool-interaction-design",
+          "org": "organvm-iv-taxis",
+          "status": "ACTIVE",
+          "public": true,
+          "description": "Tool interaction ontologies, conductor session lifecycle, and AI agent coordination infrastructure",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "CRITICAL - Houses the Conductor session system and tool interaction design patterns",
+          "dependencies": [],
+          "promotion_status": "GRADUATED",
+          "tier": "flagship",
+          "last_validated": "2026-03-10",
+          "note": "Registered 2026-03-10 during three-organ structural audit. Previously untracked despite being the largest repo (170MB) in ORGAN-IV.",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false
         }
       ]
     },
@@ -2020,7 +2054,7 @@
       "completion": "100% \u2014 org profile expanded to 1,213 words",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "The meta-system itself is the primary portfolio asset. Demonstrates orchestration capacity, architectural reasoning, and systemic sustainability.",
-      "repository_count": 8,
+      "repository_count": 10,
       "repositories": [
         {
           "name": ".github",
@@ -2169,6 +2203,43 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
           "platinum_status": true
+        },
+        {
+          "name": "stakeholder-portal",
+          "org": "meta-organvm",
+          "status": "ACTIVE",
+          "public": false,
+          "description": "Next.js stakeholder intelligence portal — repo browser, AI chat, system overview for non-technical stakeholders",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "HIGH - Full-stack Next.js application demonstrating stakeholder communication design",
+          "dependencies": [
+            "meta-organvm/organvm-engine",
+            "meta-organvm/organvm-corpvs-testamentvm"
+          ],
+          "promotion_status": "PUBLIC_PROCESS",
+          "tier": "standard",
+          "last_validated": "2026-03-10",
+          "note": "Registered 2026-03-10 during three-organ structural audit. Previously untracked despite being listed in superproject CLAUDE.md.",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false
+        },
+        {
+          "name": "materia-collider",
+          "org": "meta-organvm",
+          "status": "ACTIVE",
+          "public": false,
+          "description": "Active experiment repo for material collision and cross-organ synthesis prototyping",
+          "documentation_status": "MINIMAL",
+          "portfolio_relevance": "LOW - Experimental workspace",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-03-10",
+          "note": "Registered 2026-03-10 during three-organ structural audit. Experimental repo with seed.yaml.",
+          "implementation_status": "PROTOTYPE",
+          "ci_workflow": null,
+          "platinum_status": false
         }
       ]
     }
