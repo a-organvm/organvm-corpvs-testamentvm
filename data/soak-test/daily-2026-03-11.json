@@ -1,6 +1,6 @@
 {
   "date": "2026-03-11",
-  "collected_at": "2026-03-11T08:31:56.707960+00:00",
+  "collected_at": "2026-03-11T10:01:15.377456+00:00",
   "validation": {
     "registry_pass": true,
     "registry_issues": [],
@@ -10,8 +10,8 @@
   },
   "ci": {
     "total_checked": 53,
-    "passing": 34,
-    "failing": 7,
+    "passing": 33,
+    "failing": 8,
     "unknown": 3,
     "billing_locked": 9,
     "billing_locked_repos": [
@@ -32,6 +32,7 @@
       "organvm-vii-kerygma/.github: failure",
       "meta-organvm/organvm-engine: failure",
       "meta-organvm/system-dashboard: failure",
+      "meta-organvm/organvm-mcp-server: failure",
       "meta-organvm/praxis-perpetua: failure"
     ]
   },
