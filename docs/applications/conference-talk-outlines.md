@@ -255,7 +255,7 @@
 **Slide 11 — The Billing Disaster**
 - 48,880 minutes of GitHub Actions CI in one month
 - Free tier limit: 2,000 minutes. That is a 24x overage.
-- Root cause: 94 workflows running on every push across 111 repos
+- Root cause: 94 workflows running on every push across 112 repos
 - Decision: disabled 17 non-critical workflows, added billing guardrails
 - "Constraints you forget about come back as invoices"
 
@@ -488,7 +488,7 @@
 1. **Slide 5:** Run `organvm seed graph` or show the system dashboard dependency graph — the full DAG with all 43 edges, color-coded by organ.
 2. **Slide 7:** Show a running generative art piece from an ORGAN-II repo (if audio is available) or a screenshot/recording of one.
 3. **Slide 11:** Show two `organ-aesthetic.yaml` files side by side — contrast the visual identity definitions between Theory and Art organs.
-4. **Slide 13:** Run `organvm seed validate` — show the system verifying its own structural integrity across 111 repos.
+4. **Slide 13:** Run `organvm seed validate` — show the system verifying its own structural integrity across 112 repos.
 5. **Slide 14:** Walk through the dependency graph in the dashboard, clicking from ORGAN-I -> ORGAN-II -> ORGAN-III to trace one transformation pipeline.
 
 ### Audience Takeaways
@@ -507,7 +507,7 @@ These metrics appear across all three talks and should be kept consistent. Sourc
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Total repositories | 111 | registry-v2.json |
+| Total repositories | 112 | registry-v2.json |
 | GitHub organizations | 8 | registry-v2.json |
 | Documentation volume | ~404K+ words | system metrics |
 | Published essays | 48 | ORGAN-V public-process |
