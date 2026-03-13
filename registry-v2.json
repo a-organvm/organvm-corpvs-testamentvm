@@ -9,8 +9,8 @@
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
   "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I→II→III→IV→V→VI→VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
   "summary": {
-    "total_repos": 111,
-    "total_repos_note": "111 registry entries. ORGAN-RESET 2026-03-11: 52 repos dissolved into materia-collider, 3 transferred I→IV, 2 new Styx pipeline repos added. Previous: 109 entries.",
+    "total_repos": 112,
+    "total_repos_note": "112 registry entries. organvm-ontologia added 2026-03-13. ORGAN-RESET 2026-03-11: 52 repos dissolved into materia-collider, 3 transferred I→IV, 2 new Styx pipeline repos added. Previous: 109 entries.",
     "operational_organs": 8,
     "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 — 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
@@ -2115,7 +2115,7 @@
       "completion": "100% — org profile expanded to 1,213 words",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "The meta-system itself is the primary portfolio asset. Demonstrates orchestration capacity, architectural reasoning, and systemic sustainability.",
-      "repository_count": 10,
+      "repository_count": 11,
       "repositories": [
         {
           "name": ".github",
@@ -2301,6 +2301,25 @@
           "implementation_status": "PROTOTYPE",
           "ci_workflow": null,
           "platinum_status": false
+        },
+        {
+          "name": "organvm-ontologia",
+          "org": "meta-organvm",
+          "status": "ACTIVE",
+          "public": true,
+          "description": "Adaptive structural registry — UID-based entity identity, temporal naming, event bus, sensing, inference, governance, state recovery",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "HIGH - Identity backbone; permanent UIDs for all system entities, temporal naming, governed evolution",
+          "dependencies": [
+            "meta-organvm/organvm-corpvs-testamentvm"
+          ],
+          "promotion_status": "CANDIDATE",
+          "tier": "standard",
+          "last_validated": "2026-03-13",
+          "note": "Created 2026-03-13. 44 source files, 353 tests. Ten layers: entity, structure, variables, metrics, events, sensing, inference, governance, state, registry. Zero runtime deps (stdlib only).",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": "ci.yml",
+          "platinum_status": true
         }
       ]
     }
