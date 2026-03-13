@@ -1002,7 +1002,7 @@
       "completion": "100% — 21/21 non-infrastructure repos documented at 2,000+ words (~74K total)",
       "public_visibility": "MIXED (4 private, 18 public)",
       "portfolio_angle": "Demonstrates product-market thinking, sustained revenue generation, and ability to package systems for external users. Evidence of real-world impact.",
-      "repository_count": 28,
+      "repository_count": 29,
       "repositories": [
         {
           "name": "classroom-rpg-aetheria",
@@ -1620,8 +1620,9 @@
           "implementation_status": "PROTOTYPE",
           "ci_workflow": null,
           "platinum_status": false,
-          "revenue_model": "loss-aversion",
-          "revenue_status": "building"
+          "revenue_model": "subscription",
+          "revenue_status": "pre-launch",
+          "type": "SaaS"
           }
           ]
           },
