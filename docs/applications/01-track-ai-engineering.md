@@ -72,7 +72,7 @@ This positions you as someone who:
 > - A machine-readable registry serving as single source of truth for all repos
 > - Automated dependency validation enforcing no circular dependencies and no back-edges
 > - A formal promotion state machine with 5 GitHub Actions workflows for autonomous governance
-> - 101+ CI/CD pipelines and automated monthly health audits
+> - 104+ CI/CD pipelines and automated monthly health audits
 > - ~404K+ words of documentation across the entire system
 >
 > Two projects demonstrate particular depth:
@@ -129,7 +129,7 @@ Q: "How do you handle system failures?"
 A: organ-audit.py runs monthly health checks across all 113 repos. governance-rules.json defines critical vs. warning thresholds. The validate-dependencies workflow blocks merges that would violate constraints. 0 critical alerts since launch.
 
 Q: "How do you test at scale?"
-A: 101+ CI/CD workflows across all code repos. agentic-titan: 1,095 tests across 18 development phases. recursive-engine: 1,254 tests, 85% coverage. platinum-validation.py sweeps the full system against 1,267 audited links and 50 dependency edges.
+A: 104+ CI/CD workflows across all code repos. agentic-titan: 1,095 tests across 18 development phases. recursive-engine: 1,254 tests, 85% coverage. platinum-validation.py sweeps the full system against 1,267 audited links and 50 dependency edges.
 
 Q: "How do you communicate technical decisions?"
 A: ~404K+ words of documentation across 100 repos. 42 published essays. orchestration-system-v2.md documents governance rationale. Every README is written for external evaluators, not internal notes.

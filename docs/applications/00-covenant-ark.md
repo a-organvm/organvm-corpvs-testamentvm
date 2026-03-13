@@ -18,13 +18,13 @@
 | Metric | Value |
 |--------|-------|
 | Total repositories | 113 |
-| Implementation status | 58 ACTIVE, 53 ARCHIVED |
+| Implementation status | 59 ACTIVE, 53 ARCHIVED |
 | GitHub organizations | 8 (7 organ orgs + 1 meta-org) |
 | Published essays | 48 (~404K+ words) |
 | Total documentation | ~410K+ words |
 | Named development sprints | 33 completed + 48 cataloged |
 | Architecture Decision Records | 16 (ADR-001 through ADR-016) |
-| CI/CD workflows | 101+ repos with workflows |
+| CI/CD workflows | 104+ repos with workflows |
 | Dependency edges | 50 validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
@@ -188,7 +188,7 @@ Frame the same body of work differently for different audiences:
 
 ### 3. Creative Technologist (tech grants, selective roles)
 - **Narrative:** "Production-grade AI orchestration with creative-artistic applications"
-- **Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 101+ CI/CD workflows
+- **Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 104+ CI/CD workflows
 - **Targets:** Google Creative Lab, Processing Foundation, consulting clients, selective tech roles
 
 ### 4. Community Practitioner (community-focused funding)
@@ -212,12 +212,12 @@ What you can claim, with proof:
 | Claim | Evidence | Verification |
 |-------|----------|-------------|
 | 100 repos across 8 orgs | registry-v2.json | `jq '.summary.total_repos' registry-v2.json` → 100 |
-| 58 ACTIVE, 53 ARCHIVED | registry-v2.json | implementation_status_distribution field |
+| 59 ACTIVE, 53 ARCHIVED | registry-v2.json | implementation_status_distribution field |
 | 42 published essays | public-process/_posts/ | `ls _posts/ \| wc -l` → 42 |
 | ~404K+ words in essays | Word count of _posts/ | Measured at deploy |
 | ~410K+ total words | Aggregate across all repos | system-metrics.json |
 | 33 development sprints | docs/specs/sprints/ | 01-ignition through 33-operatio |
-| 101+ CI/CD workflows | Per-repo .github/workflows/ | Counted in MANIFESTATIO audit |
+| 104+ CI/CD workflows | Per-repo .github/workflows/ | Counted in MANIFESTATIO audit |
 | 50 dependency edges, 0 violations | validate-dependencies.yml | Weekly automated check |
 | 2,349+ tests | agentic-titan (1,095) + recursive-engine (1,254) | Package test suites |
 | 100% CLAUDE.md coverage | Per-repo CLAUDE.md files | SENSORIA audit |

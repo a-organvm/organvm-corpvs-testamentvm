@@ -66,7 +66,7 @@ organvm status
   managed by a single person using AI as a force multiplier."
 - "The soak test is a 30-day stability trial — the system has to run
   autonomously with zero critical incidents. We are 17 days in."
-- "58 active repos, each with CI, a `seed.yaml` automation contract, and a
+- "59 active repos, each with CI, a `seed.yaml` automation contract, and a
   registry entry."
 
 **Transition cue:** "That summary shows the heartbeat. Let me show you what the
@@ -421,7 +421,7 @@ organvm metrics calculate
 
 ```
 Metrics written to .../organvm-corpvs-testamentvm/system-metrics.json
-  Repos: 103 (58 ACTIVE)
+  Repos: 103 (59 ACTIVE)
   Organs: 8/8 operational
   CI: 94
   Dependencies: 43 edges

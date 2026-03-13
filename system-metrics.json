@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-03-13T15:39:09.230355+00:00",
+  "generated": "2026-03-13T17:29:48.774241+00:00",
   "computed": {
     "total_repos": 113,
-    "active_repos": 58,
+    "active_repos": 59,
     "archived_repos": 53,
     "total_organs": 8,
     "operational_organs": 8,
-    "ci_workflows": 101,
+    "ci_workflows": 104,
     "dependency_edges": 50,
     "per_organ": {
       "ORGAN-I": {
@@ -44,9 +44,9 @@
       }
     },
     "implementation_status": {
-      "ACTIVE": 58,
+      "ACTIVE": 59,
       "ARCHIVED": 53,
-      "PROTOTYPE": 2
+      "PROTOTYPE": 1
     },
     "sprints_completed": 33,
     "sprint_names": [
