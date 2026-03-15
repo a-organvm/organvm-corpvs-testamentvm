@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T20:55:52.785338+00:00",
+  "generated_at": "2026-03-15T21:57:22.016823+00:00",
   "system": {
     "total_repos": 113,
     "active_repos": 59,
@@ -14,43 +14,36 @@
     "total_words_numeric": 738579,
     "published_essays": 49,
     "sprints_completed": 33,
-    "ammoi": "AMMOI:58% E:28 T:33 C:5 Ev24h:5089 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
+    "ammoi": "AMMOI:58% E:28 T:33 C:5 Ev24h:5120 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
   },
   "code_profile": {
     "languages": {
-      "Python": 15169,
-      "TypeScript": 1932,
-      "JavaScript": 1276,
+      "Python": 2812,
+      "TypeScript": 1948,
       "TypeScript/React": 727,
-      "Shell": 200,
+      "JavaScript": 369,
+      "Shell": 195,
       "Rust": 6,
       "JavaScript/React": 4,
       "Go": 1
     },
     "test_languages": {
-      "Python": 3970,
-      "TypeScript": 558,
-      "TypeScript/React": 120,
-      "JavaScript": 60,
-      "Shell": 3
+      "Python": 768,
+      "TypeScript": 561,
+      "TypeScript/React": 120
     },
     "test_frameworks": {
-      "pytest": 64,
+      "pytest": 21,
       "vitest": 14,
       "jest": 5
     },
-    "total_code_files": 19315,
-    "total_test_files": 4711,
+    "total_code_files": 6062,
+    "total_test_files": 1449,
     "primary_language": "Python",
-    "verified_test_counts": {
-      "organvm-engine": 2556,
-      "organvm-ontologia": 438,
-      "organvm-mcp-server": 207,
-      "alchemia-ingestvm": 136,
-      "system-dashboard": 62,
-      "schema-definitions": 22,
-      "_total_verified": 3421,
-      "_note": "Counts from direct pytest runs, not file scanning"
+    "test_functions": {
+      "python": 14506,
+      "typescript": 8953,
+      "total": 23459
     }
   },
   "word_counts": {
