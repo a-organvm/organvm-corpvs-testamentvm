@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-03-13T17:29:48.774241+00:00",
+  "generated": "2026-03-15T20:49:28.883339+00:00",
   "computed": {
     "total_repos": 113,
     "active_repos": 59,
@@ -48,6 +48,19 @@
       "ARCHIVED": 53,
       "PROTOTYPE": 1
     },
+    "word_counts": {
+      "readmes": 135798,
+      "essays": 144924,
+      "corpus": 452453,
+      "org_profiles": 5404,
+      "total": 738579
+    },
+    "total_words": "~739,000+",
+    "total_words_numeric": 738579,
+    "total_words_short": "739K+",
+    "code_files": 22883,
+    "test_files": 4273,
+    "repos_with_tests": 46,
     "sprints_completed": 33,
     "sprint_names": [
       "01-ignition",
@@ -84,7 +97,7 @@
       "32-sensoria",
       "33-operatio"
     ],
-    "published_essays": 48
+    "published_essays": 49
   },
   "manual": {
     "_note": "Edit these by hand. calculate-metrics.py preserves this section."

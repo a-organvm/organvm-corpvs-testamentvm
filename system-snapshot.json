@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T19:10:35.023566+00:00",
+  "generated_at": "2026-03-15T20:55:52.785338+00:00",
   "system": {
     "total_repos": 113,
     "active_repos": 59,
@@ -7,7 +7,58 @@
     "entities": 113,
     "edges": 28,
     "ci_workflows": 104,
-    "ammoi": "AMMOI:58% E:28 T:33 C:5 Ev24h:5032 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
+    "code_files": 22885,
+    "test_files": 4274,
+    "repos_with_tests": 46,
+    "total_words": "739K+",
+    "total_words_numeric": 738579,
+    "published_essays": 49,
+    "sprints_completed": 33,
+    "ammoi": "AMMOI:58% E:28 T:33 C:5 Ev24h:5089 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
+  },
+  "code_profile": {
+    "languages": {
+      "Python": 15169,
+      "TypeScript": 1932,
+      "JavaScript": 1276,
+      "TypeScript/React": 727,
+      "Shell": 200,
+      "Rust": 6,
+      "JavaScript/React": 4,
+      "Go": 1
+    },
+    "test_languages": {
+      "Python": 3970,
+      "TypeScript": 558,
+      "TypeScript/React": 120,
+      "JavaScript": 60,
+      "Shell": 3
+    },
+    "test_frameworks": {
+      "pytest": 64,
+      "vitest": 14,
+      "jest": 5
+    },
+    "total_code_files": 19315,
+    "total_test_files": 4711,
+    "primary_language": "Python",
+    "verified_test_counts": {
+      "organvm-engine": 2556,
+      "organvm-ontologia": 438,
+      "organvm-mcp-server": 207,
+      "alchemia-ingestvm": 136,
+      "system-dashboard": 62,
+      "schema-definitions": 22,
+      "_total_verified": 3421,
+      "_note": "Counts from direct pytest runs, not file scanning"
+    }
+  },
+  "word_counts": {
+    "readmes": 135798,
+    "essays": 144924,
+    "corpus": 452453,
+    "org_profiles": 5404,
+    "total": 738579
   },
   "organs": [
     {
@@ -775,16 +826,16 @@
     "archived_repos": "53",
     "total_organs": "8",
     "operational_organs": "8",
-    "total_words_numeric": "0",
-    "total_words_formatted": "0",
-    "total_words_short": "0K+",
+    "total_words_numeric": "738579",
+    "total_words_formatted": "738,579",
+    "total_words_short": "739K+",
     "ci_workflows": "104",
     "dependency_edges": "50",
-    "published_essays": "0",
-    "sprints_completed": "0",
-    "code_files": "0",
-    "test_files": "0",
-    "repos_with_tests": "0",
+    "published_essays": "49",
+    "sprints_completed": "33",
+    "code_files": "22883",
+    "test_files": "4273",
+    "repos_with_tests": "46",
     "organ_repos.ORGAN-I": "19",
     "organ_name.ORGAN-I": "Theory",
     "organ_repos.ORGAN-II": "31",
