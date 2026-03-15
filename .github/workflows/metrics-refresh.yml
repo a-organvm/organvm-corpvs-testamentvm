@@ -50,9 +50,12 @@ jobs:
           from organvm_engine.registry.loader import load_registry
           from pathlib import Path
 
+          import json
           registry = load_registry(Path('registry-v2.json'))
           computed = compute_metrics(registry)
-          snapshot = build_system_snapshot(registry, computed)
+          # Load full metrics (includes manual section with word counts, essays)
+          metrics_full = json.loads(Path('system-metrics.json').read_text()) if Path('system-metrics.json').exists() else {'computed': computed, 'manual': {}}
+          snapshot = build_system_snapshot(registry, computed, metrics_full=metrics_full)
           write_system_snapshot(snapshot, Path('system-snapshot.json'))
           print(f'Snapshot: {len(snapshot.get(\"organs\", []))} organs, {snapshot[\"system\"][\"total_repos\"]} repos')
           "
