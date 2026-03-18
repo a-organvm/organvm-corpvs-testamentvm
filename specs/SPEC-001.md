@@ -12,6 +12,7 @@ Date Ratified:    2026-03-18
 Grounding:        post-flood/specs/SPEC-001/grounding.md
 Risk Register:    post-flood/specs/SPEC-001/risk-register.md
 Bibliography:     post-flood/specs/bibliography.bib
+Principal Author: https://orcid.org/0009-0008-2007-3596
 ```
 
 ---

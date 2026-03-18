@@ -13,6 +13,7 @@ Grounding:        post-flood/specs/SPEC-002/grounding.md
 Risk Register:    post-flood/specs/SPEC-002/risk-register.md
 Inventory:        post-flood/specs/SPEC-002/inventory.md
 Bibliography:     post-flood/specs/bibliography.bib
+Principal Author: https://orcid.org/0009-0008-2007-3596
 ```
 
 ---
