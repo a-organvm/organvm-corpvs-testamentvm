@@ -3,8 +3,8 @@
 ```
 Document ID:      SPEC-002
 Title:            Primitive Register
-Version:          1.0
-Status:           RATIFIED
+Version:          1.1
+Status:           RATIFIED (G3 review incorporated)
 Layer:            L1 — Metaphysical Identity
 Authoritative:    Entire System
 Parent Specs:     SPEC-000 (System Manifesto), SPEC-001 (Entity Classification)
@@ -129,7 +129,7 @@ BFO does not recognize State as a separate category. ORGANVM retains it because 
 
 **A rule limiting what states or transitions are lawful.**
 
-**Formal definition.** `Constraint : State -> Prop`. A Constraint is a predicate (proposition-as-type) over States. Via Martin-Lof's propositions-as-types correspondence, a Constraint is a type; a proof that a State satisfies the Constraint is a term inhabiting that type. An uninhabited Constraint type = an unsatisfiable rule. The promotion_criteria in `governance-rules.json` — requiring ci_workflow AND platinum_status AND implementation_status=ACTIVE — is a Constraint: a predicate over the State of a Repo Entity that is satisfied (inhabited) when all three conditions hold.
+**Formal definition.** `Constraint : State -> Deontic -> Prop` where `Deontic = MUST | SHOULD | MAY`. A Constraint is a deontic predicate over States — it classifies States as obligatory (MUST be reached), permissible (MAY be occupied), or prohibited (MUST NOT be entered) relative to a governance context. Via Martin-Lof's propositions-as-types correspondence, a Constraint is a type; a proof that a State satisfies the Constraint is a term inhabiting that type. An uninhabited Constraint type = an unsatisfiable rule. The deontic parameter preserves the normative force that distinguishes Constraints from mere Boolean predicates: `MUST` corresponds to obligation (von Wright's O), `MAY` to permission (P), and the negation of `MAY` to prohibition (F). The promotion_criteria in `governance-rules.json` — requiring ci_workflow AND platinum_status AND implementation_status=ACTIVE — is a Constraint with deontic mode MUST: the system is obligated to enforce this predicate on promotion transitions. Full ADICO-structured formalization (Crawford & Ostrom 1995) is deferred to SPEC-003 (Invariant Register) and SPEC-005 (Rulebook).
 
 **OntoClean profile.** +R (rigid: necessarily a Constraint once a Constraint), −I (no intrinsic identity: identified by content, not by independent UID), +U (unity: a Constraint is a unified rule — condition + deontic force + consequence), +D (dependent: Constraints depend on the States and Entities they constrain).
 
