@@ -3,8 +3,8 @@
 ```
 Document ID:      SPEC-001
 Title:            Ontology Charter
-Version:          1.0
-Status:           RATIFIED
+Version:          1.1
+Status:           RATIFIED (G3 review incorporated)
 Layer:            L1 — Metaphysical Identity
 Authoritative:    Entire System
 Parent Specs:     SPEC-000 (System Manifesto)
@@ -537,6 +537,59 @@ SPEC-001 may be amended through the following governed process. This process is 
 4. Every new ONT-### definition must specify: Formalization Status (FORMAL / FORMALIZABLE / JUDGMENT), OntoClean meta-properties (+/-R, +/-I, +/-D), and traces to at least one SPEC-000 axiom or invariant
 5. The original SPEC-001 is never overwritten — amendments are versioned addenda (SPEC-001-v1.1, v1.2, etc.)
 6. All amendment proposals, reviews, and sign-offs are recorded in the governance audit trail
+
+---
+
+## 9b. ONT Numbering Allocation
+
+| Block | Range | Category |
+|-------|-------|----------|
+| Entity Classes | ONT-001 — ONT-028 | What kinds of things exist |
+| ONT-029 | Reserved | |
+| Relation Types | ONT-030 — ONT-037 | How things connect |
+| ONT-038 — ONT-039 | Reserved | |
+| State Models | ONT-040 — ONT-041 | How things change state |
+| ONT-042 — ONT-049 | Reserved | |
+| Process Types | ONT-050 — ONT-052 | How things happen |
+| ONT-053 — ONT-059 | Reserved | |
+
+## 9c. Implementation Status
+
+SPEC-001 defines 28 entity types. The current `organvm-ontologia` implementation supports 7. The remaining 21 are constitutional commitments with implementation debt.
+
+### Ratified and Implemented (reclassify existing code)
+
+These 7 types exist in `ontologia/entity/identity.py` as `EntityType` enum values. SPEC-001 reclassifies them within the stratified taxonomy without requiring new code:
+
+| ONT-### | Type | Current EntityType | Category Path |
+|---------|------|-------------------|---------------|
+| ONT-004 | ORGAN | `EntityType.ORGAN` | Entity > Continuant > IndependentContinuant > ORGAN |
+| ONT-005 | REPO | `EntityType.REPO` | Entity > Continuant > IndependentContinuant > REPO |
+| ONT-006 | MODULE | `EntityType.MODULE` | Entity > Continuant > IndependentContinuant > MODULE |
+| ONT-008 | VARIABLE | `EntityType.VARIABLE` | Entity > Continuant > SpecificallyDependentContinuant > VARIABLE |
+| ONT-009 | METRIC | `EntityType.METRIC` | Entity > Continuant > SpecificallyDependentContinuant > METRIC |
+| ONT-011 | DOCUMENT | `EntityType.DOCUMENT` | Entity > Continuant > GenericallyDependentContinuant > DOCUMENT |
+| ONT-015 | SESSION | `EntityType.SESSION` | Entity > Occurrent > Process > SESSION |
+
+Implementation target: Add `category_path` field to EntityIdentity (engine #26). Existing UIDs and data remain intact.
+
+### Ratified with Implementation Debt (new types requiring code)
+
+| ONT-### | Type | Target Layer | Engine Issue |
+|---------|------|-------------|-------------|
+| ONT-012 | SCHEMA | L3A (SPEC-007) | — |
+| ONT-016 | BUILD | L4A (Event Spine) | #12 |
+| ONT-017 | StateTransition | L4A (Event Spine) | #12 |
+| ONT-018 | SignalDispatch | L3B (Formation Protocol) | #20 |
+| ONT-021 | ERA | L3B (Era Model) | — |
+| ONT-022 | SPRINT | L3B | — |
+| ONT-025 | RULE | L2 (SPEC-005) | #15 |
+| ONT-026 | CONSTRAINT | L2 (SPEC-003) | #15 |
+| ONT-027 | Capability | L3B | #27 |
+
+Note: Intermediate categories (ONT-001 Entity, ONT-002 Continuant, ONT-003 IndependentContinuant, etc.) are structural classifications, not implementation types — they do not require new `EntityType` enum values.
+
+**ONT-021 (ERA) dependency disclosure:** ERA instantiation depends on resolving the AX-000-006 implementation conflict documented in SPEC-000's inventory (organ topology hardcoded in 3 locations). ERA cannot be operationalized until organ topology becomes data-driven.
 
 ---
 
