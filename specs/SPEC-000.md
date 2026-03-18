@@ -3,8 +3,8 @@
 ```
 Document ID:      SPEC-000
 Title:            System Manifesto
-Version:          1.0
-Status:           RATIFIED
+Version:          1.1
+Status:           RATIFIED (G3 review incorporated)
 Layer:            L1 — Metaphysical Identity
 Authoritative:    Entire System
 Parent Specs:     None (root document)
@@ -62,13 +62,20 @@ The system boundary is defined by registry inclusion: what is registered in `reg
 
 ## 4. Axioms
 
-The following axioms are the irreducible commitments of the system. Each is derived from the academic grounding documented in `post-flood/specs/SPEC-000/grounding.md`. No downstream specification, implementation, or governance decision may violate these axioms. Amendment requires constitutional revision through the meta-evolution protocol (SPEC-011).
+The following axioms are the irreducible commitments of the system. Each is derived from the academic grounding documented in `post-flood/specs/SPEC-000/grounding.md`. No downstream specification, implementation, or governance decision may violate these axioms. Amendment requires constitutional revision through the process defined in Section 9.
+
+Each axiom carries a **Formalization Status**:
+- **FORMAL**: Machine-checkable validator exists or can be written against current definitions
+- **FORMALIZABLE**: Validator can be specified but requires downstream specs (SPEC-003, 006, 007) for formal semantics
+- **JUDGMENT**: Requires human assessment; not reducible to machine-checkable constraint
 
 ### AX-000-001: Ontological Primacy
 
 **Define what exists before defining how it behaves.**
 
 Every entity, relation, and process in the system must be ontologically declared (SPEC-001) before behavioral rules are applied to it (SPEC-004). Implementation without ontological grounding is structurally unauthorized.
+
+*Formalization: FORMALIZABLE. Checkable as: every entity in ontologia has creation timestamp prior to first governance action referencing it. Formal semantics deferred to SPEC-001.*
 
 *Grounded in: Guarino 1998, formal ontology; Smith 2004, reality representation; Sowa 2000, knowledge representation.*
 
@@ -78,13 +85,17 @@ Every entity, relation, and process in the system must be ontologically declared
 
 The pattern of governance relations is self-produced: the engine validates the registry, the registry defines what the engine governs, the governance rules constrain how the registry may change, and the constitutional specs constrain the governance rules. No external authority defines the system's organization. Material substrates (GitHub, Python, hardware) are environment, not organization.
 
+*Formalization: FORMALIZABLE. Constitutive processes are: registry load/save, governance audit, promotion transition, dependency validation, seed discovery, context sync, metric computation. Closure verifiable as: each constitutive process is invoked only by other constitutive processes or by the human principal. Current gap: the governance loader does not validate governance-rules.json against its own schema (DRIFT per inventory).*
+
 *Grounded in: Maturana & Varela 1980, autopoiesis; Luhmann 1995, communicative self-production. Departure: organizational, not material closure.*
 
 ### AX-000-003: Individual Primacy
 
 **The system exists to amplify individual creative capacity, not to replace it.**
 
-System optimization is constitutionally subordinate to individual empowerment. No governance rule, automation, or agent action may be justified solely by system-level efficiency if it diminishes the creative autonomy of the individual practitioner. This is a value commitment embedded as a load-bearing structural member, not an empirical finding.
+System optimization is constitutionally subordinate to individual empowerment. No governance rule, automation, or agent action may be justified solely by system-level efficiency if it diminishes the creative autonomy of the individual practitioner. This is a guiding constitutional principle — a value commitment that shapes all downstream design decisions.
+
+*Formalization: JUDGMENT. This axiom cannot be reduced to a machine-checkable constraint because "creative autonomy" and "diminishment" are value judgments. Enforcement is through constitutional review: any proposal for system-wide optimization must include an individual-impact assessment documenting how the change preserves or enhances individual creative capacity. The assessment is reviewed by the human principal, not by automated validators.*
 
 *Novel: no direct academic precedent. Ethical architectural decision.*
 
@@ -92,7 +103,11 @@ System optimization is constitutionally subordinate to individual empowerment. N
 
 **No component may exist, operate, or evolve without constitutional authorization.**
 
-Every repository requires a `seed.yaml` contract. Every status transition follows the governed promotion path. Every dependency edge is declared and validated. Governance is not optional overhead but a constitutive feature of the system's autopoiesis — without it, the system is not self-producing but merely accumulating.
+Every repository requires a `seed.yaml` contract declaring at minimum: organ membership, tier, and promotion status. Every status transition follows the governed promotion path. Every dependency edge is declared and validated. Governance is not optional overhead but a constitutive feature of the system's autopoiesis — without it, the system is not self-producing but merely accumulating.
+
+Code artifacts that exist in the workspace but are not registered (e.g., personal projects in LIMINAL, intake staging areas) are environment, not system, regardless of their location in the workspace directory structure.
+
+*Formalization: FORMAL. Checkable as: every registered repo has seed.yaml with organ/tier/status fields; every transition in promotion history follows state_machine.py valid paths; every dependency edge appears in allowed_edges.*
 
 *Grounded in: Ostrom 1990, design principles; Beer 1972, viability requires governance; Crawford & Ostrom 1995, institutional grammar (ADICO).*
 
@@ -102,29 +117,35 @@ Every repository requires a `seed.yaml` contract. Every status transition follow
 
 First-order change: state and structure evolve within existing rules. Second-order change: the rules themselves evolve through governed revision (SPEC-008). Third-order change: the meta-rules governing rule-change evolve through the meta-evolution protocol (SPEC-011). No level of the governance hierarchy is exempt from governed evolution. No level may evolve without governance.
 
-*Grounded in: Ashby 1952, ultrastability; von Foerster 1981, second-order cybernetics. Extended to ontological mutation in SPEC-011.*
+*Formalization: FORMALIZABLE. Checkable as: (a) a code path exists for modifying governance-rules.json through a governed process, (b) modification generates an audit trail, (c) the state machine transitions are loaded from data, not hardcoded. Current gap: state machine transitions are hardcoded in Python (DRIFT per inventory); evolution-policy schema exists but no engine code evaluates it.*
+
+*Inspired by: Ashby 1952, structural reorganization under feedback failure; von Foerster 1981, second-order observation. The extension to three orders of change (state → rules → meta-rules) is a novel application beyond Ashby's original formulation.*
 
 ### AX-000-006: Topological Plasticity
 
-**The system's functional differentiation into distinct organs is a governed variable, not a frozen constant.**
+**The system's functional differentiation into distinct organs is designed to be a governed variable, not a frozen constant.**
 
-The current topology — eight organs numbered 0-VII — is the first-era instantiation, not the eternal form. New functional domains may crystallize from formation activity when evidence demonstrates structural irreducibility: a formation's outputs have become load-bearing for the system as a whole. Existing domains may fuse, split, or dissolve through the meta-evolution protocol (SPEC-011) and era transition mechanism. The numbered sequence encodes the present era's logic of emergence; it does not bind future eras.
+The current topology — eight organs numbered 0-VII — is the first-era instantiation, not the eternal form. New functional domains may crystallize from formation activity when evidence demonstrates structural irreducibility: a formation's outputs have become load-bearing for the system as a whole. Existing domains may fuse, split, or dissolve through governed constitutional revision and era transition.
 
-*Grounded in: Luhmann 1995, functional differentiation as evolutionary achievement; Kauffman 1993, emergent order; Gersick 1991, punctuated equilibrium. Novel extension: governed topological mutation.*
+*Formalization: FORMALIZABLE. Checkable as: organ topology is loaded from a data configuration, not hardcoded in Python source. Current gap: CONFLICT per inventory — topology is hardcoded in organ_config.py (Python dict literal), dependency_graph.py (ORGAN_LEVELS), and organ-definitions.schema.json (regex). Implementation target: Layer 3B refactors topology to data-driven configuration.*
+
+*Novel: no existing systems theory prescribes governed topological mutation as a design feature. Inspired by Luhmann 1995 (functional differentiation as evolutionary achievement), Kauffman 1993 (emergent order), Gersick 1991 (punctuated equilibrium). These describe how topology changes; ORGANVM proposes how to govern that change constitutionally.*
 
 ### AX-000-007: Alchemical Inheritance
 
 **The system's prior structural failures are not waste but prima materia.**
 
-Every dissolved, archived, or superseded component carries lineage information that subsequent formations may draw upon. The post-flood corpus is a constitutional artifact with the same authority as living code. No era may discard the memory of prior eras; it may only transform it. What the system was shapes what it may become.
+Every dissolved, archived, or superseded component carries structured lineage information (at minimum: predecessor UIDs, successor UIDs, dissolution reason, dissolution date, lineage type) that subsequent formations may draw upon. The post-flood corpus is a constitutional artifact with the same authority as living code. No era may discard the memory of prior eras; it may only transform it. What the system was shapes what it may become.
 
-*Novel: analogical grounding in alchemical tradition (nigredo precedes rubedo); North 1990, path dependence; Ashby 1952, failed adaptations inform ultrastability.*
+*Formalization: FORMALIZABLE. Checkable as: every entity with lifecycle_status=ARCHIVED or DISSOLVED has a LineageRecord in ontologia with at least one predecessor or successor edge. Current gap: DRIFT per inventory — 52 dissolved repos have freetext `note` fields, not structured LineageRecords. Ontologia's lineage system exists but is not wired to registry archival operations.*
+
+*Novel: analogical grounding in alchemical tradition (nigredo precedes rubedo); North 1990, path dependence; Ashby 1952, failed adaptations inform subsequent reorganization.*
 
 ### AX-000-008: Multiplex Flow Governance
 
 **Inter-organ flow is not a single relation but a family of distinct, independently governed edge types.**
 
-At minimum five flow types operate on the shared topology:
+At minimum five flow types are defined for the shared topology (currently only the dependency layer is fully governed; the remaining four are implementation targets for SPEC-006 and SPEC-007):
 
 | Flow Type | Constraint | Character |
 |-----------|-----------|-----------|
@@ -136,19 +157,23 @@ At minimum five flow types operate on the shared topology:
 
 The central theorem: **the dependency graph must be acyclic, but the information graph must be recursively cyclic.** This is the mathematical signature of a healthy recursive organism. No single "dependency direction" rule can adequately govern a multiplex system.
 
+*Formalization: FORMALIZABLE. Dependency layer: FORMAL (DAG check implemented). Information, governance, evolution, signal layers: require SPEC-006/007 for formal edge-type definitions and constraint specifications. Current gap: DRIFT per inventory — only dependency flow is governed; other 4 layers are not tracked as independent graph layers.*
+
 *Grounded in: post-flood corpus graph-theoretic model; Newman 2018, multiplex networks; Beer 1972, variety in communication channels; Boccaletti et al. 2006, complex network dynamics.*
 
 ### AX-000-009: Modular Alchemical Synthesis
 
-**The organism operates as a modular synthesis architecture.**
+**The organism is designed to operate as a modular synthesis architecture.**
 
-Every component is a module with declared inputs and outputs. Any output may be routed to any compatible input. Modulation — one signal shaping another signal's processing behavior — is a first-class constitutional operation, distinct from dependency, information flow, or governance.
+Every component will have declared inputs and outputs. Any output may be routed to any compatible input. Modulation — one signal shaping another signal's processing behavior — is a first-class constitutional operation, distinct from dependency, information flow, or governance.
 
-The routing substrate (Taxis) patches connections but does not generate signals. Signal compatibility is governed by typed signal classes. Attenuation policies govern signal strength at every patch point. Every connection is observable: the event spine records signal flow, the temporal metric fabric tracks frequency and amplitude, and the graph indices measure routing health.
+The routing substrate (Taxis) patches connections but does not generate signals. Signal compatibility will be governed by typed signal classes. Attenuation policies will govern signal strength at every patch point. Every connection will be observable: the event spine records signal flow, the temporal metric fabric tracks frequency and amplitude, and the graph indices measure routing health.
 
-The patch matrix — what is connected to what, through what, at what gain — is a first-class constitutional artifact maintained alongside the registry.
+The patch matrix — what is connected to what, through what, at what gain — is a first-class constitutional artifact to be maintained alongside the registry.
 
-*Grounded in: Beer 1972, communication channel variety; Ashby 1956, requisite variety in routing; Callon 1986, translation as signal exchange. Novel extension: modulation as constitutionally distinct coupling type.*
+*Formalization: FORMALIZABLE. Requires: signal class definitions (14 canonical types from Formation Protocol), seed.yaml schema extension for signal_inputs/signal_outputs, patch matrix data structure, attenuation policy schema. Current gap: MISSING per inventory — no part of this architecture is currently implemented. Implementation target: Layer 3B (signal classes, formation protocol) + Layer 4A (event spine, temporal metrics).*
+
+*Novel: grounded by analogy in modular synthesis (Moog, Buchla, Serge); Beer 1972, communication channel variety; Ashby 1956, requisite variety in routing; Callon 1986, translation as signal exchange. The treatment of modulation as constitutionally distinct from other edge types has no precedent in systems theory or software architecture.*
 
 ---
 
@@ -204,17 +229,17 @@ Every organ, repository, formation, signal, governance rule, metric, and agent i
 
 ## 7. Invariants
 
-The following truths must remain valid across all versions, eras, and topological mutations. Formal definitions and machine-checkable validators are specified in SPEC-003 (Invariant Register).
+The following truths must remain valid across all versions, eras, and topological mutations. SPEC-000 *declares* invariants (prose definitions with constitutional authority for intent). SPEC-003 (Invariant Register) *formalizes* them (machine-checkable definitions with authority for formal semantics). When prose and formalization diverge, the prose is authoritative for intent; the formalization is authoritative for enforcement.
 
 **INV-000-001: Dependency Acyclicity.** The dependency graph G^dep must be a directed acyclic graph at all times.
 
-**INV-000-002: Governance Reachability.** For every active component, there must exist a path from a constitutional root to that component in G^gov.
+**INV-000-002: Governance Reachability.** For every active component, there must exist a path from a constitutional root to that component in G^gov. Constitutional roots are the set of entities with registry_key META-ORGANVM (the zero-order constitutional substrate).
 
 **INV-000-003: Identity Persistence.** No entity's canonical identity (UID) may be destroyed. Entities may be archived, dissolved, merged, or split, but their identity and lineage must be preserved.
 
 **INV-000-004: Constitutional Supremacy.** No lower-level rule (organ dictum, repo rule, agent action) may override a higher-level constitutional constraint (axiom, invariant, spec).
 
-**INV-000-005: Observability.** The system must be capable of reporting its own state — every active component's status, every active relation's type, every active metric's value — through its own diagnostic instruments.
+**INV-000-005: Observability.** The system must be capable of accurately reporting its own state — every active component's status, every active relation's type, every active metric's value — through its own diagnostic instruments. Reports must reflect current system state; a diagnostic instrument that returns stale, hardcoded, or fabricated data violates this invariant.
 
 ---
 
@@ -237,13 +262,15 @@ The following conditions constitute violations of SPEC-000:
 
 ## 9. Evolution Constraints
 
-SPEC-000 may be amended through the following governed process only:
+SPEC-000 may be amended through the following governed process only. This process is self-contained — it does not depend on any downstream spec for its authority. Future specs (particularly SPEC-008 and SPEC-011) may extend or refine this process, but the core amendment procedure defined here is sufficient and operative from the moment of ratification.
 
 1. A revision proposal must cite specific evidence (research finding, implementation discovery, or structural interrogation result) demonstrating that the current manifesto is insufficient or incorrect
 2. The proposal must classify its change as Conservative Refinement (adds detail, preserves meaning), Constrained Extension (adds scope, preserves invariants), or Breaking Revision (changes semantics)
-3. Breaking Revisions require: (a) a new grounding narrative addressing the change, (b) adversarial review by a different agent/model, (c) human spot-check of cited sources, (d) explicit creator sign-off
-4. The original SPEC-000 is never overwritten — amendments are versioned addenda (SPEC-000-v1.1, v1.2, etc.)
-5. All downstream specs tracing to amended elements must be reviewed for consistency
+3. Conservative Refinements require: adversarial review by a different agent/model + creator sign-off
+4. Constrained Extensions require: (a) adversarial review, (b) impact assessment on downstream specs, (c) creator sign-off
+5. Breaking Revisions require: (a) a new grounding narrative addressing the change, (b) adversarial review by a different agent/model, (c) human spot-check of cited sources, (d) explicit creator sign-off, (e) review of all downstream specs for consistency
+6. The original SPEC-000 is never overwritten — amendments are versioned addenda (SPEC-000-v1.1, v1.2, etc.)
+7. All amendment proposals, reviews, and sign-offs are recorded in the PHASE-STATE tracking system
 
 ---
 
