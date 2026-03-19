@@ -163,7 +163,7 @@ The gestalt is not only a point-in-time assessment but a trajectory. The heartbe
 
 ### BEAT-009: Attention Biasing
 
-The somatic marker function (Damasio 1999, functional analogue) compresses heartbeat readings into governance-actionable signals that bias the operator's attention. The compression operates through three mechanisms:
+The attention-direction function (Damasio 1999, functional analogue) compresses heartbeat readings into governance-actionable signals that bias the operator's attention. The compression operates through three mechanisms:
 
 **Traffic-light classification:** Each vital parameter is classified as green (within expected range), yellow (approaching threshold), or red (threshold exceeded or trend deteriorating). This reduces 112+ repo metrics to a small number of attention signals.
 

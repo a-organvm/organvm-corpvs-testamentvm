@@ -1,3 +1,4 @@
+<!-- NOTE: Signal classes defined here are the canonical behavioral-contract view. See INST-FORMATION FORM-010 for the interdependence-type view of the same signal alphabet. Both views are complementary, not competing. Reconciliation target: SPEC-007 v1.1 -->
 # SPEC-007: Interface Contract Spec
 
 ```

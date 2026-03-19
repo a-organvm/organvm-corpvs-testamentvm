@@ -152,7 +152,7 @@ The scorecard does not measure effort or progress; it measures readiness. A syst
 ORGANVM's current position is diagnosable as **late Gamma (G3) / early Delta (D1)**:
 
 - Alpha: COMPLETE. Constitutional corpus exists. Registry tracks 112+ repos.
-- Beta: COMPLETE. SPEC-000 through SPEC-017 ratified. Schemas defined. seed.yaml operational.
+- Beta boundary condition (SPEC-000 through SPEC-008 ratified) SATISFIED. Additionally, SPEC-009 through SPEC-017 and all INST-* documents ratified on 2026-03-19, exceeding original condition. Schemas defined. seed.yaml operational.
 - Gamma: MOSTLY COMPLETE. Engine, dashboard, MCP server, ontologia operational. CI pipelines across multiple organs. Soak tests running. Cross-organ metric propagation functional but immature.
 - Delta: BEGINNING. SOPs being codified (praxis-perpetua). Ecosystem profiles being declared. Cross-organ alignment in progress.
 

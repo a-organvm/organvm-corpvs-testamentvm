@@ -209,7 +209,7 @@ Following Bass, Clements, and Kazman (2012), ORGANVM's architectural quality att
 
 **Architectural debt disclosure:** The architecture *partially* supports this scenario. Data structures accommodate extension (registry keyed by organ, adding a key is trivial). However, the hardcoding in `organ_config.py` violates AX-000-006 and requires code modification rather than configuration change. This is the most significant architectural debt.
 
-**Traces to:** AX-000-006 (Topological Plasticity), INV-000-006 (Topological Data-Drivenness).
+**Traces to:** AX-000-006 (Topological Plasticity), AX-000-006 (Topological Plasticity).
 
 ---
 

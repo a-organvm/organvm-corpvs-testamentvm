@@ -328,7 +328,7 @@ The original SPEC-016 is never overwritten. Amendments are versioned: SPEC-016-v
 | Context generation (EPIS-005/006) | `contextmd/generator.py`, `contextmd/templates.py` | ALIGNED |
 | Context sync pipeline | `contextmd/sync.py`, CLI: `organvm context sync` | ALIGNED |
 | Ontologia context injection | `contextmd/generator.py` `_build_ontologia_context()` | ALIGNED |
-| MCP server as query router | `organvm_mcp/server.py` (88 tools) | ALIGNED |
+| MCP server as query router | `organvm_mcp/server.py` (the current MCP tool suite) | ALIGNED |
 | Source-of-truth hierarchy (EPIS-003) | Implicit in code -- not formally declared | DRIFT |
 | Context budget allocation (EPIS-008/009) | Not implemented | MISSING |
 | Context consistency checking (EPIS-007) | Not implemented -- no mtime comparison | MISSING |
