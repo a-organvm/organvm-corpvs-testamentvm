@@ -1,0 +1,126 @@
+{
+  "name": "Community",
+  "description": "Community infrastructure \u2014 salon archives, reading group curricula, adaptive syllabi, contributor profiles, shared PostgreSQL layer, FastAPI portal with full-text search, Atom feeds, and WebSocket live rooms",
+  "launch_status": "OPERATIONAL",
+  "completion": "100% \u2014 6 repos (1 flagship, 4 standard, 1 infrastructure). All 6 PUBLIC_PROCESS. 435 tests across 5 active repos. Neon PostgreSQL with 4 schemas. Flagship deployed to Render.",
+  "public_visibility": "SEMI-PUBLIC (invitations, participation)",
+  "portfolio_angle": "Evidence of building collaborative infrastructure. Demonstrates community contribution model. Relevant for residencies (Eyebeam, Somerset House) and fellowships valuing ecosystem contribution.",
+  "repository_count": 6,
+  "repositories": [
+    {
+      "name": "koinonia-db",
+      "org": "organvm-vi-koinonia",
+      "status": "ACTIVE",
+      "public": true,
+      "description": "Shared SQLAlchemy 2.0 models, Alembic migrations, PostgreSQL seed data for all ORGAN-VI schemas (salons, reading, community, syllabus)",
+      "documentation_status": "DEPLOYED",
+      "portfolio_relevance": "MEDIUM - Shared database infrastructure",
+      "dependencies": [],
+      "promotion_status": "GRADUATED",
+      "tier": "standard",
+      "last_validated": "2026-02-24",
+      "note": "Neon PostgreSQL provisioned. 4 schemas, 108 tests, CI green. Foundation for all ORGAN-VI repos. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci.yml",
+      "platinum_status": true
+    },
+    {
+      "name": "community-hub",
+      "org": "organvm-vi-koinonia",
+      "status": "ACTIVE",
+      "public": true,
+      "description": "FastAPI flagship portal \u2014 salon archive, curricula browser, contributor profiles, full-text search, adaptive syllabus, Atom feeds, WebSocket live rooms",
+      "documentation_status": "DEPLOYED",
+      "portfolio_relevance": "HIGH - Flagship community infrastructure",
+      "dependencies": [
+        "organvm-vi-koinonia/koinonia-db"
+      ],
+      "promotion_status": "GRADUATED",
+      "tier": "flagship",
+      "last_validated": "2026-02-24",
+      "note": "122 tests, CSRF, rate limiting, 8 route modules. Deployed to Render. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+      "deployment_url": "https://community-hub-8p8t.onrender.com",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci.yml",
+      "platinum_status": true
+    },
+    {
+      "name": "salon-archive",
+      "org": "organvm-vi-koinonia",
+      "status": "ACTIVE",
+      "public": false,
+      "type": "invitation-only",
+      "description": "Archive infrastructure for intellectual salons: transcription pipeline, topic taxonomy, and session metadata aligned with the eight-organ model",
+      "documentation_status": "DEPLOYED",
+      "portfolio_relevance": "HIGH - Community participation and facilitation",
+      "dependencies": [
+        "organvm-vi-koinonia/koinonia-db"
+      ],
+      "promotion_status": "GRADUATED",
+      "tier": "standard",
+      "last_validated": "2026-02-24",
+      "note": "Created and README deployed 2026-02-11 Gap-Fill Sprint (3,054 words). CONSOLIDATION-II: Python prototype deployed \u2014 transcription, taxonomy, sessions modules. Tests + CI green. Phase 1-2: DB integration, repository pattern, 87 tests. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci-python.yml",
+      "platinum_status": true,
+      "updated": "2026-02-24"
+    },
+    {
+      "name": "reading-group-curriculum",
+      "org": "organvm-vi-koinonia",
+      "status": "ACTIVE",
+      "public": false,
+      "type": "invitation-only",
+      "description": "Structured reading group curricula spanning eight-organ domains: 8-12 week programs with curated reading lists, discussion guides, and exercises",
+      "documentation_status": "DEPLOYED",
+      "portfolio_relevance": "MEDIUM - Educational facilitation",
+      "dependencies": [
+        "organvm-vi-koinonia/koinonia-db"
+      ],
+      "promotion_status": "GRADUATED",
+      "tier": "standard",
+      "last_validated": "2026-02-24",
+      "note": "Created and README deployed 2026-02-11 Gap-Fill Sprint (3,200 words). CONSOLIDATION-II: Python prototype deployed \u2014 curriculum, reading_list, guides modules. Tests + CI green. Phase 1-2: DB integration, repository pattern, 47 tests. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci-python.yml",
+      "platinum_status": true
+    },
+    {
+      "name": "adaptive-personal-syllabus",
+      "org": "organvm-vi-koinonia",
+      "status": "ACTIVE",
+      "updated": "2026-02-24",
+      "public": true,
+      "description": "AI-personalized education system with multi-module curriculum spanning OS development, algorithms, DSLs, and mixed reality. Features Wings multi-artifact framework.",
+      "documentation_status": "DEPLOYED",
+      "portfolio_relevance": "HIGH - Demonstrates educational infrastructure and AI personalization",
+      "dependencies": [
+        "organvm-vi-koinonia/koinonia-db"
+      ],
+      "promotion_status": "GRADUATED",
+      "tier": "standard",
+      "last_validated": "2026-02-24",
+      "note": "Created GENESIS Sprint 2026-02-12. README deployed (3,471 words). 38 tests, CI green, working CLI (syllabus/aps). Phase 3: promoted to CANDIDATE. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci-python.yml",
+      "platinum_status": true
+    },
+    {
+      "name": ".github",
+      "org": "organvm-vi-koinonia",
+      "status": "ACTIVE",
+      "public": true,
+      "description": "Organization profile and community health files",
+      "documentation_status": "INFRASTRUCTURE",
+      "portfolio_relevance": "INTERNAL",
+      "dependencies": [],
+      "promotion_status": "GRADUATED",
+      "tier": "infrastructure",
+      "last_validated": "2026-02-24",
+      "note": "Silver Sprint: org profile README expanded to 772 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12. Phase 2: updated with full repo table. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci-minimal.yml",
+      "platinum_status": true
+    }
+  ]
+}

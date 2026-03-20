@@ -1,0 +1,131 @@
+{
+  "version": "2.0",
+  "schema_version": "1",
+  "schema_note": "Schema v1.0.0 (formalized 2026-03-04). Promoted from v0.5 after 15+ days of production validation. implementation_status enum: ACTIVE|PROTOTYPE|SKELETON|DESIGN_ONLY|ARCHIVED. Revenue split: revenue_model (subscription|freemium|one-time|none) + revenue_status (pre-launch|beta|live|n/a). ci_workflow: ci-python.yml|ci-typescript.yml|ci-mixed.yml|ci-minimal.yml|null. platinum_status: boolean. Phase 0 schema (v0.2), hardened 2026-02-10. Four fields populated for all repos: dependencies (array of org/repo strings), promotion_status (LOCAL|CANDIDATE|PUBLIC_PROCESS|GRADUATED|ARCHIVED), tier (flagship|standard|stub|archive|infrastructure), last_validated (ISO 8601).",
+  "deployment_model": "PARALLEL_ALL_ORGANS",
+  "launch_date": "2026-02-11",
+  "launch_date_note": "Phase -1 complete 2026-02-10. Bronze Sprint COMPLETE 2026-02-10. Silver Sprint COMPLETE 2026-02-10. Gold Sprint COMPLETE 2026-02-10. PHASE 2 MICRO-VALIDATION COMPLETE 2026-02-10. PHASE 3 COMPLETE 2026-02-11. SYSTEM LAUNCHED 2026-02-11. 9/9 launch criteria met. POSSE verified: Mastodon (HTTP 200) + Discord (HTTP 204). Jekyll site live with RSS (5 essays). All validation scripts pass.",
+  "generated": "2026-02-03T02:30:00Z",
+  "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
+  "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I\u2192II\u2192III\u2192IV\u2192V\u2192VI\u2192VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
+  "summary": {
+    "total_repos": 112,
+    "total_repos_note": "112 registry entries. organvm-ontologia added 2026-03-13. ORGAN-RESET 2026-03-11: 52 repos dissolved into materia-collider, 3 transferred I\u2192IV, 2 new Styx pipeline repos added. Previous: 109 entries.",
+    "operational_organs": 8,
+    "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 \u2014 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
+    "total_organizations": 8,
+    "local_repos_to_migrate": 9,
+    "portfolio_strength": "COVENANT-ARK \u2014 100 repos (all on GitHub), 90 ACTIVE + 10 ARCHIVED, 9 flagship repos with full community health files, 42 essays (~142K words), CLAUDE.md across all active repos (100% AI-augmented workflow coverage), community health files inherited org-wide via 8 .github repos, POSSE distribution live, Jekyll site with RSS, 82+ CI/CD workflows, Astro portfolio site with 19 curated projects, 33 named development sprints, system-metrics.json dashboard, ~410K+ total words. Identity-coherent: process-as-product methodology, solo production at institutional scale."
+  },
+  "meta_system_portfolio_note": {
+    "context": "Meta-system documentation (governance, orchestration, infrastructure) strengthens applications across: (1) AI systems engineering roles at research labs, (2) Creative/technical grants (NSF, NEA, Mellon, Knight Foundation), (3) Technology residencies and fellowships. This registry demonstrates orchestration capacity, architectural reasoning, and systemic sustainability\u2014competitive differentiators in 2026 funding landscape.",
+    "supporting_evidence": "Artists like Julian Oliver, Nicky Case, and Hundred Rabbits (Devine Lu Linvega & Rekka Bellum) treat protocols and governance structures as primary artistic output, demonstrating that small-scale sustainable creative infrastructure with extensive documentation receives institutional recognition (updated per 08-CANONICAL-ACTION-PLAN.md \u00a77). Programs like Knight Foundation Art+Tech Expansion Fund, Processing Foundation Fellowship, Google Creative Fellowship explicitly evaluate infrastructure contribution and organizational capacity.",
+    "strategic_opportunity": "Position the eight-organ system as evidence of: (a) a living creative work where governance is the medium (art grants, residencies), (b) long-term digital capacity and sustainability (fellowships), (c) production-grade systems thinking (selective tech roles), (d) community contribution and reusable infrastructure (community-focused funding). All organs launch simultaneously to demonstrate integrated systems thinking."
+  },
+  "local_repos_migration": {
+    "status": "COMPLETE \u2014 15 local repos migrated to organ orgs (2026-02-10). All classified and documented.",
+    "strategy": "Parallel migration with comprehensive README documentation",
+    "completed_date": "2026-02-10",
+    "distribution_by_organ": {
+      "ORGAN-I": 7,
+      "ORGAN-III": 5,
+      "ORGAN-IV": 3
+    }
+  },
+  "parallel_launch_implications": {
+    "advantage_1": "Meta-system visible immediately in applications (grants, hiring, residencies)",
+    "advantage_2": "All cross-organ workflows active from day 1 - true systems integration",
+    "advantage_3": "ORGAN-V can document entire 8-organ launch as primary narrative",
+    "advantage_4": "Demonstrates orchestration capacity at full scale - key differentiator",
+    "challenge_1": "Higher initial documentation burden (all READMEs simultaneously)",
+    "challenge_2": "Simultaneous validation across 8 organs required before public launch",
+    "challenge_3": "Any single broken dependency impacts entire system visibility",
+    "mitigation": "Use comprehensive README audit (Phase 1) and per-organ micro-validation (Phase 2) before cross-organ workflows activate"
+  },
+  "documentation_audit_status": {
+    "ORGAN-I": "LOCKED \u2014 17/17 repos documented + community health files. 0 broken links (7 fixed), 0 TBD markers.",
+    "ORGAN-II": "LOCKED \u2014 20/20 active repos documented + 4 archived + 1 deleted + community health files. Gap-Fill Sprint: 6 new repos created, 5 stubs promoted to standard.",
+    "ORGAN-III": "LOCKED \u2014 20/20 repos documented + community health files. 0 broken links, 0 TBD markers.",
+    "ORGAN-IV": "LOCKED \u2014 6/6 repos documented + orchestration-start-here + community health files. 0 broken links.",
+    "ORGAN-V": "LOCKED \u2014 1 repo + 5 meta-system essays (21.6K words) + community health files. 0 broken links.",
+    "ORGAN-VI": "LOCKED \u2014 5/5 active repos documented + org profile. 6 repos total (1 flagship, 4 standard, 1 infrastructure). All 6 PUBLIC_PROCESS. 435 tests, Neon PostgreSQL, flagship deployed to Render.",
+    "ORGAN-VII": "LOCKED \u2014 3/3 repos documented at 2,000+ words + org profile (736w) + community health files. Gap-Fill Sprint: 3 repos created and documented.",
+    "META-ORGANVM": "LOCKED \u2014 org profile (1,213w). .github repo confirmed.",
+    "TOTAL_DOCUMENTATION_EFFORT": "Gap-Fill Sprint validated: ~270K words across 72 documented repos + 8 org profiles + 5 essays + orchestration hub flagship (4,496w)",
+    "PHASE_2_VALIDATION": "COMPLETE 2026-02-10. V1: 7 broken links fixed (6 ORGAN-I READMEs patched). V2: 0 real TBD markers (12 false positives). V3: 67/67 repos reconciled. V4: 0 dependency violations. V5: All constitution gates PASS. V6: All 8 organs verified."
+  },
+  "portfolio_positioning": {
+    "hiring_angle": "Lead with ORGAN-IV documentation to demonstrate: production-ready thinking, systems architecture, orchestration capacity, cross-functional complexity management. Use specific decisions in orchestration-system.md and github-actions-spec.md to show trade-off reasoning.",
+    "grant_angle": "Position ORGAN-V (Public Process essays) as primary narrative. Lead with Knight Foundation/Mellon framework: demonstrate long-term digital capacity, organizational sustainability, and systemic thinking. Use ORGAN-IV as evidence of infrastructure that enables ongoing work.",
+    "residency_angle": "Emphasize ORGAN-VI (Community) and cross-organ contribution infrastructure. Position as 'artist-engineer' profile with demonstrated capacity for ecosystem building. Use all 8 organs as evidence of systemic artistic practice.",
+    "core_differentiator": "Meta-system documentation itself (registry.json + orchestration-system.md + github-actions-spec.md + public-process essays) is the primary portfolio asset. Not just individual repos, but the governance layer coordinating them."
+  },
+  "launch_checklist": {
+    "phase_1_documentation": [
+      "Comprehensive README for all 44 repos",
+      "About sections for all GitHub orgs (~105K TE)",
+      "Personal account consolidation decision (~50K TE)",
+      "14 local repos migration prep (~135K TE)"
+    ],
+    "phase_2_micro_validation": [
+      "ORGAN-I: All 10 repos locked and documented (~850K TE)",
+      "ORGAN-II: All 13 repos with portfolios + case studies (~1,110K TE)",
+      "ORGAN-III: All 12 repos with governance + metrics (~1.1M TE)",
+      "ORGAN-IV: Orchestration system fully specified (~210K TE)",
+      "ORGAN-V: Public-process infrastructure complete (~90K TE)",
+      "ORGAN-VI: Community repos indexed and accessible (~120K TE)",
+      "ORGAN-VII: Distribution strategy documented (~170K TE)"
+    ],
+    "phase_3_integration": [
+      "Cross-organ dependency validation (~88K TE)",
+      "GitHub Actions workflows deployment (~275K TE)",
+      "Parallel system testing (~180K TE)",
+      "Public launch and ORGAN-V narrative publication (~135K TE)"
+    ],
+    "total_effort": "~6.5M TE across 4 sprints (Bronze Sprint first: 1.1M-1.6M TE band)",
+    "timeline": "Criteria-driven per 08-canonical-action-plan.md D-08. No fixed launch date."
+  },
+  "launch_metrics": {
+    "launch_date": "2026-02-11",
+    "launch_criteria_met": "9/9",
+    "total_repos_on_github": 81,
+    "documented_repos": 73,
+    "org_profiles": 8,
+    "meta_system_essays": 20,
+    "total_essay_words": 84000,
+    "total_documentation_words": "~334,000",
+    "github_actions_workflows": 5,
+    "dependency_edges_validated": 30,
+    "community_health_files": 18,
+    "branch_protection_flagships": 5,
+    "posse_channels_active": [
+      "mastodon",
+      "discord"
+    ],
+    "live_site": "https://organvm-v-logos.github.io/public-process/",
+    "rss_feed": "https://organvm-v-logos.github.io/public-process/feed.xml",
+    "orchestration_hub": "https://github.com/organvm-iv-taxis/orchestration-start-here",
+    "launch_issue": "https://github.com/organvm-iv-taxis/orchestration-start-here/issues/3",
+    "phase_timeline": {
+      "phase_minus_1": "2026-02-09 to 2026-02-10",
+      "phase_0": "2026-02-03 to 2026-02-09",
+      "phase_1_bronze_silver_gold": "2026-02-10",
+      "phase_2_validation": "2026-02-10",
+      "phase_3_integration": "2026-02-10 to 2026-02-11",
+      "launch": "2026-02-11"
+    },
+    "platinum_sprint": {
+      "date": "2026-02-11",
+      "repos_with_ci": 65,
+      "repos_platinum": 65,
+      "new_essays": 5,
+      "total_essays": 17,
+      "estimated_new_words": 19000,
+      "estimated_total_words": 320000
+    },
+    "implementation_status_distribution": {
+      "ACTIVE": 91,
+      "ARCHIVED": 10
+    }
+  }
+}

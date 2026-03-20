@@ -1,0 +1,58 @@
+{
+  "name": "Public Process",
+  "description": "Essays, marginalia, process documentation, building in public, RSS/newsletter, audience engagement",
+  "launch_status": "OPERATIONAL",
+  "completion": "100% \u2014 1/1 non-infrastructure repo documented (4,040 words) + org profile expanded",
+  "public_visibility": "FULLY PUBLIC",
+  "portfolio_angle": "PRIMARY AMPLIFICATION LAYER. Converts meta-system documentation into thought leadership and audience engagement. Essays about the eight-organ system itself become portfolio material. Central for Grant funding (Knight Foundation, Mellon, NEA) and thought leadership positioning.",
+  "repository_count": 2,
+  "repositories": [
+    {
+      "name": "public-process",
+      "org": "organvm-v-logos",
+      "status": "ACTIVE",
+      "public": true,
+      "description": "Essays, case studies, methodology documentation, RSS feed, newsletter integration",
+      "documentation_status": "FLAGSHIP README DEPLOYED",
+      "portfolio_relevance": "CRITICAL - Primary narrative layer describing all 8 organs + meta-system",
+      "launch_content": [
+        "Essay 1: How We Orchestrate Eight Organs Across ~44 GitHub Repositories",
+        "Essay 2: Theory + Commerce + Art: A Case Study in Systemic Creative Practice",
+        "Essay 3: Autonomous Creative Systems: Design Principles from Epistemic Engineering",
+        "Essay 4: Building in Public: Governance, Transparency, and Artistic Infrastructure",
+        "Essay 5: The Meta-System as Artistic Medium: Protocol Design as Creative Output"
+      ],
+      "dependencies": [
+        "organvm-i-theoria/recursive-engine--generative-entity",
+        "organvm-ii-poiesis/metasystem-master",
+        "organvm-iii-ergon/public-record-data-scrapper",
+        "organvm-iv-taxis/agentic-titan"
+      ],
+      "promotion_status": "GRADUATED",
+      "tier": "flagship",
+      "last_validated": "2026-02-11",
+      "note": "Created Bronze Sprint 2026-02-10. Silver Sprint README (4,040w). Gold Sprint: 5 meta-system essays deployed (21,625 total words).",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci-minimal.yml",
+      "platinum_status": true,
+      "deployment_url": "https://public-process.netlify.app"
+    },
+    {
+      "name": ".github",
+      "org": "organvm-v-logos",
+      "status": "ACTIVE",
+      "public": true,
+      "description": "Organization profile and community health files",
+      "documentation_status": "INFRASTRUCTURE",
+      "portfolio_relevance": "INTERNAL",
+      "dependencies": [],
+      "promotion_status": "GRADUATED",
+      "tier": "infrastructure",
+      "last_validated": "2026-02-24",
+      "note": "Silver Sprint: org profile README expanded to 632 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
+      "implementation_status": "ACTIVE",
+      "ci_workflow": "ci-minimal.yml",
+      "platinum_status": true
+    }
+  ]
+}
