@@ -26,6 +26,7 @@
 | SPEC-015 | Escalation & Attention Policy | L5 | Triage levels, Dilemma Reports, escalation triggers |
 | SPEC-016 | Epistemic Routing Specification | L5 | Source-of-truth registry, context injection, context budgets |
 | SPEC-017 | Agent Authority Matrix | L5 | Read/Propose/Mutate/Approve levels, immutability declarations |
+| SPEC-018 | Dialectica Universalis | L1 | Structural isomorphism thesis: eight organs as eight dialects of universal logic, 28 translation pairs, Curry-Howard-Lambek extended |
 
 ## Governance Instruments (not numbered, receive full RFIV treatment)
 
@@ -39,7 +40,7 @@
 
 | Layer | Name | Specs |
 |-------|------|-------|
-| L1 | Metaphysical Identity | SPEC-000, 001, 002 |
+| L1 | Metaphysical Identity | SPEC-000, 001, 002, 018 |
 | L2 | Constitutional Logic | SPEC-003, 004, 005 |
 | L3A | Structural Architecture | SPEC-006, 007, 008 |
 | L3B | Governance Instruments | SPEC-012, Formation Protocol, Functional Taxonomy, Era Model |
