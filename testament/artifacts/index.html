@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORGANVM Testament Gallery</title>
+<style>
+  :root {
+    --bg: #0f0f23;
+    --surface: #16213e;
+    --primary: #1a1a2e;
+    --accent: #e94560;
+    --text: #d4d4d8;
+    --muted: #6b7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+  .subtitle {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  .artifact-card {
+    background: var(--surface);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .artifact-card:hover {
+    border-color: var(--accent);
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .organ-tag {
+    color: var(--accent);
+  }
+  .modality-tag {
+    color: var(--muted);
+  }
+  .artifact-preview {
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+  }
+  .artifact-preview object {
+    width: 100%;
+    max-height: 250px;
+  }
+  .placeholder {
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  .card-title {
+    color: var(--text);
+    font-weight: 500;
+  }
+  .card-date {
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--primary);
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<h1>ORGANVM Testament Gallery</h1>
+<p class="subtitle">29 artifacts — the system renders its own density into experience</p>
+<div class="gallery">
+
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="system-constellation.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">System Constellation</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="omega-mandala.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Omega Scorecard Mandala</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">schematic</span>
+      </div>
+      <div class="artifact-preview"><object data="dependency-flow.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Dependency Flow</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-density.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ Density Portrait</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview"><object data="status-distribution.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Status Distribution</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">philosophical</span>
+      </div>
+      <div class="artifact-preview placeholder">philosophical</div>
+      <div class="card-footer">
+        <span class="card-title">System Self-Portrait</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">sonic</span>
+      </div>
+      <div class="artifact-preview placeholder">sonic</div>
+      <div class="card-footer">
+        <span class="card-title">Sonic Self-Portrait</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">social</span>
+      </div>
+      <div class="artifact-preview placeholder">social</div>
+      <div class="card-footer">
+        <span class="card-title">System Pulse</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">schematic</span>
+      </div>
+      <div class="artifact-preview"><object data="registry-schematic.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">System topology constellation</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">schematic</span>
+      </div>
+      <div class="artifact-preview"><object data="governance-schematic.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Dependency flow diagram</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">mathematical</span>
+      </div>
+      <div class="artifact-preview placeholder">mathematical</div>
+      <div class="card-footer">
+        <span class="card-title">State machine formal spec</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview"><object data="metrics-statistical.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">AMMOI density portrait</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview placeholder">statistical</div>
+      <div class="card-footer">
+        <span class="card-title">Temporal metrics timeline</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="omega-visual.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Omega scorecard mandala</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">schematic</span>
+      </div>
+      <div class="artifact-preview"><object data="seed-schematic.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Produces/consumes flow diagram</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">schematic</span>
+      </div>
+      <div class="artifact-preview"><object data="ontologia-schematic.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Entity hierarchy tree</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview"><object data="ecosystem-statistical.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Competitive matrix radar</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview"><object data="session-statistical.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Session activity timeline</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview placeholder">visual</div>
+      <div class="card-footer">
+        <span class="card-title">Per-repo pitch deck</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">social</span>
+      </div>
+      <div class="artifact-preview placeholder">social</div>
+      <div class="card-footer">
+        <span class="card-title">Content pipeline post</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">I</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-i-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ I — Theory</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">II</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-ii-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ II — Art</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">III</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-iii-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ III — Commerce</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">IV</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-iv-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ IV — Orchestration</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">V</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-v-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ V — Public Process</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">VI</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-vi-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ VI — Community</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">VII</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-vii-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ VII — Marketing</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">META</span>
+        <span class="modality-tag">visual</span>
+      </div>
+      <div class="artifact-preview"><object data="organ-meta-card.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Organ META — Meta</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+    <div class="artifact-card">
+      <div class="card-header">
+        <span class="organ-tag">system</span>
+        <span class="modality-tag">statistical</span>
+      </div>
+      <div class="artifact-preview"><object data="repo-heatmap.svg" type="image/svg+xml"></object></div>
+      <div class="card-footer">
+        <span class="card-title">Repository Heatmap</span>
+        <span class="card-date">2026-03-20</span>
+      </div>
+    </div>
+</div>
+<footer>ORGANVM TESTAMENT — structural self-awareness through continuous self-description</footer>
+</body>
+</html>

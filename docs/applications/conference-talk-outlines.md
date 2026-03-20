@@ -36,7 +36,7 @@
 
 **Slide 4 — What I Actually Built**
 - 113 repositories, 8 GitHub organizations, 3 weeks
-- 739K+ words of documentation
+- ~741K+ words of documentation
 - 49 published essays
 - 4,015+ automated tests, 104 CI/CD workflows
 - 6 JSON schemas, 16 ADRs
@@ -240,7 +240,7 @@
 - Process documentation IS the primary deliverable
 - The 49 essays about building the system ARE the system's most visible output
 - Grant reviewers and hiring managers see methodology, not just artifacts
-- The governance corpus (~739K+ words) is evidence of capability
+- The governance corpus (~741K+ words) is evidence of capability
 - "Documenting the building is building"
 
 **SECTION 3: THE DECISIONS (8 min)**
@@ -256,7 +256,7 @@
 **Slide 11 — The Billing Disaster**
 - 48,880 minutes of GitHub Actions CI in one month
 - Free tier limit: 2,000 minutes. That is a 24x overage.
-- Root cause: 104 workflows running on every push across 113 repos
+- Root cause: 104 workflows running on every push across 116 repos
 - Decision: disabled 17 non-critical workflows, added billing guardrails
 - "Constraints you forget about come back as invoices"
 
@@ -403,7 +403,7 @@
 - "These organs do not make things. They make the making possible."
 
 **Slide 10 — Organ VIII: Meta**
-- The governance corpus (~739K+ words), the registry, the schemas
+- The governance corpus (~741K+ words), the registry, the schemas
 - Custom CLI (`organvm` — 23 command groups)
 - MCP server (88 tools) exposing the system graph to AI sessions
 - System dashboard with dependency visualization
@@ -489,7 +489,7 @@
 1. **Slide 5:** Run `organvm seed graph` or show the system dashboard dependency graph — the full DAG with all 50 edges, color-coded by organ.
 2. **Slide 7:** Show a running generative art piece from an ORGAN-II repo (if audio is available) or a screenshot/recording of one.
 3. **Slide 11:** Show two `organ-aesthetic.yaml` files side by side — contrast the visual identity definitions between Theory and Art organs.
-4. **Slide 13:** Run `organvm seed validate` — show the system verifying its own structural integrity across 113 repos.
+4. **Slide 13:** Run `organvm seed validate` — show the system verifying its own structural integrity across 116 repos.
 5. **Slide 14:** Walk through the dependency graph in the dashboard, clicking from ORGAN-I -> ORGAN-II -> ORGAN-III to trace one transformation pipeline.
 
 ### Audience Takeaways
@@ -508,12 +508,12 @@ These metrics appear across all three talks and should be kept consistent. Sourc
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Total repositories | 113 | registry-v2.json |
+| Total repositories | 116 | registry-v2.json |
 | GitHub organizations | 8 | registry-v2.json |
-| Documentation volume | ~739K+ words | system metrics |
-| Published essays | 49 | ORGAN-V public-process |
+| Documentation volume | ~741K+ words | system metrics |
+| Published essays | 0 | ORGAN-V public-process |
 | Automated tests | 4,015+ | CI aggregation |
-| CI/CD workflows | 104 | registry-v2.json |
+| CI/CD workflows | 104+ | registry-v2.json |
 | JSON schemas | 6 (all v1.0.0) | schema-definitions |
 | ADRs | 16 | docs/adr/ |
 | Completed sprints | 33 | sprint catalog |

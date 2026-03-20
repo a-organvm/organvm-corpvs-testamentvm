@@ -1,21 +1,21 @@
 # Track: AI Engineering Roles
 
 **Targets:** Anthropic, OpenAI, Runway, Together AI, Hugging Face, + 2 TBD
-**Evidence:** 113-repo system with automated governance, 2,349 tests across flagship projects, 5 CI/CD governance workflows, ~404K+ words of documentation
+**Evidence:** 116-repo system with automated governance, 2,349 tests across flagship projects, 5 CI/CD governance workflows, ~741K+ words of documentation
 **Core evidence:** ORGAN-IV orchestration + agentic-titan + recursive-engine
 
 ---
 
 ## Framing
 
-"I designed and implemented an eight-organ orchestration system coordinating 113 repos across 8 orgs with automated governance, dependency validation, and health checks."
+"I designed and implemented an eight-organ orchestration system coordinating 116 repos across 8 orgs with automated governance, dependency validation, and health checks."
 
 This positions you as someone who:
 1. **Thinks in systems**, not fragments — orchestrating 100 repos is an architectural challenge
 2. **Ships production-quality infrastructure** — 82+ CI/CD workflows, 5 governance automations, automated health checks
 3. **Designs governance from first principles** — promotion state machine, dependency rules, constitutional constraints
 4. **Tests rigorously** — agentic-titan: 1,095 tests; recursive-engine: 1,254 tests
-5. **Documents thoroughly** — ~404K+ words of documentation is evidence of communication capacity
+5. **Documents thoroughly** — ~741K+ words of documentation is evidence of communication capacity
 
 ---
 
@@ -32,7 +32,7 @@ This positions you as someone who:
 
 **Talking points:**
 - "I built a system where governance rules are data, not code — the system reads governance-rules.json and enforces constraints automatically"
-- "The dependency validation ensures no circular dependencies across 113 repos — the same kind of constraint enforcement that matters in AI safety"
+- "The dependency validation ensures no circular dependencies across 116 repos — the same kind of constraint enforcement that matters in AI safety"
 - "Monthly automated audits with 0 critical alerts demonstrate that governance-first design works at scale"
 
 ### OpenAI — Applied AI Engineer
@@ -48,7 +48,7 @@ This positions you as someone who:
 - "I don't just build AI agents; I build the governance and infrastructure that makes them reliable"
 
 ### Runway / Together AI / Hugging Face — ML Infra or Developer Advocate
-**Why you fit:** These companies need people who can bridge technical depth with clear communication. Your ~404K+ words of documentation + working systems = evidence of both.
+**Why you fit:** These companies need people who can bridge technical depth with clear communication. Your ~741K+ words of documentation + working systems = evidence of both.
 
 **Lead with:**
 - The meta-system itself: 100 repos documented, organized, and automated
@@ -67,13 +67,13 @@ This positions you as someone who:
 > [One sentence: a specific metric or mechanism]
 > [Then: how this connects to the role]
 >
-> The eight-organ system I designed coordinates 113 repositories across 8 GitHub organizations. The system includes:
+> The eight-organ system I designed coordinates 116 repositories across 8 GitHub organizations. The system includes:
 >
 > - A machine-readable registry serving as single source of truth for all repos
 > - Automated dependency validation enforcing no circular dependencies and no back-edges
 > - A formal promotion state machine with 5 GitHub Actions workflows for autonomous governance
 > - 104+ CI/CD pipelines and automated monthly health audits
-> - ~404K+ words of documentation across the entire system
+> - ~741K+ words of documentation across the entire system
 >
 > Two projects demonstrate particular depth:
 >
@@ -123,13 +123,13 @@ Key points:
 **Expected questions and how to answer using the system:**
 
 Q: "Tell me about a complex system you've built."
-A: 113 repositories across 8 GitHub organizations, coordinated by a machine-readable registry, automated dependency validation, and a promotion state machine. Walk through the architectural decisions: why 8 organs (domain separation), why a state machine (governance without human bottlenecks), why dependency validation (structural integrity at scale).
+A: 116 repositories across 8 GitHub organizations, coordinated by a machine-readable registry, automated dependency validation, and a promotion state machine. Walk through the architectural decisions: why 8 organs (domain separation), why a state machine (governance without human bottlenecks), why dependency validation (structural integrity at scale).
 
 Q: "How do you handle system failures?"
-A: organ-audit.py runs monthly health checks across all 113 repos. governance-rules.json defines critical vs. warning thresholds. The validate-dependencies workflow blocks merges that would violate constraints. 0 critical alerts since launch.
+A: organ-audit.py runs monthly health checks across all 116 repos. governance-rules.json defines critical vs. warning thresholds. The validate-dependencies workflow blocks merges that would violate constraints. 0 critical alerts since launch.
 
 Q: "How do you test at scale?"
-A: 104+ CI/CD workflows across all code repos. agentic-titan: 1,095 tests across 18 development phases. recursive-engine: 1,254 tests, 85% coverage. platinum-validation.py sweeps the full system against 1,267 audited links and 50 dependency edges.
+A: 104+ CI/CD workflows across all code repos. agentic-titan: 1,095 tests across 18 development phases. recursive-engine: 1,254 tests, 85% coverage. platinum-validation.py sweeps the full system against 1,267 audited links and 55 dependency edges.
 
 Q: "How do you communicate technical decisions?"
 A: ~404K+ words of documentation across 100 repos. 42 published essays. orchestration-system-v2.md documents governance rationale. Every README is written for external evaluators, not internal notes.

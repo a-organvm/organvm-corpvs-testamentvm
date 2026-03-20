@@ -16,7 +16,7 @@ otherwise noted.
 
 **Audience:** Grant panels, portfolio reviewers, anyone evaluating system scope.
 **Goal:** Establish that this is a real, operational system — not a spec document
-or a folder of side projects. Show that 113 repositories across 8 organs are
+or a folder of side projects. Show that 116 repositories across 8 organs are
 running, monitored, and governed by a unified CLI.
 
 ### Script
@@ -66,7 +66,7 @@ organvm status
   managed by a single person using AI as a force multiplier."
 - "The soak test is a 30-day stability trial — the system has to run
   autonomously with zero critical incidents. We are 17 days in."
-- "59 active repos, each with CI, a `seed.yaml` automation contract, and a
+- "62 active repos, each with CI, a `seed.yaml` automation contract, and a
   registry entry."
 
 **Transition cue:** "That summary shows the heartbeat. Let me show you what the
@@ -359,7 +359,7 @@ Dependency Graph Validation
 ```
 
 **Talking points:**
-- "50 dependency edges across the system. Zero back-edges. Zero cycles. The
+- "55 dependency edges across the system. Zero back-edges. Zero cycles. The
   unidirectional flow — I to II to III — is not aspirational. It is enforced."
 - "The core rule: theory flows to art, art informs products. No back-edges.
   ORGAN-IV orchestrates everything. ORGAN-V observes. ORGAN-VII distributes."
@@ -421,7 +421,7 @@ organvm metrics calculate
 
 ```
 Metrics written to .../organvm-corpvs-testamentvm/system-metrics.json
-  Repos: 103 (59 ACTIVE)
+  Repos: 103 (62 ACTIVE)
   Organs: 8/8 operational
   CI: 94
   Dependencies: 43 edges
@@ -431,7 +431,7 @@ Metrics written to .../organvm-corpvs-testamentvm/system-metrics.json
 **Talking points:**
 - "One command computes the entire system's metrics: repo count, CI coverage,
   dependency edges, word count across all documentation."
-- "404,000+ words of documentation. 278K in READMEs alone. All generated through
+- "740,907+ words of documentation. 278K in READMEs alone. All generated through
   the AI-conductor model — AI writes, human reviews and edits."
 - "These numbers are not manually tracked. They are computed from the actual
   workspace state every time you run the command."
@@ -456,7 +456,7 @@ DRY RUN — no files will be modified
   document that references system numbers — the master summary, the registry,
   the README files."
 - "No manual find-and-replace. One command updates every occurrence of
-  '103 repositories' or '~404K+ words' across the entire corpus."
+  '103 repositories' or '~741K+ words' across the entire corpus."
 - "This is the conductor model in action: the system maintains its own
   documentation."
 
@@ -486,7 +486,7 @@ organvm registry show public-process
 **Talking points:**
 - "ORGAN-V is the public disclosure layer. Everything the system does is
   documented in essays deployed to this Netlify site."
-- "There are 48 meta-system essays plus 4 additional essays — over 404,000+ words
+- "There are 0 meta-system essays plus 4 additional essays — over 740,907+ words
   of published writing about methodology, governance, and creative systems."
 - "The essay topics come from the implementation plan. Each essay is specified
   in a sprint, generated via the conductor model, reviewed, and deployed."
@@ -556,8 +556,8 @@ organvm deadlines
 
 **Closing line:** "The conductor model is human direction, AI execution, machine
 verification. The human designs the architecture and reviews the output. The AI
-generates 404,000+ words of documentation, 94 CI pipelines, and 83 pitch decks.
-The machine enforces 50 dependency edges, 17 graduation criteria, and a 30-day
+generates 740,907+ words of documentation, 94 CI pipelines, and 83 pitch decks.
+The machine enforces 55 dependency edges, 17 graduation criteria, and a 30-day
 soak test."
 
 ---

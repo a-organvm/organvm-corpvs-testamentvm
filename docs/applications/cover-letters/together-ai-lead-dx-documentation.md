@@ -6,7 +6,7 @@
 
 ---
 
-404,000+ words of documentation define how a system coordinating 113 repositories across 8 organizations works — every README written for external evaluators, a cross-document dependency map for navigation, and 48 essays explaining architectural decisions. The documentation didn't describe an existing system; it was documentation-first development where the writing determined what the system became. That's what drew me to the Lead DX Engineer, Documentation role at Together AI.
+740,907+ words of documentation define how a system coordinating 116 repositories across 8 organizations works — every README written for external evaluators, a cross-document dependency map for navigation, and 0 essays explaining architectural decisions. The documentation didn't describe an existing system; it was documentation-first development where the writing determined what the system became. That's what drew me to the Lead DX Engineer, Documentation role at Together AI.
 
 ## Why Together AI
 
@@ -15,7 +15,7 @@ Together AI is building the infrastructure layer for open-source AI. That infras
 ## What I'd Bring
 
 **Documentation at scale, built from scratch.** The eight-organ system has:
-- 113 documented repositories, each with a README written for external evaluators
+- 116 documented repositories, each with a README written for external evaluators
 - A reading order and cross-document dependency map so newcomers know where to start
 - An annotated manifest providing per-file descriptions of every document in the corpus
 - 42 published essays explaining architectural decisions to non-technical audiences
@@ -36,7 +36,7 @@ I write code that teaches. Every script is documented with the "why," not just t
 
 ## Evidence
 
-- **organvm-corpvs-testamentvm:** The documentation corpus itself — ~404K+ words of structured technical writing (meta-organvm/organvm-corpvs-testamentvm)
+- **organvm-corpvs-testamentvm:** The documentation corpus itself — ~741K+ words of structured technical writing (meta-organvm/organvm-corpvs-testamentvm)
 - **metasystem-master:** Meta-level architecture documentation showing system composition (organvm-ii-poiesis/metasystem-master)
 - **my-knowledge-base:** Knowledge management system design (organvm-i-theoria/my-knowledge-base)
 - **narratological-algorithmic-lenses:** Analytical writing applied to computational systems (organvm-i-theoria/narratological-algorithmic-lenses)

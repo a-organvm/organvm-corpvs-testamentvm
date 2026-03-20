@@ -1,22 +1,22 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-03-20T02:42:52.443365+00:00",
+  "generated": "2026-03-20T05:17:58.628766+00:00",
   "computed": {
-    "total_repos": 113,
-    "active_repos": 59,
+    "total_repos": 116,
+    "active_repos": 62,
     "archived_repos": 53,
     "total_organs": 8,
     "operational_organs": 8,
     "ci_workflows": 104,
-    "dependency_edges": 50,
+    "dependency_edges": 55,
     "per_organ": {
       "ORGAN-I": {
         "name": "Theory",
-        "repos": 19
+        "repos": 20
       },
       "ORGAN-II": {
         "name": "Art",
-        "repos": 31
+        "repos": 32
       },
       "ORGAN-III": {
         "name": "Commerce",
@@ -40,26 +40,26 @@
       },
       "META-ORGANVM": {
         "name": "Meta",
-        "repos": 11
+        "repos": 12
       }
     },
     "implementation_status": {
-      "ACTIVE": 59,
+      "ACTIVE": 62,
       "ARCHIVED": 53,
       "PROTOTYPE": 1
     },
     "word_counts": {
-      "readmes": 136372,
+      "readmes": 137315,
       "essays": 144924,
-      "corpus": 452519,
+      "corpus": 453152,
       "org_profiles": 5516,
-      "total": 739331
+      "total": 740907
     },
-    "total_words": "~739,000+",
-    "total_words_numeric": 739331,
-    "total_words_short": "739K+",
-    "code_files": 23030,
-    "test_files": 4327,
+    "total_words": "~741,000+",
+    "total_words_numeric": 740907,
+    "total_words_short": "741K+",
+    "code_files": 23121,
+    "test_files": 4337,
     "repos_with_tests": 47
   },
   "manual": {

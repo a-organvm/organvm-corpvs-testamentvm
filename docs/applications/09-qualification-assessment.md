@@ -31,10 +31,10 @@ The initial assessment overcorrected. It framed the gap as "0 years professional
 **Identity framing (VERITAS II):** Systems artist and auteur-producer who builds creative systems. The ORGANVM system IS the creative practice — not a portfolio piece for an engineering job. Governance is the medium. The process of creation is the product. Four identity positions for different audiences: Educator, Multimedia Artist, AI Systems Architect, Community-Focused Practitioner.
 
 **What you have built:**
-- 113-repo eight-organ system with automated governance, dependency validation, CI/CD
+- 116-repo eight-organ system with automated governance, dependency validation, CI/CD
 - agentic-titan: 1,095 tests, 18 phases, multi-agent orchestration
 - recursive-engine: 1,254 tests, 85% coverage, custom DSL
-- ~404K+ words of documentation across the system
+- ~741K+ words of documentation across the system
 - 42 published essays (building in public)
 - Portfolio site with generative art (p5.js on all pages, Jost+CMYK design)
 - 33 named development sprints over 5+ years of sustained practice
@@ -87,7 +87,7 @@ The engineering roles require experience that falls into four specific categorie
 
 #### Google Creative Lab Five — Realistic fit: 8/10
 - **Requirement:** "0+ years" creative experience
-- **Why you qualify:** Five years of creative-technical practice documented across 113 repos. MFA supports creative credibility. Portfolio with generative art, p5.js sketches, eight-organ system as "governance-as-art." Lab Five has no minimum experience requirement.
+- **Why you qualify:** Five years of creative-technical practice documented across 116 repos. MFA supports creative credibility. Portfolio with generative art, p5.js sketches, eight-organ system as "governance-as-art." Lab Five has no minimum experience requirement.
 - **Advantage:** Your profile IS the profile they're looking for — creative technologists who think systemically.
 - **Action:** Submit immediately (no deadline, materials ready)
 
@@ -116,7 +116,7 @@ The engineering roles require experience that falls into four specific categorie
 
 #### Together AI Lead DX Engineer ($160K–$240K) — Realistic fit: 6/10 (was: 4/10)
 - **Requirement:** "5+ years technical writing/engineering/developer education"
-- **What works:** "Developer education" explicitly qualifies you — 11 years teaching + ~404K+ words of documentation. Founding-team aspect means culture-shaping, which favors unconventional backgrounds. The role is documentation-first, not engineering-first.
+- **What works:** "Developer education" explicitly qualifies you — 11 years teaching + ~741K+ words of documentation. Founding-team aspect means culture-shaping, which favors unconventional backgrounds. The role is documentation-first, not engineering-first.
 - **What doesn't:** "Lead" title expects someone who has led documentation at a tech company. They want LLM API docs, function-calling guides, structured output cookbooks — for products with paying users. No tech-company doc leadership.
 - **Realistic angle:** Teaching + writing is a legitimate path into this role. "Lead" is the main barrier, but founding-stage teams often hire for trajectory.
 
@@ -128,7 +128,7 @@ The engineering roles require experience that falls into four specific categorie
 
 #### HuggingFace Developer Advocate ($120K–$160K) — Realistic fit: 5/10 (was: 4/10)
 - **Requirement:** No years requirement — purely skills-based. "Deeply technical, not a marketing position." Create docs, blog posts, tutorials; build demos; contribute to Transformers/Datasets libraries.
-- **What works:** Documentation volume and quality are proven (~404K+ words, 42 essays). Self-directed operator. Writing quality. Remote-first. HuggingFace hires 30–40% from community — unconventional backgrounds are normal.
+- **What works:** Documentation volume and quality are proven (~741K+ words, 42 essays). Self-directed operator. Writing quality. Remote-first. HuggingFace hires 30–40% from community — unconventional backgrounds are normal.
 - **What doesn't:** No published ML tutorials or blog posts. No contributions to HF libraries. No professional ML experience. "Deeply technical" means debugging transformer training loops and model evaluation.
 - **Realistic angle:** Content creation is demonstrated at scale. The gap is ML-specific content, not content ability. Skills-based evaluation favors you more than credential-based roles.
 

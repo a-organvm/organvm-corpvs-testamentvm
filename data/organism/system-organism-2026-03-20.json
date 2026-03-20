@@ -1,19 +1,19 @@
 {
-  "total_repos": 113,
-  "sys_pct": 62,
+  "total_repos": 117,
+  "sys_pct": 61,
   "total_promo_ready": 0,
   "total_stale": 0,
   "profiles": {
-    "archived": 54,
+    "archived": 55,
     "code-full": 44,
     "infrastructure": 9,
-    "documentation": 6
+    "documentation": 9
   },
   "promo_distribution": {
     "GRADUATED": 54,
-    "ARCHIVED": 53,
+    "ARCHIVED": 54,
     "PUBLIC_PROCESS": 4,
-    "LOCAL": 1,
+    "LOCAL": 4,
     "CANDIDATE": 1
   },
   "languages": {
@@ -24,82 +24,82 @@
   "gate_stats": [
     {
       "name": "SEED",
-      "applicable": 113,
-      "passed": 112,
+      "applicable": 117,
+      "passed": 116,
       "failed": 1,
       "rate": 99
     },
     {
       "name": "SCAFFOLD",
-      "applicable": 113,
-      "passed": 103,
-      "failed": 10,
-      "rate": 91
+      "applicable": 117,
+      "passed": 106,
+      "failed": 11,
+      "rate": 90
     },
     {
       "name": "CI",
-      "applicable": 113,
-      "passed": 103,
-      "failed": 10,
-      "rate": 91
+      "applicable": 117,
+      "passed": 104,
+      "failed": 13,
+      "rate": 88
     },
     {
       "name": "TESTS",
-      "applicable": 98,
+      "applicable": 99,
       "passed": 31,
-      "failed": 67,
+      "failed": 68,
       "rate": 31
     },
     {
       "name": "DOCS",
-      "applicable": 104,
-      "passed": 98,
-      "failed": 6,
-      "rate": 94
+      "applicable": 108,
+      "passed": 99,
+      "failed": 9,
+      "rate": 91
     },
     {
       "name": "PROTO",
-      "applicable": 104,
-      "passed": 51,
-      "failed": 53,
-      "rate": 49
+      "applicable": 108,
+      "passed": 54,
+      "failed": 54,
+      "rate": 50
     },
     {
       "name": "CAND",
-      "applicable": 113,
+      "applicable": 117,
       "passed": 59,
-      "failed": 54,
-      "rate": 52
+      "failed": 58,
+      "rate": 50
     },
     {
       "name": "DEPLOY",
-      "applicable": 98,
+      "applicable": 99,
       "passed": 18,
-      "failed": 80,
+      "failed": 81,
       "rate": 18
     },
     {
       "name": "GRAD",
-      "applicable": 104,
+      "applicable": 108,
       "passed": 45,
-      "failed": 59,
-      "rate": 43
+      "failed": 63,
+      "rate": 41
     },
     {
       "name": "OMEGA",
-      "applicable": 50,
+      "applicable": 53,
       "passed": 5,
-      "failed": 45,
-      "rate": 10
+      "failed": 48,
+      "rate": 9
     }
   ],
-  "total_discrepancies": 3,
+  "total_discrepancies": 2,
   "organs": [
     {
       "organ_id": "ORGAN-I",
       "organ_name": "Theory",
-      "count": 19,
-      "avg_pct": 62,
+      "count": 21,
+      "avg_pct": 58,
       "promo_ready": 0,
       "stale": 0,
       "repos": [
@@ -195,7 +195,7 @@
             "Python": 132
           },
           "primary_lang": "Python",
-          "stale_days": 37,
+          "stale_days": 38,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -305,7 +305,7 @@
             "Python": 26
           },
           "primary_lang": "Python",
-          "stale_days": 24,
+          "stale_days": 25,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -424,7 +424,7 @@
             "Rust": 1
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -540,7 +540,7 @@
             "Python": 23
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -656,7 +656,7 @@
             "Python": 77
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -773,7 +773,7 @@
             "JavaScript": 6
           },
           "primary_lang": "TypeScript",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -889,7 +889,7 @@
             "TypeScript": 46
           },
           "primary_lang": "TypeScript",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -1006,7 +1006,7 @@
             "TypeScript": 2
           },
           "primary_lang": "Python",
-          "stale_days": 24,
+          "stale_days": 25,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -1124,7 +1124,7 @@
             "Python": 119
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -1175,7 +1175,7 @@
               "name": "SCAFFOLD",
               "passed": false,
               "applicable": true,
-              "detail": "README(381w)",
+              "detail": "README(381w), CLAUDE.md",
               "next_action": "Add README.md and .gitignore"
             },
             {
@@ -1240,7 +1240,7 @@
           "pct": 62,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 8,
+          "stale_days": 9,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -1249,13 +1249,13 @@
             "has_gitignore": false,
             "has_license": false,
             "has_changelog": false,
-            "has_claude_md": false,
+            "has_claude_md": true,
             "has_contributing": false
           },
           "promo_ready": false,
           "next_promo": "GRADUATED",
           "blockers": [
-            "SCAFFOLD: README(381w)",
+            "SCAFFOLD: README(381w), CLAUDE.md",
             "GRAD: PUBLIC_PROCESS",
             "OMEGA: platinum"
           ],
@@ -1358,9 +1358,9 @@
             "Python": 75
           },
           "primary_lang": "Python",
-          "stale_days": 30,
+          "stale_days": 31,
           "is_stale": false,
-          "is_warn_stale": false,
+          "is_warn_stale": true,
           "scaffold": {
             "readme_words": 5253,
             "has_readme": true,
@@ -1476,9 +1476,9 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 30,
+          "stale_days": 31,
           "is_stale": false,
-          "is_warn_stale": false,
+          "is_warn_stale": true,
           "scaffold": {
             "readme_words": 0,
             "has_readme": false,
@@ -1596,7 +1596,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -1716,9 +1716,9 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 30,
+          "stale_days": 31,
           "is_stale": false,
-          "is_warn_stale": false,
+          "is_warn_stale": true,
           "scaffold": {
             "readme_words": 0,
             "has_readme": false,
@@ -1836,7 +1836,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 31,
+          "stale_days": 32,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -1956,7 +1956,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2076,7 +2076,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2196,7 +2196,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2223,6 +2223,126 @@
             "Promote from ARCHIVED to CANDIDATE",
             "Deploy and set deployment_url in registry",
             "Promote from ARCHIVED to GRADUATED"
+          ],
+          "discrepancies": []
+        },
+        {
+          "repo": "vigiles-aeternae--corpus-mythicum",
+          "organ": "ORGAN-I",
+          "organ_name": "Theory",
+          "tier": "standard",
+          "profile": "documentation",
+          "promo": "LOCAL",
+          "impl": "ACTIVE",
+          "description": "Mythological research corpus \u2014 the Library of All Libraries. 20+ tradition syntheses, power taxonomies, regime specs, metaLAWs codex.",
+          "deployment_url": "",
+          "platinum": false,
+          "revenue_model": null,
+          "revenue_status": null,
+          "gates": [
+            {
+              "name": "SEED",
+              "passed": true,
+              "applicable": true,
+              "detail": "seed.yaml present",
+              "next_action": ""
+            },
+            {
+              "name": "SCAFFOLD",
+              "passed": true,
+              "applicable": true,
+              "detail": "README(181w), .gitignore, LICENSE",
+              "next_action": ""
+            },
+            {
+              "name": "CI",
+              "passed": false,
+              "applicable": true,
+              "detail": "none",
+              "next_action": "Add .github/workflows/ci.yml"
+            },
+            {
+              "name": "TESTS",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            },
+            {
+              "name": "DOCS",
+              "passed": false,
+              "applicable": true,
+              "detail": "181w/500 ",
+              "next_action": "Expand README to >=500 words + add CHANGELOG.md"
+            },
+            {
+              "name": "PROTO",
+              "passed": true,
+              "applicable": true,
+              "detail": "ACTIVE",
+              "next_action": ""
+            },
+            {
+              "name": "CAND",
+              "passed": false,
+              "applicable": true,
+              "detail": "LOCAL",
+              "next_action": "Promote from LOCAL to CANDIDATE"
+            },
+            {
+              "name": "DEPLOY",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            },
+            {
+              "name": "GRAD",
+              "passed": false,
+              "applicable": true,
+              "detail": "LOCAL",
+              "next_action": "Promote from LOCAL to GRADUATED"
+            },
+            {
+              "name": "OMEGA",
+              "passed": false,
+              "applicable": true,
+              "detail": "not platinum",
+              "next_action": "Clear: CI, DOCS, CAND, GRAD"
+            }
+          ],
+          "score": 3,
+          "total": 8,
+          "pct": 37,
+          "languages": {},
+          "primary_lang": "none",
+          "stale_days": 0,
+          "is_stale": false,
+          "is_warn_stale": false,
+          "scaffold": {
+            "readme_words": 181,
+            "has_readme": true,
+            "has_gitignore": true,
+            "has_license": true,
+            "has_changelog": false,
+            "has_claude_md": false,
+            "has_contributing": false
+          },
+          "promo_ready": false,
+          "next_promo": "CANDIDATE",
+          "blockers": [
+            "CI: none",
+            "DOCS: 181w/500 ",
+            "CAND: LOCAL",
+            "GRAD: LOCAL",
+            "OMEGA: not platinum"
+          ],
+          "next_actions": [
+            "Add .github/workflows/ci.yml",
+            "Expand README to >=500 words + add CHANGELOG.md",
+            "Promote from LOCAL to CANDIDATE",
+            "Promote from LOCAL to GRADUATED",
+            "Clear: CI, DOCS, CAND, GRAD"
           ],
           "discrepancies": []
         },
@@ -2316,7 +2436,7 @@
           "pct": 33,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 9,
+          "stale_days": 10,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2347,13 +2467,137 @@
             "Promote from ARCHIVED to GRADUATED"
           ],
           "discrepancies": []
+        },
+        {
+          "repo": "studium-generale",
+          "organ": "ORGAN-I",
+          "organ_name": "Theory",
+          "tier": "standard",
+          "profile": "archived",
+          "promo": "ARCHIVED",
+          "impl": "ARCHIVED",
+          "description": "ARCHIVED \u2014 SGO governance scaffolding migrated to meta-organvm/praxis-perpetua on 2026-03-19. Cross-organ authority requires META placement.",
+          "deployment_url": "",
+          "platinum": false,
+          "revenue_model": "",
+          "revenue_status": "",
+          "gates": [
+            {
+              "name": "SEED",
+              "passed": true,
+              "applicable": true,
+              "detail": "seed.yaml present",
+              "next_action": ""
+            },
+            {
+              "name": "SCAFFOLD",
+              "passed": false,
+              "applicable": true,
+              "detail": "CLAUDE.md",
+              "next_action": "Add README.md and .gitignore"
+            },
+            {
+              "name": "CI",
+              "passed": false,
+              "applicable": true,
+              "detail": "none",
+              "next_action": "Add .github/workflows/ci.yml"
+            },
+            {
+              "name": "TESTS",
+              "passed": false,
+              "applicable": true,
+              "detail": "0 files (need 1)",
+              "next_action": "Create tests/ with initial test file"
+            },
+            {
+              "name": "DOCS",
+              "passed": true,
+              "applicable": true,
+              "detail": "0w/500 ",
+              "next_action": ""
+            },
+            {
+              "name": "PROTO",
+              "passed": false,
+              "applicable": true,
+              "detail": "ARCHIVED",
+              "next_action": "Advance implementation from ARCHIVED to PROTOTYPE+"
+            },
+            {
+              "name": "CAND",
+              "passed": false,
+              "applicable": true,
+              "detail": "ARCHIVED",
+              "next_action": "Promote from ARCHIVED to CANDIDATE"
+            },
+            {
+              "name": "DEPLOY",
+              "passed": false,
+              "applicable": true,
+              "detail": "none",
+              "next_action": "Deploy and set deployment_url in registry"
+            },
+            {
+              "name": "GRAD",
+              "passed": false,
+              "applicable": true,
+              "detail": "ARCHIVED",
+              "next_action": "Promote from ARCHIVED to GRADUATED"
+            },
+            {
+              "name": "OMEGA",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            }
+          ],
+          "score": 2,
+          "total": 9,
+          "pct": 22,
+          "languages": {},
+          "primary_lang": "none",
+          "stale_days": 0,
+          "is_stale": false,
+          "is_warn_stale": false,
+          "scaffold": {
+            "readme_words": 0,
+            "has_readme": false,
+            "has_gitignore": false,
+            "has_license": false,
+            "has_changelog": false,
+            "has_claude_md": true,
+            "has_contributing": false
+          },
+          "promo_ready": false,
+          "next_promo": "LOCAL",
+          "blockers": [
+            "SCAFFOLD: CLAUDE.md",
+            "CI: none",
+            "TESTS: 0 files (need 1)",
+            "PROTO: ARCHIVED",
+            "CAND: ARCHIVED",
+            "DEPLOY: none",
+            "GRAD: ARCHIVED"
+          ],
+          "next_actions": [
+            "Add README.md and .gitignore",
+            "Add .github/workflows/ci.yml",
+            "Create tests/ with initial test file",
+            "Advance implementation from ARCHIVED to PROTOTYPE+",
+            "Promote from ARCHIVED to CANDIDATE",
+            "Deploy and set deployment_url in registry",
+            "Promote from ARCHIVED to GRADUATED"
+          ],
+          "discrepancies": []
         }
       ]
     },
     {
       "organ_id": "ORGAN-II",
       "organ_name": "Art",
-      "count": 31,
+      "count": 32,
       "avg_pct": 51,
       "promo_ready": 0,
       "stale": 0,
@@ -2451,7 +2695,7 @@
             "TypeScript": 14
           },
           "primary_lang": "JavaScript",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2562,7 +2806,7 @@
             "TypeScript": 1
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2674,7 +2918,7 @@
             "JavaScript": 2
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -2782,7 +3026,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -2892,7 +3136,7 @@
             "TypeScript": 45
           },
           "primary_lang": "TypeScript",
-          "stale_days": 31,
+          "stale_days": 32,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -3009,7 +3253,7 @@
             "Python": 1
           },
           "primary_lang": "JavaScript",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3127,7 +3371,7 @@
             "Python": 2
           },
           "primary_lang": "Python",
-          "stale_days": 33,
+          "stale_days": 34,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -3178,7 +3422,7 @@
               "name": "SCAFFOLD",
               "passed": false,
               "applicable": true,
-              "detail": "README(270w)",
+              "detail": "README(270w), CLAUDE.md",
               "next_action": "Add README.md and .gitignore"
             },
             {
@@ -3243,7 +3487,7 @@
           "pct": 62,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 8,
+          "stale_days": 9,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3252,13 +3496,13 @@
             "has_gitignore": false,
             "has_license": false,
             "has_changelog": false,
-            "has_claude_md": false,
+            "has_claude_md": true,
             "has_contributing": false
           },
           "promo_ready": false,
           "next_promo": "GRADUATED",
           "blockers": [
-            "SCAFFOLD: README(270w)",
+            "SCAFFOLD: README(270w), CLAUDE.md",
             "GRAD: PUBLIC_PROCESS",
             "OMEGA: platinum"
           ],
@@ -3359,7 +3603,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3479,7 +3723,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3599,7 +3843,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3719,7 +3963,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3839,7 +4083,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -3959,7 +4203,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4079,7 +4323,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4199,7 +4443,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4319,7 +4563,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4439,7 +4683,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4559,7 +4803,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4679,7 +4923,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4799,7 +5043,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -4919,7 +5163,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -5039,7 +5283,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -5159,7 +5403,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -5279,7 +5523,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -5399,7 +5643,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -5519,7 +5763,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -5546,6 +5790,126 @@
             "Promote from ARCHIVED to CANDIDATE",
             "Deploy and set deployment_url in registry",
             "Promote from ARCHIVED to GRADUATED"
+          ],
+          "discrepancies": []
+        },
+        {
+          "repo": "vigiles-aeternae--theatrum-mundi",
+          "organ": "ORGAN-II",
+          "organ_name": "Art",
+          "tier": "standard",
+          "profile": "documentation",
+          "promo": "LOCAL",
+          "impl": "ACTIVE",
+          "description": "Creative multiverse and RPG \u2014 the Theater of the World. Worldbuilding, characters, rooms, magic system, generative art.",
+          "deployment_url": "",
+          "platinum": false,
+          "revenue_model": null,
+          "revenue_status": null,
+          "gates": [
+            {
+              "name": "SEED",
+              "passed": true,
+              "applicable": true,
+              "detail": "seed.yaml present",
+              "next_action": ""
+            },
+            {
+              "name": "SCAFFOLD",
+              "passed": true,
+              "applicable": true,
+              "detail": "README(234w), .gitignore, LICENSE",
+              "next_action": ""
+            },
+            {
+              "name": "CI",
+              "passed": false,
+              "applicable": true,
+              "detail": "none",
+              "next_action": "Add .github/workflows/ci.yml"
+            },
+            {
+              "name": "TESTS",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            },
+            {
+              "name": "DOCS",
+              "passed": false,
+              "applicable": true,
+              "detail": "234w/500 ",
+              "next_action": "Expand README to >=500 words + add CHANGELOG.md"
+            },
+            {
+              "name": "PROTO",
+              "passed": true,
+              "applicable": true,
+              "detail": "ACTIVE",
+              "next_action": ""
+            },
+            {
+              "name": "CAND",
+              "passed": false,
+              "applicable": true,
+              "detail": "LOCAL",
+              "next_action": "Promote from LOCAL to CANDIDATE"
+            },
+            {
+              "name": "DEPLOY",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            },
+            {
+              "name": "GRAD",
+              "passed": false,
+              "applicable": true,
+              "detail": "LOCAL",
+              "next_action": "Promote from LOCAL to GRADUATED"
+            },
+            {
+              "name": "OMEGA",
+              "passed": false,
+              "applicable": true,
+              "detail": "not platinum",
+              "next_action": "Clear: CI, DOCS, CAND, GRAD"
+            }
+          ],
+          "score": 3,
+          "total": 8,
+          "pct": 37,
+          "languages": {},
+          "primary_lang": "none",
+          "stale_days": 0,
+          "is_stale": false,
+          "is_warn_stale": false,
+          "scaffold": {
+            "readme_words": 234,
+            "has_readme": true,
+            "has_gitignore": true,
+            "has_license": true,
+            "has_changelog": false,
+            "has_claude_md": false,
+            "has_contributing": false
+          },
+          "promo_ready": false,
+          "next_promo": "CANDIDATE",
+          "blockers": [
+            "CI: none",
+            "DOCS: 234w/500 ",
+            "CAND: LOCAL",
+            "GRAD: LOCAL",
+            "OMEGA: not platinum"
+          ],
+          "next_actions": [
+            "Add .github/workflows/ci.yml",
+            "Expand README to >=500 words + add CHANGELOG.md",
+            "Promote from LOCAL to CANDIDATE",
+            "Promote from LOCAL to GRADUATED",
+            "Clear: CI, DOCS, CAND, GRAD"
           ],
           "discrepancies": []
         },
@@ -5639,7 +6003,7 @@
           "pct": 22,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 34,
+          "stale_days": 35,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -5763,7 +6127,7 @@
           "pct": 22,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 34,
+          "stale_days": 35,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -5887,7 +6251,7 @@
           "pct": 22,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 34,
+          "stale_days": 35,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -6011,7 +6375,7 @@
           "pct": 22,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 34,
+          "stale_days": 35,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -6145,7 +6509,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6253,7 +6617,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6365,7 +6729,7 @@
             "Python": 1
           },
           "primary_lang": "TypeScript",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6482,7 +6846,7 @@
             "JavaScript": 15
           },
           "primary_lang": "TypeScript",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6600,7 +6964,7 @@
             "Rust": 1
           },
           "primary_lang": "TypeScript",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6717,7 +7081,7 @@
             "JavaScript": 2
           },
           "primary_lang": "TypeScript",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6835,7 +7199,7 @@
             "Rust": 1
           },
           "primary_lang": "TypeScript",
-          "stale_days": 13,
+          "stale_days": 14,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -6951,7 +7315,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7069,7 +7433,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7187,7 +7551,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7305,7 +7669,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7423,7 +7787,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7541,7 +7905,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7659,7 +8023,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7777,7 +8141,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -7895,7 +8259,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8013,7 +8377,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8131,7 +8495,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8249,7 +8613,7 @@
           "pct": 55,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 19,
+          "stale_days": 20,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8367,7 +8731,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8487,7 +8851,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8607,7 +8971,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 34,
+          "stale_days": 35,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -8727,7 +9091,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8847,7 +9211,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -8967,7 +9331,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -9087,7 +9451,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -9207,7 +9571,7 @@
           "pct": 44,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 34,
+          "stale_days": 35,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -9327,7 +9691,7 @@
           "pct": 40,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 8,
+          "stale_days": 9,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -9449,7 +9813,7 @@
           "pct": 22,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 31,
+          "stale_days": 32,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -9489,7 +9853,7 @@
       "organ_id": "ORGAN-IV",
       "organ_name": "Orchestration",
       "count": 11,
-      "avg_pct": 71,
+      "avg_pct": 73,
       "promo_ready": 0,
       "stale": 0,
       "repos": [
@@ -9586,7 +9950,7 @@
             "JavaScript": 3
           },
           "primary_lang": "TypeScript",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -9703,7 +10067,7 @@
             "JavaScript": 2
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -9819,7 +10183,7 @@
             "Python": 7
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -9935,7 +10299,7 @@
             "Python": 9
           },
           "primary_lang": "Python",
-          "stale_days": 35,
+          "stale_days": 36,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -10051,7 +10415,7 @@
             "Python": 9
           },
           "primary_lang": "Python",
-          "stale_days": 35,
+          "stale_days": 36,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -10167,7 +10531,7 @@
             "Python": 8
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -10283,7 +10647,7 @@
             "Python": 14
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -10400,7 +10764,7 @@
             "JavaScript": 1
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -10519,7 +10883,7 @@
             "TypeScript": 4
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -10638,7 +11002,7 @@
             "Python": 118
           },
           "primary_lang": "Python",
-          "stale_days": 9,
+          "stale_days": 10,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -10705,11 +11069,10 @@
             },
             {
               "name": "CI",
-              "passed": false,
+              "passed": true,
               "applicable": true,
               "detail": "ci-minimal.yml",
-              "next_action": "Add .github/workflows/ci.yml",
-              "discrepancy": "registry/local mismatch"
+              "next_action": ""
             },
             {
               "name": "TESTS",
@@ -10761,12 +11124,12 @@
               "next_action": ""
             }
           ],
-          "score": 1,
+          "score": 2,
           "total": 4,
-          "pct": 25,
+          "pct": 50,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -10782,24 +11145,13 @@
           "next_promo": "GRADUATED",
           "blockers": [
             "SEED: seed.yaml missing",
-            "SCAFFOLD: CLAUDE.md",
-            "CI: ci-minimal.yml"
+            "SCAFFOLD: CLAUDE.md"
           ],
           "next_actions": [
             "Create seed.yaml with schema_version, organ, repo",
-            "Add README.md and .gitignore",
-            "Add .github/workflows/ci.yml"
+            "Add README.md and .gitignore"
           ],
-          "discrepancies": [
-            {
-              "name": "CI",
-              "passed": false,
-              "applicable": true,
-              "detail": "ci-minimal.yml",
-              "next_action": "Add .github/workflows/ci.yml",
-              "discrepancy": "registry/local mismatch"
-            }
-          ]
+          "discrepancies": []
         }
       ]
     },
@@ -10901,7 +11253,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -11009,7 +11361,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11127,7 +11479,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11237,7 +11589,7 @@
             "Python": 22
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11353,7 +11705,7 @@
             "Python": 25
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11469,7 +11821,7 @@
             "Python": 10
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11585,7 +11937,7 @@
             "Python": 13
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11701,7 +12053,7 @@
             "Python": 24
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11830,7 +12182,7 @@
             "JavaScript": 1
           },
           "primary_lang": "Python",
-          "stale_days": 29,
+          "stale_days": 30,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -11940,7 +12292,7 @@
             "Python": 14
           },
           "primary_lang": "Python",
-          "stale_days": 29,
+          "stale_days": 30,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12054,7 +12406,7 @@
             "Python": 26
           },
           "primary_lang": "Python",
-          "stale_days": 29,
+          "stale_days": 30,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12170,7 +12522,7 @@
             "Python": 30
           },
           "primary_lang": "Python",
-          "stale_days": 29,
+          "stale_days": 30,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12199,8 +12551,8 @@
     {
       "organ_id": "META-ORGANVM",
       "organ_name": "Meta",
-      "count": 11,
-      "avg_pct": 71,
+      "count": 12,
+      "avg_pct": 68,
       "promo_ready": 0,
       "stale": 0,
       "repos": [
@@ -12294,7 +12646,7 @@
           "pct": 100,
           "languages": {},
           "primary_lang": "none",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12404,7 +12756,7 @@
             "Python": 43
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12467,7 +12819,7 @@
               "name": "TESTS",
               "passed": true,
               "applicable": true,
-              "detail": "154 files",
+              "detail": "169 files",
               "next_action": ""
             },
             {
@@ -12517,10 +12869,10 @@
           "total": 10,
           "pct": 80,
           "languages": {
-            "Python": 384
+            "Python": 425
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12633,10 +12985,10 @@
           "total": 4,
           "pct": 75,
           "languages": {
-            "Python": 47
+            "Python": 51
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12750,7 +13102,7 @@
             "Python": 36
           },
           "primary_lang": "Python",
-          "stale_days": 36,
+          "stale_days": 37,
           "is_stale": false,
           "is_warn_stale": true,
           "scaffold": {
@@ -12868,7 +13220,7 @@
             "Python": 3
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -12933,7 +13285,7 @@
               "name": "TESTS",
               "passed": true,
               "applicable": true,
-              "detail": "6 files",
+              "detail": "9 files",
               "next_action": ""
             },
             {
@@ -12983,10 +13335,10 @@
           "total": 10,
           "pct": 70,
           "languages": {
-            "Python": 28
+            "Python": 32
           },
           "primary_lang": "Python",
-          "stale_days": 23,
+          "stale_days": 24,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -13101,10 +13453,10 @@
           "total": 10,
           "pct": 60,
           "languages": {
-            "Python": 14
+            "Python": 15
           },
           "primary_lang": "Python",
-          "stale_days": 9,
+          "stale_days": 10,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -13224,7 +13576,7 @@
             "Python": 75
           },
           "primary_lang": "Python",
-          "stale_days": 6,
+          "stale_days": 7,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -13260,7 +13612,7 @@
           "profile": "code-full",
           "promo": "GRADUATED",
           "impl": "ACTIVE",
-          "description": "Process governance corpus: SOPs, session self-critique logs, derived principles, and continuous improvement templates",
+          "description": "Studium Generale ORGANVM (SGO): Internal university, research engine, process governance corpus, and publication house. Cross-organ intake authority for commissioning, evaluating, and certifying original contributions via IRA multi-model consensus.",
           "deployment_url": "",
           "platinum": true,
           "revenue_model": "",
@@ -13277,7 +13629,7 @@
               "name": "SCAFFOLD",
               "passed": false,
               "applicable": true,
-              "detail": "README(223w), CLAUDE.md",
+              "detail": "README(460w), CLAUDE.md",
               "next_action": "Add README.md and .gitignore"
             },
             {
@@ -13298,7 +13650,7 @@
               "name": "DOCS",
               "passed": true,
               "applicable": true,
-              "detail": "223w/500 ",
+              "detail": "460w/500 ",
               "next_action": ""
             },
             {
@@ -13344,11 +13696,11 @@
             "Python": 4
           },
           "primary_lang": "Python",
-          "stale_days": 13,
+          "stale_days": 1,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
-            "readme_words": 223,
+            "readme_words": 460,
             "has_readme": true,
             "has_gitignore": false,
             "has_license": false,
@@ -13359,7 +13711,7 @@
           "promo_ready": false,
           "next_promo": "GRADUATED",
           "blockers": [
-            "SCAFFOLD: README(223w), CLAUDE.md",
+            "SCAFFOLD: README(460w), CLAUDE.md",
             "TESTS: 0 files (need 1)",
             "DEPLOY: none",
             "OMEGA: platinum"
@@ -13465,7 +13817,7 @@
             "TypeScript": 102
           },
           "primary_lang": "TypeScript",
-          "stale_days": 9,
+          "stale_days": 10,
           "is_stale": false,
           "is_warn_stale": false,
           "scaffold": {
@@ -13501,10 +13853,130 @@
               "discrepancy": "registry/local mismatch"
             }
           ]
+        },
+        {
+          "repo": "vigiles-aeternae--agon-cosmogonicum",
+          "organ": "META-ORGANVM",
+          "organ_name": "Meta",
+          "tier": "standard",
+          "profile": "documentation",
+          "promo": "LOCAL",
+          "impl": "ACTIVE",
+          "description": "Mythological governance simulation engine \u2014 the Colosseum where competing cosmological regimes audit the real ORGANVM system",
+          "deployment_url": "",
+          "platinum": false,
+          "revenue_model": null,
+          "revenue_status": null,
+          "gates": [
+            {
+              "name": "SEED",
+              "passed": true,
+              "applicable": true,
+              "detail": "seed.yaml present",
+              "next_action": ""
+            },
+            {
+              "name": "SCAFFOLD",
+              "passed": true,
+              "applicable": true,
+              "detail": "README(291w), .gitignore, LICENSE",
+              "next_action": ""
+            },
+            {
+              "name": "CI",
+              "passed": false,
+              "applicable": true,
+              "detail": "none",
+              "next_action": "Add .github/workflows/ci.yml"
+            },
+            {
+              "name": "TESTS",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            },
+            {
+              "name": "DOCS",
+              "passed": false,
+              "applicable": true,
+              "detail": "291w/500 ",
+              "next_action": "Expand README to >=500 words + add CHANGELOG.md"
+            },
+            {
+              "name": "PROTO",
+              "passed": true,
+              "applicable": true,
+              "detail": "ACTIVE",
+              "next_action": ""
+            },
+            {
+              "name": "CAND",
+              "passed": false,
+              "applicable": true,
+              "detail": "LOCAL",
+              "next_action": "Promote from LOCAL to CANDIDATE"
+            },
+            {
+              "name": "DEPLOY",
+              "passed": false,
+              "applicable": false,
+              "detail": "N/A",
+              "next_action": ""
+            },
+            {
+              "name": "GRAD",
+              "passed": false,
+              "applicable": true,
+              "detail": "LOCAL",
+              "next_action": "Promote from LOCAL to GRADUATED"
+            },
+            {
+              "name": "OMEGA",
+              "passed": false,
+              "applicable": true,
+              "detail": "not platinum",
+              "next_action": "Clear: CI, DOCS, CAND, GRAD"
+            }
+          ],
+          "score": 3,
+          "total": 8,
+          "pct": 37,
+          "languages": {},
+          "primary_lang": "none",
+          "stale_days": 0,
+          "is_stale": false,
+          "is_warn_stale": false,
+          "scaffold": {
+            "readme_words": 291,
+            "has_readme": true,
+            "has_gitignore": true,
+            "has_license": true,
+            "has_changelog": false,
+            "has_claude_md": false,
+            "has_contributing": false
+          },
+          "promo_ready": false,
+          "next_promo": "CANDIDATE",
+          "blockers": [
+            "CI: none",
+            "DOCS: 291w/500 ",
+            "CAND: LOCAL",
+            "GRAD: LOCAL",
+            "OMEGA: not platinum"
+          ],
+          "next_actions": [
+            "Add .github/workflows/ci.yml",
+            "Expand README to >=500 words + add CHANGELOG.md",
+            "Promote from LOCAL to CANDIDATE",
+            "Promote from LOCAL to GRADUATED",
+            "Clear: CI, DOCS, CAND, GRAD"
+          ],
+          "discrepancies": []
         }
       ]
     }
   ],
   "omega": null,
-  "generated": "2026-03-20T00:55:30.752159+00:00"
+  "generated": "2026-03-20T10:47:11.350887+00:00"
 }
