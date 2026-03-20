@@ -1,0 +1,26 @@
+name: Ecosystem Coverage Audit (Monthly)
+on:
+  schedule:
+    - cron: '0 9 1 * *'  # 1st of month, 09:00 UTC
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install organvm-engine
+        run: pip install git+https://github.com/meta-organvm/organvm-engine.git
+      - name: Run coverage audit
+        run: |
+          organvm ecosystem coverage --json > coverage-report.json
+          organvm ecosystem validate --json > validation-report.json
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ecosystem-reports-${{ github.run_number }}
+          path: |
+            coverage-report.json
+            validation-report.json

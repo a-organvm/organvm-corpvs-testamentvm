@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-03-15T20:49:28.883339+00:00",
+  "generated": "2026-03-20T02:42:52.443365+00:00",
   "computed": {
     "total_repos": 113,
     "active_repos": 59,
@@ -49,55 +49,18 @@
       "PROTOTYPE": 1
     },
     "word_counts": {
-      "readmes": 135798,
+      "readmes": 136372,
       "essays": 144924,
-      "corpus": 452453,
-      "org_profiles": 5404,
-      "total": 738579
+      "corpus": 452519,
+      "org_profiles": 5516,
+      "total": 739331
     },
     "total_words": "~739,000+",
-    "total_words_numeric": 738579,
+    "total_words_numeric": 739331,
     "total_words_short": "739K+",
-    "code_files": 22883,
-    "test_files": 4273,
-    "repos_with_tests": 46,
-    "sprints_completed": 33,
-    "sprint_names": [
-      "01-ignition",
-      "02-propulsion",
-      "03-ascension",
-      "04-exodus",
-      "05-perfection",
-      "06-autonomy",
-      "07-genesis",
-      "08-alchemia",
-      "09-convergence",
-      "10-praxis",
-      "11-veritas",
-      "12-illustratio",
-      "13-manifestatio",
-      "14-operatio",
-      "15-gap-fill",
-      "16-platinum",
-      "17-remedium",
-      "18-synchronium",
-      "19-concordia",
-      "20-tripartitum",
-      "21-submissio",
-      "22-metricum",
-      "23-publicatio",
-      "24-canon",
-      "25-inspectio",
-      "26-propagatio",
-      "27-beta-vitae",
-      "28-recognitio",
-      "29-automata",
-      "30-distributio",
-      "31-fundamen",
-      "32-sensoria",
-      "33-operatio"
-    ],
-    "published_essays": 49
+    "code_files": 23030,
+    "test_files": 4327,
+    "repos_with_tests": 47
   },
   "manual": {
     "_note": "Edit these by hand. calculate-metrics.py preserves this section."

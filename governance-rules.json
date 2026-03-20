@@ -251,6 +251,15 @@
         "validator": "validate_registry_coherence",
         "references": ["constitution.md Article I", "registry/query.py"],
         "severity": "critical"
+      },
+      {
+        "id": "AX-5",
+        "name": "Organ Placement",
+        "statement": "Every non-archived repository must satisfy its organ's inclusion criteria and not trigger any exclusion criteria. Repos that generate revenue belong in ORGAN-III. Repos that orchestrate belong in ORGAN-IV. Placement is validated against organ-definitions.json.",
+        "enforcement": "audit",
+        "validator": "validate_organ_placement",
+        "references": ["organ-definitions.json", "governance/dictums.py", "docs/standards/13-organ-identity-and-placement.md"],
+        "severity": "warning"
       }
     ],
     "organ_dictums": {

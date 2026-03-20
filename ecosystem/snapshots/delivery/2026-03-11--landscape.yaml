@@ -1,0 +1,20 @@
+date: '2026-03-11'
+snapshot_type: landscape
+competitors:
+  - name: ADRs (Architecture Decision Records)
+    relevance: Lightweight governance-as-docs pattern adopted in platform engineering
+  - name: Backstage TechDocs
+    relevance: Spotify's developer portal with catalog + docs as governance surface
+  - name: RFC processes (Oxide, Rust)
+    relevance: Structured proposal-and-review governance corpora in open-source projects
+market_context: >-
+  Planning and governance corpus for the ORGANVM system. 404K+ words of
+  structured documentation including registry-v2.json (single source of
+  truth for 100+ repos), governance rules, rolling roadmaps, and sprint
+  records. Functions as an institutional knowledge base with validation
+  scripts enforcing structural integrity.
+trends:
+  - Docs-as-code governance gaining adoption in platform engineering teams
+  - AI context files (CLAUDE.md, AGENTS.md) emerging as machine-readable governance
+  - Structured decision logs replacing ad-hoc wiki governance
+notes: "Initial snapshot — baseline for staleness tracking"

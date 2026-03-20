@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "description": "Machine-readable organ identity definitions — domain boundaries, inclusion/exclusion criteria, canonical repo types, and boundary tests for each organ in the ORGANVM system.",
+  "organs": {
+    "ORGAN-I": {
+      "name": "Theoria",
+      "domain_boundary": "Foundational theory, epistemological frameworks, recursive engines, ontological systems, symbolic computing. Ideas that exist as pure conceptual structures — not yet materialized into art or product.",
+      "inclusion_criteria": [
+        "Produces conceptual frameworks, algorithms, or engines that other organs consume",
+        "No direct user-facing interface (consumed via ORGAN-II or ORGAN-III)",
+        "Primary output is knowledge structures, not artifacts",
+        "Language/implementation is secondary to the ideas expressed",
+        "Names or describes a theoretical concept, ontological structure, or recursive process"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Has a user-facing interface (GUI, CLI product, web app)", "redirect": "ORGAN-II or ORGAN-III"},
+        {"condition": "Generates revenue or has a revenue_model", "redirect": "ORGAN-III"},
+        {"condition": "Orchestrates other repos or manages agent behavior", "redirect": "ORGAN-IV"},
+        {"condition": "Is primarily documentation or essays", "redirect": "ORGAN-V"}
+      ],
+      "canonical_repo_types": ["engine", "framework", "theory", "ontology", "knowledge-base"],
+      "boundary_tests": [
+        {"question": "Does it produce a conceptual framework consumed by other organs?", "expected": true},
+        {"question": "Does it have end-users who interact with it directly?", "expected": false},
+        {"question": "Could it exist as a paper or specification without code?", "expected": true}
+      ],
+      "sibling_organs": {
+        "ORGAN-II": "If the theory becomes an interactive/generative artwork, the art derivative belongs in II",
+        "ORGAN-III": "If the theory becomes a product, the product belongs in III"
+      }
+    },
+    "ORGAN-II": {
+      "name": "Poiesis",
+      "domain_boundary": "Generative art, performance systems, creative coding, experiential design. Transforms ORGAN-I theory into interactive or aesthetic artifacts. Art that can be experienced.",
+      "inclusion_criteria": [
+        "Derives from or applies ORGAN-I theory in a creative or artistic context",
+        "Produces visual, auditory, interactive, or experiential artifacts",
+        "Primary purpose is aesthetic, expressive, or experiential — not commercial",
+        "May have a user-facing interface for experiencing the art",
+        "Names or describes an artistic concept, creative system, or generative process"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Generates revenue as a product", "redirect": "ORGAN-III"},
+        {"condition": "Is a pure framework with no artistic output", "redirect": "ORGAN-I"},
+        {"condition": "Orchestrates other repos", "redirect": "ORGAN-IV"},
+        {"condition": "Is documentation about art rather than art itself", "redirect": "ORGAN-V"}
+      ],
+      "canonical_repo_types": ["artwork", "installation", "performance", "generative", "creative-tool"],
+      "boundary_tests": [
+        {"question": "Does it produce an artistic or experiential artifact?", "expected": true},
+        {"question": "Is its primary purpose commercial revenue generation?", "expected": false},
+        {"question": "Does it derive from or apply theoretical frameworks from ORGAN-I?", "expected": true},
+        {"question": "Could it be exhibited, performed, or experienced as art?", "expected": true}
+      ],
+      "sibling_organs": {
+        "ORGAN-I": "Pure theory without artistic materialization belongs in I",
+        "ORGAN-III": "If the artwork becomes a commercial product (SaaS, marketplace), the product belongs in III"
+      }
+    },
+    "ORGAN-III": {
+      "name": "Ergon",
+      "domain_boundary": "Commercial products, SaaS tools, developer utilities, B2B/B2C applications. Anything with a revenue model or intended for market deployment. The factory floor.",
+      "inclusion_criteria": [
+        "Has or intends to have a revenue_model (subscription, freemium, one-time, etc.)",
+        "Is designed for end-users as a product or service",
+        "Has or will have deployment infrastructure (hosting, CI/CD, monitoring)",
+        "Names or describes a product, tool, utility, or commercial service",
+        "Targets a specific market segment or solves a specific customer problem"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Is a pure theoretical framework with no product intent", "redirect": "ORGAN-I"},
+        {"condition": "Is primarily an artistic expression", "redirect": "ORGAN-II"},
+        {"condition": "Orchestrates the system rather than serving customers", "redirect": "ORGAN-IV"},
+        {"condition": "Is documentation or public process writing", "redirect": "ORGAN-V"},
+        {"condition": "Revenue model is 'none' or 'internal' with no customer-facing aspect", "redirect": "ORGAN-I or META"}
+      ],
+      "canonical_repo_types": ["saas", "tool", "utility", "marketplace", "api-service", "b2b", "b2c"],
+      "boundary_tests": [
+        {"question": "Does it have a revenue model or clear path to one?", "expected": true},
+        {"question": "Does it serve end-users or customers?", "expected": true},
+        {"question": "Is it deployed or deployable as a standalone service?", "expected": true}
+      ],
+      "sibling_organs": {
+        "ORGAN-I": "Internal-use-only engines without customer-facing aspects belong in I",
+        "ORGAN-II": "Art projects without commercial intent belong in II",
+        "ORGAN-VI": "Community features that serve ORGAN-III products feed back via event edges, not by moving repos"
+      }
+    },
+    "ORGAN-IV": {
+      "name": "Taxis",
+      "domain_boundary": "Orchestration, governance tooling, AI agent management, workflow routing, system coordination. The conductor layer — directs other organs but does not contain their domain logic.",
+      "inclusion_criteria": [
+        "Orchestrates, routes, or coordinates work across other organs",
+        "Manages AI agent behavior, skills, or interaction patterns",
+        "Provides governance tooling (not governance data — that's META)",
+        "Contains workflow definitions, routing rules, or coordination logic",
+        "May reference any organ but does not duplicate their domain logic"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Contains foundational theory that other organs consume", "redirect": "ORGAN-I"},
+        {"condition": "Is a product serving external customers", "redirect": "ORGAN-III"},
+        {"condition": "Holds the system registry, schemas, or governance data", "redirect": "META-ORGANVM"},
+        {"condition": "Is documentation or discourse about orchestration", "redirect": "ORGAN-V"}
+      ],
+      "canonical_repo_types": ["orchestrator", "agent", "workflow", "router", "skills", "conductor"],
+      "boundary_tests": [
+        {"question": "Does it coordinate or route work across organs?", "expected": true},
+        {"question": "Does it contain domain logic belonging to I, II, or III?", "expected": false},
+        {"question": "Would removing it break coordination without losing domain capability?", "expected": true}
+      ],
+      "sibling_organs": {
+        "META-ORGANVM": "Governance data (registry, schemas, rules) belongs in META; governance tooling (agents, routing) belongs in IV",
+        "ORGAN-I": "Recursive engines are theory (I); agents that use those engines for orchestration belong in IV"
+      }
+    },
+    "ORGAN-V": {
+      "name": "Logos",
+      "domain_boundary": "Public discourse, essays, building in public, editorial content, analytics about the system. The observatory — reads from many organs, writes to its own domain only.",
+      "inclusion_criteria": [
+        "Produces written content for public consumption (essays, blog posts, documentation about the system)",
+        "Observes and documents the system for external audiences",
+        "Hosts editorial infrastructure (content management, publishing pipelines)",
+        "Names or describes a publication, essay collection, or editorial system"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Is internal governance documentation", "redirect": "META-ORGANVM (praxis-perpetua)"},
+        {"condition": "Is a product that generates revenue from content", "redirect": "ORGAN-III"},
+        {"condition": "Distributes content to external platforms", "redirect": "ORGAN-VII"},
+        {"condition": "Is community discussion infrastructure", "redirect": "ORGAN-VI"}
+      ],
+      "canonical_repo_types": ["essay-collection", "editorial", "public-process", "analytics", "publication"],
+      "boundary_tests": [
+        {"question": "Does it produce content for public consumption?", "expected": true},
+        {"question": "Does it only write to its own domain (no cross-organ produces)?", "expected": true},
+        {"question": "Is the content about the system or its ideas, not the system itself?", "expected": true}
+      ],
+      "sibling_organs": {
+        "ORGAN-VII": "V produces content; VII distributes it to external platforms",
+        "META-ORGANVM": "Internal governance docs and SOPs belong in META/praxis-perpetua, not V"
+      }
+    },
+    "ORGAN-VI": {
+      "name": "Koinonia",
+      "domain_boundary": "Community infrastructure — salons, reading groups, learning cohorts, discussion forums, community taxonomy. Receives events from products (III) and theory (I) to build community around them.",
+      "inclusion_criteria": [
+        "Hosts or manages community interaction infrastructure",
+        "Receives product.release or product.milestone events from other organs",
+        "Manages community taxonomy, events, or membership",
+        "Names or describes a community space, learning group, or social gathering"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Is a product that monetizes community features", "redirect": "ORGAN-III"},
+        {"condition": "Distributes content to social platforms", "redirect": "ORGAN-VII"},
+        {"condition": "Produces original essays or publications", "redirect": "ORGAN-V"},
+        {"condition": "Is internal team coordination", "redirect": "ORGAN-IV"}
+      ],
+      "canonical_repo_types": ["community", "forum", "salon", "reading-group", "learning-cohort", "taxonomy"],
+      "boundary_tests": [
+        {"question": "Does it serve a community of people around the system's products or ideas?", "expected": true},
+        {"question": "Does it receive events from other organs rather than originating content?", "expected": true},
+        {"question": "Is community building its primary purpose?", "expected": true}
+      ],
+      "sibling_organs": {
+        "ORGAN-III": "Products feed community via events; community features inside products stay in III",
+        "ORGAN-VII": "VI is the community; VII announces to external platforms"
+      }
+    },
+    "ORGAN-VII": {
+      "name": "Kerygma",
+      "domain_boundary": "POSSE distribution, social automation, announcement pipelines, syndication. Pure consumer — takes content from other organs and distributes it to external platforms. Generates no original domain content.",
+      "inclusion_criteria": [
+        "Distributes content from other organs to external platforms (social media, newsletters, etc.)",
+        "Manages POSSE (Publish on Own Site, Syndicate Elsewhere) pipelines",
+        "Contains syndication profiles, distribution rules, or platform connectors",
+        "Names or describes a distribution channel, announcement system, or syndication pipeline"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Produces original content", "redirect": "ORGAN-V"},
+        {"condition": "Manages community interactions", "redirect": "ORGAN-VI"},
+        {"condition": "Is a product that monetizes distribution", "redirect": "ORGAN-III"},
+        {"condition": "Orchestrates system-internal workflows", "redirect": "ORGAN-IV"}
+      ],
+      "canonical_repo_types": ["distribution", "syndication", "posse", "announcement", "connector"],
+      "boundary_tests": [
+        {"question": "Is it a pure consumer that generates no original domain content?", "expected": true},
+        {"question": "Does it distribute content to external platforms?", "expected": true},
+        {"question": "Does it have produces edges in seed.yaml?", "expected": false}
+      ],
+      "sibling_organs": {
+        "ORGAN-V": "V produces content; VII syndicates it externally",
+        "ORGAN-VI": "VI is community interaction; VII is one-way broadcasting"
+      }
+    },
+    "META-ORGANVM": {
+      "name": "Meta",
+      "domain_boundary": "The structural substrate — system registry, JSON schemas, core engine, governance corpus, process SOPs, system dashboard, MCP server, ingestion pipeline. Changes here propagate system-wide. Infrastructure that makes the organ system possible.",
+      "inclusion_criteria": [
+        "Holds system-wide data (registry, schemas, governance rules)",
+        "Provides tooling that operates across all organs (engine, dashboard, MCP server)",
+        "Contains process governance documentation (SOPs, standards, templates)",
+        "Is infrastructure required for the organ system to function",
+        "Names or describes a meta-system component, schema, or governance artifact"
+      ],
+      "exclusion_criteria": [
+        {"condition": "Is an orchestration agent or routing system", "redirect": "ORGAN-IV"},
+        {"condition": "Is a product serving external customers", "redirect": "ORGAN-III"},
+        {"condition": "Is public-facing content or essays", "redirect": "ORGAN-V"},
+        {"condition": "Is foundational theory consumed by other organs", "redirect": "ORGAN-I"}
+      ],
+      "canonical_repo_types": ["engine", "schema", "dashboard", "corpus", "pipeline", "infrastructure", "mcp-server"],
+      "boundary_tests": [
+        {"question": "Would the organ system break without this component?", "expected": true},
+        {"question": "Does it operate across all organs, not just one?", "expected": true},
+        {"question": "Is it infrastructure rather than product?", "expected": true}
+      ],
+      "sibling_organs": {
+        "ORGAN-IV": "IV orchestrates agents and workflows; META holds the data and tooling they operate on",
+        "ORGAN-I": "Theory engines that are consumed by II/III belong in I; the engine that manages the system belongs in META"
+      }
+    }
+  }
+}

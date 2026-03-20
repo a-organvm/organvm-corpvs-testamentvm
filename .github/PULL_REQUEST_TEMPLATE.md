@@ -1,22 +1,20 @@
 ## Summary
 
-<!-- Brief description of the documentation change -->
+<!-- What does this PR do? Keep it brief — 1-3 sentences. -->
 
-## Documents Changed
-
-<!-- List all files modified, added, or removed -->
+## Changes
 
 -
 
+## Testing
+
+- [ ] Existing tests pass
+- [ ] New tests added for new functionality (if applicable)
+- [ ] Manual verification performed
+
 ## Checklist
 
-- [ ] Cross-references to other documents are correct and use relative links
-- [ ] `registry-v2.json` schema is preserved (if modified)
-- [ ] `docs/archive/` directory was not modified
-- [ ] New files are listed in `docs/ANNOTATED-MANIFEST.md`
-- [ ] Document naming conventions followed (`NN-title.md` for numbered docs)
-- [ ] Language is portfolio-quality (audience: grant reviewers, hiring managers)
-
-## Related Issues
-
-<!-- Link any related issues, e.g., Fixes #123 -->
+- [ ] Follows existing code style and patterns
+- [ ] No secrets, credentials, or personal data included
+- [ ] seed.yaml updated (if produces/consumes edges changed)
+- [ ] CLAUDE.md changes auto-generated (run `organvm context sync` if needed)

@@ -1,6 +1,6 @@
 # Plan Atomization Summary
-**Generated**: 2026-03-12
-**Plans parsed**: 274 | **Tasks extracted**: 3670
+**Generated**: 2026-03-13
+**Plans parsed**: 281 | **Tasks extracted**: 3728
 
 ## By Project
 
@@ -13,8 +13,9 @@
 | 4444J99/portfolio/.claude/plans | 7 | 98 | 0 | 98 | 0 |
 | 4444J99/portfolio/.codex/plans | 1 | 1 | 0 | 1 | 0 |
 | 4444J99/portfolio/.gemini/plans | 4 | 30 | 0 | 30 | 0 |
-| _root | 53 | 800 | 6 | 794 | 0 |
-| meta-organvm/.claude/plans | 47 | 796 | 16 | 780 | 0 |
+| _root | 54 | 818 | 6 | 812 | 0 |
+| intake/ai-exports/chatgpt-history/.codex/plans | 4 | 29 | 0 | 29 | 0 |
+| meta-organvm/.claude/plans | 48 | 797 | 16 | 781 | 0 |
 | meta-organvm/.codex/plans | 5 | 36 | 0 | 36 | 0 |
 | meta-organvm/.gemini/plans | 2 | 30 | 0 | 30 | 0 |
 | meta-organvm/intake/alchemical-synthesizer/.claude/plans | 1 | 38 | 0 | 38 | 0 |
@@ -26,6 +27,7 @@
 | meta-organvm/stakeholder-portal/.claude/plans | 10 | 132 | 0 | 132 | 0 |
 | meta-organvm/stakeholder-portal/.codex/plans | 4 | 100 | 0 | 100 | 0 |
 | meta-organvm/stakeholder-portal/.gemini/plans | 5 | 22 | 0 | 22 | 0 |
+| meta-organvm/system-dashboard/.claude/plans | 1 | 10 | 0 | 10 | 0 |
 | organvm-i-theoria/atomic-substrata/.codex/plans | 3 | 9 | 0 | 9 | 0 |
 | organvm-i-theoria/ontological-framework/.codex/plans | 4 | 16 | 0 | 16 | 0 |
 | organvm-ii-poiesis/.codex/plans | 1 | 4 | 0 | 4 | 0 |
@@ -49,19 +51,19 @@
 
 | Type | Count | % |
 |------|-------|---|
-| generic | 1362 | 37% |
-| create_file | 476 | 12% |
-| document | 320 | 8% |
-| configure | 275 | 7% |
-| write_test | 273 | 7% |
-| modify_file | 259 | 7% |
-| verify | 154 | 4% |
-| migrate | 121 | 3% |
-| research | 102 | 2% |
+| generic | 1372 | 36% |
+| create_file | 484 | 12% |
+| document | 322 | 8% |
+| write_test | 280 | 7% |
+| configure | 277 | 7% |
+| modify_file | 266 | 7% |
+| verify | 161 | 4% |
+| migrate | 125 | 3% |
+| research | 108 | 2% |
 | deploy | 97 | 2% |
-| delete_file | 70 | 1% |
-| git_operation | 60 | 1% |
-| review | 43 | 1% |
+| delete_file | 71 | 1% |
+| git_operation | 63 | 1% |
+| review | 44 | 1% |
 | refactor | 31 | 0% |
 | exploration | 27 | 0% |
 
@@ -69,7 +71,7 @@
 
 | Status | Count | % |
 |--------|-------|---|
-| pending | 3621 | 98% |
+| pending | 3679 | 98% |
 | completed | 49 | 1% |
 
 ## Largest Plans (by task count)
@@ -101,28 +103,30 @@
 
 | Agent | Count | % |
 |-------|-------|---|
-| claude | 3244 | 88% |
-| codex | 289 | 7% |
+| claude | 3273 | 87% |
+| codex | 318 | 8% |
 | gemini | 137 | 3% |
 
 ## By Organ
 
 | Organ | Count | % |
 |-------|-------|---|
-| META | 1328 | 36% |
+| META | 1344 | 36% |
 | IV | 834 | 22% |
 | LIMINAL | 722 | 19% |
 | III | 308 | 8% |
-| _root | 174 | 4% |
-| I | 150 | 4% |
-| V | 111 | 3% |
+| _root | 203 | 5% |
+| I | 163 | 4% |
+| V | 111 | 2% |
 | II | 43 | 1% |
 
 ## Non-Actionable Documents
 
 | Plan | Project | Classification |
 |------|---------|----------------|
+| Pulse: The System's Nervous System & Self-Awarenes | meta-organvm/.claude/plans | create_file |
 | Atomic Corpus Branch Preservation Plan | organvm-i-theoria/atomic-substrata/.codex/plans | configure |
+| Search & Rescue Mission — ORGANVM System Health (2 | _root | verify |
 | Plan: Ecosystem Activation — Meta-Org-Wide Workflo | meta-organvm/.claude/plans | generic |
 | Plan: Positioning Core | organvm-iii-ergon/peer-audited--behavioral-blockchain/.codex/plans | delete_file |
 | Meta-Organvm Architectural Exploration Plan | _root | generic |
