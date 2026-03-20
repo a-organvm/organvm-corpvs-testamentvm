@@ -9,8 +9,8 @@
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
   "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I→II→III→IV→V→VI→VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
   "summary": {
-    "total_repos": 116,
-    "total_repos_note": "116 registry entries. Vigiles Aeternae genesis 2026-03-20: 3 repos added (META, ORGAN-I, ORGAN-II). Previous: 113 entries.",
+    "total_repos": 117,
+    "total_repos_note": "117 registry entries. studium-generale ARCHIVED entry added 2026-03-20. Vigiles Aeternae genesis 2026-03-20: 3 repos added (META, ORGAN-I, ORGAN-II). Previous: 113 entries.",
     "operational_organs": 8,
     "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 — 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
@@ -425,6 +425,23 @@
           "platinum_status": false,
           "revenue_model": null,
           "revenue_status": null
+        },
+        {
+          "name": "studium-generale",
+          "org": "organvm-i-theoria",
+          "status": "ARCHIVED",
+          "public": false,
+          "description": "ARCHIVED — SGO governance scaffolding migrated to meta-organvm/praxis-perpetua on 2026-03-19. Cross-organ authority requires META placement.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "LOW - Historical scaffolding, content migrated",
+          "dependencies": [],
+          "promotion_status": "ARCHIVED",
+          "tier": "standard",
+          "last_validated": "2026-03-20",
+          "note": "Created 2026-03-17. Governance YAMLs (charter, defense-protocol, faculty-registry, senate-config) + universal defense rubric migrated to meta-organvm/praxis-perpetua/governance/ and strategy/. Successor: praxis-perpetua.",
+          "implementation_status": "ARCHIVED",
+          "ci_workflow": null,
+          "platinum_status": false
         }
       ]
     },
@@ -2292,7 +2309,8 @@
           "portfolio_relevance": "HIGH - Demonstrates institutional design, academic rigor, and self-governing evaluation methodology",
           "dependencies": [
             "meta-organvm/organvm-corpvs-testamentvm",
-            "organvm-i-theoria/auto-revision-epistemic-engine"
+            "organvm-i-theoria/auto-revision-epistemic-engine",
+            "organvm-i-theoria/recursive-engine--generative-entity"
           ],
           "promotion_status": "GRADUATED",
           "tier": "standard",
