@@ -146,7 +146,7 @@ All org references in docs, registry, and workflows use the resolved instance na
 
 ## Invocation System
 
-The governance corpus uses short IDs across 6 namespaces. When the user references an ID (e.g., "what's X1?", "show me AP-3", "which items advance #8"), look up context in `docs/operations/concordance.md`.
+The governance corpus uses short IDs across 7 namespaces. When the user references an ID (e.g., "what's X1?", "show me AP-3", "which items advance #8", "status of IRF-SGO-001"), look up context in `docs/operations/concordance.md`.
 
 | Prefix | Namespace | Source | Example |
 |--------|-----------|--------|---------|
@@ -160,8 +160,19 @@ The governance corpus uses short IDs across 6 namespaces. When the user referenc
 | AP-1–AP-7 | Anti-patterns | operational-cadence.md | AP-1 = Don't start another sprint |
 | W/SP/BS/LC/BL/ET/LO-II | E2G-II findings | e2g-ii-action-items.md | W1-II = Zero external contact |
 | 01–33 | Completed sprints | docs/specs/sprints/ | 33 = OPERATIO |
+| IRF-XXX-NNN | Index Rerum Faciendarum | INST-INDEX-RERUM-FACIENDARUM.md | IRF-SYS-001 = Consolidate CONSTITUTION.md |
 
 CLI: `python3 scripts/invoke.py <ID>` for terminal lookup. See `docs/operations/concordance.md` for the full symbol table.
+
+### The Index Apparatus
+
+The **Index Rerum Faciendarum** (`INST-INDEX-RERUM-FACIENDARUM.md`) is the universal work registry — the canonical gap between what the system IS and what it NEEDS TO BE. It is the first of four classical indices:
+- **Rerum Faciendarum** (things to be done) — governance instrument, THIS EXISTS
+- **Locorum** (places) — reference instrument, PLANNED (IRF-IDX-001)
+- **Nominum** (names) — reference instrument, PLANNED (IRF-IDX-002)
+- **Rerum** (things) — reference instrument, PLANNED (IRF-IDX-003)
+
+When closing a session, check the IRF for items completed or discovered. When starting a session, consult the IRF for P0/P1 items in the relevant domain.
 
 ## AI-Conductor Workflow Model
 

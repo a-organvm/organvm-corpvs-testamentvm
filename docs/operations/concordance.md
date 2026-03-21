@@ -41,6 +41,39 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 | `AP-\d` | Anti-patterns | AP-1 |
 | `W\d-II`, `SP\d-II`, `BS\d-II`, `LC\d-II`, `BL\d-II`, `ET\d-II`, `LO\d-II` | E2G-II findings | W1-II |
 | Two-digit `\d\d` or sprint name | Sprints | 29 / AUTOMATA |
+| `IRF-XXX-NNN` | Index Rerum Faciendarum items | IRF-SYS-001 |
+
+---
+
+## Index Rerum Faciendarum (IRF)
+
+Source: [`INST-INDEX-RERUM-FACIENDARUM.md`](../../INST-INDEX-RERUM-FACIENDARUM.md)
+
+Universal work registry. 19 domain prefixes:
+
+| Prefix | Domain | Scope |
+|--------|--------|-------|
+| IRF-SYS | System-wide governance & standards | Cross-organ |
+| IRF-IDX | Index apparatus (companion indices) | Cross-organ |
+| IRF-SKL | Skills & automation | ORGAN-IV |
+| IRF-MON | Monitoring & auditing | META (vigiles) |
+| IRF-CRP | Corpus | META (testamentvm) |
+| IRF-SGO | Studium Generale ORGANVM | META (praxis-perpetua) |
+| IRF-VIG | Vigiles Aeternae | META (vigiles) |
+| IRF-TRV | Trivium / Dialectica | META (engine) |
+| IRF-TST | Testament Protocol | META (engine) |
+| IRF-OBJ | Object Lessons | ORGAN-II |
+| IRF-KER | Kerygma / Distribution | ORGAN-VII |
+| IRF-PRT | Portfolio | PERSONAL |
+| IRF-APP | Application Pipeline | PERSONAL |
+| IRF-GEN | Generative Visuals | Cross-organ |
+| IRF-IRA | Evaluative Authority / IRA | META + PERSONAL |
+| IRF-ARC | Cross-organ architecture | Cross-organ |
+| IRF-BLK | Blockchain & provenance | META (testament) |
+| IRF-DOC | Documentation gaps | Cross-organ |
+| IRF-VER | Verification debts | Cross-organ |
+
+Priority tiers: **P0** (now), **P1** (soon), **P2** (growth), **P3** (horizon).
 
 ---
 
