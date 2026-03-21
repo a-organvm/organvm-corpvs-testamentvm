@@ -544,12 +544,21 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-082 | feat: omega criterion #19 Network Testament health (GH#67) — density/velocity/milestones, scorecard 18→19 (advances IRF-CRP-001) | S28 | 2026-03-21 |
 | DONE-083 | feat: tomllib scanner replacing regex TOML parser (GH#68) — PEP 508/503 compliant | S28 | 2026-03-21 |
 | DONE-084 | organvm-engine test suite 4253→4584 tests, all passing. 0 pyright errors, ruff clean. | S28 | 2026-03-21 |
+| DONE-085 | Hermeneus security — 10/10 Dependabot, 6/6 code scanning, 1/1 secret scanning fixed. npm audit: 0 vulnerabilities. | S28 (Hermeneus) | 2026-03-21 |
+| DONE-086 | Next.js 15→16.1.7 upgrade — CVEs closed, React Compiler lint, native flat config, `.npmrc` Vercel compat | S28 (Hermeneus) | 2026-03-21 |
+| DONE-087 | 15 Dependabot PRs resolved (14 applied, 1 declined: eslint 10 — confirms IRF-SYS-008). GH Actions v6/v7. | S28 (Hermeneus) | 2026-03-21 |
+| DONE-088 | 7/7 GitHub issues closed (#1-7) — timeout scaling, offline fallback, SSE streaming, prompt reduction, embed retry, omniscience pipeline, provider resilience | S28 (Hermeneus) | 2026-03-21 |
+| DONE-089 | Provider cascade (Groq→OSS), ad-injection stripping, /api/health/llm, /api/cron/ingest, stale-context warnings | S28 (Hermeneus) | 2026-03-21 |
+| DONE-090 | Hermeneus rename — @organvm/hermeneus, all user-facing strings, GitHub description, persona. Issue #28 for repo slug coordination. | S28 (Hermeneus) | 2026-03-21 |
+| DONE-091 | NaN% citation fix, snippet markdown stripping, brevity constraint, Vercel production deployed with Groq at 160ms | S28 (Hermeneus) | 2026-03-21 |
 
 ---
 
 ## Blocked
 
-*None currently.*
+| ID | What | Blocker | Since |
+|----|------|---------|-------|
+| IRF-SYS-008 | ESLint 9→10 migration | eslint-plugin-react incompatible with ESLint 10 API. Confirmed in S28 Hermeneus session. | 2026-03-21 |
 
 ---
 
@@ -561,13 +570,13 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 130 (GH issues resolved but most were not tracked as IRF active items — they were engine-internal)
+- **Total active items:** 129 (130 prior − 1 moved to Blocked: IRF-SYS-008)
 - **P0 (NOW):** 13
-- **P1 (SOON):** 46
+- **P1 (SOON):** 45 (46 prior − 1 blocked)
 - **P2 (GROWTH):** 62
 - **P3 (HORIZON):** 9
-- **Completed:** 84 (56 prior + 28 from S28 engine-remediation: DONE-057–084)
-- **Blocked:** 0
+- **Completed:** 91 (84 prior + 7 from S28 Hermeneus: DONE-085–091)
+- **Blocked:** 1 (IRF-SYS-008)
 
 ### By Domain
 
