@@ -230,7 +230,7 @@ Verified on disk 2026-03-20:
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-CCE-001 | P1 | Migrate intake/ai-exports to a proper ORGANVM home — currently lives at `~/Workspace/intake/ai-exports` which is an unsorted staging directory, not an organ. The deployment site (5 corpora, source-drop, state, federation) needs a permanent address under ORGAN-I or META governance | Agent | S27 (this session) | Naming: should it be an ORGAN-I repo, a META deployment, or a standalone workspace site? |
+| ~~IRF-CCE-001~~ | ~~P1~~ | ~~Migrate intake/ai-exports~~ → **DONE-114a**: Moved to `organvm-i-theoria/conversation-corpus-site/` per PROOF-reservoir-placement v2. Formal proof derived ORGAN-I as constitutionally correct host. | Agent | S29 | COMPLETED |
 | IRF-CCE-002 | P2 | Reconcile canonical ChatGPT adapter with 5,403-line genesis `export_chatgpt_history.py` — the archive at `intake/ai-exports/archive/legacy-scripts/` has richer entity disambiguation, family grouping, duplicate/contradiction detection, and triage scoring. Cherry-pick the best extraction logic into the canonical adapter | Agent | S27 | None |
 | IRF-CCE-003 | P2 | Add provider adapters for ChatGPT local app data (macOS sandbox), DeepSeek, Mistral — expand beyond the 6 current providers | Agent | S27 | Need export format documentation |
 | IRF-CCE-004 | P2 | Dashboard or TUI for corpus health — readiness, evaluation gates, federation status, review queue at a glance | Agent | S27 | None |
@@ -609,6 +609,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-111 | Governance wiring: audit + promotion gate + placement affinity + formation signal validation (26 tests) | S29 (post-flood) | 2026-03-21 |
 | DONE-112 | organ-definitions.json: RESERVOIR hosting in ORGAN-I, memory exclusion in META | S29 (post-flood) | 2026-03-21 |
 | DONE-113 | corpvs-testamentvm decomposition plan documented (CHARTER stays META, CORPUS migrates ORGAN-I) | S29 (post-flood) | 2026-03-21 |
+| DONE-114a | IRF-CCE-001 closed: intake/ai-exports migrated to organvm-i-theoria/conversation-corpus-site/ — PROOF-reservoir-placement v2 derived ORGAN-I as constitutionally correct host via Formation Protocol §7.2 physiological role analysis | S29 (post-flood) | 2026-03-22 |
 | DONE-114 | Outbound contribution engine — scanner (8 capabilities, composite scoring, signal extraction), orchestrator (full workspace initialization: fork, git, seed, CLAUDE.md, journal, registry, submodule), monitor (PR polling, journal changes, next-action determination). 1,821 lines, 25 tests. CLI: contrib-scan/list/approve/status/monitor. | S30 (Hive) | 2026-03-22 |
 
 ---
