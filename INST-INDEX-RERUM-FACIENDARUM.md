@@ -572,6 +572,12 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-089 | Provider cascade (Groq→OSS), ad-injection stripping, /api/health/llm, /api/cron/ingest, stale-context warnings | S28 (Hermeneus) | 2026-03-21 |
 | DONE-090 | Hermeneus rename — @organvm/hermeneus, all user-facing strings, GitHub description, persona. Issue #28 for repo slug coordination. | S28 (Hermeneus) | 2026-03-21 |
 | DONE-091 | NaN% citation fix, snippet markdown stripping, brevity constraint, Vercel production deployed with Groq at 160ms | S28 (Hermeneus) | 2026-03-21 |
+| DONE-092 | domus-semper-palingenesis: npm PATH gap (XDG prefix not in PATH), engine-strict=false, gh hosts.yml username fix, chezmoi diff noise (run_after→run_onchange, trailing newline) | S29 (domus-E2G) | 2026-03-21 |
+| DONE-093 | domus-semper-palingenesis: E2G comprehensive audit — 3 hardcoded path files templated (0 `/Users/4jp` remaining), GOPATH ordering fix, dead environment.tmpl removed, CI BATS formatting fix, broken LaunchAgents gated, agent-run arg parser bug fixed | S29 (domus-E2G) | 2026-03-21 |
+| DONE-094 | domus-semper-palingenesis: documentation accuracy — "Oh My Zsh" claim corrected (3 files), LaunchAgents table 8→12, stale Dropbox messages, kubectl alias guard | S29 (domus-E2G) | 2026-03-21 |
+| DONE-095 | domus-semper-palingenesis: 1:X modular test coverage — 31 test files, 363 tests (240 BATS + 123 pytest). New: modify_claude_json (14), agent-run (9), agent-tmux (6), plist validation (4), version-check (6), zsh-aliases (15), zsh-functions (7), zsh-path-env (10), git-config (6) | S29 (domus-E2G) | 2026-03-21 |
+| DONE-096 | domus-semper-palingenesis: CI fully green (13/13 jobs) — fixed BATS hangs (tmux mock PATH), yq version detection (skip_if_wrong_yq), osascript skip on Linux, AWS credentials ignore path (XDG), ShellCheck __pycache__ exclusion. Resolved 6 pre-existing failures. | S29 (domus-E2G) | 2026-03-21 |
+| DONE-097 | .gemini scratch files removed (tmp_swarm.py, tmp_trainer.py importing non-existent titan package) | S29 (domus-E2G) | 2026-03-21 |
 
 ---
 
@@ -596,7 +602,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 - **P1 (SOON):** 52 (49 prior + 3 new: IRF-SYS-010, IRF-CRP-005, IRF-TST-002)
 - **P2 (GROWTH):** 69 (66 prior + 3 new: IRF-IDX-004, IRF-CRP-004, IRF-SGO-007)
 - **P3 (HORIZON):** 9
-- **Completed:** 91 (DONE-001 through DONE-091)
+- **Completed:** 97 (DONE-001 through DONE-097)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 21
 
@@ -626,9 +632,9 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | VER (Verification) | 3 | 3 |
 | RES (Research Programme) | 68 | 9 |
 | HRM (Hermeneus) | 8 | 7 |
-| Cross-session (S23-S28) | 0 | 48 |
+| Cross-session (S23-S29) | 0 | 54 |
 | **Active IRF items** | **137** | — |
-| **Total DONE entries** | — | **91** |
+| **Total DONE entries** | — | **97** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features) that don't map to a single domain prefix.*
 
