@@ -16,7 +16,7 @@ otherwise noted.
 
 **Audience:** Grant panels, portfolio reviewers, anyone evaluating system scope.
 **Goal:** Establish that this is a real, operational system — not a spec document
-or a folder of side projects. Show that 117 repositories across 8 organs are
+or a folder of side projects. Show that 118 repositories across 8 organs are
 running, monitored, and governed by a unified CLI.
 
 ### Script
@@ -359,7 +359,7 @@ Dependency Graph Validation
 ```
 
 **Talking points:**
-- "56 dependency edges across the system. Zero back-edges. Zero cycles. The
+- "58 dependency edges across the system. Zero back-edges. Zero cycles. The
   unidirectional flow — I to II to III — is not aspirational. It is enforced."
 - "The core rule: theory flows to art, art informs products. No back-edges.
   ORGAN-IV orchestrates everything. ORGAN-V observes. ORGAN-VII distributes."
@@ -557,7 +557,7 @@ organvm deadlines
 **Closing line:** "The conductor model is human direction, AI execution, machine
 verification. The human designs the architecture and reviews the output. The AI
 generates 404,000+ words of documentation, 94 CI pipelines, and 83 pitch decks.
-The machine enforces 56 dependency edges, 17 graduation criteria, and a 30-day
+The machine enforces 58 dependency edges, 17 graduation criteria, and a 30-day
 soak test."
 
 ---
