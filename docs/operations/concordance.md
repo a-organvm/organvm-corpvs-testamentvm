@@ -36,7 +36,7 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 | `M\d-II` | P2 TODO items (quality) | M2-II |
 | `S\d-II` | P3 TODO items (strategic) | S1-II |
 | `G\d` | Setup guide TODO items | G2 |
-| `#\d+` or bare 1–17 | Omega criteria | #8 |
+| `#\d+` or bare 1–19 | Omega criteria | #8 |
 | `H\d` | Horizons | H3 |
 | `AP-\d` | Anti-patterns | AP-1 |
 | `W\d-II`, `SP\d-II`, `BS\d-II`, `LC\d-II`, `BL\d-II`, `ET\d-II`, `LO\d-II` | E2G-II findings | W1-II |
@@ -53,7 +53,7 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 
 Source: [`INST-INDEX-RERUM-FACIENDARUM.md`](../../INST-INDEX-RERUM-FACIENDARUM.md)
 
-Universal work registry. 21 domain prefixes:
+Universal work registry. 22 domain prefixes:
 
 | Prefix | Domain | Scope |
 |--------|--------|-------|
@@ -183,7 +183,9 @@ Source: [`rolling-todo.md`](./rolling-todo.md), [`e2g-ii-action-items.md`](../ev
 
 ## Omega Criteria
 
-Source: [`there+back-again.md`](../strategy/there+back-again.md) §"The Seventeen Omega Criteria"
+Source: [`there+back-again.md`](../strategy/there+back-again.md) §"The Nineteen Omega Criteria"
+
+Constitutional amendment (2026-03-20): Old #9 (revenue_status: live) and #10 (MRR ≥ costs) replaced with craft-first criteria. Revenue follows traffic follows quality follows craft. Amendment (2026-03-21): #19 added — Network Testament health.
 
 | # | Criterion | Horizon | Measurement | Status |
 |---|-----------|---------|-------------|--------|
@@ -195,17 +197,19 @@ Source: [`there+back-again.md`](../strategy/there+back-again.md) §"The Seventee
 | 6 | AI-conductor essay published | H2 | Public-process URL | MET (2026-02-11) |
 | 7 | ≥3 pieces of external feedback collected | H2 | Feedback synthesis doc | NOT MET |
 | 8 | ≥1 ORGAN-III product live | H3 | Product URL + user count | MET (2026-02-28) |
-| 9 | `revenue_status: live` for ≥1 registry entry | H3 | `registry-v2.json` | NOT MET |
-| 10 | MRR ≥ system operating costs | H3 | Financial record | NOT MET |
+| 9 | ≥3 products at stranger-ready polish | H3 | Stranger test per product (UI, docs, onboarding) | NOT MET |
+| 10 | ≥100 unique visitors/month (organic discovery) | H3 | Analytics across portfolio + portal + products | NOT MET |
 | 11 | ≥2 salons/events held with external participants | H4 | Event records | NOT MET |
 | 12 | ≥3 external contributions to the system | H4 | GitHub activity | NOT MET |
 | 13 | ≥1 organic inbound link from external site | H4 | Analytics | MET (2026-02-28) |
 | 14 | ≥1 recognition event (grant, citation, invitation, or adoption) | H5 | Evidence URL | NOT MET |
-| 15 | Portfolio updated with external validation | H5 | Portfolio site | NOT MET |
+| 15 | Portfolio updated with external validation | H5 | Portfolio site | MET (2026-03-19) |
 | 16 | Bus factor >1 (validated, not just documented) | H1+H4 | Second operator log | NOT MET |
 | 17 | System operates 30+ days without primary operator intervention | H1 | Soak test data | NOT MET |
+| 18 | First organic revenue (inquiry → payment) | H5 | Payment record from organic discovery | NOT MET |
+| 19 | Network Testament health (density + engagement + milestones) | H3 | network_density ≥ 0.5, engagement_velocity > 0, ≥1 milestone | NOT MET |
 
-**Scorecard:** 4/17 MET (#5 application submitted 2026-02-24, #6 AI-conductor essay 2026-02-11, #8 12 products deployed 2026-02-28, #13 LobeHub organic inbound links 2026-02-28), 4 IN PROGRESS (#1, #3, #12, #17 — soak/engagement clocks at day 13), 9 NOT STARTED (as of 2026-02-28). Soak streak at 13 days (Feb 16-28). 12 products live across Netlify/Render.
+**Scorecard:** 5/19 MET (#5 application submitted 2026-02-24, #6 AI-conductor essay 2026-02-11, #8 12 products deployed 2026-02-28, #13 LobeHub organic inbound links 2026-02-28, #15 portfolio validation page 2026-03-19). #18 gated behind #9 + #10 (craft → traffic → revenue). #19 auto-assessed from network maps, engagement ledger, and milestone files.
 
 ---
 
@@ -354,8 +358,8 @@ Which TODO items advance which omega criteria. Items with no omega link are qual
 | #6 | AI-conductor essay published | E4, E5 (MET via earlier deploy) |
 | #7 | ≥3 external feedback | X1, X3, X4 (feeds) |
 | #8 | ≥1 product live | X2 |
-| #9 | revenue_status: live | M2-II |
-| #10 | MRR ≥ operating costs | M2-II |
+| #9 | ≥3 products at stranger-ready polish | M1-II (stranger test per product) |
+| #10 | ≥100 unique visitors/month | — (requires analytics setup) |
 | #11 | ≥2 salons/events | S2-II |
 | #12 | ≥3 external contributions | S3-II |
 | #13 | ≥1 organic inbound link | X4 (feeds) |
@@ -363,9 +367,51 @@ Which TODO items advance which omega criteria. Items with no omega link are qual
 | #15 | Portfolio updated | M3-II |
 | #16 | Bus factor >1 | M1-II |
 | #17 | 30+ days autonomous | E2, S1-II |
+| #18 | First organic revenue | M2-II (gated behind #9 + #10) |
+| #19 | Network Testament health | — (auto-assessed from network maps) |
 
 **Unlinked TODO items** (quality/infrastructure, no direct omega advancement): M4-II (seed.yaml), M5-II (monitoring), M6-II (CI restructure), S4-II (essays backlog), S5-II (second product investigation), G1 (LinkedIn token), G2 (Render hosting), G3 (Ghost newsletter).
 
 ---
 
-*This concordance was generated on 2026-02-17. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*
+## Named Code Entities
+
+Source: `organvm-engine/src/organvm_engine/` — key classes by domain module. ~200 total classes across 28 modules.
+
+| Module | Key Classes | Description |
+|--------|-------------|-------------|
+| `atoms/` | `AtomLink`, `PipelineResult`, `ReconcileResult`, `TaskVerdict`, `OrganRollup` | Atomization pipeline: Jaccard linking, reconciliation, per-organ fanout |
+| `audit/` | `Finding`, `Severity`, `LayerReport`, `InfrastructureAuditReport` | Multi-layer infrastructure audit with severity-tagged findings |
+| `ci/` | `CheckStatus`, `RepoCompliance`, `InfraAuditReport`, `CITriageReport`, `ScaffoldResult` | CI health triage, compliance auditing, workflow scaffolding |
+| `content/` | `ContentPost`, `ContentSignal`, `CadenceReport` | Content reading, signal extraction, publishing cadence |
+| `coordination/` | `WorkClaim`, `ClaimConflict`, `AgentPhase`, `ToolCheckout` | Multi-agent claims registry, lifecycle phases, tool concurrency |
+| `deadlines/` | `Deadline` | Parsed deadline with date, omega links |
+| `debt/` | `DebtItem` | Technical debt scanner items |
+| `dispatch/` | `WebhookReceiver`, `DispatchReceipt`, `FormalVerificationError` | Event routing, webhook reception, idempotency |
+| `distill/` | `OperationalPattern`, `PatternMatch`, `CoverageEntry` | Pattern taxonomy, prompt matching, SOP coverage |
+| `events/` | `EventType`, `EventRecord`, `EventSpine` | Central event bus for system-wide event routing |
+| `governance/` | `MultiplexGraph`, `DependencyResult`, `ImpactReport`, `SanctionEngine`, `EraTracker`, `FeedbackLoopInventory`, `TemporalGraph`, `Formation`, `PlacementAudit`, `DictumReport`, `ConformanceResult` | Dependency graph, state machine, sanctions, eras, feedback loops, placement, interrogation |
+| `indexer/` | `Component`, `RepoIndex`, `SystemIndex`, `BridgeResult` | Repo component indexing, system-wide index, ontologia bridge |
+| `irf/` | `IRFItem` | Parsed IRF work item with priority, domain, status |
+| `ledger/` | `AnchorRecord`, `ChainVerificationResult`, `ChainIndex`, `EventTier` | Git-anchored ledger, chain verification, segment rotation |
+| `metrics/` | `GateResult`, `RepoProgress`, `SystemOrganism`, `PropagationResult`, `HeartbeatReport`, `ConsilienceReport`, `LintReport` | Gate evaluation, organism health, propagation, consilience |
+| `network/` | `MirrorEntry`, `NetworkMap`, `EngagementEntry` | External mirror tracking, engagement ledger |
+| `omega/` | `OmegaScorecard`, `OmegaCriterion`, `SoakStreak`, `NetworkTestamentResult`, `Phase` | 19-criterion scorecard, soak analysis, network testament, phases |
+| `ontologia/` | `RegistrySensor`, `SoakSensor`, `CISensor`, `PromotionSensor` | Data sensors feeding ontologia entity system |
+| `ontology/` | `Relation`, `UnifiedRelationStore`, `Capability`, `CapabilityRegistry`, `EntityCategory` | Entity relations, capabilities, taxonomy |
+| `paths.py` | `PathConfig` | Foundation: canonical workspace/corpus/soak path resolution |
+| `pitchdeck/` | `PitchTheme`, `PitchDeckData` | Pitch deck rendering data and themes |
+| `plans/` | `AtomicTask`, `PlanParser`, `PlanIndex`, `PlanOverlap`, `PlanSprawl` | Plan atomization, indexing, overlap detection, hygiene |
+| `prompts/` | `AnnotatedPrompt`, `RawPrompt`, `NarrateResult`, `ClipboardPrompt` | Prompt extraction, classification, narrative threading, clipboard |
+| `pulse/` | `AMMOI`, `PulseSnapshot`, `Advisory`, `SystemMood`, `MoodReading`, `NerveBundle`, `FlowProfile`, `DensityProfile` | Real-time system pulse: density, mood, advisories, flow |
+| `registry/` | `ValidationResult`, `RegistryStats` | Registry validation and aggregate statistics |
+| `seed/` | `SeedGraph`, `SignalGraph`, `SignalPort`, `SignalEdge` | Seed discovery, produces/consumes graph, signal routing |
+| `session/` | `SessionMeta`, `SessionExport`, `AgentSession`, `SessionDebrief`, `PlanFile` | Multi-agent session parsing, export, debrief |
+| `sop/` | `SOPEntry`, `AuditResult` | SOP/METADOC discovery and inventory audit |
+| `testament/` | `TestamentArtifact`, `CatalogSummary`, `AestheticProfile`, `RenderResult`, `OrganOutputProfile`, `SonicTestament` | Testament artifacts, aesthetic profiles, multi-modal rendering |
+| `trivium/` | `Dialect`, `DialectProfile`, `Correspondence`, `TranslationPair`, `TranslationEvidence` | Organ dialects, cross-organ correspondence, translation |
+| `verification/` | `DispatchLedger`, `DispatchContract`, `VerificationReport`, `TemporalResult` | Dispatch idempotency, contract verification, model checking |
+
+---
+
+*This concordance was last updated on 2026-03-21. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*
