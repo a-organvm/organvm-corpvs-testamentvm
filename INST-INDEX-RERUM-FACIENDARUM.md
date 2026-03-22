@@ -105,9 +105,24 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-CRP-001 | P1 | Omega scorecard: advance from 4/17 toward next achievable criteria | Agent | S13 | None |
-| IRF-CRP-002 | P2 | Registry-v2.json maintenance — keep in sync as repos evolve | Agent | S3-7 | Ongoing |
-| IRF-CRP-003 | P2 | Testament Protocol — verify chain integrity after recent sessions | Agent | S7 | None |
+| IRF-CRP-001 | P1 | Omega scorecard: advance from 8/19 toward next achievable criteria (#9 stranger-ready polish is closest) | Agent | S13, S28 | None |
+| IRF-CRP-002 | P2 | Registry-v2.json maintenance — keep in sync as repos evolve. Hermeneus entry needs display_name + updated description. | Agent | S3-7, S28 | Ongoing |
+| IRF-CRP-003 | P2 | Testament Protocol — run cascade to record S28 Hermeneus events (Next.js 16, streaming, provider cascade, rename) | Agent | S7, S28 | None |
+
+---
+
+## META — Hermeneus (Intelligence Layer)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-HRM-001 | P1 | Repo rename: stakeholder-portal → hermeneus. 60+ files across workspace. Issue #28 has full blast radius + 7-step execution plan. | Human+Agent | S28 | Coordinate with registry, seeds, context sync |
+| IRF-HRM-002 | P1 | Registry-v2.json entry update — display_name: Hermeneus, description, capabilities, new produces edges (health API, ingest API) | Agent | S28 | None |
+| IRF-HRM-003 | P1 | Concordance registration — new API routes (/api/health/llm, /api/cron/ingest) and governance IDs (issue #28) need concordance entries | Agent | S28 | None |
+| IRF-HRM-004 | P2 | Custom domain — hermeneus.organvm.io or similar to replace stakeholder-portal-ten.vercel.app | Human | S28 | DNS + Vercel config |
+| IRF-HRM-005 | P1 | Testament cascade — run `organvm testament cascade --write` to record S28 system events in the generative self-portrait | Agent | S28 | None |
+| IRF-HRM-006 | P2 | Omega #9 advancement — stranger-test Hermeneus for polish validation (NaN% fixed, streaming works, citations render, brevity enforced) | Human | S28 | Needs stranger participant |
+| IRF-HRM-007 | P2 | Streaming markdown rendering — heading concatenation bug during token-by-token accumulation. Need debounced react-markdown or plain-text-during-stream approach | Agent | S28 | Frontend architecture decision |
+| IRF-HRM-008 | P2 | Ingestion pipeline: run full re-ingestion with new retry logic (#7) to refresh stale chunks and verify 0 HF API failures | Agent | S28 | Needs local workspace + DATABASE_URL |
 
 ---
 
@@ -570,13 +585,14 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 129 (130 prior − 1 moved to Blocked: IRF-SYS-008)
+- **Total active items:** 137 (129 prior + 8 new Hermeneus: IRF-HRM-001–008)
 - **P0 (NOW):** 13
-- **P1 (SOON):** 45 (46 prior − 1 blocked)
-- **P2 (GROWTH):** 62
+- **P1 (SOON):** 49 (45 prior + 4 new: IRF-HRM-001–003, IRF-HRM-005)
+- **P2 (GROWTH):** 66 (62 prior + 4 new: IRF-HRM-004, IRF-HRM-006–008)
 - **P3 (HORIZON):** 9
-- **Completed:** 91 (DONE-001 through DONE-091: S23 cataloguing + S24 portfolio + S25 praxis CI + S26 gmail/a11y/infra + S27 CCE + research programme close-out + S28 engine/Hermeneus)
+- **Completed:** 91 (DONE-001 through DONE-091)
 - **Blocked:** 1 (IRF-SYS-008)
+- **Domains:** 21 (20 prior + 1 new: HRM)
 
 ### By Domain
 
@@ -603,8 +619,9 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DOC (Documentation) | 5 | 0 |
 | VER (Verification) | 3 | 3 |
 | RES (Research Programme) | 68 | 9 |
+| HRM (Hermeneus) | 8 | 7 |
 | Cross-session (S23-S28) | 0 | 48 |
-| **Active IRF items** | **129** | — |
+| **Active IRF items** | **137** | — |
 | **Total DONE entries** | — | **91** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features) that don't map to a single domain prefix.*
