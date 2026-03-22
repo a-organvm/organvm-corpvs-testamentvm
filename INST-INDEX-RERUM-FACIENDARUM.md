@@ -609,6 +609,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-111 | Governance wiring: audit + promotion gate + placement affinity + formation signal validation (26 tests) | S29 (post-flood) | 2026-03-21 |
 | DONE-112 | organ-definitions.json: RESERVOIR hosting in ORGAN-I, memory exclusion in META | S29 (post-flood) | 2026-03-21 |
 | DONE-113 | corpvs-testamentvm decomposition plan documented (CHARTER stays META, CORPUS migrates ORGAN-I) | S29 (post-flood) | 2026-03-21 |
+| DONE-114 | Outbound contribution engine — scanner (8 capabilities, composite scoring, signal extraction), orchestrator (full workspace initialization: fork, git, seed, CLAUDE.md, journal, registry, submodule), monitor (PR polling, journal changes, next-action determination). 1,821 lines, 25 tests. CLI: contrib-scan/list/approve/status/monitor. | S30 (Hive) | 2026-03-22 |
 
 ---
 
@@ -633,7 +634,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 - **P1 (SOON):** 55 (54 prior + 1 new: IRF-CCE-008)
 - **P2 (GROWTH):** 74 (71 prior + 3 new: IRF-SYS-013, IRF-SYS-014, IRF-SYS-015)
 - **P3 (HORIZON):** 9
-- **Completed:** 113 (DONE-001 through DONE-113)
+- **Completed:** 114 (DONE-001 through DONE-114)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 22
 
