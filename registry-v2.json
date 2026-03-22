@@ -1,25 +1,25 @@
 {
   "version": "2.0",
-  "schema_version": "1",
+  "schema_version": "1.2.0",
   "schema_note": "Schema v1.0.0 (formalized 2026-03-04). Promoted from v0.5 after 15+ days of production validation. implementation_status enum: ACTIVE|PROTOTYPE|SKELETON|DESIGN_ONLY|ARCHIVED. Revenue split: revenue_model (subscription|freemium|one-time|none) + revenue_status (pre-launch|beta|live|n/a). ci_workflow: ci-python.yml|ci-typescript.yml|ci-mixed.yml|ci-minimal.yml|null. platinum_status: boolean. Phase 0 schema (v0.2), hardened 2026-02-10. Four fields populated for all repos: dependencies (array of org/repo strings), promotion_status (LOCAL|CANDIDATE|PUBLIC_PROCESS|GRADUATED|ARCHIVED), tier (flagship|standard|stub|archive|infrastructure), last_validated (ISO 8601).",
   "deployment_model": "PARALLEL_ALL_ORGANS",
   "launch_date": "2026-02-11",
   "launch_date_note": "Phase -1 complete 2026-02-10. Bronze Sprint COMPLETE 2026-02-10. Silver Sprint COMPLETE 2026-02-10. Gold Sprint COMPLETE 2026-02-10. PHASE 2 MICRO-VALIDATION COMPLETE 2026-02-10. PHASE 3 COMPLETE 2026-02-11. SYSTEM LAUNCHED 2026-02-11. 9/9 launch criteria met. POSSE verified: Mastodon (HTTP 200) + Discord (HTTP 204). Jekyll site live with RSS (5 essays). All validation scripts pass.",
   "generated": "2026-02-03T02:30:00Z",
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
-  "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I→II→III→IV→V→VI→VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
+  "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I\u2192II\u2192III\u2192IV\u2192V\u2192VI\u2192VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
   "summary": {
     "total_repos": 117,
     "total_repos_note": "117 registry entries. studium-generale ARCHIVED entry added 2026-03-20. Vigiles Aeternae genesis 2026-03-20: 3 repos added (META, ORGAN-I, ORGAN-II). Previous: 113 entries.",
     "operational_organs": 8,
-    "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 — 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
+    "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 \u2014 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
     "local_repos_to_migrate": 9,
-    "portfolio_strength": "COVENANT-ARK — 100 repos (all on GitHub), 90 ACTIVE + 10 ARCHIVED, 9 flagship repos with full community health files, 42 essays (~142K words), CLAUDE.md across all active repos (100% AI-augmented workflow coverage), community health files inherited org-wide via 8 .github repos, POSSE distribution live, Jekyll site with RSS, 82+ CI/CD workflows, Astro portfolio site with 19 curated projects, 33 named development sprints, system-metrics.json dashboard, ~410K+ total words. Identity-coherent: process-as-product methodology, solo production at institutional scale."
+    "portfolio_strength": "COVENANT-ARK \u2014 100 repos (all on GitHub), 90 ACTIVE + 10 ARCHIVED, 9 flagship repos with full community health files, 42 essays (~142K words), CLAUDE.md across all active repos (100% AI-augmented workflow coverage), community health files inherited org-wide via 8 .github repos, POSSE distribution live, Jekyll site with RSS, 82+ CI/CD workflows, Astro portfolio site with 19 curated projects, 33 named development sprints, system-metrics.json dashboard, ~410K+ total words. Identity-coherent: process-as-product methodology, solo production at institutional scale."
   },
   "meta_system_portfolio_note": {
-    "context": "Meta-system documentation (governance, orchestration, infrastructure) strengthens applications across: (1) AI systems engineering roles at research labs, (2) Creative/technical grants (NSF, NEA, Mellon, Knight Foundation), (3) Technology residencies and fellowships. This registry demonstrates orchestration capacity, architectural reasoning, and systemic sustainability—competitive differentiators in 2026 funding landscape.",
-    "supporting_evidence": "Artists like Julian Oliver, Nicky Case, and Hundred Rabbits (Devine Lu Linvega & Rekka Bellum) treat protocols and governance structures as primary artistic output, demonstrating that small-scale sustainable creative infrastructure with extensive documentation receives institutional recognition (updated per 08-CANONICAL-ACTION-PLAN.md §7). Programs like Knight Foundation Art+Tech Expansion Fund, Processing Foundation Fellowship, Google Creative Fellowship explicitly evaluate infrastructure contribution and organizational capacity.",
+    "context": "Meta-system documentation (governance, orchestration, infrastructure) strengthens applications across: (1) AI systems engineering roles at research labs, (2) Creative/technical grants (NSF, NEA, Mellon, Knight Foundation), (3) Technology residencies and fellowships. This registry demonstrates orchestration capacity, architectural reasoning, and systemic sustainability\u2014competitive differentiators in 2026 funding landscape.",
+    "supporting_evidence": "Artists like Julian Oliver, Nicky Case, and Hundred Rabbits (Devine Lu Linvega & Rekka Bellum) treat protocols and governance structures as primary artistic output, demonstrating that small-scale sustainable creative infrastructure with extensive documentation receives institutional recognition (updated per 08-CANONICAL-ACTION-PLAN.md \u00a77). Programs like Knight Foundation Art+Tech Expansion Fund, Processing Foundation Fellowship, Google Creative Fellowship explicitly evaluate infrastructure contribution and organizational capacity.",
     "strategic_opportunity": "Position the eight-organ system as evidence of: (a) a living creative work where governance is the medium (art grants, residencies), (b) long-term digital capacity and sustainability (fellowships), (c) production-grade systems thinking (selective tech roles), (d) community contribution and reusable infrastructure (community-focused funding). All organs launch simultaneously to demonstrate integrated systems thinking."
   },
   "organs": {
@@ -27,7 +27,7 @@
       "name": "Theory",
       "description": "Epistemological frameworks, recursive engines, ontological systems, conceptual research",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 17/17 non-infrastructure repos documented at 2,000+ words (~56K total)",
+      "completion": "100% \u2014 17/17 non-infrastructure repos documented at 2,000+ words (~56K total)",
       "public_visibility": "MIXED",
       "portfolio_angle": "Demonstrates intellectual depth and foundational thinking. Evidences systemic theory applied to autonomous creative systems.",
       "repository_count": 20,
@@ -38,7 +38,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-10",
           "public": true,
-          "description": "RE:GE — A symbolic operating system for myth, identity, ritual, and recursive systems. 21 organ handlers, ritual syntax DSL, workflow orchestration, external bridges (Obsidian/Git/Max-MSP).",
+          "description": "RE:GE \u2014 A symbolic operating system for myth, identity, ritual, and recursive systems. 21 organ handlers, ritual syntax DSL, workflow orchestration, external bridges (Obsidian/Git/Max-MSP).",
           "documentation_status": "FLAGSHIP README DEPLOYED",
           "portfolio_relevance": "CRITICAL - Definitive ORGAN-I expression; 1,254 tests, 85% coverage, pure Python",
           "dependencies": [],
@@ -48,7 +48,8 @@
           "note": "Transferred from 4444J99 personal account 2026-02-10. Flagship README drafted 2026-02-10 (scored 96/100 on 01 rubric). Silver Sprint README deployed 2026-02-10 (3,738 words).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "organon-noumenon--ontogenetic-morphe",
@@ -56,7 +57,7 @@
           "status": "ARCHIVED",
           "updated": "2026-02-10",
           "public": true,
-          "description": "Ontogenetic Morphe — 22-subsystem symbolic processing architecture with recursive 4-phase process loops, async message bus, and typed symbolic values",
+          "description": "Ontogenetic Morphe \u2014 22-subsystem symbolic processing architecture with recursive 4-phase process loops, async message bus, and typed symbolic values",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Ontology work differentiates from standard AI practice",
           "dependencies": [],
@@ -66,7 +67,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "OPERATIONS"
         },
         {
           "name": "auto-revision-epistemic-engine",
@@ -90,10 +92,11 @@
               "type": "repo_creation",
               "target_org": "organvm-ii-poiesis",
               "target_name": "art-from--auto-revision-epistemic-engine",
-              "description": "Interactive visualization of self-governing orchestration — governance as performance art",
+              "description": "Interactive visualization of self-governing orchestration \u2014 governance as performance art",
               "status": "FULFILLED"
             }
-          ]
+          ],
+          "functional_class": "ENGINE"
         },
         {
           "name": "narratological-algorithmic-lenses",
@@ -101,7 +104,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-23",
           "public": true,
-          "description": "14 narratological studies × 92 algorithms — formalizing narrative principles from Aristotle to Pixar as executable code, with CLI, API, web dashboard, and real screenplay analysis",
+          "description": "14 narratological studies \u00d7 92 algorithms \u2014 formalizing narrative principles from Aristotle to Pixar as executable code, with CLI, API, web dashboard, and real screenplay analysis",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Theory-to-execution bridge",
           "dependencies": [],
@@ -120,7 +123,8 @@
               "description": "Interactive web experience for exploring narrative structures via visual algorithmic lenses",
               "status": "FULFILLED"
             }
-          ]
+          ],
+          "functional_class": "APPLICATION"
         },
         {
           "name": "call-function--ontological",
@@ -128,7 +132,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-11",
           "public": true,
-          "description": "Ontological function-calling framework — 12-concept philosophical architecture for grounded AI tool use via Heideggerian Dasein, Aristotelian four causes, and Peircean semiotics",
+          "description": "Ontological function-calling framework \u2014 12-concept philosophical architecture for grounded AI tool use via Heideggerian Dasein, Aristotelian four causes, and Peircean semiotics",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "CRITICAL - AI/ontology intersection",
           "dependencies": [
@@ -137,7 +141,7 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-11",
-          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,233 words). Consolidation Sprint: Python prototype deployed — core/ (ontology, grounding, four_causes, dasein, semiotics), application/ (analyzer, report), tools/ (cli), 20+ tests, pyproject.toml. Phase 3 Sprint: validated 1,950+ lines, 131 test methods, CLI, Makefile, 2 CI workflows.",
+          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,233 words). Consolidation Sprint: Python prototype deployed \u2014 core/ (ontology, grounding, four_causes, dasein, semiotics), application/ (analyzer, report), tools/ (cli), 20+ tests, pyproject.toml. Phase 3 Sprint: validated 1,950+ lines, 131 test methods, CLI, Makefile, 2 CI workflows.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
@@ -149,7 +153,8 @@
               "description": "ORGAN-V essay exploring Heideggerian, Aristotelian, and Peircean frameworks for AI function calling",
               "status": "PENDING"
             }
-          ]
+          ],
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "sema-metra--alchemica-mundi",
@@ -157,7 +162,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-10",
           "public": true,
-          "description": "Three-engine alchemical transformation framework — 22 operations mapping classical alchemy (Nigredo→Rubedo) onto computational semantics via distillation, fermentation, and projection engines",
+          "description": "Three-engine alchemical transformation framework \u2014 22 operations mapping classical alchemy (Nigredo\u2192Rubedo) onto computational semantics via distillation, fermentation, and projection engines",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "MEDIUM - Conceptual framework",
           "dependencies": [
@@ -166,10 +171,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,171 words). Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,171 words). Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "cognitive-archaelogy-tribunal",
@@ -186,10 +192,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint README deployed 2026-02-10 (3,186 words). Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Silver Sprint README deployed 2026-02-10 (3,186 words). Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ASSURANCE"
         },
         {
           "name": "a-recursive-root",
@@ -207,7 +214,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "CHARTER"
         },
         {
           "name": "radix-recursiva-solve-coagula-redi",
@@ -227,7 +235,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": ".github",
@@ -241,10 +250,11 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-10",
-          "note": "Silver Sprint: org profile README expanded to 620 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12.",
+          "note": "Silver Sprint: org profile README expanded to 620 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "nexus--babel-alexandria",
@@ -252,7 +262,7 @@
           "status": "ARCHIVED",
           "updated": "2026-02-17",
           "public": true,
-          "description": "Theoria Linguae Machina — 50,000-word design document for a nine-layer rhetorical-linguistic operating system grounded in category theory, Peircean semiotics, and Aristotelian rhetoric",
+          "description": "Theoria Linguae Machina \u2014 50,000-word design document for a nine-layer rhetorical-linguistic operating system grounded in category theory, Peircean semiotics, and Aristotelian rhetoric",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Pure theoretical/epistemological research",
           "dependencies": [
@@ -261,10 +271,11 @@
           "promotion_status": "ARCHIVED",
           "tier": "archive",
           "last_validated": "2026-02-17",
-          "note": "Silver Sprint README deployed 2026-02-10 (4,394 words). IGNITION Sprint: CI deployed (ci-minimal.yml), promoted DESIGN_ONLY→PRODUCTION 2026-02-12. Documentation-only repo — the 50K-word design document IS the deliverable. RENOVATIO: archived on GitHub, status corrected.",
+          "note": "Silver Sprint README deployed 2026-02-10 (4,394 words). IGNITION Sprint: CI deployed (ci-minimal.yml), promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12. Documentation-only repo \u2014 the 50K-word design document IS the deliverable. RENOVATIO: archived on GitHub, status corrected.",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "4-ivi374-F0Rivi4",
@@ -272,7 +283,7 @@
           "status": "ARCHIVED",
           "updated": "2026-02-17",
           "public": true,
-          "description": "OS Ecosystem Cartridge — meta-framework for holistic software ecosystem architecture with seven governance pillars",
+          "description": "OS Ecosystem Cartridge \u2014 meta-framework for holistic software ecosystem architecture with seven governance pillars",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Meta-ontological framework",
           "dependencies": [],
@@ -282,7 +293,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "cog-init-1-0-",
@@ -300,7 +312,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "linguistic-atomization-framework",
@@ -308,17 +321,18 @@
           "status": "ACTIVE",
           "updated": "2026-02-10",
           "public": true,
-          "description": "LingFrame — computational rhetoric platform: hierarchical text atomization, 6 analysis modules, 46-text multilingual corpus, interactive visualizations",
+          "description": "LingFrame \u2014 computational rhetoric platform: hierarchical text atomization, 6 analysis modules, 46-text multilingual corpus, interactive visualizations",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Computational rhetoric methodology",
           "dependencies": [],
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,636 words). Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,636 words). Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "CORPUS"
         },
         {
           "name": "my-knowledge-base",
@@ -334,10 +348,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (3,152 words). Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Transferred from 4444J99 personal account 2026-02-10. Silver Sprint README deployed 2026-02-10 (3,152 words). Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "CORPUS"
         },
         {
           "name": "scalable-lore-expert",
@@ -355,7 +370,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "meta-source--ledger-output",
@@ -372,7 +388,8 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci.yml",
           "platinum_status": true,
-          "note": "Dissolved to materia-collider 2026-03-11"
+          "note": "Dissolved to materia-collider 2026-03-11",
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "hierarchia-mundi",
@@ -389,7 +406,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": null,
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "styx-behavioral-economics-theory",
@@ -399,22 +417,23 @@
           "public": true,
           "description": "Behavioral economics theory for peer-audited accountability: loss aversion (coefficient 1.955), prospect theory, game-theoretic peer audit proofs, spoof resistance models, double-entry ledger theory.",
           "documentation_status": "DEPLOYED",
-          "portfolio_relevance": "HIGH - First repo to properly traverse the full organ chain (I→II→III)",
+          "portfolio_relevance": "HIGH - First repo to properly traverse the full organ chain (I\u2192II\u2192III)",
           "dependencies": [],
           "promotion_status": "PUBLIC_PROCESS",
           "tier": "standard",
           "last_validated": "2026-03-11",
-          "note": "Styx theory extraction — first full pipeline traversal",
+          "note": "Styx theory extraction \u2014 first full pipeline traversal",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "vigiles-aeternae--corpus-mythicum",
           "org": "organvm-i-theoria",
           "status": "active",
           "public": true,
-          "description": "Mythological research corpus — the Library of All Libraries. 20+ tradition syntheses, power taxonomies, regime specs, metaLAWs codex.",
+          "description": "Mythological research corpus \u2014 the Library of All Libraries. 20+ tradition syntheses, power taxonomies, regime specs, metaLAWs codex.",
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
@@ -424,14 +443,15 @@
           "ci_workflow": null,
           "platinum_status": false,
           "revenue_model": null,
-          "revenue_status": null
+          "revenue_status": null,
+          "functional_class": "CORPUS"
         },
         {
           "name": "studium-generale",
           "org": "organvm-i-theoria",
           "status": "ARCHIVED",
           "public": false,
-          "description": "ARCHIVED — SGO governance scaffolding migrated to meta-organvm/praxis-perpetua on 2026-03-19. Cross-organ authority requires META placement.",
+          "description": "ARCHIVED \u2014 SGO governance scaffolding migrated to meta-organvm/praxis-perpetua on 2026-03-19. Cross-organ authority requires META placement.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "LOW - Historical scaffolding, content migrated",
           "dependencies": [],
@@ -441,7 +461,8 @@
           "note": "Created 2026-03-17. Governance YAMLs (charter, defense-protocol, faculty-registry, senate-config) + universal defense rubric migrated to meta-organvm/praxis-perpetua/governance/ and strategy/. Successor: praxis-perpetua.",
           "implementation_status": "ARCHIVED",
           "ci_workflow": null,
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "APPLICATION"
         }
       ]
     },
@@ -449,7 +470,7 @@
       "name": "Art",
       "description": "Generative art, interactive systems, performance frameworks, experiential work",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 20/20 active non-infrastructure repos documented at 2,000+ words (~67K total). 4 archived, 1 deleted.",
+      "completion": "100% \u2014 20/20 active non-infrastructure repos documented at 2,000+ words (~67K total). 4 archived, 1 deleted.",
       "public_visibility": "MOSTLY PUBLIC",
       "portfolio_angle": "Demonstrates creative systems design and artistic infrastructure. Evidence of producing work using autonomous systems.",
       "repository_count": 32,
@@ -459,8 +480,8 @@
           "org": "organvm-ii-poiesis",
           "status": "ARCHIVED",
           "public": true,
-          "description": "[ARCHIVED] Central generative art engine — consolidated into metasystem-master",
-          "documentation_status": "ARCHIVED — REDIRECT TO metasystem-master",
+          "description": "[ARCHIVED] Central generative art engine \u2014 consolidated into metasystem-master",
+          "documentation_status": "ARCHIVED \u2014 REDIRECT TO metasystem-master",
           "portfolio_relevance": "INTERNAL - Consolidated into metasystem-master",
           "dependencies": [
             "organvm-ii-poiesis/metasystem-master"
@@ -471,15 +492,16 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "",
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "performance-sdk",
           "org": "organvm-ii-poiesis",
           "status": "ARCHIVED",
           "public": true,
-          "description": "[ARCHIVED] SDK for real-time performance systems — consolidated into metasystem-master",
-          "documentation_status": "ARCHIVED — REDIRECT TO metasystem-master",
+          "description": "[ARCHIVED] SDK for real-time performance systems \u2014 consolidated into metasystem-master",
+          "documentation_status": "ARCHIVED \u2014 REDIRECT TO metasystem-master",
           "portfolio_relevance": "INTERNAL - Consolidated into metasystem-master",
           "dependencies": [
             "organvm-ii-poiesis/metasystem-master"
@@ -490,7 +512,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "",
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "example-generative-music",
@@ -510,14 +533,15 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "metasystem-master",
           "org": "organvm-ii-poiesis",
           "status": "ACTIVE",
           "public": true,
-          "description": "Omni-Dromenon Engine — canonical monorepo for ORGAN-II. Real-time performance system consolidating 12 repos: core-engine, performance-sdk, client-sdk, audio-synthesis-bridge, orchestrate CLI, 4 examples, extensive docs.",
+          "description": "Omni-Dromenon Engine \u2014 canonical monorepo for ORGAN-II. Real-time performance system consolidating 12 repos: core-engine, performance-sdk, client-sdk, audio-synthesis-bridge, orchestrate CLI, 4 examples, extensive docs.",
           "documentation_status": "FLAGSHIP README DEPLOYED",
           "portfolio_relevance": "CRITICAL - Definitive ORGAN-II expression; canonical monorepo, performance system architecture",
           "dependencies": [
@@ -529,7 +553,8 @@
           "note": "Silver Sprint README deployed 2026-02-10 (5,078 words).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-mixed.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "example-choreographic-interface",
@@ -548,7 +573,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "showcase-portfolio",
@@ -566,7 +592,8 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "EXPERIMENT"
         },
         {
           "name": "archive-past-works",
@@ -584,14 +611,15 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "ENGINE"
         },
         {
           "name": "case-studies-methodology",
           "org": "organvm-ii-poiesis",
           "status": "ARCHIVED",
           "public": true,
-          "description": "Structured case studies documenting creative methodology — process documentation, comparative analysis, and grant-ready excerpts",
+          "description": "Structured case studies documenting creative methodology \u2014 process documentation, comparative analysis, and grant-ready excerpts",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "CRITICAL - Evidence of systemic artistic practice",
           "dependencies": [],
@@ -602,7 +630,8 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "OPERATIONS"
         },
         {
           "name": "learning-resources",
@@ -619,15 +648,16 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "example-generative-visual",
           "org": "organvm-ii-poiesis",
           "status": "ARCHIVED",
           "public": true,
-          "description": "[ARCHIVED] Visual generative example — consolidated into metasystem-master",
-          "documentation_status": "ARCHIVED — REDIRECT TO metasystem-master",
+          "description": "[ARCHIVED] Visual generative example \u2014 consolidated into metasystem-master",
+          "documentation_status": "ARCHIVED \u2014 REDIRECT TO metasystem-master",
           "portfolio_relevance": "INTERNAL - Consolidated into metasystem-master",
           "dependencies": [
             "organvm-ii-poiesis/metasystem-master"
@@ -638,7 +668,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "",
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "example-interactive-installation",
@@ -657,7 +688,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "example-ai-collaboration",
@@ -674,15 +706,16 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "docs",
           "org": "organvm-ii-poiesis",
           "status": "ARCHIVED",
           "public": false,
-          "description": "[ARCHIVED] Documentation scaffold — consolidated into metasystem-master",
-          "documentation_status": "ARCHIVED — REDIRECT TO metasystem-master",
+          "description": "[ARCHIVED] Documentation scaffold \u2014 consolidated into metasystem-master",
+          "documentation_status": "ARCHIVED \u2014 REDIRECT TO metasystem-master",
           "portfolio_relevance": "INTERNAL - Consolidated into metasystem-master",
           "dependencies": [
             "organvm-ii-poiesis/metasystem-master"
@@ -693,14 +726,15 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "",
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "a-mavs-olevm",
           "org": "organvm-ii-poiesis",
           "status": "ACTIVE",
           "public": true,
-          "description": "Personal artistic portfolio site (etceter4.com) — living temple of art, sound, and words",
+          "description": "Personal artistic portfolio site (etceter4.com) \u2014 living temple of art, sound, and words",
           "documentation_status": "FLAGSHIP README DEPLOYED",
           "portfolio_relevance": "HIGH - Flagship artistic portfolio",
           "dependencies": [],
@@ -711,7 +745,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-typescript.yml",
           "platinum_status": true,
-          "deployment_url": "https://etceter4.netlify.app"
+          "deployment_url": "https://etceter4.netlify.app",
+          "functional_class": "ENGINE"
         },
         {
           "name": "a-i-council--coliseum",
@@ -732,7 +767,8 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": ".github",
@@ -746,10 +782,11 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint: org profile README expanded to 577 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12.",
+          "note": "Silver Sprint: org profile README expanded to 577 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "artist-toolkit-and-templates",
@@ -767,7 +804,8 @@
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "client-sdk",
@@ -786,7 +824,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "academic-publication",
@@ -803,7 +842,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "example-theatre-dialogue",
@@ -822,7 +862,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "audio-synthesis-bridge",
@@ -841,7 +882,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "art-from--auto-revision-epistemic-engine",
@@ -849,7 +891,7 @@
           "status": "ARCHIVED",
           "updated": "2026-02-12",
           "public": true,
-          "description": "Interactive visualization of self-governing orchestration — governance as performance art",
+          "description": "Interactive visualization of self-governing orchestration \u2014 governance as performance art",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "MEDIUM - Demonstrates theory-to-art pipeline",
           "dependencies": [
@@ -861,7 +903,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "art-from--narratological-algorithmic-lenses",
@@ -881,7 +924,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "life-betterment-simulation",
@@ -899,7 +943,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "universal-waveform-explorer",
@@ -907,7 +952,7 @@
           "status": "ARCHIVED",
           "updated": "2026-02-12",
           "public": true,
-          "description": "Aether Canvas — web-based 3D modular synthesizer reframing sound design as exploration of universal vibrations via WebGL and Web Audio API",
+          "description": "Aether Canvas \u2014 web-based 3D modular synthesizer reframing sound design as exploration of universal vibrations via WebGL and Web Audio API",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "CRITICAL - Demonstrates generative art and audio synthesis",
           "dependencies": [],
@@ -917,7 +962,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "shared-remembrance-gateway",
@@ -925,7 +971,7 @@
           "status": "ARCHIVED",
           "updated": "2026-02-12",
           "public": true,
-          "description": "Hosting Home — privacy-first metaverse platform centering digital home as hub for life simulation, memorial spaces, and creator economy",
+          "description": "Hosting Home \u2014 privacy-first metaverse platform centering digital home as hub for life simulation, memorial spaces, and creator economy",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Demonstrates experiential design and ethical technology",
           "dependencies": [],
@@ -935,7 +981,8 @@
           "note": "Dissolved to materia-collider 2026-03-11",
           "implementation_status": "ARCHIVED",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "APPLICATION"
         },
         {
           "name": "chthon-oneiros",
@@ -943,7 +990,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-14",
           "public": true,
-          "description": "CHTHON-ONEIROS — Underworld-dream: psychological horror theory corpus. Field II (Present Dreaming). Surrealism, found footage, digital paranoia, the unconscious as compositional engine.",
+          "description": "CHTHON-ONEIROS \u2014 Underworld-dream: psychological horror theory corpus. Field II (Present Dreaming). Surrealism, found footage, digital paranoia, the unconscious as compositional engine.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Demonstrates creative systems design for multimedia horror and reality-blurring narrative",
           "dependencies": [],
@@ -953,7 +1000,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
           "platinum_status": true,
-          "note": "Created 2026-02-14. Creative theory document corpus — ~20 markdown files exploring psychological horror, surrealism, found footage, digital paranoia. Promoted DESIGN_ONLY→ACTIVE: substantive intellectual content (document corpus IS the deliverable, like organvm-corpvs-testamentvm)."
+          "note": "Created 2026-02-14. Creative theory document corpus \u2014 ~20 markdown files exploring psychological horror, surrealism, found footage, digital paranoia. Promoted DESIGN_ONLY\u2192ACTIVE: substantive intellectual content (document corpus IS the deliverable, like organvm-corpvs-testamentvm).",
+          "functional_class": "CORPUS"
         },
         {
           "name": "krypto-velamen",
@@ -961,7 +1009,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-14",
           "public": true,
-          "description": "KRYPTO-VELAMEN — The hidden veil: queer theory and literary technique corpus. Field I (Present Waking). Double-channel text, concealment as compositional engine, archival of lived interiority.",
+          "description": "KRYPTO-VELAMEN \u2014 The hidden veil: queer theory and literary technique corpus. Field I (Present Waking). Double-channel text, concealment as compositional engine, archival of lived interiority.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Demonstrates literary craft research and queer aesthetic theory",
           "dependencies": [],
@@ -971,14 +1019,15 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
-          "note": "Created 2026-02-14. Creative theory document corpus — ~20 markdown files exploring queer theory, literary technique, double-channel text, concealment as compositional engine. Promoted DESIGN_ONLY→ACTIVE: substantive intellectual content (document corpus IS the deliverable)."
+          "note": "Created 2026-02-14. Creative theory document corpus \u2014 ~20 markdown files exploring queer theory, literary technique, double-channel text, concealment as compositional engine. Promoted DESIGN_ONLY\u2192ACTIVE: substantive intellectual content (document corpus IS the deliverable).",
+          "functional_class": "CORPUS"
         },
         {
           "name": "alchemical-synthesizer",
           "org": "organvm-ii-poiesis",
           "status": "ACTIVE",
           "public": true,
-          "description": "Alchemical Synthesizer (Brahma) — Python creative tools and alchemical process framework",
+          "description": "Alchemical Synthesizer (Brahma) \u2014 Python creative tools and alchemical process framework",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "MEDIUM - Creative tooling, alchemical process metaphor",
           "dependencies": [],
@@ -988,14 +1037,15 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
-          "note": "Added CONCORDIA Sprint 2026-02-16. Was in intake/ pre-organ; transferred to ORGAN-II."
+          "note": "Added CONCORDIA Sprint 2026-02-16. Was in intake/ pre-organ; transferred to ORGAN-II.",
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "ivi374ivi027-05",
           "org": "organvm-ii-poiesis",
           "status": "ACTIVE",
           "public": true,
-          "description": "MET4MORFOSES Web Edition — Digital representation of MFA thesis as immersive multi-mode web experience (Next.js + Playwright)",
+          "description": "MET4MORFOSES Web Edition \u2014 Digital representation of MFA thesis as immersive multi-mode web experience (Next.js + Playwright)",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - MFA thesis digital artifact, demonstrates creative-technical synthesis",
           "dependencies": [],
@@ -1005,7 +1055,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
           "platinum_status": true,
-          "note": "Added CONCORDIA Sprint 2026-02-16. MFA thesis project."
+          "note": "Added CONCORDIA Sprint 2026-02-16. MFA thesis project.",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "styx-behavioral-art",
@@ -1015,24 +1066,25 @@
           "public": true,
           "description": "Artistic visualization of behavioral accountability: interactive data viz of stake/commitment/audit cycles, generative art from behavioral data patterns, accountability as performance.",
           "documentation_status": "DEPLOYED",
-          "portfolio_relevance": "HIGH - First ORGAN-II repo with genuine I→II derivation through Styx pipeline",
+          "portfolio_relevance": "HIGH - First ORGAN-II repo with genuine I\u2192II derivation through Styx pipeline",
           "dependencies": [
             "organvm-i-theoria/styx-behavioral-economics-theory"
           ],
           "promotion_status": "PUBLIC_PROCESS",
           "tier": "standard",
           "last_validated": "2026-03-11",
-          "note": "Styx creative expression — consumes behavioral economics theory",
+          "note": "Styx creative expression \u2014 consumes behavioral economics theory",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "vigiles-aeternae--theatrum-mundi",
           "org": "organvm-ii-poiesis",
           "status": "active",
           "public": true,
-          "description": "Creative multiverse and RPG — the Theater of the World. Worldbuilding, characters, rooms, magic system, generative art.",
+          "description": "Creative multiverse and RPG \u2014 the Theater of the World. Worldbuilding, characters, rooms, magic system, generative art.",
           "dependencies": [
             "vigiles-aeternae--corpus-mythicum"
           ],
@@ -1044,7 +1096,8 @@
           "ci_workflow": null,
           "platinum_status": false,
           "revenue_model": null,
-          "revenue_status": null
+          "revenue_status": null,
+          "functional_class": "APPLICATION"
         }
       ]
     },
@@ -1052,7 +1105,7 @@
       "name": "Commerce",
       "description": "Revenue-generating products, deployed systems, customer-facing tools, B2B/B2C applications",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 21/21 non-infrastructure repos documented at 2,000+ words (~74K total)",
+      "completion": "100% \u2014 21/21 non-infrastructure repos documented at 2,000+ words (~74K total)",
       "public_visibility": "MIXED (4 private, 18 public)",
       "portfolio_angle": "Demonstrates product-market thinking, sustained revenue generation, and ability to package systems for external users. Evidence of real-world impact.",
       "repository_count": 29,
@@ -1087,7 +1140,8 @@
           "platinum_status": true,
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
-          "deployment_url": "https://classroom-rpg-aetheria.netlify.app"
+          "deployment_url": "https://classroom-rpg-aetheria.netlify.app",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "gamified-coach-interface",
@@ -1109,7 +1163,8 @@
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
           "deployment_url": "https://gamified-coach-interface.pages.dev",
-          "deployment_platform": "cloudflare-pages"
+          "deployment_platform": "cloudflare-pages",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "trade-perpetual-future",
@@ -1130,7 +1185,8 @@
           "platinum_status": true,
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
-          "deployment_url": "https://trade-perpetual-future.netlify.app"
+          "deployment_url": "https://trade-perpetual-future.netlify.app",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "fetch-familiar-friends",
@@ -1151,7 +1207,8 @@
           "platinum_status": true,
           "revenue_model": "freemium",
           "revenue_status": "pre-launch",
-          "deployment_url": "https://fetch-familiar-friends.netlify.app"
+          "deployment_url": "https://fetch-familiar-friends.netlify.app",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "sovereign-ecosystem--real-estate-luxury",
@@ -1172,7 +1229,8 @@
           "platinum_status": true,
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
-          "deployment_url": "https://sovereign-ecosystem.netlify.app"
+          "deployment_url": "https://sovereign-ecosystem.netlify.app",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "public-record-data-scrapper",
@@ -1193,7 +1251,8 @@
           "platinum_status": true,
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
-          "deployment_url": "https://public-record-data-scrapper.netlify.app"
+          "deployment_url": "https://public-record-data-scrapper.netlify.app",
+          "functional_class": "ENGINE"
         },
         {
           "name": "search-local--happy-hour",
@@ -1214,7 +1273,8 @@
           "platinum_status": true,
           "revenue_model": "freemium",
           "revenue_status": "pre-launch",
-          "deployment_url": "https://search-local-happy-hour.netlify.app"
+          "deployment_url": "https://search-local-happy-hour.netlify.app",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "multi-camera--livestream--framework",
@@ -1236,7 +1296,8 @@
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
           "deployment_url": "https://organvm-iii-ergon.github.io/multi-camera--livestream--framework/",
-          "deployment_platform": "github-pages"
+          "deployment_platform": "github-pages",
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "universal-mail--automation",
@@ -1256,7 +1317,8 @@
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
           "revenue_model": "subscription",
-          "revenue_status": "pre-launch"
+          "revenue_status": "pre-launch",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "mirror-mirror",
@@ -1277,7 +1339,8 @@
           "platinum_status": true,
           "revenue_model": "none",
           "revenue_status": "n/a",
-          "deployment_url": "https://mirror-mirror-app.netlify.app"
+          "deployment_url": "https://mirror-mirror-app.netlify.app",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "the-invisible-ledger",
@@ -1298,7 +1361,8 @@
           "platinum_status": true,
           "revenue_model": "none",
           "revenue_status": "n/a",
-          "deployment_url": "https://the-invisible-ledger.netlify.app"
+          "deployment_url": "https://the-invisible-ledger.netlify.app",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "enterprise-plugin",
@@ -1306,7 +1370,7 @@
           "status": "ARCHIVED",
           "public": false,
           "type": "internal",
-          "description": "[ARCHIVED] Enterprise integration layer — concept absorbable into existing products",
+          "description": "[ARCHIVED] Enterprise integration layer \u2014 concept absorbable into existing products",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "INTERNAL",
           "dependencies": [],
@@ -1318,14 +1382,15 @@
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
           "revenue_model": "none",
-          "revenue_status": "n/a"
+          "revenue_status": "n/a",
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "virgil-training-overlay",
           "org": "organvm-iii-ergon",
           "status": "ARCHIVED",
           "public": true,
-          "description": "[ARCHIVED] macOS Swift CLI utility for application focus monitoring — low relevance utility",
+          "description": "[ARCHIVED] macOS Swift CLI utility for application focus monitoring \u2014 low relevance utility",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "LOW - Small utility",
           "dependencies": [],
@@ -1338,7 +1403,8 @@
           "platinum_status": true,
           "type": "internal",
           "revenue_model": "none",
-          "revenue_status": "n/a"
+          "revenue_status": "n/a",
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "tab-bookmark-manager",
@@ -1358,7 +1424,8 @@
           "platinum_status": true,
           "type": "SaaS",
           "revenue_model": "freemium",
-          "revenue_status": "pre-launch"
+          "revenue_status": "pre-launch",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "a-i-chat--exporter",
@@ -1378,7 +1445,8 @@
           "platinum_status": true,
           "type": "B2C",
           "revenue_model": "none",
-          "revenue_status": "n/a"
+          "revenue_status": "n/a",
+          "functional_class": "APPLICATION"
         },
         {
           "name": ".github",
@@ -1392,13 +1460,14 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint: org profile README expanded to 563 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12.",
+          "note": "Silver Sprint: org profile README expanded to 563 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
           "type": "internal",
           "revenue_model": "none",
-          "revenue_status": "n/a"
+          "revenue_status": "n/a",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "the-actual-news",
@@ -1406,21 +1475,22 @@
           "status": "DEPLOYED",
           "public": true,
           "type": "B2C",
-          "description": "Verifiable news ledger platform — news as a public service",
+          "description": "Verifiable news ledger platform \u2014 news as a public service",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Civic tech product",
           "dependencies": [],
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-28",
-          "note": "Transferred from 4444J99 personal account 2026-02-10 Silver Sprint README deployed 2026-02-10 (3,739 words). Consolidation Sprint: validated Makefile, Docker Compose, Prism mocks, conformance tests; added local-development.md. Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Transferred from 4444J99 personal account 2026-02-10 Silver Sprint README deployed 2026-02-10 (3,739 words). Consolidation Sprint: validated Makefile, Docker Compose, Prism mocks, conformance tests; added local-development.md. Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-typescript.yml",
           "platinum_status": true,
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
           "deployment_url": "https://the-actual-news.pages.dev",
-          "deployment_platform": "cloudflare-pages"
+          "deployment_platform": "cloudflare-pages",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "your-fit-tailored",
@@ -1442,7 +1512,8 @@
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
           "deployment_url": "https://organvm-iii-ergon.github.io/your-fit-tailored/",
-          "deployment_platform": "github-pages"
+          "deployment_platform": "github-pages",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "my-block-warfare",
@@ -1450,7 +1521,7 @@
           "status": "ARCHIVED",
           "public": true,
           "type": "B2C",
-          "description": "TurfSynth AR — location-based game with environmental synthesis and procedural creature generation",
+          "description": "TurfSynth AR \u2014 location-based game with environmental synthesis and procedural creature generation",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - AR/game product with novel mechanics",
           "dependencies": [],
@@ -1464,7 +1535,8 @@
           "revenue_model": "freemium",
           "revenue_status": "pre-launch",
           "deployment_url": "https://turfsynth-mcp-maps.pages.dev",
-          "deployment_platform": "cloudflare-pages"
+          "deployment_platform": "cloudflare-pages",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "life-my--midst--in",
@@ -1472,7 +1544,7 @@
           "status": "ACTIVE",
           "public": true,
           "type": "B2C",
-          "description": "Inverted Interview CV platform — employer-as-interviewee identity operating system with 16 masks and W3C Verifiable Credentials",
+          "description": "Inverted Interview CV platform \u2014 employer-as-interviewee identity operating system with 16 masks and W3C Verifiable Credentials",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "CRITICAL - Novel hiring paradigm product",
           "dependencies": [],
@@ -1481,12 +1553,13 @@
           "deployment_url": "https://inmidst-web.onrender.com",
           "deployment_api_url": "https://inmidst-api.onrender.com",
           "last_validated": "2026-02-28",
-          "note": "Transferred from 4444J99 personal account 2026-02-10. Deployed to Render free tier 2026-02-28 (esbuild API, Next.js web, Neon DB). Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-28.",
+          "note": "Transferred from 4444J99 personal account 2026-02-10. Deployed to Render free tier 2026-02-28 (esbuild API, Next.js web, Neon DB). Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-28.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-typescript.yml",
           "platinum_status": true,
           "revenue_model": "freemium",
-          "revenue_status": "pre-launch"
+          "revenue_status": "pre-launch",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "my--father-mother",
@@ -1506,7 +1579,8 @@
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
           "revenue_model": "one-time",
-          "revenue_status": "pre-launch"
+          "revenue_status": "pre-launch",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "commerce--meta",
@@ -1521,12 +1595,13 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Created 2026-02-11 Consolidation Sprint. README + directory scaffold deployed. EXODUS Sprint 2026-02-12: promoted SKELETON→PRODUCTION, CI passing. Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Created 2026-02-11 Consolidation Sprint. README + directory scaffold deployed. EXODUS Sprint 2026-02-12: promoted SKELETON\u2192PRODUCTION, CI passing. Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
           "revenue_model": "none",
-          "revenue_status": "n/a"
+          "revenue_status": "n/a",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "card-trade-social",
@@ -1535,7 +1610,7 @@
           "updated": "2026-02-12",
           "public": true,
           "type": "SaaS",
-          "description": "Hydra Trading Card Ecosystem — financial-grade portfolio tracking, social commerce, gamification, and AI-powered generative content for the TCG asset class",
+          "description": "Hydra Trading Card Ecosystem \u2014 financial-grade portfolio tracking, social commerce, gamification, and AI-powered generative content for the TCG asset class",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Full-stack marketplace product with financial infrastructure",
           "dependencies": [],
@@ -1549,7 +1624,8 @@
           "revenue_model": "none",
           "revenue_status": "n/a",
           "deployment_url": "https://organvm-iii-ergon.github.io/card-trade-social/",
-          "deployment_platform": "github-pages"
+          "deployment_platform": "github-pages",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "hokage-chess",
@@ -1558,7 +1634,7 @@
           "updated": "2026-02-12",
           "public": true,
           "type": "B2C",
-          "description": "Chess content creation engine — strategic growth blueprint, narrative-driven YouTube channel, and audience development system",
+          "description": "Chess content creation engine \u2014 strategic growth blueprint, narrative-driven YouTube channel, and audience development system",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "MEDIUM - Content-as-product with analytics",
           "dependencies": [],
@@ -1572,7 +1648,8 @@
           "revenue_model": "none",
           "revenue_status": "n/a",
           "deployment_url": "https://organvm-iii-ergon.github.io/hokage-chess/",
-          "deployment_platform": "github-pages"
+          "deployment_platform": "github-pages",
+          "functional_class": "ENGINE"
         },
         {
           "name": "anon-hookup-now",
@@ -1580,7 +1657,7 @@
           "status": "ARCHIVED",
           "public": false,
           "type": "B2C",
-          "description": "Open-source grid+map rendezvous — Android location-based social app",
+          "description": "Open-source grid+map rendezvous \u2014 Android location-based social app",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "LOW - Android/Kotlin mod project",
           "dependencies": [],
@@ -1592,7 +1669,8 @@
           "platinum_status": true,
           "revenue_model": "none",
           "revenue_status": "n/a",
-          "note": "Dissolved to materia-collider 2026-03-11"
+          "note": "Dissolved to materia-collider 2026-03-11",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "render-second-amendment",
@@ -1612,7 +1690,8 @@
           "platinum_status": false,
           "revenue_model": "none",
           "revenue_status": "n/a",
-          "note": "Dissolved to materia-collider 2026-03-11"
+          "note": "Dissolved to materia-collider 2026-03-11",
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "select-or-left-or-right-or",
@@ -1620,7 +1699,7 @@
           "status": "ARCHIVED",
           "public": false,
           "type": "B2C",
-          "description": "Satirical social network platform — static HTML site with affiliation-based content",
+          "description": "Satirical social network platform \u2014 static HTML site with affiliation-based content",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "LOW - Satirical web project",
           "dependencies": [],
@@ -1632,7 +1711,8 @@
           "platinum_status": true,
           "revenue_model": "none",
           "revenue_status": "n/a",
-          "note": "Dissolved to materia-collider 2026-03-11"
+          "note": "Dissolved to materia-collider 2026-03-11",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "peer-audited--behavioral-blockchain",
@@ -1640,7 +1720,7 @@
           "status": "ACTIVE",
           "public": true,
           "type": "SaaS",
-          "description": "Styx — peer-audited behavioral market using loss aversion and financial stakes. NestJS API, Next.js web, React Native mobile, Tauri desktop. 499+ tests, formal thesis with 9 theorem proofs, 8 validation gates.",
+          "description": "Styx \u2014 peer-audited behavioral market using loss aversion and financial stakes. NestJS API, Next.js web, React Native mobile, Tauri desktop. 499+ tests, formal thesis with 9 theorem proofs, 8 validation gates.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "CRITICAL - Most tested repo in system (499+ tests), formal academic thesis, full business organism with 7 agent departments",
           "dependencies": [],
@@ -1652,14 +1732,15 @@
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
           "revenue_model": "subscription",
-          "revenue_status": "pre-launch"
+          "revenue_status": "pre-launch",
+          "functional_class": "ENGINE"
         },
         {
           "name": "styx-behavioral-commerce",
           "org": "organvm-iii-ergon",
           "status": "ACTIVE",
           "public": false,
-          "description": "Styx — peer-audited behavioral commerce engine. Commercial realization of the Styx Pipeline traversal.",
+          "description": "Styx \u2014 peer-audited behavioral commerce engine. Commercial realization of the Styx Pipeline traversal.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Commercial realization of theoretical proofs",
           "dependencies": [
@@ -1675,7 +1756,8 @@
           "platinum_status": false,
           "revenue_model": "subscription",
           "revenue_status": "pre-launch",
-          "type": "SaaS"
+          "type": "SaaS",
+          "functional_class": "ENGINE"
         }
       ]
     },
@@ -1683,7 +1765,7 @@
       "name": "Orchestration",
       "description": "Cross-organ routing, governance, promotion automation, system coordination, dependency management",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 5/5 non-infrastructure repos documented at 2,000+ words (~18K total)",
+      "completion": "100% \u2014 5/5 non-infrastructure repos documented at 2,000+ words (~18K total)",
       "public_visibility": "SEMI-PUBLIC (Governance visible, implementation details private)",
       "portfolio_angle": "CRITICAL DIFFERENTIATOR. Demonstrates systems architecture, governance design, and organizational capacity to coordinate complex multi-system infrastructure. Central evidence for grant funding and AI hiring.",
       "repository_count": 12,
@@ -1704,7 +1786,8 @@
           "updated": "2026-02-11",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "petasum-super-petasum",
@@ -1724,7 +1807,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-12"
+          "updated": "2026-02-12",
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "universal-node-network",
@@ -1738,10 +1822,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-11",
-          "note": "Transferred from organvm-i-theoria 2026-02-10 Silver Sprint README deployed 2026-02-10 (2,811 words). Promoted stub→standard 2026-02-11. CONSOLIDATION-II: Python prototype deployed — node, network, discovery modules. Tests + CI green.",
+          "note": "Transferred from organvm-i-theoria 2026-02-10 Silver Sprint README deployed 2026-02-10 (2,811 words). Promoted stub\u2192standard 2026-02-11. CONSOLIDATION-II: Python prototype deployed \u2014 node, network, discovery modules. Tests + CI green.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": ".github",
@@ -1755,10 +1840,11 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint: org profile README expanded to 575 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12.",
+          "note": "Silver Sprint: org profile README expanded to 575 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "agentic-titan",
@@ -1777,7 +1863,8 @@
           "note": "Transferred from 4444J99 personal account 2026-02-10. Flagship README drafted 2026-02-10. Silver Sprint README deployed 2026-02-10 (4,678 words).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "agent--claude-smith",
@@ -1796,7 +1883,8 @@
           "note": "Transferred from 4444J99 personal account 2026-02-10 Silver Sprint README deployed 2026-02-10 (3,394 words).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-typescript.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "a-i--skills",
@@ -1815,7 +1903,8 @@
           "note": "Transferred from 4444J99 personal account 2026-02-10 Silver Sprint README deployed 2026-02-10 (3,222 words).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "tool-interaction-design",
@@ -1832,7 +1921,8 @@
           "note": "Registered 2026-03-10 during three-organ structural audit. Previously untracked despite being the largest repo (170MB) in ORGAN-IV.",
           "implementation_status": "ACTIVE",
           "ci_workflow": null,
-          "platinum_status": false
+          "platinum_status": false,
+          "functional_class": "ENGINE"
         },
         {
           "name": "system-governance-framework",
@@ -1847,10 +1937,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint README deployed 2026-02-10 (2,549 words). Promoted stub→standard 2026-02-11. Full project structure: pyproject.toml, src/ (promotion.py, rules.py, validator.py), tests/, 14 CI workflows. Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Silver Sprint README deployed 2026-02-10 (2,549 words). Promoted stub\u2192standard 2026-02-11. Full project structure: pyproject.toml, src/ (promotion.py, rules.py, validator.py), tests/, 14 CI workflows. Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "reverse-engine-recursive-run",
@@ -1858,7 +1949,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-12",
           "public": true,
-          "description": "Architecture governance toolkit — 7-script Python pipeline for risk scoring, drift detection, ownership analysis, and SBOM generation across any codebase",
+          "description": "Architecture governance toolkit \u2014 7-script Python pipeline for risk scoring, drift detection, ownership analysis, and SBOM generation across any codebase",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Systems analysis methodology",
           "dependencies": [
@@ -1870,7 +1961,8 @@
           "note": "Silver Sprint README deployed 2026-02-10 (5,038 words).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "collective-persona-operations",
@@ -1884,17 +1976,18 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint README deployed 2026-02-10 (2,930 words). Promoted stub→standard 2026-02-11. CONSOLIDATION-II: Python prototype deployed — persona, operations, registry modules. Tests + CI green. Promoted LOCAL→CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
+          "note": "Silver Sprint README deployed 2026-02-10 (2,930 words). Promoted stub\u2192standard 2026-02-11. CONSOLIDATION-II: Python prototype deployed \u2014 persona, operations, registry modules. Tests + CI green. Promoted LOCAL\u2192CANDIDATE 2026-02-24 (PROPULSIO MAXIMA Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "OPERATIONS"
         },
         {
           "name": "contrib--adenhq-hive",
           "org": "organvm-iv-taxis",
           "status": "ACTIVE",
           "public": true,
-          "description": "Cross-organ symbiotic contribution to AdenHQ/Hive — design versioning with governed lifecycle",
+          "description": "Cross-organ symbiotic contribution to AdenHQ/Hive \u2014 design versioning with governed lifecycle",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Public process contribution demonstrating ORGANVM governance",
           "dependencies": [
@@ -1903,7 +1996,8 @@
           ],
           "promotion_status": "LOCAL",
           "tier": "contrib",
-          "last_validated": "2026-03-21"
+          "last_validated": "2026-03-21",
+          "functional_class": "APPLICATION"
         }
       ]
     },
@@ -1911,7 +2005,7 @@
       "name": "Public Process",
       "description": "Essays, marginalia, process documentation, building in public, RSS/newsletter, audience engagement",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 1/1 non-infrastructure repo documented (4,040 words) + org profile expanded",
+      "completion": "100% \u2014 1/1 non-infrastructure repo documented (4,040 words) + org profile expanded",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "PRIMARY AMPLIFICATION LAYER. Converts meta-system documentation into thought leadership and audience engagement. Essays about the eight-organ system itself become portfolio material. Central for Grant funding (Knight Foundation, Mellon, NEA) and thought leadership positioning.",
       "repository_count": 2,
@@ -1944,7 +2038,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
-          "deployment_url": "https://public-process.netlify.app"
+          "deployment_url": "https://public-process.netlify.app",
+          "functional_class": "ENGINE"
         },
         {
           "name": ".github",
@@ -1958,18 +2053,19 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint: org profile README expanded to 632 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12.",
+          "note": "Silver Sprint: org profile README expanded to 632 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         }
       ]
     },
     "ORGAN-VI": {
       "name": "Community",
-      "description": "Community infrastructure — salon archives, reading group curricula, adaptive syllabi, contributor profiles, shared PostgreSQL layer, FastAPI portal with full-text search, Atom feeds, and WebSocket live rooms",
+      "description": "Community infrastructure \u2014 salon archives, reading group curricula, adaptive syllabi, contributor profiles, shared PostgreSQL layer, FastAPI portal with full-text search, Atom feeds, and WebSocket live rooms",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 6 repos (1 flagship, 4 standard, 1 infrastructure). All 6 PUBLIC_PROCESS. 435 tests across 5 active repos. Neon PostgreSQL with 4 schemas. Flagship deployed to Render.",
+      "completion": "100% \u2014 6 repos (1 flagship, 4 standard, 1 infrastructure). All 6 PUBLIC_PROCESS. 435 tests across 5 active repos. Neon PostgreSQL with 4 schemas. Flagship deployed to Render.",
       "public_visibility": "SEMI-PUBLIC (invitations, participation)",
       "portfolio_angle": "Evidence of building collaborative infrastructure. Demonstrates community contribution model. Relevant for residencies (Eyebeam, Somerset House) and fellowships valuing ecosystem contribution.",
       "repository_count": 6,
@@ -1986,17 +2082,18 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Neon PostgreSQL provisioned. 4 schemas, 108 tests, CI green. Foundation for all ORGAN-VI repos. Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+          "note": "Neon PostgreSQL provisioned. 4 schemas, 108 tests, CI green. Foundation for all ORGAN-VI repos. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "EXPERIMENT"
         },
         {
           "name": "community-hub",
           "org": "organvm-vi-koinonia",
           "status": "ACTIVE",
           "public": true,
-          "description": "FastAPI flagship portal — salon archive, curricula browser, contributor profiles, full-text search, adaptive syllabus, Atom feeds, WebSocket live rooms",
+          "description": "FastAPI flagship portal \u2014 salon archive, curricula browser, contributor profiles, full-text search, adaptive syllabus, Atom feeds, WebSocket live rooms",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Flagship community infrastructure",
           "dependencies": [
@@ -2005,11 +2102,12 @@
           "promotion_status": "GRADUATED",
           "tier": "flagship",
           "last_validated": "2026-02-24",
-          "note": "122 tests, CSRF, rate limiting, 8 route modules. Deployed to Render. Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+          "note": "122 tests, CSRF, rate limiting, 8 route modules. Deployed to Render. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
           "deployment_url": "https://community-hub-8p8t.onrender.com",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "salon-archive",
@@ -2026,11 +2124,12 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Created and README deployed 2026-02-11 Gap-Fill Sprint (3,054 words). CONSOLIDATION-II: Python prototype deployed — transcription, taxonomy, sessions modules. Tests + CI green. Phase 1-2: DB integration, repository pattern, 87 tests. Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+          "note": "Created and README deployed 2026-02-11 Gap-Fill Sprint (3,054 words). CONSOLIDATION-II: Python prototype deployed \u2014 transcription, taxonomy, sessions modules. Tests + CI green. Phase 1-2: DB integration, repository pattern, 87 tests. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "updated": "2026-02-24"
+          "updated": "2026-02-24",
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "reading-group-curriculum",
@@ -2047,10 +2146,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Created and README deployed 2026-02-11 Gap-Fill Sprint (3,200 words). CONSOLIDATION-II: Python prototype deployed — curriculum, reading_list, guides modules. Tests + CI green. Phase 1-2: DB integration, repository pattern, 47 tests. Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+          "note": "Created and README deployed 2026-02-11 Gap-Fill Sprint (3,200 words). CONSOLIDATION-II: Python prototype deployed \u2014 curriculum, reading_list, guides modules. Tests + CI green. Phase 1-2: DB integration, repository pattern, 47 tests. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "CORPUS"
         },
         {
           "name": "adaptive-personal-syllabus",
@@ -2067,10 +2167,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Created GENESIS Sprint 2026-02-12. README deployed (3,471 words). 38 tests, CI green, working CLI (syllabus/aps). Phase 3: promoted to CANDIDATE. Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+          "note": "Created GENESIS Sprint 2026-02-12. README deployed (3,471 words). 38 tests, CI green, working CLI (syllabus/aps). Phase 3: promoted to CANDIDATE. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": ".github",
@@ -2084,18 +2185,19 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint: org profile README expanded to 772 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12. Phase 2: updated with full repo table. Promoted CANDIDATE→PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
+          "note": "Silver Sprint: org profile README expanded to 772 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12. Phase 2: updated with full repo table. Promoted CANDIDATE\u2192PUBLIC_PROCESS 2026-02-24 (System-Wide Activation Sprint).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         }
       ]
     },
     "ORGAN-VII": {
       "name": "Marketing",
-      "description": "Marketing & Distribution — POSSE distribution pipeline with Ghost newsletter hub, Mastodon, Discord, Bluesky adapters, cross-organ event wiring, autonomous RSS polling, bidirectional analytics, Ghost Handlebars theme, 15 announcement templates",
+      "description": "Marketing & Distribution \u2014 POSSE distribution pipeline with Ghost newsletter hub, Mastodon, Discord, Bluesky adapters, cross-organ event wiring, autonomous RSS polling, bidirectional analytics, Ghost Handlebars theme, 15 announcement templates",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — 4/4 repos at PRODUCTION status. ~5,700+ lines of Python, 227+ tests, 3 packages + root orchestrator. Full POSSE pipeline operational with Ghost newsletter integration (PROCLAMATIO Sprint).",
+      "completion": "100% \u2014 4/4 repos at PRODUCTION status. ~5,700+ lines of Python, 227+ tests, 3 packages + root orchestrator. Full POSSE pipeline operational with Ghost newsletter integration (PROCLAMATIO Sprint).",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "Demonstrates audience building and content strategy. Evidence of thought leadership positioning. Relevant for visibility in grant applications and professional visibility.",
       "repository_count": 4,
@@ -2112,10 +2214,11 @@
           "promotion_status": "GRADUATED",
           "tier": "archive",
           "last_validated": "2026-02-18",
-          "note": "MATERIALIZATION Sprint: full kerygma_templates package (engine, quality checker, registry loader, CLI). 15 templates across 5 categories, 83 tests. E2G hardened. EVANGELION: pushed to GitHub, Bluesky blocks added to all 15 templates. Remains archived — consumed as git dependency. PROCLAMATIO Sprint: Ghost channel blocks added to all 15 templates, ghost added to quality checker CHANNEL_LIMITS.",
+          "note": "MATERIALIZATION Sprint: full kerygma_templates package (engine, quality checker, registry loader, CLI). 15 templates across 5 categories, 83 tests. E2G hardened. EVANGELION: pushed to GitHub, Bluesky blocks added to all 15 templates. Remains archived \u2014 consumed as git dependency. PROCLAMATIO Sprint: Ghost channel blocks added to all 15 templates, ghost added to quality checker CHANNEL_LIMITS.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ARCHIVE"
         },
         {
           "name": "social-automation",
@@ -2132,7 +2235,8 @@
           "note": "MATERIALIZATION Sprint: full kerygma_social package (6 platform adapters, circuit breaker, rate limiter, retry, RSS poller, delivery log). 66 tests. E2G hardened. EVANGELION: pushed to GitHub. PROCLAMATIO Sprint: Ghost adapter added (GhostClient, JWT HS256 auth, live/mock modes), Ghost wired into POSSE distributor, 9 new tests (75 total).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "distribution-strategy",
@@ -2150,7 +2254,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
           "platinum_status": true,
-          "notes": "IGNIS PERPETUUS sprint (2026-02-18): added mastodon_metrics.py, ghost_metrics.py"
+          "notes": "IGNIS PERPETUUS sprint (2026-02-18): added mastodon_metrics.py, ghost_metrics.py",
+          "functional_class": "ASSURANCE"
         },
         {
           "name": ".github",
@@ -2172,7 +2277,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-pipeline.yml",
           "platinum_status": true,
-          "notes": "IGNIS PERPETUUS sprint (2026-02-18): 6 workflows (dispatch-receiver, notify-kerygma, dispatch-log, rss-auto-dispatch, weekly-analytics, ci-pipeline), 5 scripts (validate-live-config, update-status-badge, deploy-ghost-theme, deploy-landing-page, sync-platform-profiles), full Ghost theme"
+          "notes": "IGNIS PERPETUUS sprint (2026-02-18): 6 workflows (dispatch-receiver, notify-kerygma, dispatch-log, rss-auto-dispatch, weekly-analytics, ci-pipeline), 5 scripts (validate-live-config, update-status-badge, deploy-ghost-theme, deploy-landing-page, sync-platform-profiles), full Ghost theme",
+          "functional_class": "INFRASTRUCTURE"
         }
       ],
       "completion_note": "PROCLAMATIO + IGNIS PERPETUUS sprints complete (2026-02-18). Ghost first-class adapter, cross-organ nervous system (notify-kerygma workflow_call), autonomous dispatch loop (RSS cron), Mastodon+Ghost metrics pull-back, Ghost theme scaffold, weekly analytics report workflow, status badge."
@@ -2181,7 +2287,7 @@
       "name": "Meta",
       "description": "Umbrella organization coordinating all 7 organ orgs. System-wide governance, cross-organ visibility, and institutional identity.",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — org profile expanded to 1,213 words",
+      "completion": "100% \u2014 org profile expanded to 1,213 words",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "The meta-system itself is the primary portfolio asset. Demonstrates orchestration capacity, architectural reasoning, and systemic sustainability.",
       "repository_count": 12,
@@ -2198,10 +2304,11 @@
           "promotion_status": "GRADUATED",
           "tier": "infrastructure",
           "last_validated": "2026-02-24",
-          "note": "Silver Sprint: org profile README expanded to 1,213 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY→PRODUCTION 2026-02-12.",
+          "note": "Silver Sprint: org profile README expanded to 1,213 words (2026-02-10). GENESIS Sprint: promoted DESIGN_ONLY\u2192PRODUCTION 2026-02-12.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-minimal.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "organvm-corpvs-testamentvm",
@@ -2218,7 +2325,9 @@
           "note": "Initial commit 2026-02-11. 131 files, ~45K lines. Contains genesis transcripts, planning toolkit, governance specs, validation scripts, registry, cross-AI validation runs, and full execution history.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "CHARTER",
+          "functional_class_secondary": "CORPUS"
         },
         {
           "name": "alchemia-ingestvm",
@@ -2226,7 +2335,7 @@
           "status": "ACTIVE",
           "updated": "2026-02-12",
           "public": true,
-          "description": "The Alchemical Forge — Material ingestion pipeline and aesthetic nervous system. Three-stage pipeline (INTAKE → ABSORB → ALCHEMIZE) for deploying source materials, plus cascading taste profiles (taste.yaml → organ-aesthetic.yaml → repo-aesthetic.yaml) for autonomous aesthetic propagation.",
+          "description": "The Alchemical Forge \u2014 Material ingestion pipeline and aesthetic nervous system. Three-stage pipeline (INTAKE \u2192 ABSORB \u2192 ALCHEMIZE) for deploying source materials, plus cascading taste profiles (taste.yaml \u2192 organ-aesthetic.yaml \u2192 repo-aesthetic.yaml) for autonomous aesthetic propagation.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Demonstrates systems integration, autonomous aesthetic governance, and material provenance tracking across 88 repos",
           "dependencies": [
@@ -2238,14 +2347,15 @@
           "note": "Created 2026-02-12. Python CLI tool with 8 commands (intake, absorb, alchemize, status, review, capture, sync, synthesize). 6 capture channels (screenshot watcher, bookmarks, Apple Notes, AI chats, Google Docs, quick-capture CLI). Synthesis engine generates per-organ creative briefs. 19 tests passing.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "schema-definitions",
           "org": "meta-organvm",
           "status": "ACTIVE",
           "public": true,
-          "description": "Canonical JSON Schema definitions for all eight-organ system data contracts — registry, seed.yaml, governance rules, dispatch payloads, soak tests, and system metrics.",
+          "description": "Canonical JSON Schema definitions for all eight-organ system data contracts \u2014 registry, seed.yaml, governance rules, dispatch payloads, soak tests, and system metrics.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Contract-first design for system-wide data validation",
           "dependencies": [],
@@ -2255,14 +2365,15 @@
           "note": "Created 2026-02-17. 6 JSON Schema files (Draft 2020-12), 3 examples, validator script, 11 passing tests.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "organvm-engine",
           "org": "meta-organvm",
           "status": "ACTIVE",
           "public": true,
-          "description": "Core Python package — testament, multiplex governance, registry, seed discovery, metrics, dispatch, omega (19 criteria), network testament, pulse, debt tracking, and unified CLI for the eight-organ system.",
+          "description": "Core Python package \u2014 testament, multiplex governance, registry, seed discovery, metrics, dispatch, omega (19 criteria), network testament, pulse, debt tracking, and unified CLI for the eight-organ system.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "CRITICAL - Crown jewel infrastructure; demonstrates systems engineering, governance automation, and architectural reasoning",
           "dependencies": [
@@ -2274,14 +2385,15 @@
           "note": "26 domain modules, 25+ CLI command groups, 4584 tests. Testament protocol, multiplex governance, omega scorecard (19 criteria), network testament, system pulse, debt tracking, session analysis, plan atomization, prompt narrative extraction.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "system-dashboard",
           "org": "meta-organvm",
           "status": "ACTIVE",
           "public": true,
-          "description": "Live system health dashboard — FastAPI + Jinja2 + HTMX with brutalist CMYK design. 6 pages: health overview, registry browser, dependency graph, soak test monitoring, essay feed, omega scorecard.",
+          "description": "Live system health dashboard \u2014 FastAPI + Jinja2 + HTMX with brutalist CMYK design. 6 pages: health overview, registry browser, dependency graph, soak test monitoring, essay feed, omega scorecard.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Visual system health at a glance; demonstrates full-stack web development with institutional design aesthetic",
           "dependencies": [
@@ -2291,10 +2403,11 @@
           "promotion_status": "GRADUATED",
           "tier": "standard",
           "last_validated": "2026-02-24",
-          "note": "Created 2026-02-17. FastAPI app with 6 routes, 7 Jinja2 templates, file-watching cache, 11 passing tests. Reads data from organvm-corpvs-testamentvm JSON files. Promoted LOCAL→CANDIDATE 2026-02-24.",
+          "note": "Created 2026-02-17. FastAPI app with 6 routes, 7 Jinja2 templates, file-watching cache, 11 passing tests. Reads data from organvm-corpvs-testamentvm JSON files. Promoted LOCAL\u2192CANDIDATE 2026-02-24.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "ENGINE"
         },
         {
           "name": "organvm-mcp-server",
@@ -2313,7 +2426,8 @@
           "note": "Created 2026-02-21. Python package using MCP SDK. Registers 15 tools across 6 groups: registry, seeds, graph, health, context, pitch. 24 passing tests. Enables autonomous cross-repo awareness for AI assistants. Updated 2026-02-24.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci-python.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "INFRASTRUCTURE"
         },
         {
           "name": "praxis-perpetua",
@@ -2334,14 +2448,16 @@
           "note": "Created 2026-03-06 as process governance corpus. Evolved into SGO 2026-03-19: governance YAMLs migrated from organvm-i-theoria/studium-generale (now ARCHIVED). 47+ research docs, 64 SOPs, full dissertation (SGO-2026-D-002), defense rubrics, faculty registry.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "CORPUS",
+          "functional_class_secondary": "OPERATIONS"
         },
         {
           "name": "stakeholder-portal",
           "org": "meta-organvm",
           "status": "ACTIVE",
           "public": true,
-          "description": "Hermeneus — ORGANVM intelligence layer. AI chat with hybrid retrieval, provider cascade, SSE streaming, operational control plane.",
+          "description": "Hermeneus \u2014 ORGANVM intelligence layer. AI chat with hybrid retrieval, provider cascade, SSE streaming, operational control plane.",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Full-stack Next.js application demonstrating stakeholder communication design",
           "dependencies": [
@@ -2355,7 +2471,8 @@
           "implementation_status": "ACTIVE",
           "ci_workflow": ".github/workflows/ci.yml",
           "platinum_status": false,
-          "display_name": "Hermeneus"
+          "display_name": "Hermeneus",
+          "functional_class": "APPLICATION"
         },
         {
           "name": "materia-collider",
@@ -2372,14 +2489,15 @@
           "note": "Registered 2026-03-10 during three-organ structural audit. Experimental repo with seed.yaml.",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "EXPERIMENT"
         },
         {
           "name": "organvm-ontologia",
           "org": "meta-organvm",
           "status": "ACTIVE",
           "public": true,
-          "description": "Adaptive structural registry — UID-based entity identity, temporal naming, event bus, sensing, inference, governance, state recovery",
+          "description": "Adaptive structural registry \u2014 UID-based entity identity, temporal naming, event bus, sensing, inference, governance, state recovery",
           "documentation_status": "DEPLOYED",
           "portfolio_relevance": "HIGH - Identity backbone; permanent UIDs for all system entities, temporal naming, governed evolution",
           "dependencies": [
@@ -2391,14 +2509,15 @@
           "note": "Created 2026-03-13. 44 source files, 353 tests. Ten layers: entity, structure, variables, metrics, events, sensing, inference, governance, state, registry. Zero runtime deps (stdlib only).",
           "implementation_status": "ACTIVE",
           "ci_workflow": "ci.yml",
-          "platinum_status": true
+          "platinum_status": true,
+          "functional_class": "FRAMEWORK"
         },
         {
           "name": "vigiles-aeternae--agon-cosmogonicum",
           "org": "meta-organvm",
           "status": "active",
           "public": true,
-          "description": "Mythological governance simulation engine — the Colosseum where competing cosmological regimes audit the real ORGANVM system",
+          "description": "Mythological governance simulation engine \u2014 the Colosseum where competing cosmological regimes audit the real ORGANVM system",
           "dependencies": [
             "organvm-engine",
             "organvm-ontologia",
@@ -2412,13 +2531,14 @@
           "ci_workflow": null,
           "platinum_status": false,
           "revenue_model": null,
-          "revenue_status": null
+          "revenue_status": null,
+          "functional_class": "ENGINE"
         }
       ]
     }
   },
   "local_repos_migration": {
-    "status": "COMPLETE — 15 local repos migrated to organ orgs (2026-02-10). All classified and documented.",
+    "status": "COMPLETE \u2014 15 local repos migrated to organ orgs (2026-02-10). All classified and documented.",
     "strategy": "Parallel migration with comprehensive README documentation",
     "completed_date": "2026-02-10",
     "distribution_by_organ": {
@@ -2438,14 +2558,14 @@
     "mitigation": "Use comprehensive README audit (Phase 1) and per-organ micro-validation (Phase 2) before cross-organ workflows activate"
   },
   "documentation_audit_status": {
-    "ORGAN-I": "LOCKED — 17/17 repos documented + community health files. 0 broken links (7 fixed), 0 TBD markers.",
-    "ORGAN-II": "LOCKED — 20/20 active repos documented + 4 archived + 1 deleted + community health files. Gap-Fill Sprint: 6 new repos created, 5 stubs promoted to standard.",
-    "ORGAN-III": "LOCKED — 20/20 repos documented + community health files. 0 broken links, 0 TBD markers.",
-    "ORGAN-IV": "LOCKED — 6/6 repos documented + orchestration-start-here + community health files. 0 broken links.",
-    "ORGAN-V": "LOCKED — 1 repo + 5 meta-system essays (21.6K words) + community health files. 0 broken links.",
-    "ORGAN-VI": "LOCKED — 5/5 active repos documented + org profile. 6 repos total (1 flagship, 4 standard, 1 infrastructure). All 6 PUBLIC_PROCESS. 435 tests, Neon PostgreSQL, flagship deployed to Render.",
-    "ORGAN-VII": "LOCKED — 3/3 repos documented at 2,000+ words + org profile (736w) + community health files. Gap-Fill Sprint: 3 repos created and documented.",
-    "META-ORGANVM": "LOCKED — org profile (1,213w). .github repo confirmed.",
+    "ORGAN-I": "LOCKED \u2014 17/17 repos documented + community health files. 0 broken links (7 fixed), 0 TBD markers.",
+    "ORGAN-II": "LOCKED \u2014 20/20 active repos documented + 4 archived + 1 deleted + community health files. Gap-Fill Sprint: 6 new repos created, 5 stubs promoted to standard.",
+    "ORGAN-III": "LOCKED \u2014 20/20 repos documented + community health files. 0 broken links, 0 TBD markers.",
+    "ORGAN-IV": "LOCKED \u2014 6/6 repos documented + orchestration-start-here + community health files. 0 broken links.",
+    "ORGAN-V": "LOCKED \u2014 1 repo + 5 meta-system essays (21.6K words) + community health files. 0 broken links.",
+    "ORGAN-VI": "LOCKED \u2014 5/5 active repos documented + org profile. 6 repos total (1 flagship, 4 standard, 1 infrastructure). All 6 PUBLIC_PROCESS. 435 tests, Neon PostgreSQL, flagship deployed to Render.",
+    "ORGAN-VII": "LOCKED \u2014 3/3 repos documented at 2,000+ words + org profile (736w) + community health files. Gap-Fill Sprint: 3 repos created and documented.",
+    "META-ORGANVM": "LOCKED \u2014 org profile (1,213w). .github repo confirmed.",
     "TOTAL_DOCUMENTATION_EFFORT": "Gap-Fill Sprint validated: ~270K words across 72 documented repos + 8 org profiles + 5 essays + orchestration hub flagship (4,496w)",
     "PHASE_2_VALIDATION": "COMPLETE 2026-02-10. V1: 7 broken links fixed (6 ORGAN-I READMEs patched). V2: 0 real TBD markers (12 false positives). V3: 67/67 repos reconciled. V4: 0 dependency violations. V5: All constitution gates PASS. V6: All 8 organs verified."
   },
