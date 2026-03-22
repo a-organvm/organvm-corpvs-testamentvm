@@ -78,6 +78,32 @@ Universal work registry. 21 domain prefixes:
 | IRF-VER | Verification debts | Cross-organ |
 | IRF-RES | Research programme (71-task manifest) | META (praxis-perpetua) |
 | IRF-CCE | Conversation Corpus Engine | ORGAN-I |
+| IRF-HRM | Hermeneus intelligence layer | META (stakeholder-portal) |
+
+#### IRF-HRM Items (S28, 2026-03-21)
+
+| ID | Description | Priority | Refs |
+|----|-------------|----------|------|
+| IRF-HRM-001 | Repo rename coordination (stakeholder-portal → hermeneus) | P1 | GH#28 |
+| IRF-HRM-002 | Registry entry update (display_name, description, capabilities) | P1 | Done S28 |
+| IRF-HRM-003 | Concordance registration of new API routes + IRF-HRM namespace | P1 | This entry |
+| IRF-HRM-004 | Custom domain (hermeneus.organvm.io) | P2 | — |
+| IRF-HRM-005 | Testament cascade for S28 events | P1 | Done S28 |
+| IRF-HRM-006 | Omega #9 stranger-test Hermeneus for polish validation | P2 | Omega |
+| IRF-HRM-007 | Streaming markdown rendering fix (heading concatenation) | P2 | — |
+| IRF-HRM-008 | Full re-ingestion with retry logic | P2 | — |
+
+#### Hermeneus API Routes (S28, 2026-03-21)
+
+| Route | Method | Auth | Purpose |
+|-------|--------|------|---------|
+| `/api/chat` | POST | Rate-limited | AI chat with hybrid retrieval + provider cascade |
+| `/api/health/llm` | GET | Public | Probes all LLM providers, reports latency + status |
+| `/api/cron/ingest` | GET/POST | CRON_SECRET | Ingestion health metrics + staleness analysis |
+| `/api/cron/maintenance` | POST | CRON_SECRET | Maintenance cycle with connectors + alerts |
+| `/api/feedback` | POST | Public | User feedback on chat responses |
+| `/api/admin/intel` | GET/POST | Session/Token | Admin scorecard + alerts |
+| `/api/admin/session` | POST | Token | Admin session management |
 
 Priority tiers: **P0** (now), **P1** (soon), **P2** (growth), **P3** (horizon).
 
