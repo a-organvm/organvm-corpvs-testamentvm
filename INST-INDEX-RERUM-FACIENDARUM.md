@@ -575,35 +575,39 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 - **P1 (SOON):** 45 (46 prior − 1 blocked)
 - **P2 (GROWTH):** 62
 - **P3 (HORIZON):** 9
-- **Completed:** 91 (84 prior + 7 from S28 Hermeneus: DONE-085–091)
+- **Completed:** 91 (DONE-001 through DONE-091: S23 cataloguing + S24 portfolio + S25 praxis CI + S26 gmail/a11y/infra + S27 CCE + research programme close-out + S28 engine/Hermeneus)
 - **Blocked:** 1 (IRF-SYS-008)
 
 ### By Domain
 
-| Domain | Active | Completed | Total |
-|--------|--------|-----------|-------|
-| CCE (Corpus Engine) | 7 | 8 | 15 |
-| SYS (System-wide) | 9 | 0 | 9 |
-| IDX (Index apparatus) | 3 | 1 | 4 |
-| SKL (Skills) | 3 | 1 | 4 |
-| MON (Monitoring) | 3 | 0 | 3 |
-| CRP (Corpus) | 3 | 0 | 3 |
-| SGO (Studium) | 6 | 11 | 17 |
-| VIG (Vigiles) | 2 | 1 | 3 |
-| TRV (Trivium) | 2 | 1 | 3 |
-| TST (Testament) | 1 | 1 | 2 |
-| OBJ (Object Lessons) | 7 | 1 | 8 |
-| KER (Kerygma) | 2 | 0 | 2 |
-| PRT (Portfolio) | 1 | 2 | 3 |
-| APP (Application) | 1 | 1 | 2 |
-| GEN (Generative) | 3 | 0 | 3 |
-| IRA (Authority) | 3 | 1 | 4 |
-| ARC (Architecture) | 6 | 0 | 6 |
-| BLK (Blockchain) | 2 | 0 | 2 |
-| DOC (Documentation) | 5 | 0 | 5 |
-| VER (Verification) | 3 | 3 | 6 |
-| RES (Research Programme) | 68 | 9 | 77 |
-| **TOTAL** | **135** | **39** | **174** |
+| Domain | Active | DONE (domain) |
+|--------|--------|---------------|
+| CCE (Corpus Engine) | 7 | 8 |
+| SYS (System-wide) | 8 | 2 |
+| IDX (Index apparatus) | 3 | 1 |
+| SKL (Skills) | 3 | 1 |
+| MON (Monitoring) | 3 | 0 |
+| CRP (Corpus) | 3 | 3 |
+| SGO (Studium) | 6 | 11 |
+| VIG (Vigiles) | 2 | 1 |
+| TRV (Trivium) | 2 | 1 |
+| TST (Testament) | 1 | 1 |
+| OBJ (Object Lessons) | 7 | 1 |
+| KER (Kerygma) | 2 | 0 |
+| PRT (Portfolio) | 1 | 9 |
+| APP (Application) | 1 | 1 |
+| GEN (Generative) | 3 | 0 |
+| IRA (Authority) | 3 | 1 |
+| ARC (Architecture) | 6 | 0 |
+| BLK (Blockchain) | 2 | 0 |
+| DOC (Documentation) | 5 | 0 |
+| VER (Verification) | 3 | 3 |
+| RES (Research Programme) | 68 | 9 |
+| Cross-session (S23-S28) | 0 | 48 |
+| **Active IRF items** | **129** | — |
+| **Total DONE entries** | — | **91** |
+
+*Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features) that don't map to a single domain prefix.*
 
 ### Research Programme Breakdown
 
@@ -630,5 +634,5 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-21 — Session S28 (engine-remediation): 30 GitHub issues resolved, CI fully green, 4584 tests, 67 labels, 28 DONE entries (DONE-057–084). Advances IRF-SYS-004 (Descent Protocol tooling), IRF-CRP-001 (omega now 19 criteria), IRF-CRP-003 (chain rotation + anchor).*
+*Last updated: 2026-03-21 — Close-out pass: registered 8 SGO research programme completions (DONE-049–056), reconciled domain table with 91 total DONE entries across S23–S28, updated external indices (inquiry-log.yaml, concordance.md, CLAUDE.md). Prior: S28 engine-remediation (DONE-057–091).*
 *Next update: After any session that produces or discovers work items*

@@ -42,6 +42,10 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 | `W\d-II`, `SP\d-II`, `BS\d-II`, `LC\d-II`, `BL\d-II`, `ET\d-II`, `LO\d-II` | E2G-II findings | W1-II |
 | Two-digit `\d\d` or sprint name | Sprints | 29 / AUTOMATA |
 | `IRF-XXX-NNN` | Index Rerum Faciendarum items | IRF-SYS-001 |
+| `INQ-YYYY-NNN` | SGO research commissions | INQ-2026-006 |
+| `SGO-YYYY-RP-NNN` | SGO research papers | SGO-2026-RP-002 |
+| `SGO-YYYY-SYN-NNN` | SGO synthesis papers | SGO-2026-SYN-02 |
+| `SGO-YYYY-D-NNN` | SGO dissertations | SGO-2026-D-003 |
 
 ---
 
@@ -49,7 +53,7 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 
 Source: [`INST-INDEX-RERUM-FACIENDARUM.md`](../../INST-INDEX-RERUM-FACIENDARUM.md)
 
-Universal work registry. 19 domain prefixes:
+Universal work registry. 21 domain prefixes:
 
 | Prefix | Domain | Scope |
 |--------|--------|-------|
@@ -72,8 +76,27 @@ Universal work registry. 19 domain prefixes:
 | IRF-BLK | Blockchain & provenance | META (testament) |
 | IRF-DOC | Documentation gaps | Cross-organ |
 | IRF-VER | Verification debts | Cross-organ |
+| IRF-RES | Research programme (71-task manifest) | META (praxis-perpetua) |
+| IRF-CCE | Conversation Corpus Engine | ORGAN-I |
 
 Priority tiers: **P0** (now), **P1** (soon), **P2** (growth), **P3** (horizon).
+
+---
+
+## SGO Research IDs
+
+Source: [`inquiry-log.yaml`](../../../praxis-perpetua/commissions/inquiry-log.yaml), [`RESEARCH-REGISTRY.yaml`](../../../praxis-perpetua/research/sgo-2026-formalization-of-knowledge/RESEARCH-REGISTRY.yaml)
+
+Three ID namespaces govern the SGO academic pipeline:
+
+| Prefix | Namespace | Source | Example |
+|--------|-----------|--------|---------|
+| `INQ-YYYY-NNN` | Research commissions (all organs) | `inquiry-log.yaml` | INQ-2026-006 (The Formalization Programme) |
+| `SGO-YYYY-D-NNN` | Dissertations | `inquiry-log.yaml` | SGO-2026-D-003 (Object Lessons) |
+| `SGO-YYYY-RP-NNN` | Research papers (phase 1-2) | `RESEARCH-REGISTRY.yaml` | SGO-2026-RP-002 (Impossibility Landscape) |
+| `SGO-YYYY-SYN-NNN` | Synthesis papers (phase 3-4) | `RESEARCH-REGISTRY.yaml` | SGO-2026-SYN-02 (Governance Impossibility) |
+
+Active commissions: INQ-2026-001 through INQ-2026-006. The Formalization Programme (INQ-2026-006) contains 7 research papers (RP-001 through RP-007), 5 synthesis papers (SYN-01 through SYN-05), and 1 capstone.
 
 ---
 
