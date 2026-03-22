@@ -638,7 +638,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-123 | Materia Collider — 4 episodes of seed data: Guns in Cinema (Episode 6, 91 films), Clocks + Doors (Episodes 4-5), Cigarettes (74 films), Milk (71 films, 8 cross-object overlaps). ~300+ films catalogued total. | S30+ (materia) | 2026-03-22 |
 | DONE-124 | Public Process essay #50 — "How a Governance System Taught an Agent Framework to Version Itself" (AdenHQ/Hive contribution narrative, 763 words, case-study category). Pre-commit validated. | S30 (Hive) | 2026-03-22 |
 | DONE-125 | AI-as-Psychometrician — Document A research paper draft in public-process (ORGAN-V). Advances SGO research programme. | S30+ | 2026-03-22 |
-| DONE-126 | Product rebrand: Growth Auditor → Avditor Mvndi — full visual overhaul with WebGL shaders (2001 Stargate radial rays, Interstellar churning fluid), generative ambient audio engine, gyroscope sensor integration, 4→8 celestial pillars (full planetary pantheon), glassmorphism card UI. | S30+ (ergon) | 2026-03-22 |
+| ~~DONE-126~~ | *(Superseded by DONE-134→140 — DWV-S1 logged Avditor Mvndi work in granular detail)* | — | — |
 | DONE-127 | Product rebrand: Victoroff Group → Padavano — Deep Disclosure, Mobile Prime Protocol, Minimal Root + World-Class README, linting + 40 tests, accessibility remediation (4 issues), Vercel routing. | S30+ (liminal) | 2026-03-22 |
 | DONE-128 | studium-generale added as ORGAN-I submodule — SGO internal university infrastructure registered in superproject. | S30+ | 2026-03-22 |
 | DONE-129 | Application pipeline burst — 7 applications submitted, Creative Capital 2027 cover letter, resume drift analysis + clearance gate, 28-contact outreach plan, warm-path opportunity brief, 69 unscored research_pool entries scored. | S30+ (pipeline) | 2026-03-22 |
@@ -672,35 +672,35 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 158 (151 prior + 7 new from S29 domus E2G: IRF-DOM-001 through IRF-DOM-007)
+- **Total active items:** 155 (158 prior − 3 closed: IRF-TST-002, IRF-SYS-010, IRF-SGO-007)
 - **P0 (NOW):** 13
-- **P1 (SOON):** 58 (55 prior + 3 new: IRF-DOM-001, IRF-DOM-002, IRF-DOM-003)
-- **P2 (GROWTH):** 77 (74 prior + 3 new: IRF-DOM-004, IRF-DOM-005, IRF-DOM-006)
-- **P3 (HORIZON):** 10 (9 prior + 1 new: IRF-DOM-007)
-- **Completed:** 114 (DONE-001 through DONE-114)
+- **P1 (SOON):** 56 (58 prior − 2 P1 closed: IRF-TST-002, IRF-SYS-010)
+- **P2 (GROWTH):** 76 (77 prior − 1 P2 closed: IRF-SGO-007)
+- **P3 (HORIZON):** 10
+- **Completed:** 140 (DONE-001 through DONE-140, plus DONE-114a; DONE-126 superseded by DONE-134→140)
 - **Blocked:** 1 (IRF-SYS-008)
-- **Domains:** 23 (22 prior + DOM)
+- **Domains:** 23
 
 ### By Domain
 
 | Domain | Active | DONE (domain) |
 |--------|--------|---------------|
-| CCE (Corpus Engine) | 8 | 18 |
-| SYS (System-wide) | 11 | 2 |
-| IDX (Index apparatus) | 3 | 1 |
+| CCE (Corpus Engine) | 7 | 18 |
+| SYS (System-wide) | 10 | 3 |
+| IDX (Index apparatus) | 3 | 2 |
 | SKL (Skills) | 3 | 1 |
 | MON (Monitoring) | 3 | 0 |
 | CRP (Corpus) | 3 | 3 |
-| SGO (Studium) | 6 | 11 |
-| VIG (Vigiles) | 2 | 1 |
+| SGO (Studium) | 5 | 13 |
+| VIG (Vigiles) | 2 | 3 |
 | TRV (Trivium) | 2 | 1 |
-| TST (Testament) | 1 | 1 |
+| TST (Testament) | 1 | 2 |
 | OBJ (Object Lessons) | 7 | 1 |
 | KER (Kerygma) | 2 | 0 |
 | PRT (Portfolio) | 1 | 9 |
-| APP (Application) | 1 | 1 |
+| APP (Application) | 1 | 2 |
 | GEN (Generative) | 3 | 0 |
-| OSS (Open-Source) | 4 | 6 |
+| OSS (Open-Source) | 4 | 7 |
 | IRA (Authority) | 3 | 1 |
 | ARC (Architecture) | 6 | 0 |
 | BLK (Blockchain) | 2 | 0 |
@@ -709,11 +709,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | RES (Research Programme) | 68 | 9 |
 | HRM (Hermeneus) | 8 | 7 |
 | DOM (Domus Infrastructure) | 7 | 6 |
-| Cross-session (S23-S29) | 0 | 54 |
-| **Active IRF items** | **158** | — |
-| **Total DONE entries** | — | **114** |
+| Cross-session (S23-S30+) | 0 | 79 |
+| **Active IRF items** | **155** | — |
+| **Total DONE entries** | — | **140** |
 
-*Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features) that don't map to a single domain prefix.*
+*Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
 
 ### Research Programme Breakdown
 
@@ -740,5 +740,5 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-22 — Session: DWV-S1 Avditor Mvndi (growth-auditor) comprehensive overhaul (7 items completed: DONE-134→140)*
+*Last updated: 2026-03-22 — IRF reconciliation audit: 3 IRF items closed (TST-002, SYS-010, SGO-007), 19 new DONE entries (115→133) from cross-session git audit, DWV-S1 added 7 (134→140). Total DONE: 140.*
 *Next update: After any session that produces or discovers work items*
