@@ -2,11 +2,11 @@
 
 *2026-03-20 — 2026-03-21 | 380 commits across 72 repos | Dominant: Self*
 
-The Self observes.
+The Animus returns to make sense of what the Anima left behind. Forty-two modules. Omega expansion. CI remediation. The engine hardens.
 
-A torrent of 380 commits floods the record. The labor concentrates in *meta-organvm* (47), *organvm-engine* (35), *praxis-perpetua* (34). +352906 lines conjured against only -10351 dissolved — creation overwhelms erasure. Alongside the dominant force, the Anima moves — the unshaped.
+A torrent of 380 commits across two days floods the record. The labor concentrates in *meta-organvm* (47), *organvm-engine* (35), *praxis-perpetua* (34). +352906 lines conjured against only -10351 dissolved — creation overwhelms erasure. Alongside the dominant force, the Anima moves — the unshaped.
 
-What remains: what it has become. The epoch closes with 380 marks in the record, and the organism carries forward what it has become.
+The mirror reflects clearly now. The organism knows what it is — and what it is not.
 
 ## Data
 

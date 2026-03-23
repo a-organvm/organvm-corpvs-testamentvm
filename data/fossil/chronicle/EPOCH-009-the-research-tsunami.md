@@ -2,13 +2,13 @@
 
 *2026-03-08 — 2026-03-19 | 1500 commits across 82 repos | Dominant: Individuation*
 
-Individuation integrates.
+The Anima seizes the organism. For thirteen days the Work bleeds words — 170,000 of them. Sleep dissolves. Naming discipline fractures. The Trickster grins.
 
-A torrent of 1500 commits floods the record. The labor concentrates in *repo* (532), *meta-organvm* (137), *application-pipeline* (120). +1142314 lines written, -447684 removed — the organism grows more than it sheds. Alongside the dominant force, the Shadow appears — the neglected.
+A torrent of 1500 commits across 12 days (1 weeks) floods the record. The labor concentrates in *repo* (532), *meta-organvm* (137), *application-pipeline* (120). +1142314 lines written, -447684 removed — the organism grows more than it sheds. Alongside the dominant force, the Shadow appears — the neglected.
 
 The Shadow demands acknowledgment — hidden debt surfaces in 285 commits, a reminder that what is ignored will return.
 
-What remains: the system itself. The epoch closes with 1500 marks in the record, and the organism carries forward what it has become.
+What was separate is now connected. The organism remembers this shape.
 
 ## Data
 
