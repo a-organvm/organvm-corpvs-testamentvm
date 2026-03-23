@@ -513,6 +513,65 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
+## Vacuum Fills — Close-Out Propagation Gaps (2026-03-23)
+
+**Source:** Session close-out index propagation audit identified 6 N/A entries as structural vacuums.
+**Full analysis:** `~/Workspace/intake/research-adventures-2026-03/VACUUM-ANALYSIS-AND-FILL-PLAN.md`
+
+### GitHub Issue Trail (Vacuum 1)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VAC-001a | P0 | Create tracking issue for SGO research programme on corpvs-testamentvm (13 papers, 74 tasks, 3 arXiv packages, 4 governance declarations) | Agent | Vacuum analysis | None |
+| IRF-VAC-001b | P1 | Batch-create GitHub issues for 11 open P0 IRF-RES items on organvm-engine (IRF-RES-003, 004, 006-014) | Agent | Vacuum analysis | None |
+| IRF-VAC-001c | P2 | Batch-create GitHub issues for 29 open P1 IRF-RES items on organvm-engine (IRF-RES-015 through IRF-RES-043) | Agent | Vacuum analysis | None |
+| IRF-VAC-001d | P2 | Build `organvm irf github-sync` CLI command — parse IRF, create/update GitHub issues, maintain bidirectional links | Agent | Vacuum analysis | IRF parser module exists at `organvm_engine/irf/` |
+
+### Omega Scorecard Research Connection (Vacuum 2)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VAC-002a | P0 | Document research programme advancement of existing omega criteria: #7 (TRP reviews = structured feedback; arXiv submissions advance this), #14 (arXiv acceptance = recognition), #15 (13 papers + code tool = portfolio evidence) | Agent | Vacuum analysis | None |
+| IRF-VAC-002b | P1 | Propose omega criterion #20: "Research authority demonstrated (>=1 peer-reviewed or externally validated publication)" — complements IRF-CCE-012 (memory criterion) and IRF-SYS-015 (functional taxonomy criterion) | Agent | Vacuum analysis | Omega amendment process (precedent: #9, #10 amended 2026-03-20; #19 added 2026-03-21) |
+| IRF-VAC-002c | P2 | Wire IRF-RES completion events into omega evidence updates — when research tasks complete, check and update relevant omega evidence fields | Agent | Vacuum analysis | IRF parser + omega module |
+
+### Testament Chain Gaps (Vacuum 3)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VAC-003a | P0 | Create `data/testament/milestones/` directory with founding milestone (2026-02-11 system launch). This unblocks omega #19 milestone check which currently returns 0 | Agent | Vacuum analysis | None |
+| IRF-VAC-003b | P1 | Record SGO research programme events in testament chain — 13 `RESEARCH_PUBLISHED` events, 4 `GOVERNANCE_DECLARED` events, 1 `TOOL_DEPLOYED` event. Chain at `~/.organvm/testament/chain.jsonl` has 5,522 events; adding ~18 more | Agent | Vacuum analysis | Engine dev environment |
+| IRF-VAC-003c | P1 | Add research event types to EventType enum: `RESEARCH_PUBLISHED`, `GOVERNANCE_DECLARED`, `TOOL_DEPLOYED`. Current vocabulary has 49 members | Agent | Vacuum analysis | Engine dev environment |
+| IRF-VAC-003d | P2 | Wire session review into testament emission — `organvm session review --emit` flag that auto-records `session.completed` events to chain | Agent | Vacuum analysis | Session module |
+| IRF-VAC-003e | P2 | Create milestone management command — `organvm testament milestone --title "..." --date YYYY-MM-DD` that creates milestone files in `data/testament/milestones/` | Agent | Vacuum analysis | None |
+
+### Registry Entry Updates (Vacuum 4)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VAC-004a | P1 | Update praxis-perpetua entry in registry-v2.json — description should reflect SGO identity (57+ research docs, governance infrastructure), bump last_validated to 2026-03-23 | Agent | Vacuum analysis | None |
+| IRF-VAC-004b | P1 | Update meta-organvm CLAUDE.md tools section to reflect naming-validator addition (already in tools/ listing but confirm registry awareness) | Agent | Vacuum analysis | None |
+
+### Seed Contract Updates (Vacuum 5)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VAC-005a | P1 | Update corpvs-testamentvm seed.yaml — add `research-tasks` produce edge (to engine, praxis-perpetua), add `work-registry` produce edge (to all organs via IRF), bump last_validated to 2026-03-23. Current seed last validated 2026-02-11 (40 days stale) | Agent | Vacuum analysis | None |
+| IRF-VAC-005b | P1 | Update praxis-perpetua seed.yaml — add `governance-declarations` produce edge (to META-ORGANVM), reflect 4 new governance documents deployed 2026-03-21. Bump last_validated to 2026-03-23 | Agent | Vacuum analysis | None |
+| IRF-VAC-005c | P2 | Design seed drift detection heuristic for `organvm seed validate` — compare declared produces/consumes against filesystem evidence, flag gaps | Agent | Vacuum analysis | Seed module |
+
+### Companion Indices Construction (Vacuum 6 — advances IRF-IDX-001/002/003)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VAC-006a | P1 | Design content schema for all three companion indices — what fields, inclusion criteria, cross-reference format, update protocol. Must handle: 118 repos, 188 citations, 67+ SOPs, 22 regimes, 57+ research documents | Agent | Vacuum analysis | None |
+| IRF-VAC-006b | P1 | Build INST-INDEX-LOCORUM.md v1 (IRF-IDX-001) — canonical map of repos, directories, files, URLs, infrastructure endpoints, MCP servers, data paths. Estimated 500+ lines | Agent | Vacuum analysis | IRF-VAC-006a (schema design) |
+| IRF-VAC-006c | P1 | Build INST-INDEX-NOMINUM.md v1 (IRF-IDX-002) — registry of all named entities from registry-v2.json, seed.yaml files, governance docs, research programme, citation graph. Estimated 500+ lines | Agent | Vacuum analysis | IRF-VAC-006a (schema design) |
+| IRF-VAC-006d | P2 | Build INST-INDEX-RERUM.md v1 (IRF-IDX-003) — ontological inventory of artifact types, states, relationships, provenance. Draws from ontologia UID system. Estimated 500+ lines | Agent | Vacuum analysis | IRF-VAC-006a (schema design) |
+| IRF-VAC-006e | P2 | Build `organvm index generate` CLI (IRF-IDX-004) — automate index regeneration from registry, seeds, AST, ontologia. Different pipeline from existing indexer/ module | Agent | Vacuum analysis | IRF-VAC-006b/c/d (define target format) |
+
+---
+
 ## Completed (from 22-session cataloguing, 2026-03-20)
 
 | ID | What | Session | Date |
