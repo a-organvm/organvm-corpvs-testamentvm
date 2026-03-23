@@ -238,6 +238,11 @@ Verified on disk 2026-03-20:
 | IRF-CCE-006 | P2 | Publish `cce` to PyPI or at minimum make it `pipx install`-able from GitHub | Agent | S27 | None |
 | IRF-CCE-007 | P1 | Resolve `claude-history-memory` gate=warn — evaluation shows `source_reliability_state: warn` because manual gold fixtures haven't been added for the Claude export corpus | Agent | S27 | Need manual review of Claude export conversations |
 | IRF-CCE-008 | P1 | Execute corpvs-testamentvm decomposition — CHARTER stays META, CORPUS migrates to ORGAN-I per Lemma 5 of PROOF-reservoir-placement v2 | Agent | S29 decomposition plan | Migration script + GitHub repo creation needed |
+| IRF-CCE-009 | P1 | Register CCE in registry-v2.json — the engine is invisible to the system's own discovery machinery. 118 repos classified but CCE is missing. Add with functional_class=ENGINE, formation_type=GENERATOR, tier=standard, promotion_status=GRADUATED | Agent | S27-close (vacuum audit) | None |
+| IRF-CCE-010 | P1 | Create GitHub issues for all 7 open IRF-CCE items — the repo has zero issues. No external discoverability or agent tracking for planned work | Agent | S27-close (vacuum audit) | None |
+| IRF-CCE-011 | P1 | Register FORM-RES-001 in concordance — first formation ID in the system has no concordance entry. Future agents encountering it have no resolution path | Agent | S27-close (vacuum audit) | None |
+| IRF-CCE-012 | P2 | Propose omega criterion for memory infrastructure — 19 criteria, none track whether the organism can remember its own conversations. The autopoietic cycle ("the system remembers itself into existence") has no gate. Candidate: "Conversation corpus ingests ≥1 session transcript end-to-end (ingest → federate → evaluate → surface → consume)" | Agent | S27-close (vacuum audit) | Needs omega amendment process |
+| IRF-CCE-013 | P2 | CCE artifacts needed in companion indices (IRF-IDX-001/002/003) — new locations (conversation-corpus-site/), names (FORM-RES-001, Mneme), and artifacts (surface-bundle, mcp-context) have nowhere to be indexed until the Index Locorum, Index Nominum, and Index Rerum are built | Agent | S27-close (vacuum audit) | Blocked by IRF-IDX-001, IRF-IDX-002, IRF-IDX-003 |
 | IRF-SYS-013 | P2 | Propagate functional_class into all 74 seed.yaml files | Agent | S29 | None |
 | IRF-SYS-014 | P2 | Write formation.yaml for top 20 repos (flagships first) | Agent | S29 | None |
 | IRF-SYS-015 | P2 | Wire functional taxonomy into omega scorecard as criterion #20 | Agent | S29 | None |
@@ -677,10 +682,10 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 155 (158 prior − 3 closed: IRF-TST-002, IRF-SYS-010, IRF-SGO-007)
+- **Total active items:** 160 (155 prior + 5 new from S27-close vacuum audit: IRF-CCE-009–013)
 - **P0 (NOW):** 13
-- **P1 (SOON):** 56 (58 prior − 2 P1 closed: IRF-TST-002, IRF-SYS-010)
-- **P2 (GROWTH):** 76 (77 prior − 1 P2 closed: IRF-SGO-007)
+- **P1 (SOON):** 59 (56 prior + 3 new P1: IRF-CCE-009, IRF-CCE-010, IRF-CCE-011)
+- **P2 (GROWTH):** 78 (76 prior + 2 new P2: IRF-CCE-012, IRF-CCE-013)
 - **P3 (HORIZON):** 10
 - **Completed:** 145 (DONE-001 through DONE-145, plus DONE-114a; DONE-126 superseded by DONE-134→140)
 - **Blocked:** 1 (IRF-SYS-008)
@@ -690,7 +695,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | Domain | Active | DONE (domain) |
 |--------|--------|---------------|
-| CCE (Corpus Engine) | 7 | 18 |
+| CCE (Corpus Engine) | 12 | 18 |
 | SYS (System-wide) | 10 | 3 |
 | IDX (Index apparatus) | 3 | 2 |
 | SKL (Skills) | 3 | 1 |
@@ -715,7 +720,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | HRM (Hermeneus) | 8 | 7 |
 | DOM (Domus Infrastructure) | 7 | 6 |
 | Cross-session (S23-S30+) | 0 | 79 |
-| **Active IRF items** | **155** | — |
+| **Active IRF items** | **160** | — |
 | **Total DONE entries** | — | **145** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
