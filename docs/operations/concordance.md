@@ -53,7 +53,7 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 
 Source: [`INST-INDEX-RERUM-FACIENDARUM.md`](../../INST-INDEX-RERUM-FACIENDARUM.md)
 
-Universal work registry. 22 domain prefixes:
+Universal work registry. 24 domain prefixes:
 
 | Prefix | Domain | Scope |
 |--------|--------|-------|
@@ -79,6 +79,8 @@ Universal work registry. 22 domain prefixes:
 | IRF-RES | Research programme (71-task manifest) | META (praxis-perpetua) |
 | IRF-CCE | Conversation Corpus Engine | ORGAN-I |
 | IRF-HRM | Hermeneus intelligence layer | META (stakeholder-portal) |
+| IRF-DOM | Domus Infrastructure | PERSONAL (domus) |
+| IRF-OSS | Open-Source Contributions | Cross-organ |
 
 #### IRF-HRM Items (S28, 2026-03-21)
 
@@ -414,4 +416,88 @@ Source: `organvm-engine/src/organvm_engine/` — key classes by domain module. ~
 
 ---
 
-*This concordance was last updated on 2026-03-21. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*
+## Event Types
+
+Source: `organvm-engine/src/organvm_engine/events/` — `EventType` enum values emitted by engine modules.
+
+### Fossil & Testament Events (S34, 2026-03-23)
+
+| Event Type | Emitter | Description |
+|------------|---------|-------------|
+| `ARCHITECTURE_CHANGED` | `testament/` | Emitted when new modules, types, or enums are added to the engine |
+| `SCORECARD_EXPANDED` | `testament/` | Emitted when omega criteria count changes |
+| `VOCABULARY_EXPANDED` | `testament/` | Emitted when new event types or governance IDs are introduced |
+| `EPOCH_CLOSED` | `fossil/` | Emitted by fossil bridge when a geological epoch ends |
+| `INTENTION_BORN` | `fossil/` | Emitted by fossil bridge when a unique prompt is captured (uniqueness > 0.9) |
+| `DRIFT_DETECTED` | `fossil/` | Emitted by fossil bridge when intention-reality convergence < 0.3 |
+
+---
+
+## CLI Commands
+
+Source: `organvm-engine/src/organvm_engine/cli/` — command groups registered under the `organvm` entry point.
+
+### Fossil Commands (S34, 2026-03-23)
+
+| Command | Description |
+|---------|-------------|
+| `organvm fossil excavate` | Crawl git history, classify commits by Jungian archetype, produce fossil-record.jsonl |
+| `organvm fossil chronicle` | Generate Jungian-voiced epoch narratives from fossil data |
+| `organvm fossil intentions` | Extract and browse unique prompt intentions |
+| `organvm fossil drift` | Analyze intention-reality divergence |
+| `organvm fossil epochs` | List all declared geological epochs |
+| `organvm fossil stratum` | Query the fossil record by organ/archetype |
+| `organvm fossil witness install` | Install post-commit hooks for real-time capture |
+| `organvm fossil witness status` | Show witness coverage across workspace |
+| `organvm fossil witness record` | Record a single witnessed commit (called by hook) |
+
+### Taxonomy Commands (S34, 2026-03-23)
+
+| Command | Description |
+|---------|-------------|
+| `organvm taxonomy classify` | Classify repos by functional heuristic |
+| `organvm taxonomy audit` | Audit functional classification coverage |
+
+### Testament Commands (S34, 2026-03-23)
+
+| Command | Description |
+|---------|-------------|
+| `organvm testament record-session` | Record architecture events from git diff range |
+
+---
+
+## URI Schemes
+
+| Scheme | Format | Example | Purpose |
+|--------|--------|---------|---------|
+| `fossil://` | `fossil://{type}/{id}` | `fossil://epoch/EPOCH-007`, `fossil://intention/INT-2026-03-21-001` | Reference scheme for fossil record entities |
+
+---
+
+## MCP Tools
+
+Source: `organvm-mcp-server/src/organvm_mcp/` — tools exposed via MCP stdio protocol.
+
+| Tool | Description |
+|------|-------------|
+| `organvm_query_registry` | Query registry by organ/status/tier |
+| `organvm_get_repo` | Get full repo entry |
+| `organvm_list_organs` | List all organs with repo counts |
+| `organvm_get_seed` | Get seed.yaml for a repo |
+| `organvm_find_edges` | Find produces/consumes edges |
+| `organvm_get_event_contract` | Get event contract for a repo |
+| `organvm_list_events` | List all registered events |
+| `organvm_trace_dependencies` | Trace dependency chain |
+| `organvm_check_dependency` | Check if a dependency edge is valid |
+| `organvm_get_dependency_graph` | Get full dependency graph |
+| `organvm_system_health` | System health summary |
+| `organvm_omega_status` | Omega scorecard status |
+| `organvm_ci_health` | CI health across organs |
+| `organvm_upcoming_deadlines` | Upcoming deadlines |
+| `organvm_pitch_status` | Pitch deck status |
+| `organvm_get_context` | Cross-repo awareness context |
+| `organvm_irf_query` | Query the IRF from agent sessions |
+
+---
+
+*This concordance was last updated on 2026-03-23. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*
