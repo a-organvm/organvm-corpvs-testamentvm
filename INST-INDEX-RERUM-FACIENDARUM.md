@@ -522,7 +522,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-VAC-001a | P0 | Create tracking issue for SGO research programme on corpvs-testamentvm (13 papers, 74 tasks, 3 arXiv packages, 4 governance declarations) | Agent | Vacuum analysis | None |
+| IRF-VAC-001a | P0 | Create tracking issue for SGO research programme on corpvs-testamentvm (13 papers, 74 tasks, 3 arXiv packages, 4 governance declarations). **PARTIAL** — 3 arXiv submission issues created on praxis-perpetua: [#28](https://github.com/meta-organvm/praxis-perpetua/issues/28) (RP-06 cs.FL), [#29](https://github.com/meta-organvm/praxis-perpetua/issues/29) (SYN-02 cs.AI), [#30](https://github.com/meta-organvm/praxis-perpetua/issues/30) (SYN-01 cs.LO). Umbrella tracking issue on corpvs-testamentvm still needed. | Agent | Vacuum analysis | None |
 | IRF-VAC-001b | P1 | Batch-create GitHub issues for 11 open P0 IRF-RES items on organvm-engine (IRF-RES-003, 004, 006-014) | Agent | Vacuum analysis | None |
 | IRF-VAC-001c | P2 | Batch-create GitHub issues for 29 open P1 IRF-RES items on organvm-engine (IRF-RES-015 through IRF-RES-043) | Agent | Vacuum analysis | None |
 | IRF-VAC-001d | P2 | Build `organvm irf github-sync` CLI command — parse IRF, create/update GitHub issues, maintain bidirectional links | Agent | Vacuum analysis | IRF parser module exists at `organvm_engine/irf/` |
@@ -531,7 +531,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-VAC-002a | P0 | Document research programme advancement of existing omega criteria: #7 (TRP reviews = structured feedback; arXiv submissions advance this), #14 (arXiv acceptance = recognition), #15 (13 papers + code tool = portfolio evidence) | Agent | Vacuum analysis | None |
+| ~~IRF-VAC-002a~~ | ~~P0~~ | ~~Document research programme advancement of existing omega criteria: #7, #14, #15~~ — **DONE** (Omega advancement declaration created at `praxis-perpetua/governance/2026-03-23-omega-advancement-declaration.md`. Maps #7 indirect via arXiv, #14 direct upon acceptance, #15 reinforced, #19 milestone unblocked.) | Agent | Vacuum analysis | Completed 2026-03-23 |
 | IRF-VAC-002b | P1 | Propose omega criterion #20: "Research authority demonstrated (>=1 peer-reviewed or externally validated publication)" — complements IRF-CCE-012 (memory criterion) and IRF-SYS-015 (functional taxonomy criterion) | Agent | Vacuum analysis | Omega amendment process (precedent: #9, #10 amended 2026-03-20; #19 added 2026-03-21) |
 | IRF-VAC-002c | P2 | Wire IRF-RES completion events into omega evidence updates — when research tasks complete, check and update relevant omega evidence fields | Agent | Vacuum analysis | IRF parser + omega module |
 
@@ -539,7 +539,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-VAC-003a | P0 | Create `data/testament/milestones/` directory with founding milestone (2026-02-11 system launch). This unblocks omega #19 milestone check which currently returns 0 | Agent | Vacuum analysis | None |
+| ~~IRF-VAC-003a~~ | ~~P0~~ | ~~Create `data/testament/milestones/` directory with milestone~~ — **DONE** (Directory created + `MILESTONE-2026-001.yaml` documenting SGO research programme completion. Unblocks omega #19 milestone sub-condition.) | Agent | Vacuum analysis | Completed 2026-03-23 |
 | IRF-VAC-003b | P1 | Record SGO research programme events in testament chain — 13 `RESEARCH_PUBLISHED` events, 4 `GOVERNANCE_DECLARED` events, 1 `TOOL_DEPLOYED` event. Chain at `~/.organvm/testament/chain.jsonl` has 5,522 events; adding ~18 more | Agent | Vacuum analysis | Engine dev environment |
 | IRF-VAC-003c | P1 | Add research event types to EventType enum: `RESEARCH_PUBLISHED`, `GOVERNANCE_DECLARED`, `TOOL_DEPLOYED`. Current vocabulary has 49 members | Agent | Vacuum analysis | Engine dev environment |
 | IRF-VAC-003d | P2 | Wire session review into testament emission — `organvm session review --emit` flag that auto-records `session.completed` events to chain | Agent | Vacuum analysis | Session module |
@@ -549,15 +549,15 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-VAC-004a | P1 | Update praxis-perpetua entry in registry-v2.json — description should reflect SGO identity (57+ research docs, governance infrastructure), bump last_validated to 2026-03-23 | Agent | Vacuum analysis | None |
+| IRF-VAC-004a | P1 | Update praxis-perpetua entry in registry-v2.json — description should reflect SGO identity (57+ research docs, governance infrastructure), bump last_validated to 2026-03-23. **NOTE** (2026-03-23): Registry reviewed — praxis-perpetua description is current (mentions SGO, IRA); note says "47+ research docs" (now 57+). corpvs-testamentvm description says "81 repos, ~339K words" (now 124 repos, 740K+ words), last_validated 2026-02-11 (40+ days stale). Use `organvm registry update` to fix. | Agent | Vacuum analysis | None |
 | IRF-VAC-004b | P1 | Update meta-organvm CLAUDE.md tools section to reflect naming-validator addition (already in tools/ listing but confirm registry awareness) | Agent | Vacuum analysis | None |
 
 ### Seed Contract Updates (Vacuum 5)
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-VAC-005a | P1 | Update corpvs-testamentvm seed.yaml — add `research-tasks` produce edge (to engine, praxis-perpetua), add `work-registry` produce edge (to all organs via IRF), bump last_validated to 2026-03-23. Current seed last validated 2026-02-11 (40 days stale) | Agent | Vacuum analysis | None |
-| IRF-VAC-005b | P1 | Update praxis-perpetua seed.yaml — add `governance-declarations` produce edge (to META-ORGANVM), reflect 4 new governance documents deployed 2026-03-21. Bump last_validated to 2026-03-23 | Agent | Vacuum analysis | None |
+| ~~IRF-VAC-005a~~ | ~~P1~~ | ~~Update corpvs-testamentvm seed.yaml~~ — **DONE** (Added `research-tasks` + `work-registry` produce edges, bumped last_validated to 2026-03-23.) | Agent | Vacuum analysis | Completed 2026-03-23 |
+| ~~IRF-VAC-005b~~ | ~~P1~~ | ~~Update praxis-perpetua seed.yaml~~ — **DONE** (Added `governance-declarations` produce edge to META-ORGANVM, bumped last_validated to 2026-03-23.) | Agent | Vacuum analysis | Completed 2026-03-23 |
 | IRF-VAC-005c | P2 | Design seed drift detection heuristic for `organvm seed validate` — compare declared produces/consumes against filesystem evidence, flag gaps | Agent | Vacuum analysis | Seed module |
 
 ### Companion Indices Construction (Vacuum 6 — advances IRF-IDX-001/002/003)

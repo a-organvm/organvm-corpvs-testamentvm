@@ -12,7 +12,7 @@ metadata:
   implementation_status: PRODUCTION
   tier: flagship
   promotion_status: PUBLIC_PROCESS
-  last_validated: 2026-02-11
+  last_validated: 2026-03-23
   generated: 2026-02-12
   sprint: AUTONOMY
 
@@ -26,6 +26,12 @@ produces:
   - type: meta-documentation
     description: System-wide governance documentation and planning corpus
     consumers: [ORGAN-IV]
+  - type: research-tasks
+    description: Implementation tasks extracted from research programme (IRF-RES entries)
+    consumers: [META-ORGANVM/organvm-engine, META-ORGANVM/praxis-perpetua]
+  - type: work-registry
+    description: Universal work registry (IRF) consumed by all organs for gap tracking
+    consumers: [ALL]
 
 consumes:
   - type: orchestration-artifact
