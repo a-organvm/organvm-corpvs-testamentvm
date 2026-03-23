@@ -405,11 +405,11 @@ These tasks represent every actionable design recommendation extracted from the 
 
 | ID | Priority | Action | Category | Effort | Source | Status | Dependencies |
 |----|----------|--------|----------|--------|--------|--------|--------------|
-| IRF-RES-001 | P0 | Make the Governance Trilemma choice explicit — document ORGANVM's implicit choice of Consistent + Measurable over Complete; create machine-readable registry of governance blind spots | GOVERNANCE | M | SYN-02 SS5.5 R1; TRP-SYN-02 POV-3 | DONE | None |
-| IRF-RES-002 | P0 | Classify all governance rules as syntactic or semantic — audit every rule in governance-rules.json, seed.yaml schemas, and CI checks; maintain classification as machine-readable annotation | GOVERNANCE | M | RP-02 SS4.5 I1, SS5.2; SYN-02 SS4.1 | DONE | None |
+| ~~IRF-RES-001~~ | ~~P0~~ | ~~DONE 2026-03-21 → DONE-146~~ | ~~GOVERNANCE~~ | ~~M~~ | | ~~DONE~~ | |
+| ~~IRF-RES-002~~ | ~~P0~~ | ~~DONE 2026-03-21 → DONE-147~~ | ~~GOVERNANCE~~ | ~~M~~ | | ~~DONE~~ | |
 | IRF-RES-003 | P0 | Define "readiness" construct independently of its operationalization — convene expert panel to define full domain of "repository readiness" independently of metrics that measure it | MEASUREMENT | M | RP-07 SS7 I1; SYN-02 SS4.4; SYN-04 SS4.1 | OPEN | None |
 | IRF-RES-004 | P0 | Conduct factor analysis on the omega scorecard — perform EFA on all indicators across repo population; determine single vs. multiple latent factors | MEASUREMENT | L | RP-07 SS6.2, SS6.3; SYN-02 SS5.5 R2 | OPEN | IRF-RES-003 |
-| IRF-RES-005 | P0 | Implement the naming convention validator (double-hyphen linter) — automated validator enforcing double-hyphen convention in CI as syntactic governance check | NAMING | M | RP-04 SS5.1 P6; SYN-03 SS6.4; RP-02 SS4.5 I2 | DONE | None |
+| ~~IRF-RES-005~~ | ~~P0~~ | ~~DONE 2026-03-21 → DONE-148~~ | ~~NAMING~~ | ~~M~~ | | ~~DONE~~ | |
 | IRF-RES-006 | P0 | Build a controlled vocabulary registry for domain terms — machine-readable mapping of canonical terms to synonyms; validate new names against vocabulary in CI | NAMING | M | RP-04 SS5.1 P4; SYN-03 SS6.4 | OPEN | IRF-RES-005 |
 | IRF-RES-007 | P0 | Make incompleteness visible in all governance verdicts — every automated verdict must include explicit scope statement listing unverified semantic properties | GOVERNANCE | M | RP-02 SS5.5; SYN-02 SS5.5 R1 | OPEN | IRF-RES-002 |
 | IRF-RES-008 | P0 | Formalize the IRA panel protocol — strengthen IRA panel as Tarskian escape; provide explicit guidance on semantic properties that automated checks cannot assess | GOVERNANCE | M | RP-02 SS6.3; SYN-02 SS4.5, SS5.3, SS5.5 R5 | OPEN | IRF-RES-002 |
@@ -721,7 +721,15 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-142 | Fossil chronicle generation — 9 epoch narratives (Genesis through Contribution Engine) in `data/fossil/chronicle/`, each voiced through dominant Jungian archetype with data tables. Narrator module with archetype vocabulary templates. | S31 (fossil) | 2026-03-22 |
 | DONE-143 | Fossil archivist — intention capture with uniqueness scoring (Jaccard), SHA256 fingerprinting, YAML serialization (no PyYAML dep). Drift detector: convergence/mutation/shadow analysis classifying intention→reality divergence by archetype. | S31 (fossil) | 2026-03-22 |
 | DONE-144 | Fossil witness — git post-commit hook generation + install across workspace, real-time WITNESSED provenance recording, witness status CLI. Bridge: EPOCH_CLOSED/INTENTION_BORN/DRIFT_DETECTED testament events + fossil:// URI scheme. | S31 (fossil) | 2026-03-22 |
+| DONE-145 | domus-semper-palingenesis: clean-room shell config rewrite — 16 files, 50ms startup (was 52s cold / 450ms warm). Killed op v1 dead code (opsignin, op wrapper, session caching causing 52s timeout). Added `_cache.zsh` DRY primitive (replaces 8 copy-paste blocks). Native `zsh/datetime` timer (replaces perl subprocess). `dot_zshenv` → template (identity from chezmoi.toml). Removed outdated `ORG_LIMINAL_ALT`/`GITHUB_SECONDARY`. Added `op-refresh` for v2-native secrets. Removed dangerous `alias grep='rg'`. Dynamic Ruby gem path, BSD sed compat, PATH dedup at source. 66/66 module+integration tests. Commit `ee8894d`. Spec: `.claude/plans/2026-03-23-shell-config-rewrite-spec.md`. | S32 (shell-rewrite) | 2026-03-23 |
 | DONE-145 | IRF reconciliation audit — cross-referenced 9,376 commits against 158 active IRF items. Closed IRF-TST-002, IRF-SYS-010, IRF-SGO-007. Added 19 DONE entries (115→133). Closed GitHub issues #20 (AX-009) and #21 (AX-003) on organvm-engine. Stats: 155 active, 145 completed. | S31 (reconciliation) | 2026-03-22 |
+| DONE-146 | IRF-RES-001: Governance Trilemma Declaration — ORGANVM chooses Consistent + Measurable, 10-item blind-spot registry, 11 syntactic + 10 semantic properties documented. File: `praxis-perpetua/governance/2026-03-21-governance-trilemma-declaration.md` | SGO-RP (research) | 2026-03-21 |
+| DONE-147 | IRF-RES-002: Syntactic-Semantic Boundary — 60 governance rules classified (24 syntactic, 25 boundary, 11 semantic). File: `praxis-perpetua/governance/2026-03-21-syntactic-semantic-boundary.md` | SGO-RP (research) | 2026-03-21 |
+| DONE-148 | IRF-RES-005: Naming Convention Validator — Python CLI tool (67 tests), validates 117 repos, found 4 violations. File: `tools/naming-validator/` | SGO-RP (research) | 2026-03-21 |
+| DONE-149 | Omega #19 unblocked — milestone directory created + MILESTONE-2026-001.yaml. Criterion now MET (was NOT MET due to missing directory). | SGO-RP (vacuum fill) | 2026-03-23 |
+| DONE-150 | Seed.yaml refresh — corpvs-testamentvm (40 days stale → current, +2 produces edges) + praxis-perpetua (+1 produces edge). | SGO-RP (vacuum fill) | 2026-03-23 |
+| DONE-151 | Registry description update — corpvs-testamentvm: 81 repos/339K words → 124 repos/740K+ words. praxis-perpetua note updated with SGO Research Program. | SGO-RP (vacuum fill) | 2026-03-23 |
+| DONE-152 | arXiv submission issues created — GitHub issues #28 (RP-06 cs.FL), #29 (SYN-02 cs.AI), #30 (SYN-01 cs.LO) on meta-organvm/praxis-perpetua. | SGO-RP (vacuum fill) | 2026-03-23 |
 
 ---
 
