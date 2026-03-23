@@ -280,7 +280,7 @@ Verified on disk 2026-03-20:
 | IRF-OSS-002 | P2 | AdenHQ/Hive ORGAN-I theory — expand lifecycle algebra into full paper (assembly dynamics, fission-fusion operational semantics) | Agent | S30 (Hive) | None |
 | ~~IRF-OSS-003~~ | ~~P2~~ | ~~Generalize cross-organ contribution machine~~ → **DONE-153** (7 PRs, 8 workspaces, operator prompt) | Agent | 2026-03-23 | Completed |
 | IRF-OSS-004 | P1 | Monitor AdenHQ/Hive PR #6707 — respond to review comments, address CI, maintain relationship with team | Agent | S30 (Hive) | 24h assignment window |
-| IRF-OSS-005 | P0 | Temporal CLA — sign at cla-assistant.io to unblock PR #1385 (2/3 CI passing, CLA is only blocker) | Human | S32 (campaign) | Manual — 5 min |
+| ~~IRF-OSS-005~~ | ~~P0~~ | ~~Temporal CLA~~ → **DONE-157** (signed, PR #1385 unblocked) | Human | 2026-03-23 | Completed |
 | IRF-OSS-006 | P1 | LangGraph community — join LangChain Discord/Slack for relationship building beyond PR #7237 | Human | S32 (campaign) | Manual |
 | IRF-OSS-007 | P2 | Campaign remaining actions — 7/15 still pending: hive-await-assign, hive-discord-active, hive-link-pr, langgraph-community, temporal-cla, ipqwery-patience (Apr 4 bump) | Agent | S32 (campaign) | Various |
 | IRF-OSS-008 | P1 | Decouple LinkedIn content from application-pipeline — content production belongs in ORGAN-V or ORGAN-VII, not a job-search tool. Images and text currently split across repos. | Agent | S32 (campaign) | Architecture decision needed |
@@ -766,6 +766,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-154 | OSS contribution infrastructure — 8 contrib workspaces in ORGAN-IV (adenhq-hive + 7 new), each with seed.yaml, CLAUDE.md, journal, fork, upstream remote. 15 GitHub issues (#40-54) on agentic-titan. | Pipeline outreach session | 2026-03-21/23 |
 | DONE-155 | Hive × ORGANVM fusion architecture — multi-organ plan across IV/V/I/META (7 repos, 4 organs). Issues #40-47 on agentic-titan. Plan at `.claude/plans/2026-03-21-hive-organvm-fusion-public-process.md`. | Pipeline outreach session | 2026-03-21 |
 | DONE-156 | Pipeline outreach — 30 actions: 18 LinkedIn connects (new contacts at 6 orgs), Together AI warm referral, Owner.com warm path, Matthew Diakonov reciprocal engagement (answered FUSION→FISSION question, starred repos, submitted PR #1). | Pipeline outreach session | 2026-03-21/23 |
+| DONE-157 | IRF-OSS-005: Temporal CLA signed — PR #1385 (temporalio/sdk-python) unblocked | Pipeline outreach session | 2026-03-23 |
 | DONE-157 | Contribution engine full expansion — 3 new modules (campaign.py, outreach.py, backflow.py), CLI entry point (__main__.py), monitor fix (both seed.yaml formats), scanner expansion (4 new sources: stars/forks/deps/PR-history), 12 new Pydantic models, cli.py prefix refactor. 111 tests, 0 failures, 22 commits. | S32 (plague campaign) | 2026-03-22/23 |
 | DONE-158 | Testament codified — 13 articles of constitutional rules governing all written output: knowledge imperative, cascading causation, triple layer, non-submersible units, collision geometry, recognition pleasure, citation discipline, dual purpose, verification, opening architecture, paragraph discipline, charged language, enjambment. Formalized into logic proofs, algorithms, mathematics (testament-formalization.md). | S32 (plague campaign) | 2026-03-22/23 |
 | DONE-159 | Essay 8: The Recursive Proof — "How a Contribution Engine Proved Its Own Thesis Before Shipping a Single PR." Published to organvm-corpvs-testamentvm. The backflow pipeline's first knowledge capture was from formalizing its own rules — bidirectional transfer proved structural, not accidental. | S32 (plague campaign) | 2026-03-22/23 |
@@ -861,5 +862,5 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-23 — DWV-S2 close: IRF-DWV-001/002 added (absorb DWV into organs, retire staging dir). 10 total DWV items. Total DONE: 156.*
+*Last updated: 2026-03-23 — Pipeline close: IRF-OSS-005 completed (Temporal CLA). DONE-157. Total DONE: 157.*
 *Next update: After any session that produces or discovers work items*
