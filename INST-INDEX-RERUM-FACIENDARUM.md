@@ -965,7 +965,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-24 — Plague campaign S35: 12 PRs across 11 repos, Absorption Protocol implemented, 13 backflow deposits, 4 topology issues, 3 MCP server issues, 8 DONE entries (190-197). Total DONE: 199.*
+*Last updated: 2026-03-24 — Plague campaign S35: 12 PRs across 11 repos, Absorption Protocol implemented, 13 backflow deposits, 4 topology issues, 3 MCP server issues, 8 DONE entries (190-197). Total DONE: 199. IRF-OSS-022 added (network map vacuum).*
 *Next update: After any session that produces or discovers work items*
 
 ### S35 Discovered Items
@@ -976,3 +976,4 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | IRF-OSS-019 | P1 | Omega evidence — log S35 contributions as evidence for criteria #7 (feedback: 3 reviewer contacts, m13v conversation), #12 (contributions: 12 PRs), #14 (recognition: public topology issues). Update omega-evidence-map.md and linked GH issues | Agent | S35 audit | None |
 | IRF-OSS-020 | P2 | Concordance — register Absorption Protocol IDs (AbsorptionTrigger enum values, AbsorptionStatus enum values, tracked_conversations.yaml schema) in concordance.md | Agent | S35 audit | None |
 | IRF-OSS-021 | P2 | Backflow intake path fix — the auto-formalization engine deposits to intake/contributions/ which is gitignored. Fixed paths this session but the CONTRIBUTIONS_SUBDIR in absorption.py now varies per organ (some use docs/contributions/, ORGAN-I uses my-knowledge-base/docs/contributions/, ORGAN-II needs contrib_engine/artifacts/). Needs a per-organ path registry. | Agent | S35 audit | None |
+| IRF-OSS-022 | P1 | Network map — add contribution edges for all 11 contrib relationships. network-map.yaml in system-dashboard has 0 contribution edges. Should include: adenhq/hive, anthropics/skills, dbt-labs/dbt-mcp, ipqwery/ipapi-py, langchain-ai/langgraph, primeinc/github-stars, temporalio/sdk-python, Clyra-AI/gait, indeedeng/iwf, jairus-m/dagster-sdlc, m13v/summarize_recent_commit. Engagement type: "contribute" not just "watch". | Agent | S35 audit | None |
