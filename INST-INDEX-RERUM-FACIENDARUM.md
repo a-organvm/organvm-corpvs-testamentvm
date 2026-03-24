@@ -317,6 +317,13 @@ Verified on disk 2026-03-20:
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
 | ~~IRF-PRT-002~~ | ~~P2~~ | ~~Re-evaluate security allowlist (h3, fast-xml-parser) by 2026-04-03 — GitHub issue #66~~ — **PARTIAL**: h3 resolved (1.15.10), allowlist entry removed, GH#66 commented. fast-xml-parser entries remain (expire 2026-04-03). Commit `86d505d`. | Agent | S24 | Completed S34 (h3 portion) |
+| IRF-PRT-003 | **P1** | **Register portfolio in registry-v2.json** — flagship PERSONAL/LIMINAL project has a seed.yaml but NO entry in the central registry (97+ repos tracked, portfolio invisible). Add entry with: organ PERSONAL, tier flagship, status CANDIDATE, promotion PUBLIC_PROCESS, CI workflow, 496 tests, deployment URL. Unblocks network density metrics and fleet-wide queries. Parallel to IRF-DOM-002 (domus registration) | Agent | S34 N/A vacuum audit | None |
+| IRF-PRT-004 | P2 | **Refresh testament artifacts for portfolio** — currently registered as "showcase-portfolio" (wrong identifier) and marked ARCHIVED (wrong status; project is CANDIDATE/PUBLIC_PROCESS and actively maintained). Regenerate testament visual artifacts with correct identifier "portfolio" and current promotion state. Dependency maintenance events (like today's h3 security fix) should be testament-recordable | Agent | S34 N/A vacuum audit | Testament regeneration tooling |
+| IRF-PRT-005 | P2 | **Enrich seed.yaml with signal edges** — produces/consumes arrays are empty but portfolio actually produces (quality-metrics.json, OG images, RSS feed, GitHub Pages index, trust-vitals.json) and consumes (system-metrics.json from organvm-engine, essay data from corpus). Declare as signal_inputs/signal_outputs to make cross-boundary data flows visible to dependency audits | Agent | S34 N/A vacuum audit | None |
+| IRF-PRT-006 | P2 | **Wire npm audit into omega scorecard reactively** — add security posture as omega evidence. When `npm audit` reports 0 vulnerabilities, `sync-omega.mjs` should update criterion 1 (soak test) and criterion 15 (external validation) evidence fields automatically. Currently security metrics are hand-written anecdotes in evidence strings. Depends on IRF-SYS-016 (fleet-wide supply chain framework) for the omega sub-criterion definition | Agent | S34 N/A vacuum audit | IRF-SYS-016 defines criterion shape |
+| IRF-PRT-007 | P2 | **Add portfolio as D-001 evidence source in inquiry-log.yaml** — portfolio operational data (security posture, uptime, engagement metrics, dependency maintenance cadence) is living proof that the pipeline functions as production infrastructure, not a portfolio exercise. Link as evidence source on INQ-2026-001. See also IRF-APP-008 (consulting pivot validates D-001) | Agent | S34 N/A vacuum audit | None |
+| IRF-PRT-008 | P3 | **Enrich concordance with portfolio governance vocabulary** — concordance tracks IRF-PRT and omega #15 but not portfolio's internal governance IDs: quality phases (W10→W12…), persona IDs, strike target IDs, sketch registry names (30 named sketches), ratchet policy identifiers. These function as governance vocabulary within the project and should be indexed | Agent | S34 N/A vacuum audit | Concordance structure must support sub-project IDs |
+| IRF-PRT-009 | P3 | **Ensure portfolio representation in companion indices** — when IRF-IDX-001 (Locorum), IRF-IDX-002 (Nominum), IRF-IDX-003 (Rerum) are built, portfolio must be included: locations (deploy URL, GitHub Pages, Cloudflare Worker D1, OG endpoint), names (personas, sketches, quality phases, strike targets), artifacts (30 sketches, 21 case studies, 49 essays, policy JSONs, quality-metrics.json) | Agent | S34 N/A vacuum audit | IRF-IDX-001/002/003 not yet built |
 
 ---
 
@@ -839,11 +846,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 170 (165 prior + 5 new SYS items: IRF-SYS-019→022 from DONE-186 vacuum audit, plus DONE-186 completion)
+- **Total active items:** 177 (170 prior + 7 new PRT items: IRF-PRT-003→009 from S34 N/A vacuum audit)
 - **P0 (NOW):** 13
-- **P1 (SOON):** 61 (60 prior + 1 new P1: IRF-SYS-021)
-- **P2 (GROWTH):** 87 (83 prior + 4 new P2: IRF-SYS-019, 020, 022)
-- **P3 (HORIZON):** 10
+- **P1 (SOON):** 62 (61 prior + 1 new P1: IRF-PRT-003)
+- **P2 (GROWTH):** 91 (87 prior + 4 new P2: IRF-PRT-004, 005, 006, 007)
+- **P3 (HORIZON):** 12 (10 prior + 2 new P3: IRF-PRT-008, 009)
 - **Completed:** 189 (DONE-001 through DONE-189, plus DONE-114a; DONE-126 superseded by DONE-134→140)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 23
@@ -864,7 +871,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | TST (Testament) | 1 | 2 |
 | OBJ (Object Lessons) | 7 | 1 |
 | KER (Kerygma) | 2 | 0 |
-| PRT (Portfolio) | 1 | 10 |
+| PRT (Portfolio) | 8 | 10 |
 | APP (Application) | 10 | 7 |
 | GEN (Generative) | 3 | 0 |
 | OSS (Open-Source) | 4 | 7 |
@@ -877,7 +884,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | HRM (Hermeneus) | 5 | 10 |
 | DOM (Domus Infrastructure) | 7 | 6 |
 | Cross-session (S23-S30+) | 0 | 81 |
-| **Active IRF items** | **165** | — |
+| **Active IRF items** | **172** | — |
 | **Total DONE entries** | — | **161** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
