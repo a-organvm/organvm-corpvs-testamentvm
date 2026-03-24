@@ -71,7 +71,7 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 | IRF-SYS-004 | P1 | Descent Protocol remaining 22% — repos missing descriptions/topics on GitHub | Agent | S11 | None |
 | IRF-SYS-005 | P2 | World Root Phase 2-4 — repo migration per `~/Workspace/Organizing-Local-Remote-Structure.md` | Human | Memory | Phase 1 audit complete, execution not started |
 | IRF-SYS-006 | P1 | Audit global gitignore for remaining overly-broad patterns — `/.config` and `lib/` fixed, but other language-template patterns may still clash across 117 repos | Agent | S26 | None |
-| IRF-SYS-007 | P2 | Deploy Dependabot auto-merge + grouping to remaining high-traffic repos (portfolio already has grouping; specvla-ergon--avditor-mvndi, ORGAN-I/II flagships need it) | Agent | S26 | Template now exists from S26 |
+| IRF-SYS-007 | P2 | Deploy Dependabot auto-merge + grouping to remaining high-traffic repos (portfolio + agent--claude-smith have grouping; specvla-ergon--avditor-mvndi, ORGAN-I/II flagships need it) | Agent | S26 | Template now exists from S26 |
 | IRF-SYS-008 | P2 | ESLint 9→10 migration — blocked on eslint-plugin-react support. Monitor `eslint-plugin-react` releases for v8+ with ESLint 10 compatibility | Agent | S26 | eslint-plugin-react@7.37.5 incompatible |
 | IRF-SYS-009 | P1 | Gmail notification hygiene — create filter for `from:notifications@github.com subject:"chore(deps)"` to skip inbox, label `github/dependabot` | Human | S26 | None |
 | ~~IRF-SYS-010~~ | ~~P1~~ | ~~Full seed.yaml refresh for organvm-engine~~ — **DONE** (5 contracts → 36, CANDIDATE → GRADUATED, signal_inputs/signal_outputs added. Commit `82d043d`.) | Agent | S28 gap audit | Completed S29 |
@@ -318,6 +318,15 @@ Verified on disk 2026-03-20:
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
 | IRF-APP-001 | P2 | Collect 3+ months v2 outcome data for D-001 | Human | inquiry-log.yaml | Time-gated |
+| IRF-APP-002 | P1 | Register `content-engine--asset-amplifier` in registry-v2.json + create GitHub repo under `organvm-iii-ergon`. Skeleton exists locally with seed.yaml, CLAUDE.md, README.md, package.json, build plan. Needs: `git init`, remote creation, submodule registration in ORGAN-III superproject | Agent | Pipeline S33 (consulting pivot) | None |
+| IRF-APP-003 | P1 | Scrapper Phase 1 deliverable for Tony Carbone (Alternative Funding Group) — coverage dashboard (50-state green/yellow/red) + state agent health monitoring. Answers "will it continue to work?" Evolution plan: `public-record-data-scrapper/.claude/plans/2026-03-23-mca-intelligence-evolution.md` | Agent | Pipeline S33 (Tony call) | None |
+| IRF-APP-004 | P2 | Content engine MVP build (4-6 week timeline) — AI content repurposing platform. Partnership with Scott Lefler (Lefler.Design). Build plan: `content-engine--asset-amplifier/.claude/plans/2026-03-23-content-engine-mvp.md`. Awaiting Scott's response to product pitch | Agent+Human | Pipeline S33 (Scott partnership) | Scott confirmation |
+| IRF-APP-005 | P1 | Follow-up tracking — Tony Carbone (text sent 2026-03-23 referencing UCC platform + evolution roadmap, awaiting response) and Scott Lefler (product pitch sent 2026-03-23 via iMessage, awaiting response). Update contacts.yaml on response | Human | Pipeline S33 | Awaiting responses |
+| IRF-APP-006 | P1 | Create GitHub repo `organvm-iii-ergon/content-engine--asset-amplifier` + push skeleton. Create tracking issues on `organvm-corpvs-testamentvm` for IRF-APP-002/003/004/005 (scrapper deliverable, content engine MVP, follow-up tracking) | Agent | Vacuum audit (N/A #2) | None |
+| IRF-APP-007 | P2 | Update omega scorecard live status (there+back-again.md, stale since 2026-02-18) with consulting pivot evidence. Document Tony Carbone inbound as evidence toward criteria #7 (external feedback), #9 (revenue), #14 (external recognition/adoption). Document Lefler partnership as evidence toward #5 (partnership established) | Agent | Vacuum audit (N/A #3) | None |
+| IRF-APP-008 | P1 | Add consulting pivot evidence entry to INQ-2026-001 in inquiry-log.yaml. First inbound commercial engagement via GitHub public repos validates D-001 thesis that pipeline functions as production infrastructure, not portfolio exercise | Agent | Vacuum audit (N/A #4) | None |
+| IRF-APP-009 | P2 | Record consulting pivot in testament: (a) MILESTONE-2026-002.yaml for first inbound commercial engagement, (b) `registry.repo_added` event for content-engine--asset-amplifier once IRF-APP-002 complete, (c) update fossil chronicle to cover 2026-03-23 epoch | Agent | Vacuum audit (N/A #5) | IRF-APP-002 |
+| IRF-APP-010 | P1 | Update INST-INDEX-LOCORUM.md: add content-engine--asset-amplifier to ORGAN-III section. Seed IRF-IDX-002/003 backlogs with consulting pivot entities (Tony Carbone, Scott Lefler, Alexis C., Alternative Funding Group, Lefler.Design) | Agent | Vacuum audit (N/A #10) | None |
 
 ---
 
@@ -791,6 +800,12 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-176 | IRF-CCE-013 closed: Companion index registration spec documented on GH#8. | S33 (CCE sweep) | 2026-03-23 |
 | DONE-177 | CCE search engine fix: `rerank_family_hits` bonus now scales relative to `max_base_score` + matched families injected into candidate pool before reranking. Fixes exact-title queries missing on large corpora. GH#9 filed and closed. Commit `cefdf8c`. | S33 (CCE sweep) | 2026-03-23 |
 | DONE-178 | CCE triage automation: policy-driven `cce review triage` resolves 2,176/3,854 open review items (56% reduction). Three policies: exact-cross-corpus, noise-entity, contradiction-defer. Commit `23ce0f3`. | S33 (CCE sweep) | 2026-03-23 |
+| DONE-179 | Application pipeline consulting pivot — Tony Carbone (Alternative Funding Group, Managing Partner) pipeline entry created (`alternative-funding-group-technical-partner`, track: consulting, score 8.5), contacts updated (Tony strength 6 with full interaction history, Alexis C. strength 1), strategy doc at `strategy/consulting-tony-carbone-altfunding.md`, scrapper evolution plan at `public-record-data-scrapper/.claude/plans/2026-03-23-mca-intelligence-evolution.md`. Tony hunted user down via GitHub, 40-min call, 5 workstreams (MCA automation + Flyland.com healthcare SaaS). | Pipeline S33 (consulting) | 2026-03-23 |
+| DONE-180 | Application pipeline partnership — Scott Lefler (Lefler.Design, 10yr friend) pipeline entry created (`lefler-padavano-automation-partnership`, track: consulting, score 9.2), contact added (strength 8), product concept developed (AI Content Engine for premium brands), strategy doc at `strategy/partnership-lefler-padavano-content-engine.md`. Division: Padavano builds engine, Lefler wraps UI + markets + sells. Pitch sent via iMessage. | Pipeline S33 (consulting) | 2026-03-23 |
+| DONE-181 | Content engine skeleton — `organvm-iii-ergon/content-engine--asset-amplifier/` created: README.md, CLAUDE.md, seed.yaml (LOCAL, SKELETON), package.json, `.claude/plans/2026-03-23-content-engine-mvp.md`, directory structure (`src/{api,pipeline,social,analytics}`, `tests/`, `docs/`). ORGAN-III commerce product. | Pipeline S33 (consulting) | 2026-03-23 |
+| DONE-182 | Scrapper evolution plan — 3-phase roadmap for evolving public-record-data-scrapper from UCC aggregator to comprehensive MCA prospect intelligence system. Phase 1: reliability hardening (dashboard, health monitoring). Phase 2: beyond UCC (bank statements, competitive intelligence, business health signals). Phase 3: sales team automation + healthcare vertical. | Pipeline S33 (consulting) | 2026-03-23 |
+| DONE-183 | Deepgram signal — Brent George (Tech Lead Manager) profile view + new follower logged on `deepgram-backend-engineer-inference-services` submitted entry. Separate from Tony/Scott consulting tracks. | Pipeline S33 | 2026-03-23 |
+| DONE-184 | agent--claude-smith Dependabot batch — merged 4 GH Actions PRs (#20 codeql-action v3→v4, #21 release-drafter v6→v7, #22 stale v9→v10, #23 checkout v4→v6), reconfigured Dependabot from weekly/individual to monthly/grouped (IRF-SYS-007 partial), closed 5 stale individual PRs (#9, #10, #12, #18, #19). Commit `6db1e9e`. | Maintenance session | 2026-03-23 |
 
 ---
 
@@ -810,12 +825,12 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 156 (157 prior − 1 completed CCE propagation item: IRF-CCE-010)
+- **Total active items:** 165 (156 prior + 9 new APP items: IRF-APP-002→010)
 - **P0 (NOW):** 13
-- **P1 (SOON):** 55 (56 prior − 1 completed P1 item: IRF-CCE-010)
-- **P2 (GROWTH):** 78 (76 prior + 2 new P2: IRF-CCE-012, IRF-CCE-013)
+- **P1 (SOON):** 62 (55 prior + 7 new P1: IRF-APP-002, 003, 005, 006, 008, 010)
+- **P2 (GROWTH):** 81 (78 prior + 3 new P2: IRF-APP-004, 007, 009)
 - **P3 (HORIZON):** 10
-- **Completed:** 168 (DONE-001 through DONE-168, plus DONE-114a; DONE-126 superseded by DONE-134→140)
+- **Completed:** 184 (DONE-001 through DONE-184, plus DONE-114a; DONE-126 superseded by DONE-134→140)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 23
 
@@ -836,7 +851,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | OBJ (Object Lessons) | 7 | 1 |
 | KER (Kerygma) | 2 | 0 |
 | PRT (Portfolio) | 1 | 9 |
-| APP (Application) | 1 | 2 |
+| APP (Application) | 10 | 7 |
 | GEN (Generative) | 3 | 0 |
 | OSS (Open-Source) | 4 | 7 |
 | IRA (Authority) | 3 | 1 |
@@ -848,8 +863,8 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | HRM (Hermeneus) | 8 | 7 |
 | DOM (Domus Infrastructure) | 7 | 6 |
 | Cross-session (S23-S30+) | 0 | 79 |
-| **Active IRF items** | **156** | — |
-| **Total DONE entries** | — | **149** |
+| **Active IRF items** | **165** | — |
+| **Total DONE entries** | — | **155** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
 
@@ -878,5 +893,5 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-23 — Pipeline close: IRF-OBJ-001/002 completed (programmatic), OBJ-003→007 backburnered. DONE-158→159. Total DONE: 159.*
+*Last updated: 2026-03-23 — Pipeline consulting pivot: 9 new IRF-APP items (002→010), 5 DONE entries (179→183). Vacuum audit converted 5 false N/As into tracked work: GitHub issues (006), omega evidence (007), inquiry log D-001 evidence (008), testament milestone (009), Index Locorum update (010).*
 *Next update: After any session that produces or discovers work items*
