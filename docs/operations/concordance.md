@@ -88,10 +88,10 @@ Universal work registry. 24 domain prefixes:
 | ID | Description | Priority | Refs |
 |----|-------------|----------|------|
 | IRF-HRM-001 | Repo rename coordination (stakeholder-portal → hermeneus) | P1 | GH#28 |
-| IRF-HRM-002 | Registry entry update (display_name, description, capabilities) | P1 | Done S28 |
-| IRF-HRM-003 | Concordance registration of new API routes + IRF-HRM namespace | P1 | This entry |
+| ~~IRF-HRM-002~~ | ~~Registry entry update~~ — DONE-185 | ~~P1~~ | Completed S28 |
+| ~~IRF-HRM-003~~ | ~~Concordance registration~~ — DONE-186 | ~~P1~~ | Completed S28 |
 | IRF-HRM-004 | Custom domain (hermeneus.organvm.io) | P2 | — |
-| IRF-HRM-005 | Testament cascade for S28 events | P1 | Done S28 |
+| ~~IRF-HRM-005~~ | ~~Testament cascade~~ — DONE-187 | ~~P1~~ | Completed S28 |
 | IRF-HRM-006 | Omega #9 stranger-test Hermeneus for polish validation | P2 | Omega |
 | IRF-HRM-007 | Streaming markdown rendering fix (heading concatenation) | P2 | — |
 | IRF-HRM-008 | Full re-ingestion with retry logic | P2 | — |

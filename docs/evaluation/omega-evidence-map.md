@@ -79,6 +79,8 @@ Scorecard code fix: [`organvm-engine#1`](https://github.com/meta-organvm/organvm
 
 **Post-AMPLIFICATIO maturation (2026-02-17):** M9-II (fetch-familiar-friends: @types/react-dom v19→v18) and M10-II (life-my--midst--in: ESLint 10→9.x, design-system coverage 75%→20%) pushed. Expected CI: ~69/72 (95.8%) pending workflow runs. Only ORGAN-I billing lock failures remain as known issues.
 
+**Vercel triage session (2026-03-23):** CI signal quality fix for stakeholder-portal — Release Drafter false failures on all PRs eliminated (was setting invalid `targetCommitish`), CI job name mismatch fixed (`quality`→`test` to match branch protection), unblocking all PR merges. Branch protection had been silently broken, preventing any PR from merging. Also: specvla-ergon--avditor-mvndi `build-and-test` unblocked via rebase + lint fix.
+
 **Gap:** Need 30 consecutive days of real data. Collection was broken (dry-run only + exit-code-1 preventing commit) until 2026-02-17 fix. ORGAN-I billing lock inflates CI failure count.
 
 **Completion target:** ~March 18, 2026
