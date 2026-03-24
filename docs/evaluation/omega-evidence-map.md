@@ -35,20 +35,20 @@ Scorecard code fix: [`organvm-engine#1`](https://github.com/meta-organvm/organvm
 
 | Status | Count | Criteria |
 |--------|-------|----------|
-| MET | 4 | #5, #6, #8, #13 |
-| IN PROGRESS | 6 | #1, #3, #12, #14, #16, #17 |
-| NOT STARTED | 7 | #2, #4, #7, #9, #10, #11, #15 |
+| MET | 7 | #3, #5, #6, #8, #13, #15, #19 |
+| IN PROGRESS | 2 | #1 (36 days, 4 incidents — needs <=3), #17 (36 days autonomous) |
+| NOT MET | 10 | #2, #4, #7, #9, #10, #11, #12, #14, #16, #18 |
 
 **By Horizon:**
 
-| Horizon | Timeline | Met | In Progress | Not Started |
-|---------|----------|-----|-------------|-------------|
-| H1: Prove It Works | Days 1-30 | 0 | 3 (#1, #3, #17) | 2 (#2, #4) |
+| Horizon | Timeline | Met | In Progress | Not Met |
+|---------|----------|-----|-------------|---------|
+| H1: Prove It Works | Days 1-30 | 1 (#3) | 2 (#1, #17) | 2 (#2, #4) |
 | H2: Validate Externally | Days 15-90 | 2 (#5, #6) | 0 | 1 (#7) |
 | H3: Generate Revenue | Days 30-180 | 1 (#8) | 0 | 2 (#9, #10) |
-| H4: Build Community | Days 60-365 | 1 (#13) | 1 (#12) | 1 (#11) |
-| H5: Achieve Recognition | Days 90-730 | 0 | 1 (#14) | 1 (#15) |
-| Cross-horizon | H1+H4 | 0 | 1 (#16) | 0 |
+| H4: Build Community | Days 60-365 | 1 (#13) | 0 | 2 (#11, #12) |
+| H5: Achieve Recognition | Days 90-730 | 1 (#15) | 0 | 1 (#14) |
+| Cross-horizon | H1+H4+H5 | 1 (#19) | 0 | 2 (#16, #18) |
 
 ---
 
