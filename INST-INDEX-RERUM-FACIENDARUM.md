@@ -342,6 +342,8 @@ Verified on disk 2026-03-20:
 | IRF-APP-009 | P2 | Record consulting pivot in testament: (a) ~~MILESTONE-2026-002.yaml~~ **DONE**, (b) `registry.repo_added` event — repo now exists on GitHub, blocked only on registry-v2.json entry (IRF-APP-002 remainder), (c) update fossil chronicle to cover 2026-03-23 epoch | Agent | Vacuum audit (N/A #5) | IRF-APP-002 remainder (registry entry) |
 | IRF-APP-011 | P2 | Omega #19 (network density): content-engine--asset-amplifier adds +1 repo node to the network graph. Update network density calculation and omega evidence map once registered in registry-v2.json. Currently invisible to omega scoring. | Agent | Close-out vacuum (repo creation → omega) | IRF-APP-002 remainder |
 | ~~IRF-APP-010~~ | ~~P1~~ | ~~Update INST-INDEX-LOCORUM.md~~ — **DONE** (content-engine--asset-amplifier added to ORGAN-III table in Index Locorum. Nominum/Rerum entity seeding deferred to index construction.) | Agent | Vacuum audit (N/A #10) | Completed 2026-03-24 |
+| IRF-APP-012 | P1 | Memory persistence SOP: ensure every session close syncs `~/.claude/projects/.../memory/*.md` to `.claude/memory/` in the repo and pushes. Currently manual — needs to be documented in CLAUDE.md as a close-out step and potentially automated via hook or launchd | Agent | Memory backup vacuum | None |
+| IRF-APP-013 | P2 | Update application-pipeline seed.yaml to declare memory persistence as a produced artifact. Current seed (if it exists) predates the `.claude/memory/` backup pattern | Agent | Memory backup vacuum (seed) | None |
 
 ---
 

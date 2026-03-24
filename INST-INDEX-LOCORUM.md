@@ -277,7 +277,7 @@ The meta-organ is a **git superproject**. Submodules are tracked in `.gitmodules
 | `4444J99` | Profile README | `4444J99/4444J99/` |
 | `portfolio` | Personal portfolio site | `4444J99/portfolio/` |
 | `domus-semper-palingenesis` | Dotfiles + environment (chezmoi) | `4444J99/domus-semper-palingenesis/` |
-| `application-pipeline` | Application materials pipeline | `4444J99/application-pipeline/` |
+| `application-pipeline` | Application materials pipeline | `4444J99/application-pipeline/` (memory backup at `.claude/memory/`) |
 | `victoroff-group` | Victoroff Group project | `4444J99/victoroff-group/` |
 | `intake` | Personal intake/staging | `4444J99/intake/` |
 
