@@ -71,7 +71,7 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 | IRF-SYS-004 | P1 | Descent Protocol remaining 22% — repos missing descriptions/topics on GitHub | Agent | S11 | None |
 | IRF-SYS-005 | P2 | World Root Phase 2-4 — repo migration per `~/Workspace/Organizing-Local-Remote-Structure.md` | Human | Memory | Phase 1 audit complete, execution not started |
 | IRF-SYS-006 | P1 | Audit global gitignore for remaining overly-broad patterns — `/.config` and `lib/` fixed, but other language-template patterns may still clash across 117 repos | Agent | S26 | None |
-| IRF-SYS-007 | P2 | Deploy Dependabot auto-merge + grouping to remaining high-traffic repos (portfolio + agent--claude-smith have grouping; specvla-ergon--avditor-mvndi, ORGAN-I/II flagships need it) | Agent | S26 | Template now exists from S26 |
+| IRF-SYS-007 | P2 | Deploy Dependabot auto-merge + grouping to remaining high-traffic repos (portfolio + agent--claude-smith + the-actual-news have grouping; specvla-ergon--avditor-mvndi, ORGAN-I/II flagships need it) | Agent | S26 | Template now exists from S26; the-actual-news deployed this session |
 | IRF-SYS-008 | P2 | ESLint 9→10 migration — blocked on eslint-plugin-react support. Monitor `eslint-plugin-react` releases for v8+ with ESLint 10 compatibility | Agent | S26 | eslint-plugin-react@7.37.5 incompatible |
 | IRF-SYS-009 | P1 | Gmail notification hygiene — create filter for `from:notifications@github.com subject:"chore(deps)"` to skip inbox, label `github/dependabot` | Human | S26 | None |
 | ~~IRF-SYS-010~~ | ~~P1~~ | ~~Full seed.yaml refresh for organvm-engine~~ — **DONE** (5 contracts → 36, CANDIDATE → GRADUATED, signal_inputs/signal_outputs added. Commit `82d043d`.) | Agent | S28 gap audit | Completed S29 |
@@ -309,7 +309,7 @@ Verified on disk 2026-03-20:
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-PRT-002 | P2 | Re-evaluate security allowlist (h3, fast-xml-parser) by 2026-04-03 — GitHub issue #66 | Human | S24 | Time-gated |
+| ~~IRF-PRT-002~~ | ~~P2~~ | ~~Re-evaluate security allowlist (h3, fast-xml-parser) by 2026-04-03 — GitHub issue #66~~ — **PARTIAL**: h3 resolved (1.15.10), allowlist entry removed, GH#66 commented. fast-xml-parser entries remain (expire 2026-04-03). Commit `86d505d`. | Agent | S24 | Completed S34 (h3 portion) |
 
 ---
 
@@ -806,6 +806,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-182 | Scrapper evolution plan — 3-phase roadmap for evolving public-record-data-scrapper from UCC aggregator to comprehensive MCA prospect intelligence system. Phase 1: reliability hardening (dashboard, health monitoring). Phase 2: beyond UCC (bank statements, competitive intelligence, business health signals). Phase 3: sales team automation + healthcare vertical. | Pipeline S33 (consulting) | 2026-03-23 |
 | DONE-183 | Deepgram signal — Brent George (Tech Lead Manager) profile view + new follower logged on `deepgram-backend-engineer-inference-services` submitted entry. Separate from Tony/Scott consulting tracks. | Pipeline S33 | 2026-03-23 |
 | DONE-184 | agent--claude-smith Dependabot batch — merged 4 GH Actions PRs (#20 codeql-action v3→v4, #21 release-drafter v6→v7, #22 stale v9→v10, #23 checkout v4→v6), reconfigured Dependabot from weekly/individual to monthly/grouped (IRF-SYS-007 partial), closed 5 stale individual PRs (#9, #10, #12, #18, #19). Commit `6db1e9e`. | Maintenance session | 2026-03-23 |
+| DONE-185 | Portfolio Dependabot batch — merged 3 PRs: #67 (astro 6.0.7→6.0.8 + p5), #68 (satori 0.25.0→0.26.0), #69 (biome 2.4.7→2.4.8). h3 security vulnerability resolved manually (1.15.8→1.15.10 via `npm audit fix`) after PR #65 was stale-closed. Removed h3 allowlist entry, synced biome schema, 0 vulnerabilities. IRF-PRT-002 partial. GH#66 commented. Commits `4994089`, `608380f`, `7b2c303`, `86d505d`. | S34 (portfolio maintenance) | 2026-03-23 |
 
 ---
 
@@ -830,7 +831,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 - **P1 (SOON):** 62 (55 prior + 7 new P1: IRF-APP-002, 003, 005, 006, 008, 010)
 - **P2 (GROWTH):** 81 (78 prior + 3 new P2: IRF-APP-004, 007, 009)
 - **P3 (HORIZON):** 10
-- **Completed:** 184 (DONE-001 through DONE-184, plus DONE-114a; DONE-126 superseded by DONE-134→140)
+- **Completed:** 185 (DONE-001 through DONE-185, plus DONE-114a; DONE-126 superseded by DONE-134→140)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 23
 
@@ -850,7 +851,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | TST (Testament) | 1 | 2 |
 | OBJ (Object Lessons) | 7 | 1 |
 | KER (Kerygma) | 2 | 0 |
-| PRT (Portfolio) | 1 | 9 |
+| PRT (Portfolio) | 1 | 10 |
 | APP (Application) | 10 | 7 |
 | GEN (Generative) | 3 | 0 |
 | OSS (Open-Source) | 4 | 7 |
@@ -864,7 +865,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DOM (Domus Infrastructure) | 7 | 6 |
 | Cross-session (S23-S30+) | 0 | 79 |
 | **Active IRF items** | **165** | — |
-| **Total DONE entries** | — | **155** |
+| **Total DONE entries** | — | **156** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
 
