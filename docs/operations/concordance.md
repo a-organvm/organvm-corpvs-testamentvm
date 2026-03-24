@@ -54,7 +54,7 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 
 Source: [`INST-INDEX-RERUM-FACIENDARUM.md`](../../INST-INDEX-RERUM-FACIENDARUM.md)
 
-Universal work registry. 24 domain prefixes:
+Universal work registry. 26 domain prefixes:
 
 | Prefix | Domain | Scope |
 |--------|--------|-------|
@@ -68,6 +68,8 @@ Universal work registry. 24 domain prefixes:
 | IRF-TRV | Trivium / Dialectica | META (engine) |
 | IRF-TST | Testament Protocol | META (engine) |
 | IRF-OBJ | Object Lessons | ORGAN-II |
+| IRF-LOG | Logos / Discourse | ORGAN-V |
+| IRF-KOI | Koinonia / Community | ORGAN-VI |
 | IRF-KER | Kerygma / Distribution | ORGAN-VII |
 | IRF-PRT | Portfolio | PERSONAL |
 | IRF-APP | Application Pipeline | PERSONAL |

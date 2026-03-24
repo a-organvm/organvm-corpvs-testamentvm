@@ -303,6 +303,34 @@ Verified on disk 2026-03-20:
 
 ---
 
+## ORGAN-V — Logos (Discourse)
+
+Repos: `public-process` (flagship), `analytics-engine`, `editorial-standards`, `essay-pipeline`, `reading-observatory`. Protected branches require PR + review approval.
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-LOG-001 | P1 | Essay publishing pipeline implementation — SOP exists (`SOP--essay-publishing-and-distribution.md`) but no working automation. 50+ essays published manually via DONE-102/125. Build the pipeline. | Agent | Vacuum audit S23 | essay-pipeline repo exists but empty |
+| IRF-LOG-002 | P2 | Analytics engine deployment — repo exists, protected branch. Needs: event tracking, content metrics, audience measurement. Feeds omega #3 (engagement baseline) and #10 (100 visitors/month) | Agent | Vacuum audit S23 | Protected branch — needs PR |
+| IRF-LOG-003 | P2 | Editorial standards enforcement — repo exists, protected branch. Codify tone, voice, style guide for all ORGAN-V output. Currently implicit in CLAUDE.md files. | Agent | Vacuum audit S23 | Protected branch — needs PR |
+| IRF-LOG-004 | P1 | Content calendar — schedule essay publication, social amplification, cross-posting. Currently ad-hoc. Feeds omega #7 (external feedback) and #10 (visitors) | Human | Vacuum audit S23 | None |
+| IRF-LOG-005 | P2 | Reading observatory deployment — repo exists, protected branch. Curated reading lists, annotated bibliographies, public-facing research synthesis | Agent | Vacuum audit S23 | Protected branch — needs PR |
+
+---
+
+## ORGAN-VI — Koinonia (Community)
+
+Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Zero activity in 22-session triage. This organ is the system's largest vacuum.
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-KOI-001 | P1 | First salon/reading group event — even a small one. Directly advances omega #11 (≥2 events with external participants). The event design SOP exists (`SOP--community-event-facilitation.md`). | Human | Vacuum audit S23 | Needs external participants |
+| IRF-KOI-002 | P2 | Community platform design — what form does ORGAN-VI take? Discord server? GitHub Discussions? Salon series? Reading group app? The community-platform-patterns skill exists but no decision has been made. | Human | Vacuum audit S23 | Architecture decision needed |
+| IRF-KOI-003 | P2 | Learning commons integration — connect to SGO research corpus. The SGO produces knowledge; ORGAN-VI makes it accessible to a learning community. | Agent | Vacuum audit S23 | Depends on IRF-KOI-002 |
+| IRF-KOI-004 | P3 | Reading group infrastructure — curated reading lists, discussion guides, asynchronous participation tools. Reading-groups repo exists but is empty. | Agent | Vacuum audit S23 | Depends on IRF-KOI-002 |
+| IRF-KOI-005 | P3 | Community contribution pathways — how do external people participate? Code contributions (#12), event attendance (#11), feedback (#7). Design the on-ramp. | Human | Vacuum audit S23 | Depends on IRF-KOI-001 |
+
+---
+
 ## ORGAN-VII — Kerygma (Distribution)
 
 | ID | Priority | Action | Owner | Source | Blocker |
