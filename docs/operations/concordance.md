@@ -93,11 +93,12 @@ Universal work registry. 24 domain prefixes:
 | IRF-APP-003 | Scrapper Phase 1 for Tony Carbone (coverage dashboard + health monitoring) | P1 | GH#273 |
 | IRF-APP-004 | Content engine MVP build (partnership with Lefler) | P2 | GH#274 |
 | IRF-APP-005 | Follow-up tracking (Tony + Scott responses) | P1 | GH#275 |
-| ~~IRF-APP-006~~ | ~~GitHub issues for APP-002/003/004/005~~ — PARTIAL (issues done, repo creation pending) | ~~P1~~ | GH#272-275 |
+| ~~IRF-APP-006~~ | ~~GitHub issues for APP-002/003/004/005~~ — DONE (issues done, repo creation pending) | ~~P1~~ | GH#272-275 |
 | IRF-APP-007 | ~~Omega scorecard consulting pivot evidence~~ — DONE | ~~P2~~ | Omega #5,7,9,13,14 |
 | ~~IRF-APP-008~~ | ~~Inquiry log D-001 evidence~~ — DONE-184 | ~~P1~~ | INQ-2026-001 |
 | IRF-APP-009 | Testament milestone (part a DONE, parts b/c pending IRF-APP-002) | P2 | MILESTONE-2026-002 |
 | ~~IRF-APP-010~~ | ~~Index Locorum update~~ — DONE-185 | ~~P1~~ | INST-INDEX-LOCORUM |
+| IRF-APP-011 | Omega #19 network density from content-engine repo | P2 | Omega #19 |
 
 #### Testament Milestones
 
