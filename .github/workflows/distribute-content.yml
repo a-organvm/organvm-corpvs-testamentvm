@@ -212,7 +212,7 @@ jobs:
           fi
 
       - name: Comment Distribution Summary
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const channels = ['Newsletter queue'];
