@@ -336,11 +336,11 @@ Verified on disk 2026-03-20:
 | IRF-APP-003 | P1 | Scrapper Phase 1 deliverable for Tony Carbone (Alternative Funding Group) — coverage dashboard (50-state green/yellow/red) + state agent health monitoring. Answers "will it continue to work?" Evolution plan: `public-record-data-scrapper/.claude/plans/2026-03-23-mca-intelligence-evolution.md` | Agent | Pipeline S33 (Tony call) | None |
 | IRF-APP-004 | P2 | Content engine MVP build (4-6 week timeline) — AI content repurposing platform. Partnership with Scott Lefler (Lefler.Design). Build plan: `content-engine--asset-amplifier/.claude/plans/2026-03-23-content-engine-mvp.md`. Awaiting Scott's response to product pitch | Agent+Human | Pipeline S33 (Scott partnership) | Scott confirmation |
 | IRF-APP-005 | P1 | Follow-up tracking — Tony Carbone (text sent 2026-03-23 referencing UCC platform + evolution roadmap, awaiting response) and Scott Lefler (product pitch sent 2026-03-23 via iMessage, awaiting response). Update contacts.yaml on response | Human | Pipeline S33 | Awaiting responses |
-| IRF-APP-006 | P1 | Create GitHub repo `organvm-iii-ergon/content-engine--asset-amplifier` + push skeleton. Create tracking issues on `organvm-corpvs-testamentvm` for IRF-APP-002/003/004/005 (scrapper deliverable, content engine MVP, follow-up tracking) | Agent | Vacuum audit (N/A #2) | None |
-| IRF-APP-007 | P2 | Update omega scorecard live status (there+back-again.md, stale since 2026-02-18) with consulting pivot evidence. Document Tony Carbone inbound as evidence toward criteria #7 (external feedback), #9 (revenue), #14 (external recognition/adoption). Document Lefler partnership as evidence toward #5 (partnership established) | Agent | Vacuum audit (N/A #3) | None |
-| IRF-APP-008 | P1 | Add consulting pivot evidence entry to INQ-2026-001 in inquiry-log.yaml. First inbound commercial engagement via GitHub public repos validates D-001 thesis that pipeline functions as production infrastructure, not portfolio exercise | Agent | Vacuum audit (N/A #4) | None |
-| IRF-APP-009 | P2 | Record consulting pivot in testament: (a) MILESTONE-2026-002.yaml for first inbound commercial engagement, (b) `registry.repo_added` event for content-engine--asset-amplifier once IRF-APP-002 complete, (c) update fossil chronicle to cover 2026-03-23 epoch | Agent | Vacuum audit (N/A #5) | IRF-APP-002 |
-| IRF-APP-010 | P1 | Update INST-INDEX-LOCORUM.md: add content-engine--asset-amplifier to ORGAN-III section. Seed IRF-IDX-002/003 backlogs with consulting pivot entities (Tony Carbone, Scott Lefler, Alexis C., Alternative Funding Group, Lefler.Design) | Agent | Vacuum audit (N/A #10) | None |
+| IRF-APP-006 | P1 | Create GitHub repo `organvm-iii-ergon/content-engine--asset-amplifier` + push skeleton. Create tracking issues on `organvm-corpvs-testamentvm` for IRF-APP-002/003/004/005 (scrapper deliverable, content engine MVP, follow-up tracking) — **PARTIAL**: Issues created ([#272](https://github.com/meta-organvm/organvm-corpvs-testamentvm/issues/272), [#273](https://github.com/meta-organvm/organvm-corpvs-testamentvm/issues/273), [#274](https://github.com/meta-organvm/organvm-corpvs-testamentvm/issues/274), [#275](https://github.com/meta-organvm/organvm-corpvs-testamentvm/issues/275)). Repo creation + skeleton push still pending. | Agent | Vacuum audit (N/A #2) | None |
+| ~~IRF-APP-007~~ | ~~P2~~ | ~~Update omega scorecard live status (there+back-again.md, stale since 2026-02-18) with consulting pivot evidence~~ — **DONE** (Scorecard updated 2026-03-24: 1/17→3/17 MET, 3/17→5/17 IN PROGRESS. #5 MET (60+ apps submitted), #13 MET (Tony inbound = organic link), #7/#9/#14 advanced to IN PROGRESS with consulting pivot evidence.) | Agent | Vacuum audit (N/A #3) | Completed 2026-03-24 |
+| ~~IRF-APP-008~~ | ~~P1~~ | ~~Add consulting pivot evidence entry to INQ-2026-001~~ — **DONE** (Evidence added to INQ-2026-001: external-validation type, Tony Carbone inbound + Lefler partnership + 6 rejections validating consulting pivot. 6 artifacts referenced.) | Agent | Vacuum audit (N/A #4) | Completed 2026-03-24 |
+| IRF-APP-009 | P2 | Record consulting pivot in testament: (a) ~~MILESTONE-2026-002.yaml~~ **DONE** (created 2026-03-24), (b) `registry.repo_added` event for content-engine--asset-amplifier once IRF-APP-002 complete, (c) update fossil chronicle to cover 2026-03-23 epoch | Agent | Vacuum audit (N/A #5) | IRF-APP-002 (parts b+c only) |
+| ~~IRF-APP-010~~ | ~~P1~~ | ~~Update INST-INDEX-LOCORUM.md~~ — **DONE** (content-engine--asset-amplifier added to ORGAN-III table in Index Locorum. Nominum/Rerum entity seeding deferred to index construction.) | Agent | Vacuum audit (N/A #10) | Completed 2026-03-24 |
 
 ---
 
@@ -819,6 +819,8 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-181 | Content engine skeleton — `organvm-iii-ergon/content-engine--asset-amplifier/` created: README.md, CLAUDE.md, seed.yaml (LOCAL, SKELETON), package.json, `.claude/plans/2026-03-23-content-engine-mvp.md`, directory structure (`src/{api,pipeline,social,analytics}`, `tests/`, `docs/`). ORGAN-III commerce product. | Pipeline S33 (consulting) | 2026-03-23 |
 | DONE-182 | Scrapper evolution plan — 3-phase roadmap for evolving public-record-data-scrapper from UCC aggregator to comprehensive MCA prospect intelligence system. Phase 1: reliability hardening (dashboard, health monitoring). Phase 2: beyond UCC (bank statements, competitive intelligence, business health signals). Phase 3: sales team automation + healthcare vertical. | Pipeline S33 (consulting) | 2026-03-23 |
 | DONE-183 | Deepgram signal — Brent George (Tech Lead Manager) profile view + new follower logged on `deepgram-backend-engineer-inference-services` submitted entry. Separate from Tony/Scott consulting tracks. | Pipeline S33 | 2026-03-23 |
+| DONE-184 | IRF-APP-008 closed: Consulting pivot evidence added to INQ-2026-001 (D-001 thesis). External-validation type: Tony Carbone inbound discovery via GitHub, Lefler partnership, 6 rejections validating pivot. 6 artifacts referenced. | Pipeline S33 (close-out) | 2026-03-24 |
+| DONE-185 | IRF-APP-010 closed: INST-INDEX-LOCORUM.md updated — content-engine--asset-amplifier added to ORGAN-III table (SKELETON, local only). | Pipeline S33 (close-out) | 2026-03-24 |
 | DONE-184 | agent--claude-smith Dependabot batch — merged 4 GH Actions PRs (#20 codeql-action v3→v4, #21 release-drafter v6→v7, #22 stale v9→v10, #23 checkout v4→v6), reconfigured Dependabot from weekly/individual to monthly/grouped (IRF-SYS-007 partial), closed 5 stale individual PRs (#9, #10, #12, #18, #19). Commit `6db1e9e`. | Maintenance session | 2026-03-23 |
 | DONE-185 | IRF-HRM-002 closed: Registry-v2.json updated — display_name: Hermeneus, description, capabilities (6), produces edges (3). 5 fields changed. | S28 (Hermeneus) | 2026-03-21 |
 | DONE-186 | IRF-HRM-003 closed: Concordance registration — IRF-HRM namespace (8 items) + 7 API route entries. | S28 (Hermeneus) | 2026-03-21 |
@@ -846,7 +848,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 177 (170 prior + 7 new PRT items: IRF-PRT-003→009 from S34 N/A vacuum audit)
+- **Total active items:** 175 (177 prior − 2 completed close-out: IRF-APP-008, IRF-APP-010)
 - **P0 (NOW):** 13
 - **P1 (SOON):** 62 (61 prior + 1 new P1: IRF-PRT-003)
 - **P2 (GROWTH):** 91 (87 prior + 4 new P2: IRF-PRT-004, 005, 006, 007)
@@ -872,7 +874,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | OBJ (Object Lessons) | 7 | 1 |
 | KER (Kerygma) | 2 | 0 |
 | PRT (Portfolio) | 8 | 10 |
-| APP (Application) | 10 | 7 |
+| APP (Application) | 8 | 9 |
 | GEN (Generative) | 3 | 0 |
 | OSS (Open-Source) | 4 | 7 |
 | IRA (Authority) | 3 | 1 |
@@ -884,7 +886,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | HRM (Hermeneus) | 5 | 10 |
 | DOM (Domus Infrastructure) | 7 | 6 |
 | Cross-session (S23-S30+) | 0 | 81 |
-| **Active IRF items** | **172** | — |
+| **Active IRF items** | **170** | — |
 | **Total DONE entries** | — | **161** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
@@ -914,5 +916,5 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-23 — the-actual-news DONE-186 + vacuum audit: 5 new IRF items (SYS-019→022) from 10-index propagation gap analysis. Every N/A audited and converted to tracked work. Locorum deployment backfill, Dependabot blind spot research, SYS-016 concrete instance, omega evidence gap. 170 active, 189 completed.*
+*Last updated: 2026-03-24 — Pipeline S33 close-out propagation: IRF-APP-008 (inquiry log D-001 evidence) and IRF-APP-010 (Index Locorum) completed. INQ-2026-001 updated with consulting pivot external-validation evidence. 175 active, 191 DONE.*
 *Next update: After any session that produces or discovers work items*

@@ -347,7 +347,7 @@ Omega is achieved when all 17 criteria below are met. Each criterion is measurab
 
 ### Omega Scorecard — Live Status
 
-*Last updated: 2026-02-18 (ERUPTIO session — materials staged, awaiting execution)*
+*Last updated: 2026-03-24 (vacuum audit — consulting pivot evidence propagated)*
 
 | # | Criterion | Status | Date | Evidence |
 |---|-----------|--------|------|----------|
@@ -355,23 +355,25 @@ Omega is achieved when all 17 criteria below are met. Each criterion is measurab
 | 2 | Stranger test score ≥80% | NOT MET | — | Protocol ready, no participant |
 | 3 | Engagement baseline (30 days) | IN PROGRESS | 2026-02-16 | Data collecting via soak-test-monitor.py |
 | 4 | Runbooks validated | NOT MET | — | 3 runbooks written, not validated |
-| 5 | ≥1 application submitted | NOT MET | — | ERUPTIO: 7 submission scripts ready (Watermill, Google CL5, Artadia NYC, Doris Duke AMT, Prix Ars, S+T+ARTS, PEN America). Materials staged, awaiting submission. |
+| 5 | ≥1 application submitted | MET | 2026-03-04 | 60+ applications submitted via application-pipeline (7 tracks, 9 identity positions). 6 rejections received = external engagement with materials. |
 | 6 | AI-conductor essay published | MET | 2026-02-12 | public-process essay #9 |
-| 7 | ≥3 external feedback collected | NOT MET | — | 0 feedback |
-| 8 | ≥1 ORGAN-III product live | NOT MET | — | ERUPTIO: deploy script + Neon DB ready. Awaiting Render deployment. |
-| 9 | revenue_status: live for ≥1 | NOT MET | — | ERUPTIO: GitHub Sponsors setup guide ready. $0 MRR, channel not yet activated. |
-| 10 | MRR ≥ operating costs | NOT MET | — | $0 MRR |
+| 7 | ≥3 external feedback collected | IN PROGRESS | 2026-03-24 | 6 rejections (= feedback). Tony Carbone inbound inquiry (2026-03-23) via GitHub public process — first unsolicited external engagement with the system. Scott Lefler partnership pitch sent. 2/3 minimum; Tony response pending. |
+| 8 | ≥1 ORGAN-III product live | IN PROGRESS | 2026-03-23 | Content engine (`content-engine--asset-amplifier`) skeleton created for Lefler partnership. Scrapper Phase 1 deliverable in progress for Tony Carbone. |
+| 9 | revenue_status: live for ≥1 | IN PROGRESS | 2026-03-23 | First inbound commercial engagement: Tony Carbone (Alternative Funding Group) contacted via GitHub public process re: UCC/MCA intelligence platform. Consulting engagement scoped, evolution roadmap delivered. Revenue not yet received but commercial relationship active. |
+| 10 | MRR ≥ operating costs | NOT MET | — | $0 MRR. Consulting engagement scoped but not yet invoiced. |
 | 11 | ≥2 salons/events held | NOT MET | — | Infrastructure only |
 | 12 | ≥3 external contributions | NOT MET | — | 5 good-first-issues created |
-| 13 | ≥1 organic inbound link | NOT MET | — | Mastodon+Discord broadcast active |
-| 14 | ≥1 recognition event | NOT MET | — | 0 external recognition |
+| 13 | ≥1 organic inbound link | MET | 2026-03-23 | Tony Carbone found the system organically via GitHub and initiated contact. Mastodon+Discord broadcast active. |
+| 14 | ≥1 recognition event | IN PROGRESS | 2026-03-24 | Tony Carbone inbound = external adoption of ORGAN-III tooling (consulting engagement initiated from GitHub public process). Not yet a grant/citation/invitation, but meets "adoption" criterion if engagement completes. Lefler partnership (content engine) = potential second recognition vector. |
 | 15 | Portfolio updated with validation | NOT MET | — | Portfolio live, no validation data |
 | 16 | Bus factor >1 (validated) | NOT MET | — | Runbooks written, not tested |
 | 17 | System operates 30+ days | IN PROGRESS | 2026-02-16 | Soak test running |
 
-**Score: 1/17 MET, 3/17 IN PROGRESS, 13/17 NOT MET**
+**Score: 3/17 MET, 5/17 IN PROGRESS, 9/17 NOT MET**
 
-> **ERUPTIO staged (2026-02-18):** 7 submission scripts prepared, deploy guide ready, Sponsors setup guide ready. Materials awaiting human execution. Score remains 1/17 MET. No external contact yet.
+> **Consulting pivot (2026-03-23):** Tony Carbone (Alternative Funding Group) contacted via GitHub public process — first unsolicited inbound commercial engagement. Scrapper Phase 1 deliverable scoped. Scott Lefler (Lefler.Design) partnership pitched for content engine MVP. This is the first evidence that the system's public process generates real-world commercial interest without cold outreach.
+>
+> **ERUPTIO staged (2026-02-18):** 7 submission scripts prepared, deploy guide ready, Sponsors setup guide ready. Materials awaiting human execution.
 
 ---
 

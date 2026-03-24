@@ -82,6 +82,40 @@ Universal work registry. 24 domain prefixes:
 | IRF-HRM | Hermeneus intelligence layer | META (stakeholder-portal) |
 | IRF-DOM | Domus Infrastructure | PERSONAL (domus) |
 | IRF-OSS | Open-Source Contributions | Cross-organ |
+| IRF-DWV | DWV Integration (rebrand) | Cross-organ |
+
+#### IRF-APP Items (Pipeline S33, 2026-03-23)
+
+| ID | Description | Priority | Refs |
+|----|-------------|----------|------|
+| IRF-APP-001 | Collect 3+ months v2 outcome data for D-001 | P2 | INQ-2026-001 |
+| IRF-APP-002 | Register content-engine--asset-amplifier in registry + GitHub | P1 | GH#272 |
+| IRF-APP-003 | Scrapper Phase 1 for Tony Carbone (coverage dashboard + health monitoring) | P1 | GH#273 |
+| IRF-APP-004 | Content engine MVP build (partnership with Lefler) | P2 | GH#274 |
+| IRF-APP-005 | Follow-up tracking (Tony + Scott responses) | P1 | GH#275 |
+| ~~IRF-APP-006~~ | ~~GitHub issues for APP-002/003/004/005~~ — PARTIAL (issues done, repo creation pending) | ~~P1~~ | GH#272-275 |
+| IRF-APP-007 | ~~Omega scorecard consulting pivot evidence~~ — DONE | ~~P2~~ | Omega #5,7,9,13,14 |
+| ~~IRF-APP-008~~ | ~~Inquiry log D-001 evidence~~ — DONE-184 | ~~P1~~ | INQ-2026-001 |
+| IRF-APP-009 | Testament milestone (part a DONE, parts b/c pending IRF-APP-002) | P2 | MILESTONE-2026-002 |
+| ~~IRF-APP-010~~ | ~~Index Locorum update~~ — DONE-185 | ~~P1~~ | INST-INDEX-LOCORUM |
+
+#### Testament Milestones
+
+| ID | Description | Date | Refs |
+|----|-------------|------|------|
+| MILESTONE-2026-001 | SGO Research Programme inaugural milestone | 2026-03-23 | INQ-2026-004 |
+| MILESTONE-2026-002 | First inbound commercial engagement via GitHub public process | 2026-03-23 | IRF-APP-009, Omega #13,#9 |
+
+#### Named Entities (Pipeline S33)
+
+| Name | Type | Context |
+|------|------|---------|
+| `content-engine--asset-amplifier` | Repo (ORGAN-III, SKELETON) | AI content repurposing platform, Padavano+Lefler partnership |
+| Tony Carbone | External contact | Managing Partner, Alternative Funding Group, MCA client |
+| Scott Lefler | External contact | Owner, Lefler.Design, build-sell partnership |
+| Alexis C. | External contact | Managing Director/Owner, Tony's business partner |
+| Alternative Funding Group | Organization | MCA lender, altfunding.com, Ft. Lauderdale FL |
+| Lefler Design | Organization | Premium motion design studio, lefler.design |
 
 #### IRF-HRM Items (S28, 2026-03-21)
 

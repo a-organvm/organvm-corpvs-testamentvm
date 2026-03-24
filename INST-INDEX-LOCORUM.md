@@ -167,6 +167,7 @@ The meta-organ is a **git superproject**. Submodules are tracked in `.gitmodules
 | Repo | Tier | Status | Public | GitHub |
 |------|------|--------|--------|--------|
 | `public-record-data-scrapper` | **flagship** | DEPLOYED | Yes | `github.com/organvm-iii-ergon/public-record-data-scrapper` |
+| `content-engine--asset-amplifier` | standard | SKELETON | No | local only (IRF-APP-006: create remote) |
 | `peer-audited--behavioral-blockchain` | **flagship** | ACTIVE | Yes | `github.com/organvm-iii-ergon/peer-audited--behavioral-blockchain` |
 | `classroom-rpg-aetheria` | standard | DEPLOYED | Yes | `github.com/organvm-iii-ergon/classroom-rpg-aetheria` |
 | `the-actual-news` | standard | DEPLOYED | Yes | `github.com/organvm-iii-ergon/the-actual-news` |
