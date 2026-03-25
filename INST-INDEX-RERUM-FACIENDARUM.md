@@ -944,11 +944,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 187 (175 prior + 12 new LIQ domain: IRF-LIQ-001 through 012)
-- **P0 (NOW):** 14 (13 prior + 1 new: IRF-LIQ-001)
-- **P1 (SOON):** 66 (62 prior + 4 new: IRF-LIQ-002, 003, 004, 009, 010)
-- **P2 (GROWTH):** 98 (91 prior + 7 new: IRF-LIQ-005, 006, 007, 008, 011, 012)
-- **P3 (HORIZON):** 12
+- **Total active items:** 191 (187 prior + 4 new DOM items: IRF-DOM-009 through 012)
+- **P0 (NOW):** 14
+- **P1 (SOON):** 67 (66 prior + 1 new: IRF-DOM-010)
+- **P2 (GROWTH):** 100 (98 prior + 2 new: IRF-DOM-009, IRF-DOM-011)
+- **P3 (HORIZON):** 13 (12 prior + 1 new: IRF-DOM-012)
 - **Completed:** 213 (DONE-001 through DONE-213, plus DONE-114a; 16 new from S29 post-flood session)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 24 (23 prior + LIQ)
