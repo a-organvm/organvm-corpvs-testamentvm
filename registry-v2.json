@@ -2396,7 +2396,7 @@
       "completion": "100% — org profile expanded to 1,213 words",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "The meta-system itself is the primary portfolio asset. Demonstrates orchestration capacity, architectural reasoning, and systemic sustainability.",
-      "repository_count": 12,
+      "repository_count": 13,
       "repositories": [
         {
           "name": ".github",
@@ -2639,6 +2639,25 @@
           "revenue_model": null,
           "revenue_status": null,
           "functional_class": "ENGINE"
+        },
+        {
+          "name": "cvrsvs-honorvm",
+          "org": "meta-organvm",
+          "status": "active",
+          "public": true,
+          "description": "Governance engine for multi-repository open-source ecosystems — promotion state machines, dependency DAG validation, seed contracts",
+          "documentation_status": "minimal",
+          "portfolio_relevance": "high",
+          "dependencies": [
+            "meta-organvm/organvm-engine",
+            "meta-organvm/schema-definitions"
+          ],
+          "promotion_status": "INCUBATOR",
+          "tier": "standard",
+          "last_validated": "2026-03-25",
+          "note": "Extracted from organvm-engine. Named after Roman cursus honorum. NLnet NGI0 Commons Fund application pending. PyPI: cvrsvs-honorvm. Apache 2.0.",
+          "implementation_status": "INCUBATOR",
+          "functional_class": "infrastructure"
         }
       ]
     }
