@@ -313,6 +313,24 @@ Verified on disk 2026-03-20:
 
 ---
 
+## ORGAN-IV — Voice Governance (vox--architectura-gubernatio)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-VOX-001 | **P1** | **Seed founding corpus** — hand-curate 15-20 T1 canonical documents from ORGANVM vision docs, CLAUDE.md prose, manifesto texts. Required for deep scorer exemplars and corpus validation. | Human | S-intake voice session | None |
+| IRF-VOX-002 | **P1** | **Run `chezmoi apply`** to activate voice governance in `~/.claude/CLAUDE.md` — deposit staged but not yet applied. | Human | S-intake voice session | Manual action |
+| IRF-VOX-003 | P2 | Add per-organ voice profiles (organ-i.yaml through organ-vii.yaml, meta.yaml) — create only when real scoring failures demand organ-specific register shifts. | Agent | Design spec Section 8 | Evidence of need |
+| IRF-VOX-004 | P2 | Add `voice-scorer baseline` and `voice-scorer audit` CLI subcommands — generate baseline.json from scored corpus, re-score full corpus on demand. | Agent | Design spec Section 7 | IRF-VOX-001 (corpus needed) |
+| IRF-VOX-005 | P2 | Add `--organ` flag to CLI + wire ProfileResolver into scorer — enable organ-specific threshold adjustment. | Agent | QA review issue #7 | None |
+| IRF-VOX-006 | P3 | Register MCP server via `claude mcp add voice-scorer` — make voice tools callable by any agent. | Agent | Design spec Section 12 | Manual registration |
+| IRF-VOX-007 | P3 | Git hooks for commit message scoring — `prepare-commit-msg` hook running heuristic score in <100ms. Deploy via chezmoi. | Agent | Expansion Visionary idea #7 | IRF-VOX-002 |
+| IRF-VOX-008 | P3 | Knowledge base auto-corpus — auto-classify 14,992 atomized documents in my-knowledge-base for voice tier assignment. | Agent | Expansion Visionary idea #6 | IRF-VOX-001 |
+| IRF-VOX-009 | P3 | Conductor-voice integration — inject voice constraints at BUILD phase, verify at PROVE phase. | Agent | Expansion Visionary idea #8 | Conductor maturity |
+| IRF-VOX-010 | P4 | Research Atlas (9 lanes) — academic hardening program. Separate work product, ongoing. | Human | Design spec Section 9 | None |
+| IRF-VOX-011 | P4 | Public-Quest Odyssey — 5-act public revelation sequence. Separate work product. | Human | Design spec Section 10 | System validation |
+
+---
+
 ## ORGAN-IV — Skills (a-i--skills)
 
 | ID | Priority | Action | Owner | Source | Blocker |
@@ -974,14 +992,15 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 202 (199 prior + 3 new: IRF-PSP-001, PSP-002, PSP-003)
+- **Total active items:** 214 (203 prior + 11 new: IRF-VOX-001 through IRF-VOX-011)
 - **P0 (NOW):** 15
-- **P1 (SOON):** 72 (71 prior + 1 new: IRF-PSP-001)
-- **P2 (GROWTH):** 105 (104 prior + 1 new: IRF-PSP-002)
-- **P3 (HORIZON):** 14 (13 prior + 1 new: IRF-PSP-003)
+- **P1 (SOON):** 75 (73 prior + 2 new: IRF-VOX-001, IRF-VOX-002)
+- **P2 (GROWTH):** 108 (105 prior + 3 new: IRF-VOX-003, IRF-VOX-004, IRF-VOX-005)
+- **P3 (HORIZON):** 18 (14 prior + 4 new: IRF-VOX-006, IRF-VOX-007, IRF-VOX-008, IRF-VOX-009)
+- **P4 (RESEARCH):** 2 (new: IRF-VOX-010, IRF-VOX-011)
 - **Completed:** 220 (DONE-001 through DONE-220, plus DONE-114a)
 - **Blocked:** 1 (IRF-SYS-008)
-- **Domains:** 25 (24 prior + PSP)
+- **Domains:** 26 (25 prior + VOX)
 
 ### By Domain
 
@@ -1011,7 +1030,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | VER (Verification) | 3 | 3 |
 | RES (Research Programme) | 68 | 9 |
 | HRM (Hermeneus) | 7 | 10 |
-| DOM (Domus Infrastructure) | 7 | 8 |
+| DOM (Domus Infrastructure) | 8 | 8 |
 | PSP (Petasum Super Petasum) | 3 | 2 |
 | Cross-session (S23-S30+) | 0 | 81 |
 | **Active IRF items** | **192** | — |
@@ -1059,6 +1078,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | IRF-DOM-019 | P1 | **Microsoft Defender alerts** — "multiple alerts need attention" for M365 (Mar 24). May relate to credential stuffing incident. | Human | S36 email | Browser |
 | IRF-DOM-020 | P1 | **Broward College Workday new device signon** — Mac OS X, Mar 22. Verify authorized. | Human | S36 email | None |
 | IRF-DOM-021 | P2 | **GitHub OAuth: CLA assistant** app authorized on 4444J99 (Mar 22). Verify via `gh api /user/installations`. | Human | S36 email | None |
+| IRF-DOM-022 | **P1** | **Persist Claude session transcripts remotely** — `~/.claude/projects/` contains 146MB of JSONL session transcripts across all projects (22 for portfolio alone). Currently local-only — if machine dies, all institutional memory of decisions, reasoning chains, and tool usage is lost. Needs: (a) private remote destination (private git repo with LFS, or Backblaze B2, or dedicated archive), (b) automated sync (launchd agent or session-close hook), (c) cross-project coverage (not just portfolio — all `~/.claude/projects/*/` dirs). User rule: "nothing is allowed to be local only." Related: IRF-APP-012 (memory persistence SOP), specstory-organize skill | Agent | S35 session close | Architecture decision needed |
 | IRF-PRT-010 | P2 | **6 job rejections Mar 22-23**: Notion, Perplexity (FDE-Applied AI), Railway, Datadog (Sr AI Eng APM), LiveKit (FDE), Anduril. Log to tracker. LinkedIn leads: Netflix FSE5, Mercor ($80-110/hr), Anthropic Applied AI (Startups), GitHub SE III. | Human | S36 email | Need tracker |
 | IRF-PRT-011 | P2 | **Code review backlog** — growth-auditor: security issue in env.ts (PR#2) + 6 issues (PR#3). public-record-data-scrapper: PR#227 name concern, PR#221 codex reviewed. victoroff-group: PR#1 triple-reviewed. | Agent | S36 email | Protected branches |
 | IRF-OSS-026 | P2 | **agentic-titan Issue #20: m13v engagement** — 3 substantive comments (fission-fusion, hysteresis, stigmergy). Genuine community engagement. Draft response. | Agent | S36 email | None |
