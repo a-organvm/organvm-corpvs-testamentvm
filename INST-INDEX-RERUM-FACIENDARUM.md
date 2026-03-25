@@ -1009,6 +1009,10 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-229 | **aerarium--res-publica created** — "Treasury of the Public Thing." New META-ORGANVM repo (https://github.com/meta-organvm/aerarium--res-publica). ORGANVM's institutional wing: 6 application directories, 3 entity-formation directories, IP policy, strategy, research. Moved from personal application-pipeline to system-level governance. Institutional applications removed from 4444J99/application-pipeline. 29 files, seed.yaml (flagship, META). | S37 | 2026-03-25 |
 | DONE-230 | **"Becoming the Thing" roadmap** — 304-line alpha-to-omega institutional roadmap across 5 dimensions (Public Infrastructure, Artistic Evidence, Academic Credibility, Institutional Presence, Community Proof). Week-by-week execution through NLnet (Apr 1) and Creative Capital (Apr 2). Directly advances 10/17 omega criteria. 6 anti-patterns. Cross-referenced to omega scorecard. | S37 | 2026-03-25 |
 | DONE-231 | **Cvrsvs Honorvm NLnet application draft complete** — Full NLnet NGI0 Commons Fund application drafted, adversarially reviewed (3 personas: NLnet reviewer scoring 3.96→5.0+, hostile technical critic verifying code claims, ecosystem architect expanding NGI/EU angles), and revised. Named extracted governance engine package: Cvrsvs Honorvm (`cvrsvs-honorvm`). EUR 37,080, 11 milestones, 448 hours, 6 months. All sections filled: abstract (NGI-aligned, R&D question explicit), background (314 files, 73K lines, 4,700+ tests linked), comparison (CLOMonitor, publiccode.yml, Backstage Scorecards acknowledged), technical challenges (honest coupling: hardcoded ORGAN_LEVELS, 5 subsystem imports), ecosystem (European Dimension addressed, FOSDEM commitment, dogfooding sustainability), budget (task-level with EUR 80/hr rate). Commit `afc997f`. IRF-INST-001 status: draft complete, awaiting human review and form submission. | S38 | 2026-03-25 |
+| DONE-232 | **IRF-CCE-016 closed** — Claude adapter parity landed in `conversation-corpus-engine`: richer code/execution/tool/media extraction, `import-audit.json`, `near-duplicates.json`, both schemas published and validated. Committed and pushed in `organvm-i-theoria/conversation-corpus-engine` at `3fa116f`. | S37 CCE closeout | 2026-03-25 |
+| DONE-233 | **IRF-CCE-017 closed** — direct dedicated regression coverage now exists for every module in `src/conversation_corpus_engine/`; full suite reached `233 passed`. Committed and pushed in `organvm-i-theoria/conversation-corpus-engine` at `3fa116f`. | S37 CCE closeout | 2026-03-25 |
+| DONE-234 | **IRF-CCE-018 closed** — semantic/title-overlap triage expansion and later operator-assist workflow materially collapsed and operationalized the federated review residue. Committed and pushed in `organvm-i-theoria/conversation-corpus-engine` at `3fa116f`. | S37 CCE closeout | 2026-03-25 |
+| DONE-235 | **CCE runtime snapshot archived remotely** — the ignored `reports/`, `state/`, and `federation/` trees from `conversation-corpus-engine` were packaged into `docs/validation-runs/conversation-corpus-engine/2026-03-25-s37-runtime-snapshot/` inside this corpus repo, with `MANIFEST.md`, `CONTENTS.txt`, SHA-256, and tarball preserved as a remote-tracked runtime manifestation. | S37 CCE closeout | 2026-03-25 |
 
 ---
 
@@ -1030,12 +1034,12 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 Refreshed 2026-03-25 via `organvm irf stats`.
 
-- **Total IRF items:** 506
+- **Total IRF items:** 510
 - **Open:** 264
-- **Completed:** 242
+- **Completed:** 246
 - **Blocked:** 0
 - **Archived:** 0
-- **Completion rate:** 47.8%
+- **Completion rate:** 48.2%
 
 ### Open By Priority
 

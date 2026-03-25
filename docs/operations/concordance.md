@@ -133,6 +133,18 @@ Universal work registry. 26 domain prefixes:
 | IRF-HRM-007 | Streaming markdown rendering fix (heading concatenation) | P2 | — |
 | IRF-HRM-008 | Full re-ingestion with retry logic | P2 | — |
 
+#### IRF-CCE Items (S33/S37, 2026-03-25)
+
+| ID | Description | Priority | Refs |
+|----|-------------|----------|------|
+| IRF-CCE-014 | Record S33 CCE testament events once testament tooling path is usable | P1 | GH#11 |
+| IRF-CCE-015 | Ratify OM-MEM-001 in the omega scorecard via criterion-authoring path | P1 | GH#14 |
+| ~~IRF-CCE-016~~ | ~~Claude adapter parity with ChatGPT~~ — DONE-232 | ~~P2~~ | `conversation-corpus-engine@3fa116f` |
+| ~~IRF-CCE-017~~ | ~~Dedicated tests for remaining module blind spots~~ — DONE-233 | ~~P2~~ | `conversation-corpus-engine@3fa116f` |
+| ~~IRF-CCE-018~~ | ~~Semantic/title-overlap triage expansion~~ — DONE-234 | ~~P2~~ | `conversation-corpus-engine@3fa116f` |
+| IRF-CCE-019 | Migrate historical federated review IDs away from slug-collision ambiguity | P1 | GH#13 |
+| IRF-CCE-020 | Record S37 CCE testament events for review-assist/operator expansion | P2 | GH#12 |
+
 #### Hermeneus API Routes (S28, 2026-03-21)
 
 | Route | Method | Auth | Purpose |

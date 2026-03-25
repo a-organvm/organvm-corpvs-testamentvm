@@ -86,6 +86,7 @@ The meta-organ is a **git superproject**. Submodules are tracked in `.gitmodules
 **Local-only directories** (not in registry, exist on disk within `meta-organvm/`):
 - `data/` — Shared data directory
 - `docs/` — Superproject documentation
+- `docs/validation-runs/` — Cross-AI validation artifacts and preserved runtime snapshots, including `conversation-corpus-engine/2026-03-25-s37-runtime-snapshot/`
 - `tools/` — Cross-repo utility scripts (audit, secrets, sync)
 - `organvm-theoria-knowledge-engine/` — Knowledge engine (local development)
 - `post-flood/` — Post-flood recovery artifacts
