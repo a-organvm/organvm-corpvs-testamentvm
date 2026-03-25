@@ -71,9 +71,9 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 | IRF-SYS-004 | P1 | Descent Protocol remaining 22% — repos missing descriptions/topics on GitHub | Agent | S11 | None |
 | IRF-SYS-005 | P2 | World Root Phase 2-4 — repo migration per `~/Workspace/Organizing-Local-Remote-Structure.md` | Human | Memory | Phase 1 audit complete, execution not started |
 | IRF-SYS-006 | P1 | Audit global gitignore for remaining overly-broad patterns — `/.config` and `lib/` fixed, but other language-template patterns may still clash across 117 repos | Agent | S26 | None |
-| IRF-SYS-007 | P2 | Deploy Dependabot auto-merge + grouping to remaining high-traffic repos (portfolio + agent--claude-smith + the-actual-news have grouping; specvla-ergon--avditor-mvndi, ORGAN-I/II flagships need it) | Agent | S26 | Template now exists from S26; the-actual-news deployed this session |
+| ~~IRF-SYS-007~~ | ~~P0~~ | ~~Deploy Dependabot auto-merge + grouping org-wide~~ — **DONE** (S36: 305+ PRs closed, 76 dependabot.yml deleted, 9 .github repos configured with monthly grouped + auto-merge, 5 production repos optimized, 4444J99/.github created. Only 5 production repos retain Dependabot. ~90% notification reduction.) | Agent | S26, S36 | Completed S36 |
 | IRF-SYS-008 | P2 | ESLint 9→10 migration — blocked on eslint-plugin-react support. Monitor `eslint-plugin-react` releases for v8+ with ESLint 10 compatibility | Agent | S26 | eslint-plugin-react@7.37.5 incompatible |
-| IRF-SYS-009 | P1 | Gmail notification hygiene — create filter for `from:notifications@github.com subject:"chore(deps)"` to skip inbox, label `github/dependabot` | Human | S26 | None |
+| IRF-SYS-009 | **P0** | Gmail notification hygiene — filter designed in S36: `from:notifications@github.com ("dependabot[bot]" OR "github-actions[bot]")` → Skip Inbox, Apply label `github/bots`, Mark as Read. **HUMAN ACTION NEEDED:** (1) Create Gmail filter, (2) GitHub Settings > Notifications > uncheck "Automatically watch repositories", (3) Set org routing to web-only. All GitHub notification threads marked read via API in S36. | Human | S26, S36 | Human action: 2 min at github.com/settings/notifications + Gmail |
 | ~~IRF-SYS-010~~ | ~~P1~~ | ~~Full seed.yaml refresh for organvm-engine~~ — **DONE** (5 contracts → 36, CANDIDATE → GRADUATED, signal_inputs/signal_outputs added. Commit `82d043d`.) | Agent | S28 gap audit | Completed S29 |
 
 ### Skills & Automation
@@ -939,6 +939,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-212 | Swarm topology spec — computed signal affinity reveals emergent function participation. Boids parallel (separation/alignment/cohesion). Discovery list, orphan list, affinity map. | S29 (post-flood) | 2026-03-24 |
 | DONE-213 | IRF Liquid Constitutional Order domain created — 12 items (IRF-LIQ-001 through 012) covering org creation, distillation pipeline, excretory/reproductive/swarm CLIs, context propagation, composability matrix. | S29 (post-flood) | 2026-03-24 |
 | DONE-214 | Portfolio security allowlist fully resolved — both h3 and fast-xml-parser chains auto-removed by lifecycle workflow. Allowlist empty, `npm audit` 0 vulns. GH#47 confirmed, GH#66 closed with resolution summary. IRF-PRT-002 complete. | S35 (security check) | 2026-03-24 |
+| DONE-215 | **Dependabot firehose rationalization** — system-wide. 305+ PRs closed across 9 orgs. 76 dependabot.yml deleted from non-production repos. 9 org `.github` repos configured (monthly grouped + auto-merge workflow). 5 meta-organvm production repos optimized (monthly/grouped/auto-merge for patch+minor). 4444J99/.github created. eslint >=10 ignored on stakeholder-portal (plugin incompatibility). 41 ruff lint errors fixed in engine tests. All notifications marked read. Completes IRF-SYS-007. IRF-SYS-009 remains (human: Gmail filter + GitHub notification settings). | S36 (dependabot-rationalization) | 2026-03-24 |
 
 ---
 
