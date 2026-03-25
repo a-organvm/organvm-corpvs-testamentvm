@@ -997,7 +997,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | HRM (Hermeneus) | 7 | 10 |
 | DOM (Domus Infrastructure) | 7 | 6 |
 | Cross-session (S23-S30+) | 0 | 81 |
-| **Active IRF items** | **191** | — |
+| **Active IRF items** | **192** | — |
 | **Total DONE entries** | — | **214** |
 
 *Note: "Active" counts explicit IRF-xxx items with OPEN status. "DONE (domain)" counts DONE-xxx entries attributable to that domain. "Cross-session" captures DONE entries from general session work (CI fixes, dependency bumps, security remediations, engine features, creative sprints, product rebrands, infra expansion) that don't map to a single domain prefix.*
