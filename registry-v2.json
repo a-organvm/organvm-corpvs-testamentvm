@@ -2039,7 +2039,8 @@
             "orchestration-start-here"
           ],
           "promotion_status": "LOCAL",
-          "tier": "contrib",
+          "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-21",
           "functional_class": "APPLICATION"
         },
@@ -2054,6 +2055,7 @@
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
         },
@@ -2068,6 +2070,7 @@
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
         },
@@ -2082,6 +2085,7 @@
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
         },
@@ -2096,6 +2100,7 @@
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
         },
@@ -2110,6 +2115,7 @@
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
         },
@@ -2124,6 +2130,7 @@
           "dependencies": [],
           "promotion_status": "LOCAL",
           "tier": "standard",
+          "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
         }
@@ -2674,11 +2681,11 @@
             "meta-organvm/organvm-engine",
             "meta-organvm/schema-definitions"
           ],
-          "promotion_status": "INCUBATOR",
+          "promotion_status": "LOCAL",
           "tier": "standard",
           "last_validated": "2026-03-25",
           "note": "Extracted from organvm-engine. Named after Roman cursus honorum. NLnet NGI0 Commons Fund application pending. PyPI: cvrsvs-honorvm. Apache 2.0.",
-          "implementation_status": "INCUBATOR",
+          "implementation_status": "PROTOTYPE",
           "functional_class": "infrastructure"
         }
       ]
