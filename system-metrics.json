@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-03-25T20:55:16.042705+00:00",
+  "generated": "2026-03-25T22:27:02.938028+00:00",
   "computed": {
     "total_repos": 127,
-    "active_repos": 64,
+    "active_repos": 71,
     "archived_repos": 54,
     "total_organs": 8,
     "operational_organs": 8,
@@ -44,11 +44,9 @@
       }
     },
     "implementation_status": {
-      "ACTIVE": 64,
+      "ACTIVE": 71,
       "ARCHIVED": 54,
-      "INCUBATOR": 1,
-      "PROTOTYPE": 1,
-      "UNKNOWN": 7
+      "PROTOTYPE": 2
     },
     "sprints_completed": 33,
     "sprint_names": [

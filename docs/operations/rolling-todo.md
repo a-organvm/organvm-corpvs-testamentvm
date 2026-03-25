@@ -215,7 +215,7 @@
 
 - [ ] **M3-II.** Refresh portfolio with post-construction evidence — 33 sprints, omega scorecard, live product
   - Site: `4444j99.github.io/portfolio/`
-  - **Partial:** RENOVATIO updated all 5 data JSON files (97 repos, 64 ACTIVE, 33 sprints, 41 essays). Omega scorecard page added (pre-validation maturation session). Remaining: visual verification after deploy, push portfolio changes.
+  - **Partial:** RENOVATIO updated all 5 data JSON files (97 repos, 71 ACTIVE, 33 sprints, 41 essays). Omega scorecard page added (pre-validation maturation session). Remaining: visual verification after deploy, push portfolio changes.
   - Source: [e2g-ii P2](../evaluation/e2g-ii-action-items.md) · Omega: #15
 
 - [ ] **M6-II.** CI restructure — make CI fail when no tests, require explicit `skip_tests: true`
