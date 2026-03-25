@@ -940,6 +940,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-213 | IRF Liquid Constitutional Order domain created — 12 items (IRF-LIQ-001 through 012) covering org creation, distillation pipeline, excretory/reproductive/swarm CLIs, context propagation, composability matrix. | S29 (post-flood) | 2026-03-24 |
 | DONE-214 | Portfolio security allowlist fully resolved — both h3 and fast-xml-parser chains auto-removed by lifecycle workflow. Allowlist empty, `npm audit` 0 vulns. GH#47 confirmed, GH#66 closed with resolution summary. IRF-PRT-002 complete. | S35 (security check) | 2026-03-24 |
 | DONE-215 | **Dependabot firehose rationalization** — system-wide. 305+ PRs closed across 9 orgs. 76 dependabot.yml deleted from non-production repos. 9 org `.github` repos configured (monthly grouped + auto-merge workflow). 5 meta-organvm production repos optimized (monthly/grouped/auto-merge for patch+minor). 4444J99/.github created. eslint >=10 ignored on stakeholder-portal (plugin incompatibility). 41 ruff lint errors fixed in engine tests. All notifications marked read. Completes IRF-SYS-007. IRF-SYS-009 remains (human: Gmail filter + GitHub notification settings). | S36 (dependabot-rationalization) | 2026-03-24 |
+| DONE-216 | specvla-ergon--avditor-mvndi PR review triage — 20+ AI review comments triaged across 3 PRs (sourcery-ai, codex-connector, github-advanced-security). 5 code fixes committed (`e40bb2e`): env.ts gitleaks false-positive (isRealValue helper), SpaceTimeBackground WebGL orientation→ref (prevents full GL pipeline re-init per tilt event), DeviceOrientationEvent typeof guard, GPU resource cleanup on unmount, auth.ts subscription error logging. 20 PR thread replies posted (9 on PR#3, 1 on PR#2, 11 on PR#1). 2 items declined with technical reasoning (WebGL uniform null is spec no-op; sentinel value pattern overengineered). 369/369 tests pass, tsc clean. | PR review session | 2026-03-24 |
 
 ---
 
@@ -964,7 +965,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 - **P1 (SOON):** 71 (70 prior + 1 new: IRF-SYS-023)
 - **P2 (GROWTH):** 104 (98 prior + 6 new: IRF-DOM-009, 011, 014, 015, 017, 018)
 - **P3 (HORIZON):** 13 (12 prior + 1 new: IRF-DOM-012)
-- **Completed:** 213 (DONE-001 through DONE-213, plus DONE-114a; 16 new from S29 post-flood session)
+- **Completed:** 216 (DONE-001 through DONE-216, plus DONE-114a)
 - **Blocked:** 1 (IRF-SYS-008)
 - **Domains:** 24 (23 prior + LIQ)
 
