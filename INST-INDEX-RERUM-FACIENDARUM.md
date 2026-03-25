@@ -458,6 +458,11 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-027 | P1 | Disease 2 cure validation — 1,509→0 validation errors. Added 4 identity positions, 7 pillar dimensions, backfilled 44 status_meta entries, fixed 5 outreach types. **Validated 2026-03-25.** Monitor for regression. | Agent | Session S35 (Disease 2) | Completed 2026-03-25 |
 | IRF-APP-028 | P1 | IRA ratings session — 4 subjective dimensions scored via 3-model panel (Opus/Sonnet/Sonnet). Composite 3.5→8.3. Haiku rater failed context limit — use Sonnet minimum in future. Ratings saved to `ratings/session-2026-03-25.json`. | Agent | Session S35 (Disease 3) | Completed 2026-03-25 |
 | IRF-APP-029 | P1 | 5 job applications staged — dbt Labs (8.5), Anduril (8.4), Grafana Labs (8.3), Twilio (8.3), Databricks (7.4). All remote. Resumes tailored, trimmed to 1 page, PDFs built, wired. Awaiting portal submission. | Human | Session S35 (job batch) | Human action — submit via portals |
+| IRF-APP-030 | P2 | GitHub Issues for S35 work — Protocol modules (protocol_types, protocol_validator, dm_composer), log_dm.py, reconcile parser fix, three-pillar rubric, Disease 2 cure. None have tracking issues. Work is committed but invisible to project management. | Agent | S35 close-out vacuum (index #2) | None |
+| IRF-APP-031 | P2 | Omega scorecard update — composite 3.5→8.3 is evidence for omega #7 (system quality). Diagnostic score improvement not recorded in omega evidence map. | Agent | S35 close-out vacuum (index #3) | None |
+| IRF-APP-032 | P2 | Concordance update — Protocol articles P-I through P-VII are new governance identifiers. Not registered in `docs/operations/concordance.md`. | Agent | S35 close-out vacuum (index #6) | None |
+| IRF-APP-033 | P2 | Seed.yaml update — Protocol modules (protocol_types, protocol_validator, dm_composer), log_dm, reconcile_outreach, three-pillar rubric are new capabilities not declared in seed contract. Extends IRF-APP-013. | Agent | S35 close-out vacuum (index #8) | None |
+| IRF-APP-034 | P2 | Companion indices — Protocol formalization is a new named entity (Index Nominum candidate). log_dm and reconcile_outreach are new tools (Index Rerum candidates). Register when companion indices are built. | Agent | S35 close-out vacuum (index #10) | Companion indices not yet built |
 
 ---
 
