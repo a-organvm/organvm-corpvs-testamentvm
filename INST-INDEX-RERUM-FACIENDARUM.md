@@ -1029,8 +1029,24 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ---
 
-*Last updated: 2026-03-24 — Plague campaign S35: 12 PRs across 11 repos, Absorption Protocol implemented, 13 backflow deposits, 4 topology issues, 3 MCP server issues, 8 DONE entries (190-197). Total DONE: 199. IRF-OSS-022 added (network map vacuum).*
+*Last updated: 2026-03-24 — S36 email triage: 300+ emails triaged (Mar 21-24), 2 P0 infrastructure emergencies discovered, 3 OSS PRs need action, 11 new IRF items. DONE-215/216 added by concurrent sessions. Active: ~203+11=~214. DONE: 216.*
 *Next update: After any session that produces or discovers work items*
+
+### S36 Email Triage Discovered Items (2026-03-24)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-SYS-011 | **P0** | **GoDaddy domains PARKED** — billing issue detected Mar 21. Live sites serving parking pages. Resolve billing immediately. | Human | S36 email | Billing access |
+| IRF-SYS-012 | **P0** | **Vercel deployment cascade failure** — 18+ failed deployments on team `ivviiviivvi` since Mar 21: `stakeholder-portal` (prod+preview) and `growth-auditor` (prod). Also 2 misconfigured domains. Investigate root cause. | Agent | S36 email | Vercel dashboard |
+| IRF-OSS-023 | P1 | **dbt-labs/dbt-mcp PR #669** — reviewer Jairus Martinez requested changes + local verification. Blocking merge. | Agent | S36 email | Need local clone |
+| IRF-OSS-024 | P1 | **langchain-ai/langgraph PR #7237** — auto-closed by bot, **maintainer Mason Daugherty manually reopened**. High-signal authority override. Check feedback, rebase if needed. | Agent | S36 email | None |
+| IRF-OSS-025 | P1 | **temporalio/sdk-python PR #1385** — tconley1428 review comment on OpenTelemetryConfig docs PR. Address and respond. | Agent | S36 email | None |
+| IRF-DOM-019 | P1 | **Microsoft Defender alerts** — "multiple alerts need attention" for M365 (Mar 24). May relate to credential stuffing incident. | Human | S36 email | Browser |
+| IRF-DOM-020 | P1 | **Broward College Workday new device signon** — Mac OS X, Mar 22. Verify authorized. | Human | S36 email | None |
+| IRF-DOM-021 | P2 | **GitHub OAuth: CLA assistant** app authorized on 4444J99 (Mar 22). Verify via `gh api /user/installations`. | Human | S36 email | None |
+| IRF-PRT-010 | P2 | **6 job rejections Mar 22-23**: Notion, Perplexity (FDE-Applied AI), Railway, Datadog (Sr AI Eng APM), LiveKit (FDE), Anduril. Log to tracker. LinkedIn leads: Netflix FSE5, Mercor ($80-110/hr), Anthropic Applied AI (Startups), GitHub SE III. | Human | S36 email | Need tracker |
+| IRF-PRT-011 | P2 | **Code review backlog** — growth-auditor: security issue in env.ts (PR#2) + 6 issues (PR#3). public-record-data-scrapper: PR#227 name concern, PR#221 codex reviewed. victoroff-group: PR#1 triple-reviewed. | Agent | S36 email | Protected branches |
+| IRF-OSS-026 | P2 | **agentic-titan Issue #20: m13v engagement** — 3 substantive comments (fission-fusion, hysteresis, stigmergy). Genuine community engagement. Draft response. | Agent | S36 email | None |
 
 ### S35 Discovered Items
 
