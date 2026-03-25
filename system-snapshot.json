@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-25T06:58:35.281200+00:00",
+  "generated_at": "2026-03-25T20:55:16.917876+00:00",
   "system": {
-    "total_repos": 125,
-    "active_repos": 63,
-    "density": 0.266,
-    "entities": 125,
+    "total_repos": 127,
+    "active_repos": 64,
+    "density": 0.263,
+    "entities": 127,
     "edges": 0,
     "ci_workflows": 106,
     "code_files": 0,
@@ -14,7 +14,7 @@
     "total_words_numeric": 0,
     "published_essays": 29,
     "sprints_completed": 33,
-    "ammoi": "AMMOI:27% E:0 T:0 C:0 Ev24h:2 [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-VI:76%]"
+    "ammoi": "AMMOI:26% E:0 T:0 C:0 Ev24h:2 [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-VI:76%]"
   },
   "code_profile": {},
   "word_counts": {},
@@ -22,9 +22,9 @@
     {
       "key": "META-ORGANVM",
       "name": "Meta",
-      "repo_count": 12,
+      "repo_count": 13,
       "flagship_count": 2,
-      "standard_count": 8,
+      "standard_count": 9,
       "infrastructure_count": 2,
       "repositories": [
         {
@@ -96,6 +96,12 @@
         {
           "name": "vigiles-aeternae--agon-cosmogonicum",
           "status": "LOCAL",
+          "tier": "standard",
+          "ci": false
+        },
+        {
+          "name": "cvrsvs-honorvm",
+          "status": "INCUBATOR",
           "tier": "standard",
           "ci": false
         }
@@ -448,9 +454,9 @@
     {
       "key": "ORGAN-III",
       "name": "Commerce",
-      "repo_count": 29,
+      "repo_count": 30,
       "flagship_count": 2,
-      "standard_count": 23,
+      "standard_count": 24,
       "infrastructure_count": 1,
       "repositories": [
         {
@@ -584,6 +590,12 @@
           "status": "GRADUATED",
           "tier": "standard",
           "ci": true
+        },
+        {
+          "name": "content-engine--asset-amplifier",
+          "status": "LOCAL",
+          "tier": "standard",
+          "ci": false
         },
         {
           "name": "card-trade-social",
@@ -851,8 +863,8 @@
     }
   ],
   "variables": {
-    "total_repos": "125",
-    "active_repos": "63",
+    "total_repos": "127",
+    "active_repos": "64",
     "archived_repos": "54",
     "total_organs": "8",
     "operational_organs": "8",
@@ -860,7 +872,7 @@
     "total_words_formatted": "0",
     "total_words_short": "0K+",
     "ci_workflows": "106",
-    "dependency_edges": "58",
+    "dependency_edges": "60",
     "published_essays": "29",
     "sprints_completed": "33",
     "code_files": "0",
@@ -870,7 +882,7 @@
     "organ_name.ORGAN-I": "Theory",
     "organ_repos.ORGAN-II": "32",
     "organ_name.ORGAN-II": "Art",
-    "organ_repos.ORGAN-III": "29",
+    "organ_repos.ORGAN-III": "30",
     "organ_name.ORGAN-III": "Commerce",
     "organ_repos.ORGAN-IV": "18",
     "organ_name.ORGAN-IV": "Orchestration",
@@ -880,7 +892,7 @@
     "organ_name.ORGAN-VI": "Community",
     "organ_repos.ORGAN-VII": "4",
     "organ_name.ORGAN-VII": "Marketing",
-    "organ_repos.META-ORGANVM": "12",
+    "organ_repos.META-ORGANVM": "13",
     "organ_name.META-ORGANVM": "Meta"
   },
   "omega": {
@@ -891,7 +903,8 @@
     "ARCHIVED": 54,
     "CANDIDATE": 1,
     "GRADUATED": 55,
-    "LOCAL": 11,
+    "INCUBATOR": 1,
+    "LOCAL": 12,
     "PUBLIC_PROCESS": 4
   }
 }
