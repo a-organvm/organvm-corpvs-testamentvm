@@ -419,6 +419,12 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-DOM-010 | **P1** | **Create Brewfile for domus** — `brew bundle` is referenced in CLAUDE.md install-packages script but no Brewfile exists. Neither formulae nor casks are tracked. New machine bootstrap will miss Dropbox, Google Drive, and all other Homebrew-managed tools. GH#4. | Agent | S35 vacuum audit | None |
 | IRF-DOM-011 | P2 | Manage rclone config via chezmoi — `~/.config/rclone/rclone.conf` contains OAuth tokens for `dbx:`, `gdrive:`, `onedrive:` remotes. Not chezmoi-managed. Needs either 1Password secret refs or `.chezmoiignore` treatment (tokens rotate). New machine won't have backup cloud access paths | Agent | S35 vacuum audit | None |
 | IRF-DOM-012 | P3 | Update domus `dropbox` CLI wrapper — `~/.local/bin/dropbox` references `DROPBOX_SOCKET` at `$HOME/.dropbox/command_socket` via XDG symlink. Fresh Homebrew install creates `~/.dropbox` as a real directory (not the old symlink to `~/.local/share/dropbox`). Wrapper logic may need path update | Agent | S35 discovery | None |
+| IRF-DOM-013 | **P1** | **CLAUDE.md claims `run_onchange_before_install-packages.sh.tmpl` triggers "On Brewfile change" — this is false.** Script uses inline `brew install` list, NOT `brew bundle`. Either: (a) convert to real Brewfile + `brew bundle`, or (b) correct CLAUDE.md. The script also omits casks entirely (no Dropbox, Google Drive, 1Password app, kitty, VSCode, font — those are in a separate `install_cask` section). Misleading documentation masks a bootstrap gap. | Agent | S35 vacuum audit | IRF-DOM-010 |
+| IRF-DOM-014 | P2 | **Domus install-packages.sh omits 30+ formulae** — current inline list has ~30 packages but `brew list` on this machine likely has 60+. The script is a bootstrap minimum, not a full manifest. `domus packages diff` references a Brewfile that doesn't exist. Audit `brew list` against script, decide: full Brewfile (reproducible) or intentional minimal bootstrap (documented) | Agent | S35 vacuum audit | IRF-DOM-010 |
+| IRF-DOM-015 | P2 | **Domus seed.yaml missing external dependencies** — Dropbox, Google Drive, rclone, Backblaze are external infrastructure domus depends on but doesn't declare. `consumes` section lists only `skills` and `governance-policy`. Should declare cloud-storage-sync as an external dep with note that it's managed via Homebrew casks, not org repos | Agent | S35 vacuum audit | IRF-DOM-008 |
+| IRF-DOM-016 | P1 | **Omega #17 evidence gap** — domus cloud storage was broken for an extended period (Dropbox crashed, not syncing). This is an unreported incident against autonomous operations (#17). If the soak test didn't catch it, that's a soak test gap (#1). The S35 nuke-and-pave is an intervention that may reset the #17 clock. Update omega evidence map with this incident and assess impact on #17 IN PROGRESS status | Agent | S35 vacuum audit | IRF-DOM-006 |
+| IRF-DOM-017 | P2 | **Inquiry log gap: no infrastructure resilience commission** — SGO has 5 research commissions (3 dissertations, 2 papers) but none address infrastructure resilience or disaster recovery. Domus is the single point of failure for all 8 organs. The S35 Dropbox incident (broken for weeks/months undetected) demonstrates this gap. Consider commissioning INQ-2026-006: "Infrastructure Resilience Patterns for Single-Operator Systems" | Agent | S35 vacuum audit | None |
+| IRF-DOM-018 | P2 | **Testament gap: infrastructure incidents unwitnessed** — fossil-record.jsonl tracks commits but not infrastructure events (cloud storage failure, nuke-and-pave, service restoration). The testament claims to witness system events but has no event type for `INFRA_INCIDENT` or `INFRA_RESTORATION`. Domus infrastructure changes are invisible to the system's historical record | Agent | S35 vacuum audit | None |
 
 ---
 
@@ -944,10 +950,10 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-- **Total active items:** 191 (187 prior + 4 new DOM items: IRF-DOM-009 through 012)
+- **Total active items:** 197 (187 prior + 10 new DOM items: IRF-DOM-009 through 018)
 - **P0 (NOW):** 14
-- **P1 (SOON):** 67 (66 prior + 1 new: IRF-DOM-010)
-- **P2 (GROWTH):** 100 (98 prior + 2 new: IRF-DOM-009, IRF-DOM-011)
+- **P1 (SOON):** 70 (66 prior + 4 new: IRF-DOM-010, 013, 016)
+- **P2 (GROWTH):** 104 (98 prior + 6 new: IRF-DOM-009, 011, 014, 015, 017, 018)
 - **P3 (HORIZON):** 13 (12 prior + 1 new: IRF-DOM-012)
 - **Completed:** 213 (DONE-001 through DONE-213, plus DONE-114a; 16 new from S29 post-flood session)
 - **Blocked:** 1 (IRF-SYS-008)
