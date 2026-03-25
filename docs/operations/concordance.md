@@ -424,6 +424,18 @@ Which TODO items advance which omega criteria. Items with no omega link are qual
 
 ---
 
+## Institutional IDs
+
+Source: `aerarium--res-publica/` — institutional wing. Package identities, grant application IDs, entity formation tracking.
+
+| ID | Type | Definition | Source |
+|----|------|------------|--------|
+| `cvrsvs-honorvm` | Package | Extracted governance engine — promotion state machine, dependency DAG validator, seed contract parser. PyPI: `cvrsvs-honorvm`. License: Apache 2.0. Named after Roman *cursus honorum* (sequential order of public offices). ORGANVM orthography: V for U. | S38, `aerarium--res-publica/applications/nlnet-ngi0-commons-2026/draft.md` |
+| `IRF-INST-NNN` | IRF domain | Institutional strategy work items (entity formation, grants, donor infrastructure). 18 items as of S38. | `INST-INDEX-RERUM-FACIENDARUM.md` |
+| `NLnet-NGI0-2026` | Application | NLnet NGI0 Commons Fund application for Cvrsvs Honorvm. EUR 37,080, 11 milestones. Deadline: 2026-04-01 12:00 CEST. | `aerarium--res-publica/applications/nlnet-ngi0-commons-2026/draft.md` |
+
+---
+
 ## Named Code Entities
 
 Source: `organvm-engine/src/organvm_engine/` — key classes by domain module. ~200 total classes across 28 modules.
