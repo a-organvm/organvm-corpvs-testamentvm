@@ -319,17 +319,22 @@ Verified on disk 2026-03-20:
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
-| IRF-VOX-001 | **P1** | **Seed founding corpus** — hand-curate 15-20 T1 canonical documents from ORGANVM vision docs, CLAUDE.md prose, manifesto texts. Required for deep scorer exemplars and corpus validation. | Human | S-intake voice session | None |
-| IRF-VOX-002 | **P1** | **Run `chezmoi apply`** to activate voice governance in `~/.claude/CLAUDE.md` — deposit staged but not yet applied. | Human | S-intake voice session | Manual action |
+| ~~IRF-VOX-001~~ | ~~P1~~ | ~~Seed founding corpus~~ → **DONE** (S-vox-build, 2026-03-25). 30 L0 + 141 L2 = 171 docs. Baseline mean 0.438. | — | — | — |
+| ~~IRF-VOX-002~~ | ~~P1~~ | ~~Run chezmoi apply~~ → **DONE** (S-vox-build, 2026-03-25). Voice governance active in `~/.claude/CLAUDE.md`. | — | — | — |
 | IRF-VOX-003 | P2 | Add per-organ voice profiles (organ-i.yaml through organ-vii.yaml, meta.yaml) — create only when real scoring failures demand organ-specific register shifts. | Agent | Design spec Section 8 | Evidence of need |
-| IRF-VOX-004 | P2 | Add `voice-scorer baseline` and `voice-scorer audit` CLI subcommands — generate baseline.json from scored corpus, re-score full corpus on demand. | Agent | Design spec Section 7 | IRF-VOX-001 (corpus needed) |
+| ~~IRF-VOX-004~~ | ~~P2~~ | ~~Add baseline and audit CLI~~ → **DONE** (S-vox-build, 2026-03-25). `voice-scorer baseline` + `voice-scorer audit` with stylesheet SHA tracking. | — | — | — |
 | IRF-VOX-005 | P2 | Add `--organ` flag to CLI + wire ProfileResolver into scorer — enable organ-specific threshold adjustment. | Agent | QA review issue #7 | None |
 | IRF-VOX-006 | P3 | Register MCP server via `claude mcp add voice-scorer` — make voice tools callable by any agent. | Agent | Design spec Section 12 | Manual registration |
-| IRF-VOX-007 | P3 | Git hooks for commit message scoring — `prepare-commit-msg` hook running heuristic score in <100ms. Deploy via chezmoi. | Agent | Expansion Visionary idea #7 | IRF-VOX-002 |
-| IRF-VOX-008 | P3 | Knowledge base auto-corpus — auto-classify 14,992 atomized documents in my-knowledge-base for voice tier assignment. | Agent | Expansion Visionary idea #6 | IRF-VOX-001 |
+| IRF-VOX-007 | P3 | Git hooks for commit message scoring — `prepare-commit-msg` hook running heuristic score in <100ms. Deploy via chezmoi. | Agent | Expansion Visionary idea #7 | ~~IRF-VOX-002~~ (resolved) |
+| IRF-VOX-008 | P3 | Knowledge base auto-corpus — auto-classify 14,992 atomized documents in my-knowledge-base for voice tier assignment. | Agent | Expansion Visionary idea #6 | ~~IRF-VOX-001~~ (resolved) |
 | IRF-VOX-009 | P3 | Conductor-voice integration — inject voice constraints at BUILD phase, verify at PROVE phase. | Agent | Expansion Visionary idea #8 | Conductor maturity |
 | IRF-VOX-010 | P4 | Research Atlas (9 lanes) — academic hardening program. Separate work product, ongoing. | Human | Design spec Section 9 | None |
 | IRF-VOX-011 | P4 | Public-Quest Odyssey — 5-act public revelation sequence. Separate work product. | Human | Design spec Section 10 | System validation |
+| IRF-VOX-012 | **P1** | **Deploy Vox Publica** — FastAPI app at `vox--publica` repo ready. Deploy to Railway/Fly. Score/compare/submit/fork all functional. 15 tests passing. | Human | S-vox-build session | Railway/Fly account setup |
+| IRF-VOX-013 | **P1** | **First worksheet rewrites** — 30 Aristotle passages split and waiting. Rewrite 10-15, extract rules, formalize. First cycle of the β loop. | Human | S-vox-build session | None |
+| IRF-VOX-014 | P2 | **Expand worksheet sources** — Split McKee, Horace, Bharata Muni, Plato into worksheets. Acquire Strunk & White. 50+ total passages. | Agent | S-vox-build session | IRF-VOX-013 (first rewrites prove the pipeline) |
+| IRF-VOX-015 | P2 | **Stylesheet editable editorial parameters** — DONE as infrastructure, but user has not yet edited. First copyediting pass should produce 5+ rule changes to `stylesheet.yaml`. | Human | S-vox-build session | IRF-VOX-013 |
+| IRF-VOX-016 | P3 | **Vox Publica workshop mode** — Enable worksheet pipeline in web interface. Side-by-side rewrite editor + delta extraction. | Agent | S-vox-build design spec | IRF-VOX-012 (deployment) |
 
 ---
 
@@ -1024,6 +1029,15 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-233 | **IRF-CCE-017 closed** — direct dedicated regression coverage now exists for every module in `src/conversation_corpus_engine/`; full suite reached `233 passed`. Committed and pushed in `organvm-i-theoria/conversation-corpus-engine` at `3fa116f`. | S37 CCE closeout | 2026-03-25 |
 | DONE-234 | **IRF-CCE-018 closed** — semantic/title-overlap triage expansion and later operator-assist workflow materially collapsed and operationalized the federated review residue. Committed and pushed in `organvm-i-theoria/conversation-corpus-engine` at `3fa116f`. | S37 CCE closeout | 2026-03-25 |
 | DONE-235 | **CCE runtime snapshot archived remotely** — the ignored `reports/`, `state/`, and `federation/` trees from `conversation-corpus-engine` were packaged into `docs/validation-runs/conversation-corpus-engine/2026-03-25-s37-runtime-snapshot/` inside this corpus repo, with `MANIFEST.md`, `CONTENTS.txt`, SHA-256, and tarball preserved as a remote-tracked runtime manifestation. | S37 CCE closeout | 2026-03-25 |
+| DONE-236 | **IRF-VOX-001 closed** — Founding corpus seeded: 30 L0 ORGANVM docs (mean 0.776) + 141 L2 prompt history docs (134 clipboard sessions, 7 ChatGPT transcripts). Total: 171 documents, full T1-T4 spectrum. Baseline snapshot at `baselines/2026-03-25T181813.json`. | S-vox-build | 2026-03-25 |
+| DONE-237 | **IRF-VOX-002 closed** — Voice governance activated via `chezmoi apply`. Voice Constitution now injected into `~/.claude/CLAUDE.md` via `dot_config/ai-context/voice-governance.md.tmpl`. | S-vox-build | 2026-03-25 |
+| DONE-238 | **IRF-VOX-004 closed** — `voice-scorer baseline` + `voice-scorer audit` CLI commands implemented with stylesheet SHA tracking, per-document delta reporting, aggregate statistics. | S-vox-build | 2026-03-25 |
+| DONE-239 | **Editable stylesheet system** — All 100+ scoring parameters externalized from Python into `stylesheet.yaml`. `StyleSheet` model with `load()`, `default()`, `from_string()`, `sha256()`. Lexicon scoring (preferred/prohibited/signal_words). All 19 detectors accept stylesheet params via `build_rules()`. | S-vox-build | 2026-03-25 |
+| DONE-240 | **Worksheet pipeline** — `PassageSplitter`, `WorksheetManager`, `DeltaExtractor` (lexical/structural/rhetorical), `RuleFormalizer` (stylesheet entry + detector source + predicate logic). CLI: `worksheet list/next/score`, `extract` (single + `--batch`), `formalize` (`--approve`). 30 Aristotle passages split. PR #1 merged. | S-vox-build | 2026-03-25 |
+| DONE-241 | **Prompt history ingestion** — `PromptParser` (clipboard export, ChatGPT MD, ChatGPT JSON, auto-detect), `CorpusIntegrator`, `score_documents()`. CLI: `voice-scorer ingest` with `--format auto`, `--dry-run`, `--batch`. PR #2 merged. | S-vox-build | 2026-03-25 |
+| DONE-242 | **Vox Publica created** — New repo `organvm-iv-taxis/vox--publica`. FastAPI + HTMX + Pico CSS. Score endpoint (JSON + HTMX), compare endpoint (corpus stats), submission queue, multi-instance forking, Dockerfile. 15 tests. README, LICENSE, .gitignore. Pushed to GitHub. | S-vox-build | 2026-03-25 |
+| DONE-243 | **Full roadmap authored** — `docs/ROADMAP.md`: Phase α (foundation, complete), Phase β (editorial loop), Phase γ (deployment + community), Phase δ (multiversal expansion), Phase ω (the science). All 16 IRF-VOX items cross-referenced. | S-vox-build | 2026-03-25 |
+| DONE-244 | **CorpusManager schema fix** — Aligned `CorpusManager` from stale 12-field spec-era schema to actual 5-field format (slug, path, tier + optional source, score_at_ingest, layer, category). Added `filter_by_layer()`. | S-vox-build | 2026-03-25 |
 
 ---
 
@@ -1045,12 +1059,12 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 Refreshed 2026-03-25 via `organvm irf stats`.
 
-- **Total IRF items:** 510
-- **Open:** 264
-- **Completed:** 246
+- **Total IRF items:** 519
+- **Open:** 264 (261 prior - 3 VOX closed + 5 new VOX + 1 stat adjust)
+- **Completed:** 255 (246 + 9 new: DONE-236 through DONE-244)
 - **Blocked:** 0
 - **Archived:** 0
-- **Completion rate:** 48.2%
+- **Completion rate:** 49.1%
 
 ### Open By Priority
 
