@@ -9,7 +9,7 @@ This is a **planning and governance documentation corpus** — not a source code
 **Owner:** @4444j99 / @4444J99
 **Status:** LAUNCHED (2026-02-11) — all 8 organs OPERATIONAL
 **Repository:** `meta-organvm/organvm-corpvs-testamentvm`
-**Documentation deployed:** ~404K+ words across 127 repos + 8 org profiles + 29 meta-system essays
+**Documentation deployed:** ~766K+ words across 127 repos + 8 org profiles + 0 meta-system essays
 
 There is no build system, test suite, or runtime code here. Executable artifacts include 5 validation scripts in `scripts/` and YAML/Python workflow specifications in `docs/implementation/github-actions-spec.md`.
 
@@ -251,7 +251,7 @@ This corpus lives at `~/Workspace/meta-organvm/organvm-corpvs-testamentvm/`, alo
 ### Governance
 - *Standard ORGANVM governance applies*
 
-*Last synced: 2026-03-25T22:27:19Z*
+*Last synced: 2026-03-26T19:39:28Z*
 
 ## Session Review Protocol
 
@@ -363,42 +363,11 @@ Cross-organ links: 549 | Top tags: `python`, `bash`, `mcp`, `pytest`, `typescrip
 Run: `organvm atoms pipeline --write && organvm atoms fanout --write`
 
 
-## Entity Identity (Ontologia)
-
-**UID:** `ent_repo_01KKKX3RVRY839D7ASSWA4HEZB` | **Matched by:** primary_name
-
-Resolve: `organvm ontologia resolve organvm-corpvs-testamentvm` | History: `organvm ontologia history ent_repo_01KKKX3RVRY839D7ASSWA4HEZB`
-
-
-## Live System Variables (Ontologia)
-
-| Variable | Value | Scope | Updated |
-|----------|-------|-------|---------|
-| `active_repos` | 64 | global | 2026-03-25 |
-| `archived_repos` | 54 | global | 2026-03-25 |
-| `ci_workflows` | 106 | global | 2026-03-25 |
-| `code_files` | 0 | global | 2026-03-25 |
-| `dependency_edges` | 60 | global | 2026-03-25 |
-| `operational_organs` | 8 | global | 2026-03-25 |
-| `published_essays` | 29 | global | 2026-03-25 |
-| `repos_with_tests` | 0 | global | 2026-03-25 |
-| `sprints_completed` | 33 | global | 2026-03-25 |
-| `test_files` | 0 | global | 2026-03-25 |
-| `total_organs` | 8 | global | 2026-03-25 |
-| `total_repos` | 127 | global | 2026-03-25 |
-| `total_words_formatted` | 0 | global | 2026-03-25 |
-| `total_words_numeric` | 0 | global | 2026-03-25 |
-| `total_words_short` | 0K+ | global | 2026-03-25 |
-
-Metrics: 9 registered | Observations: 15536 recorded
-Resolve: `organvm ontologia status` | Refresh: `organvm refresh`
-
-
 ## System Density (auto-generated)
 
-AMMOI: 56% | Edges: 41 | Tensions: 33 | Clusters: 5 | Adv: 7 | Events(24h): 23754
-Structure: 8 organs / 127 repos / 1654 components (depth 17) | Inference: 98% | Organs: META-ORGANVM:64%, ORGAN-I:55%, ORGAN-II:47%, ORGAN-III:55% +4 more
-Last pulse: 2026-03-25T22:27:04 | Δ24h: +3.5% | Δ7d: n/a
+AMMOI: 56% | Edges: 41 | Tensions: 0 | Clusters: 0 | Adv: 8 | Events(24h): 24029
+Structure: 8 organs / 127 repos / 1654 components (depth 17) | Inference: 0% | Organs: META-ORGANVM:64%, ORGAN-I:55%, ORGAN-II:47%, ORGAN-III:55% +4 more
+Last pulse: 2026-03-26T19:39:26 | Δ24h: +3.6% | Δ7d: n/a
 
 
 ## Dialect Identity (Trivium)

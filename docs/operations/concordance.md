@@ -114,6 +114,7 @@ Universal work registry. 26 domain prefixes:
 | Name | Type | Context |
 |------|------|---------|
 | `content-engine--asset-amplifier` | Repo (ORGAN-III, SKELETON) | AI content repurposing platform, Padavano+Lefler partnership |
+| | INQ-2026-009 | SGO Research Commission | Autopoietic Identity Refinement: Multi-Modal Brand Metabolism and Inquiry-Driven Alignment Scoring |
 | Tony Carbone | External contact | Managing Partner, Alternative Funding Group, MCA client |
 | Scott Lefler | External contact | Owner, Lefler.Design, build-sell partnership |
 | Alexis C. | External contact | Managing Director/Owner, Tony's business partner |
@@ -184,7 +185,7 @@ Three ID namespaces govern the SGO academic pipeline:
 | `SGO-YYYY-RP-NNN` | Research papers (phase 1-2) | `RESEARCH-REGISTRY.yaml` | SGO-2026-RP-002 (Impossibility Landscape) |
 | `SGO-YYYY-SYN-NNN` | Synthesis papers (phase 3-4) | `RESEARCH-REGISTRY.yaml` | SGO-2026-SYN-02 (Governance Impossibility) |
 
-Active commissions: INQ-2026-001 through INQ-2026-006. The Formalization Programme (INQ-2026-006) contains 7 research papers (RP-001 through RP-007), 5 synthesis papers (SYN-01 through SYN-05), and 1 capstone.
+Active commissions: INQ-2026-001 through INQ-2026-009. The Formalization Programme (INQ-2026-006) contains 7 research papers (RP-001 through RP-007), 5 synthesis papers (SYN-01 through SYN-05), and 1 capstone.
 
 ---
 
@@ -631,4 +632,4 @@ Source: `organvm-mcp-server/src/organvm_mcp/` — tools exposed via MCP stdio pr
 
 ---
 
-*This concordance was last updated on 2026-03-23. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*
+*This concordance was last updated on 2026-03-26. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*

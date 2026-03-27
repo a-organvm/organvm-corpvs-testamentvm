@@ -29,7 +29,11 @@ This is a **living governance instrument**, not a snapshot. Every session that p
 **Update protocol:**
 1. When a session closes, add completed items to `## Completed` with session ID and date.
 2. When new work is discovered, add to the appropriate organ section with priority and source.
-3. When work is blocked, move to `## Blocked` with blocking reason.
+3. When work is blocked, move to `| DONE-247 | Cronus Metabolus Core Metabolism Loop (Ingestion, Extraction, Generation, Scoring). | S39 | 2026-03-26 |
+| DONE-248 | Cronus Metabolus Product Portal (Dashboard, Review Queue, LinkedIn OAuth). | S39 | 2026-03-26 |
+| DONE-249 | AES-256 Token Encryption & Identity Inquiry system. | S39 | 2026-03-26 |
+
+## Blocked` with blocking reason.
 4. When work becomes irrelevant, move to `## Archived` with reason.
 
 ### Completion Logging — External Index Propagation
@@ -478,6 +482,14 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-037 | P1 | 5 more applications tomorrow — user committed to applying to these 5 + finding 5 more. Next batch needs to run entirely through apply.py with Protocol-validated outreach. Monday rhythm starts next week | Human+Agent | Session S35 (weekly rhythm) | None |
 | IRF-APP-034 | P2 | sovereign-systems: gate explore page behind email capture — GHL form (name + email minimum) between water landing and explore. Maddie's explicit request for data capture before branch access | Agent | S-elevate (funnel flow) | Maddie GHL form URL |
 | IRF-APP-035 | P2 | sovereign-systems: evolve spiral visualization — client wants vertical spine with 4 rods + spiral wrapping upward (not current orbital nodes). References prior art ("the spiral we built before") | Agent | S-elevate (spiral v2) | Maddie design feedback |
+| IRF-APP-054 | P1 | Implement Instagram/Facebook Graph API OAuth flow. | Agent | S39 | None |
+| IRF-APP-055 | P1 | Implement TikTok Content Publishing API adapter. | Agent | S39 | None |
+| IRF-APP-056 | P1 | Build "Asset ROI" dashboard visualization (Attribution metrics). | Agent | S39 | None |
+| IRF-APP-057 | P1 | Build "Identity Mirror" radar chart for Natural Center confidence. | Agent | S39 | None |
+| IRF-APP-058 | P1 | Implement actual publishing calls in adapters (replace stubs). | Agent | S39 | None |
+| IRF-APP-059 | P1 | Create GitHub Actions CI/CD workflow (completes seed.yaml vacuum). | Agent | S39 | None |
+| IRF-APP-060 | P1 | Production environment configuration (Vercel/Railway). | Agent | S39 | None |
+
 | IRF-APP-036 | P2 | sovereign-systems: Netlify site rename — current URL is auto-generated (`lambent-crumble-64ba1d.netlify.app`). Needs branded name before custom domains are connected | Agent | S-elevate (deploy) | None |
 | IRF-APP-037 | P3 | sovereign-systems: Keystatic CMS — visual content editor for Maddie at /keystatic URL. Phase 1 fallback was manual editing; CMS is the fast-follow | Agent | S-elevate (editing) | None |
 | IRF-APP-031 | P2 | Omega scorecard update — composite 3.5→8.3 is evidence for omega #7 (system quality). Diagnostic score improvement not recorded in omega evidence map. | Agent | S35 close-out vacuum (index #3) | None |
@@ -1051,8 +1063,18 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-244 | **CorpusManager schema fix** — Aligned `CorpusManager` from stale 12-field spec-era schema to actual 5-field format (slug, path, tier + optional source, score_at_ingest, layer, category). Added `filter_by_layer()`. | S-vox-build | 2026-03-25 |
 | DONE-245 | **sovereign-systems--elevate-align: first studio client project built and deployed.** Maddie (water filtration). Astro 5 + Tailwind 4 + vanilla Canvas (Perlin noise spiral). 15 pages: hub with interactive spiral, water funnel (documentary-first landing, quiz embed, 6 branch pages), 4 pillar pages, business placeholder. Dark-first 2026 design. Deployed to Netlify (`lambent-crumble-64ba1d.netlify.app`). GitHub repo created (private, organvm-iii-ergon org). Registered as submodule in superproject (`c56ee88`). seed.yaml: client-project, LOCAL. Design spec, implementation plan, client-facing design decisions doc, domain setup guide. Client approved design, provided Sovereign Systems framework (4 pillars + spiral overlay). Pricing drafted ($1K deposit + $200/month retainer) but not yet communicated. | S-elevate | 2026-03-25 |
 | DONE-246 | **IRF-APP-025 partially addressed** — Maddie venture now tracked in both application-pipeline memory AND ORGAN-III memory + dedicated memory file (`project_sovereign_systems_client.md`). Other 5 collaborators still memory-only. | S-elevate | 2026-03-25 |
+| DONE-247 | **Gemini session: 4-pillar content + citation engine + infrastructure.** Identity/Financial/Inner pillars live with research-backed copy. Business Hub landing page. 113→263 corpus canon sources. Citation.astro + ResearchAccordion + /research page. Keystatic CMS, CI, sitemap, OG tags, email gate, VerticalSpine. Site renamed to elevate-align-spiral.netlify.app. | S-elevate-gemini | 2026-03-27 |
+| DONE-248 | **Purification: strip framework bloat, fix 15 issues.** Removed Keystatic/React/SSR adapter (3MB→5KB client JS). Created Netlify Function for email capture. Fixed stale 113 counts, dead links, OG image, Twitter meta, placeholder URLs. Added ResearchAccordion to pillar pages. Throttled scroll. Relocated build scripts. PR #2 merged, CI green. 263 citations verified (73% confirmed real, 0% hallucinated). | S-elevate-purify | 2026-03-27 |
+| DONE-249 | **IRF-APP-032 closed** — sovereign-systems registered in registry-v2.json as 30th ORGAN-III repo. Summary count 125→126. | S-elevate-purify | 2026-03-27 |
+| DONE-250 | **IRF-APP-034 (sovereign-systems) closed** — explore page gated behind email capture form. Netlify Function with validation. | S-elevate-purify | 2026-03-27 |
+| DONE-251 | **IRF-APP-036 (sovereign-systems) closed** — Netlify site renamed from lambent-crumble to elevate-align-spiral. | S-elevate-purify | 2026-03-27 |
+| DONE-252 | **IRF-APP-037 (sovereign-systems) DEFERRED** — Keystatic CMS removed during purification. Tracked in GitHub Issue #1 for re-add after pricing. | S-elevate-purify | 2026-03-27 |
 
 ---
+
+| DONE-247 | Cronus Metabolus Core Metabolism Loop (Ingestion, Extraction, Generation, Scoring). | S39 | 2026-03-26 |
+| DONE-248 | Cronus Metabolus Product Portal (Dashboard, Review Queue, LinkedIn OAuth). | S39 | 2026-03-26 |
+| DONE-249 | AES-256 Token Encryption & Identity Inquiry system. | S39 | 2026-03-26 |
 
 ## Blocked
 
@@ -1072,9 +1094,9 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 Refreshed 2026-03-25 via `organvm irf stats`.
 
-- **Total IRF items:** 519
+- **Total IRF items:** 526
 - **Open:** 264 (261 prior - 3 VOX closed + 5 new VOX + 1 stat adjust)
-- **Completed:** 255 (246 + 9 new: DONE-236 through DONE-244)
+- **Completed:** 258 (255 + 3 new: DONE-247 through DONE-249)
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 49.1%
