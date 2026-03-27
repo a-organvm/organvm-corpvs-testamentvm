@@ -488,7 +488,7 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-057 | P1 | Build "Identity Mirror" radar chart for Natural Center confidence. | Agent | S39 | None |
 | IRF-APP-058 | P1 | Implement actual publishing calls in adapters (replace stubs). | Agent | S39 | None |
 | IRF-APP-059 | P1 | Create GitHub Actions CI/CD workflow (completes seed.yaml vacuum). | Agent | S39 | None |
-| IRF-APP-060 | P1 | Production environment configuration (Vercel/Railway). | Agent | S39 | None |
+| ~~IRF-APP-060~~ | ~~P1~~ | ~~Production environment configuration~~ — **DONE** (Deployed to Cloudflare Workers + Neon + CF Pages instead of Vercel/Railway. API: `cronus-api.ivixivi.workers.dev`, Dashboard: `cronus-dashboard.pages.dev`. S40.) | Agent | S39→S40 | Completed 2026-03-27 |
 
 | IRF-APP-036 | P2 | sovereign-systems: Netlify site rename — current URL is auto-generated (`lambent-crumble-64ba1d.netlify.app`). Needs branded name before custom domains are connected | Agent | S-elevate (deploy) | None |
 | IRF-APP-037 | P3 | sovereign-systems: Keystatic CMS — visual content editor for Maddie at /keystatic URL. Phase 1 fallback was manual editing; CMS is the fast-follow | Agent | S-elevate (editing) | None |
@@ -1081,6 +1081,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-262 | **Cronus Metabolus: first metabolism.** 15s test video uploaded → MinIO (12MB) → FFmpeg extracted 6 fragments (2 clips, 3 keyframes, 1 audio) → all stored in MinIO → 6 fragment records in PostgreSQL with full lineage. Transcription correctly calls Whisper (fails on placeholder key — expected). | S40 (Cronus metabolism) | 2026-03-27 |
 | DONE-263 | **Cronus Metabolus: multi-provider AI.** 7 providers wired: Ollama (free local), Groq (free cloud + Whisper), Gemini (free cloud), Cerebras (free cloud), Cloudflare Workers AI (free cloud), Anthropic (paid), OpenAI (paid). Auto-resolution free-first. Settings UI + API for key management. All providers implement same LLM/Embedding/Transcription interfaces. | S40 (Cronus providers) | 2026-03-27 |
 | DONE-264 | **Cronus Metabolus: THE LOOP IS CLOSED.** Full end-to-end metabolism on Ollama: video → FFmpeg fragments → NC derivation → 9 content units (Instagram + LinkedIn) with captions. Zero API keys. Zero cost. 92% JSON parse success from 3B local model. Pitch decks migrated Netlify → Cloudflare Pages (`cronus-metabolus.pages.dev`). | S40 (Cronus closed loop) | 2026-03-27 |
+| DONE-265 | **Cronus Metabolus: production deployment.** Full stack on Cloudflare + Neon, zero cost. API: `cronus-api.ivixivi.workers.dev` (Hono on Cloudflare Workers, Fastify was too heavy for Workers). Dashboard: `cronus-dashboard.pages.dev` (React/Vite on CF Pages). Pitch decks: `cronus-metabolus.pages.dev`. Database: Neon PostgreSQL `green-art-84790526` (9 tables + pgvector). All AI providers use raw `fetch()` — zero SDK dependencies in production bundle. 29 commits in session S40. | S40 (Cronus deploy) | 2026-03-27 |
 
 ---
 
