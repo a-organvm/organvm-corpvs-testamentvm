@@ -1,15 +1,15 @@
 # 30-Day Soak Test Report
 
-**Period:** 2026-02-21 to 2026-03-22
+**Period:** 2026-02-28 to 2026-03-29
 **Snapshots:** 30
-**Generated:** 2026-03-22 08:25 UTC
+**Generated:** 2026-03-29 08:31 UTC
 
 ---
 
 ## Validation Integrity
 
-- Days with clean validation: **27/30**
-- Registry integrity issues: 10 total across period
+- Days with clean validation: **20/30**
+- Registry integrity issues: 46 total across period
 - Dependency violations: 0 total across period
 
 ### Registry Issues Observed
@@ -18,57 +18,42 @@
 - organvm-i-theoria/vigiles-aeternae--corpus-mythicum: missing field 'documentation_status'
 - organvm-ii-poiesis/vigiles-aeternae--theatrum-mundi: missing field 'documentation_status'
 - organvm-iv-taxis/contrib--adenhq-hive: missing field 'implementation_status'
+- organvm-iv-taxis/contrib--anthropic-skills: missing field 'implementation_status'
+- organvm-iv-taxis/contrib--dbt-mcp: missing field 'implementation_status'
+- organvm-iv-taxis/contrib--ipqwery-ipapi-py: missing field 'implementation_status'
+- organvm-iv-taxis/contrib--langchain-langgraph: missing field 'implementation_status'
+- organvm-iv-taxis/contrib--primeinc-github-stars: missing field 'implementation_status'
+- organvm-iv-taxis/contrib--temporal-sdk-python: missing field 'implementation_status'
 
 ## CI Stability
 
-- Average passing: **28.3** per day
-- Average failing: **7.6** per day
-- Average billing-locked: **11.5** per day
+- Average passing: **16.3** per day
+- Average failing: **3.9** per day
+- Average billing-locked: **12.1** per day
 - Days with CI data: 30
 
 ### Chronic Failures (3+ days)
 
-- organvm-vii-kerygma/.github: failure (15 days)
-- organvm-vi-koinonia/salon-archive: failure (12 days)
-- meta-organvm/system-dashboard: failure (11 days)
-- meta-organvm/organvm-engine: failure (11 days)
-- organvm-iii-ergon/public-record-data-scrapper: failure (10 days)
-- organvm-iii-ergon/life-my--midst--in: failure (10 days)
-- organvm-vii-kerygma/social-automation: failure (9 days)
-- meta-organvm/organvm-mcp-server: failure (9 days)
-- organvm-iii-ergon/fetch-familiar-friends: failure (7 days)
-- organvm-vi-koinonia/community-hub: failure (7 days)
-- organvm-v-logos/public-process: failure (7 days)
-- organvm-vi-koinonia/koinonia-db: failure (6 days)
-- organvm-vi-koinonia/reading-group-curriculum: failure (6 days)
-- organvm-iii-ergon/card-trade-social: failure (5 days)
-- meta-organvm/alchemia-ingestvm: failure (5 days)
-- organvm-ii-poiesis/a-mavs-olevm: failure (5 days)
+- organvm-vii-kerygma/.github: failure (10 days)
+- organvm-vi-koinonia/salon-archive: failure (9 days)
+- meta-organvm/organvm-engine: failure (8 days)
+- organvm-v-logos/public-process: failure (8 days)
+- meta-organvm/system-dashboard: failure (7 days)
+- meta-organvm/organvm-mcp-server: failure (6 days)
 - meta-organvm/praxis-perpetua: failure (4 days)
-- organvm-i-theoria/recursive-engine--generative-entity: failure (3 days)
-- organvm-i-theoria/organon-noumenon--ontogenetic-morphe: failure (3 days)
-- organvm-i-theoria/auto-revision-epistemic-engine: failure (3 days)
-- organvm-i-theoria/narratological-algorithmic-lenses: failure (3 days)
-- organvm-i-theoria/call-function--ontological: failure (3 days)
-- organvm-i-theoria/sema-metra--alchemica-mundi: failure (3 days)
-- organvm-i-theoria/system-governance-framework: failure (3 days)
-- organvm-i-theoria/cognitive-archaelogy-tribunal: failure (3 days)
-- organvm-i-theoria/a-recursive-root: failure (3 days)
-- organvm-i-theoria/radix-recursiva-solve-coagula-redi: failure (3 days)
-- organvm-i-theoria/reverse-engine-recursive-run: failure (3 days)
-- organvm-i-theoria/linguistic-atomization-framework: failure (3 days)
-- organvm-i-theoria/my-knowledge-base: failure (3 days)
-- organvm-i-theoria/scalable-lore-expert: failure (3 days)
-- organvm-vi-koinonia/adaptive-personal-syllabus: failure (3 days)
-- organvm-vii-kerygma/announcement-templates: failure (3 days)
-- organvm-vii-kerygma/distribution-strategy: failure (3 days)
-- organvm-iv-taxis/universal-node-network: failure (3 days)
+- organvm-iv-taxis/universal-node-network: failure (4 days)
+- organvm-iii-ergon/public-record-data-scrapper: failure (3 days)
+- organvm-iii-ergon/life-my--midst--in: failure (3 days)
+- organvm-vi-koinonia/koinonia-db: failure (3 days)
+- organvm-vi-koinonia/community-hub: failure (3 days)
+- organvm-vi-koinonia/reading-group-curriculum: failure (3 days)
+- organvm-vii-kerygma/social-automation: failure (3 days)
 
 ## Engagement Trends
 
 | Metric | Start | End | Delta |
 |--------|-------|-----|-------|
-| Stars | 5 | 0 | -5 |
+| Stars | 6 | 0 | -6 |
 | Forks | 3 | 0 | -3 |
 
 ### Top Repo Engagement (Latest)
@@ -86,4 +71,4 @@
 
 ## Verdict
 
-**PASS WITH NOTES** — Minor issues observed but no systemic failures.
+**ISSUES DETECTED** — Review validation failures and chronic CI issues above.
