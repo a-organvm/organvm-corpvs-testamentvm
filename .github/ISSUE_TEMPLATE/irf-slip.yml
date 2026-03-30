@@ -41,3 +41,30 @@ body:
     attributes:
       label: What surfaced this?
       placeholder: "e.g., S42, vacuum audit, gut feeling, conversation with Tony"
+
+  - type: input
+    id: submitted-by
+    attributes:
+      label: Submitted by
+      description: "Who is dropping this slip? Agent name + model, or human. For audit trail — every slip has fingerprints."
+      placeholder: "e.g., Claude Opus 4.6, Gemini 2.5 Pro, OpenCode, Human"
+    validations:
+      required: true
+
+  - type: input
+    id: session-id
+    attributes:
+      label: Session ID
+      description: "Which session produced this slip? For provenance tracing."
+      placeholder: "e.g., S42, claude-b07daed8, gemini-session-2026-03-30"
+    validations:
+      required: true
+
+  - type: input
+    id: timestamp
+    attributes:
+      label: Timestamp (ISO 8601)
+      description: "When was this slip created? The box is append-only — temporal ordering matters."
+      placeholder: "e.g., 2026-03-30T15:42:00Z"
+    validations:
+      required: true

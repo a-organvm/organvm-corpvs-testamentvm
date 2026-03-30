@@ -176,3 +176,29 @@ body:
         - [ ] **Seed contracts** — changes capabilities/edges
         - [ ] **CLAUDE.md** — changes modules/routes/architecture
         - [ ] **Companion indices** — new locations/names/artifacts
+
+  - type: input
+    id: submitted-by
+    attributes:
+      label: Submitted by
+      description: "Who created this work item? Agent name + model, or human. Every item has fingerprints for audit trail."
+      placeholder: "e.g., Claude Opus 4.6, Gemini 2.5 Pro, Human"
+    validations:
+      required: true
+
+  - type: input
+    id: session-id
+    attributes:
+      label: Session ID
+      description: "Which session produced this item? For provenance tracing."
+      placeholder: "e.g., S42, claude-b07daed8"
+    validations:
+      required: true
+
+  - type: input
+    id: timestamp
+    attributes:
+      label: Timestamp (ISO 8601)
+      placeholder: "e.g., 2026-03-30T15:42:00Z"
+    validations:
+      required: true
