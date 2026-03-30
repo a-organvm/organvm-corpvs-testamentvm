@@ -1,0 +1,129 @@
+name: "IRF Work Item"
+description: "Universal work registry item — every IRF entry becomes a fully-specced issue"
+title: "IRF-{PREFIX}-{NNN}: "
+labels: ["irf"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## IRF Work Item Specification
+        Per the Functional Institutional Set and AX-7 (Tetradic Self-Knowledge), every work item must articulate its purpose, specification, acceptance criteria, and growth trajectory. This template enforces that structure.
+
+  - type: input
+    id: irf-id
+    attributes:
+      label: IRF ID
+      description: "Unique identifier. Format: IRF-{ORGAN PREFIX}-{NNN} (e.g., IRF-SYS-024, IRF-CCE-021, IRF-LIQ-013). Check existing issues to avoid collision."
+      placeholder: "IRF-XXX-NNN"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "P0 — NOW: human-gated or zero-cost unblocking"
+        - "P1 — SOON: next session, clear path, no blockers"
+        - "P2 — GROWTH: extends existing capability"
+        - "P3 — HORIZON: future work, requires design"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: organ
+    attributes:
+      label: Target Organ
+      options:
+        - "SYSTEM (cross-organ)"
+        - "ORGAN-I (Theoria)"
+        - "ORGAN-II (Poiesis)"
+        - "ORGAN-III (Ergon)"
+        - "ORGAN-IV (Taxis)"
+        - "ORGAN-V (Logos)"
+        - "ORGAN-VI (Koinonia)"
+        - "ORGAN-VII (Kerygma)"
+        - "META-ORGANVM"
+    validations:
+      required: true
+
+  - type: textarea
+    id: telos
+    attributes:
+      label: Telos
+      description: "Why must this work exist? What ideal does it serve? What signal closure edges or constitutional obligations does it fulfill?"
+      placeholder: "This work exists because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: specification
+    attributes:
+      label: Specification
+      description: "Full spec: what needs to be done, how, constraints, dependencies. Be concrete."
+      placeholder: "The work consists of..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: done-criteria
+    attributes:
+      label: Done Criteria
+      description: "What must be true for this to be DONE? Every criterion must be independently verifiable."
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Owner
+      options:
+        - "Agent"
+        - "Human"
+        - "Human+Agent"
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: "What discovered this work? Session ID, audit name, vacuum fill, constitutional obligation, etc."
+      placeholder: "S42, N/A vacuum audit, AX-6 enforcement, etc."
+    validations:
+      required: true
+
+  - type: input
+    id: blocker
+    attributes:
+      label: Blocker
+      description: "What blocks this? Reference blocking issue number or 'None'."
+      placeholder: "None"
+
+  - type: textarea
+    id: growth-trajectory
+    attributes:
+      label: Growth Trajectory
+      description: "Where does this fit in the larger arc? What does it unlock downstream? What plan does it belong to?"
+      placeholder: "This item advances... and unlocks..."
+
+  - type: textarea
+    id: propagation
+    attributes:
+      label: Completion Propagation (10-Index Checklist)
+      description: "Which external indices need updating when this work completes? Check all that apply."
+      value: |
+        - [ ] **IRF** — move to completed
+        - [ ] **GitHub Issues** — close with commit SHA
+        - [ ] **Omega Scorecard** — advances criterion #___
+        - [ ] **Inquiry Log** — updates commission ___
+        - [ ] **Testament Chain** — significant system event
+        - [ ] **Concordance** — introduces/retires governance IDs
+        - [ ] **Registry** — changes repo state
+        - [ ] **Seed contracts** — changes capabilities/edges
+        - [ ] **CLAUDE.md** — changes modules/routes/architecture
+        - [ ] **Companion indices** — new locations/names/artifacts
