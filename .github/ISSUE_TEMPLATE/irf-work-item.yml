@@ -47,6 +47,29 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      description: "Which phase band does this item belong to? Phase determines energy range and execution order within the roadmap."
+      options:
+        - "α-Foundation (Energy 0-20) — constitutional, structural, schema-level"
+        - "β-Hardening (Energy 21-40) — validation, testing, CI, documentation"
+        - "γ-Automation (Energy 41-60) — tooling, CLI, pipelines, self-healing"
+        - "δ-Intelligence (Energy 61-80) — analytics, dashboards, adaptive systems"
+        - "ω-Sovereignty (Energy 81-100) — external-facing, self-sustaining, revenue-generating"
+    validations:
+      required: true
+
+  - type: input
+    id: energy
+    attributes:
+      label: Energy (0-100)
+      description: "Position within the phase band. Higher energy = closer to phase gate = execute sooner within this phase. Not a quality judgment — a coordinate."
+      placeholder: "e.g., 35"
+    validations:
+      required: true
+
   - type: textarea
     id: telos
     attributes:
