@@ -45,6 +45,15 @@ This is a **living governance instrument**, not a snapshot. Every session that p
 | DONE-S41-011 | Post-flood Reconstruction plan — River Ordinance as migration architecture, clean-room distillation, infection prevention protocol, meta-organvm as womb. | S41 | 2026-03-30 |
 | DONE-S41-012 | 5 genesis DNA documents tracked in git — 3,129 lines of genetic material now version-controlled. | S41 | 2026-03-30 |
 | DONE-S41-013 | IRF-LIQ-001 resolved — meta-organvm IS the womb, no new org needed. | S41 | 2026-03-30 |
+| DONE-S42-001 | Palingenesis spec v3 — modular synthesis architecture. 3 revisions: gravitational-collapse → two-container → modular-synthesis. {system}--{function} flat namespace. 12 biological system prefixes. 6 proofs by contradiction. | S42 | 2026-03-30 |
+| DONE-S42-002 | genome/ directory KILLED — proved genome is distributed intelligence (governance-rules.json + governance/*.py + post-flood/specs/). Cabinet unnecessary. Proof executable. | S42 | 2026-03-30 |
+| DONE-S42-003 | meta/ layer KILLED — proved redundant with instance. +1 depth for 0 operational gain. No operation requires it that a-organvm/ doesn't already provide. | S42 | 2026-03-30 |
+| DONE-S42-004 | orchestration/ layer KILLED — proved it reimplements organ ownership (V1 error). Function participation via formation.yaml replaces directory containment. LIQ-002. | S42 | 2026-03-30 |
+| DONE-S42-005 | 8 V1 organs → 8 capability dimensions. Departments dissolved into continuous participation profiles (0.0-1.0) computed by digestive--atomize from code analysis. Naming: theoria/poiesis/ergon/taxis/logos/koinonia/kerygma/self-knowledge. | S42 | 2026-03-30 |
+| DONE-S42-006 | V2 instance name decided: `a-organvm/` — indefinite article. One instance among infinite potential. The architecture is the species definition. The `a-` is a variable. | S42 | 2026-03-30 |
+| DONE-S42-007 | Three-container model proved: lifecycle--preserve/ (cold, chmod a-w), lifecycle--transform/ (hot, furnace), instance root (warm, living). Each proved necessary by contradiction. | S42 | 2026-03-30 |
+| DONE-S42-008 | Naming law: {system}--{function}. 3D identity (ontological × topological × SemVer). Sub-classification inside file as metadata, not in filename. schema.org as computed view (API), not stored artifact. | S42 | 2026-03-30 |
+| DONE-S42-009 | Total digestion protocol designed: mv V1 to cold → fresh git clone from GitHub (the soul) → formation.yaml from code analysis → no V1 seed.yaml crosses the river. Products = patches (assets + borrowed logic). | S42 | 2026-03-30 |
 
 ## Blocked` with blocking reason.
 4. When work becomes irrelevant, move to `## Archived` with reason.
@@ -104,6 +113,13 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 | IRF-SYS-028 | P2 | **Build allocative institution** — the economics of the organism. Resource allocation, token economy, attention budget, carrying capacity. Only 1 of 10 institutional classes with no ORGANVM expression. Identified via Three Pillars of Existence analysis. | Agent | S41 three pillars | Design needed |
 | IRF-SYS-029 | P1 | **Merge essay-pipeline PR #8** — AX-6 signal closure edges. Branch `feat/ax6-signal-closure-edges` is mergeable but blocked by `test` CI check. Need to ensure CI passes. | Agent | S41 | CI check |
 | IRF-SYS-030 | P1 | **Propagate AX-7 telos/pragma/praxis/receptio to seed.yaml schema** — update schema-definitions with v1.2 schema including the 4 tetradic fields + polis. Currently exemplar-only (sovereign-systems). Needs to be in the formal schema. | Agent | S41 AX-7/RR-6 | None |
+| IRF-SYS-031 | P0 | **Create `~/Workspace/a-organvm/` instance + `lifecycle--preserve/` + `lifecycle--transform/`** — the V2 container. Three directories. Spec: `.claude/plans/2026-03-30-palingenesis.md` v3. First physical act of the palingenesis. | Human+Agent | S42 palingenesis spec | None |
+| IRF-SYS-032 | P1 | **Build distillatio module** in organvm-engine — `cribrum.py`, `resolutio.py`, `distillatio.py`, `probatio.py`. The river made code. Spec: palingenesis.md v3. | Agent | S42 | IRF-SYS-031 |
+| IRF-SYS-033 | P1 | **Run cribrum --dry-run** against V1 formations — produce filtration report: alive/dead/isotope/noble-gas. 111 formations across 8 orgs. Human reviews before execution. Measurable heuristics, no vibes. | Agent | S42 | IRF-SYS-032 |
+| IRF-SYS-034 | P1 | **Decompose organvm-engine modules** — determine which of 36 domain modules are independent functions vs coupled subsystems. Each independent module rises to {system}--{function} level. resolutio.py computes signal signatures per module. | Agent | S42 modular synthesis | IRF-SYS-032 |
+| IRF-SYS-035 | P1 | **Design Python packaging for {system}--{function} flat namespace** — how do .py function files import each other? Single package? Namespace package? Monorepo pyproject.toml? Must resolve before distillation. | Agent | S42 open question | None |
+| IRF-SYS-036 | P1 | **Design git architecture for a-organvm/** — is it a git repo? Superproject? How does .gitmodules work for product formations? Must resolve before distillation. | Agent | S42 open question | None |
+| IRF-SYS-037 | P2 | **SOP filtration** — apply cribrum heuristics (cosine similarity, liveness, V1-era detection) to 84 governance docs (67 SOPs + 17 ops docs). Produce merge/fuse/archive report. Human review gate. | Agent | S42 | IRF-SYS-032 |
 | IRF-SKL-001 | P2 | Map 142 skills to design-process phases for auto-triggering | Agent | Wants list | Needs phase taxonomy designed |
 | IRF-SKL-002 | P2 | Implement hook-based triggering for "universal standards" tier skills | Agent | Wants list | Depends on IRF-SKL-001 |
 | IRF-SKL-003 | P2 | Skills governance metadata enrichment — continue from S17 baseline | Agent | S17 | None |
