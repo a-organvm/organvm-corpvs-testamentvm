@@ -636,3 +636,41 @@ Source: `organvm-mcp-server/src/organvm_mcp/` — tools exposed via MCP stdio pr
 ---
 
 *This concordance was last updated on 2026-03-26. It should be updated when TODO items are completed, new IDs are created, or omega criteria change status. The `scripts/invoke.py` CLI tool parses this file directly — keep the markdown table format consistent.*
+
+---
+
+## Conductor Fleet Dispatch (added S-dispatch, 2026-03-30)
+
+System-wide cognitive service dispatch — routes tasks to AI agents by work type.
+
+### Concepts
+
+| Term | Definition | Location |
+|------|-----------|----------|
+| `cognitive-service-dispatch` | Produces edge: the dispatch capability as a system artifact | `tool-interaction-design/seed.yaml` |
+| `work_types.yaml` | Taxonomy of 8 cognitive work types with class hierarchy | `tool-interaction-design/conductor/work_types.yaml` |
+| `cognitive_class` | Hierarchy: `strategic > tactical > mechanical`. Agents have `max_cognitive_class` restrictions | `fleet.yaml` restrictions block |
+| `TaskDispatcher` | Classifies work descriptions and routes to constrained agents via `FleetRouter` | `conductor/task_dispatcher.py` |
+| `GuardrailedHandoffBrief` | Extended handoff envelope with `constraints_locked`, `files_locked`, `work_completed`, `conventions`, `verification_required` | `conductor/fleet_handoff.py` |
+| `CrossVerifier` | Verifies agent output against handoff constraints (locked files, never-touch patterns, convention drift) | `conductor/cross_verify.py` |
+| `active-handoff.md` | Canonical file receiving agents read on session start. Written/cleared by dispatch lifecycle | `.conductor/active-handoff.md` |
+
+### MCP Tools
+
+| Tool | Description |
+|------|-------------|
+| `conductor_fleet_dispatch` | Classify work and route to best-fit agent. Returns ranked agents with exclusion reasons |
+| `conductor_fleet_guardrailed_handoff` | Generate constraint-carrying envelope for agent handoff. Auto-writes active-handoff.md |
+| `conductor_fleet_cross_verify` | Verify agent output against handoff constraints. Auto-clears active-handoff.md on pass |
+
+### Session IDs
+
+| ID | Session | Date |
+|----|---------|------|
+| `S-dispatch` | Cognitive Service Dispatch design + implementation + fleet execution | 2026-03-30 |
+
+### Inquiry
+
+| ID | Title |
+|----|-------|
+| `INQ-2026-010` | The Fleet Protocol — task-to-agent routing with guardrailed handoff |

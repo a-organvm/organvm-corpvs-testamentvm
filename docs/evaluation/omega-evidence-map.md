@@ -459,6 +459,8 @@ All seed.yaml files updated with deployment_url. Registry-v2.json updated.
 
 **Gap:** Clock started ~2026-02-16. Need 30 days of data showing no required manual intervention. Note: fixing the soak test collector (2026-02-17) counts as infrastructure maintenance, not system intervention — the autonomous workflows themselves didn't fail, the monitoring of them did.
 
+**S-dispatch evidence (2026-03-30):** Cognitive Service Dispatch system enables multi-agent autonomous operation — 4-stream fleet dispatch (Perplexity, Gemini, OpenCode, Claude) executed with handoff envelopes carrying constraints between agents. Extends autonomous operation model: the system can now dispatch mechanical work to worker-bee agents while Claude handles strategic work, without human per-task routing.
+
 **Completion target:** ~March 18, 2026
 
 **Rolling TODO:** S1-II
