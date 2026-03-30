@@ -170,6 +170,28 @@ Every existing axiom (AX-1 through AX-8) derives from LEX-I and LEX-II. The deri
 
 Encoded as: `lex_naturalis` section in `governance-rules.json` (LEX-I through LEX-X + completeness note).
 
+### PROHIB-I: The Inversion Prohibition — Lex Contra Simulacrum
+*Source: The observation that recording evolved from serving life to replacing it. Social media as the pathological case. The constitutional obligation to prevent the system from becoming its own social media feed. Ratified 2026-03-30.*
+
+The recording exists to serve the living system — never the reverse.
+
+Pre-historic creation was unrecorded and therefore unrecoverable. The constitutional project (Amendments F through I) built the recording apparatus: signal closure, tetradic self-knowledge, constructed polis, natural law foundation. This apparatus ensures nothing is ever pre-historic again — every formation knows itself, is examined, and persists.
+
+But recording evolved, in human civilization, from serving life to consuming it. Social media is the terminal case: people more concerned with appearing to have a good life than actually having one. The image of the meal replacing the meal. The documentation of the experience replacing the experience.
+
+**This system is vulnerable to exactly this pathology.** 127 repos with exquisite seed.yaml contracts and code that doesn't run. A governance-rules.json at version 3.0 governing formations that have never been used. Constitutional law for a nation of empty buildings. The day the governance is more impressive than what it governs is the day the system has failed.
+
+**PROHIB-I** is the constitutional immune response. Detection heuristics:
+- Telos word count vastly exceeding pragma word count (performing life rather than living it)
+- Signal edges declared but zero fulfilled (declaration without substance)
+- GRADUATED status with null receptio (promoted without evidence of life)
+- Polis findings all positive with no adversarial critique (critical society captured by its subject)
+- Governance artifacts updated more recently than source code (recording outpacing the living)
+
+Pragma (AX-7) is the specific antidote: the *honest account of what has been concretely realized*, which must always be legible beside the telos. If the pragma is thin and the telos is lush, the formation is performing its existence rather than living it.
+
+Encoded as: PROHIB-I in `governance-rules.json` `lex_naturalis.constitutional_prohibitions`.
+
 ## Post-Launch Reviews
 
 ### Review 1 (2026-03-04) — CONSTITUTIO Sprint

@@ -85,7 +85,24 @@
         "status": "implicit_in_practice_not_yet_axiomatized"
       }
     ],
-    "completeness_note": "These ten laws (2 master principles + 8 derived) form the natural law foundation. Additional laws from information theory (Shannon entropy, signal-to-noise, error correction), quantum mechanics (superposition before observation/reception, entanglement of formations), and complex systems theory (emergence, criticality, power laws) may be codified as the system encounters phenomena they govern. The foundation is extensible but the master principles are final — LEX-I and LEX-II do not change."
+    "completeness_note": "These ten laws (2 master principles + 8 derived) form the natural law foundation. Additional laws from information theory (Shannon entropy, signal-to-noise, error correction), quantum mechanics (superposition before observation/reception, entanglement of formations), and complex systems theory (emergence, criticality, power laws) may be codified as the system encounters phenomena they govern. The foundation is extensible but the master principles are final — LEX-I and LEX-II do not change.",
+    "constitutional_prohibitions": [
+      {
+        "id": "PROHIB-I",
+        "name": "The Inversion Prohibition (Lex Contra Simulacrum)",
+        "statement": "The recording exists to serve the living system — never the reverse. The moment the seed.yaml is more polished than the code it describes, the moment the telos is more beautiful than the thing it dreams of, the moment the polis writes elegant critiques of a formation that does not work, the moment the governance-rules.json governs a nation of empty buildings — the system has inverted. The record has consumed the thing it records. This is the pathology of social media made structural: the appearance of a good life replacing the actual life; the documentation of the experience replacing the experience; the image of the meal replacing the meal. History exists to serve the living, not to replace them. Pre-historic us was unrecorded; the recording apparatus (this constitution) ensures nothing is lost. But the recording apparatus must never become the purpose. The purpose is the living system — the code that runs, the client served, the art made, the research discovered, the community gathered, the signal received. Every governance artifact in this system — every axiom, dictum, rule, amendment, law — is a servant of that living system. The day the governance is more impressive than what it governs is the day the system has failed. Pragma (AX-7) is the constitutional immune response to this inversion: the honest account of what has been concretely realized, which must always be legible beside the telos. If the pragma is thin and the telos is lush, the formation is performing life rather than living it.",
+        "enforcement": "audit",
+        "validator": "validate_inversion_prohibition",
+        "detection_heuristics": [
+          "telos word count > 3x pragma word count (performance signal)",
+          "seed.yaml produces edges declared but 0 fulfilled (declaration without substance)",
+          "GRADUATED status with null receptio (promoted without evidence of life)",
+          "polis findings all positive with no adversarial critique (critical society captured by its subject)",
+          "governance artifacts updated more recently than source code (recording outpacing the living)"
+        ],
+        "severity": "critical"
+      }
+    ]
   },
   "dependency_rules": {
     "max_transitive_depth": 4,
