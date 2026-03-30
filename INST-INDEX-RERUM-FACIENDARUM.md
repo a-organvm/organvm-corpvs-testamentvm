@@ -1163,7 +1163,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-review):** INST domain corrected 2→20 (was undercounted since S37 creation). IRF-INST-002/IRF-APP-015 downgraded P0→P3 (CC deferred). +2 new INST items (019, 020). +1 DONE (284). Full stats refresh needed.
+Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-review):** INST domain corrected 2→23 (was undercounted since S37 creation; +5 new items 019-023). IRF-INST-002/IRF-APP-015 downgraded P0→P3 (CC deferred). +1 DONE (284). Full stats refresh needed.
 
 - **Total IRF items:** 526
 - **Open:** 264 (261 prior - 3 VOX closed + 5 new VOX + 1 stat adjust)
@@ -1214,7 +1214,7 @@ Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-
 | KER | 2 |
 | BLK | 2 |
 | DWV | 2 |
-| INST | 20 |
+| INST | 23 |
 | TST | 1 |
 
 ### Effort Distribution (Research Programme)
@@ -1277,6 +1277,9 @@ Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-
 | IRF-INST-018 | P1 | **Create `cvrsvs-honorvm` repo and begin extraction** — New repo `meta-organvm/cvrsvs-honorvm`. Extract promotion state machine, dependency validator, seed contract parser from organvm-engine. Replace hardcoded ORGAN_LEVELS with configurable tier system. PyPI name: `cvrsvs-honorvm`. This is NLnet Task T1 (120 hours budgeted). Can begin before grant decision — demonstrates "building, not just applying." | Agent | S38 NLnet application | None (but validates NLnet abstract claim of "already extracting") |
 | IRF-INST-019 | P2 | **Omega criterion gap: no artistic output metric.** The omega scorecard (17 criteria) has no criterion for artistic output — the experiential/sensory layer that art funders evaluate. CC funder-fit failure (S-CC-review) exposed this: system has no mechanism to track progress toward producing art audiences encounter. Research: what would an "Artistic Evidence" omega criterion measure? Generative Testament readiness? Exhibition-ready artifacts? Public sensory encounters? Propose criterion and add to omega scorecard. | Agent | S-CC-review vacuum | omega scorecard architecture |
 | IRF-INST-020 | P2 | **Funder-fit gate as standard process.** Formalize the funder-fit assessment protocol (S-CC-review) into an SOP or checklist in `aerarium--res-publica/docs/`. Protocol: (1) analyze what funder actually funds (winners, not mission), (2) inventory what we currently have (not aspiration), (3) assess alignment, (4) go/no-go before drafting. Currently exists only in Claude persistent memory. Should be a document any agent can execute. | Agent | S-CC-review process | None |
+| IRF-INST-021 | P2 | **Institutional inquiry-log missing.** `praxis-perpetua/commissions/inquiry-log.yaml` tracks SGO research commissions (INQ-YYYY-NNN). No equivalent exists for institutional strategy inquiries — funder assessments, entity formation research, IP policy decisions. Each is a systematic inquiry with a question, method, and answer. Design: extend inquiry-log.yaml with an `institutional` faculty, or create `aerarium--res-publica/inquiry-log.yaml` as a parallel instrument. Log S-CC-review ("Does CC fund what we make?") as first entry. | Agent | S-CC-review vacuum (inquiry-log N/A) | Design decision: extend vs parallel |
+| IRF-INST-022 | P2 | **Concordance session ID namespace.** The concordance (`concordance.md`) had no namespace for named session IDs (`S-*` pattern: S-CC-review, S-client-pillar, S-signal-closure, S-vox-build-2). Pattern added to ID cheat sheet (S-CC-review). But no registry of which sessions exist, what they produced, or their lifecycle. The IRF DONE entries reference session IDs but there's no reverse lookup. Research: should session IDs get their own concordance section? Or is the IRF DONE table sufficient? | Agent | S-CC-review vacuum (concordance N/A) | Design decision |
+| IRF-INST-023 | P3 | **GitHub issue parity for all IRF-INST items.** aerarium--res-publica has 5 GitHub issues (GH#1-4 from S38, GH#5 from S-CC-review). 23 IRF-INST items exist. 18 have no corresponding GitHub issue. Not all need one (some are sub-items), but every P0-P1 should have tracking. Audit and create missing issues. | Agent | S-CC-review vacuum (GitHub Issues N/A) | None |
 
 ### S35 Discovered Items
 

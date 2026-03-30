@@ -47,6 +47,9 @@ python3 scripts/invoke.py --list               # list all namespaces and counts
 | `SGO-YYYY-RP-NNN` | SGO research papers | SGO-2026-RP-002 |
 | `SGO-YYYY-SYN-NNN` | SGO synthesis papers | SGO-2026-SYN-02 |
 | `SGO-YYYY-D-NNN` | SGO dissertations | SGO-2026-D-003 |
+| `S-\w+` | Named session IDs (non-numeric) | S-CC-review |
+| `DONE-NNN` | IRF completion entries | DONE-284 |
+| `GH#NNN` | GitHub issue references (per-repo) | GH#5 (aerarium) |
 
 ---
 
