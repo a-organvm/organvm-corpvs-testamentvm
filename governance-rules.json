@@ -261,6 +261,24 @@
         "validator": "validate_organ_placement",
         "references": ["organ-definitions.json", "governance/dictums.py", "docs/standards/13-organ-identity-and-placement.md"],
         "severity": "warning"
+      },
+      {
+        "id": "AX-6",
+        "name": "Signal Closure (Lex Necessitatis)",
+        "statement": "The organ system is logically closed under its own axioms. Given the definitions of organ functions (OD-I through OD-META), the canonical signal flows (Constitutional Map §8), and the epistemic membrane requirement (AX-2), any activity within an organ that necessarily produces outputs belonging to other organs creates an immediate structural obligation: those outputs must exist as declared produces/consumes edges, with corresponding formations to receive them. An entailed output that exists nowhere is not a future consideration but a present violation — the system asserting its axioms while denying their conclusions. What is omitted here must, by law, exist elsewhere. What exists nowhere is a vacuum that constitutional law mandates be filled. The entailment_flows section defines the minimum organ-to-organ signal connectivity.",
+        "enforcement": "audit",
+        "validator": "validate_signal_closure",
+        "references": ["constitution.md Amendment F", "entailment_flows", "constitutional-map.md §8 Signal Flows"],
+        "severity": "critical"
+      },
+      {
+        "id": "AX-7",
+        "name": "Triadic Self-Knowledge (Lex Reflexionis)",
+        "statement": "Every non-archived formation is the concrete realization of an idealized form. That ideal form has three constitutive dimensions that must be explicitly articulated: (1) TELOS — the theory, thesis, or dream that called the formation into existence; the intersectional functionalities it idealizes; (2) PRAGMA — the honest account of what has been concretely realized; the delta between the dream and the thing built; (3) PRAXIS — the remediation plan for closing the gap between ideal and real; the attack vectors for sharpening, fortifying, and resolving the difference. These are not metadata annotations — they are constitutive of the formation's self-knowledge. A formation that cannot articulate its own telos, pragma, and praxis does not fully know itself, and a formation that does not know itself cannot participate coherently in signal flows. Insights and theories are not ephemeral — they are structural obligations of every directory in the system.",
+        "enforcement": "audit",
+        "validator": "validate_triadic_self_knowledge",
+        "references": ["constitution.md Amendment G", "seed.yaml telos/pragma/praxis fields", "AX-6 Signal Closure"],
+        "severity": "warning"
       }
     ],
     "organ_dictums": {
@@ -403,6 +421,16 @@
         "references": ["constitution.md Article VI", "governance/state_machine.py"],
         "severity": "warning",
         "applies_to": "all repos"
+      },
+      {
+        "id": "RR-6",
+        "name": "Triadic Articulation",
+        "statement": "Every non-archived repository must articulate the three dimensions of AX-7 (Triadic Self-Knowledge). The seed.yaml contract must include a `telos` field (the idealized form — why this formation was conceived, what intersectional functionalities it embodies), a `pragma` field (the concrete realization — what has been built, the honest delta between dream and reality), and a `praxis` field (the remediation plan — specific attack vectors for closing the gap between ideal and real, including known failures, deficiencies, and the path to resolving them). Empty or placeholder values are violations. The three fields together constitute the formation's self-knowledge and are consumed by audit, context generation, and signal routing systems.",
+        "enforcement": "audit",
+        "validator": "validate_triadic_articulation",
+        "references": ["AX-7 Triadic Self-Knowledge", "seed.yaml schema v1.2"],
+        "severity": "warning",
+        "applies_to": "all non-archived repos"
       }
     ]
   },
@@ -459,6 +487,20 @@
         "statement": "RESERVOIR formations may emit ANNOTATED_CORPUS (Σ), ARCHIVE_PACKET (Π), PEDAGOGICAL_UNIT (Ρ), and FAILURE_REPORT (Ε). They may NOT emit ONT_FRAGMENT (Φ) or RULE_PROPOSAL (Λ). This prevents memory from silently becoming hidden governance. Extended from Formation Protocol §15.",
         "enforcement": "audit",
         "severity": "critical"
+      },
+      {
+        "id": "LIQ-008",
+        "name": "Signal Closure Across Functions",
+        "statement": "Every function that generates activity necessarily entails signal outputs destined for other functions. These entailments are logical consequences of the function definitions and the canonical signal flows — not optional routes. A function's signal signature (LIQ-003) must declare all entailed outputs, not only primary ones. Absence of an entailed output edge where one is logically necessary is a structural violation equivalent in kind to a back-edge violation (AX-1). The entailment_flows in governance-rules.json define the minimum inter-function signal connectivity required for system closure.",
+        "enforcement": "audit",
+        "severity": "warning"
+      },
+      {
+        "id": "LIQ-009",
+        "name": "Reflexive Knowledge Obligation",
+        "statement": "Every formation must maintain explicit self-knowledge in three dimensions: telos (the idealized form it aspires to realize), pragma (the concrete state of what has been built), and praxis (the plan for closing the gap). In the liquid model, these are not static metadata but living documents that evolve as the formation participates in functions, emits and receives signals, and accumulates experience. The telos is the formation's contribution to the organism's purpose. The pragma is the formation's honest self-assessment. The praxis is the formation's growth plan. Together they constitute the formation's reflexive capacity — its ability to know itself well enough to participate coherently in the signal graph. A formation without reflexive knowledge is a black box that the organism cannot route signals through intelligently.",
+        "enforcement": "audit",
+        "severity": "warning"
       }
     ]
   },
@@ -466,5 +508,89 @@
     "note": "Existing rules referencing ORGAN-I, ORGAN-II, etc. remain valid during migration to the liquid constitutional order. Legacy organ keys should be interpreted through the legacy_organ_map in organ-definitions.json v2.0. No existing axiom, dictum, or repo rule is repealed by SPEC-019; the liquid rules are additive.",
     "legacy_key_status": "active_during_migration",
     "migration_authority": "organ-definitions.json v2.0 legacy_organ_map"
+  },
+  "entailment_flows": {
+    "schema_version": "1",
+    "preamble": "Derived from the canonical signal flows (Constitutional Map §8) and organ function definitions (OD-I through OD-META). These are logical entailments: if the axioms hold, these flows are necessary. Entailments operate at the organ level — if an organ has active work, the listed target organs must contain at least one formation receiving the signal. Individual repos declare specific edges in seed.yaml; this matrix governs minimum organ-to-organ connectivity. Law is law; logic dictateth.",
+    "canonical_flows": {
+      "generative": "I → II → III",
+      "coordination": "III → IV → all",
+      "interpretive": "III → V → VI → VII",
+      "feedback": "VII / VI / V → I",
+      "feedfront": "META / I → II / III"
+    },
+    "organ_entailments": [
+      {
+        "source": "ORGAN-I",
+        "activity": "theoretical_research",
+        "entails": [
+          {"target": "ORGAN-II", "signal": "creative-derivation", "flow": "generative", "rationale": "Theory demands artistic realization"},
+          {"target": "ORGAN-V", "signal": "public-discourse", "flow": "interpretive", "rationale": "Research must be articulated publicly"},
+          {"target": "ORGAN-VII", "signal": "distribution", "flow": "interpretive", "rationale": "Articulated research must be distributed"}
+        ]
+      },
+      {
+        "source": "ORGAN-II",
+        "activity": "creative_production",
+        "entails": [
+          {"target": "ORGAN-III", "signal": "commercialization", "flow": "generative", "rationale": "Art generates applied potential"},
+          {"target": "ORGAN-V", "signal": "documentation", "flow": "interpretive", "rationale": "Creative work must be documented and interpreted"},
+          {"target": "ORGAN-VI", "signal": "community-material", "flow": "interpretive", "rationale": "Art feeds community engagement"},
+          {"target": "ORGAN-VII", "signal": "distribution", "flow": "interpretive", "rationale": "Creative output must be announced"}
+        ]
+      },
+      {
+        "source": "ORGAN-III",
+        "activity": "commercial_operation",
+        "entails": [
+          {"target": "ORGAN-V", "signal": "process-documentation", "flow": "interpretive", "rationale": "Commercial work produces public process narrative"},
+          {"target": "ORGAN-VI", "signal": "community-growth", "flow": "interpretive", "rationale": "Products require and produce community"},
+          {"target": "ORGAN-VII", "signal": "distribution-signal", "flow": "interpretive", "rationale": "Commercial activity demands distribution"},
+          {"target": "ORGAN-I", "signal": "research-feedback", "flow": "feedback", "rationale": "Applied work generates theoretical insights"},
+          {"target": "ORGAN-IV", "signal": "coordination", "flow": "coordination", "rationale": "Commercial operations require orchestration"}
+        ]
+      },
+      {
+        "source": "ORGAN-V",
+        "activity": "public_discourse",
+        "entails": [
+          {"target": "ORGAN-VII", "signal": "distribution", "flow": "interpretive", "rationale": "Published discourse must be distributed"},
+          {"target": "ORGAN-I", "signal": "theoretical-feedback", "flow": "feedback", "rationale": "Public writing generates theoretical reflection"}
+        ]
+      },
+      {
+        "source": "ORGAN-VI",
+        "activity": "community_engagement",
+        "entails": [
+          {"target": "ORGAN-V", "signal": "reflection", "flow": "interpretive", "rationale": "Community activity produces discourse"},
+          {"target": "ORGAN-VII", "signal": "announcement", "flow": "interpretive", "rationale": "Community events require distribution"},
+          {"target": "ORGAN-I", "signal": "feedback", "flow": "feedback", "rationale": "Community engagement feeds theory"}
+        ]
+      },
+      {
+        "source": "ORGAN-VII",
+        "activity": "distribution",
+        "entails": [
+          {"target": "ORGAN-I", "signal": "audience-feedback", "flow": "feedback", "rationale": "Distribution generates reception data feeding theory"}
+        ]
+      },
+      {
+        "source": "ORGAN-IV",
+        "activity": "orchestration",
+        "entails": [
+          {"target": "ORGAN-V", "signal": "governance-documentation", "flow": "interpretive", "rationale": "Governance decisions must be publicly documented"}
+        ]
+      },
+      {
+        "source": "META-ORGANVM",
+        "activity": "constitutional_governance",
+        "entails": [
+          {"target": "ORGAN-IV", "signal": "governance-rules", "flow": "feedfront", "rationale": "Constitutional law feeds orchestration"},
+          {"target": "ORGAN-V", "signal": "constitutional-documentation", "flow": "interpretive", "rationale": "Governance must be publicly articulated"},
+          {"target": "ORGAN-I", "signal": "theoretical-grounding", "flow": "feedfront", "rationale": "Governance provides theoretical substrate"}
+        ]
+      }
+    ],
+    "enforcement_note": "Entailment violations are surfaced by `organvm governance audit --signal-closure`. Each missing entailed edge generates an IRF-VAC entry. Zero-cost fills (creating a seed.yaml produces edge) are executed immediately; structural fills (creating a new formation) are logged as IRF items."
   }
 }
