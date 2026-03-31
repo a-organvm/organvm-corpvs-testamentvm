@@ -410,6 +410,12 @@ Verified on disk 2026-03-20:
 | IRF-OSS-015 | P1 | Concordance update — new IDs: Testament Articles I-XIII, campaign phases (5), backflow types (6), "The Plague" campaign name. | Agent | S32 vacuum audit | Concordance file location |
 | IRF-OSS-016 | P1 | Registry description update — orchestration-start-here: "3 Python scripts" → 10 modules, 111 tests, campaign/outreach/backflow. Stale. | Agent | S32 vacuum audit | None |
 | IRF-OSS-017 | P0 | Seed.yaml refresh — orchestration-start-here 15 days stale. Add produces: campaign_data, outreach_data, backflow_data, testament_formalization. Add consumes: github_pr_states, application_pipeline_signals. Bump last_validated. | Agent | S32 vacuum audit | None |
+| IRF-OSS-022 | P1 | Implement Fieldwork Intelligence System — spec v4.0 at `docs/superpowers/specs/2026-03-30-fieldwork-intelligence-system-design.md`. MVP: `record()` + `fieldwork.yaml` + FieldObservation model. Then dossier compilation, then synthesis, then knowledge output detection. 15+ Pydantic models defined. | Agent | S-plague (fieldwork design) | Spec needs cold-eye review before build |
+| IRF-OSS-023 | P1 | Retroactive fieldwork observations — 24 repos of accumulated process intelligence exists in session memory. Dump initial observations per repo (merge protocol, CI, review culture observed during contributions) into fieldwork.yaml to bootstrap the system. | Agent | S-plague (fieldwork design) | IRF-OSS-022 |
+| IRF-OSS-024 | P2 | Fieldwork → Knowledge Output pipeline — auto-detect comparison studies, tutorials, contribution playbooks from cross-repo synthesis. First candidate: "Merge Protocol Taxonomy: CLA vs DCO vs None Across 24 Projects" (ORGAN-V). | Agent | S-plague (fieldwork design) | IRF-OSS-022 |
+| IRF-OSS-025 | P1 | Seed.yaml refresh — add produces: fieldwork_data, dossier_data, knowledge_outputs. Add new module: fieldwork.py. Update test count (150→expected 180+ after fieldwork). | Agent | S-plague (fieldwork design) | IRF-OSS-022 |
+| IRF-OSS-026 | P2 | Scout remaining 7 targets — serena (22K★), git-mcp (7.8K★), p5.js (23.5K★), nannou (6.6K★), signoz (26K★) scouted but not launched. Launch when bandwidth permits. p5.js and nannou are ORGAN-II creative territory (untouched). | Agent | S-plague (scout) | Bandwidth |
+| ~~IRF-OSS-011~~ | ~~P1~~ | ~~GitHub Issues for S32 work~~ — **PARTIALLY DONE** (DONE-292: 22 issues on a-organvm/a-organvm, public project board). Remaining: Testament codification issues, campaign module expansion issues not yet issued. | Agent | S32 vacuum audit | Downgrade to P2, partial |
 
 ---
 
@@ -1169,6 +1175,10 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-288 | **validate_signal_closure (AX-6) implemented.** OpenCode dispatched via handoff envelope. Implemented in organvm-engine/governance/dictums.py. CLI: `organvm governance audit --signal-closure`. 22 AX-6 violations found. 8 tests. Pushed to main. | S-dispatch | 2026-03-30 |
 | DONE-289 | **Essay-pipeline PR #8 merged.** AX-6 consumes edges declared. enforce_admins temporarily disabled for merge, re-enabled after. | S-dispatch | 2026-03-30 |
 | DONE-290 | **Grant research landed.** 4 Perplexity research docs: Sovereign Tech Fellowship (deadline April 6), ZKM Rauschenberg (deadline April 12), Creative Capital winners analysis (pattern for application), Aspiration Tech fiscal sponsorship (status verification). All committed to aerarium--res-publica/research/. | S-dispatch | 2026-03-30 |
+| DONE-291 | **3 new PRs submitted** — a2aproject/a2a-python #915 (TenantTransportDecorator export, first A2A presence), pydantic/pydantic-ai #4912 (OpenAI Responses token counting, DouweM-specified approach), dapr/dapr #9719 (bulk subscription fallthrough fix, first Go contribution, DCO-signed). Portfolio: 24 repos, 1 merged, 1 closed, 22 open. | S-plague | 2026-03-30 |
+| DONE-292 | **Public tracking board created** — GitHub Projects V2 at a-organvm/projects/2. 22 issues (#26-#47) in a-organvm/a-organvm with 6 custom fields (Phase, Domain, Language, Wave, Income Signal, Relationship Score). All 22 items linked and fields populated. Partially addresses IRF-OSS-011. | S-plague | 2026-03-30 |
+| DONE-293 | **Fieldwork Intelligence System spec v4.0** — 4-layer process observation architecture (stream→dossier→synthesis→knowledge output). Three axes: avoid↔absorb, shatterpoint↔fortress, knowledge output type. Hardened through 3 adversarial rounds (18 findings, 12 applied). Spec at `docs/superpowers/specs/2026-03-30-fieldwork-intelligence-system-design.md`. | S-plague | 2026-03-30 |
+| DONE-294 | **10 new targets scouted** — a2a-python (1.8K★), pydantic-ai (16K★), dapr (25.6K★), serena (22K★), git-mcp (7.8K★), p5.js (23.5K★), nannou (6.6K★), signoz (26K★). 3 launched immediately. | S-plague | 2026-03-30 |
 
 ---
 
@@ -1203,7 +1213,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-review):** INST domain corrected 2→23 (was undercounted since S37 creation; +5 new items 019-023). IRF-INST-002/IRF-APP-015 downgraded P0→P3 (CC deferred). +1 DONE (284). Full stats refresh needed.
+Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-review + S-plague):** INST domain corrected. +4 DONE (291-294: 3 new PRs, project board, fieldwork spec, scout). +5 new OSS items (022-026: fieldwork impl, retroactive obs, knowledge outputs, seed refresh, scout remaining). IRF-OSS-011 partially closed (DONE-292). Full stats refresh needed.
 
 - **Total IRF items:** 526
 - **Open:** 264 (261 prior - 3 VOX closed + 5 new VOX + 1 stat adjust)
