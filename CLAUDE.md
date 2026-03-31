@@ -10,9 +10,9 @@ This is a **planning and governance documentation corpus** — not a source code
 **Status:** LAUNCHED (2026-02-11) — all 8 organs OPERATIONAL
 **Repository:** `meta-organvm/organvm-corpvs-testamentvm`
 <<<<<<< HEAD
-**Documentation deployed:** ~766K+ words across 127 repos + 8 org profiles + 0 meta-system essays
+**Documentation deployed:** ~404K+ words across 128 repos + 8 org profiles + 29 meta-system essays
 ||||||| 905f85c
-**Documentation deployed:** ~404K+ words across 127 repos + 8 org profiles + 29 meta-system essays
+**Documentation deployed:** ~404K+ words across 128 repos + 8 org profiles + 29 meta-system essays
 =======
 **Documentation deployed:** ~404K+ words across 128 repos + 8 org profiles + 29 meta-system essays
 >>>>>>> 058f269af2f5047a7873ae1949e64979f558ca81
