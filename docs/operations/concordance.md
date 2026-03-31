@@ -157,7 +157,10 @@ Universal work registry. 26 domain prefixes:
 | IRF-CCE-027 | Post Office discover endpoint uses wrong API (gizmos ≠ Projects) | P2 | Blocked by CCE-026 |
 | ~~IRF-CCE-028~~ | ~~Devise handoff documents for 6 open GH issues~~ — DONE-301 | ~~P1~~ | `conversation-corpus-engine@593c60d` |
 | IRF-CCE-029 | Testament vacuum: S38/S39/S40 have no testament files | P2 | None |
-| IRF-CCE-030 | S40 code committed in S41 close-out (was uncommitted +470 lines) | P2 | Resolved S41 |
+| ~~IRF-CCE-030~~ | ~~S40 code committed in S41 close-out~~ — DONE-302 | ~~P2~~ | `conversation-corpus-engine@593c60d` |
+| IRF-CCE-031 | CCE has no inquiry-log.yaml (SGO research vacuum) | P2 | None |
+| IRF-CCE-032 | Omega format specimen missing from GH#14 handoff | P2 | None |
+| IRF-CCE-033 | Execute CCE commercial architecture (H1: PyPI, MCP, landing page) | P1 | Spec approved S41 |
 
 #### Hermeneus API Routes (S28, 2026-03-21)
 
