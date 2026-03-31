@@ -457,6 +457,10 @@ Verified on disk 2026-03-20:
 | IRF-OSS-030 | P3 | Clean 3 unused imports — `campaign.py` (CampaignAction, CampaignPhase), `orchestrator.py` (Any), `schemas.py` (datetime, Any). Mechanical cleanup. | Agent | S-fieldwork-mvp health audit | None |
 | IRF-OSS-031 | P2 | Add `capabilities.py` dedicated test file — only contrib_engine module without its own test file (tested indirectly through scanner tests). Add `test_contrib_capabilities.py` with match_capabilities and get_capability tests. | Agent | S-fieldwork-mvp health audit | None |
 | ~~IRF-OSS-011~~ | ~~P1~~ | ~~GitHub Issues for S32 work~~ — **PARTIALLY DONE** (DONE-292: 22 issues on a-organvm/a-organvm, public project board). Remaining: Testament codification issues, campaign module expansion issues not yet issued. | Agent | S32 vacuum audit | Downgrade to P2, partial |
+| IRF-OSS-032 | **P1** | **Action Ledger Phase 5 — Integration.** Wire contrib_engine modules to emit actions into the ledger. fieldwork.py, campaign.py, monitor.py should call ledger.record() on state transitions. Phases 1-4 built (schemas, ledger, routes, cycles — 57 tests, 221 total suite). | Agent | S-action-ledger session (2026-03-31) | None |
+| IRF-OSS-033 | **P1** | **Action Ledger + Dispatch Ledger convergence.** The action ledger (orchestration-start-here) and dispatch ledger (tool-interaction-design/conductor/) are the same system at different scales, built independently on consecutive days. Dispatch receipt → action type, timecard → sequence, energy → param axes, scorecard → cycle detection. Must converge. See `project_temporal_convergence.md`. | Agent | S-action-ledger session (2026-03-31) | IRF-OSS-032, IRF-CND-001 |
+| IRF-OSS-034 | P2 | **Action Ledger design spec** — write formal spec to `docs/superpowers/specs/2026-03-31-action-ledger-design.md`. Plan exists (`.claude/plans/scalable-baking-conway.md`) but formal spec not yet written. | Agent | S-action-ledger session (2026-03-31) | None |
+| IRF-OSS-035 | P2 | **TypeScript dead code archive** — 572 lines in `src/agents/` and `src/dreamcatcher/` (dispatcher.ts, metasystem-manager.ts, router.ts, watchman.ts). Legacy Dreamcatcher prototype. Archive or delete. | Agent | S-fieldwork-mvp vacuum audit | None |
 
 ---
 
@@ -1295,10 +1299,10 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-review + S-plague):** INST domain corrected. +4 DONE (291-294: 3 new PRs, project board, fieldwork spec, scout). +5 new OSS items (022-026: fieldwork impl, retroactive obs, knowledge outputs, seed refresh, scout remaining). IRF-OSS-011 partially closed (DONE-292). Full stats refresh needed.
+Refreshed 2026-03-25 via `organvm irf stats`. **Partial update 2026-03-30 (S-CC-review + S-plague):** INST domain corrected. +4 DONE (291-294: 3 new PRs, project board, fieldwork spec, scout). +5 new OSS items (022-026: fieldwork impl, retroactive obs, knowledge outputs, seed refresh, scout remaining). IRF-OSS-011 partially closed (DONE-292). **Partial update 2026-03-31 (S-action-ledger):** +4 new OSS items (032-035: action ledger Phase 5, convergence, design spec, TS dead code). Full stats refresh needed.
 
-- **Total IRF items:** 526
-- **Open:** 264 (261 prior - 3 VOX closed + 5 new VOX + 1 stat adjust)
+- **Total IRF items:** 530
+- **Open:** 268 (264 prior + 4 new OSS items)
 - **Completed:** 258 (255 + 3 new: DONE-247 through DONE-249)
 - **Blocked:** 0
 - **Archived:** 0
