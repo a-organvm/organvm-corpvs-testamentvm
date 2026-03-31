@@ -355,6 +355,18 @@ Verified on disk 2026-03-20:
 
 ---
 
+## META — Gravitas Culturalis (SPEC-021)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| ~~IRF-GRC-001~~ | ~~P1~~ | ~~Layer 0: Write SPEC-021 grounding paper~~ — **DONE-306**: 4 files (grounding.md, literature-matrix.md, risk-register.md, inventory.md), 392 lines, 10 claims assessed. Commit fcbfdf2 in meta-organvm superproject. | Agent | Brainstorm session 2026-03-31 | Completed |
+| IRF-GRC-002 | P2 | **Layer 1: JSON Schema** — `schema-definitions/schemas/gravitas-culturalis-v1.json`. Orbit object, artifact tier enum, emergence metrics, contextualization record. Must integrate with seed-v1 produces/consumes and dispatch-payload. | Agent | SPEC-021 inventory.md integration map | None |
+| IRF-GRC-003 | P2 | **Layer 2: Engine module** — `organvm-engine/src/organvm_engine/gravitas/`. orbit.py, classifier.py, metrics.py. CLI: `organvm gravitas classify/orbits/metrics/detect`. Must wire into atoms pipeline (recognition circuit) and Atomic Clock (beat registration). Dispatch events: orbit.formed, orbit.eclipse, orbit.feedback_loop. Fossil witness hooks for archaeological record. | Agent | SPEC-021 plan (.claude/plans/2026-03-31-gravitas-culturalis.md) | IRF-GRC-002 (schema) |
+| IRF-GRC-004 | P2 | **Layer 3: Alchemia extension** — orbit-aware classification in ABSORB stage. New `orbit_classifier.py`. Tags material with orbit_tier, center_of_gravity_id, contextualization. Imports from organvm_engine.gravitas.classifier. | Agent | SPEC-021 plan | IRF-GRC-003 (engine) |
+| IRF-GRC-005 | P2 | **Layer 4: Essay** — Cultural criticism for ORGAN-V. Real Housewives case study, meme lifecycle, ORGANVM reflexive turn (system as its own case study — post-flood corpus eclipsed by engine orbit). Can start after Layer 0. | Agent | SPEC-021 grounding.md §4.3 | IRF-GRC-001 (theory, done) |
+
+---
+
 ## ORGAN-II — Object Lessons
 
 | ID | Priority | Action | Owner | Source | Blocker |
@@ -1265,6 +1277,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-303 | **seed.yaml P0 fix (IRF-OSS-017 + IRF-OSS-025 closed).** Added: absorption.py + fieldwork.py to modules, 4 artifact renderers, 2 produces edges (absorption_data, fieldwork_data), test_count 111→164, last_validated 2026-03-23→2026-03-30, description updated. Commit `51f094e`. | S-fieldwork-mvp | 2026-03-31 |
 | DONE-304 | **Full contrib_engine health audit.** 14 modules + 4 renderers (4,443 lines) assessed. All models used (28/28), all CLI commands implemented (25/25), all data files loaded (6/6), no dead code, no circular deps, no TODOs. Found: 3 unused imports, 4 orphaned render scripts (998 lines, no CLI), capabilities.py lacks dedicated tests. | S-fieldwork-mvp | 2026-03-31 |
 | DONE-305 | **CLAUDE.md compression: 43,749→27,580 chars (37%).** Merged Commands+Quick Commands+CLI into unified 3-column table, restructured Script Dependency Graph into import table + non-obvious notes, compressed 5 secondary sections. All behavioral rules preserved. 12.4k headroom below 40k threshold. Plan at `.claude/plans/2026-03-31-claude-md-compression.md`. Memory synced 1:1 (46 files). | S-compression | 2026-03-31 |
+| DONE-306 | **SPEC-021 Gravitas Culturalis Layer 0 (theory).** 4 files in `post-flood/specs/SPEC-021-gravitas-culturalis/`: grounding.md (134 lines, 10 sources), literature-matrix.md (125 lines, 40% GROUNDED / 50% ADAPTED / 10% NOVEL), risk-register.md (46 lines, 10 claims), inventory.md (87 lines, 18 terms + integration map). Commit `fcbfdf2`. Plan at `.claude/plans/2026-03-31-gravitas-culturalis.md`. | S-gravitas-culturalis | 2026-03-31 |
 
 ---
 
