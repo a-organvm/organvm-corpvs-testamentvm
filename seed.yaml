@@ -38,6 +38,12 @@ consumes:
     source: ORGAN-IV
     description: Orchestration decisions inform meta-documentation
 
+breathing:
+  - path: data/fossil/fossil-record.jsonl
+    cadence: session-close
+    source: witness-hooks
+    reason: "Appended by post-commit hooks across all workspace repos"
+
 subscriptions:
   - event: governance.updated
     source: ORGAN-IV
