@@ -67,6 +67,9 @@ This is a **living governance instrument**, not a snapshot. Every session that p
 | 1 | **This document** (IRF) | Always | Move item to `## Completed` with session + date |
 | 2 | **GitHub Issues** | If a GitHub issue exists for this work | Close the issue with comment referencing commit SHA + IRF ID |
 | 3 | **Omega Scorecard** | If the work advances an omega criterion (#1-#19) | Run `organvm omega status` to verify; note criterion state change |
+| DONE-S43-001 | OpenClaw installation and health diagnostic — 17 vacuums identified, 2 critical. | S43 | 2026-03-31 |
+| DONE-S43-002 | Wiring test suite expansion — 113 tests across 4 files (data_flow, state, apply, signals). | S43 | 2026-03-31 |
+| DONE-S43-003 | CLAUDE.md compression (43.7k→27.6k) — eliminated performance warnings. | S43 | 2026-03-31 |
 | 4 | **Inquiry Log** | If the work completes/advances an SGO research commission | Update `praxis-perpetua/commissions/inquiry-log.yaml` |
 | 5 | **Testament Chain** | If the work is a significant system event (new module, repo, governance change, deployment) | Verify with `organvm testament status` |
 | 6 | **Concordance** | If the work introduces or retires governance IDs | Update `docs/operations/concordance.md` |
@@ -617,6 +620,8 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-032 | P2 | Concordance update — Protocol articles P-I through P-VII are new governance identifiers. Not registered in `docs/operations/concordance.md`. | Agent | S35 close-out vacuum (index #6) | None |
 | IRF-APP-033 | P2 | Seed.yaml update — Protocol modules (protocol_types, protocol_validator, dm_composer), log_dm, reconcile_outreach, three-pillar rubric are new capabilities not declared in seed contract. Extends IRF-APP-013. | Agent | S35 close-out vacuum (index #8) | None |
 | IRF-APP-034 | P2 | Companion indices — Protocol formalization is a new named entity (Index Nominum candidate). log_dm and reconcile_outreach are new tools (Index Rerum candidates). Register when companion indices are built. | Agent | S35 close-out vacuum (index #10) | Companion indices not yet built |
+| IRF-APP-064 | P2 | Fix N/A vacuums in pipeline entries (location: N/A). | Agent | S43 hall-monitor audit | None |
+| IRF-APP-065 | P2 | Update seed.yaml with new capabilities from S43 wiring tests. | Agent | S43 hall-monitor audit | None |
 
 ---
 
@@ -647,6 +652,10 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-DOM-019 | P2 | **gh auth scopes are ephemeral** — 13 scopes stored in macOS Keychain, not declared in chezmoi source. Fresh machine bootstrap or keychain wipe requires manual `gh auth refresh -s <scopes>`. Need: (a) document required scopes in BOOTSTRAP.md, (b) add `domus doctor` check for scope coverage, (c) consider a `run_once_after_` script that requests scopes post-bootstrap. Currently scopes: admin:enterprise, admin:org, admin:repo_hook, audit_log, copilot, delete_repo, gist, notifications, project, repo, user, workflow, write:packages | Agent | S-domus-auth | None |
 | IRF-DOM-020 | P2 | **`domus-ingestion-refresh` committed but unverified** — script and LaunchAgent (`com.4jp.ingestion-refresh.plist.tmpl`) added in commit `eeb35df` but not yet: (a) deployed via `chezmoi apply`, (b) tested, (c) verified LaunchAgent loads. Pre-existing from prior session, committed alongside auth fix. Needs audit | Agent | S-domus-board | None |
 | IRF-DOM-021 | P1 | **Domus CLAUDE.md missing board URL** — project board at `https://github.com/users/4444J99/projects/3` not documented in CLAUDE.md. Board is discoverable but not linked from the primary context file agents read on session start | Agent | S-domus-board | None |
+| IRF-DOM-022 | P1 | OpenClaw security: small model + web tools vulnerability. 3B model with web access and no sandbox. | Agent | S43 vacuum audit | GH#52 |
+| IRF-DOM-023 | P1 | lefthook global ghost fix. Blocks git push system-wide. | Agent | S43 vacuum audit | GH#51 |
+| IRF-DOM-024 | P2 | OpenClaw cloud model auth (Google OAuth failed). | Agent | S43 vacuum audit | GH#52 |
+| IRF-DOM-025 | P2 | OpenClaw chat channels connection (Discord/Telegram). | Agent | S43 vacuum audit | GH#52 |
 
 ---
 
