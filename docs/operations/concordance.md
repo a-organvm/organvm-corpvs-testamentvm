@@ -160,7 +160,13 @@ Universal work registry. 26 domain prefixes:
 | ~~IRF-CCE-030~~ | ~~S40 code committed in S41 close-out~~ — DONE-302 | ~~P2~~ | `conversation-corpus-engine@593c60d` |
 | IRF-CCE-031 | CCE has no inquiry-log.yaml (SGO research vacuum) | P2 | None |
 | IRF-CCE-032 | Omega format specimen missing from GH#14 handoff | P2 | None |
-| IRF-CCE-033 | Execute CCE commercial architecture (H1: PyPI, MCP, landing page) | P1 | Spec approved S41 |
+| IRF-CCE-033 | Execute CCE commercial architecture (H1: PyPI, MCP, landing page) | P1 | Spec approved S41. Needs GH issue. |
+| IRF-CCE-034 | GH issues missing for CCE-029/031/032/033 | P2 | Batch issue creation |
+| IRF-CCE-035 | Omega evidence map: note commercial spec for #9/#10 | P2 | Evidence update |
+| IRF-CCE-036 | seed.yaml planned produces edges (3 ORGAN-III vehicles) | P2 | Schema extension or activation |
+| IRF-CCE-037 | S41 testament gap — vacuum now spans S38-S41 (4 sessions) | P2 | Growing |
+| IRF-CCE-038 | Cross-repo commercial awareness (CCE ↔ application-pipeline) | P2 | Backlink needed |
+| IRF-CCE-039 | Implementation plan not derived from commercial spec | P2 | Next session: writing-plans |
 
 #### Hermeneus API Routes (S28, 2026-03-21)
 
