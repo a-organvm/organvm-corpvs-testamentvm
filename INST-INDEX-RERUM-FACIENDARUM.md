@@ -387,6 +387,20 @@ Verified on disk 2026-03-20:
 
 ---
 
+## ORGAN-IV — Conductor OS (tool-interaction-design)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-CND-001 | **P1** | **Implement contribution ledger Wave 1 (RECORD)** — receipt CRUD, timecard punch-in/out, energy balance. 5 tasks, TDD. Plan: `.claude/plans/2026-03-30-agent-contribution-ledger-plan.md` | Agent | S-contrib-ledger design session | None |
+| IRF-CND-002 | P1 | **Implement contribution ledger Wave 2 (LEARN)** — scorecard, prompt patches, router wiring. 3 tasks. | Agent | S-contrib-ledger design session | IRF-CND-001 |
+| IRF-CND-003 | P2 | **Implement contribution ledger Wave 3 (ANTICIPATE)** — container builder, fleet bulletin, plan dispatch. 3 tasks. | Agent | S-contrib-ledger design session | IRF-CND-002 |
+| IRF-CND-004 | P2 | **Wire MCP tools for dispatch/review/bulletin** — `conductor_dispatch_receipt`, `conductor_punch_in`, `conductor_punch_out`, `conductor_fleet_bulletin` | Agent | Design spec amendment 3 | IRF-CND-003 |
+| IRF-CND-005 | P2 | **Generate GEMINI.md / AGENTS.md from scorecards + patches** — constraint docs become generated outputs, not hand-maintained | Agent | Design spec Layer 4 | IRF-CND-002 (patches must exist) |
+| IRF-CND-006 | P3 | **Plan-first dispatch orchestration (plan_dispatch.py)** — A→Z planning, segment dependency resolution, store manifest. Deferred to after Wave 1-2 data accumulates. | Agent | Design spec Layer 6 | Real dispatch data |
+| IRF-CND-007 | P3 | **Seed historical dispatch receipts** — backfill from today's 4-stream dispatch (Gemini post-flood, Gemini application-pipeline, Codex parallel dissolution, OpenCode organ bridge) as inaugural ledger entries | Agent | S-contrib-ledger session | IRF-CND-001 |
+
+---
+
 ## ORGAN-IV — Skills (a-i--skills)
 
 | ID | Priority | Action | Owner | Source | Blocker |
