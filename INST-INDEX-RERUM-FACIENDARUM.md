@@ -70,6 +70,9 @@ This is a **living governance instrument**, not a snapshot. Every session that p
 | DONE-S43-001 | OpenClaw installation and health diagnostic — 17 vacuums identified, 2 critical. | S43 | 2026-03-31 |
 | DONE-S43-002 | Wiring test suite expansion — 113 tests across 4 files (data_flow, state, apply, signals). | S43 | 2026-03-31 |
 | DONE-S43-003 | CLAUDE.md compression (43.7k→27.6k) — eliminated performance warnings. | S43 | 2026-03-31 |
+| DONE-S43-001 | OpenClaw installation and health diagnostic — 17 vacuums identified, 2 critical. | S43 | 2026-03-31 |
+| DONE-S43-002 | Wiring test suite expansion — 113 tests across 4 files (data_flow, state, apply, signals). | S43 | 2026-03-31 |
+| DONE-S43-003 | CLAUDE.md compression (43.7k→27.6k) — eliminated performance warnings. | S43 | 2026-03-31 |
 | 4 | **Inquiry Log** | If the work completes/advances an SGO research commission | Update `praxis-perpetua/commissions/inquiry-log.yaml` |
 | 5 | **Testament Chain** | If the work is a significant system event (new module, repo, governance change, deployment) | Verify with `organvm testament status` |
 | 6 | **Concordance** | If the work introduces or retires governance IDs | Update `docs/operations/concordance.md` |
@@ -473,6 +476,9 @@ Verified on disk 2026-03-20:
 | IRF-OSS-033 | **P1** | **Action Ledger + Dispatch Ledger convergence.** The action ledger (orchestration-start-here) and dispatch ledger (tool-interaction-design/conductor/) are the same system at different scales, built independently on consecutive days. Dispatch receipt → action type, timecard → sequence, energy → param axes, scorecard → cycle detection. Must converge. See `project_temporal_convergence.md`. | Agent | S-action-ledger session (2026-03-31) | IRF-OSS-032, IRF-CND-001 |
 | IRF-OSS-034 | P2 | **Action Ledger design spec** — write formal spec to `docs/superpowers/specs/2026-03-31-action-ledger-design.md`. Plan exists (`.claude/plans/scalable-baking-conway.md`) but formal spec not yet written. | Agent | S-action-ledger session (2026-03-31) | None |
 | IRF-OSS-035 | P2 | **TypeScript dead code archive** — 572 lines in `src/agents/` and `src/dreamcatcher/` (dispatcher.ts, metasystem-manager.ts, router.ts, watchman.ts). Legacy Dreamcatcher prototype. Archive or delete. | Agent | S-fieldwork-mvp vacuum audit | None |
+| IRF-OSS-036 | **P1** | **Dispatch portal pattern formalization.** `tasks/<slug>/` convention for ephemeral agent dispatch containers with 4-file viral genome (CLAUDE.md, BRIEFING.md, REFERENCES.md, SEQUENCE.md). Counter-force archetype assembly replaces agent dispatch. First instance: `tasks/communications-correspondence-relay/`. Needs: universal container schema doc, `tasks/` CLI or domus subcommand for portal creation, evaporation automation. | Agent | S51 (2026-04-01) | None |
+| IRF-OSS-037 | **P1** | **Communications & Correspondence SOP.** 6-phase relay protocol (SWEEP→CLASSIFY→COMPOSE→RELAY→DISPATCH→VERIFY) unifying mail-triage, handoff relay, outbound compose, cross-channel dispatch. Portal seeded at `tasks/communications-correspondence-relay/`, awaiting execution. Includes intake router CORRESPONDENCE domain addition. | Agent | S51 (2026-04-01) | IRF-OSS-036 |
+| IRF-OSS-038 | P2 | **Container envelope spec.** Utopia/dystopia orbit at every scale (function→module→organ→body). Counter-force field (homeostasis↔homeorhesis, elasticity↔plasticity, reactive↔allostasis, preservation↔kinorhesis). Extends SPEC-019 organ-systems-mapping. Proper home: meta-organvm post-flood corpus. Axiom: "ideal→form mismatch = design problem." | Agent | S51 (2026-04-01) | IRF-OSS-036 |
 
 ---
 
@@ -638,6 +644,8 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-034 | P2 | Companion indices — Protocol formalization is a new named entity (Index Nominum candidate). log_dm and reconcile_outreach are new tools (Index Rerum candidates). Register when companion indices are built. | Agent | S35 close-out vacuum (index #10) | Companion indices not yet built |
 | IRF-APP-064 | P2 | Fix N/A vacuums in pipeline entries (location: N/A). | Agent | S43 hall-monitor audit | None |
 | IRF-APP-065 | P2 | Update seed.yaml with new capabilities from S43 wiring tests. | Agent | S43 hall-monitor audit | None |
+| IRF-APP-064 | P2 | Fix N/A vacuums in pipeline entries (location: N/A). | Agent | S43 hall-monitor audit | None |
+| IRF-APP-065 | P2 | Update seed.yaml with new capabilities from S43 wiring tests. | Agent | S43 hall-monitor audit | None |
 
 ---
 
@@ -668,6 +676,10 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-DOM-019 | P2 | **gh auth scopes are ephemeral** — 13 scopes stored in macOS Keychain, not declared in chezmoi source. Fresh machine bootstrap or keychain wipe requires manual `gh auth refresh -s <scopes>`. Need: (a) document required scopes in BOOTSTRAP.md, (b) add `domus doctor` check for scope coverage, (c) consider a `run_once_after_` script that requests scopes post-bootstrap. Currently scopes: admin:enterprise, admin:org, admin:repo_hook, audit_log, copilot, delete_repo, gist, notifications, project, repo, user, workflow, write:packages | Agent | S-domus-auth | None |
 | IRF-DOM-020 | P2 | **`domus-ingestion-refresh` committed but unverified** — script and LaunchAgent (`com.4jp.ingestion-refresh.plist.tmpl`) added in commit `eeb35df` but not yet: (a) deployed via `chezmoi apply`, (b) tested, (c) verified LaunchAgent loads. Pre-existing from prior session, committed alongside auth fix. Needs audit | Agent | S-domus-board | None |
 | IRF-DOM-021 | P1 | **Domus CLAUDE.md missing board URL** — project board at `https://github.com/users/4444J99/projects/3` not documented in CLAUDE.md. Board is discoverable but not linked from the primary context file agents read on session start | Agent | S-domus-board | None |
+| IRF-DOM-022 | P1 | OpenClaw security: small model + web tools vulnerability. 3B model with web access and no sandbox. | Agent | S43 vacuum audit | GH#52 |
+| IRF-DOM-023 | P1 | lefthook global ghost fix. Blocks git push system-wide. | Agent | S43 vacuum audit | GH#51 |
+| IRF-DOM-024 | P2 | OpenClaw cloud model auth (Google OAuth failed). | Agent | S43 vacuum audit | GH#52 |
+| IRF-DOM-025 | P2 | OpenClaw chat channels connection (Discord/Telegram). | Agent | S43 vacuum audit | GH#52 |
 | IRF-DOM-022 | P1 | OpenClaw security: small model + web tools vulnerability. 3B model with web access and no sandbox. | Agent | S43 vacuum audit | GH#52 |
 | IRF-DOM-023 | P1 | lefthook global ghost fix. Blocks git push system-wide. | Agent | S43 vacuum audit | GH#51 |
 | IRF-DOM-024 | P2 | OpenClaw cloud model auth (Google OAuth failed). | Agent | S43 vacuum audit | GH#52 |
