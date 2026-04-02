@@ -1348,7 +1348,7 @@ Refreshed 2026-04-02 via session close-out audit. Prior 2026-04-01 manual recove
 | Priority | Count |
 |----------|-------|
 | P0 | 11 |
-| P1 | 141 |
+| P1 | 142 |
 | P2 | 203 |
 | P3 | 35 |
 
@@ -1356,11 +1356,11 @@ Refreshed 2026-04-02 via session close-out audit. Prior 2026-04-01 manual recove
 
 | Domain | Count |
 |--------|-------|
-| DONE | 332 |
+| DONE | 333 |
 | RES | 68 |
 | APP | 52 |
 | OSS | 34 |
-| SYS | 31 |
+| SYS | 32 |
 | DOM | 24 |
 | PRT | 18 |
 | III | 15 |
