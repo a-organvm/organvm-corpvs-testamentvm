@@ -625,9 +625,11 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-034 | P2 | Companion indices — Protocol formalization is a new named entity (Index Nominum candidate). log_dm and reconcile_outreach are new tools (Index Rerum candidates). Register when companion indices are built. | Agent | S35 close-out vacuum (index #10) | Companion indices not yet built |
 | IRF-APP-065 | P2 | Update seed.yaml with new capabilities from S43 wiring tests. | Agent | S43 hall-monitor audit | None |
 | IRF-APP-066 | P1 | **First interview conversion SOP** — standardized as 6-phase, 26-step sequence in `pipeline/submissions/grafana-labs-full-dossier.md` §XIV. Needs extraction to standalone SOP document in `docs/` or `strategy/`. Reusable for all future positive conversions. | Agent | Session S46 (2026-04-01) | None |
+| IRF-APP-067 | P1 | **External application quick-log command** — Grafana application was submitted outside pipeline, requiring retroactive backfill. Build `run.py quicklog --org "X" --role "Y" --date YYYY-MM-DD` to register external submissions in real-time, preventing pipeline gaps. | Agent | Session S46 (vacuum: out-of-pipeline applications) | None |
 | IRF-APP-068 | P2 | **Grafana Tier 1 contributions** — 4 insertion points identified: grafana/metrics-drilldown #1146 (CLAUDE.md), grafana/mcp-grafana #680 (prompt injection), #641 (camelCase fix), #620 (docs org). Execute before Mon 2026-04-06 interview. | Human+Agent | Session S46 (contextual insertion) | None |
 | IRF-APP-069 | P2 | **Outreach-log.yaml structural fix** — pre-existing validation error: missing top-level `entries:` key. Signal validator reports 0 entries parsed. Not introduced this session but blocks `--strict` validation. | Agent | Session S46 (hall-monitor audit) | None |
 | IRF-APP-070 | P2 | **IRF-APP-064/065 duplicate collision** — two pairs of duplicate entries (064 appears twice, 065 appears twice). Pre-existing from S43. Dedup needed. Related to IRF-APP-062 (general ID collision issue). | Agent | Session S46 (hall-monitor audit) | None |
+| IRF-APP-071 | P1 | **Grafana interview prep — update after recruiter screen** — Mon 2026-04-06 10:30 AM. Update dossier §XIII with new intelligence, advance entry if proceeding, log interaction via crm.py. | Human+Agent | Session S46 | Time-gated (2026-04-06) |
 | IRF-APP-073 | P2 | **Protocol-compliant email reply** — draft saved in Gmail (thread 19d44c671abf5c5f). Contains P-I hook (Greenhouse API), P-IV terminal question (pipeline architecture). Needs user review and send. Hanging action. | Human | Session S46 | User action |
 
 ---
@@ -944,7 +946,6 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | ID | What | Session | Date |
 |----|------|---------|------|
 | DONE-IRF-APP-072 | Fix location N/A vacuums in 16 unconfirmed pipeline entries. | S49 | 2026-04-01 |
-| DONE-IRF-APP-071 | Grafana interview prep — update after recruiter screen. | S49 | 2026-04-01 |
 | DONE-IRF-APP-064 | Fix N/A vacuums in pipeline entries (location: N/A). | S49 | 2026-04-01 |
 | DONE-001 | Application pipeline v2 with clearance gates | S1-2 | 2026-03-20 |
 | DONE-002 | Testament Protocol — hash-linked event chain with flock | S3, S5-7 | 2026-03-20 |
@@ -1313,11 +1314,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-01 via manual recovery. S49 "absolute IRF repair" (ba62231) deleted 15 valid entries from S-dispersio-formalis, S51, S46/S48. Recovered: IRF-DSF-001–006 (SPEC-022), IRF-OSS-036–038 (S51), IRF-APP-066/068/069/070/073 (S46/S48), DONE-312. Fixed corrupted "How to Use" section. Renumbered duplicate DONE-145→DONE-145b.
+Refreshed 2026-04-01 via manual recovery. S49 "absolute IRF repair" (ba62231) deleted 15 valid entries from S-dispersio-formalis, S51, S46/S48. Recovered: IRF-DSF-001–006 (SPEC-022), IRF-OSS-036–038 (S51), IRF-APP-066/067/068/069/070/071/073 (S46/S48), DONE-312. Fixed corrupted "How to Use" section. Renumbered duplicate DONE-145→DONE-145b.
 
-- **Total IRF items:** 792
-- **Open:** 454
-- **Completed:** 338
+- **Total IRF items:** 793
+- **Open:** 456
+- **Completed:** 337
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 42.7%
@@ -1327,7 +1328,7 @@ Refreshed 2026-04-01 via manual recovery. S49 "absolute IRF repair" (ba62231) de
 | Priority | Count |
 |----------|-------|
 | P0 | 19 |
-| P1 | 173 |
+| P1 | 175 |
 | P2 | 205 |
 | P3 | 35 |
 
