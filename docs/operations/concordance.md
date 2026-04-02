@@ -112,6 +112,13 @@ Universal work registry. 26 domain prefixes:
 | ~~IRF-APP-010~~ | ~~Index Locorum update~~ — DONE-185 | ~~P1~~ | INST-INDEX-LOCORUM |
 | IRF-APP-011 | Omega #19 network density from content-engine repo | P2 | Omega #19 |
 
+#### IRF-SYS Items (Session Close-Out Audit)
+
+| ID | Description | Priority | Refs |
+|----|-------------|----------|------|
+| IRF-SYS-044 | Fix hanging `organvm session review` / `organvm session plans` commands in large repos | P1 | GH#70 |
+| IRF-SYS-045 | Fix `organvm irf stats` undercounting tail-appended items | P1 | GH#71 |
+
 #### Testament Milestones
 
 | ID | Description | Date | Refs |

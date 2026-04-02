@@ -1283,7 +1283,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-S47-004 | **First INFORMATION edge wired** — `skeletal--define →[KNOWLEDGE]→ circulatory--route` (feedfront). Also implicit TRACE edge discovered. Signal graph edges no longer empty. CHECK 7 (CONNECTED) now assessable. Commit `290b783`. | S47 | 2026-03-31 |
 | DONE-312 | **SPEC-022 Dispersio Formalis Layer 0 (theory).** 4 files in `post-flood/specs/SPEC-022-dispersio-formalis/`: grounding.md (303 lines, 7 sections, 8-phase portal lifecycle + Room topology), literature-matrix.md (13 sources, 12% GROUNDED / 48% ADAPTED / 40% NOVEL), risk-register.md (15 claims, 5 LOW / 6 MEDIUM / 4 HIGH), inventory.md (27 terms, integration map across 13 modules). Plan at `.claude/plans/2026-04-01-dispersio-formalis.md`. IRF-OSS-038 subsumed. | S-dispersio-formalis | 2026-04-01 |
 | DONE-313 | **sovereign-systems Maddie Spiral Path handoff atomization + persistence sync.** Mirrored the canonical 2026-04-01 handoff into `sovereign-systems--elevate-align/docs/handoff-maddie-spiral-path-2026-04-01.md`, preserved board atomization and session-close audit artifacts, expanded the operating board from 11 to 19 issues (GH#4 closed; GH#6-9 rewritten; GH#13-20 created), reconciled `CLAUDE.md` and `seed.yaml`, and pushed project commit `05cc9a5` to origin. Omega checked: no criterion change. Testament checked: no new recordable event. | 2026-04-01 sovereign-systems handoff closeout | 2026-04-01 |
-| DONE-314 | **IRF-APP-003 advanced for `public-record-data-scrapper`.** Implemented production reliability hardening for `ucc-mca-api`: `npm start` now runs the bundled `dist/server.cjs`, telemetry schema drift is repaired by `013_ingestion_telemetry_available_strategies.sql`, and startup hydration is bounded/optionally skippable via env. Created GH#230 because concordance’s legacy GH#273 reference was stale/nonexistent. Remaining open work stays under IRF-APP-003: deploy to Render, apply migration 013, verify boot, and decide worker bundling parity. Session-close audit note: required `organvm session review --latest` and `organvm session plans --project .` timed out with no output in this repo. | S-2026-04-02 ucc-mca-api hardening | 2026-04-02 |
+| DONE-314 | **IRF-APP-003 advanced for `public-record-data-scrapper`.** Implemented production reliability hardening for `ucc-mca-api`: `npm start` now runs the bundled `dist/server.cjs`, telemetry schema drift is repaired by `013_ingestion_telemetry_available_strategies.sql`, and startup hydration is bounded/optionally skippable via env. Created GH#230 because concordance’s legacy GH#273 reference was stale/nonexistent. Remaining open work stays under IRF-APP-003: deploy to Render, apply migration 013, verify boot, and decide worker bundling parity. Session-close audit also raised IRF-SYS-044 / GH#70 for hanging `organvm session review` and `organvm session plans` commands in this repo. | S-2026-04-02 ucc-mca-api hardening | 2026-04-02 |
 | ~~DONE-126~~ | *(Superseded by DONE-134→140 — DWV-S1 logged Avditor Mvndi work in granular detail)* | — | — |
 
 ---
@@ -1311,38 +1311,40 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | IRF-SYS-041 | **P1** | **Add parameter interface frontmatter to all 60+ SOPs** — each SOP in `praxis-perpetua/standards/` needs `parameters:` block declaring physics/bio/chem/met knobs with types, ranges, defaults. Enables patches to reference SOPs with specific parameter values. Stranger-test the parameter interface itself. | Agent | S-patch-signal | IRF-SYS-040 (patch module exists first) |
 | IRF-SYS-042 | **P2** | **Add `patch-v1.json` schema to schema-definitions** — formal JSON Schema for patch YAML definitions. Validates: input_signal, sop_ref, parameters (against SOP interface), output_signal, recurrence. Wire into `organvm patches validate`. | Agent | S-patch-signal | IRF-SYS-040 |
 | IRF-SYS-043 | **P2** | **Revenue architecture: patch pack export format** — design exportable patch pack format (collection of YAML patch definitions tuned for a customer context). Relates to Network Testament mirror protocol. Patches = presets = product. | Agent | S-patch-signal revenue insight | IRF-SYS-040 |
+| IRF-SYS-044 | **P1** | **Fix hanging session-close commands in large repos.** In `organvm-iii-ergon/public-record-data-scrapper`, both `organvm session review --latest` and `organvm session plans --project .` hang with no output and require `timeout 20` termination (`EXIT:124`). These commands are mandated by repo closeout protocol, so the silent stall creates governance and memory-loss risk. Need: reproduce under debug/profiler, isolate whether the stall is transcript discovery, plan indexing, git inspection, or corpus path resolution, then add progress diagnostics and a bounded failure mode. GH#70. | Agent | S-2026-04-02 ucc-mca-api hardening close-out audit | Session module investigation in `meta-organvm/organvm-engine` |
+| IRF-SYS-045 | **P1** | **Fix `organvm irf stats` undercounting tail-appended items.** After adding IRF-SYS-044 to this registry, the source file showed one additional open SYS item, but `organvm irf stats` still returned the old totals (`715 / 384 / SYS 29`). The closeout operator cannot trust the CLI if it lags the source file silently. Need: reproduce with a parser test against a tail-appended row, identify whether parsing stops at the statistics block or another sentinel, and fail loudly when derived totals disagree with file contents. GH#71. | Agent | S-2026-04-02 ucc-mca-api hardening close-out audit | IRF parser / stats command investigation in `meta-organvm/organvm-engine` |
 
 ---
 
 ## Statistics
 
-Refreshed 2026-04-01 via manual recovery. S49 "absolute IRF repair" (ba62231) deleted 15 valid entries from S-dispersio-formalis, S51, S46/S48. Recovered: IRF-DSF-001–006 (SPEC-022), IRF-OSS-036–038 (S51), IRF-APP-066/067/068/069/070/071/073 (S46/S48), DONE-312. Fixed corrupted "How to Use" section. Renumbered duplicate DONE-145→DONE-145b.
+Refreshed 2026-04-02 via session close-out audit. Prior 2026-04-01 manual recovery context retained: S49 "absolute IRF repair" (ba62231) deleted 15 valid entries from S-dispersio-formalis, S51, S46/S48. Recovered: IRF-DSF-001–006 (SPEC-022), IRF-OSS-036–038 (S51), IRF-APP-066/067/068/069/070/071/073 (S46/S48), DONE-312. Fixed corrupted "How to Use" section. Renumbered duplicate DONE-145→DONE-145b. Counts below reflect the registry source file after adding IRF-SYS-044 and IRF-SYS-045; CLI undercount is tracked separately under IRF-SYS-045 / GH#71.
 
-- **Total IRF items:** 793
-- **Open:** 456
-- **Completed:** 337
+- **Total IRF items:** 717
+- **Open:** 386
+- **Completed:** 331
 - **Blocked:** 0
 - **Archived:** 0
-- **Completion rate:** 42.7%
+- **Completion rate:** 46.1%
 
 ### Open By Priority
 
 | Priority | Count |
 |----------|-------|
-| P0 | 19 |
-| P1 | 175 |
-| P2 | 205 |
+| P0 | 11 |
+| P1 | 141 |
+| P2 | 199 |
 | P3 | 35 |
 
 ### By Domain
 
 | Domain | Count |
 |--------|-------|
-| DONE | 332 |
+| DONE | 331 |
 | RES | 68 |
-| APP | 46 |
-| OSS | 34 |
-| SYS | 29 |
+| APP | 52 |
+| OSS | 35 |
+| SYS | 31 |
 | DOM | 24 |
 | PRT | 18 |
 | III | 15 |
@@ -1386,7 +1388,7 @@ Refreshed 2026-04-01 via manual recovery. S49 "absolute IRF repair" (ba62231) de
 
 ---
 
-*Last updated: 2026-04-01 — sovereign-systems handoff closeout. Universal registry synchronized to the Maddie Spiral Path board atomization and local/remote persistence pass; DONE-313 added.*
+*Last updated: 2026-04-02 — `public-record-data-scrapper` reliability closeout. DONE-314 added, IRF-APP-003 repointed to GH#230, IRF-SYS-044 logged against `organvm-engine#70`, IRF-SYS-045 logged against `organvm-engine#71`, and the human-maintained stats block was corrected to match the source file while the CLI undercount bug remains tracked.*
 *Next update: After any session that produces or discovers work items*
 
 ### S36 Email Triage Discovered Items (2026-03-24)
