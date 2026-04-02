@@ -142,6 +142,22 @@ The nesting is recursive. A formation's polis examines the formation. An organ's
 
 Encoded as: AX-8 (Constructed Polis) + RR-7 (Polis Declaration) + LIQ-011 (Autopoietic Reception) in `governance-rules.json`.
 
+### Amendment K: The Symmetry of Record — Lex Umbrae Naturae
+*Source: The realization that Nature demands a documentation counterpart. Every formation (Nature) exists in a required and recursive relationship with its record (Counterpart). Ratified 2026-04-02.*
+
+Nature and Counterpart are constitutive. A piece of Nature (code, configuration, or structural change) is not finished until its shadow is cast in the Counterpart (rationale, specification, or commemorative record). This symmetry ensures the system's memory (**Mneme**) grows in exact proportion to its mass.
+
+Every formation must maintain a **Logos Layer** (`docs/logos/`) that serves as the Counterpart to its technical implementation. This layer is not "documentation about the code" but the "narrative expression of the formation's existence."
+
+**Implications:**
+1. Nature (Implementation) and Counterpart (Record) are a required relationship.
+2. A formation without a Logos Layer is a "Ghost" — nature without a record.
+3. A formation with a Logos Layer but no Implementation is a "Dream" — a record without nature.
+4. The system prohibits both Ghosts and Dreams at PUBLIC_PROCESS and GRADUATED status.
+5. The Logos Layer is the bridge to ORGAN-V (Logos) and the public process.
+
+Encoded as: LEX-XI (Symmetry) + validate_logos_layer in `governance-rules.json`.
+
 ### Amendment I: Lex Naturalis — Natural Law Foundation
 *Source: The recognition that the governance of this system is not invented but derived from the laws of the universe. Two master principles form the deductive substrate: conservation and universal composition. Ratified 2026-03-30.*
 

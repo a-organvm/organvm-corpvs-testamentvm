@@ -83,6 +83,14 @@
         "natural_law": "Chemical catalysis — lowering activation energy without being consumed in the reaction",
         "derives": ["OD-IV Taxis Orchestration (catalytic organ)", "formation functional_class INFRASTRUCTURE (catalytic role)", "Skills system (catalytic knowledge)"],
         "status": "implicit_in_practice_not_yet_axiomatized"
+      },
+      {
+        "id": "LEX-XI",
+        "name": "Symmetry (Lex Symmetriae)",
+        "statement": "For every unit of implementation (Nature), there must be a corresponding unit of record (Counterpart). Nature demands a documentation counterpart. Documentation is the witness that completes the act of creation. In this system, implementation without record is a 'Ghost' (invisible nature), and record without implementation is a 'Dream' (unrealized intent). A healthy system allows neither at maturity. This law enforces the constitutive link between what is built and what is known.",
+        "natural_law": "Matter-Antimatter Symmetry / Correspondence Principle",
+        "derives": ["Article IV (Doc Precedes Deploy)", "LIQ-009 (Reflexive Knowledge Obligation)", "validate_logos_layer (the Logos Counterpart check)"],
+        "status": "ratified_2026_04_02"
       }
     ],
     "limits": [
@@ -570,6 +578,16 @@
         "enforcement": "audit",
         "validator": "validate_polis_declaration",
         "references": ["AX-8 Constructed Polis", "feedback_triadic_review.md"],
+        "severity": "warning",
+        "applies_to": "PUBLIC_PROCESS and GRADUATED repos"
+      },
+      {
+        "id": "RR-8",
+        "name": "Logos Layer Mandate",
+        "statement": "Every non-archived repository at PUBLIC_PROCESS or GRADUATED status must maintain a Logos Documentation Layer in `docs/logos/`. This layer must contain narrative counterparts for the formation's Telos, Pragma, Praxis, Receptio, and Alchemical I/O. The record must exist in symmetry with the implementation.",
+        "enforcement": "audit",
+        "validator": "validate_logos_layer",
+        "references": ["Amendment K", "LEX-XI", "docs/standards/14-logos-documentation-layer.md"],
         "severity": "warning",
         "applies_to": "PUBLIC_PROCESS and GRADUATED repos"
       }

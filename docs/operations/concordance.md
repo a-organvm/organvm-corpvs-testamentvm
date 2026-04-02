@@ -729,6 +729,7 @@ Layer 1 of 4-layer process intelligence system. Captures observations from contr
 | ID | Session | Date |
 |----|---------|------|
 | `S-fieldwork-mvp` | Fieldwork Layer 1 MVP + seed.yaml P0 fix + health audit | 2026-03-31 |
+| `S52` | 72h Reconciliation Plotting and Tending (116 unresolved) | 2026-04-02 |
 
 ### IRF Items
 
@@ -740,6 +741,11 @@ Layer 1 of 4-layer process intelligence system. Captures observations from contr
 | `IRF-OSS-029` | Render CLI subcommand |
 | `IRF-OSS-030` | Unused imports cleanup |
 | `IRF-OSS-031` | capabilities.py test file |
+| `IRF-AOR-009` | Define Cultvra (Logos) Layer |
+| `IRF-SYS-050` | Workspace Ontology v2 Refinement |
+| `IRF-APP-080` | Productize Application Pipeline |
+| `IRF-OSS-042` | System-wide Action Ledger |
+| `IRF-OSS-043` | IRF Instrument v3 (Endless Box) |
 
 ---
 
