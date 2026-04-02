@@ -3,7 +3,7 @@
 **Status:** ACTIVE
 **Created:** 2026-03-20
 **Authority:** META — System-wide governance instrument
-Purpose: Universal hanging index of things to be done — the canonical gap between what the system IS and what it NEEDS TO BE. (485 items, 19 domains)
+Purpose: Universal hanging index of things to be done — the canonical gap between what the system IS and what it NEEDS TO BE. (841 items, 19 domains)
 
 > *Index Rerum Faciendarum* — after the classical scholarly apparatus: *Index Locorum* (places), *Index Nominum* (names), *Index Rerum* (things). The gerundive *faciendarum* transforms reference into obligation: not things that exist, but things that must be made to exist.
 
@@ -1354,10 +1354,10 @@ Refreshed 2026-04-02 after the S52/S53 reconciliation wave plus subsequent stabl
 
 | Priority | Count |
 |----------|-------|
-| P0 | 11 |
-| P1 | 140 |
-| P2 | 207 |
-| P3 | 38 |
+| P0 | 8 |
+| P1 | 188 |
+| P2 | 219 |
+| P3 | 39 |
 
 ### By Domain
 
