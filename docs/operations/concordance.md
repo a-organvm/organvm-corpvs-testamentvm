@@ -102,7 +102,7 @@ Universal work registry. 26 domain prefixes:
 |----|-------------|----------|------|
 | IRF-APP-001 | Collect 3+ months v2 outcome data for D-001 | P2 | INQ-2026-001 |
 | IRF-APP-002 | Register content-engine--asset-amplifier in registry + GitHub | P1 | GH#272 |
-| IRF-APP-003 | Scrapper Phase 1 for Tony Carbone (coverage dashboard + health monitoring) | P1 | GH#273 |
+| IRF-APP-003 | Scrapper Phase 1 for Tony Carbone (coverage dashboard + health monitoring) | P1 | GH#230 |
 | IRF-APP-004 | Content engine MVP build (partnership with Lefler) | P2 | GH#274 |
 | IRF-APP-005 | Follow-up tracking (Tony + Scott responses) | P1 | GH#275 |
 | ~~IRF-APP-006~~ | ~~GitHub issues for APP-002/003/004/005~~ — DONE (issues done, repo creation pending) | ~~P1~~ | GH#272-275 |
