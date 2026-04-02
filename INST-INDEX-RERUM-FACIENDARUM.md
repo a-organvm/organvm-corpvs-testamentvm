@@ -1282,6 +1282,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-S47-003 | **Signal types CONTRACT (SIG-002) and STATE (SIG-003) discovered** — CONTRACT: "declared behavioral agreement between organism functions." STATE: "current configuration of the organism's elements at a point in time." Added to signal-graph.yaml. Vocabulary now 5 types. | S47 | 2026-03-31 |
 | DONE-S47-004 | **First INFORMATION edge wired** — `skeletal--define →[KNOWLEDGE]→ circulatory--route` (feedfront). Also implicit TRACE edge discovered. Signal graph edges no longer empty. CHECK 7 (CONNECTED) now assessable. Commit `290b783`. | S47 | 2026-03-31 |
 | DONE-312 | **SPEC-022 Dispersio Formalis Layer 0 (theory).** 4 files in `post-flood/specs/SPEC-022-dispersio-formalis/`: grounding.md (303 lines, 7 sections, 8-phase portal lifecycle + Room topology), literature-matrix.md (13 sources, 12% GROUNDED / 48% ADAPTED / 40% NOVEL), risk-register.md (15 claims, 5 LOW / 6 MEDIUM / 4 HIGH), inventory.md (27 terms, integration map across 13 modules). Plan at `.claude/plans/2026-04-01-dispersio-formalis.md`. IRF-OSS-038 subsumed. | S-dispersio-formalis | 2026-04-01 |
+| DONE-313 | **sovereign-systems Maddie Spiral Path handoff atomization + persistence sync.** Mirrored the canonical 2026-04-01 handoff into `sovereign-systems--elevate-align/docs/handoff-maddie-spiral-path-2026-04-01.md`, preserved board atomization and session-close audit artifacts, expanded the operating board from 11 to 19 issues (GH#4 closed; GH#6-9 rewritten; GH#13-20 created), reconciled `CLAUDE.md` and `seed.yaml`, and pushed project commit `05cc9a5` to origin. Omega checked: no criterion change. Testament checked: no new recordable event. | 2026-04-01 sovereign-systems handoff closeout | 2026-04-01 |
 | ~~DONE-126~~ | *(Superseded by DONE-134→140 — DWV-S1 logged Avditor Mvndi work in granular detail)* | — | — |
 
 ---
@@ -1384,7 +1385,7 @@ Refreshed 2026-04-01 via manual recovery. S49 "absolute IRF repair" (ba62231) de
 
 ---
 
-*Last updated: 2026-03-24 — S36 email triage: 300+ emails triaged (Mar 21-24), 2 P0 infrastructure emergencies discovered, 3 OSS PRs need action, 11 new IRF items. DONE-215/216 added by concurrent sessions. Active: ~203+11=~214. DONE: 216.*
+*Last updated: 2026-04-01 — sovereign-systems handoff closeout. Universal registry synchronized to the Maddie Spiral Path board atomization and local/remote persistence pass; DONE-313 added.*
 *Next update: After any session that produces or discovers work items*
 
 ### S36 Email Triage Discovered Items (2026-03-24)
