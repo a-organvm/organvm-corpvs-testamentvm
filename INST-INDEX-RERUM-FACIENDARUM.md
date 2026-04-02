@@ -122,6 +122,13 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 | IRF-MON-007 | P2 | **Sprint metric mismatch** — `sprints_completed: 0` propagated to every CLAUDE.md via metrics system. The system works in sessions (S1–S35+), not sprints. The metric accurately reflects reality but creates a permanent vacuum. Options: (a) map sessions to sprint-like cycles, (b) rename to `work_cycles_completed`, (c) show "sessions-based" when 0, (d) drop metric. Recommend (c) for now. Plan: §V5 | Agent | S35 N/A deep audit | None |
 | IRF-MON-008 | P1 | **DONE-ID collision** — concurrent sessions independently increment the DONE counter, causing duplicate IDs. Known collisions: DONE-151, 152, 153, 157, 158, 159, 184 (each has 2 entries with different content). Root cause: no atomic counter — each session reads the last DONE-N, increments locally, and writes. Fix: (a) add `DONE_COUNTER` line to IRF header that sessions must read-increment-write atomically, or (b) move to `organvm irf complete` CLI that handles locking, or (c) switch to session-scoped IDs (`DONE-S33-001`) to avoid cross-session collision. Recommend (b) as it also enforces the 10-index checklist. Affects data integrity of the universal work registry | Agent | Hall-monitor audit (this session) | None |
 
+### Operations
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-OPS-012 | P1 | **Emergency Repair SOP implementation** — ensure absolute parity and project integrity during restricted access. Reference `docs/operations/emergency-procedures.md` (§ Procedure 2). | Agent | S53 Audit | None |
+| IRF-OPS-013 | P1 | **Handover Audit SOP implementation** — ensure canonical manifestation of drafted SOPs in ecosystem. Reference `praxis-perpetua/standards/operational-handoff-guide.md`. | Agent | S53 Audit | None |
+
 ---
 
 ## META — Corpus (organvm-corpvs-testamentvm)
@@ -1334,10 +1341,10 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-02 after the S52/S53 reconciliation wave plus subsequent stable-unit and fleet seeding. Prior 2026-04-01 manual recovery context retained: S49 "absolute IRF repair" (ba62231) deleted 15 valid entries from S-dispersio-formalis, S51, S46/S48. Recovered: IRF-DSF-001–006 (SPEC-022), IRF-OSS-036–038 (S51), IRF-APP-066/067/068/069/070/071/073 (S46/S48), DONE-312. Fixed corrupted "How to Use" section. Renumbered duplicate DONE-145→DONE-145b. Counts below reflect the current registry source after DONE-319, DONE-320, DONE-321, and DONE-322 landed; IRF-SYS-045 remains open because parser drift has occurred historically and still needs hardening in `organvm irf stats`.
+Refreshed 2026-04-02 after the S52/S53 reconciliation wave plus subsequent stable-unit, fleet, and operations seeding. Prior 2026-04-01 manual recovery context retained: S49 "absolute IRF repair" (ba62231) deleted 15 valid entries from S-dispersio-formalis, S51, S46/S48. Recovered: IRF-DSF-001–006 (SPEC-022), IRF-OSS-036–038 (S51), IRF-APP-066/067/068/069/070/071/073 (S46/S48), DONE-312. Fixed corrupted "How to Use" section. Renumbered duplicate DONE-145→DONE-145b. Counts below reflect the current registry source after DONE-319, DONE-320, DONE-321, DONE-322, IRF-OPS-012, and IRF-OPS-013 landed; IRF-SYS-045 remains open because parser drift has occurred historically and still needs hardening in `organvm irf stats`.
 
-- **Total IRF items:** 729
-- **Open:** 394
+- **Total IRF items:** 731
+- **Open:** 396
 - **Completed:** 335
 - **Blocked:** 0
 - **Archived:** 0
@@ -1348,7 +1355,7 @@ Refreshed 2026-04-02 after the S52/S53 reconciliation wave plus subsequent stabl
 | Priority | Count |
 |----------|-------|
 | P0 | 11 |
-| P1 | 138 |
+| P1 | 140 |
 | P2 | 207 |
 | P3 | 38 |
 
