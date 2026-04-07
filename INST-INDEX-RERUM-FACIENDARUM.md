@@ -1087,6 +1087,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | What | Session | Date |
 |----|------|---------|------|
+| DONE-340 | **system-system--system S57: Monad 16-VACUUM resolution + enricher process fix.** Gemini cross-session diagnosis verified against filesystem — VACUUM count correct (16), constituted ratio inverted (9/25 not 24/25), remediation oversized (entities already existed). 14 entity UIDs stamped from existing registry entries, 2 new entities created via `sys-cascade` (`ent_C33B9` seed--challenge-statement, `ent_B7087` document--ontological-cartography). `atom-registry.yaml` documents section 9→25. `sys-enrich-frontmatter` amended with `resolve_entity_by_locus()` fallback (root-cause fix). Result: 27/27 CANONICAL, 0 VACUUM. IRF ID collision caught (100/101→102/103). Resolves IRF-SYS-095, advances IRF-SYS-085. Commit `c61ed76` (monad), `e25141d`→`ae78d10` (main). | S57 | 2026-04-07 |
 | DONE-339 | **system-system--system Monad Architecture — UMFAS self-hosted iteration.** Contained non-destructive iteration in worktree (`monad/synthesizer-architecture` branch, pushed to origin). (1) YAML frontmatter enrichment: 25 documents, canonical schema (`frontmatter.schema.yaml`), `sys-enrich-frontmatter` CLI. (2) Flatten: axioms/ + derivations/ → root, orphans archived, executables to bin/. (3) Path refs: atom-registry, 24 entity JSONs, LAWS.toml, irf-registry, cross-refs all updated. (4) Generated output → `_build/` convention. (5) Triple-pulse: `sys-check-pulse` rewritten (self/local/remote → CONSTITUTED/EMBRYONIC/NASCENT/VACUUM), 24/25 CONSTITUTED. (6) Emitter: `scales/+1/` with scaffold.toml, 4 seed atoms, 4 templates, `bin/sys-scaffold` CLI (tested). 4 commits: `63bd911`→`992180f`. Advances IRF-SYS-085, IRF-SYS-078. New vacuum: IRF-SYS-095 (16 entity_uid nulls). | S-2026-04-06 monad | 2026-04-06 |
 | DONE-338 | **system-system--system S56: Tripartite Convergence Wiring — Law 7 realized.** 25 entities registered (9 axioms, 13 derivations, 1 subsumption, 1 root, 1 materon), all at 3/3 heartbeats (100% canonical). `registry/irf-registry.yaml` created as standalone formal index (14 items). `bin/sys-convergence-audit` enforces Law 7 going forward. Atom-registry documents wired with `entity_uid`. GitHub issues #1-#8 cross-referenced. Advances IRF-SYS-078 (triple reference principle now operational for σ_E). 3 commits: `65a8bb6` (Law 7), `e051c68` (phantom heartbeat fix), `6449470` (full wiring). | S56 | 2026-04-05 |
 | DONE-337 | **UMFAS derivation + 8-organ census + Taxis→Seed fortification.** (1) Gate fortification: 7 gate conditions + 1 dna enrichment injected into a-organvm (101→107 gates, commit f5f8941). (2) META census: 21 dirs, 16 findings (portfolio-site nested in corpus, 9GB bench dump, venv contamination, server.py monolith, promotion pathology). (3) 8-organ spectrum: 111 repos, 9,663 real code files, 700 ceremony files. (4) 5 horizontal slices: registry isotopes (16 repos), ceremony cost (700 files), verb collisions (styx×3, vigiles×3), 29 zero-code repos, code density (V+VI+VII = 2.6% of code). (5) 12 idea clusters → 3.3:1 compression (DERIVATIVE — held lightly). (6) 4 axioms + UMFAS identity (FOUNDATIONAL). (7) Epistemological warning: derivatives ≠ foundations. IRF-SYS-085/086 opened. | S-2026-04-05 UMFAS-derivation | 2026-04-05 |
@@ -1485,11 +1486,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-07 (S-empirical close-out). Added IRF-SYS-098–101 (4 items from empirical audit session), DONE-337 (empirical audit completion). GH#315, #316, #317 created. Prior: 2026-04-04 (S-xenograft-protocol close-out). Prior context retained for audit trail.
+Refreshed 2026-04-07 (S57 close-out). IRF-SYS-095 RESOLVED (16 monad VACUUMs wired), IRF-SYS-102–103 added (resolved sub-items), DONE-340 (S57 vacuum resolution). Prior: 2026-04-07 (S-empirical close-out). Prior context retained for audit trail.
 
-- **Total IRF items:** 868 *(+5: IRF-SYS-098–101 new, DONE-337)*
-- **Open:** 508 *(+4 new)*
-- **Completed:** 360 *(+1: DONE-337)*
+- **Total IRF items:** 871 *(+3: IRF-SYS-102–103 new + DONE-340; IRF-SYS-095 resolved)*
+- **Open:** 505 *(−3: IRF-SYS-095/102/103 resolved)*
+- **Completed:** 363 *(+3: DONE-340, IRF-SYS-095/102/103)*
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 41.6%
