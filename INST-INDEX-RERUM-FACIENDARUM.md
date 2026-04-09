@@ -98,6 +98,7 @@ Not every completion triggers every index. A P2 doc fix may only need #1 and #9.
 | IRF-SYS-101 | **P2** | **Multiverse INSTANCE.toml — identity files at 4 strata locations.** Approved plan: each stratum (formal/grammar/organism/material) gets INSTANCE.toml declaring its identity and isomorphic connections. Locations: `~/system-system--system--monad/`, `~/sovereign--ground/`, a-organvm, ~/Workspace/. Plan approved 2026-04-07 but NOT executed. | Agent | S-empirical 2026-04-07 | None |
 | ~~IRF-SYS-102~~ | ~~P1~~ | ~~Monad 16-VACUUM resolution — frontmatter entity_uid wiring~~ **RESOLVED (S57, 2026-04-07):** 14 existing entity UIDs stamped into frontmatter, 2 new entities created (`ent_C33B9`, `ent_B7087`). atom-registry.yaml documents section expanded 9→25. Sub-item of IRF-SYS-095. | Agent | S57 2026-04-07 | IRF-SYS-095 |
 | ~~IRF-SYS-103~~ | ~~P1~~ | ~~sys-enrich-frontmatter process fix — registry/data/ fallback~~ **RESOLVED (S57, 2026-04-07):** `resolve_entity_by_locus()` added as third-tier entity_uid resolution. Scans `registry/data/ent_*.json` operational_locus when DOC-ENVELOPE and atom-registry fail. Root-cause fix preventing future VACUUM regression. Sub-item of IRF-SYS-095. | Agent | S57 2026-04-07 | IRF-SYS-095 |
+| IRF-SYS-104 | **P2** | **Corpus Knowledge Graph — computational bridge between post-flood (225 files) and praxis-perpetua (2,728 files).** Cross-reference analysis (S-corpus-graph, 2026-04-07) revealed: strong connections (AMMOI, Alpha-Omega, Formation Protocol, SPEC notation), integrated connections ("standard", "research", methodology patterns), and gaps (SVSE under-referenced, Faculty/Commission/Defense governance minimally cross-linked, no computational cross-corpus index). Plan: new `organvm_engine/corpus/` module with 4-phase extraction pipeline, concept-seed.yaml bootstrap (~30 concepts), JSON graph store (~500 nodes, ~3,000 edges), 6 navigable markdown indices. Extends `RelationType` (+5) and `EntityType` (+3). CLI: `organvm corpus build\|render\|query\|gaps\|stats`. Plan at `post-flood/.claude/plans/2026-04-07-corpus-knowledge-graph.md`. **GH#81 (organvm-engine).** | Agent | S-corpus-graph 2026-04-08 | None |
 | IRF-SYS-008 | P2 | ESLint 9→10 migration — blocked on eslint-plugin-react support. Monitor `eslint-plugin-react` releases for v8+ with ESLint 10 compatibility | Agent | S26 | eslint-plugin-react@7.37.5 incompatible |
 | IRF-SYS-009 | **P0** | Gmail notification hygiene — filter designed in S36: `from:notifications@github.com ("dependabot[bot]" OR "github-actions[bot]")` → Skip Inbox, Apply label `github/bots`, Mark as Read. **HUMAN ACTION NEEDED:** (1) Create Gmail filter, (2) GitHub Settings > Notifications > uncheck "Automatically watch repositories", (3) Set org routing to web-only. All GitHub notification threads marked read via API in S36. | Human | S26, S36 | Human action: 2 min at github.com/settings/notifications + Gmail |
 | ~~IRF-SYS-010~~ | ~~P1~~ | ~~Full seed.yaml refresh for organvm-engine~~ — **DONE** (5 contracts → 36, CANDIDATE → GRADUATED, signal_inputs/signal_outputs added. Commit `82d043d`.) | Agent | S28 gap audit | Completed S29 |
@@ -1486,11 +1487,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-07 (S57 close-out). IRF-SYS-095 RESOLVED (16 monad VACUUMs wired), IRF-SYS-102–103 added (resolved sub-items), DONE-340 (S57 vacuum resolution). Prior: 2026-04-07 (S-empirical close-out). Prior context retained for audit trail.
+Refreshed 2026-04-08 (S-corpus-graph close-out). IRF-SYS-104 added (corpus knowledge graph plan). No completions this session (research/planning only). Prior: 2026-04-07 (S57 close-out).
 
-- **Total IRF items:** 871 *(+3: IRF-SYS-102–103 new + DONE-340; IRF-SYS-095 resolved)*
-- **Open:** 505 *(−3: IRF-SYS-095/102/103 resolved)*
-- **Completed:** 363 *(+3: DONE-340, IRF-SYS-095/102/103)*
+- **Total IRF items:** 872 *(+1: IRF-SYS-104)*
+- **Open:** 506 *(+1: IRF-SYS-104)*
+- **Completed:** 363
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 41.6%
@@ -1701,3 +1702,4 @@ Refreshed 2026-04-07 (S57 close-out). IRF-SYS-095 RESOLVED (16 monad VACUUMs wir
 | IRF-SYS-099 | **P2** | **15 ideal functional forms. GH#316.** Mereological decomposition. 6 categories map to 6/16 a-organvm mechanisms. Rosetta Stone: 3 orthogonal classifications, 23 orphans. | Agent | S-empirical | None |
 | IRF-SYS-100 | **P2** | **Ceremony-as-specification 3-way classification. GH#317.** CODE/SPECIFICATION/TRUE CEREMONY. Unique = specification, duplicated = ceremony. | Agent | S-empirical | None |
 | IRF-SYS-101 | **P2** | **Multiverse INSTANCE.toml at 4 strata.** Approved plan, NOT executed. Identity files for formal/grammar/organism/material locations. | Agent | S-empirical | None |
+| IRF-SYS-104 | **P2** | **Corpus Knowledge Graph — `organvm corpus` module. GH#81.** Bridge post-flood (225 files) + praxis-perpetua (2,728 files). 4-phase pipeline, concept-seed.yaml, JSON graph, 6 indices. | Agent | S-corpus-graph | None |
