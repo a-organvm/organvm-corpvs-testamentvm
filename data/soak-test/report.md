@@ -1,15 +1,15 @@
 # 30-Day Soak Test Report
 
-**Period:** 2026-03-07 to 2026-04-05
+**Period:** 2026-03-14 to 2026-04-12
 **Snapshots:** 30
-**Generated:** 2026-04-05 08:34 UTC
+**Generated:** 2026-04-12 08:38 UTC
 
 ---
 
 ## Validation Integrity
 
-- Days with clean validation: **13/30**
-- Registry integrity issues: 67 total across period
+- Days with clean validation: **6/30**
+- Registry integrity issues: 88 total across period
 - Dependency violations: 0 total across period
 
 ### Registry Issues Observed
@@ -27,25 +27,20 @@
 
 ## CI Stability
 
-- Average passing: **13.3** per day
-- Average failing: **2.4** per day
-- Average billing-locked: **11.1** per day
+- Average passing: **14.0** per day
+- Average failing: **2.5** per day
+- Average billing-locked: **10.7** per day
 - Days with CI data: 30
 
 ### Chronic Failures (3+ days)
 
-- organvm-v-logos/public-process: failure (10 days)
-- organvm-vii-kerygma/.github: failure (10 days)
-- organvm-ii-poiesis/styx-behavioral-art: failure (7 days)
-- meta-organvm/organvm-ontologia: failure (7 days)
-- organvm-iv-taxis/a-i--skills: failure (5 days)
-- organvm-vii-kerygma/social-automation: failure (5 days)
-- organvm-vi-koinonia/salon-archive: failure (4 days)
-- meta-organvm/organvm-engine: failure (4 days)
-- meta-organvm/praxis-perpetua: failure (4 days)
-- organvm-iv-taxis/universal-node-network: failure (4 days)
-- meta-organvm/system-dashboard: failure (3 days)
-- meta-organvm/organvm-mcp-server: failure (3 days)
+- organvm-ii-poiesis/styx-behavioral-art: failure (11 days)
+- organvm-v-logos/public-process: failure (11 days)
+- organvm-vii-kerygma/.github: failure (11 days)
+- meta-organvm/organvm-ontologia: failure (11 days)
+- organvm-iv-taxis/a-i--skills: failure (9 days)
+- organvm-vii-kerygma/social-automation: failure (9 days)
+- meta-organvm/alchemia-ingestvm: failure (5 days)
 
 ## Engagement Trends
 
