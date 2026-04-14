@@ -430,6 +430,15 @@
         "validator": "validate_constructed_polis",
         "references": ["constitution.md Amendment H", "AX-7 Tetradic Self-Knowledge", "LIQ-010 Reception Completes Existence", "praxis-perpetua/governance/faculty-registry.yaml", "auto-revision-epistemic-engine"],
         "severity": "warning"
+      },
+      {
+        "id": "AX-9",
+        "name": "Triple Reference Invariant (Lex Triplicitatis)",
+        "statement": "Every referenceable system item must exist in exactly three places: (1) an IRF entry in INST-INDEX-RERUM-FACIENDARUM.md, (2) a repository-level reference (seed.yaml edge, code reference, or documentation reference), (3) a GitHub Issue. Items with fewer than 3 references are incompletely materialized and must be remediated. Identity is triangulated, not stamped.",
+        "enforcement": "audit",
+        "validator": "validate_triple_reference",
+        "references": ["SPEC-025 Predicate 3 (EFFECT)", "sigma-E Law 7 (Tripartite Convergence)", "sys-convergence-audit"],
+        "severity": "warning"
       }
     ],
     "organ_dictums": {
