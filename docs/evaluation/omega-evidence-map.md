@@ -432,6 +432,8 @@ All seed.yaml files updated with deployment_url. Registry-v2.json updated.
 - Autonomous workflows: 12 cron workflows across 2 repos (self-operating)
 - Invocation system: `scripts/invoke.py` + `docs/operations/concordance.md` (100+ ID entries)
 
+**Domus evidence (2026-04-14):** chezmoi bootstrap enables full environment reproduction: `chezmoi init --apply 4444j99/domus-semper-palingenesis`. A new machine inherits shell config, tool setup, agent infrastructure, MCP server configuration, and 1Password secret refs. The S32 rewrite (50ms startup, zero-error boot) means the bootstrapped environment is immediately operational.
+
 **Gap:** Needs a real person to attempt system operation and log the results. Documentation is now comprehensive enough for the test — the constraint is participant recruitment, not documentation gaps.
 
 **Blocker:** EXTERNAL — requires second person (potentially same as #2 and #4)

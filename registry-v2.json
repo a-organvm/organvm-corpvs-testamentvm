@@ -9,8 +9,8 @@
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
   "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I→II→III→IV→V→VI→VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
   "summary": {
-    "total_repos": 129,
-    "total_repos_note": "129 registry entries. domus-semper-palingenesis added to new PERSONAL section 2026-04-13 (IRF-DOM-002). Previous: 128 entries (126 counted in summary, 2 uncounted).",
+    "total_repos": 145,
+    "total_repos_note": "145 registry entries. Reconciliation Sprint 2026-04-14: 15 repos mass-registered + portfolio in PERSONAL. Previous: 129 entries.",
     "operational_organs": 8,
     "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 — 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
@@ -30,7 +30,7 @@
       "completion": "100% — 17/17 non-infrastructure repos documented at 2,000+ words (~56K total)",
       "public_visibility": "MIXED",
       "portfolio_angle": "Demonstrates intellectual depth and foundational thinking. Evidences systemic theory applied to autonomous creative systems.",
-      "repository_count": 22,
+      "repository_count": 26,
       "repositories": [
         {
           "name": "recursive-engine--generative-entity",
@@ -444,7 +444,8 @@
           "platinum_status": false,
           "revenue_model": null,
           "revenue_status": null,
-          "functional_class": "CORPUS"
+          "functional_class": "CORPUS",
+          "documentation_status": "SKELETON"
         },
         {
           "name": "conversation-corpus-engine",
@@ -485,6 +486,78 @@
           "ci_workflow": null,
           "platinum_status": false,
           "functional_class": "APPLICATION"
+        },
+        {
+          "name": "atomic-substrata",
+          "org": "organvm-i-theoria",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Unified Atomic Knowledge Substrate repository reconstructed from architecture conversation artifacts.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "conversation-corpus-site",
+          "org": "organvm-i-theoria",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "conversation-corpus-site",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "rules-system-bound",
+          "org": "organvm-i-theoria",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "rules-system-bound",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "scale-threshold-emergence",
+          "org": "organvm-i-theoria",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Theoria-native knowledge engine for lossless archival, normalization, and graphing of research threads.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
         }
       ]
     },
@@ -1119,7 +1192,8 @@
           "platinum_status": false,
           "revenue_model": null,
           "revenue_status": null,
-          "functional_class": "APPLICATION"
+          "functional_class": "APPLICATION",
+          "documentation_status": "SKELETON"
         }
       ]
     },
@@ -1130,7 +1204,7 @@
       "completion": "100% — 21/21 non-infrastructure repos documented at 2,000+ words (~74K total)",
       "public_visibility": "MIXED (4 private, 18 public)",
       "portfolio_angle": "Demonstrates product-market thinking, sustained revenue generation, and ability to package systems for external users. Evidence of real-world impact.",
-      "repository_count": 30,
+      "repository_count": 32,
       "repositories": [
         {
           "name": "classroom-rpg-aetheria",
@@ -1827,9 +1901,34 @@
             "stopdrinkingacid.com",
             "eaucohub.com"
           ],
-          "stack": ["astro", "tailwind", "typescript"],
+          "stack": [
+            "astro",
+            "tailwind",
+            "typescript"
+          ],
           "functional_class": "APPLICATION",
           "note": "Registered 2026-03-27. Client brand hub-and-spoke site."
+        },
+        {
+          "name": "sign-signal--voice-synth",
+          "org": "organvm-iii-ergon",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Speech Score Engine — Layer 1: Dialogue Looping Tracker Sequence. A sequencer interface for writing dialogue, segmenting phrase-events, assigning voices, and hearing timed loop-sequence playback.\n",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14.",
+          "revenue_model": "none",
+          "revenue_status": "n/a",
+          "type": "internal"
         }
       ]
     },
@@ -1840,7 +1939,7 @@
       "completion": "100% — 5/5 non-infrastructure repos documented at 2,000+ words (~18K total)",
       "public_visibility": "SEMI-PUBLIC (Governance visible, implementation details private)",
       "portfolio_angle": "CRITICAL DIFFERENTIATOR. Demonstrates systems architecture, governance design, and organizational capacity to coordinate complex multi-system infrastructure. Central evidence for grant funding and AI hiring.",
-      "repository_count": 18,
+      "repository_count": 22,
       "repositories": [
         {
           "name": "orchestration-start-here",
@@ -2161,6 +2260,78 @@
           "implementation_status": "ACTIVE",
           "last_validated": "2026-03-23",
           "functional_class": "APPLICATION"
+        },
+        {
+          "name": "contrib--clyra-gait",
+          "org": "organvm-iv-taxis",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Contribution workspace for Clyra-AI/gait — policy-as-code framework for AI agent tool calls. CI/CD pipeline policy template contribution.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Contrib fork. Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "contrib--indeedeng-iwf",
+          "org": "organvm-iv-taxis",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Cross-organ contribution workspace targeting indeedeng/iwf, a workflow-as-code orchestration platform on Temporal/Cadence.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Contrib fork. Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "contrib--jairus-dagster-sdlc",
+          "org": "organvm-iv-taxis",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Contribution workspace for jairus-m/dagster-sdlc — Dagster+dlt+duckdb+dbt data pipeline for Strava activity analytics. Reciprocity target from dbt-mcp PR #669 collaboration.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Contrib fork. Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "contrib--m13v-summarize-recent-commit",
+          "org": "organvm-iv-taxis",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "contrib--m13v-summarize-recent-commit",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Contrib fork. Registered via Reconciliation Sprint 2026-04-14."
         }
       ]
     },
@@ -2171,7 +2342,7 @@
       "completion": "100% — 1/1 non-infrastructure repo documented (4,040 words) + org profile expanded",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "PRIMARY AMPLIFICATION LAYER. Converts meta-system documentation into thought leadership and audience engagement. Essays about the eight-organ system itself become portfolio material. Central for Grant funding (Knight Foundation, Mellon, NEA) and thought leadership positioning.",
-      "repository_count": 2,
+      "repository_count": 6,
       "repositories": [
         {
           "name": "public-process",
@@ -2221,6 +2392,78 @@
           "ci_workflow": "ci-minimal.yml",
           "platinum_status": true,
           "functional_class": "INFRASTRUCTURE"
+        },
+        {
+          "name": "analytics-engine",
+          "org": "organvm-v-logos",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "analytics-engine",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "editorial-standards",
+          "org": "organvm-v-logos",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "editorial-standards",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "PUBLIC_PROCESS",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "essay-pipeline",
+          "org": "organvm-v-logos",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "essay-pipeline",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "PUBLIC_PROCESS",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "reading-observatory",
+          "org": "organvm-v-logos",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "reading-observatory",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
         }
       ]
     },
@@ -2363,7 +2606,7 @@
       "completion": "100% — 4/4 repos at PRODUCTION status. ~5,700+ lines of Python, 227+ tests, 3 packages + root orchestrator. Full POSSE pipeline operational with Ghost newsletter integration (PROCLAMATIO Sprint).",
       "public_visibility": "FULLY PUBLIC",
       "portfolio_angle": "Demonstrates audience building and content strategy. Evidence of thought leadership positioning. Relevant for visibility in grant applications and professional visibility.",
-      "repository_count": 4,
+      "repository_count": 6,
       "repositories": [
         {
           "name": "announcement-templates",
@@ -2442,6 +2685,42 @@
           "platinum_status": true,
           "notes": "IGNIS PERPETUUS sprint (2026-02-18): 6 workflows (dispatch-receiver, notify-kerygma, dispatch-log, rss-auto-dispatch, weekly-analytics, ci-pipeline), 5 scripts (validate-live-config, update-status-badge, deploy-ghost-theme, deploy-landing-page, sync-platform-profiles), full Ghost theme",
           "functional_class": "INFRASTRUCTURE"
+        },
+        {
+          "name": "kerygma-pipeline",
+          "org": "organvm-vii-kerygma",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "kerygma-pipeline",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "GRADUATED",
+          "tier": "standard",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
+        },
+        {
+          "name": "kerygma-profiles",
+          "org": "organvm-vii-kerygma",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "kerygma-profiles",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "STANDARD",
+          "dependencies": [],
+          "promotion_status": "GRADUATED",
+          "tier": "infrastructure",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Registered via Reconciliation Sprint 2026-04-14."
         }
       ],
       "completion_note": "PROCLAMATIO + IGNIS PERPETUUS sprints complete (2026-02-18). Ghost first-class adapter, cross-organ nervous system (notify-kerygma workflow_call), autonomous dispatch loop (RSS cron), Mastodon+Ghost metrics pull-back, Ghost theme scaffold, weekly analytics report workflow, status badge."
@@ -2463,7 +2742,7 @@
       "completion": "100%",
       "public_visibility": "MIXED",
       "portfolio_angle": "Infrastructure discipline — reproducible environments, agent-aware configuration, XDG compliance.",
-      "repository_count": 1,
+      "repository_count": 2,
       "repositories": [
         {
           "name": "domus-semper-palingenesis",
@@ -2482,6 +2761,25 @@
           "ci_workflow": null,
           "platinum_status": false,
           "note": "Liminal — outside the eight-organ system but foundational to all operations. seed.yaml created S29 (IRF-DOM-001). Produces: environment-config (ALL), agent-infrastructure (ORGAN-IV, META), secrets-management (ALL)."
+        },
+        {
+          "name": "portfolio",
+          "org": "4444j99",
+          "status": "ACTIVE",
+          "updated": "2026-04-14",
+          "public": true,
+          "description": "Astro 5 portfolio site with 21 case studies, 30 p5.js generative sketches, D3 charts, Shibui depth system, quality ratchet governance, and omega scorecard. 496 tests.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "CRITICAL",
+          "dependencies": [],
+          "promotion_status": "PUBLIC_PROCESS",
+          "tier": "flagship",
+          "last_validated": "2026-04-14",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": "ci.yml",
+          "platinum_status": false,
+          "deployment_url": "https://4444j99-portfolio.netlify.app",
+          "note": "Flagship personal project. Registered via IRF-PRT-003, Reconciliation Sprint 2026-04-14."
         }
       ]
     },
@@ -2734,7 +3032,8 @@
           "platinum_status": false,
           "revenue_model": null,
           "revenue_status": null,
-          "functional_class": "ENGINE"
+          "functional_class": "ENGINE",
+          "documentation_status": "SKELETON"
         },
         {
           "name": "cvrsvs-honorvm",
