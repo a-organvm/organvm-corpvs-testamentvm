@@ -1,6 +1,18 @@
 {
   "version": "3.0",
   "schema_note": "Governance rules v3.0 — natural law foundation added 2026-03-30. All axioms derive from two master principles of conservation and universal composition. v2.0 operational rules remain enforced; natural law section provides the deductive substrate from which all governance is derived.",
+  "_constitutional_locks": {
+    "locked_paths": [
+      "lex_naturalis.master_principles",
+      "dependency_rules.no_circular_dependencies",
+      "dependency_rules.no_back_edges",
+      "state_machine.states",
+      "dictums.axioms"
+    ],
+    "lock_policy": "append_only_amend_never_delete",
+    "amendment_log": "governance-amendments.jsonl",
+    "schema_note": "Locked paths may not be modified in-place. Amendments append to governance-amendments.jsonl with full hash chain. Deletions prohibited. Extensions (new axioms, new states) permitted via EXTEND operations. Predicate 7 (IMMUTABILITY) of SPEC-025."
+  },
   "lex_naturalis": {
     "preamble": "The governance of this system is not invented — it is derived from the laws of the universe in which we exist. Two master principles form the substrate beneath all axioms: conservation and universal composition. Every axiom, dictum, repo rule, and liquid rule in this document is a specific application of these principles to the domain of multi-repository creative-institutional systems. A system of unforgiving objective constraints controls and dictates every facet of the thing it watches. All laws of natural science and metaphysics are relevant here.",
     "master_principles": [
