@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-14T07:26:01.276029+00:00",
+  "generated": "2026-04-14T16:04:45.874766+00:00",
   "computed": {
-    "total_repos": 128,
-    "active_repos": 72,
+    "total_repos": 129,
+    "active_repos": 73,
     "archived_repos": 54,
-    "total_organs": 9,
-    "operational_organs": 9,
+    "total_organs": 10,
+    "operational_organs": 10,
     "ci_workflows": 106,
     "dependency_edges": 60,
     "per_organ": {
@@ -42,13 +42,17 @@
         "name": "Process Sequence Governance",
         "repos": 0
       },
+      "PERSONAL": {
+        "name": "Personal / Liminal",
+        "repos": 1
+      },
       "META-ORGANVM": {
         "name": "Meta",
         "repos": 13
       }
     },
     "implementation_status": {
-      "ACTIVE": 72,
+      "ACTIVE": 73,
       "ARCHIVED": 54,
       "PROTOTYPE": 2
     },

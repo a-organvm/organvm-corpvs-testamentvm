@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-14T07:26:02.150274+00:00",
+  "generated_at": "2026-04-14T16:04:46.719271+00:00",
   "system": {
-    "total_repos": 128,
-    "active_repos": 72,
-    "density": 0.262,
-    "entities": 128,
+    "total_repos": 129,
+    "active_repos": 73,
+    "density": 0.261,
+    "entities": 129,
     "edges": 0,
     "ci_workflows": 106,
     "code_files": 0,
@@ -875,14 +875,30 @@
           "ci": true
         }
       ]
+    },
+    {
+      "key": "PERSONAL",
+      "name": "Personal / Liminal",
+      "repo_count": 1,
+      "flagship_count": 0,
+      "standard_count": 0,
+      "infrastructure_count": 1,
+      "repositories": [
+        {
+          "name": "domus-semper-palingenesis",
+          "status": "GRADUATED",
+          "tier": "infrastructure",
+          "ci": false
+        }
+      ]
     }
   ],
   "variables": {
-    "total_repos": "128",
-    "active_repos": "72",
+    "total_repos": "129",
+    "active_repos": "73",
     "archived_repos": "54",
-    "total_organs": "9",
-    "operational_organs": "9",
+    "total_organs": "10",
+    "operational_organs": "10",
     "total_words_numeric": "0",
     "total_words_formatted": "0",
     "total_words_short": "0K+",
@@ -909,6 +925,8 @@
     "organ_name.ORGAN-VII": "Marketing",
     "organ_repos.ORGAN-PSG": "0",
     "organ_name.ORGAN-PSG": "Process Sequence Governance",
+    "organ_repos.PERSONAL": "1",
+    "organ_name.PERSONAL": "Personal / Liminal",
     "organ_repos.META-ORGANVM": "13",
     "organ_name.META-ORGANVM": "Meta"
   },
@@ -919,7 +937,7 @@
   "promotion_pipeline": {
     "ARCHIVED": 54,
     "CANDIDATE": 1,
-    "GRADUATED": 55,
+    "GRADUATED": 56,
     "LOCAL": 14,
     "PUBLIC_PROCESS": 4
   }
