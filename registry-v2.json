@@ -9,8 +9,8 @@
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
   "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I→II→III→IV→V→VI→VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
   "summary": {
-    "total_repos": 126,
-    "total_repos_note": "126 registry entries. sovereign-systems--elevate-align registered in ORGAN-III 2026-03-27 (30th ORGAN-III repo). Previous: 125 entries.",
+    "total_repos": 129,
+    "total_repos_note": "129 registry entries. domus-semper-palingenesis added to new PERSONAL section 2026-04-13 (IRF-DOM-002). Previous: 128 entries (126 counted in summary, 2 uncounted).",
     "operational_organs": 8,
     "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 — 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
@@ -2456,14 +2456,34 @@
       "repository_count": 0,
       "repositories": []
     },
-    "META-ORGANVM": {
-      "description": "System-wide foundational specification (SPEC-023) for sequence-governed work, requiring genesis SOPs and evidence-based evolution.",
+    "PERSONAL": {
+      "name": "Personal / Liminal",
+      "description": "Personal infrastructure outside the eight-organ system. Operator environment, agent configuration, secrets management.",
       "launch_status": "OPERATIONAL",
-      "completion": "100% — Foundational spec, Genesis SOP template, and pilot implementation (application-pipeline) deployed 2026-04-02.",
-      "public_visibility": "PUBLIC",
-      "portfolio_angle": "Demonstrates orchestration capacity, architectural reasoning, and systemic sustainability.",
-      "repository_count": 0,
-      "repositories": []
+      "completion": "100%",
+      "public_visibility": "MIXED",
+      "portfolio_angle": "Infrastructure discipline — reproducible environments, agent-aware configuration, XDG compliance.",
+      "repository_count": 1,
+      "repositories": [
+        {
+          "name": "domus-semper-palingenesis",
+          "org": "4444j99",
+          "status": "ACTIVE",
+          "updated": "2026-04-13",
+          "public": true,
+          "description": "Personal dotfiles and environment configuration managed by chezmoi. Shell environment, tool setup, secrets management, agent infrastructure.",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "HIGH",
+          "dependencies": [],
+          "promotion_status": "GRADUATED",
+          "tier": "infrastructure",
+          "last_validated": "2026-04-13",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Liminal — outside the eight-organ system but foundational to all operations. seed.yaml created S29 (IRF-DOM-001). Produces: environment-config (ALL), agent-infrastructure (ORGAN-IV, META), secrets-management (ALL)."
+        }
+      ]
     },
     "META-ORGANVM": {
       "name": "Meta",

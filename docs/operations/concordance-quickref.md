@@ -16,6 +16,7 @@
 | `AP-1`--`AP-7` | Anti-patterns (construction traps) | operational-cadence.md |
 | `W/SP/BS/LC/BL/ET/LO`+`-II` | E2G-II audit findings | e2g-ii-action-items.md |
 | `01`--`33` | Completed sprint numbers | docs/specs/sprints/ |
+| `IRF-DOM-NNN` | Domus infrastructure items | INST-INDEX-RERUM-FACIENDARUM.md |
 
 ## Top 10 Most-Referenced IDs
 
@@ -48,4 +49,4 @@ python3 scripts/invoke.py --search "stranger" # full-text search
 - **Sprint history:** concordance.md "Sprints" table (33 completed)
 
 ---
-*Derived from concordance.md. Updated 2026-03-04.*
+*Derived from concordance.md. Updated 2026-04-13.*

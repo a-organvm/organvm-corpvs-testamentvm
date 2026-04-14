@@ -126,6 +126,36 @@ Universal work registry. 26 domain prefixes:
 | IRF-SYS-044 | Fix hanging `organvm session review` / `organvm session plans` commands in large repos | P1 | GH#70 |
 | IRF-SYS-045 | Fix `organvm irf stats` undercounting tail-appended items | P1 | GH#71 |
 
+#### IRF-DOM Items (Domus Infrastructure, S29+)
+
+| ID | Description | Priority | Refs |
+|----|-------------|----------|------|
+| ~~IRF-DOM-001~~ | ~~Create seed.yaml~~ — DONE | ~~P1~~ | S29 |
+| ~~IRF-DOM-002~~ | ~~Add domus to registry-v2.json (PERSONAL section)~~ — DONE (S-domus-vacuum) | ~~P0~~ | S29, #19 |
+| ~~IRF-DOM-003~~ | ~~Emit testament events for domus~~ — DONE (S-domus-vacuum) | ~~P1~~ | DOM-002 |
+| ~~IRF-DOM-004~~ | ~~Register IRF-DOM in concordance + omega xrefs~~ — DONE (S-domus-vacuum) | ~~P2~~ | S29 |
+| IRF-DOM-005 | Create GitHub issues for domus testing gaps (5 areas) | P1 | S29, S32 |
+| IRF-DOM-006 | Add domus to omega evidence map (#1, #16, #17, #19) | P1 | S29, DOM-002 |
+| IRF-DOM-010 | Create Brewfile for domus — bootstrap missing tool tracking | P1 | S35, GH#4 |
+| IRF-DOM-016 | Omega #17 evidence gap — cloud storage incident unreported | P1 | S35, DOM-006 |
+| IRF-DOM-021 | CLAUDE.md missing project board URL | P1 | S-domus-board |
+| IRF-DOM-022 | OpenClaw security: 3B model + web tools, no sandbox | P1 | S43, GH#52 |
+| IRF-DOM-023 | lefthook global ghost — blocks git push system-wide | P1 | S43, GH#51 |
+| ~~IRF-DOM-027~~ | ~~Remove dead serena fork MCP~~ — DONE (S-mcp-remediation) | ~~P1~~ | Completed |
+| ~~IRF-DOM-029~~ | ~~Voice-scorer MCP non-functional~~ — DONE (S-domus-vacuum) | ~~P1~~ | Completed |
+| ~~IRF-DOM-030~~ | ~~Conductor MCP untested~~ — DONE (S-domus-vacuum) | ~~P1~~ | Completed |
+
+*18 additional P2/P3 items (DOM-007 through DOM-028) in full IRF.*
+
+**Omega cross-references (domus → criteria):**
+
+| Criterion | Domus role |
+|-----------|-----------|
+| #1 (30-day soak) | autoCommit/autoPush provides continuous deployment evidence |
+| #16 (bus factor) | chezmoi bootstrap recreates operator environment on any machine |
+| #17 (autonomous ops) | 50ms shell startup, self-heal daemon, zero-error boot (S32 rewrite) |
+| #19 (network density) | 3 produces edges (env-config, agent-infra, secrets) consumed by ALL organs |
+
 #### Testament Milestones
 
 | ID | Description | Date | Refs |
