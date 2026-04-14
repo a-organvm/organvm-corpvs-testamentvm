@@ -17,14 +17,14 @@
 
 | Metric | Value |
 |--------|-------|
-| Total repositories | 129 |
-| Implementation status | 73 ACTIVE, 54 ARCHIVED |
+| Total repositories | 145 |
+| Implementation status | 89 ACTIVE, 54 ARCHIVED |
 | GitHub organizations | 8 (7 organ orgs + 1 meta-org) |
 | Published essays | 29 (~404K+ words) |
 | Total documentation | ~410K+ words |
 | Named development sprints | 33 completed + 48 cataloged |
 | Architecture Decision Records | 16 (ADR-001 through ADR-016) |
-| CI/CD workflows | 106+ repos with workflows |
+| CI/CD workflows | 107+ repos with workflows |
 | Dependency edges | 60 validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
@@ -73,7 +73,7 @@
 
 I design environments where creative organisms grow — and then I document the process of growing them.
 
-My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 129 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
+My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 145 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
 
 The process of creation is the product. The 42 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge. Every architectural decision is an artistic decision.
 
@@ -178,7 +178,7 @@ Frame the same body of work differently for different audiences:
 
 ### 1. Systems Artist (art grants, residencies)
 - **Narrative:** "I build creative systems — the governance IS the artwork"
-- **Evidence:** 129-repo eight-organ system as living creative work, 42 essays, MFA
+- **Evidence:** 145-repo eight-organ system as living creative work, 42 essays, MFA
 - **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, MacDowell
 
 ### 2. Educator (education grants, fellowships)
@@ -188,7 +188,7 @@ Frame the same body of work differently for different audiences:
 
 ### 3. Creative Technologist (tech grants, selective roles)
 - **Narrative:** "Production-grade AI orchestration with creative-artistic applications"
-- **Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 106+ CI/CD workflows
+- **Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 107+ CI/CD workflows
 - **Targets:** Google Creative Lab, Processing Foundation, consulting clients, selective tech roles
 
 ### 4. Community Practitioner (community-focused funding)
@@ -212,12 +212,12 @@ What you can claim, with proof:
 | Claim | Evidence | Verification |
 |-------|----------|-------------|
 | 100 repos across 8 orgs | registry-v2.json | `jq '.summary.total_repos' registry-v2.json` → 100 |
-| 73 ACTIVE, 54 ARCHIVED | registry-v2.json | implementation_status_distribution field |
+| 89 ACTIVE, 54 ARCHIVED | registry-v2.json | implementation_status_distribution field |
 | 42 published essays | public-process/_posts/ | `ls _posts/ \| wc -l` → 42 |
 | ~404K+ words in essays | Word count of _posts/ | Measured at deploy |
 | ~410K+ total words | Aggregate across all repos | system-metrics.json |
 | 33 development sprints | docs/specs/sprints/ | 01-ignition through 33-operatio |
-| 106+ CI/CD workflows | Per-repo .github/workflows/ | Counted in MANIFESTATIO audit |
+| 107+ CI/CD workflows | Per-repo .github/workflows/ | Counted in MANIFESTATIO audit |
 | 60 dependency edges, 0 violations | validate-dependencies.yml | Weekly automated check |
 | 2,349+ tests | agentic-titan (1,095) + recursive-engine (1,254) | Package test suites |
 | 100% CLAUDE.md coverage | Per-repo CLAUDE.md files | SENSORIA audit |

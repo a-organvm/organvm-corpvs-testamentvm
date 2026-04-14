@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-14T16:04:45.874766+00:00",
+  "generated": "2026-04-14T16:29:24.666050+00:00",
   "computed": {
-    "total_repos": 129,
-    "active_repos": 73,
+    "total_repos": 145,
+    "active_repos": 89,
     "archived_repos": 54,
     "total_organs": 10,
     "operational_organs": 10,
-    "ci_workflows": 106,
+    "ci_workflows": 107,
     "dependency_edges": 60,
     "per_organ": {
       "ORGAN-I": {
         "name": "Theory",
-        "repos": 22
+        "repos": 26
       },
       "ORGAN-II": {
         "name": "Art",
@@ -20,15 +20,15 @@
       },
       "ORGAN-III": {
         "name": "Commerce",
-        "repos": 31
+        "repos": 32
       },
       "ORGAN-IV": {
         "name": "Orchestration",
-        "repos": 18
+        "repos": 22
       },
       "ORGAN-V": {
         "name": "Public Process",
-        "repos": 2
+        "repos": 6
       },
       "ORGAN-VI": {
         "name": "Community",
@@ -36,7 +36,7 @@
       },
       "ORGAN-VII": {
         "name": "Marketing",
-        "repos": 4
+        "repos": 6
       },
       "ORGAN-PSG": {
         "name": "Process Sequence Governance",
@@ -44,7 +44,7 @@
       },
       "PERSONAL": {
         "name": "Personal / Liminal",
-        "repos": 1
+        "repos": 2
       },
       "META-ORGANVM": {
         "name": "Meta",
@@ -52,7 +52,7 @@
       }
     },
     "implementation_status": {
-      "ACTIVE": 73,
+      "ACTIVE": 89,
       "ARCHIVED": 54,
       "PROTOTYPE": 2
     },
