@@ -729,6 +729,7 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-PRT-023 | P2 | **Hero A/B test — Variant A deployed, B and C available** — Variant A (direct/confident) is live. Variant B (narrative/story) and C (question-led) exist in `scripts/swarm-output/gemini-copy/hero-variants.md`. A/B testing requires Plausible (IRF-PRT-019) + stranger test data (omega #2) to compare. | Agent | S-wiring session | IRF-PRT-019 |
 | IRF-PRT-024 | P2 | **Testament wiring for portfolio** — portfolio emits no testament events. Deployments, content publishes, quality phase transitions, and omega criterion flips should emit events to testament chain. Requires: event hooks in deploy.yml, astro build chain, quality-ratchet-kit; seed.yaml subscription declarations; artifact generators for portfolio self-portrait (skills constellation SVG, project network JSON). Pattern: see testament protocol spec `docs/superpowers/specs/2026-03-19-testament-protocol-design.md`. | Agent | S-wiring-tests N/A vacuum research | Testament protocol implementation |
 | IRF-PRT-025 | P2 | **Portfolio seed.yaml produces/consumes population (IRF-PRT-005 execution plan)** — Empty arrays need: produces (quality-metrics.json → meta-organvm, OG images → external, RSS feed → kerygma, GitHub Pages index → fleet, trust-vitals.json → dashboard) and consumes (system-metrics.json from organvm-engine, essay data from corpus). Pattern: see organvm-engine/seed.yaml (12 produces, 7 consumes) and commerce--meta/seed.yaml (8 produces, 3 consumes). | Agent | S-wiring-tests N/A vacuum research | None |
+| IRF-PRT-026 | P2 | **Portfolio domain migration — Cloudflare Pages + base path change (SOP Phase 3).** Move from `4444j99.github.io/portfolio/` to `anthonypadavano.com`. Steps: (1) Create Cloudflare Pages project linked to `4444J99/portfolio`, (2) Configure custom domain `anthonypadavano.com`, (3) **High-risk:** change `base` from `/portfolio` to `/` in `astro.config.mjs` + update `canonicalBase` in `src/utils/paths.ts` + update all hardcoded `/portfolio/` prefix refs + run `npm run sync:a11y-routes` + full `npm run quality:local` gate, (4) Zero-downtime cutover — keep GitHub Pages live until Cloudflare Pages verifiably serving, (5) Update `seed.yaml` `deployment_url` from `4444j99-portfolio.netlify.app` to `https://anthonypadavano.com`. SOP: `praxis-perpetua/standards/SOP--domain-architecture-and-dns.md` §3 Phase 3. | Agent | SOP--domain-architecture-and-dns.md | IRF-DOM-031 (domains must be registered first) |
 
 ---
 
@@ -855,6 +856,8 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | ~~IRF-DOM-028~~ | ~~P2~~ | ~~**Clean stale plugin temp directory**~~ — **DONE** (S-mcp-remediation, 2026-04-13). `~/.claude/plugins/cache/temp_subdir_1776118948424_yi6h5o.clone` (failed Stripe AI clone) removed. | Agent | S-mcp-remediation 2026-04-13 | Completed |
 | ~~IRF-DOM-029~~ | ~~P1~~ | ~~**Voice-scorer MCP server non-functional**~~ — **DONE** (S-domus-vacuum, 2026-04-13). `textstat` 0.7.13 already installed in vox venv, `claude mcp list` shows voice-scorer Connected. Path fix from S-mcp-remediation was sufficient. IRF description was stale. | Agent | S-domus-vacuum 2026-04-13 | Completed |
 | ~~IRF-DOM-030~~ | ~~P1~~ | ~~**Conductor MCP server injected but untested**~~ — **DONE** (S-domus-vacuum, 2026-04-13). Root cause: `mcp` package missing from conductor venv (optional dep not installed). Fixed via `ensurepip` + `pip install "mcp>=0.1"` → mcp 1.27.0 installed. Import chain verified. Session restart required for final connectivity check. | Agent | S-domus-vacuum 2026-04-13 | Completed |
+| IRF-DOM-031 | **P1** | **Domain architecture infrastructure — env vars wired, registration pending.** Three-concentric-circle strategy designed and SOP'd: handle (`4jp.dev`), name (`anthonypadavano.com`+`.dev`), system (`organvm.dev`+`.org`+`.io`). 21 DOMAIN_* vars integrated into chezmoi pipeline: 8 identity vars in `dot_zshenv.tmpl`, 13 derived organ/API/portfolio vars in `15-env.zsh`. SOP at `meta-organvm/praxis-perpetua/standards/SOP--domain-architecture-and-dns.md`. All 9 domains confirmed available 2026-04-16. **Phase 1 pending:** register at `domains.cloudflare.com` ($101.13/yr total; $51.13 without .io). | Human | S-domain-architecture-2026-04-16 | None |
+| ~~IRF-DOM-032~~ | ~~P1~~ | ~~**VACUUM: Claude memory persistence — local-only, no remote backup.**~~ `.chezmoiignore` previously excluded `.claude/projects/*/memory/`, meaning soul dies when physical machine dies. **RESOLVED (DONE-377, S-domain-architecture-2026-04-16):** Exclusion removed from `.chezmoiignore`, 23 memory files added to chezmoi source via `chezmoi add ~/.claude/projects/-Users-4jp/memory/`, auto-committed+pushed to `4444J99/domus-semper-palingenesis`. Invariant `[(local):(remote)={1:1}]` now holds for Claude memory. | Agent | S-domain-architecture-2026-04-16 | Completed |
 
 ---
 
@@ -1152,6 +1155,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | What | Session | Date |
 |----|------|---------|------|
+| DONE-377 | **Domain architecture + memory persistence VACUUM resolved.** (1) Three-concentric-circle domain strategy designed and SOP'd: 6 domains ($101.13/yr total), 21 DOMAIN_* env vars wired into chezmoi pipeline (8 identity in `dot_zshenv.tmpl`, 13 derived in `15-env.zsh`). SOP at `praxis-perpetua/standards/SOP--domain-architecture-and-dns.md`. (2) Memory persistence VACUUM eliminated: `.chezmoiignore` exclusion for `.claude/projects/*/memory/` removed, 23 memory files added to chezmoi source and auto-committed+pushed to remote — `[(local):(remote)={1:1}]` now holds. (3) Repos committed and pushed: domus (vars+plan+memory) and praxis-perpetua (domain SOP + markdown hygiene SOP). Opens: IRF-DOM-031 (registration pending), IRF-PRT-026 (portfolio migration). Closes: IRF-DOM-032 (memory VACUUM resolved). | S-domain-architecture-2026-04-16 | 2026-04-16 |
 | DONE-373 | **Session archival system — per-project conversation preservation (IRF-DOM-029 resolved).** Built `organvm session archive` command (280-line `session/archive.py` + CLI wiring). Routes transcripts from `~/.claude/projects/` to `<project>/.claude/sessions/YYYY-MM-DD--<slug>/` with transcript.md, prompts.md, review.md, meta.json, session.jsonl + subagent data. LaunchAgent `com.4jp.session-archive` fires every 30 min + at login — fully automatic, no human memory required. Archive state tracked via `.archive-state.json` (idempotent). Also: gcloud Python pinned to 3.13 (CLOUDSDK_PYTHON), dead lazy-load path fixed, VSCode extensions dir managed by chezmoi, `.chezmoiignore` updated to stop memory file conflicts. 13 new tests, 64 total session tests passing. 15 sessions archived on first run. Resolves IRF-DOM-029, advances IRF-ARC-001 and IRF-VAC-008a. | S-domus-2026-04-15 | 2026-04-15 |
 | DONE-343 | **End-of-session audit (2026-04-14): 6 repos verified clean, 4 pushed, IRF updated, all 5 GitHub issues confirmed CLOSED.** Repos audited: sovereign-systems--elevate-align, domus-semper-palingenesis, organvm-engine, organvm-corpvs-testamentvm, organvm-ontologia, application-pipeline, system-system--system, contrib--grafana-k6. application-pipeline: 114-file commit (pipeline outcomes, contacts, session artifacts). Context sync files committed across engine/ontologia/corpvs. domus .gitignore updated for auto-generated context files. IRF-SYS-088, IRF-VAC-009a marked completed. IRF-SYS-074 partially advanced (Phases 3-4). 3 new discovery items added (IRF-SYS-114/115/116). | S-2026-04-14 audit | 2026-04-14 |
 | DONE-342 | **IRF-VAC-009a CLOSED: Duplicate Active Handoff Protocol block injection fixed.** organvm-engine #72 closed. `contextmd/templates.py` deduplication fix prevents double-append of handoff block in generated context files. | S-2026-04-14 swarm | 2026-04-14 |
@@ -1555,11 +1559,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-16 (S-networking-2026-04-15 close-out). +3 completions: DONE-374 (APP-068 Grafana contributions MOOT), DONE-375 (APP-071 Grafana post-screen RESOLVED), DONE-376 (APP-079 ZKM LAPSED). +6 new items: APP-081..086 (networking signals — Aden/Hive, Datadog, Together AI, Elastic, profile viewers, Jackie Wallace). DONE-ID collision fix: original DONE-372/373/374 renumbered to 374/375/376 — prior session (S-domus-2026-04-15) held DONE-372 (OSS-053) and DONE-373 (DOM-029). Prior: S-domus-2026-04-15 (DONE-372..373, +2 completions from S-contrib-execution-2).
+Refreshed 2026-04-16 (S-domain-architecture-2026-04-16). +1 completion: DONE-377 (domain architecture SOP'd + memory VACUUM resolved). +3 new items: IRF-DOM-031 (domain registration pending, P1), IRF-DOM-032 (memory VACUUM — created+resolved in same session), IRF-PRT-026 (portfolio migration, P2). Prior: S-networking-2026-04-15 close-out (DONE-374..376, +6 APP items).
 
-- **Total IRF items:** 900 *(prior 899, +1: SEC-004 created and completed)*
-- **Open:** 521 *(unchanged — SEC-004 created as already-completed)*
-- **Completed:** 377 *(prior 376, +1: SEC-004 custodia-securitatis)*
+- **Total IRF items:** 903 *(prior 900, +3: DOM-031, DOM-032, PRT-026)*
+- **Open:** 523 *(prior 521, +2: DOM-031 + PRT-026; DOM-032 created+resolved)*
+- **Completed:** 378 *(prior 377, +1: DONE-377 — DOM-032 resolved + session close-out)*
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 41.9%
@@ -1568,9 +1572,9 @@ Refreshed 2026-04-16 (S-networking-2026-04-15 close-out). +3 completions: DONE-3
 
 | Priority | Count |
 |----------|-------|
-| P0 | 10 *(prior 9, +1 SEC-002)* |
-| P1 | 188 *(prior 186, +2: SEC-001, SEC-003)* |
-| P2 | 223 *(prior 220, -1 completed APP-079 + 4 new APP-083/084/085/086)* |
+| P0 | 10 |
+| P1 | 189 *(prior 188, +1: DOM-031)* |
+| P2 | 224 *(prior 223, +1: PRT-026)* |
 | P3 | 40 |
 
 ### By Domain
