@@ -151,6 +151,8 @@ Universal work registry. 26 domain prefixes:
 | ~~IRF-DOM-027~~ | ~~Remove dead serena fork MCP~~ — DONE (S-mcp-remediation) | ~~P1~~ | Completed |
 | ~~IRF-DOM-029~~ | ~~Voice-scorer MCP non-functional~~ — DONE (S-domus-vacuum) | ~~P1~~ | Completed |
 | ~~IRF-DOM-030~~ | ~~Conductor MCP untested~~ — DONE (S-domus-vacuum) | ~~P1~~ | Completed |
+| ~~IRF-DOM-029 (renumbered)~~ | ~~Persist Claude session transcripts remotely~~ — DONE (DONE-373, S-domus-2026-04-15). `organvm session archive` command built + LaunchAgent every 30 min. | ~~P1~~ | Completed |
+| IRF-DOM-031 | `~/.claude/settings.json` not tracked by chezmoi — persistence vacuum. Partially fixed: `private_dot_claude/settings.json.tmpl` restored with `{{ .chezmoi.homeDir }}` vars + PreToolUse if-guards + plugin cleanup. GH#26. | P1 | S-2026-04-16, GH#26 |
 
 *18 additional P2/P3 items (DOM-007 through DOM-028) in full IRF.*
 
@@ -159,9 +161,9 @@ Universal work registry. 26 domain prefixes:
 | Criterion | Domus role |
 |-----------|-----------|
 | #1 (30-day soak) | autoCommit/autoPush provides continuous deployment evidence |
-| #16 (bus factor) | chezmoi bootstrap recreates operator environment on any machine |
-| #17 (autonomous ops) | 50ms shell startup, self-heal daemon, zero-error boot (S32 rewrite) |
-| #19 (network density) | 3 produces edges (env-config, agent-infra, secrets) consumed by ALL organs |
+| #16 (bus factor) | chezmoi bootstrap recreates operator environment on any machine; `settings.json.tmpl` now tracked (S-2026-04-16, was local-only) |
+| #17 (autonomous ops) | 50ms shell startup, self-heal daemon, zero-error boot (S32 rewrite); silent SSH clone failure of plugin marketplace exposed infra resilience gap (S-2026-04-16, IRF-DOM-031) |
+| #19 (network density) | 4 produces edges (env-config, agent-infra, secrets, claude-code-config) consumed by ALL organs |
 
 #### Testament Milestones
 
