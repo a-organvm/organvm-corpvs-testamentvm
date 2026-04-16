@@ -3417,6 +3417,29 @@
             "code_files": 0,
             "test_files": 0
           }
+        },
+        {
+          "name": "custodia-securitatis",
+          "org": "meta-organvm",
+          "status": "active",
+          "public": false,
+          "description": "Operational security registry \u2014 credential inventories, rotation logs, incident records, disclosure tracking, scan archives, billing status",
+          "documentation_status": "DEPLOYED",
+          "portfolio_relevance": "medium",
+          "dependencies": [
+            "meta-organvm/organvm-corpvs-testamentvm",
+            "meta-organvm/praxis-perpetua"
+          ],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-16",
+          "note": "Genesis 2026-04-16. Fills operational vacuum between IRF SEC domain (governance) and Security SOP (process). Seeded from S-inbox-2026-04-15 carry-forward.",
+          "implementation_status": "ACTIVE",
+          "functional_class": "infrastructure",
+          "metrics": {
+            "code_files": 0,
+            "test_files": 0
+          }
         }
       ]
     }

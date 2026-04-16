@@ -3,7 +3,7 @@
 **Status:** ACTIVE
 **Created:** 2026-03-20
 **Authority:** META — System-wide governance instrument
-Purpose: Universal hanging index of things to be done — the canonical gap between what the system IS and what it NEEDS TO BE. (882 items, 20 domains)
+Purpose: Universal hanging index of things to be done — the canonical gap between what the system IS and what it NEEDS TO BE. (900 items, 21 domains)
 
 > *Index Rerum Faciendarum* — after the classical scholarly apparatus: *Index Locorum* (places), *Index Nominum* (names), *Index Rerum* (things). The gerundive *faciendarum* transforms reference into obligation: not things that exist, but things that must be made to exist.
 
@@ -209,6 +209,7 @@ The counter file is the single source of truth for the DONE-ID ceiling. The stat
 | IRF-SEC-001 | **P1** | **GitHub webhook secret exposure — partially mitigated.** Hook 558013866 (`radix-recursiva-solve-coagula-redi`) rotated 2026-04-15. Receiving endpoint (`github-bot-production.appspot.com`) needs new secret to verify signatures — store in 1Password as "GitHub Webhook - radix-recursiva", update App Engine config. Hook 578404008 (ivviiviivvi--Semgrep-Code--011226) **cannot be rotated via user API** — requires GitHub App settings or Semgrep contact. | Human | S-inbox-2026-04-15 carry-forward | 1Password + App Engine access |
 | IRF-SEC-002 | **P0** | **OpenAI API key exposed in public Docker image.** Key found in `cetaceang/openai-king` (92MB, 507 pulls, live since Aug 2025). Responsible disclosure received via polem4rch@gmail.com 2026-04-10. **Action:** Rotate at platform.openai.com, audit usage logs, report image to Docker Hub. | Human | S-inbox-2026-04-15 carry-forward | Browser login |
 | IRF-SEC-003 | **P1** | **GCP billing overdue — deactivation risk.** Account `016B52-CC5865-3BDA82` has unpaid balance (notified 2026-04-15). May be deactivated. **Action:** Pay at console.cloud.google.com/billing. Likely shared payment method failure with GoDaddy (IRF-SYS-011) and Vercel (IRF-SYS-012). | Human | S-inbox-2026-04-15 carry-forward | Browser login |
+| ~~IRF-SEC-004~~ | ~~P1~~ | ~~**Create custodia-securitatis operational security repo.**~~ — **DONE**: `meta-organvm/custodia-securitatis` created 2026-04-16. Credential inventory, webhook inventory, billing status, 2 incident records, 1 disclosure record. Genesis commit `a0ed04c`. GitHub remote created (private). Registry entry added. | Agent | This session | Completed 2026-04-16 |
 
 ---
 
@@ -1556,9 +1557,9 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 Refreshed 2026-04-16 (S-networking-2026-04-15 close-out). +3 completions: DONE-374 (APP-068 Grafana contributions MOOT), DONE-375 (APP-071 Grafana post-screen RESOLVED), DONE-376 (APP-079 ZKM LAPSED). +6 new items: APP-081..086 (networking signals — Aden/Hive, Datadog, Together AI, Elastic, profile viewers, Jackie Wallace). DONE-ID collision fix: original DONE-372/373/374 renumbered to 374/375/376 — prior session (S-domus-2026-04-15) held DONE-372 (OSS-053) and DONE-373 (DOM-029). Prior: S-domus-2026-04-15 (DONE-372..373, +2 completions from S-contrib-execution-2).
 
-- **Total IRF items:** 899 *(prior 896, +3 new: SEC-001..003)*
-- **Open:** 521 *(prior 518, +3 new SEC items)*
-- **Completed:** 376 *(unchanged)*
+- **Total IRF items:** 900 *(prior 899, +1: SEC-004 created and completed)*
+- **Open:** 521 *(unchanged — SEC-004 created as already-completed)*
+- **Completed:** 377 *(prior 376, +1: SEC-004 custodia-securitatis)*
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 41.9%
@@ -1612,7 +1613,7 @@ Refreshed 2026-04-16 (S-networking-2026-04-15 close-out). +3 completions: DONE-3
 | BLK | 2 |
 | DWV | 2 |
 | TST | 2 |
-| SEC | 3 *(new domain — S-inbox-2026-04-15 carry-forward)* |
+| SEC | 4 *(new domain — S-inbox-2026-04-15 carry-forward + custodia-securitatis)* |
 
 ### Effort Distribution (Research Programme)
 
@@ -1726,7 +1727,7 @@ Refreshed 2026-04-16 (S-networking-2026-04-15 close-out). +3 completions: DONE-3
 | IRF-APP-085 | **P2** | **Messageable LinkedIn profile viewers (1st connections, no thread)** — Paul Pham (dbt Labs, Sr. Quality Engineer — contrib--dbt-mcp overlap), Luvo Dlulisa (Wikimedia Foundation — user is Wikipedia:Apadavano), Charlie Gleek (UVA — academic/SGO overlap). All viewed profile, all 1st connections, none contacted. Drafts not yet composed. | Human | S-networking-2026-04-15 | None |
 | IRF-APP-086 | **P2** | **LinkedIn follow-up batch — Jackie Wallace** — Senior Talent Partner, applied for Lead Technical Writer. Messaged 2026-04-10, no response. Active 15h ago (as of 2026-04-15), "reachable" status. Follow-up draft composed 2026-04-15. **Human action: send.** | Human | S-networking-2026-04-15 | Human action |
 | ~~IRF-OSS-042~~ | ~~P1~~ | ~~**System-wide Action Ledger**~~ — *(ID reassigned: Action Ledger work tracked under IRF-OSS-032; OSS-042 now tracks grafana/k6 PR #5770 in main section)* | Agent | S52 | Superseded |
-| IRF-OSS-043 | **P1** | **IRF Instrument v3 (Endless Box)** — Transition to "Endless Box" model with worker agents ("Pencil Pushers") and fixed ID assignment. Spec at `meta-organvm/organvm-corpvs-testamentvm/IRF-V3-SPEC.md`. | Agent | S52 | None |
+| ~~IRF-OSS-043~~ | ~~P1~~ | ~~**IRF Instrument v3 (Endless Box)**~~ — *(ID reassigned: Endless Box spec preserved at IRF-V3-SPEC.md; OSS-043 now tracks openai/openai-agents-python PR #2802 in main section)* | Agent | S52 | Superseded |
 | IRF-SYS-051 | **P1** | **Stable Unit Notice Ownership Audit** — Resolve mismatches between `registry-v2.json` and `seed.yaml` status. Ensure all `GRADUATED` units have `ownership` metadata (v1.1) and `NOTICE` files. Spec: `docs/planning/06-stable-unit-notice-audit.md`. | Agent | S-2026-04-02 | None |
 | DONE-319 | **Fleet agent registry expansion + structural elevation (IRF-CND-008).** `fleet.yaml` elevated from `tool-interaction-design/conductor/` to `organvm-iv-taxis/` superproject root (scope-visibility principle). Fleet expanded 6→12 agents (6 active, 2 inactive, 4 wishlist). `FleetAgent` dataclass gained 7 new fields. `FLEET.md` human reference created. `work_types.yaml` expanded to 9 types with `preferred_agents`/`excluded_agents`. 129 tests passing. 6 vacuum IRF items logged (CND-009 through CND-013). `seed.yaml` updated with `fleet-agent-registry` produces edge. | S-fleet-definition | 2026-04-02 |
 | DONE-326 | **Stable unit notice ownership requirement identified (IRF-SYS-051 initiation).** Researched Stable Units Protocol and identified systemic status mismatches between registry and seed contracts. Drafted system-wide audit plan (`docs/planning/06-stable-unit-notice-audit.md`) and flagged `public-record-data-scrapper` for tending. *(Renumbered from DONE-320 — triple collision.)* | S-2026-04-02 | 2026-04-02 |
