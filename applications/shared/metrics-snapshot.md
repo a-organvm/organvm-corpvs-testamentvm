@@ -4,12 +4,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Total repositories | 145 |
-| Active status | 89 |
+| Total repositories | 146 |
+| Active status | 90 |
 | Archived | 54 |
 | Organs operational | 8/8 |
 | CI/CD workflows | 107+ |
-| Dependency edges | 60 |
+| Dependency edges | 62 |
 | Back-edge violations | 0 |
 | Published essays | 29 |
 | Total documentation | ~386,000+ |

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-16T12:33:14.759410+00:00",
+  "generated_at": "2026-04-16T13:00:40.607751+00:00",
   "system": {
-    "total_repos": 145,
-    "active_repos": 89,
+    "total_repos": 146,
+    "active_repos": 90,
     "density": 0.254,
-    "entities": 145,
+    "entities": 146,
     "edges": 0,
     "ci_workflows": 107,
     "code_files": 0,
@@ -22,9 +22,9 @@
     {
       "key": "META-ORGANVM",
       "name": "Meta",
-      "repo_count": 13,
+      "repo_count": 14,
       "flagship_count": 2,
-      "standard_count": 9,
+      "standard_count": 10,
       "infrastructure_count": 2,
       "repositories": [
         {
@@ -101,6 +101,12 @@
         },
         {
           "name": "cvrsvs-honorvm",
+          "status": "LOCAL",
+          "tier": "standard",
+          "ci": false
+        },
+        {
+          "name": "custodia-securitatis",
           "status": "LOCAL",
           "tier": "standard",
           "ci": false
@@ -990,8 +996,8 @@
     }
   ],
   "variables": {
-    "total_repos": "145",
-    "active_repos": "89",
+    "total_repos": "146",
+    "active_repos": "90",
     "archived_repos": "54",
     "total_organs": "10",
     "operational_organs": "10",
@@ -999,7 +1005,7 @@
     "total_words_formatted": "0",
     "total_words_short": "0K+",
     "ci_workflows": "107",
-    "dependency_edges": "60",
+    "dependency_edges": "62",
     "published_essays": "29",
     "sprints_completed": "33",
     "code_files": "0",
@@ -1023,7 +1029,7 @@
     "organ_name.ORGAN-PSG": "Process Sequence Governance",
     "organ_repos.PERSONAL": "2",
     "organ_name.PERSONAL": "Personal / Liminal",
-    "organ_repos.META-ORGANVM": "13",
+    "organ_repos.META-ORGANVM": "14",
     "organ_name.META-ORGANVM": "Meta"
   },
   "omega": {
@@ -1034,7 +1040,7 @@
     "ARCHIVED": 54,
     "CANDIDATE": 1,
     "GRADUATED": 58,
-    "LOCAL": 25,
+    "LOCAL": 26,
     "PUBLIC_PROCESS": 7
   }
 }

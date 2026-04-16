@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-16T12:33:13.909176+00:00",
+  "generated": "2026-04-16T13:00:39.780300+00:00",
   "computed": {
-    "total_repos": 145,
-    "active_repos": 89,
+    "total_repos": 146,
+    "active_repos": 90,
     "archived_repos": 54,
     "total_organs": 10,
     "operational_organs": 10,
     "ci_workflows": 107,
-    "dependency_edges": 60,
+    "dependency_edges": 62,
     "per_organ": {
       "ORGAN-I": {
         "name": "Theory",
@@ -48,11 +48,11 @@
       },
       "META-ORGANVM": {
         "name": "Meta",
-        "repos": 13
+        "repos": 14
       }
     },
     "implementation_status": {
-      "ACTIVE": 89,
+      "ACTIVE": 90,
       "ARCHIVED": 54,
       "PROTOTYPE": 2
     },

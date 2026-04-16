@@ -11,11 +11,11 @@
 ## One-Paragraph Summary
 
 <<<<<<< HEAD
-I designed and implemented an eight-organ orchestration system that coordinates 145 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. The system includes a machine-readable registry, automated dependency validation, a formal promotion state machine (LOCAL -> CANDIDATE -> PUBLIC_PROCESS -> GRADUATED -> ARCHIVED), and 11 GitHub Actions workflows for autonomous governance. It is fully documented at ~404K+ words and validated by automated scripts that check every repository for CI/CD, documentation, dependency integrity, and constitutional compliance.
+I designed and implemented an eight-organ orchestration system that coordinates 146 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. The system includes a machine-readable registry, automated dependency validation, a formal promotion state machine (LOCAL -> CANDIDATE -> PUBLIC_PROCESS -> GRADUATED -> ARCHIVED), and 11 GitHub Actions workflows for autonomous governance. It is fully documented at ~404K+ words and validated by automated scripts that check every repository for CI/CD, documentation, dependency integrity, and constitutional compliance.
 ||||||| 905f85c
-I designed and implemented an eight-organ orchestration system that coordinates 145 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. The system includes a machine-readable registry, automated dependency validation, a formal promotion state machine (LOCAL -> CANDIDATE -> PUBLIC_PROCESS -> GRADUATED -> ARCHIVED), and 11 GitHub Actions workflows for autonomous governance. It is fully documented at ~404K+ words and validated by automated scripts that check every repository for CI/CD, documentation, dependency integrity, and constitutional compliance.
+I designed and implemented an eight-organ orchestration system that coordinates 146 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. The system includes a machine-readable registry, automated dependency validation, a formal promotion state machine (LOCAL -> CANDIDATE -> PUBLIC_PROCESS -> GRADUATED -> ARCHIVED), and 11 GitHub Actions workflows for autonomous governance. It is fully documented at ~404K+ words and validated by automated scripts that check every repository for CI/CD, documentation, dependency integrity, and constitutional compliance.
 =======
-I designed and implemented an eight-organ orchestration system that coordinates 145 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. The system includes a machine-readable registry, automated dependency validation, a formal promotion state machine (LOCAL -> CANDIDATE -> PUBLIC_PROCESS -> GRADUATED -> ARCHIVED), and 11 GitHub Actions workflows for autonomous governance. It is fully documented at ~404K+ words and validated by automated scripts that check every repository for CI/CD, documentation, dependency integrity, and constitutional compliance.
+I designed and implemented an eight-organ orchestration system that coordinates 146 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. The system includes a machine-readable registry, automated dependency validation, a formal promotion state machine (LOCAL -> CANDIDATE -> PUBLIC_PROCESS -> GRADUATED -> ARCHIVED), and 11 GitHub Actions workflows for autonomous governance. It is fully documented at ~404K+ words and validated by automated scripts that check every repository for CI/CD, documentation, dependency integrity, and constitutional compliance.
 >>>>>>> 058f269af2f5047a7873ae1949e64979f558ca81
 
 ---
@@ -24,16 +24,16 @@ I designed and implemented an eight-organ orchestration system that coordinates 
 
 | Dimension | Value |
 |-----------|-------|
-| Total repositories | 145 |
+| Total repositories | 146 |
 | GitHub organizations | 8 |
 | Documentation | ~404K+ words |
 | CI/CD coverage | 82+ repos with workflows |
 | Validation scripts | 5 automated, all passing |
 | Meta-system essays | 41 published (~150K words) |
-| Dependency edges | 60, all validated |
+| Dependency edges | 62, all validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
-| Implementation status | 89 ACTIVE, 54 ARCHIVED |
+| Implementation status | 90 ACTIVE, 54 ARCHIVED |
 
 ---
 
@@ -82,11 +82,11 @@ I designed and implemented an eight-organ orchestration system that coordinates 
 
 ### Consulting & Freelance
 <<<<<<< HEAD
-**Evidence:** The 145-repo system IS the credential. AI orchestration, documentation, workshop facilitation. **Demonstrates:** $100-125/hr market rate for AI orchestration consulting. 100+ courses taught, 2,000+ students, ~404K+ words of documentation. **Rate floor:** $100/hr (corrected from $60/hr per market research).
+**Evidence:** The 146-repo system IS the credential. AI orchestration, documentation, workshop facilitation. **Demonstrates:** $100-125/hr market rate for AI orchestration consulting. 100+ courses taught, 2,000+ students, ~404K+ words of documentation. **Rate floor:** $100/hr (corrected from $60/hr per market research).
 ||||||| 905f85c
-**Evidence:** The 145-repo system IS the credential. AI orchestration, documentation, workshop facilitation. **Demonstrates:** $100-125/hr market rate for AI orchestration consulting. 100+ courses taught, 2,000+ students, ~404K+ words of documentation. **Rate floor:** $100/hr (corrected from $60/hr per market research).
+**Evidence:** The 146-repo system IS the credential. AI orchestration, documentation, workshop facilitation. **Demonstrates:** $100-125/hr market rate for AI orchestration consulting. 100+ courses taught, 2,000+ students, ~404K+ words of documentation. **Rate floor:** $100/hr (corrected from $60/hr per market research).
 =======
-**Evidence:** The 145-repo system IS the credential. AI orchestration, documentation, workshop facilitation. **Demonstrates:** $100-125/hr market rate for AI orchestration consulting. 100+ courses taught, 2,000+ students, ~404K+ words of documentation. **Rate floor:** $100/hr (corrected from $60/hr per market research).
+**Evidence:** The 146-repo system IS the credential. AI orchestration, documentation, workshop facilitation. **Demonstrates:** $100-125/hr market rate for AI orchestration consulting. 100+ courses taught, 2,000+ students, ~404K+ words of documentation. **Rate floor:** $100/hr (corrected from $60/hr per market research).
 >>>>>>> 058f269af2f5047a7873ae1949e64979f558ca81
 
 ### Selective Employment (deprioritized)
