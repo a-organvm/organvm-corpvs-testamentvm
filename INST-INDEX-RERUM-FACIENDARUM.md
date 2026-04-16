@@ -784,17 +784,17 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-APP-065 | P2 | Update seed.yaml with new capabilities from S43 wiring tests. | Agent | S43 hall-monitor audit | None |
 | IRF-APP-066 | P1 | **First interview conversion SOP** — standardized as 6-phase, 26-step sequence in `pipeline/submissions/grafana-labs-full-dossier.md` §XIV. Needs extraction to standalone SOP document in `docs/` or `strategy/`. Reusable for all future positive conversions. | Agent | Session S46 (2026-04-01) | None |
 | ~~IRF-APP-067~~ | ~~P1~~ | ~~**External application quick-log command**~~ → **DONE-321**: Implemented `scripts/quicklog.py` and integrated into `run.py` as a flag-driven dispatcher command. Live invocation: `python scripts/run.py quicklog --org "X" --role "Y" --date YYYY-MM-DD`. Schema validated, and the command surface was propagated to `CLAUDE.md` and `seed.yaml`. — Grafana application was submitted outside pipeline, requiring retroactive backfill. Build `run.py quicklog --org "X" --role "Y" --date YYYY-MM-DD` to register external submissions in real-time, preventing pipeline gaps. | Agent | Session S46 (vacuum: out-of-pipeline applications) | None |
-| IRF-APP-068 | P2 | **Grafana Tier 1 contributions** — 4 insertion points identified: grafana/metrics-drilldown #1146 (CLAUDE.md), grafana/mcp-grafana #680 (prompt injection), #641 (camelCase fix), #620 (docs org). Execute before Mon 2026-04-06 interview. | Human+Agent | Session S46 (contextual insertion) | None |
+| ~~IRF-APP-068~~ | ~~P2~~ | ~~**Grafana Tier 1 contributions**~~ — **MOOT** (2026-04-15). Grafana interview bombed at recruiter screen (health issues, unprepared). Contributions no longer serve interview prep purpose. 4 insertion points (metrics-drilldown #1146, mcp-grafana #680/#641/#620) remain valid OSS contributions but are deprioritized without the interview forcing function. | Human+Agent | Session S46 (contextual insertion) | Completed (moot) |
 | ~~IRF-APP-069~~ | ~~P2~~ | ~~**Outreach-log.yaml structural fix**~~ → **DONE-322**: Wrapped content in `entries:` key and fixed invalid types (connection_request → connect) + filled empty contacts with TBD. — pre-existing validation error: missing top-level `entries:` key. Signal validator reports 0 entries parsed. Not introduced this session but blocks `--strict` validation. | Agent | Session S46 (hall-monitor audit) | None |
 | IRF-APP-070 | P2 | **IRF-APP-064/065 duplicate collision** — two pairs of duplicate entries (064 appears twice, 065 appears twice). Pre-existing from S43. Dedup needed. Related to IRF-APP-062 (general ID collision issue). | Agent | Session S46 (hall-monitor audit) | None |
-| IRF-APP-071 | P1 | **Grafana interview prep — update after recruiter screen** — Mon 2026-04-06 10:30 AM. Update dossier §XIII with new intelligence, advance entry if proceeding, log interaction via crm.py. | Human+Agent | Session S46 | Time-gated (2026-04-06) |
+| ~~IRF-APP-071~~ | ~~P1~~ | ~~**Grafana interview prep — update after recruiter screen**~~ — **RESOLVED** (2026-04-15). Screen went poorly — user was dealing with health issues, unprepared, scattered presentation. Pipeline effectively closed. Memory updated (`project_grafana_interview.md`). Adversarial analysis was correct: pipeline scored 7.0, below threshold. No further investment warranted unless callback received. | Human+Agent | Session S46→S-networking-2026-04-15 | Completed |
 | IRF-APP-073 | P2 | **Protocol-compliant email reply** — draft saved in Gmail (thread 19d44c671abf5c5f). Contains P-I hook (Greenhouse API), P-IV terminal question (pipeline architecture). Needs user review and send. Hanging action. | Human | Session S46 | User action |
 | ~~IRF-APP-074~~ | ~~P1~~ | ~~**Precision mode compliance restoration**~~ — **DONE** (S54, 2026-04-03). 6 entries deferred (Affirm Infra, Instacart PB, MongoDB, Scale AI, dbt Labs, Snowflake). Actionable 16→10. Org cap violations resolved. Health 8.2→9.2. All entries have `deferral` field with `strategic_hold` + `resume_date: 2026-04-15`. | Agent | Session S54 | Completed 2026-04-03 |
 | ~~IRF-APP-075~~ | ~~P1~~ | ~~**followup.py format mutation bug**~~ — **FIXED** (S54, 2026-04-03). `followup.py` line 242 wrote flat list instead of `{"entries": entries}` dict, breaking `validate_signals.py --strict`. Patched to wrap in entries key. | Agent | Session S54 (hall-monitor) | Completed 2026-04-03 |
 | IRF-APP-076 | P2 | **followup.py format bug regression test** — no test verifies that `_log_to_outreach()` preserves the `entries:` key wrapper. Bug was introduced pre-S54, discovered during hall-monitor audit. Needs: `test_followup_log_preserves_entries_key()` in tests/. | Agent | Session S54 (hall-monitor) | None |
 | IRF-APP-077 | P2 | **interview_prep.py overwrites manual prep docs** — running `interview_prep.py --target X` replaces detailed hand-crafted prep (STAR stories, alignment maps, questions) with a thin auto-generated template. Design flaw: should merge/append, not overwrite. Guard needed. | Agent | Session S54 (hall-monitor) | None |
 | IRF-APP-078 | P1 | **9 overdue LinkedIn follow-ups (human action)** — Tier 1: Harvey AI, LangChain, OpenAI, Stripe, Doppler (Day 17). Tier 2: Anthropic, Cursor, Render (Day 14, final window TODAY). Templates exported to `follow-up-actions-2026-04-03.md`. | Human | Session S54 | Human action — LinkedIn/email |
-| IRF-APP-079 | P1 | **ZKM Rauschenberg residency — 9 days to deadline** — status: drafting, score 7.0, deadline 2026-04-12. Needs: compose draft, tailor resume, advance to staged. | Agent+Human | Session S54 | None |
+| ~~IRF-APP-079~~ | ~~P1~~ | ~~**ZKM Rauschenberg residency — 9 days to deadline**~~ — **LAPSED** (2026-04-16). Deadline 2026-04-12 passed. Draft never composed. Institutional strategy memory confirms "Not yet drafted" as of last check. Score 7.0 — below threshold, and health issues during the window explain the miss. No recovery possible. Note for future cycles. | Agent+Human | Session S54→S-networking-2026-04-15 | Completed (lapsed) |
 
 ---
 
@@ -1534,11 +1534,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-14 (S-contrib-execution). +6 completions: DONE-366 (coinbase ack), DONE-367 (dapr ping), DONE-368 (notion ping), DONE-369 (contrib dirs), DONE-370 (stub triage), DONE-371 (CLAUDE.md drift). IRF-OSS-043 updated (openai comment posted, stale reset, fighting). IRF-OSS-042 unchanged (CLA still human-gated). Prior: 2026-04-13 (S-contrib-reassessment close-out).
+Refreshed 2026-04-16 (S-networking-2026-04-15 close-out). +3 completions: DONE-372 (APP-068 Grafana contributions MOOT), DONE-373 (APP-071 Grafana post-screen RESOLVED), DONE-374 (APP-079 ZKM LAPSED). +6 new items: APP-081..086 (networking signals — Aden/Hive, Datadog, Together AI, Elastic, profile viewers, Jackie Wallace). Prior: 2026-04-14 (S-contrib-execution).
 
-- **Total IRF items:** 890
-- **Open:** 516 *(prior 522, -6 completed: OSS-044,045,046,047,048,049)*
-- **Completed:** 371 *(prior 365, +6: DONE-366..371)*
+- **Total IRF items:** 896 *(prior 890, +6 new: APP-081..086)*
+- **Open:** 519 *(prior 516, -3 completed + 6 new)*
+- **Completed:** 374 *(prior 371, +3: DONE-372..374)*
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 41.7%
@@ -1548,8 +1548,8 @@ Refreshed 2026-04-14 (S-contrib-execution). +6 completions: DONE-366 (coinbase a
 | Priority | Count |
 |----------|-------|
 | P0 | 9 |
-| P1 | 187 *(prior 188, -1: OSS-044 completed)* |
-| P2 | 220 *(prior 225, -5: OSS-045,046,047,048,049 completed)* |
+| P1 | 187 *(prior 187, -2 completed APP-071/068 + 2 new APP-081/082)*  |
+| P2 | 223 *(prior 220, -1 completed APP-079 + 4 new APP-083/084/085/086)* |
 | P3 | 40 |
 
 ### By Domain
@@ -1698,6 +1698,12 @@ Refreshed 2026-04-14 (S-contrib-execution). +6 completions: DONE-366 (coinbase a
 | IRF-AOR-018 | **P1** | **Define Cultvra (Logos) Layer** — Establish the ontological relationship between the technical system and the "Society that Responds". Research notes at `a-organvm/cultvra--logos.md`. *(Renumbered from IRF-AOR-009 — ID collision with memory vacuum item. See IRF-MON-008.)* | Agent | S52 | None |
 | IRF-SYS-050 | **P1** | **Workspace Ontology v2 Refinement** — Refactor `registry-v2.json`, flatten directory structures ("Body > Organs > Flat"), and research max depth. Sketch at `meta-organvm/organvm-corpvs-testamentvm/ONTOLOGY-V2-SKETCH.md`. | Agent | S52 | None |
 | IRF-APP-080 | **P1** | **Productize Application Pipeline** — Devise income avenues (SOPs as products) and implement 48h job vetting. Strategy notes at `4444J99/application-pipeline/strategia--ergon.md`. | Agent | S52 | None |
+| IRF-APP-081 | **P1** | **Aden/Hive collaboration thread** — 5 team members (`adelburieva`, `RichardTang-Aden`, `TimothyZhang7`, `bryanadenhq`, `vincentjiang777`) independently followed on GitHub. Vincent Jiang messaged on LinkedIn — outreach thread open, no response yet. Multi-agent orchestration overlap (promotion state machines, seed contracts, cross-agent dispatch). Strongest organic discovery signal. Follow-up draft composed 2026-04-15. **Human action: send LinkedIn reply to Vincent Jiang.** | Human | S-networking-2026-04-15 | Human action |
+| IRF-APP-082 | **P1** | **Datadog/Tammer Galal warm response** — Tammer (Sr. Technical Curriculum Developer, #HIRING) responded "Glad to hear you're interested and have applied!" on 2026-04-01. Reply draft composed 2026-04-15 (teaching→curriculum bridge, team structure question). **Human action: send LinkedIn reply. Time-sensitive — warm thread decays.** | Human | S-networking-2026-04-15 | Human action |
+| IRF-APP-083 | **P2** | **Together AI DX Lead thread** — Applied for DX Lead, messaged Hassan El Mghari (Developer Experience) on 2026-04-04. No response. Follow-up draft composed 2026-04-15. Send nudge. | Human | S-networking-2026-04-15 | Human action |
+| IRF-APP-084 | **P2** | **Elastic dual signal** — JD Armada (Developer Advocate) messaged on LinkedIn 2026-04-01, no response. Carly Richmond (Developer Advocate Lead) viewed profile. Two signals from same company = warm org. Follow-up draft for JD not yet composed. Consider outreach to Carly (1st connection). | Human | S-networking-2026-04-15 | None |
+| IRF-APP-085 | **P2** | **Messageable LinkedIn profile viewers (1st connections, no thread)** — Paul Pham (dbt Labs, Sr. Quality Engineer — contrib--dbt-mcp overlap), Luvo Dlulisa (Wikimedia Foundation — user is Wikipedia:Apadavano), Charlie Gleek (UVA — academic/SGO overlap). All viewed profile, all 1st connections, none contacted. Drafts not yet composed. | Human | S-networking-2026-04-15 | None |
+| IRF-APP-086 | **P2** | **LinkedIn follow-up batch — Jackie Wallace** — Senior Talent Partner, applied for Lead Technical Writer. Messaged 2026-04-10, no response. Active 15h ago (as of 2026-04-15), "reachable" status. Follow-up draft composed 2026-04-15. **Human action: send.** | Human | S-networking-2026-04-15 | Human action |
 | IRF-OSS-042 | **P1** | **System-wide Action Ledger** — Create a central ledger of all scripts/actions and implement token-efficient handoff protocols. Initial ledger at `organvm-iv-taxis/orchestration-start-here/ACTION-LEDGER-V1.md`. | Agent | S52 | None |
 | IRF-OSS-043 | **P1** | **IRF Instrument v3 (Endless Box)** — Transition to "Endless Box" model with worker agents ("Pencil Pushers") and fixed ID assignment. Spec at `meta-organvm/organvm-corpvs-testamentvm/IRF-V3-SPEC.md`. | Agent | S52 | None |
 | IRF-SYS-051 | **P1** | **Stable Unit Notice Ownership Audit** — Resolve mismatches between `registry-v2.json` and `seed.yaml` status. Ensure all `GRADUATED` units have `ownership` metadata (v1.1) and `NOTICE` files. Spec: `docs/planning/06-stable-unit-notice-audit.md`. | Agent | S-2026-04-02 | None |
