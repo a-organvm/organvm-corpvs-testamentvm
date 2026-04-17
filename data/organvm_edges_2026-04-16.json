@@ -1,0 +1,6333 @@
+{
+  "total_seed_files": 175,
+  "total_edges": 662,
+  "cross_organ_edges": 281,
+  "populated_cells": 31,
+  "empty_cells": 89,
+  "coverage_pct": 25.8,
+  "edges": [
+    {
+      "type": "consumes",
+      "signal": "canonical-metrics",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "application-pipeline",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "application-pipeline",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "sops",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "application-pipeline",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "orchestration-signals",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "application-pipeline",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "application-pipeline",
+      "target_organ": "III",
+      "action": "Review compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "metrics.refreshed",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "application-pipeline",
+      "target_organ": "III",
+      "action": "Propagate canonical metrics to blocks and materials"
+    },
+    {
+      "type": "subscription",
+      "signal": "engagement.milestone-completed",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "application-pipeline",
+      "target_organ": "III",
+      "action": "Update consulting track entries from commerce--meta signals"
+    },
+    {
+      "type": "produces",
+      "signal": "environment-config",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "agent-infrastructure",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "agent-infrastructure",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "secrets-management",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "cache-primitive",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "self-heal",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "memory-parity",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "claude-code-config",
+      "source_repo": "domus-semper-palingenesis",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "consumes",
+      "signal": "skills",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "domus-semper-palingenesis",
+      "target_organ": "PERSONAL"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-policy",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "domus-semper-palingenesis",
+      "target_organ": "PERSONAL"
+    },
+    {
+      "type": "consumes",
+      "signal": "cloud-storage",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "domus-semper-palingenesis",
+      "target_organ": "PERSONAL"
+    },
+    {
+      "type": "produces",
+      "signal": "formal-derivation",
+      "source_repo": "system-system--system",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "meta-organvm"
+    },
+    {
+      "type": "produces",
+      "signal": "formal-derivation",
+      "source_repo": "system-system--system",
+      "source_organ": "PERSONAL",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-iv-taxis"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "system-system--system",
+      "target_organ": "PERSONAL"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "system-system--system",
+      "target_organ": "PERSONAL"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "system-system--system",
+      "target_organ": "PERSONAL",
+      "action": "Check compliance of new governance rules against Laws"
+    },
+    {
+      "type": "produces",
+      "signal": "grant-applications",
+      "source_repo": "aerarium--res-publica",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "entity-formation-docs",
+      "source_repo": "aerarium--res-publica",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "institutional-strategy",
+      "source_repo": "aerarium--res-publica",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "ip-policy",
+      "source_repo": "aerarium--res-publica",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "funder-fit-assessments",
+      "source_repo": "aerarium--res-publica",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "organvm-corpvs-testamentvm.registry",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "aerarium--res-publica",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "organvm-corpvs-testamentvm.governance-rules",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "aerarium--res-publica",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "organvm-engine.metrics",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "aerarium--res-publica",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "organvm-engine.omega",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "aerarium--res-publica",
+      "target_organ": "META"
+    },
+    {
+      "type": "produces",
+      "signal": "classified-artifacts",
+      "source_repo": "alchemia-ingestvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "deployment-manifests",
+      "source_repo": "alchemia-ingestvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "provenance-records",
+      "source_repo": "alchemia-ingestvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "creative-briefs",
+      "source_repo": "alchemia-ingestvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "aesthetic-chains",
+      "source_repo": "alchemia-ingestvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "alchemia-ingestvm",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "irf-sec-items",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "custodia-securitatis",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "security-sop",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "custodia-securitatis",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "credential.rotation.due",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "custodia-securitatis",
+      "target_organ": "META",
+      "action": null
+    },
+    {
+      "type": "subscription",
+      "signal": "incident.reported",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "custodia-securitatis",
+      "target_organ": "META",
+      "action": null
+    },
+    {
+      "type": "subscription",
+      "signal": "disclosure.received",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "custodia-securitatis",
+      "target_organ": "META",
+      "action": null
+    },
+    {
+      "type": "produces",
+      "signal": "governance-library",
+      "source_repo": "cvrsvs-honorvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "seed-specification",
+      "source_repo": "cvrsvs-honorvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "schema-package",
+      "source_repo": "cvrsvs-honorvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "produces",
+      "signal": "interop-adapters",
+      "source_repo": "cvrsvs-honorvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-source",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "cvrsvs-honorvm",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "schema",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "cvrsvs-honorvm",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.promotion_changed",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "cvrsvs-honorvm",
+      "target_organ": "META",
+      "action": "Validate extracted state machine matches source engine behavior"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "audit-report",
+      "source_repo": "commercial-validation-testbed",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "meta-organvm/system-dashboard"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry-data",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "commercial-validation-testbed",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "4-ivi374-F0Rivi4",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "a-recursive-root",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-i-theoria/sema-metra--alchemica-mundi"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "a-recursive-root",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-i-theoria/radix-recursiva-solve-coagula-redi"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-recursive-root",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-recursive-root",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "cog-init-1-0-",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "cog-init-1-0-",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "consumes",
+      "signal": "research",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "hierarchia-mundi",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "meta-source--ledger-output",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "meta-source--ledger-output",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "organon-noumenon--ontogenetic-morphe",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "organon-noumenon--ontogenetic-morphe",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "theory",
+      "source_repo": "radix-recursiva-solve-coagula-redi",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "radix-recursiva-solve-coagula-redi",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "radix-recursiva-solve-coagula-redi",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "produces",
+      "signal": "theory-artifact",
+      "source_repo": "scalable-lore-expert",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "scalable-lore-expert",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "scalable-lore-expert",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "a-i-council--coliseum",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "a-i-council--coliseum",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-i-council--coliseum",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-i-council--coliseum",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "a-i-council--coliseum",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "archive-past-works",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "archive-past-works",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "archive-past-works",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "archive-past-works",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "archive-past-works",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "art-from--auto-revision-epistemic-engine",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "art-from--auto-revision-epistemic-engine",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "art-from--auto-revision-epistemic-engine",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "art-from--auto-revision-epistemic-engine",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "art-from--narratological-algorithmic-lenses",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "art-from--narratological-algorithmic-lenses",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "art-from--narratological-algorithmic-lenses",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "art-from--narratological-algorithmic-lenses",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "audio-synthesis-bridge",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "audio-synthesis-bridge",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "audio-synthesis-bridge",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "audio-synthesis-bridge",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "case-studies-methodology",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "case-studies-methodology",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "case-studies-methodology",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "case-studies-methodology",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "case-studies-methodology",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "client-sdk",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "client-sdk",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "client-sdk",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "client-sdk",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "core-engine",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "core-engine",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "core-engine",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "core-engine",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "docs",
+      "target_organ": "II"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "example-ai-collaboration",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "example-ai-collaboration",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-ai-collaboration",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-ai-collaboration",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "example-ai-collaboration",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "example-choreographic-interface",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-choreographic-interface",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-choreographic-interface",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "example-choreographic-interface",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "example-generative-music",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-generative-music",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-generative-music",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "example-generative-music",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "example-generative-visual",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "example-interactive-installation",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-interactive-installation",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-interactive-installation",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "example-interactive-installation",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "example-theatre-dialogue",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-theatre-dialogue",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "example-theatre-dialogue",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "example-theatre-dialogue",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "learning-resources",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "learning-resources",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "learning-resources",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "learning-resources",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "learning-resources",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "life-betterment-simulation",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "life-betterment-simulation",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "life-betterment-simulation",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "life-betterment-simulation",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "life-betterment-simulation",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "performance-sdk",
+      "target_organ": "II"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "shared-remembrance-gateway",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "shared-remembrance-gateway",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "shared-remembrance-gateway",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "shared-remembrance-gateway",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "shared-remembrance-gateway",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "showcase-portfolio",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "showcase-portfolio",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "showcase-portfolio",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "showcase-portfolio",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "showcase-portfolio",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "universal-waveform-explorer",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "universal-waveform-explorer",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "universal-waveform-explorer",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "universal-waveform-explorer",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "universal-waveform-explorer",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "product-artifact",
+      "source_repo": "a-i-chat--exporter",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "a-i-chat--exporter",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "a-i-chat--exporter",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-i-chat--exporter",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-i-chat--exporter",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-i-chat--exporter",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "a-i-chat--exporter",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "a-i-chat--exporter",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "anon-hookup-now",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "anon-hookup-now",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "anon-hookup-now",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "anon-hookup-now",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "anon-hookup-now",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "anon-hookup-now",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "product-artifact",
+      "source_repo": "card-trade-social",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "card-trade-social",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "card-trade-social",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "card-trade-social",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "card-trade-social",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "card-trade-social",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "card-trade-social",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "card-trade-social",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "schema",
+      "source_repo": "ergon-prime--business-orchestrator",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-III"
+    },
+    {
+      "type": "produces",
+      "signal": "schema",
+      "source_repo": "ergon-prime--business-orchestrator",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "ergon-prime--business-orchestrator",
+      "target_organ": "III",
+      "action": "Trigger local compliance check"
+    },
+    {
+      "type": "subscription",
+      "signal": "system.health-check",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "ergon-prime--business-orchestrator",
+      "target_organ": "III",
+      "action": "Emit health telemetry to .github/events/"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "fetch-familiar-friends",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "fetch-familiar-friends",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "fetch-familiar-friends",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "fetch-familiar-friends",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "fetch-familiar-friends",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "fetch-familiar-friends",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "gamified-coach-interface",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "gamified-coach-interface",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "gamified-coach-interface",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "gamified-coach-interface",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "gamified-coach-interface",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "gamified-coach-interface",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "product-artifact",
+      "source_repo": "hokage-chess",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "hokage-chess",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "hokage-chess",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "hokage-chess",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "hokage-chess",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "hokage-chess",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "hokage-chess",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "hokage-chess",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "mirror-mirror",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "mirror-mirror",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "mirror-mirror",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "mirror-mirror",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "mirror-mirror",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "mirror-mirror",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "multi-camera--livestream--framework",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "multi-camera--livestream--framework",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "multi-camera--livestream--framework",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "multi-camera--livestream--framework",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "multi-camera--livestream--framework",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "multi-camera--livestream--framework",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "my-block-warfare",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "my-block-warfare",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "my-block-warfare",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "my-block-warfare",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "my-block-warfare",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "my-block-warfare",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "search-local--happy-hour",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "search-local--happy-hour",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "search-local--happy-hour",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "search-local--happy-hour",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "search-local--happy-hour",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "search-local--happy-hour",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "select-or-left-or-right-or",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "select-or-left-or-right-or",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "select-or-left-or-right-or",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "select-or-left-or-right-or",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "select-or-left-or-right-or",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "select-or-left-or-right-or",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "sovereign-ecosystem--real-estate-luxury",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "sovereign-ecosystem--real-estate-luxury",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "sovereign-ecosystem--real-estate-luxury",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "sovereign-ecosystem--real-estate-luxury",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "sovereign-ecosystem--real-estate-luxury",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "sovereign-ecosystem--real-estate-luxury",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "tab-bookmark-manager",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "tab-bookmark-manager",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "tab-bookmark-manager",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "tab-bookmark-manager",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "tab-bookmark-manager",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "tab-bookmark-manager",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "the-invisible-ledger",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "the-invisible-ledger",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "the-invisible-ledger",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "the-invisible-ledger",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "the-invisible-ledger",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "the-invisible-ledger",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "product-artifact",
+      "source_repo": "trade-perpetual-future",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "trade-perpetual-future",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "trade-perpetual-future",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "trade-perpetual-future",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "trade-perpetual-future",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "trade-perpetual-future",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "trade-perpetual-future",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "your-fit-tailored",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "your-fit-tailored",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "your-fit-tailored",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "your-fit-tailored",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "your-fit-tailored",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "your-fit-tailored",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "tooling",
+      "source_repo": "materia-collider",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "omni-dromenon-machina/amp-lab-media"
+    },
+    {
+      "type": "consumes",
+      "signal": "reference",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "materia-collider",
+      "target_organ": "META"
+    },
+    {
+      "type": "produces",
+      "signal": "meta-documentation",
+      "source_repo": "organvm-corpvs-testamentvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "research-tasks",
+      "source_repo": "organvm-corpvs-testamentvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM/organvm-engine"
+    },
+    {
+      "type": "produces",
+      "signal": "research-tasks",
+      "source_repo": "organvm-corpvs-testamentvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM/praxis-perpetua"
+    },
+    {
+      "type": "produces",
+      "signal": "work-registry",
+      "source_repo": "organvm-corpvs-testamentvm",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "consumes",
+      "signal": "orchestration-artifact",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "organvm-corpvs-testamentvm",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "organvm-corpvs-testamentvm",
+      "target_organ": "META",
+      "action": "Update meta-system documentation"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "organvm-corpvs-testamentvm",
+      "target_organ": "META",
+      "action": "Review system-wide audit findings"
+    },
+    {
+      "type": "produces",
+      "signal": "governance-policy",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "governance-policy",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "registry",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "registry",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "metrics",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "omega-scorecard",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-II"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-III"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-V"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-VI"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-VII"
+    },
+    {
+      "type": "produces",
+      "signal": "context-files",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "session-analysis",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "plan-atoms",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "prompt-narratives",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "atom-links",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "testament-artifacts",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "ci-reports",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "pitch-decks",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "ecosystem-profiles",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "fossil-record",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "witness-hooks",
+      "source_repo": "organvm-engine",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ALL"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "schema",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "soak-data",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "seed-files",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "session-transcripts",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "plan-files",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META",
+      "action": "Re-validate registry against governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.promotion_changed",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META",
+      "action": "Update omega scorecard and context files for promoted repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "seed.edge_added",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META",
+      "action": "Re-validate dependency graph for new edge"
+    },
+    {
+      "type": "subscription",
+      "signal": "entity.created",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META",
+      "action": "Bootstrap context files and registry entry for new entity"
+    },
+    {
+      "type": "subscription",
+      "signal": "metrics.organism_computed",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META",
+      "action": "Propagate computed metrics into markdown/JSON targets"
+    },
+    {
+      "type": "subscription",
+      "signal": "ci.health",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-engine",
+      "target_organ": "META",
+      "action": "Triage CI health changes and update soak dashboard"
+    },
+    {
+      "type": "produces",
+      "signal": "behavioral-commerce-engine",
+      "source_repo": "styx-behavioral-commerce",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-III"
+    },
+    {
+      "type": "consumes",
+      "signal": "behavioral-economics-theory",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "styx-behavioral-commerce",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "behavioral-art",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "styx-behavioral-commerce",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "organvm-mcp-server",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "organvm-mcp-server",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "organvm-mcp-server",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "organvm-mcp-server",
+      "target_organ": "META",
+      "action": "reload registry and seed data"
+    },
+    {
+      "type": "produces",
+      "signal": "entity-registry",
+      "source_repo": "organvm-ontologia",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "event-log",
+      "source_repo": "organvm-ontologia",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-ontologia",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "organvm-ontologia",
+      "target_organ": "META",
+      "action": "Re-bootstrap any new entities from registry"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "amp-lab-media",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/kerygma-profiles"
+    },
+    {
+      "type": "produces",
+      "signal": "clip-database",
+      "source_repo": "amp-lab-media",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-iii-ergon/materia-collider"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "amp-lab-media",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "reference",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "amp-lab-media",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "tooling",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "amp-lab-media",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "content.published",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "amp-lab-media",
+      "target_organ": "II",
+      "action": "Trigger kerygma distribution pipeline"
+    },
+    {
+      "type": "subscription",
+      "signal": "metrics.refresh",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "amp-lab-media",
+      "target_organ": "II",
+      "action": "Update production velocity metrics"
+    },
+    {
+      "type": "consumes",
+      "signal": "reference",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "ira-evaluation-machinery",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "symbolic-computing-framework",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "research-commissions",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "session.completed",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META",
+      "action": "Trigger session self-critique review"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META",
+      "action": "review-defense-protocol"
+    },
+    {
+      "type": "subscription",
+      "signal": "ira.calibration-complete",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "praxis-perpetua",
+      "target_organ": "META",
+      "action": "update-senate-config"
+    },
+    {
+      "type": "produces",
+      "signal": "schema",
+      "source_repo": "schema-definitions",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "schema",
+      "source_repo": "schema-definitions",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.schema-changed",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "schema-definitions",
+      "target_organ": "META",
+      "action": "Update registry-v2.schema.json to match"
+    },
+    {
+      "type": "produces",
+      "signal": "web-application",
+      "source_repo": "stakeholder-portal",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "external-stakeholders"
+    },
+    {
+      "type": "produces",
+      "signal": "web-application",
+      "source_repo": "stakeholder-portal",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "internal-operators"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "stakeholder-portal",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "stakeholder-portal",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "stakeholder-portal",
+      "target_organ": "META"
+    },
+    {
+      "type": "produces",
+      "signal": "web-application",
+      "source_repo": "stakeholder-portal",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "external-stakeholders"
+    },
+    {
+      "type": "produces",
+      "signal": "web-application",
+      "source_repo": "stakeholder-portal",
+      "source_organ": "META",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "internal-operators"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "stakeholder-portal",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "stakeholder-portal",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "unknown",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "stakeholder-portal",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry-data",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "system-dashboard",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "soak-test-data",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "system-dashboard",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "system-metrics",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "system-dashboard",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "system-dashboard",
+      "target_organ": "META",
+      "action": "refresh-cache"
+    },
+    {
+      "type": "subscription",
+      "signal": "soak.snapshot-collected",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "system-dashboard",
+      "target_organ": "META",
+      "action": "refresh-cache"
+    },
+    {
+      "type": "produces",
+      "signal": "theory",
+      "source_repo": "recursive-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-ii-poiesis/metasystem-master"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "recursive-engine",
+      "target_organ": "I",
+      "action": "Check fixture compliance"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "metasystem-master",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "regime-specifications",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "narrative-scenarios",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry-state",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META"
+    },
+    {
+      "type": "consumes",
+      "signal": "entity-identity",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META"
+    },
+    {
+      "type": "subscription",
+      "signal": "regime.cycle.complete",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META",
+      "action": null
+    },
+    {
+      "type": "subscription",
+      "signal": "constitutional.candidate.proposed",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META",
+      "action": null
+    },
+    {
+      "type": "subscription",
+      "signal": "regime.phaethon.triggered",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vigiles-aeternae--agon-cosmogonicum",
+      "target_organ": "META",
+      "action": null
+    },
+    {
+      "type": "produces",
+      "signal": "uaks.manifests",
+      "source_repo": "metaphysical-systems",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "uaks.documentation",
+      "source_repo": "metaphysical-systems",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "uaks.implementation_scaffold",
+      "source_repo": "metaphysical-systems",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "chatgpt.architecture_export",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "metaphysical-systems",
+      "target_organ": "I"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "auto-revision-epistemic-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-ii-poiesis/art-from--auto-revision-epistemic-engine"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "auto-revision-epistemic-engine",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "auto-revision-epistemic-engine",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "call-function--ontological",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "call-function--ontological",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "cognitive-archaelogy-tribunal",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "cognitive-archaelogy-tribunal",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "surface-manifest",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "mcp-context",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "surface-bundle",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "corpus-contract-schema",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "produces",
+      "signal": "evaluation-scorecard",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "dashboard-payload",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "triage-plan",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "review-campaign-report",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "review-rollup",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "review-packet-hydration",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "review-scoreboard",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "review-apply-plan",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "import-audit",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "produces",
+      "signal": "near-duplicates",
+      "source_repo": "conversation-corpus-engine",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-I"
+    },
+    {
+      "type": "consumes",
+      "signal": "provider-exports",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "conversation-corpus-engine",
+      "target_organ": "I"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "conversation-corpus-engine",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "conversation-corpus-engine",
+      "target_organ": "I",
+      "action": null
+    },
+    {
+      "type": "subscription",
+      "signal": "schema.registry.sync",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "conversation-corpus-engine",
+      "target_organ": "I",
+      "action": null
+    },
+    {
+      "type": "produces",
+      "signal": "annotated-corpus",
+      "source_repo": "conversation-corpus-site",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "META-ORGANVM"
+    },
+    {
+      "type": "consumes",
+      "signal": "conversation-export",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "conversation-corpus-site",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "linguistic-atomization-framework",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "linguistic-atomization-framework",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "dependency",
+      "signal": "dependency",
+      "source_repo": "system-system--system",
+      "source_organ": null,
+      "target_repo": "mesh",
+      "target_organ": "I",
+      "assets": [
+        "registry/data/ent_*.json",
+        "atom-registry.yaml"
+      ]
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "my-knowledge-base",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "my-knowledge-base",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "narratological-algorithmic-lenses",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-ii-poiesis/art-from--narratological-algorithmic-lenses"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "narratological-algorithmic-lenses",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "narratological-algorithmic-lenses",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "nexus--babel-alexandria-",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "nexus--babel-alexandria-",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "nexus--babel-alexandria-",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "recursive-engine--generative-entity",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "recursive-engine--generative-entity",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "thread.manifest",
+      "source_repo": "ontological-framework",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "thread.graph",
+      "source_repo": "ontological-framework",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "thread.integrity_report",
+      "source_repo": "ontological-framework",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "chatgpt.thread_export",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "ontological-framework",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "sema-metra--alchemica-mundi",
+      "target_organ": "I",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "sema-metra--alchemica-mundi",
+      "target_organ": "I",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "theory",
+      "source_repo": "styx-behavioral-economics-theory",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-ii-poiesis/styx-behavioral-art"
+    },
+    {
+      "type": "produces",
+      "signal": "research",
+      "source_repo": "styx-behavioral-economics-theory",
+      "source_organ": "I",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-iii-ergon/peer-audited--behavioral-blockchain"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.updated",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "styx-behavioral-economics-theory",
+      "target_organ": "I",
+      "action": "notify"
+    },
+    {
+      "type": "consumes",
+      "signal": "ingested-material",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--corpus-mythicum",
+      "target_organ": "I"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.insight.submitted",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vigiles-aeternae--corpus-mythicum",
+      "target_organ": "I",
+      "action": null
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "a-mavs-olevm",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "a-mavs-olevm",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-mavs-olevm",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "a-mavs-olevm",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "a-mavs-olevm",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "alchemical-synthesizer",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "chthon-oneiros",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "algorithmic-artifact",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "chthon-oneiros",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "chthon-oneiros",
+      "target_organ": "II",
+      "action": "Trigger ingestion and conversion to symbolic horror."
+    },
+    {
+      "type": "subscription",
+      "signal": "algorithm.published",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "chthon-oneiros",
+      "target_organ": "II",
+      "action": "Trigger fossilization."
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "ivi374ivi027-05",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "ivi374ivi027-05",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "ivi374ivi027-05",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "ivi374ivi027-05",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "krypto-velamen",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "krypto-velamen",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "krypto-velamen",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "krypto-velamen",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory-artifact",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "metasystem-master",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "metasystem-master",
+      "target_organ": "II",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "metasystem-master",
+      "target_organ": "II",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "metasystem-master",
+      "target_organ": "II",
+      "action": "Check for art derivative opportunities"
+    },
+    {
+      "type": "produces",
+      "signal": "creative-artifact",
+      "source_repo": "styx-behavioral-art",
+      "source_organ": "II",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-iii-ergon/peer-audited--behavioral-blockchain"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "styx-behavioral-art",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.updated",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "styx-behavioral-art",
+      "target_organ": "II",
+      "action": "regenerate"
+    },
+    {
+      "type": "consumes",
+      "signal": "research-material",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--theatrum-mundi",
+      "target_organ": "II"
+    },
+    {
+      "type": "consumes",
+      "signal": "synth-creature-framework",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "vigiles-aeternae--theatrum-mundi",
+      "target_organ": "II"
+    },
+    {
+      "type": "subscription",
+      "signal": "regime.cycle.complete",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vigiles-aeternae--theatrum-mundi",
+      "target_organ": "II",
+      "action": null
+    },
+    {
+      "type": "subscription",
+      "signal": "order.character.updated",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vigiles-aeternae--theatrum-mundi",
+      "target_organ": "II",
+      "action": null
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "classroom-rpg-aetheria",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "classroom-rpg-aetheria",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "classroom-rpg-aetheria",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "classroom-rpg-aetheria",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "classroom-rpg-aetheria",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "classroom-rpg-aetheria",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "commerce--meta",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "consulting-scoring",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "commerce--meta",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "research-commissions",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "commerce--meta",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "orchestration-signals",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "commerce--meta",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "commerce--meta",
+      "target_organ": "III",
+      "action": "Review compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "engagement.milestone-completed",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "commerce--meta",
+      "target_organ": "III",
+      "action": "Trigger milestone review and status-update generation"
+    },
+    {
+      "type": "subscription",
+      "signal": "engagement.closed",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "commerce--meta",
+      "target_organ": "III",
+      "action": "Trigger closing protocol (retrospective + case study + pattern extraction)"
+    },
+    {
+      "type": "produces",
+      "signal": "service",
+      "source_repo": "content-engine--asset-amplifier",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "brands"
+    },
+    {
+      "type": "produces",
+      "signal": "service",
+      "source_repo": "content-engine--asset-amplifier",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "agencies"
+    },
+    {
+      "type": "produces",
+      "signal": "service",
+      "source_repo": "content-engine--asset-amplifier",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "dtc-marketing-teams"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "content-engine--asset-amplifier",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "produces",
+      "signal": "product-artifact",
+      "source_repo": "life-my--midst--in",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "life-my--midst--in",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "life-my--midst--in",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "life-my--midst--in",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "life-my--midst--in",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "life-my--midst--in",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "life-my--midst--in",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "life-my--midst--in",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "peer-audited--behavioral-blockchain",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "peer-audited--behavioral-blockchain",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/kerygma-pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "essay_material",
+      "source_repo": "peer-audited--behavioral-blockchain",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-v-logos/essay-pipeline"
+    },
+    {
+      "type": "consumes",
+      "signal": "theory",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "creative-artifact",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III"
+    },
+    {
+      "type": "subscription",
+      "signal": "theory.updated",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III",
+      "action": "Review theory changes for product implications"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "peer-audited--behavioral-blockchain",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "ergon-test-harness",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-rules",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "ergon-test-harness",
+      "target_organ": "III"
+    },
+    {
+      "type": "consumes",
+      "signal": "seed-contracts",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "ergon-test-harness",
+      "target_organ": "III"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "public-record-data-scrapper",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-v-logos/public-process"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "public-record-data-scrapper",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "public-record-data-scrapper",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "sovereign-systems--elevate-align",
+      "target_organ": "III"
+    },
+    {
+      "type": "produces",
+      "signal": "community_signal",
+      "source_repo": "the-actual-news",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vi-koinonia/community-hub"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_signal",
+      "source_repo": "the-actual-news",
+      "source_organ": "III",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-vii-kerygma/social-automation"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "the-actual-news",
+      "target_organ": "III",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "the-actual-news",
+      "target_organ": "III",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "community.event_created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "the-actual-news",
+      "target_organ": "III",
+      "action": "Community event registered for this product"
+    },
+    {
+      "type": "subscription",
+      "signal": "distribution.dispatched",
+      "source_repo": null,
+      "source_organ": "VII",
+      "target_repo": "the-actual-news",
+      "target_organ": "III",
+      "action": "Announcement distributed via POSSE pipeline"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "a-i--skills",
+      "target_organ": "IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "a-i--skills",
+      "target_organ": "IV",
+      "action": "Re-validate skill collection against registry"
+    },
+    {
+      "type": "produces",
+      "signal": "governance-policy",
+      "source_repo": "agent--claude-smith",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-iv-taxis/a-i--skills"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "agent--claude-smith",
+      "target_organ": "IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "agent--claude-smith",
+      "target_organ": "IV",
+      "action": "Re-validate dependency graph"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "agentic-titan",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-iv-taxis/agent--claude-smith"
+    },
+    {
+      "type": "produces",
+      "signal": "dependency",
+      "source_repo": "agentic-titan",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "organvm-v-logos/public-process"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "agentic-titan",
+      "target_organ": "IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "agentic-titan",
+      "target_organ": "IV",
+      "action": "Re-validate dependency graph"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "collective-persona-operations",
+      "target_organ": "IV",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "collective-persona-operations",
+      "target_organ": "IV",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "pr_to_adenhq_hive",
+      "source_repo": "contrib--adenhq-hive",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "theory_extraction",
+      "source_repo": "contrib--adenhq-hive",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "generative_artifacts",
+      "source_repo": "contrib--adenhq-hive",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "public_narrative",
+      "source_repo": "contrib--adenhq-hive",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "relationship_capital",
+      "source_repo": "contrib--adenhq-hive",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "agentic_titan_patterns",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "contrib--adenhq-hive",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "organvm_governance_rules",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "contrib--adenhq-hive",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "hive_evolution_data",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "contrib--adenhq-hive",
+      "target_organ": "IV"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--anthropic-skills",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "anthropics/skills"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "contrib--anthropic-skills",
+      "target_organ": "IV"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--dbt-mcp",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "dbt-labs/dbt-mcp"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "contrib--dbt-mcp",
+      "target_organ": "IV"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--ipqwery-ipapi-py",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ipqwery/ipapi-py"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--langchain-langgraph",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "langchain-ai/langgraph"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "contrib--langchain-langgraph",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "contrib--langchain-langgraph",
+      "target_organ": "IV"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--m13v-summarize-recent-commit",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "m13v/summarize_recent_commit"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--primeinc-github-stars",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "primeinc/github-stars"
+    },
+    {
+      "type": "produces",
+      "signal": "contribution",
+      "source_repo": "contrib--temporal-sdk-python",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "temporalio/sdk-python"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "contrib--temporal-sdk-python",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "github_pr_states",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "orchestration-start-here",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "github_issue_states",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "orchestration-start-here",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "petasum-super-petasum",
+      "target_organ": "IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "petasum-super-petasum",
+      "target_organ": "IV",
+      "action": "Re-validate dependency graph"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "reverse-engine-recursive-run",
+      "target_organ": "IV",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "reverse-engine-recursive-run",
+      "target_organ": "IV",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "system-governance-framework",
+      "target_organ": "IV",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "health-audit.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "system-governance-framework",
+      "target_organ": "IV",
+      "action": "Review audit findings for this repo"
+    },
+    {
+      "type": "produces",
+      "signal": "conductor-session-lifecycle",
+      "source_repo": "tool-interaction-design",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "tool-interaction-ontology",
+      "source_repo": "tool-interaction-design",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "agent-coordination-protocol",
+      "source_repo": "tool-interaction-design",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "cognitive-service-dispatch",
+      "source_repo": "tool-interaction-design",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "fleet-agent-registry",
+      "source_repo": "tool-interaction-design",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "orchestration-artifact",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "tool-interaction-design",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "registry",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "universal-node-network",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "metrics",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "universal-node-network",
+      "target_organ": "IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "omega",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "universal-node-network",
+      "target_organ": "IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "registry.updated",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "universal-node-network",
+      "target_organ": "IV",
+      "action": "Re-validate dependency graph and refresh vital signs"
+    },
+    {
+      "type": "subscription",
+      "signal": "metrics.refreshed",
+      "source_repo": null,
+      "source_organ": "META",
+      "target_repo": "universal-node-network",
+      "target_organ": "IV",
+      "action": "Re-evaluate homeostatic vital signs"
+    },
+    {
+      "type": "produces",
+      "signal": "voice-scores",
+      "source_repo": "vox--publica",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "produces",
+      "signal": "submission-queue",
+      "source_repo": "vox--publica",
+      "source_organ": "IV",
+      "target_repo": null,
+      "target_organ": null
+    },
+    {
+      "type": "consumes",
+      "signal": "vox-scorer (from vox--architectura-gubernatio)",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "vox--publica",
+      "target_organ": "IV"
+    },
+    {
+      "type": "produces",
+      "signal": "engagement-metrics",
+      "source_repo": "analytics-engine",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "updates-metrics-for"
+    },
+    {
+      "type": "produces",
+      "signal": "system-engagement-report",
+      "source_repo": "analytics-engine",
+      "source_organ": "V",
+      "target_repo": "orchestration-start-here",
+      "target_organ": "IV",
+      "relationship": "reports-to"
+    },
+    {
+      "type": "produces",
+      "signal": "analytics-dashboard",
+      "source_repo": "analytics-engine",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "visualizes-for"
+    },
+    {
+      "type": "consumes",
+      "signal": "goatcounter-api",
+      "source_repo": "goatcounter.com",
+      "source_organ": "UNKNOWN",
+      "target_repo": "analytics-engine",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "github-activity",
+      "source_repo": "*",
+      "source_organ": "UNKNOWN",
+      "target_repo": "analytics-engine",
+      "target_organ": "V"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "analytics-engine",
+      "target_organ": "V",
+      "action": "Record new essay in metrics tracking"
+    },
+    {
+      "type": "produces",
+      "signal": "editorial-governance",
+      "source_repo": "editorial-standards",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "relationship": "governs"
+    },
+    {
+      "type": "produces",
+      "signal": "editorial-governance",
+      "source_repo": "editorial-standards",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "governs"
+    },
+    {
+      "type": "produces",
+      "signal": "frontmatter-schema",
+      "source_repo": "editorial-standards",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "relationship": "defines-schema-for"
+    },
+    {
+      "type": "produces",
+      "signal": "essay-templates",
+      "source_repo": "editorial-standards",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "provides-templates-for"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "editorial-standards",
+      "target_organ": "V",
+      "action": "Validate published essay against quality rubric"
+    },
+    {
+      "type": "produces",
+      "signal": "essay-topic-suggestions",
+      "source_repo": "essay-pipeline",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "suggests-topics-for"
+    },
+    {
+      "type": "produces",
+      "signal": "sprint-narrative-draft",
+      "source_repo": "essay-pipeline",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "generates-drafts-for"
+    },
+    {
+      "type": "produces",
+      "signal": "essays-index",
+      "source_repo": "essay-pipeline",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "indexes"
+    },
+    {
+      "type": "consumes",
+      "signal": "essay-markdown",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "system-activity",
+      "source_repo": "*",
+      "source_organ": "UNKNOWN",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "process-documentation",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "research-discourse",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "governance-documentation",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "action": "Generate essay topic about promoted repo"
+    },
+    {
+      "type": "subscription",
+      "signal": "ci.passed",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "action": "Track system health for sprint narratives"
+    },
+    {
+      "type": "produces",
+      "signal": "essay-markdown",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "reading-group-curriculum",
+      "target_organ": "VI",
+      "relationship": "curriculum-source"
+    },
+    {
+      "type": "produces",
+      "signal": "essay-markdown",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "social-automation",
+      "target_organ": "VII",
+      "relationship": "distribution-source"
+    },
+    {
+      "type": "produces",
+      "signal": "essays-index",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "relationship": "indexes"
+    },
+    {
+      "type": "produces",
+      "signal": "essays-index",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "analytics-engine",
+      "target_organ": "V",
+      "relationship": "indexes"
+    },
+    {
+      "type": "produces",
+      "signal": "rss-feed",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": null,
+      "target_organ": "UNKNOWN"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "action": "Draft essay about promoted repo"
+    },
+    {
+      "type": "produces",
+      "signal": "essay-markdown",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "reading-group-curriculum",
+      "target_organ": "VI",
+      "relationship": "curriculum-source"
+    },
+    {
+      "type": "produces",
+      "signal": "essay-markdown",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "social-automation",
+      "target_organ": "VII",
+      "relationship": "distribution-source"
+    },
+    {
+      "type": "produces",
+      "signal": "essays-index",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "relationship": "indexes"
+    },
+    {
+      "type": "produces",
+      "signal": "essays-index",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": "analytics-engine",
+      "target_organ": "V",
+      "relationship": "indexes"
+    },
+    {
+      "type": "produces",
+      "signal": "rss-feed",
+      "source_repo": "public-process",
+      "source_organ": "V",
+      "target_repo": null,
+      "target_organ": "UNKNOWN"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "consumes",
+      "signal": "dependency",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "public-process",
+      "target_organ": "V"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "action": "Draft essay about promoted repo"
+    },
+    {
+      "type": "produces",
+      "signal": "curated-reading-lists",
+      "source_repo": "reading-observatory",
+      "source_organ": "V",
+      "target_repo": "public-process",
+      "target_organ": "V",
+      "relationship": "informs"
+    },
+    {
+      "type": "produces",
+      "signal": "curated-reading-lists",
+      "source_repo": "reading-observatory",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "relationship": "informs"
+    },
+    {
+      "type": "produces",
+      "signal": "relevant-articles",
+      "source_repo": "reading-observatory",
+      "source_organ": "V",
+      "target_repo": "essay-pipeline",
+      "target_organ": "V",
+      "relationship": "suggests-topics-for"
+    },
+    {
+      "type": "consumes",
+      "signal": "external-rss-feeds",
+      "source_repo": "various",
+      "source_organ": "UNKNOWN",
+      "target_repo": "reading-observatory",
+      "target_organ": "V"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "reading-observatory",
+      "target_organ": "V",
+      "action": "Update keyword matching against new essay tags"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "adaptive-personal-syllabus",
+      "target_organ": "VI"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "adaptive-personal-syllabus",
+      "target_organ": "VI",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "curriculum.created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "adaptive-personal-syllabus",
+      "target_organ": "VI",
+      "action": "Update available learning modules"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "community-hub",
+      "target_organ": "VI"
+    },
+    {
+      "type": "consumes",
+      "signal": "data",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "community-hub",
+      "target_organ": "VI"
+    },
+    {
+      "type": "consumes",
+      "signal": "data",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "community-hub",
+      "target_organ": "VI"
+    },
+    {
+      "type": "consumes",
+      "signal": "community-growth",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "community-hub",
+      "target_organ": "VI"
+    },
+    {
+      "type": "consumes",
+      "signal": "creative-community",
+      "source_repo": null,
+      "source_organ": "II",
+      "target_repo": "community-hub",
+      "target_organ": "VI"
+    },
+    {
+      "type": "consumes",
+      "signal": "theoretical-community",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "community-hub",
+      "target_organ": "VI"
+    },
+    {
+      "type": "subscription",
+      "signal": "salon.recorded",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "community-hub",
+      "target_organ": "VI",
+      "action": "Display new salon in archive"
+    },
+    {
+      "type": "subscription",
+      "signal": "curriculum.created",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "community-hub",
+      "target_organ": "VI",
+      "action": "Display new curriculum"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "community-hub",
+      "target_organ": "VI",
+      "action": "Update reading lists with new essay"
+    },
+    {
+      "type": "produces",
+      "signal": "package",
+      "source_repo": "koinonia-db",
+      "source_organ": "VI",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "salon-archive"
+    },
+    {
+      "type": "produces",
+      "signal": "package",
+      "source_repo": "koinonia-db",
+      "source_organ": "VI",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "reading-group-curriculum"
+    },
+    {
+      "type": "produces",
+      "signal": "package",
+      "source_repo": "koinonia-db",
+      "source_organ": "VI",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "adaptive-personal-syllabus"
+    },
+    {
+      "type": "produces",
+      "signal": "package",
+      "source_repo": "koinonia-db",
+      "source_organ": "VI",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "community-hub"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "reading-group-curriculum",
+      "target_organ": "VI"
+    },
+    {
+      "type": "consumes",
+      "signal": "essay",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "reading-group-curriculum",
+      "target_organ": "VI"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "reading-group-curriculum",
+      "target_organ": "VI",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "reading-group-curriculum",
+      "target_organ": "VI",
+      "action": "Schedule reading group discussion"
+    },
+    {
+      "type": "consumes",
+      "signal": "package",
+      "source_repo": null,
+      "source_organ": null,
+      "target_repo": "salon-archive",
+      "target_organ": "VI"
+    },
+    {
+      "type": "subscription",
+      "signal": "governance.updated",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "salon-archive",
+      "target_organ": "VI",
+      "action": "Check compliance with updated governance rules"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "salon-archive",
+      "target_organ": "VI",
+      "action": "Schedule reading group discussion"
+    },
+    {
+      "type": "produces",
+      "signal": "unknown",
+      "source_repo": ".github",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "unknown",
+      "source_repo": ".github",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-V"
+    },
+    {
+      "type": "produces",
+      "signal": "unknown",
+      "source_repo": ".github",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-V"
+    },
+    {
+      "type": "subscription",
+      "signal": "research-published",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute research announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "framework-updated",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute framework update"
+    },
+    {
+      "type": "subscription",
+      "signal": "artwork-released",
+      "source_repo": null,
+      "source_organ": "II",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute artwork announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "performance-scheduled",
+      "source_repo": null,
+      "source_organ": "II",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute performance invitation"
+    },
+    {
+      "type": "subscription",
+      "signal": "feature-released",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute feature release"
+    },
+    {
+      "type": "subscription",
+      "signal": "bugfix-released",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute bugfix notice"
+    },
+    {
+      "type": "subscription",
+      "signal": "repo-launched",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute repo launch"
+    },
+    {
+      "type": "subscription",
+      "signal": "milestone-reached",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute milestone announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "audit-completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute audit completion"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay-published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute essay announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "salon-scheduled",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute salon invitation"
+    },
+    {
+      "type": "subscription",
+      "signal": "workshop-scheduled",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute workshop announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "partnership-announced",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute partnership announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "reading-group-scheduled",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute reading group invitation"
+    },
+    {
+      "type": "subscription",
+      "signal": "community-milestone",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": ".github",
+      "target_organ": "VII",
+      "action": "Render and distribute community milestone"
+    },
+    {
+      "type": "produces",
+      "signal": "template_pack",
+      "source_repo": "announcement-templates",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_artifact",
+      "source_repo": "distribution-strategy",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "essay",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "distribution-strategy",
+      "target_organ": "VII"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "distribution-strategy",
+      "target_organ": "VII",
+      "action": "Trigger POSSE distribution workflow"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "distribution-strategy",
+      "target_organ": "VII",
+      "action": "Draft announcement for promoted repo"
+    },
+    {
+      "type": "produces",
+      "signal": "distribution_event",
+      "source_repo": "kerygma-pipeline",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "consumes",
+      "signal": "template_registry",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "consumes",
+      "signal": "social_config",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "consumes",
+      "signal": "distribution_strategy",
+      "source_repo": null,
+      "source_organ": "UNKNOWN",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "consumes",
+      "signal": "research-publication",
+      "source_repo": null,
+      "source_organ": "I",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "consumes",
+      "signal": "creative-release",
+      "source_repo": null,
+      "source_organ": "II",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "consumes",
+      "signal": "community-announcement",
+      "source_repo": null,
+      "source_organ": "VI",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "consumes",
+      "signal": "client-launch",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII"
+    },
+    {
+      "type": "subscription",
+      "signal": "product.release",
+      "source_repo": null,
+      "source_organ": "III",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII",
+      "action": "Poll for new release and dispatch announcement"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII",
+      "action": "Trigger POSSE distribution pipeline"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "kerygma-pipeline",
+      "target_organ": "VII",
+      "action": "Orchestrate multi-channel announcement"
+    },
+    {
+      "type": "produces",
+      "signal": "profile_registry",
+      "source_repo": "kerygma-profiles",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "kerygma-profiles",
+      "target_organ": "VII",
+      "action": "May trigger new profile creation for promoted repo"
+    },
+    {
+      "type": "produces",
+      "signal": "delivery_log",
+      "source_repo": "social-automation",
+      "source_organ": "VII",
+      "target_repo": null,
+      "target_organ": null,
+      "target_audience": "ORGAN-IV"
+    },
+    {
+      "type": "subscription",
+      "signal": "essay.published",
+      "source_repo": null,
+      "source_organ": "V",
+      "target_repo": "social-automation",
+      "target_organ": "VII",
+      "action": "Trigger POSSE distribution workflow"
+    },
+    {
+      "type": "subscription",
+      "signal": "promotion.completed",
+      "source_repo": null,
+      "source_organ": "IV",
+      "target_repo": "social-automation",
+      "target_organ": "VII",
+      "action": "Draft announcement for promoted repo"
+    }
+  ],
+  "matrix": {
+    "I,PERSONAL": [
+      "system-system--system"
+    ],
+    "II,META": [
+      "materia-collider",
+      "alchemia-ingestvm"
+    ],
+    "VIII,META": [
+      "cvrsvs-honorvm",
+      "organvm-ontologia"
+    ],
+    "II,II": [
+      "alchemical-synthesizer"
+    ],
+    "VII,I": [
+      "4-ivi374-F0Rivi4"
+    ],
+    "I,I": [
+      "radix-recursiva-solve-coagula-redi",
+      "hierarchia-mundi",
+      "a-recursive-root",
+      "recursive-engine",
+      "organon-noumenon--ontogenetic-morphe",
+      "auto-revision-epistemic-engine",
+      "cog-init-1-0-",
+      "call-function--ontological",
+      "recursive-engine--generative-entity"
+    ],
+    "IV,I": [
+      "my-knowledge-base",
+      "conversation-corpus-engine",
+      "meta-source--ledger-output",
+      "cognitive-archaelogy-tribunal",
+      "scalable-lore-expert"
+    ],
+    "XIII,II": [
+      "vigiles-aeternae--theatrum-mundi",
+      "life-betterment-simulation",
+      "a-i-council--coliseum",
+      "shared-remembrance-gateway"
+    ],
+    "I,II": [
+      "art-from--auto-revision-epistemic-engine"
+    ],
+    "III,II": [
+      "art-from--narratological-algorithmic-lenses",
+      "krypto-velamen",
+      "chthon-oneiros"
+    ],
+    "VI,II": [
+      "performance-sdk",
+      "core-engine",
+      "metasystem-master",
+      "universal-waveform-explorer",
+      "audio-synthesis-bridge"
+    ],
+    "XII,III": [
+      "public-record-data-scrapper",
+      "classroom-rpg-aetheria",
+      "card-trade-social",
+      "sovereign-systems--elevate-align",
+      "the-actual-news",
+      "tab-bookmark-manager"
+    ],
+    "XI,III": [
+      "hokage-chess",
+      "content-engine--asset-amplifier"
+    ],
+    "XIII,III": [
+      "my-block-warfare"
+    ],
+    "IV,META": [
+      "organvm-corpvs-testamentvm"
+    ],
+    "XIV,META": [
+      "organvm-engine",
+      "schema-definitions",
+      "stakeholder-portal",
+      "system-dashboard",
+      "praxis-perpetua",
+      "organvm-mcp-server"
+    ],
+    "V,III": [
+      "styx-behavioral-commerce",
+      "peer-audited--behavioral-blockchain"
+    ],
+    "XIII,META": [
+      "vigiles-aeternae--agon-cosmogonicum"
+    ],
+    "III,I": [
+      "linguistic-atomization-framework",
+      "narratological-algorithmic-lenses",
+      "nexus--babel-alexandria-",
+      "vigiles-aeternae--corpus-mythicum"
+    ],
+    "II,I": [
+      "sema-metra--alchemica-mundi"
+    ],
+    "X,I": [
+      "studium-generale"
+    ],
+    "V,I": [
+      "styx-behavioral-economics-theory"
+    ],
+    "VII,II": [
+      "ivi374ivi027-05",
+      "a-mavs-olevm"
+    ],
+    "V,II": [
+      "styx-behavioral-art"
+    ],
+    "VII,III": [
+      "life-my--midst--in"
+    ],
+    "IX,IV": [
+      "agent--claude-smith",
+      "agentic-titan",
+      "a-i--skills"
+    ],
+    "VIII,IV": [
+      "collective-persona-operations",
+      "orchestration-start-here",
+      "tool-interaction-design",
+      "system-governance-framework",
+      "petasum-super-petasum"
+    ],
+    "XV,IV": [
+      "contrib--primeinc-github-stars",
+      "contrib--temporal-sdk-python",
+      "contrib--anthropic-skills",
+      "contrib--dbt-mcp",
+      "contrib--langchain-langgraph",
+      "contrib--adenhq-hive",
+      "contrib--ipqwery-ipapi-py"
+    ],
+    "I,IV": [
+      "reverse-engine-recursive-run"
+    ],
+    "XI,V": [
+      "public-process"
+    ],
+    "X,VI": [
+      "salon-archive",
+      "adaptive-personal-syllabus",
+      "reading-group-curriculum",
+      "community-hub",
+      "koinonia-db"
+    ],
+    "XI,VII": [
+      "announcement-templates",
+      "social-automation",
+      "distribution-strategy"
+    ]
+  },
+  "unclassified": [
+    {
+      "repo": "4444J99",
+      "organ": "PERSONAL",
+      "path": "/Users/4jp/Workspace/4444J99/4444J99/seed.yaml"
+    },
+    {
+      "repo": "application-pipeline",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/4444J99/application-pipeline/seed.yaml"
+    },
+    {
+      "repo": "domus-semper-palingenesis",
+      "organ": "PERSONAL",
+      "path": "/Users/4jp/Workspace/4444J99/domus-semper-palingenesis/seed.yaml"
+    },
+    {
+      "repo": "intake",
+      "organ": "PERSONAL",
+      "path": "/Users/4jp/Workspace/4444J99/intake/seed.yaml"
+    },
+    {
+      "repo": "portfolio",
+      "organ": "PERSONAL",
+      "path": "/Users/4jp/Workspace/4444J99/portfolio/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/.github/seed.yaml"
+    },
+    {
+      "repo": "aerarium--res-publica",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/aerarium--res-publica/seed.yaml"
+    },
+    {
+      "repo": "custodia-securitatis",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/custodia-securitatis/seed.yaml"
+    },
+    {
+      "repo": "commercial-validation-testbed",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/intake/meta_tmp/commercial-testbed/seed.yaml"
+    },
+    {
+      "repo": "metasystem-core",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/intake/metasystem-core/seed.yaml"
+    },
+    {
+      "repo": "academic-publication",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/academic-publication/seed.yaml"
+    },
+    {
+      "repo": "archive-past-works",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/archive-past-works/seed.yaml"
+    },
+    {
+      "repo": "artist-toolkit-and-templates",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/artist-toolkit-and-templates/seed.yaml"
+    },
+    {
+      "repo": "case-studies-methodology",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/case-studies-methodology/seed.yaml"
+    },
+    {
+      "repo": "client-sdk",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/client-sdk/seed.yaml"
+    },
+    {
+      "repo": "docs",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/docs/seed.yaml"
+    },
+    {
+      "repo": "example-ai-collaboration",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/example-ai-collaboration/seed.yaml"
+    },
+    {
+      "repo": "example-choreographic-interface",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/example-choreographic-interface/seed.yaml"
+    },
+    {
+      "repo": "example-generative-music",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/example-generative-music/seed.yaml"
+    },
+    {
+      "repo": "example-generative-visual",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/example-generative-visual/seed.yaml"
+    },
+    {
+      "repo": "example-interactive-installation",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/example-interactive-installation/seed.yaml"
+    },
+    {
+      "repo": "example-theatre-dialogue",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/example-theatre-dialogue/seed.yaml"
+    },
+    {
+      "repo": "learning-resources",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/learning-resources/seed.yaml"
+    },
+    {
+      "repo": "showcase-portfolio",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-ii/showcase-portfolio/seed.yaml"
+    },
+    {
+      "repo": "a-i-chat--exporter",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/a-i-chat--exporter/seed.yaml"
+    },
+    {
+      "repo": "anon-hookup-now",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/anon-hookup-now/seed.yaml"
+    },
+    {
+      "repo": "enterprise-plugin",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/enterprise-plugin/seed.yaml"
+    },
+    {
+      "repo": "ergon-prime--business-orchestrator",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/ergon-prime--business-orchestrator/seed.yaml"
+    },
+    {
+      "repo": "fetch-familiar-friends",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/fetch-familiar-friends/seed.yaml"
+    },
+    {
+      "repo": "gamified-coach-interface",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/gamified-coach-interface/seed.yaml"
+    },
+    {
+      "repo": "mirror-mirror",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/mirror-mirror/seed.yaml"
+    },
+    {
+      "repo": "multi-camera--livestream--framework",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/multi-camera--livestream--framework/seed.yaml"
+    },
+    {
+      "repo": "my--father-mother",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/my--father-mother/seed.yaml"
+    },
+    {
+      "repo": "parlor-games--ephemera-engine",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/parlor-games--ephemera-engine/seed.yaml"
+    },
+    {
+      "repo": "search-local--happy-hour",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/search-local--happy-hour/seed.yaml"
+    },
+    {
+      "repo": "select-or-left-or-right-or",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/select-or-left-or-right-or/seed.yaml"
+    },
+    {
+      "repo": "sovereign-ecosystem--real-estate-luxury",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/sovereign-ecosystem--real-estate-luxury/seed.yaml"
+    },
+    {
+      "repo": "the-invisible-ledger",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/the-invisible-ledger/seed.yaml"
+    },
+    {
+      "repo": "trade-perpetual-future",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/trade-perpetual-future/seed.yaml"
+    },
+    {
+      "repo": "universal-mail--automation",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/universal-mail--automation/seed.yaml"
+    },
+    {
+      "repo": "virgil-training-overlay",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/virgil-training-overlay/seed.yaml"
+    },
+    {
+      "repo": "your-fit-tailored",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/meta-organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/your-fit-tailored/seed.yaml"
+    },
+    {
+      "repo": "seed-schema",
+      "organ": "META",
+      "path": "/Users/4jp/Workspace/meta-organvm/organvm-corpvs-testamentvm/docs/archive/org-iv-orchestration-staging/seed-schema/seed.yaml"
+    },
+    {
+      "repo": "amp-lab-media",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/meta-organvm/praxis-perpetua/content-pipeline/amp-lab/seed.yaml"
+    },
+    {
+      "repo": ".config",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/.github/.config/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/.github/seed.yaml"
+    },
+    {
+      "repo": "metaphysical-systems",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/atomic-substrata/seed.yaml"
+    },
+    {
+      "repo": "conversation-corpus-site",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/conversation-corpus-site/seed.yaml"
+    },
+    {
+      "repo": "mesh",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/mesh/seed.yaml"
+    },
+    {
+      "repo": "rules-system-bound",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/rules-system-bound/seed.yaml"
+    },
+    {
+      "repo": "ontological-framework",
+      "organ": "I",
+      "path": "/Users/4jp/Workspace/organvm-i-theoria/scale-threshold-emergence/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/organvm-ii-poiesis/.github/seed.yaml"
+    },
+    {
+      "repo": ".config",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/organvm-ii-poiesis/metasystem-master/.config/seed.yaml"
+    },
+    {
+      "repo": "docs",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/organvm-ii-poiesis/metasystem-master/docs/seed.yaml"
+    },
+    {
+      "repo": "specs",
+      "organ": "II",
+      "path": "/Users/4jp/Workspace/organvm-ii-poiesis/metasystem-master/docs/source-materials/specs/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/organvm-iii-ergon/.github/seed.yaml"
+    },
+    {
+      "repo": "commerce--meta",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/organvm-iii-ergon/commerce--meta/seed.yaml"
+    },
+    {
+      "repo": "docs",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/organvm-iii-ergon/life-my--midst--in/docs/seed.yaml"
+    },
+    {
+      "repo": "ergon-test-harness",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/organvm-iii-ergon/peer-audited--behavioral-blockchain/src/test-harness/seed.yaml"
+    },
+    {
+      "repo": "sign-signal--voice-synth",
+      "organ": "III",
+      "path": "/Users/4jp/Workspace/organvm-iii-ergon/sign-signal--voice-synth/seed.yaml"
+    },
+    {
+      "repo": "contrib--clyra-gait",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/contrib--clyra-gait/seed.yaml"
+    },
+    {
+      "repo": "contrib--grafana-k6",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/contrib--grafana-k6/seed.yaml"
+    },
+    {
+      "repo": "contrib--indeedeng-iwf",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/contrib--indeedeng-iwf/seed.yaml"
+    },
+    {
+      "repo": "contrib--jairus-dagster-sdlc",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/contrib--jairus-dagster-sdlc/seed.yaml"
+    },
+    {
+      "repo": "contrib--m13v-summarize-recent-commit",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/contrib--m13v-summarize-recent-commit/seed.yaml"
+    },
+    {
+      "repo": "contrib--openai-agents-python",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/contrib--openai-agents-python/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/org-dotgithub/seed.yaml"
+    },
+    {
+      "repo": "universal-node-network",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/universal-node-network/seed.yaml"
+    },
+    {
+      "repo": "vox--architectura-gubernatio",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/vox--architectura-gubernatio/seed.yaml"
+    },
+    {
+      "repo": "vox--publica",
+      "organ": "IV",
+      "path": "/Users/4jp/Workspace/organvm-iv-taxis/vox--publica/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "V",
+      "path": "/Users/4jp/Workspace/organvm-v-logos/.github/seed.yaml"
+    },
+    {
+      "repo": "analytics-engine",
+      "organ": "V",
+      "path": "/Users/4jp/Workspace/organvm-v-logos/analytics-engine/seed.yaml"
+    },
+    {
+      "repo": "editorial-standards",
+      "organ": "V",
+      "path": "/Users/4jp/Workspace/organvm-v-logos/editorial-standards/seed.yaml"
+    },
+    {
+      "repo": "essay-pipeline",
+      "organ": "V",
+      "path": "/Users/4jp/Workspace/organvm-v-logos/essay-pipeline/seed.yaml"
+    },
+    {
+      "repo": "reading-observatory",
+      "organ": "V",
+      "path": "/Users/4jp/Workspace/organvm-v-logos/reading-observatory/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "VI",
+      "path": "/Users/4jp/Workspace/organvm-vi-koinonia/.github/seed.yaml"
+    },
+    {
+      "repo": "docs",
+      "organ": "VI",
+      "path": "/Users/4jp/Workspace/organvm-vi-koinonia/adaptive-personal-syllabus/docs/seed.yaml"
+    },
+    {
+      "repo": ".github",
+      "organ": "VII",
+      "path": "/Users/4jp/Workspace/organvm-vii-kerygma/.github/seed.yaml"
+    },
+    {
+      "repo": "kerygma-pipeline",
+      "organ": "VII",
+      "path": "/Users/4jp/Workspace/organvm-vii-kerygma/kerygma-pipeline/seed.yaml"
+    },
+    {
+      "repo": "kerygma-profiles",
+      "organ": "VII",
+      "path": "/Users/4jp/Workspace/organvm-vii-kerygma/kerygma-profiles/seed.yaml"
+    }
+  ]
+}
