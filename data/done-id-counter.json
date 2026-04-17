@@ -1,8 +1,8 @@
 {
-  "next_id": 386,
-  "last_claimed_by": "S-hook-enforcement-v3-2026-04-17",
+  "next_id": 387,
+  "last_claimed_by": "S-chaos-engineering-2026-04-17",
   "last_claimed_at": "2026-04-17",
-  "claimed_range": [385, 385],
-  "note": "1 completion: Claude Code hook enforcement Phase 3 — prompt→command type conversion, 10 new PreToolUse guards, UserPromptSubmit momentum detection, SessionStart/SessionEnd lifecycle, CLAUDE.md rules 5-8 (385).",
+  "claimed_range": [386, 386],
+  "note": "1 completion: agentic-titan #35 chaos engineering tests for FissionFusion dynamics — 16 tests, commit b019334 (386).",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
