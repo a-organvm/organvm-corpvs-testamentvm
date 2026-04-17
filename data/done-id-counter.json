@@ -1,8 +1,8 @@
 {
-  "next_id": 380,
-  "last_claimed_by": "S-agentic-titan-2026-04-16",
-  "last_claimed_at": "2026-04-16",
-  "claimed_range": [378, 379],
-  "note": "DONE-377 was used by S-domain-architecture-2026-04-16 without updating counter. Counter corrected: real ceiling was 378 at session start.",
+  "next_id": 385,
+  "last_claimed_by": "S-recapitulation-2026-04-17",
+  "last_claimed_at": "2026-04-17",
+  "claimed_range": [380, 384],
+  "note": "5 completions: Padavano consulting site rebrand (380), directory/GitHub repo rename victoroff-group→padavano (381), three INSTANCE.toml world identities persisted to chezmoi (382), engagement enrichment ENG-001/002/003/005 from git truth (383), full recapitulation plan persisted (384).",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
