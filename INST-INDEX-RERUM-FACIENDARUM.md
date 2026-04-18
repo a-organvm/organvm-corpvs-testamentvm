@@ -870,6 +870,8 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-DOM-034 | **P1** | **Docker Desktop uninstalled — governance policy added.** Docker removed 2026-04-18 (17GB reclaimed). Decision framework in `AGENTS.md.tmpl` and Claude memory (`reference_docker_decision.md`). Reinstall via `brew install --cask docker` when a project needs multi-service stack. 14 stale MCP images + 10 dangling volumes cleaned pre-uninstall. | Agent | S-cleanup-2026-04-18 | None |
 | IRF-DOM-035 | **P1** | **1Password.app auto-update failure — binary missing.** 1Password 8 Squirrel auto-updater ran 2026-04-17 03:41 AM, removed old binary from `Contents/MacOS/` but failed to write replacement (likely macOS 26 beta incompatibility). App was a hollow shell. Reinstalled via `brew install --cask 1password` (8.12.10). **VACUUM:** Electron app auto-updates on beta macOS are fragile — need monitoring. Also: `1password` cask was NOT in Homebrew tracking (relates to IRF-DOM-010 Brewfile gap). | Agent | S-cleanup-2026-04-18 | None |
 | IRF-DOM-036 | P2 | **`mo` (Mole) cleanup tool false-positive on Docker privileged helpers.** Tool reports "Found 2 orphaned system services" for `com.docker.socket` and `com.docker.vmnetd` but then "Path validation failed for sudo remove" — contradicts itself by claiming "Cleaned 2 orphaned services, 14.3MB." These were NOT orphaned while Docker was installed (had active LaunchDaemons). Now moot post-uninstall but documents a tool trust gap. | Agent | S-cleanup-2026-04-18 | None |
+| IRF-DOM-037 | **P1** | **`com.4jp.mcp.servers` LaunchAgent failing silently — exit 78 (`EX_CONFIG`).** `npm run serve:all` calls `npm-run-all` which is not in the LaunchAgent's PATH. Stderr log shows infinite `sh: npm-run-all: command not found` retries. The local MCP server fleet (filesystem, sequential-thinking, memory) is NOT running despite the agent being loaded. Fix: either install `npm-run-all` globally, add it to the plist's PATH, or refactor `serve:all` to not depend on it. Also needs ExecTimeout (IRF-SYS-083). | Agent | S-login-items-2026-04-18 N/A vacuum audit | None |
+| IRF-DOM-038 | **P2** | **IRF-SYS-083 partial progress: ExecTimeout audit.** soak-snapshot fixed this session (DONE-387). Remaining deployed agents without ExecTimeout: `com.4jp.mcp.servers` (should have it — batch startup), `ai.openclaw.gateway` (unclear if persistent or scheduled). Persistent services (`cloudflared`, `env.mcp` one-shot) correctly lack ExecTimeout. IRF-SYS-083 should be refined: scheduled/batch agents MUST have ExecTimeout; persistent/keep-alive agents SHOULD NOT. | Agent | S-login-items-2026-04-18 N/A vacuum audit | IRF-SYS-083 |
 
 ---
 
@@ -1580,8 +1582,8 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 Refreshed 2026-04-18 (S-login-items-2026-04-18). +1 completion: DONE-387 (Login Items cleanup + LaunchAgent hygiene — dead agents removed, named executables, soak-snapshot into chezmoi, CLAUDE.md doc gap fixed). Prior: S-chaos-engineering-2026-04-17 (DONE-386).
 
-- **Total IRF items:** 903 *(unchanged)*
-- **Open:** 522 *(unchanged)*
+- **Total IRF items:** 905 *(prior 903, +2: IRF-DOM-037 mcp.servers exit 78, IRF-DOM-038 ExecTimeout audit refinement)*
+- **Open:** 524 *(prior 522, +2: DOM-037, DOM-038)*
 - **Completed:** 387 *(prior 386, +1: DONE-387)*
 - **Blocked:** 0
 - **Archived:** 0
