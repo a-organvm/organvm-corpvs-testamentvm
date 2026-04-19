@@ -1,6 +1,6 @@
 {
   "date": "2026-04-19",
-  "collected_at": "2026-04-19T08:43:33.247714+00:00",
+  "collected_at": "2026-04-19T10:01:31.003572+00:00",
   "validation": {
     "registry_pass": true,
     "registry_issues": [],
@@ -10,9 +10,9 @@
   },
   "ci": {
     "total_checked": 60,
-    "passing": 0,
-    "failing": 0,
-    "unknown": 49,
+    "passing": 40,
+    "failing": 6,
+    "unknown": 3,
     "billing_locked": 11,
     "billing_locked_repos": [
       "organvm-i-theoria/recursive-engine--generative-entity",
@@ -27,59 +27,66 @@
       "organvm-i-theoria/styx-behavioral-economics-theory",
       "organvm-i-theoria/conversation-corpus-engine"
     ],
-    "failures": []
+    "failures": [
+      "organvm-ii-poiesis/styx-behavioral-art: failure",
+      "organvm-v-logos/public-process: failure",
+      "organvm-vii-kerygma/.github: failure",
+      "meta-organvm/organvm-engine: failure",
+      "meta-organvm/materia-collider: failure",
+      "meta-organvm/organvm-ontologia: failure"
+    ]
   },
   "engagement": {
-    "total_stars": 0,
-    "total_forks": 0,
+    "total_stars": 9,
+    "total_forks": 5,
     "top_repos": {
       "organvm-i-theoria/recursive-engine--generative-entity": {
-        "stars": 0,
+        "stars": 1,
         "forks": 0,
-        "views_14d": 0,
-        "clones_14d": 0
+        "views_14d": 4,
+        "clones_14d": 55
       },
       "organvm-ii-poiesis/metasystem-master": {
         "stars": 0,
         "forks": 0,
         "views_14d": 0,
-        "clones_14d": 0
+        "clones_14d": 60
       },
       "organvm-ii-poiesis/a-mavs-olevm": {
-        "stars": 0,
+        "stars": 1,
         "forks": 0,
         "views_14d": 0,
-        "clones_14d": 0
+        "clones_14d": 33
       },
       "organvm-iii-ergon/public-record-data-scrapper": {
-        "stars": 0,
-        "forks": 0,
-        "views_14d": 0,
-        "clones_14d": 0
+        "stars": 2,
+        "forks": 4,
+        "views_14d": 35,
+        "clones_14d": 116
       },
       "organvm-iv-taxis/orchestration-start-here": {
         "stars": 0,
         "forks": 0,
-        "views_14d": 0,
-        "clones_14d": 0
+        "views_14d": 1,
+        "clones_14d": 133
       },
       "organvm-iv-taxis/agentic-titan": {
-        "stars": 0,
-        "forks": 0,
-        "views_14d": 0,
-        "clones_14d": 0
+        "stars": 5,
+        "forks": 1,
+        "views_14d": 16,
+        "clones_14d": 417
       },
       "organvm-v-logos/public-process": {
         "stars": 0,
         "forks": 0,
-        "views_14d": 0,
-        "clones_14d": 0
+        "views_14d": 2,
+        "clones_14d": 62
       },
       "meta-organvm/organvm-corpvs-testamentvm": {
         "stars": 0,
         "forks": 0,
-        "views_14d": 0,
-        "clones_14d": 0
+        "views_14d": 14,
+        "clones_14d": 3704
       }
     }
   }
