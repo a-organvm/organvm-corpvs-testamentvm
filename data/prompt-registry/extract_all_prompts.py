@@ -47,17 +47,19 @@ def parse_jsonl_session(filepath: Path, project_dir: str) -> list[dict]:
     except (OSError, UnicodeDecodeError):
         return []
 
-    prompt_num = 0
+    # Pre-parse all lines for index-based lookahead (response linking)
+    entries = []
     for line_text in lines:
         line_text = line_text.strip()
         if not line_text:
             continue
-
         try:
-            entry = json.loads(line_text)
+            entries.append(json.loads(line_text))
         except json.JSONDecodeError:
             continue
 
+    prompt_num = 0
+    for idx, entry in enumerate(entries):
         # Look for user messages
         if entry.get("type") != "user":
             continue
@@ -127,6 +129,26 @@ def parse_jsonl_session(filepath: Path, project_dir: str) -> list[dict]:
 
         session_id = filepath.stem  # UUID from filename
 
+        # Response linking: look ahead for the assistant's response
+        response_summary = ""
+        for lookahead in range(idx + 1, min(idx + 5, len(entries))):
+            next_entry = entries[lookahead]
+            if next_entry.get("type") == "assistant":
+                next_content = next_entry.get("message", {}).get("content", [])
+                if isinstance(next_content, str):
+                    response_summary = next_content[:200].replace("\n", " ").strip()
+                elif isinstance(next_content, list):
+                    for part in next_content:
+                        if isinstance(part, dict) and part.get("type") == "text":
+                            response_summary = part.get("text", "")[:200].replace("\n", " ").strip()
+                            break
+                        elif isinstance(part, str) and part.strip():
+                            response_summary = part[:200].replace("\n", " ").strip()
+                            break
+                break
+            elif next_entry.get("type") == "user":
+                break  # next user message before any assistant response
+
         prompts.append({
             "session_id": session_id,
             "project_dir": project_dir,
@@ -140,6 +162,7 @@ def parse_jsonl_session(filepath: Path, project_dir: str) -> list[dict]:
             "status": "UNREVIEWED",
             "content_length": len(raw_content),
             "source": "claude-code",
+            "response_summary": response_summary,
         })
 
     return prompts

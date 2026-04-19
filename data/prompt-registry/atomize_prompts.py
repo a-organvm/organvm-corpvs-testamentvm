@@ -184,11 +184,40 @@ def detect_universe_hints(text: str) -> list[str]:
     return hints if hints else ["unscoped"]
 
 
+def inherit_universe_from_project(project_path: str) -> list[str]:
+    """Inherit universe tags from the project directory path."""
+    inherited = []
+    lower = project_path.lower()
+
+    mappings = [
+        (["organvm-i-theoria", "/theoria/"], "organ-i"),
+        (["organvm-ii-poiesis", "/poiesis/"], "organ-ii"),
+        (["organvm-iii-ergon", "/ergon/"], "organ-iii"),
+        (["organvm-iv-taxis", "/taxis/"], "organ-iv"),
+        (["organvm-v-logos", "/logos/"], "organ-v"),
+        (["organvm-vi-koinonia", "/koinonia/"], "organ-vi"),
+        (["organvm-vii-kerygma", "/kerygma/"], "organ-vii"),
+        (["meta-organvm", "/meta/"], "meta"),
+        (["4444j99", "domus", "portfolio"], "personal"),
+        (["application-pipeline"], "employment"),
+    ]
+
+    for patterns, universe in mappings:
+        if any(p in lower for p in patterns):
+            inherited.append(universe)
+
+    return inherited
+
+
 def atomize_prompt(prompt: dict) -> list[dict]:
     """Decompose a macro prompt into micro-unit atoms."""
     content = prompt.get("content", "")
     if not content or len(content.strip()) < 3:
         return []
+
+    # Inherit universes from project directory
+    project_path = prompt.get("project_path", "")
+    inherited_universes = inherit_universe_from_project(project_path)
 
     # Skip pure slash commands — they're already atomic
     if content.strip().startswith("/") and len(content.strip()) < 30:
@@ -198,12 +227,13 @@ def atomize_prompt(prompt: dict) -> list[dict]:
             "type": COMMAND,
             "content": content.strip(),
             "summary": content.strip(),
-            "universes": [],
+            "universes": inherited_universes or [],
             "status": "N/A",
             "produced": [],
             "source": prompt.get("source", "unknown"),
             "date": prompt.get("date", ""),
             "timestamp": prompt.get("timestamp", ""),
+            "response_summary": prompt.get("response_summary", ""),
         }]
 
     # Split into segments
@@ -216,6 +246,19 @@ def atomize_prompt(prompt: dict) -> list[dict]:
 
         atom_type = classify_atom(segment)
         universe_hints = detect_universe_hints(segment)
+
+        # Merge inherited universes from project directory
+        for u in inherited_universes:
+            if u not in universe_hints:
+                universe_hints.append(u)
+
+        # Governance rules get UNIVERSAL by default
+        if atom_type == GOVERNANCE and "UNIVERSAL" not in universe_hints:
+            universe_hints.append("UNIVERSAL")
+
+        # Remove "unscoped" if we now have real universe hints
+        if len(universe_hints) > 1 and "unscoped" in universe_hints:
+            universe_hints.remove("unscoped")
 
         summary = segment[:150].replace("\n", " ").strip()
         if len(segment) > 150:
@@ -233,6 +276,7 @@ def atomize_prompt(prompt: dict) -> list[dict]:
             "source": prompt.get("source", "unknown"),
             "date": prompt.get("date", ""),
             "timestamp": prompt.get("timestamp", ""),
+            "response_summary": prompt.get("response_summary", ""),
         })
 
     return atoms

@@ -1,9 +1,9 @@
 # Index Promptorum — Complete Prompt Registry
 
-**Generated:** 2026-04-18T10:22:17.595577
-**Total prompts:** 8181
-**Total sessions:** 930
-**Date range:** 2025-06-26 → 2026-04-18
+**Generated:** 2026-04-19T16:44:37.805566
+**Total prompts:** 8218
+**Total sessions:** 936
+**Date range:** 2025-06-26 → 2026-04-19
 
 **Automation:** SessionEnd hook at `~/.claude/hooks/session-prompt-capture.sh`
 **Machine-readable:** `data/prompt-registry/prompt-registry.json`
@@ -12,20 +12,20 @@
 
 | Category | Count | % |
 |----------|-------|---|
-| uncategorized | 3792 | 46.4% |
-| directive | 2058 | 25.2% |
-| pasted-content | 1669 | 20.4% |
-| question | 1277 | 15.6% |
-| carry-forward | 466 | 5.7% |
-| close-out | 445 | 5.4% |
-| emotional | 398 | 4.9% |
-| governance | 378 | 4.6% |
-| command | 369 | 4.5% |
-| personal | 190 | 2.3% |
+| uncategorized | 3803 | 46.3% |
+| directive | 2062 | 25.1% |
+| pasted-content | 1678 | 20.4% |
+| question | 1285 | 15.6% |
+| carry-forward | 469 | 5.7% |
+| close-out | 451 | 5.5% |
+| emotional | 409 | 5.0% |
+| governance | 384 | 4.7% |
+| command | 373 | 4.5% |
+| personal | 193 | 2.3% |
 
 | Status | Count |
 |--------|-------|
-| UNREVIEWED | 8181 |
+| UNREVIEWED | 8218 |
 
 ## Daily Activity
 
@@ -186,10 +186,11 @@
 | 2026-04-15 | 107 |
 | 2026-04-16 | 156 |
 | 2026-04-17 | 64 |
-| 2026-04-18 | 66 |
+| 2026-04-18 | 96 |
+| 2026-04-19 | 7 |
 
 ---
-## Directives — Implementation Tracking (2058)
+## Directives — Implementation Tracking (2062)
 
 | ID | Date | Project | Status | Prompt |
 |----|------|---------|--------|--------|
@@ -2251,9 +2252,13 @@
 | D-2056 | 2026-04-18 | 4jp | UNREVIEWED | SO MAKE IT EXIST;  this keeps failing over and over and over:  mo optimize       |
 | D-2057 | 2026-04-18 | 4jp | UNREVIEWED | So since I already have to repeat myself, right, because obviously we're still n |
 | D-2058 | 2026-04-18 | taxis | UNREVIEWED | nothing (aiskills .build as a for instance) should be in a location that gets cl |
+| D-2059 | 2026-04-18 | 4jp | UNREVIEWED | <task-notification> <task-id>a1df674ba50f2873b</task-id> <tool-use-id>toolu_01Xb |
+| D-2060 | 2026-04-18 | 4jp | UNREVIEWED | Okay, here's the thing, people. Most of my confessional work and writing and pro |
+| D-2061 | 2026-04-18 | original | UNREVIEWED | ❯ last session left us:"⏺ Exactly 1 commit: the terminal fossil record entry. Th |
+| D-2062 | 2026-04-18 | Workspace | UNREVIEWED | there are emails, linkedin messages, and correspondence requires responding too- |
 
 ---
-## Governance Rules (378)
+## Governance Rules (384)
 
 - **[2026-03-24]** # Conversation Corpus Engine S33 Closure Session Canon  - Recorded: 2026-03-24 - Canonicalized by: Codex - Engine repo: `/Users/4jp/Workspace/organvm-...
 - **[2026-03-20]** output-1: "           Claude Code v2.1.79  ▐▛███▜▌   Opus 4.6 (1M context) with … ▝▜█████▛▘  Claude Max   ▘▘ ▝▝    ~/Workspace/meta-organvm  ⏺ Bash(so...
@@ -2633,11 +2638,17 @@
 - **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
 - **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
 - **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
+- **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
+- **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
+- **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
+- **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
+- **[2026-04-18]** none-knowledge--N/A, no data, seed lacking--creates vacuum                                                                                           ❯...
+- **[2026-04-18]** ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
 
 ---
 ## By Project Directory
 
-### `/Users/4jp` (331 prompts)
+### `/Users/4jp` (353 prompts)
 
 - [2026-03-19] why does this keep happening? this: "Warning: Skipping sqlite: most recent version 3.51.3 not installed";
 - [2026-03-19] brew upgrade sqlite Warning: sqlite 3.52.0 already installed brew reinstall sqlite ==> Fetching downloads for: sqlite ✔︎ Bottle Manifest sqlite (3.51....
@@ -2649,9 +2660,9 @@
 - [2026-03-25] ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
 - [2026-03-25] ❯ all the N/As suggest something imperative; it means their is a vacuum where something should be--research it, plan it, log it;
 - [2026-03-25] add to tomorrow's todo--for some reason dropbox wants to upload nearly 1TB of data, i dont understand why
-- ... and 321 more
+- ... and 343 more
 
-### `/Users/4jp/Workspace` (648 prompts)
+### `/Users/4jp/Workspace` (657 prompts)
 
 - [2026-03-20] //model
 - [2026-03-20] why is this happening; "❯ WHAT THE FUCK IS HAPPENING__EXPLAIN--this has never happened before...
@@ -2663,7 +2674,7 @@
 - [2026-03-20] summary: " Session Arc: 2026-03-20    What Was    Starting state: Clean repo on main. Pipeline with 280   actionable entries, 32 tailored resumes in b...
 - [2026-03-20] summary: " Session Overview — March 20, 2026    WHAT WAS (entering this session)    - 7 applications from March 19 batch sitting in staged with materi...
 - [2026-03-20] summary: "⏺ Committed to the system at every level:    ════════════════════════════════════════════════════════   ═══     IMPLEMENTED ORGANISM-WIDE...
-- ... and 638 more
+- ... and 647 more
 
 ### `/Users/4jp/Workspace/4444J99` (15 prompts)
 
@@ -2847,7 +2858,7 @@
 - [2026-03-18] proceed w all suggestions, logic dictates order;
 - ... and 298 more
 
-### `/Users/4jp/Workspace/meta/organvm/post/flood/archive/original` (87 prompts)
+### `/Users/4jp/Workspace/meta/organvm/post/flood/archive/original` (90 prompts)
 
 - [2026-04-07] directory contains the genesis of the ideas brainstormed to get us to this current projects aspirations
 - [2026-04-07] [Request interrupted by user for tool use]
@@ -2859,7 +2870,7 @@
 - [2026-04-09] work on patching these leaks:"SESSION CLOSE-OUT AUDIT — HALL MONITOR REPORT    I. WHAT THIS SESSION IS    This is a cold-start audit session rooted in...
 - [2026-04-09] work order review:"⏺ The fossil daemon will generate one more trailing   witness entry from this commit. That's the   steady-state tail — the system a...
 - [2026-04-11] status?
-- ... and 77 more
+- ... and 80 more
 
 ### `/Users/4jp/Workspace/meta/organvm/praxis/perpetua` (17 prompts)
 
@@ -3121,7 +3132,7 @@
 - [2026-03-25] ❯ ❯ Provide an overview of all that was and all that is and all that needs to be based on this entire session's context; has everything been GitHub is...
 - [2026-03-25] known issues require tracking! not locally, but remotely! if the system breaks, it's soul must continue to live
 
-### `/Users/4jp/Workspace/organvm/iv/taxis` (280 prompts)
+### `/Users/4jp/Workspace/organvm/iv/taxis` (281 prompts)
 
 - [2026-03-30] //model
 - [2026-03-30] we have claude max, my main squeeze, codex, gemini--both more limited, we have opencode; im sure there are others; however when claude runs out of to...
@@ -3133,7 +3144,7 @@
 - [2026-03-30] i have material that can be used for the testing of implementation actuality: "⏺ Yes. Three parallel tracks, no overlap....
 - [2026-03-30] gemini returned: "cd ~/Workspace/meta-organvm/aerarium--res-publica && gemini    ▝▜▄     Gemini CLI v0.35.3     ▝▜▄    ▗▟▀    Signed in with Google: p...
 - [2026-03-30] remove the restrictive rule via api
-- ... and 270 more
+- ... and 271 more
 
 ### `/Users/4jp/Workspace/organvm/iv/taxis/a/i//skills` (14 prompts)
 
@@ -3285,7 +3296,7 @@
 - [2025-11-24] handoff to jules
 - ... and 1585 more
 
-### `~/.config/zsh/.zsh_history` (36 prompts)
+### `~/.config/zsh/.zsh_history` (38 prompts)
 
 - [2026-04-13] claude --chrome --dangerously-skip-permissions
 - [2026-04-13] claude --chrome --dangerously-skip-permissions
@@ -3297,9 +3308,4 @@
 - [2026-04-14] claude --chrome --dangerously-skip-permissions
 - [2026-04-14] claude --chrome --dangerously-skip-permissions
 - [2026-04-14] claude --chrome --dangerously-skip-permissions
-- ... and 26 more
-
-### 2026-04-18--velvet-bouncing-seal
-**Captured:** 2026-04-18T10:34:17 | **Prompts:** 1
-**Archive:** `data/prompt-registry/sessions/2026-04-18--velvet-bouncing-seal-prompts.md`
-
+- ... and 28 more

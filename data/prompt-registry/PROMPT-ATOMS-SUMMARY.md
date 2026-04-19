@@ -1,184 +1,184 @@
 # Prompt Atoms — Micro-Unit Registry
 
-**Generated:** 2026-04-18T10:28:22.950574
-**Total atoms:** 31429
+**Generated:** 2026-04-19T16:44:47.588931
+**Total atoms:** 31615
 
 ## By Type
 
 | Type | Count | % |
 |------|-------|---|
-| implicit-signal | 14897 | 47.4% |
-| governance-rule | 5138 | 16.3% |
-| directive | 4458 | 14.2% |
-| constraint | 4014 | 12.8% |
-| question | 1473 | 4.7% |
+| implicit-signal | 15002 | 47.5% |
+| governance-rule | 5170 | 16.4% |
+| directive | 4465 | 14.1% |
+| constraint | 4026 | 12.7% |
+| question | 1484 | 4.7% |
 | data | 439 | 1.4% |
-| command | 390 | 1.2% |
+| command | 394 | 1.2% |
+| emotional | 318 | 1.0% |
 | correction | 317 | 1.0% |
-| emotional | 303 | 1.0% |
 
 ## By Source
 
 | Source | Atoms |
 |--------|-------|
-| claude-code | 22954 |
+| claude-code | 23134 |
 | codex | 4504 |
 | chatgpt | 2241 |
 | corpus-site | 1551 |
-| shell-history | 99 |
+| shell-history | 105 |
 | specstory | 80 |
 
 ## Universe Distribution
 
 | Universe | Atoms |
 |----------|-------|
-| unscoped | 15140 |
-| UNIVERSAL | 11281 |
-| meta | 5508 |
-| organ-iv | 2959 |
-| persistence | 2513 |
-| employment | 2108 |
+| UNIVERSAL | 12505 |
+| meta | 9770 |
+| unscoped | 6897 |
+| organ-iv | 5521 |
+| personal | 5227 |
+| organ-i | 3573 |
+| organ-iii | 3463 |
+| persistence | 2525 |
+| employment | 2110 |
 | naming | 2058 |
-| organ-i | 1827 |
-| organ-iii | 1683 |
-| security | 1605 |
+| security | 1609 |
 | organ-ii | 1493 |
-| personal | 1472 |
-| enforcement | 1305 |
-| housing | 1178 |
-| health | 1002 |
+| enforcement | 1316 |
+| housing | 1185 |
+| health | 1003 |
 | organ-v | 927 |
-| financial | 666 |
+| financial | 668 |
 | organ-vi | 569 |
 | organ-vii | 337 |
-| automation | 319 |
-| relationships | 301 |
+| automation | 321 |
+| relationships | 302 |
 | education | 239 |
 
 ## Status
 
 | Status | Count |
 |--------|-------|
-| UNREVIEWED | 31079 |
-| N/A | 350 |
+| UNREVIEWED | 31261 |
+| N/A | 354 |
 
-## Directives — 4458 atoms requiring implementation
+## Directives — 4465 atoms requiring implementation
 
 | ID | Date | Source | Universes | Summary |
 |----|------|--------|-----------|---------|
-| ATM-000001 |  | corpus-site | employment, UNIVERSAL | # PHASE 1: MASTER SUMMARY — Documentation Audit (Weeks 1-2, 70 hours)  **Duratio |
+| ATM-000001 |  | corpus-site | employment, UNIVERSAL, organ-i | # PHASE 1: MASTER SUMMARY — Documentation Audit (Weeks 1-2, 70 hours)  **Duratio |
 | ATM-000005 | 2026-03-13 | corpus-site | organ-i | # Rolling History Export Process  Date: 2026-03-13 Scope: Recent ChatGPT history |
-| ATM-000008 | 2026-03-13 | corpus-site | unscoped | Weekly consolidation  Use them like this:  - Session-close micro export: last 10 |
+| ATM-000008 | 2026-03-13 | corpus-site | organ-i | Weekly consolidation  Use them like this:  - Session-close micro export: last 10 |
 | ATM-000009 | 2026-03-23 | corpus-site | organ-i, persistence, UNIVERSAL | # Conversation Corpus Engine First Breath Session  - Recorded: 2026-03-23T19:05: |
-| ATM-000022 | 2026-03-24 | corpus-site | UNIVERSAL | provide micro<there+back_again>macro roadmap; i will then relieve you and hand t |
-| ATM-000057 |  | corpus-site | unscoped | The specific purpose of this output is defined (for example: “to create a prompt |
+| ATM-000022 | 2026-03-24 | corpus-site | UNIVERSAL, organ-i | provide micro<there+back_again>macro roadmap; i will then relieve you and hand t |
+| ATM-000057 |  | corpus-site | organ-i | The specific purpose of this output is defined (for example: “to create a prompt |
 | ATM-000085 |  | corpus-site | meta, personal, employment | # Comprehensive Funding Review and Grant-Finding Blueprint Based on Your Attache |
 | ATM-000093 |  | corpus-site | financial, health, security | <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" styl |
-| ATM-000099 |  | corpus-site | unscoped | I will create a minimalist and interactive presentation of six classic visual-sp |
-| ATM-000100 |  | corpus-site | employment | This immersive document will contain an HTML application that uses `three.js` to |
-| ATM-000104 |  | corpus-site | unscoped | I've focused on clean lines and geometric precision to match the "scientific ill |
-| ATM-000119 |  | corpus-site | unscoped | The clean, schematic look is gone, replaced by a darker, more textured environme |
-| ATM-000127 |  | corpus-site | unscoped | The clean lines are gone, replaced by a more organic, energetic, and atmospheric |
-| ATM-000177 |  | corpus-site | UNIVERSAL | Remove loss, and the engine eats the system.  * * *  ### 2. |
-| ATM-000220 |  | corpus-site | UNIVERSAL | It is naturally sensitive to rejection and competition; when you remove reciproc |
-| ATM-000232 |  | corpus-site | unscoped | It becomes destructive when institutions remove personal cost (low accountabilit |
-| ATM-000239 |  | corpus-site | unscoped | Greed and envy are harnessed into innovation via competition, and pride is harne |
-| ATM-000244 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000253 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000261 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000269 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000276 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000277 |  | corpus-site | unscoped | Strengthen mastery-based feedback, shorten feedback delay, and make competence l |
-| ATM-000284 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000292 |  | corpus-site | unscoped | Control fix in institutional terms. |
+| ATM-000099 |  | corpus-site | organ-i | I will create a minimalist and interactive presentation of six classic visual-sp |
+| ATM-000100 |  | corpus-site | employment, organ-i | This immersive document will contain an HTML application that uses `three.js` to |
+| ATM-000104 |  | corpus-site | organ-i | I've focused on clean lines and geometric precision to match the "scientific ill |
+| ATM-000119 |  | corpus-site | organ-i | The clean, schematic look is gone, replaced by a darker, more textured environme |
+| ATM-000127 |  | corpus-site | organ-i | The clean lines are gone, replaced by a more organic, energetic, and atmospheric |
+| ATM-000177 |  | corpus-site | UNIVERSAL, organ-i | Remove loss, and the engine eats the system.  * * *  ### 2. |
+| ATM-000220 |  | corpus-site | UNIVERSAL, organ-i | It is naturally sensitive to rejection and competition; when you remove reciproc |
+| ATM-000232 |  | corpus-site | organ-i | It becomes destructive when institutions remove personal cost (low accountabilit |
+| ATM-000239 |  | corpus-site | organ-i | Greed and envy are harnessed into innovation via competition, and pride is harne |
+| ATM-000244 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000253 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000261 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000269 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000276 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000277 |  | corpus-site | organ-i | Strengthen mastery-based feedback, shorten feedback delay, and make competence l |
+| ATM-000284 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000292 |  | corpus-site | organ-i | Control fix in institutional terms. |
 | ATM-000293 |  | corpus-site | organ-vi, health, relationships | Use multi-sensor evaluation (quality, durability, customer impact), protect reco |
-| ATM-000299 |  | corpus-site | unscoped | Control fix in institutional terms. |
-| ATM-000320 |  | corpus-site | unscoped | It becomes a “charged” utterance—grammar functioning by omission.  ### 2. **Comp |
-| ATM-000321 |  | corpus-site | unscoped | The implicit noun or clause (“good time,” “mess,” “success”) is understood throu |
-| ATM-000375 |  | corpus-site | relationships, UNIVERSAL | They laugh. You cackle. The bit lives.       * * *  **TLDR gonna be:**   Guide t |
-| ATM-000376 |  | corpus-site | unscoped | Make the examples a moat, a boat, and a goat |
-| ATM-000378 |  | corpus-site | financial, UNIVERSAL | <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" styl |
-| ATM-000379 |  | corpus-site | housing, UNIVERSAL | **Use the right words when calling 311 or going to HRA / shelter intake** Say:   |
-| ATM-000381 |  | corpus-site | unscoped | **How to apply immediately**     - Go to **ACCESS HRA** (website or app) and sta |
-| ATM-000386 |  | corpus-site | unscoped | I will create a minimalist, scientific-style illustration of the six visual-spat |
-| ATM-000387 |  | corpus-site | unscoped | This immersive document will contain a single HTML file that renders the paradox |
-| ATM-000388 |  | corpus-site | unscoped | The layout is designed to be responsive and feel like a modern design schematic, |
-| ATM-000390 |  | corpus-site | unscoped | It lays out the six paradoxes in a clean, responsive grid. |
-| ATM-000392 |  | corpus-site | naming, UNIVERSAL | The overall design feels like a modern scientific infographic, and each illustra |
-| ATM-000394 |  | corpus-site | unscoped | I will modify the document to add movement directly to the SVG diagrams, enhanci |
-| ATM-000400 |  | corpus-site | unscoped | I've moved the `toggleFavorite`, `setReminder`, `shareDaily`, `downloadImage`, ` |
-| ATM-000406 |  | corpus-site | UNIVERSAL | I will ensure all necessary functions and states are declared in a way that is g |
-| ATM-000408 |  | corpus-site | unscoped | Here's the updated code with a more aggressive approach to ensure scope:  I made |
-| ATM-000409 |  | corpus-site | unscoped | I've moved the declarations of `toggleFavorite`, `setReminder`, and `shareDaily` |
-| ATM-000414 |  | corpus-site | UNIVERSAL | I've moved the `getAppBackgroundClass` function to the very top of the file, out |
-| ATM-000417 |  | corpus-site | unscoped | I've moved the declarations of `toggleFavorite`, `setReminder`, `downloadImage`, |
-| ATM-000419 |  | corpus-site | unscoped | I've moved the declarations of `toggleFavorite`, `setReminder`, `downloadImage`, |
-| ATM-000435 |  | corpus-site | UNIVERSAL | Your nervous system is doing exactly what it learned to do: stay alert, stay jus |
-| ATM-000489 |  | corpus-site | unscoped | I will do this in two tightly coupled parts. |
-| ATM-000504 |  | corpus-site | unscoped | It gives your intellect something clean and final to land on.  * * *  ### 2. |
-| ATM-000525 |  | corpus-site | unscoped | We fix that by defining a finite, staged process with observable transitions. |
-| ATM-000550 |  | corpus-site | unscoped | It is boring by design. |
-| ATM-000560 |  | corpus-site | unscoped | Design a minimal “visible structure” that protects you from internal attack. |
-| ATM-000574 |  | corpus-site | unscoped | So create one drum track at a time each drum track should be a synth machine. |
-| ATM-000578 |  | corpus-site | unscoped | I want the ability to As you play the drum machine itself, you're recording, lik |
-| ATM-000580 |  | corpus-site | unscoped | Create as many able to create as many tracks, drum tracks as you want. |
-| ATM-000584 |  | corpus-site | unscoped | And, That's a good start. |
-| ATM-000588 |  | corpus-site | unscoped | Sample trimming/start point 5. |
-| ATM-000592 |  | corpus-site | unscoped | Drum types presets for each, so ability to quickly build a hh or snare & then tw |
-| ATM-000593 |  | corpus-site | unscoped | Automation to create constant movement 10. |
-| ATM-000594 |  | corpus-site | unscoped | Parameters to introduce random elements to create human qualities & feel less ma |
-| ATM-000595 |  | corpus-site | unscoped | Add: AI elements, pattern variations/scenes, track mute groups, & maybe a mixer  |
-| ATM-000596 |  | corpus-site | unscoped | Design patchbay & the ability for any one source to modulate the other |
-| ATM-000598 |  | corpus-site | unscoped | add visual patch cable rendering between sources and destinations, or maybe an X |
-| ATM-000599 |  | corpus-site | unscoped | & also add different dark/light themes that are colorful & bring different aesth |
-| ATM-000601 |  | corpus-site | unscoped | add different synthesis types |
-| ATM-000602 |  | corpus-site | unscoped | ensure full synth layout |
-| ATM-000603 |  | corpus-site | unscoped | & do a full ux/ui review & implementation |
-| ATM-000604 |  | corpus-site | unscoped | add the modulation matrix/patchbay back in for the new multi-engine architecture |
-| ATM-000605 |  | corpus-site | UNIVERSAL | ensure all features from v1-5 are implemented as well |
-| ATM-000606 |  | corpus-site | UNIVERSAL | review all versions 1 through 6, make a checklist of all features, check against |
-| ATM-000607 |  | corpus-site | unscoped | So create one drum track at a time each drum track should be a synth machine. |
-| ATM-000611 |  | corpus-site | unscoped | I want the ability to As you play the drum machine itself, you're recording, lik |
-| ATM-000613 |  | corpus-site | unscoped | Create as many able to create as many tracks, drum tracks as you want. |
-| ATM-000617 |  | corpus-site | unscoped | And, That's a good start. |
-| ATM-000621 |  | corpus-site | unscoped | Sample trimming/start point 5. |
-| ATM-000625 |  | corpus-site | unscoped | Drum types presets for each, so ability to quickly build a hh or snare & then tw |
-| ATM-000626 |  | corpus-site | unscoped | Automation to create constant movement 10. |
-| ATM-000627 |  | corpus-site | unscoped | Parameters to introduce random elements to create human qualities & feel less ma |
-| ATM-000628 |  | corpus-site | unscoped | Add: AI elements, pattern variations/scenes, track mute groups, & maybe a mixer  |
-| ATM-000629 |  | corpus-site | unscoped | Design patchbay & the ability for any one source to modulate the other |
-| ATM-000631 |  | corpus-site | unscoped | add visual patch cable rendering between sources and destinations, or maybe an X |
-| ATM-000632 |  | corpus-site | unscoped | & also add different dark/light themes that are colorful & bring different aesth |
-| ATM-000634 |  | corpus-site | unscoped | add different synthesis types |
-| ATM-000635 |  | corpus-site | unscoped | ensure full synth layout |
-| ATM-000636 |  | corpus-site | unscoped | & do a full ux/ui review & implementation |
-| ATM-000637 |  | corpus-site | unscoped | add the modulation matrix/patchbay back in for the new multi-engine architecture |
-| ATM-000638 |  | corpus-site | UNIVERSAL | ensure all features from v1-5 are implemented as well |
-| ATM-000639 |  | corpus-site | UNIVERSAL | review all versions 1 through 6, make a checklist of all features, check against |
-| ATM-000650 |  | corpus-site | UNIVERSAL | I can create a virtual ecosystem simulation for you. |
-| ATM-000652 |  | corpus-site | UNIVERSAL | Here is the plan: I will first set up the basic HTML structure and then add Java |
-| ATM-000653 |  | corpus-site | UNIVERSAL | Ecosystem Evolution Simulation with AI ReportsJun 23, 7:12 PM  This simulation i |
-| ATM-000660 |  | corpus-site | unscoped | Let me know if you'd like to add more features, such as new species, more comple |
-| ATM-000672 |  | corpus-site | employment, UNIVERSAL | and Sinhala. Characters represent consonant–vowel units rather than isolated let |
-| ATM-000678 |  | corpus-site | unscoped | If you want, I can further collapse this into a design-oriented model showing wh |
-| ATM-000679 |  | corpus-site | UNIVERSAL | Below is a collapsed, design-oriented synthesis that treats writing systems as c |
-| ATM-000682 |  | corpus-site | UNIVERSAL | weak for ritual, myth, or compressed meaning \| \| Featural Alphabet (Hangul) \| Hi |
-| ATM-000686 |  | corpus-site | UNIVERSAL | strong symbolic and political weight beyond pure efficiency \|  Collapsed even fu |
-| ATM-000688 |  | corpus-site | unscoped | you are training your eye, hand, and conceptual range.  Start with scripts that  |
-| ATM-000697 |  | corpus-site | unscoped | Yes. At this level, it is decisively handwriting work.  If you remove handwritin |
-| ATM-000698 |  | corpus-site | unscoped | handwriting is construction. The distinction matters.  Handwriting forces stroke |
-| ATM-000772 |  | corpus-site | UNIVERSAL | Add `dev` only when it clearly reduces risk (typically in `$ORG_COMMERCE` and so |
+| ATM-000299 |  | corpus-site | organ-i | Control fix in institutional terms. |
+| ATM-000320 |  | corpus-site | organ-i | It becomes a “charged” utterance—grammar functioning by omission.  ### 2. **Comp |
+| ATM-000321 |  | corpus-site | organ-i | The implicit noun or clause (“good time,” “mess,” “success”) is understood throu |
+| ATM-000375 |  | corpus-site | relationships, UNIVERSAL, organ-i | They laugh. You cackle. The bit lives.       * * *  **TLDR gonna be:**   Guide t |
+| ATM-000376 |  | corpus-site | organ-i | Make the examples a moat, a boat, and a goat |
+| ATM-000378 |  | corpus-site | financial, UNIVERSAL, organ-i | <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" styl |
+| ATM-000379 |  | corpus-site | housing, UNIVERSAL, organ-i | **Use the right words when calling 311 or going to HRA / shelter intake** Say:   |
+| ATM-000381 |  | corpus-site | organ-i | **How to apply immediately**     - Go to **ACCESS HRA** (website or app) and sta |
+| ATM-000386 |  | corpus-site | organ-i | I will create a minimalist, scientific-style illustration of the six visual-spat |
+| ATM-000387 |  | corpus-site | organ-i | This immersive document will contain a single HTML file that renders the paradox |
+| ATM-000388 |  | corpus-site | organ-i | The layout is designed to be responsive and feel like a modern design schematic, |
+| ATM-000390 |  | corpus-site | organ-i | It lays out the six paradoxes in a clean, responsive grid. |
+| ATM-000392 |  | corpus-site | naming, UNIVERSAL, organ-i | The overall design feels like a modern scientific infographic, and each illustra |
+| ATM-000394 |  | corpus-site | organ-i | I will modify the document to add movement directly to the SVG diagrams, enhanci |
+| ATM-000400 |  | corpus-site | organ-i | I've moved the `toggleFavorite`, `setReminder`, `shareDaily`, `downloadImage`, ` |
+| ATM-000406 |  | corpus-site | UNIVERSAL, organ-i | I will ensure all necessary functions and states are declared in a way that is g |
+| ATM-000408 |  | corpus-site | organ-i | Here's the updated code with a more aggressive approach to ensure scope:  I made |
+| ATM-000409 |  | corpus-site | organ-i | I've moved the declarations of `toggleFavorite`, `setReminder`, and `shareDaily` |
+| ATM-000414 |  | corpus-site | UNIVERSAL, organ-i | I've moved the `getAppBackgroundClass` function to the very top of the file, out |
+| ATM-000417 |  | corpus-site | organ-i | I've moved the declarations of `toggleFavorite`, `setReminder`, `downloadImage`, |
+| ATM-000419 |  | corpus-site | organ-i | I've moved the declarations of `toggleFavorite`, `setReminder`, `downloadImage`, |
+| ATM-000435 |  | corpus-site | UNIVERSAL, organ-i | Your nervous system is doing exactly what it learned to do: stay alert, stay jus |
+| ATM-000489 |  | corpus-site | organ-i | I will do this in two tightly coupled parts. |
+| ATM-000504 |  | corpus-site | organ-i | It gives your intellect something clean and final to land on.  * * *  ### 2. |
+| ATM-000525 |  | corpus-site | organ-i | We fix that by defining a finite, staged process with observable transitions. |
+| ATM-000550 |  | corpus-site | organ-i | It is boring by design. |
+| ATM-000560 |  | corpus-site | organ-i | Design a minimal “visible structure” that protects you from internal attack. |
+| ATM-000574 |  | corpus-site | organ-i | So create one drum track at a time each drum track should be a synth machine. |
+| ATM-000578 |  | corpus-site | organ-i | I want the ability to As you play the drum machine itself, you're recording, lik |
+| ATM-000580 |  | corpus-site | organ-i | Create as many able to create as many tracks, drum tracks as you want. |
+| ATM-000584 |  | corpus-site | organ-i | And, That's a good start. |
+| ATM-000588 |  | corpus-site | organ-i | Sample trimming/start point 5. |
+| ATM-000592 |  | corpus-site | organ-i | Drum types presets for each, so ability to quickly build a hh or snare & then tw |
+| ATM-000593 |  | corpus-site | organ-i | Automation to create constant movement 10. |
+| ATM-000594 |  | corpus-site | organ-i | Parameters to introduce random elements to create human qualities & feel less ma |
+| ATM-000595 |  | corpus-site | organ-i | Add: AI elements, pattern variations/scenes, track mute groups, & maybe a mixer  |
+| ATM-000596 |  | corpus-site | organ-i | Design patchbay & the ability for any one source to modulate the other |
+| ATM-000598 |  | corpus-site | organ-i | add visual patch cable rendering between sources and destinations, or maybe an X |
+| ATM-000599 |  | corpus-site | organ-i | & also add different dark/light themes that are colorful & bring different aesth |
+| ATM-000601 |  | corpus-site | organ-i | add different synthesis types |
+| ATM-000602 |  | corpus-site | organ-i | ensure full synth layout |
+| ATM-000603 |  | corpus-site | organ-i | & do a full ux/ui review & implementation |
+| ATM-000604 |  | corpus-site | organ-i | add the modulation matrix/patchbay back in for the new multi-engine architecture |
+| ATM-000605 |  | corpus-site | UNIVERSAL, organ-i | ensure all features from v1-5 are implemented as well |
+| ATM-000606 |  | corpus-site | UNIVERSAL, organ-i | review all versions 1 through 6, make a checklist of all features, check against |
+| ATM-000607 |  | corpus-site | organ-i | So create one drum track at a time each drum track should be a synth machine. |
+| ATM-000611 |  | corpus-site | organ-i | I want the ability to As you play the drum machine itself, you're recording, lik |
+| ATM-000613 |  | corpus-site | organ-i | Create as many able to create as many tracks, drum tracks as you want. |
+| ATM-000617 |  | corpus-site | organ-i | And, That's a good start. |
+| ATM-000621 |  | corpus-site | organ-i | Sample trimming/start point 5. |
+| ATM-000625 |  | corpus-site | organ-i | Drum types presets for each, so ability to quickly build a hh or snare & then tw |
+| ATM-000626 |  | corpus-site | organ-i | Automation to create constant movement 10. |
+| ATM-000627 |  | corpus-site | organ-i | Parameters to introduce random elements to create human qualities & feel less ma |
+| ATM-000628 |  | corpus-site | organ-i | Add: AI elements, pattern variations/scenes, track mute groups, & maybe a mixer  |
+| ATM-000629 |  | corpus-site | organ-i | Design patchbay & the ability for any one source to modulate the other |
+| ATM-000631 |  | corpus-site | organ-i | add visual patch cable rendering between sources and destinations, or maybe an X |
+| ATM-000632 |  | corpus-site | organ-i | & also add different dark/light themes that are colorful & bring different aesth |
+| ATM-000634 |  | corpus-site | organ-i | add different synthesis types |
+| ATM-000635 |  | corpus-site | organ-i | ensure full synth layout |
+| ATM-000636 |  | corpus-site | organ-i | & do a full ux/ui review & implementation |
+| ATM-000637 |  | corpus-site | organ-i | add the modulation matrix/patchbay back in for the new multi-engine architecture |
+| ATM-000638 |  | corpus-site | UNIVERSAL, organ-i | ensure all features from v1-5 are implemented as well |
+| ATM-000639 |  | corpus-site | UNIVERSAL, organ-i | review all versions 1 through 6, make a checklist of all features, check against |
+| ATM-000650 |  | corpus-site | UNIVERSAL, organ-i | I can create a virtual ecosystem simulation for you. |
+| ATM-000652 |  | corpus-site | UNIVERSAL, organ-i | Here is the plan: I will first set up the basic HTML structure and then add Java |
+| ATM-000653 |  | corpus-site | UNIVERSAL, organ-i | Ecosystem Evolution Simulation with AI ReportsJun 23, 7:12 PM  This simulation i |
+| ATM-000660 |  | corpus-site | organ-i | Let me know if you'd like to add more features, such as new species, more comple |
+| ATM-000672 |  | corpus-site | employment, UNIVERSAL, organ-i | and Sinhala. Characters represent consonant–vowel units rather than isolated let |
+| ATM-000678 |  | corpus-site | organ-i | If you want, I can further collapse this into a design-oriented model showing wh |
+| ATM-000679 |  | corpus-site | UNIVERSAL, organ-i | Below is a collapsed, design-oriented synthesis that treats writing systems as c |
+| ATM-000682 |  | corpus-site | UNIVERSAL, organ-i | weak for ritual, myth, or compressed meaning \| \| Featural Alphabet (Hangul) \| Hi |
+| ATM-000686 |  | corpus-site | UNIVERSAL, organ-i | strong symbolic and political weight beyond pure efficiency \|  Collapsed even fu |
+| ATM-000688 |  | corpus-site | organ-i | you are training your eye, hand, and conceptual range.  Start with scripts that  |
+| ATM-000697 |  | corpus-site | organ-i | Yes. At this level, it is decisively handwriting work.  If you remove handwritin |
+| ATM-000698 |  | corpus-site | organ-i | handwriting is construction. The distinction matters.  Handwriting forces stroke |
+| ATM-000772 |  | corpus-site | UNIVERSAL, organ-i | Add `dev` only when it clearly reduces risk (typically in `$ORG_COMMERCE` and so |
 | ATM-000787 |  | corpus-site | organ-i, organ-ii, organ-iii | Minimal “Start Here” Routing  To prevent the system from being illegible, create |
-| ATM-000823 |  | corpus-site | unscoped | demonstrate what you can build, |
-| ATM-000832 |  | corpus-site | UNIVERSAL | **Naming**: creating the vocabulary that lets teams and systems coordinate. “the |
+| ATM-000823 |  | corpus-site | organ-i | demonstrate what you can build, |
+| ATM-000832 |  | corpus-site | UNIVERSAL, organ-i | **Naming**: creating the vocabulary that lets teams and systems coordinate. “the |
 | ATM-000861 |  | corpus-site | organ-iv, personal, employment | **Changelog**: why decisions were made; what was rejected and why.       That’s  |
-| ATM-000867 |  | corpus-site | UNIVERSAL | margin-right:32px"/>  # review file, check/verify all links |
-| ATM-000868 |  | corpus-site | UNIVERSAL | expand exhaustively, find all available options |
-| ATM-000875 |  | corpus-site | employment, UNIVERSAL | Additionally, a gambling aspect will be implemented, allowing users to bet on be |
-| ATM-000878 |  | corpus-site | unscoped | But what we can do, what we will implement. |
-| ATM-000884 |  | corpus-site | unscoped | So for no contact, what we could do is we could. |
-| ATM-000886 |  | corpus-site | UNIVERSAL | Everyone who is trying to go no contact, will. |
-| ATM-000895 |  | corpus-site | unscoped | And I want to build ou |
+| ATM-000867 |  | corpus-site | UNIVERSAL, organ-i | margin-right:32px"/>  # review file, check/verify all links |
+| ATM-000868 |  | corpus-site | UNIVERSAL, organ-i | expand exhaustively, find all available options |
+| ATM-000875 |  | corpus-site | employment, UNIVERSAL, organ-i | Additionally, a gambling aspect will be implemented, allowing users to bet on be |
+| ATM-000878 |  | corpus-site | organ-i | But what we can do, what we will implement. |
+| ATM-000884 |  | corpus-site | organ-i | So for no contact, what we could do is we could. |
+| ATM-000886 |  | corpus-site | UNIVERSAL, organ-i | Everyone who is trying to go no contact, will. |
+| ATM-000895 |  | corpus-site | organ-i | And I want to build ou |
 | ATM-000898 |  | corpus-site | organ-i, housing | next target is observation-time. - Live run id: `20260314T193233Z` - Readiness s |
 | ATM-000900 |  | corpus-site | organ-i, housing | next target is observation-time. - Live run id: `20260314T193233Z` - Readiness s |
 | ATM-000903 |  | corpus-site | organ-i, UNIVERSAL | # ChatGPT Evaluation Bootstrap  - Provider: chatgpt - Target root: /Users/4jp/Wo |
@@ -266,9 +266,9 @@
 | ATM-001219 | 2025-07-05 | chatgpt | organ-ii, organ-v | Table of Contents  * Prompt:    * Build a design brief.    * Assess logos, patho |
 | ATM-001221 | 2025-07-05 | chatgpt | unscoped | UniqueID orrery-design-brief_20250705 |
 | ATM-001228 | 2025-07-07 | chatgpt | unscoped | Goal: create a collaborative dialogue between AIs |
-| ... | ... | ... | ... | (4258 more) |
+| ... | ... | ... | ... | (4265 more) |
 
-## Governance Rules — 5138 atoms
+## Governance Rules — 5170 atoms
 
 - **ATM-000017** [2026-03-23] IRF, inquiry-log, and testament propagation were performed in the wider system.  ## Architectural Position  The session settled on a constitutional pl...
 - **ATM-000019** [2026-03-23] -  cd /Users/4jp/Workspace/organvm-i-theoria/conversation-corpus-site  codex  ╭─────────────────────────────────────────────╮ │ >_ OpenAI Codex (v0.11...
@@ -370,4 +370,4 @@
 - **ATM-000751** [] it is **required**. The more automated this organ becomes, the more protected the others are. If marketing starts to demand your presence, something h...
 - **ATM-000752** [] Good. The image helps, because it shows that this is not abstract theorizing after the fact—you already instantiated structural differentiation, even...
 - **ATM-000754** [] it acknowledges friction and necessity.  Crucially, this means you already resisted the most common failure mode: pretending commerce is art or preten...
-- ... and 5038 more
+- ... and 5070 more
