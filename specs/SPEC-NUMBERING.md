@@ -32,12 +32,14 @@
 | SPEC-021 | Gravitas Culturalis | L1 | Orbital emergence theory: cultural gravity, three-tier orbit model, eclipse point, contextualization axes |
 | SPEC-022 | Dispersio Formalis | L1 | Seven-state material taxonomy of interaction (INVOKED/IMPLEMENTED/THINNED/MISREPRESENTED/MISHEARD/NOT-ENACTED/LOST), planning as wound/scar, portal-as-prism, Room topology, collision map, portal correction |
 | SPEC-024 | Cyclic Dispatch Protocol | L5 | Four-phase outer loop (RELEASE→CATCH→HANDOFF→FORTIFY), agent dispatch to Copilot/Jules/Actions/Claude/LaunchAgents, satellite entry point, heartbeat daemon, composition layer over dispatch+coordination+atoms+irf |
+| SPEC-025 | Institutional Primitive Vocabulary | L1 | 19 irreducible institutional operations (assessor, guardian, advocate, insulator, appraiser, ledger, optimizer, collector, allocator, negotiator, representative, registrar, liaison, counselor, auditor, archivist, incorporator, enforcer, strategist, mandator), interface contract, execution mode taxonomy, singularity property |
 
 ## Governance Instruments (not numbered, receive full RFIV treatment)
 
 | Instrument | Layer | Description |
 |------------|-------|-------------|
 | Formation Protocol | L3B | 7 formation types, signal classes, prohibited couplings, attenuation |
+| Composition Grammar | L3B | 4 composition operators (CHAIN, PARALLEL, ENVELOPE, FEEDBACK), shared primitive pool, formation crystallization protocol, topological relationships, prohibited compositions |
 | 10-Class Functional Taxonomy | L3B | CHARTER, CORPUS, FRAMEWORK, ENGINE, APPLICATION, INFRASTRUCTURE, ASSURANCE, ARCHIVE, EXPERIMENT, OPERATIONS |
 | Era Model | L3B | Constitutional epochs as first-class registry objects |
 
@@ -45,10 +47,10 @@
 
 | Layer | Name | Specs |
 |-------|------|-------|
-| L1 | Metaphysical Identity | SPEC-000, 001, 002, 018, 019, 021, 022 |
+| L1 | Metaphysical Identity | SPEC-000, 001, 002, 018, 019, 021, 022, 025 |
 | L2 | Constitutional Logic | SPEC-003, 004, 005 |
 | L3A | Structural Architecture | SPEC-006, 007, 008 |
-| L3B | Governance Instruments | SPEC-012, 020, Formation Protocol, Functional Taxonomy, Era Model |
+| L3B | Governance Instruments | SPEC-012, 020, Formation Protocol, Composition Grammar, Functional Taxonomy, Era Model |
 | L4A | Sensing & Observation | Event Spine, Temporal Metrics, Variable Resolution, Heartbeat |
 | L4B | Diagnosis & Meta-Evolution | SPEC-009, 010, 011, AMMOI Reconciliation, Graph Indices |
 | L5 | Swarm Governance | SPEC-013, 014, 015, 016, 017, 024 |
