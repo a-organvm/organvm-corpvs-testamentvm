@@ -1,8 +1,8 @@
 {
-  "next_id": 400,
-  "last_claimed_by": "S-covenant-hygiene-sprint-2026-04-21",
+  "next_id": 405,
+  "last_claimed_by": "S-reputation-velocity-2026-04-21",
   "last_claimed_at": "2026-04-21",
-  "claimed_range": [397, 399],
-  "note": "3 completions: (397) agentic-titan PR #80 CI fix — secret-scan false positive resolved, all 6/6 checks pass; (398) domus XDG symlink gemini dedup — removed from ensure-xdg-symlinks.sh (chezmoi manages via symlink_dot_gemini); (399) corpvs hygiene — fossil-record.jsonl + prompt registry + DONE-ID counter pushed. NOTE: counter was stale at 392; actual max was DONE-396. Prior claim of 392-395 voided (those IDs already allocated by other sessions). DONE-394 collision detected (used by both sovereign-systems and institutional-substrate).",
+  "claimed_range": [400, 404],
+  "note": "5 completions: (400) ORGAN-VII contribution-merged template + pipeline registration; (401) PR status checker script; (402) openai-agents#2802 graceful closure; (403) voidborne-d re-engagement + agentic-titan #81, #82; (404) PR intelligence sweep — 21 PRs verified, 11 bumped, 2 merge-ready identified.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
