@@ -39,6 +39,11 @@ produces:
     description: Context-loaded continuation prompts for resuming paused sessions
     consumers: [ALL]
 
+implements:
+  - concept: system_manifesto
+    zettel_source: "post-flood/specs/SPEC-000/grounding.md"
+    aspect: "The corpus IS the system manifesto — 404K+ words of constitutional documentation, registry, governance rules"
+
 consumes:
   - type: orchestration-artifact
     source: ORGAN-IV
