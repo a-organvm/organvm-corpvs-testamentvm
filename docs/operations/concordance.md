@@ -104,6 +104,7 @@ Universal work registry. 26 domain prefixes:
 | IRF-PSP | Petasum Super Petasum (governance orch.) | ORGAN-IV |
 | IRF-VOX | Voice Governance | ORGAN-IV |
 | IRF-CND | Conductor OS | ORGAN-IV |
+| IRF-ATN | Agentic Titan (swarm architecture) | ORGAN-IV |
 | IRF-PSG | Process Sequence Governance (SPEC-023) | META (post-flood) |
 | IRF-AOR | A-Organism | META (a-organvm) |
 | IRF-SEC | Security (credentials, incidents, billing) | META (custodia-securitatis) |
