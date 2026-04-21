@@ -1201,6 +1201,7 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 |----|------|---------|------|
 | DONE-395 | **Mole optimize fix + ~/Library/ deep clean — 37 GB reclaimed.** (1) Patched `opt_periodic_maintenance()` in `~/.config/mole/lib/optimize/tasks.sh` — Apple removed `periodic` binary from macOS Tahoe; added `command -v periodic` guard with direct `newsyslog`/`locate.updatedb`/`makewhatis` fallback. (2) Full `~/Library/` audit: 82 GB → 46 GB. Removed: Android SDK (15G, app uninstalled), Docker installer (2.3G, uninstalled), Edge (460M, uninstalled), Unity Hub (331M, uninstalled), OneDrive data (1.6G, uninstalled), Messages tmp (17G cache), iCloud conflict copies (8.1G from known sync bug), CloudKit cache (1G), CoreSimulator (1.1G). (3) GeminiAppLauncher login item investigated — false positive in Mole's SMAppService heuristic. 3 new IRF items: DOM-042 (mole persistence vacuum), DOM-043 (periodic fix tracking), DOM-044 (orphan accumulation). **VACUUM:** mole config is local-only, not tracked by chezmoi or git. | S-mole-optimize-2026-04-18 | 2026-04-18 |
 | DONE-394 | **sovereign-systems: 5-PR corrective sequence MERGED (#44-#48).** Homepage spiral hero, water mini version, quiz routing, 13-node golden-angle spiral, client walkthrough v3. 29 pages, 13 nodes. GH#43 CLOSED. IRF-III-029/030/031 resolved. | S-sovereign-systems-2026-04-19 | 2026-04-19 |
+| DONE-394 | **Institutional Substrate Phase 0 — full implementation.** 6 primitives (assessor PRIM-INST-001, guardian 002, ledger 006, counselor 014, archivist 016, mandator 020) + composition engine (4 operators: chain/parallel/envelope/feedback) + prohibition validation (COMP-013: 5 rules) + AEGIS formation (FORM-INST-001: guardian→[assessor(legal)‖assessor(financial)]→counselor→mandator). CLI: `organvm primitive list/inspect/invoke/guardian/ledger`, `organvm formation list/show/invoke`. 6 new EventType members in spine.py. 3 new packages (`primitives/`, `composition/`, `formations/`), 2 CLI modules, 12 test files, 56 tests passing, lint clean. Rule-based Phase 0 (no LLM); singularity at compositional coverage. Commits: `c26fdf3`–`66c5a4d` (9 commits). Plan: `organvm-engine/.claude/plans/2026-04-21-institutional-substrate-phase-0.md`. Repo: `meta-organvm/organvm-engine`. | S-institutional-substrate-phase-0 | 2026-04-21 |
 | DONE-393 | **sovereign-systems: Content genome processing — 8 issues resolved.** Merge pass (1,022 groups, GH#24), editorial review (104 flagged atoms, GH#16), research thread mapping (8 threads, GH#32), branch enrichment (50 atoms, GH#27), product extraction (4 products 93K chars, GH#31), N/A routing (GH#22), social calendar (GH#26), semantic clustering (GH#28). | S-sovereign-systems-2026-04-19 | 2026-04-19 |
 | DONE-392 | **sovereign-systems: Logos documentation layer created.** 5 tetradic files at `docs/logos/` (telos, pragma, praxis, receptio, alchemical-io). seed.yaml pragma/praxis updated. GH#37 CLOSED. | S-sovereign-systems-2026-04-19 | 2026-04-19 |
 | DONE-391 | **sovereign-systems: EWG API + Hydration Node confirmed operational.** `functions/api/water-report.ts` — ZIP-based EWG API with HTML parsing, KV cache, demo fallback. HydrationNode.astro — 497 lines, 6-step funnel. GH#23 + GH#29 CLOSED. | S-sovereign-systems-2026-04-19 | 2026-04-19 |
@@ -1616,11 +1617,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-20 (S-sovereign-systems-maddie-questionnaire). +1 completion: DONE-390 (IRF-III-018 editorial triage — 104 atoms dispositioned, GH#25 closed). +1 new item: IRF-III-032 (client architectural feedback questionnaire — spiral-first vs pillar-first). Prior: S-cross-audit-atomization-2026-04-18 (DONE-388, DONE-389).
+Refreshed 2026-04-21 (S-institutional-substrate-phase-0). +1 completion: DONE-394 (Institutional Substrate Phase 0 — 6 primitives, composition engine, AEGIS formation in organvm-engine). +5 new items: IRF-INST-024 (Phase 1 follow-up), IRF-INST-025 (routing law gap), IRF-INST-026 (concordance IDs), IRF-INST-027 (seed.yaml edges), IRF-INST-028 (event tier mapping). Prior: S-sovereign-systems-maddie-questionnaire (DONE-390).
 
-- **Total IRF items:** 913 *(prior 912, +1: III-032 client architectural questionnaire)*
-- **Open:** 529 *(prior 529, -1 completed + 1 new)*
-- **Completed:** 390 *(prior 389, +1: DONE-390 IRF-III-018)*
+- **Total IRF items:** 918 *(prior 913, +5: INST-024..028)*
+- **Open:** 533 *(prior 529, +5 new, -1 completed)*
+- **Completed:** 391 *(prior 390, +1: DONE-394)*
 - **Blocked:** 0
 - **Archived:** 0
 - **Completion rate:** 42.0%
@@ -1630,9 +1631,9 @@ Refreshed 2026-04-20 (S-sovereign-systems-maddie-questionnaire). +1 completion: 
 | Priority | Count |
 |----------|-------|
 | P0 | 10 |
-| P1 | 189 *(prior 188, +1: DOM-031)* |
-| P2 | 224 *(prior 223, +1: PRT-026)* |
-| P3 | 40 |
+| P1 | 190 *(prior 189, +1: INST-024)* |
+| P2 | 227 *(prior 224, +3: INST-025..027)* |
+| P3 | 41 *(prior 40, +1: INST-028)* |
 
 ### By Domain
 
@@ -1651,7 +1652,7 @@ Refreshed 2026-04-20 (S-sovereign-systems-maddie-questionnaire). +1 completion: 
 | VOX | 12 |
 | MON | 9 |
 | HRM | 10 |
-| INST | 23 |
+| INST | 28 *(prior 23, +5: INST-024..028)* |
 | AOR | 17 |
 | SGO | 7 |
 | CND | 12 |
@@ -1741,6 +1742,11 @@ Refreshed 2026-04-20 (S-sovereign-systems-maddie-questionnaire). +1 completion: 
 | IRF-INST-021 | P2 | **Institutional inquiry-log missing.** `praxis-perpetua/commissions/inquiry-log.yaml` tracks SGO research commissions (INQ-YYYY-NNN). No equivalent exists for institutional strategy inquiries — funder assessments, entity formation research, IP policy decisions. Each is a systematic inquiry with a question, method, and answer. Design: extend inquiry-log.yaml with an `institutional` faculty, or create `aerarium--res-publica/inquiry-log.yaml` as a parallel instrument. Log S-CC-review ("Does CC fund what we make?") as first entry. | Agent | S-CC-review vacuum (inquiry-log N/A) | Design decision: extend vs parallel |
 | IRF-INST-022 | P2 | **Concordance session ID namespace.** The concordance (`concordance.md`) had no namespace for named session IDs (`S-*` pattern: S-CC-review, S-client-pillar, S-signal-closure, S-vox-build-2). Pattern added to ID cheat sheet (S-CC-review). But no registry of which sessions exist, what they produced, or their lifecycle. The IRF DONE entries reference session IDs but there's no reverse lookup. Research: should session IDs get their own concordance section? Or is the IRF DONE table sufficient? | Agent | S-CC-review vacuum (concordance N/A) | Design decision |
 | IRF-INST-023 | P3 | **GitHub issue parity for all IRF-INST items.** aerarium--res-publica has 5 GitHub issues (GH#1-4 from S38, GH#5 from S-CC-review). 23 IRF-INST items exist. 18 have no corresponding GitHub issue. Not all need one (some are sub-items), but every P0-P1 should have tracking. Audit and create missing issues. | Agent | S-CC-review vacuum (GitHub Issues N/A) | None |
+| IRF-INST-024 | **P1** | **Institutional Substrate Phase 1 — LLM-powered primitives + remaining 13 primitives.** Phase 0 delivered rule-based pattern matching for 6 primitives. Phase 1: (a) integrate LLM reasoning into assessor/counselor for richer analysis, (b) implement 13 remaining primitives (advocate, insulator, appraiser, optimizer, collector, allocator, negotiator, representative, registrar, liaison, auditor, incorporator, enforcer, strategist), (c) build OIKONOMIA, PRAXIS, TESSERA formations. Spec: SPEC-025 §5-8. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | Phase 0 complete (DONE-394) |
+| IRF-INST-025 | **P2** | **Routing law gap — `function: guard` has no routing rule.** routing-law.yaml defines `guard` as a valid function value but no rule matches it. Institutional primitives like guardian fall through to default catch-all (~/Workspace/intake/). Need: add routing rule for `function: guard` → `organvm-engine`. Separate PR from Phase 0. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
+| IRF-INST-026 | **P2** | **Concordance: PRIM-INST-001–006, FORM-INST-001, COMP-* IDs unregistered.** Phase 0 introduced 6 primitive IDs (PRIM-INST-001, 002, 006, 014, 016, 020), 1 formation ID (FORM-INST-001), and 4 composition operator types. None registered in `docs/operations/concordance.md`. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
+| IRF-INST-027 | **P2** | **seed.yaml missing produces edges for institutional-primitives and composition-engine.** organvm-engine seed.yaml has 15 produces entries but none for the institutional substrate. Need 2 entries: `institutional-primitives` and `composition-engine` with META-ORGANVM consumers. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
+| IRF-INST-028 | **P3** | **EventType tier mapping missing for 6 institutional event types.** `events/spine.py` has 6 new members (PRIMITIVE_INVOKED, PRIMITIVE_ESCALATED, FORMATION_INVOKED, FORMATION_COMPLETED, GUARDIAN_ALERT, DIRECTIVE_ISSUED) but `ledger/tiers.py` TIER_MAP not updated. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
 
 ### S47 Discovered Items (Second Embodiment Session, 2026-03-31)
 
