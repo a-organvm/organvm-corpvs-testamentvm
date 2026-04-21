@@ -1,0 +1,13 @@
+{
+  "_comment": "Post-consolidation topology — all organs map to single 'organvm' directory, GitHub org 'a-organvm'. 2026-04-21.",
+  "I": {"dir": "organvm", "registry_key": "ORGAN-I", "org": "a-organvm", "label": "theoria"},
+  "II": {"dir": "organvm", "registry_key": "ORGAN-II", "org": "a-organvm", "label": "poiesis"},
+  "III": {"dir": "organvm", "registry_key": "ORGAN-III", "org": "a-organvm", "label": "ergon"},
+  "IV": {"dir": "organvm", "registry_key": "ORGAN-IV", "org": "a-organvm", "label": "taxis"},
+  "V": {"dir": "organvm", "registry_key": "ORGAN-V", "org": "a-organvm", "label": "logos"},
+  "VI": {"dir": "organvm", "registry_key": "ORGAN-VI", "org": "a-organvm", "label": "koinonia"},
+  "VII": {"dir": "organvm", "registry_key": "ORGAN-VII", "org": "a-organvm", "label": "kerygma"},
+  "META": {"dir": "organvm", "registry_key": "META-ORGANVM", "org": "a-organvm", "label": "meta"},
+  "SIGMA_E": {"dir": "4444J99", "registry_key": "SIGMA-E", "org": "4444j99", "label": "sigma"},
+  "LIMINAL": {"dir": "4444J99", "registry_key": "PERSONAL", "org": "4444j99", "label": "liminal"}
+}
