@@ -3329,3 +3329,33 @@
 **Captured:** 2026-04-21T10:39:58 | **Prompts:** 6
 **Archive:** `data/prompt-registry/sessions/2026-04-21--resilient-drifting-lighthouse-prompts.md`
 
+
+### 2026-04-21--fluttering-gliding-liskov
+**Captured:** 2026-04-21T16:55:12 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/2026-04-21--fluttering-gliding-liskov-prompts.md`
+
+
+### 2026-04-21--fluttering-gliding-liskov
+**Captured:** 2026-04-21T17:08:26 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/2026-04-21--fluttering-gliding-liskov-prompts.md`
+
+
+### 2026-04-21--quirky-dreaming-snail
+**Captured:** 2026-04-21T17:15:03 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/2026-04-21--quirky-dreaming-snail-prompts.md`
+
+
+### 2026-04-21--quirky-dreaming-snail
+**Captured:** 2026-04-21T17:16:44 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/2026-04-21--quirky-dreaming-snail-prompts.md`
+
+
+### 2026-04-21--quirky-dreaming-snail
+**Captured:** 2026-04-21T17:24:03 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/2026-04-21--quirky-dreaming-snail-prompts.md`
+
+
+### 2026-04-21--quirky-dreaming-snail
+**Captured:** 2026-04-21T17:32:31 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/2026-04-21--quirky-dreaming-snail-prompts.md`
+
