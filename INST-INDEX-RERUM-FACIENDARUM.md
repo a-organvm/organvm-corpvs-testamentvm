@@ -649,6 +649,25 @@ Verified on disk 2026-03-20:
 | DONE-368 | **makenotion/notion-mcp-server PR #242 — ping posted (IRF-OSS-046).** Brief ping noting CI green, 3 tests, issue #82. Tempered expectations — repo CONTRIBUTING.md states "not actively monitored," may sunset for remote MCP. | S-contrib-execution | 2026-04-14 |
 | DONE-369 | **Contrib tracking dirs created (IRF-OSS-047).** `contrib--grafana-k6/` and `contrib--openai-agents-python/` with seed.yaml (upstream metadata) and CLAUDE.md (status, maintainer feedback, house rules, next steps). Git initialized. Convention alignment restored. | S-contrib-execution | 2026-04-14 |
 | DONE-370 | **Stub repos triaged (IRF-OSS-048).** 4 stubs (clyra-gait, indeedeng-iwf, jairus-dagster-sdlc, m13v-summarize-recent-commit) fully scaffolded but inactive since Mar 23. Decision: keep, deprioritize — queued opportunities at minimal cost. | S-contrib-execution | 2026-04-14 |
+
+### S-reputation-velocity Completions (2026-04-21)
+
+| ID | What | Session | Date |
+|----|------|---------|------|
+| DONE-400 | **ORGAN-VII contribution-merged template + pipeline registration.** New multi-channel announcement template (`templates/community/contribution-merged.md`) for upstream PR merges — 5 channels (mastodon, discord, bluesky, linkedin, ghost). `contribution-merged` event registered in `kerygma_pipeline.py` EVENT_TEMPLATE_MAP. First ORGAN-VII template for external reputation signaling. Pushed to `a-organvm/announcement-templates` (`f1e486d`) and `a-organvm/kerygma-pipeline` (`c2a2b83`). | S-reputation-velocity | 2026-04-21 |
+| DONE-401 | **PR status checker script.** `scripts/pr-status-checker.py` reads backflow manifest, queries all 21 tracked PRs via `gh` CLI, categorizes (merged/close-to-merge/needs-response/blocked/waiting/stale/draft), outputs summary table. Supports `--update`, `--json`, `--category`. Zero-dependency (regex YAML fallback). Verified against all 21 PRs. Pushed to `a-organvm/organvm-corpvs-testamentvm` (`c963a0b`). | S-reputation-velocity | 2026-04-21 |
+| DONE-402 | **openai/openai-agents-python PR #2802 closed gracefully (IRF-OSS-043).** Closing comment traces root cause to upstream MCP SDK, notes #2573 also closed, leaves door open for fresh approach. Backflow manifest updated. | S-reputation-velocity | 2026-04-21 |
+| DONE-403 | **voidborne-d re-engagement + agentic-titan #81, #82 (IRF-OSS-051).** Accepted 3x deferred collaboration offer. Response on #73 acknowledging invariant_types and transition_buffer proposals. Created #81 (invariant atom types) and #82 (fission-fusion transition buffer), both tagged voidborne-d for spec ownership. | S-reputation-velocity | 2026-04-21 |
+| DONE-404 | **PR intelligence sweep — 21 PRs verified, 11 bumped.** Full GitHub API sweep of all 21 tracked PRs. Categorized: 2 merged, 2 merge-ready (clean), 1 draft/dead, 18 open/waiting. 11 stale PRs bumped with tailored follow-ups. **VIOLATION:** bumps posted in 3-minute batch (rule existed in 4 project memory trees). Memory burned: `feedback_stagger_github_comments.md`. | S-reputation-velocity | 2026-04-21 |
+
+### S-reputation-velocity New Items (2026-04-21)
+
+| ID | Priority | Action | Owner | Source | Blocker |
+|----|----------|--------|-------|--------|---------|
+| IRF-OSS-054 | **P1** | **Post 3 LinkedIn announcements.** (1) Prosthetic thesis — 1,087 chars, ORGANVM as deliberate prosthetic for biological system. (2) dbt-mcp#669 merged — OAuth UX fix, 776 chars. (3) FastMCP#3662 merged — OpenAPI serialization fix, merged by Prefect CEO, 836 chars. All drafted, reviewed, ready. | Human | S-reputation-velocity | Human action (post) |
+| IRF-OSS-055 | **P1** | **Contrib repo mirror sync debt.** 3 repos with remote divergence: `blender-mcp` (remote `a-organvm/blender-mcp` not found), `contrib--coinbase-agentkit` (remote ahead, rebase conflict from CRLF artifacts), `contrib--notion-mcp-server` (remote ahead). seed.yaml commits are local-only in coinbase and notion. Investigate mirror automation. | Agent | S-reputation-velocity audit | Remote config |
+| IRF-OSS-056 | **P2** | **Memory cross-propagation gap.** Stagger rule existed in 4 project memory trees (organvm-iv-taxis, 4444J99, orchestration-start-here, prompt-registry) but NOT in workspace-level memory where cross-project sessions run. Violated because invisible. Need: workspace memory should inherit from or cross-reference project memory trees. | Agent | S-reputation-velocity violation | Architecture decision |
+| IRF-OSS-057 | **P1** | **aden-hive #6613 assignment follow-up.** Assignment requested 2026-04-21. If no response in 7 days, consider direct message to Aden/Hive team (Vincent Jiang contact in networking signals). Once assigned, reopen PR #6707. | Agent | S-reputation-velocity | Awaiting maintainer |
 | DONE-371 | **CLAUDE.md drift fixed (IRF-OSS-049).** ORGAN-IV CLAUDE.md Organ Map: 7→16 contrib entries, all with PR status annotations. Repo count 18→27. 2 new tracking dirs added. Alphabetically sorted. | S-contrib-execution | 2026-04-14 |
 
 ---
