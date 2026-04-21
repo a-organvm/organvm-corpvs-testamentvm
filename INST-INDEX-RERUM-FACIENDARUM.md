@@ -124,6 +124,7 @@ The counter file is the single source of truth for the DONE-ID ceiling. The stat
 | IRF-SYS-122 | **P3** | **VACUUM: Companion Indices — prompt registry is proto-Index Rerum, continuation prompts are proto-Index Locorum.** prompt-atoms.json (31,649 entries with IDs, types, universes, statuses) is structurally identical to what IRF-IDX-003 (Index Rerum) should be. SESSION-CONTINUATION-PROMPTS.md (11 sessions with directory paths, pending items) is structurally identical to what IRF-IDX-001 (Index Locorum) should be. Acknowledge as partial implementations, not separate systems. | Agent | S-cross-audit N/A vacuum audit | IRF-IDX-001, IRF-IDX-003 |
 | IRF-SYS-123 | **P2** | **VACUUM: a-organvm dissolution has no SGO inquiry commission.** The most significant active research in the system — 3 functions (skeletal, circulatory, cultvra), 91 tests, 4 proven laws, 15 biological mechanisms, cocoon-map (16K lines), signal graph with feedback loop — has no INQ-ID tracking its advancement through the research apparatus. Formal methodology exists (gate contracts, signal types, axiom derivation). Should be INQ-2026-013 or similar. Evidence: signal-propagation-proof (2026-04-19), NATURAL-LAW-DECISION files (5), RELAY.md at S58. | Agent | S-phase-transition-2026-04-19 N/A vacuum audit | INQ-2026-006 (formalization) |
 | IRF-SYS-124 | **P3** | **VACUUM: orchestration-start-here CI description incomplete.** ORGAN-IV superproject CLAUDE.md CI section lists "CI + dependency validation + monthly audit + promotion recommender + registry health audit" for orchestration-start-here but omits governance-enforcement.yml (added 2026-04-19). Auto-generated sections need regeneration, or hand-written section needs update. | Agent | S-phase-transition-2026-04-19 N/A vacuum audit | None |
+| IRF-SYS-125 | **P1** | **DONE-394 collision — 4th DONE-ID collision incident.** DONE-394 assigned to both sovereign-systems (5-PR corrective sequence, 2026-04-19) AND Institutional Substrate Phase 0 (6 primitives, 2026-04-21). Counter file was stale at `next_id: 392` when actual max was DONE-396. Neither session followed the claim-before-use protocol. Counter has been corrected to `next_id: 400`. **Remediation:** either reassign one entry to a new DONE-ID, or accept as historical duplicate with disambiguation note. Consider: automated counter validation hook (pre-commit check that counter `next_id` > max DONE-NNN in IRF). | Agent | S-covenant-hygiene-sprint-2026-04-21 | None |
 | IRF-SYS-116 | **P2** | **Soak pipeline zeros global metrics variables — code_files=0, test_files=0, etc.** **ADVANCED (Session F, 2026-04-16).** Root cause found: `organvm metrics calculate` in the soak auto-run lacks workspace context, producing zeros. Manual run with workspace: 31,199 code files, 6,229 test files, 61 repos with tests, 795K words. **Remaining:** fix soak pipeline to pass `ORGANVM_WORKSPACE_DIR` or `--workspace` flag so auto-run doesn't overwrite good data. Timing collision confirmed (soak at `2026-04-16T07:26Z` overwrote correct values). | Agent | S-2026-04-14 audit, Session-F 2026-04-16 | None |
 | IRF-SYS-008 | P2 | ESLint 9→10 migration — blocked on eslint-plugin-react support. Monitor `eslint-plugin-react` releases for v8+ with ESLint 10 compatibility | Agent | S26 | eslint-plugin-react@7.37.5 incompatible |
 | IRF-SYS-009 | **P0** | Gmail notification hygiene — filter designed in S36: `from:notifications@github.com ("dependabot[bot]" OR "github-actions[bot]")` → Skip Inbox, Apply label `github/bots`, Mark as Read. **HUMAN ACTION NEEDED:** (1) Create Gmail filter, (2) GitHub Settings > Notifications > uncheck "Automatically watch repositories", (3) Set org routing to web-only. All GitHub notification threads marked read via API in S36. | Human | S26, S36 | Human action: 2 min at github.com/settings/notifications + Gmail |
@@ -558,6 +559,7 @@ Verified on disk 2026-03-20:
 | IRF-ATN-007 | P3 | **Unused imports** — `hashlib` and `json` imported but never used in `local_trainer.py` (lines 16-17). Dead code. | Agent | Session audit (2026-04-21) | None |
 | IRF-ATN-008 | P3 | **Pyright type error on `max(cases, key=cases.get)`** — line 210 of `local_trainer.py`. Dict `.get` method signature doesn't satisfy `max` key param type. Functional but type-unsafe. | Agent | Session audit (2026-04-21) | None |
 | IRF-ATN-009 | P3 | **`min_file_size` and `max_file_size` config fields unused** — declared in `TrainingConfig` (lines 120-121) but never checked in `analyze_file()` or `train()`. Specified but unwired. | Agent | Session audit (2026-04-21) | None |
+| IRF-ATN-010 | **P1** | **PR #80 fully green — merge decision needed.** `fix/local-trainer-path-matching-and-type-annotations` has 6/6 CI checks passing (test 3.11, 3.12, CodeQL, analyze, secret-scan, release-drafter). Contains: path matching bug fix (`"test" in str(filepath)` → `"test" in filepath.name`), type_annotations wiring, and CI secret-scan exclusion for test dirs. Ready for merge or review. | Agent | S-covenant-hygiene-sprint-2026-04-21 | None — human review |
 
 ---
 
@@ -901,6 +903,7 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-DOM-042 | **P1** | **VACUUM: `~/.config/mole/` not tracked by chezmoi or git.** Mole is a 1000-line shell tool + config at `~/.config/mole/` (lib/, bin/, whitelist, purge_paths). Local-only — no git repo, not chezmoi-managed. Machine death = total loss of tool config + local patches. Fix: either `chezmoi add ~/.config/mole/` or fork to a tracked git repo. Currently contains a Tahoe-specific patch to `opt_periodic_maintenance()` that replaces the removed `periodic` command with direct `newsyslog`/`locate.updatedb`/`makewhatis` calls. | Agent | S-mole-optimize-2026-04-18 | None |
 | IRF-DOM-043 | **P1** | **Mole `opt_periodic_maintenance()` broken on macOS Tahoe (26.x).** Apple removed the `periodic` binary entirely from Tahoe. Mole calls `sudo periodic daily weekly monthly` unconditionally, producing a permanent `◎ Failed to run periodic maintenance` warning on every Optimize run. Patched locally (2026-04-18): added `command -v periodic` guard — if missing, runs `newsyslog` + `locate.updatedb` + `makewhatis` directly. Patch is LOCAL ONLY (see IRF-DOM-042). Upstream issue warranted if `tw93/mole` is maintained. | Agent | S-mole-optimize-2026-04-18 | IRF-DOM-042 |
 | IRF-DOM-044 | **P2** | **`~/Library/` orphan accumulation — no automated detection.** Dead app leftovers silently accumulated 18.7 GB (Android SDK 15G, Docker installer 2.3G, Edge 460M, Unity 331M, OneDrive 1.6G) from apps uninstalled months ago. Plus 17 GB Messages tmp cache, 8.1 GB iCloud conflict copies. 37 GB total reclaimed 2026-04-18. Mole's "App leftovers" check missed most of these. Consider: periodic `~/Library/Application Support/` audit against installed apps, or enhance Mole's orphan detection to cross-reference `/Applications/`. | Agent | S-mole-optimize-2026-04-18 | None |
+| IRF-DOM-045 | **P2** | **VACUUM: Domus task queue snapshot stale — 71 items, at least 4/5 visible already completed.** CLAUDE.md task queue (from `organvm atoms pipeline`) lists 71 pending tasks but `tmux.conf` paths, `npmrc` prefix, `15-env.zsh` env vars, and `_agents/` deletion are all already done. Pipeline needs re-run (`organvm atoms pipeline --write && organvm atoms fanout --write`) to reconcile. The "remove 16 entries from `apps=()`" task lacks its source plan to identify which 16 — only `gemini` was safely removable (DONE-398). Remaining entries serve active apps with data. | Agent | S-covenant-hygiene-sprint-2026-04-21 N/A vacuum audit | Pipeline re-run |
 
 ---
 
@@ -1197,6 +1200,9 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 ## Completed (from 22-session cataloguing, 2026-03-20)
 
 | ID | What | Session | Date |
+| DONE-399 | **Corpvs hygiene — fossil-record.jsonl + prompt registry + DONE-ID counter pushed.** 3 Nothing Local Only violations in organvm-corpvs-testamentvm resolved: (1) fossil-record.jsonl 2-line diff (witnessed commit entries), (2) 2 session prompt registry captures (fluttering-gliding-liskov, quirky-dreaming-snail), (3) DONE-ID counter reclaimed from stale 392 to correct 397. **VACUUM discovered:** counter was at 392 but DONE-392..396 already allocated by other sessions — 4th collision incident. | S-covenant-hygiene-sprint-2026-04-21 | 2026-04-21 |
+| DONE-398 | **Domus XDG symlink gemini dedup.** Removed `gemini` from `ensure-xdg-symlinks.sh.tmpl` `apps=()` array — redundant with chezmoi's declarative `symlink_dot_gemini`. Pushed to `4444J99/domus-semper-palingenesis` origin/master. | S-covenant-hygiene-sprint-2026-04-21 | 2026-04-21 |
+| DONE-397 | **Agentic-titan PR #80 CI fix — secret-scan false positive resolved.** `secret-scan.yml` `git grep` matched mock API keys in test fixtures (`.ci/allow_secret_baseline.txt`, `tests/integration/test_safety_integration.py`, `tests/prompts/bank.py`). Fix: added `:!tests :!.ci` path exclusions. ALL 6/6 checks now pass (Secret Pattern Detection, CodeQL, analyze, test 3.11, test 3.12, update_release_draft). Commit `d6203b6` on `fix/local-trainer-path-matching-and-type-annotations`. PR ready to merge. | S-covenant-hygiene-sprint-2026-04-21 | 2026-04-21 |
 | DONE-396 | **Phase Transition Sprint — system shifts from manual governance to self-governing.** (1) Signal graph IGNITION: `test_signal_propagation.py` — 9 integration tests proving skeletal→circulatory→cultvra signal chain + QUERY feedback loop. 91/91 a-organvm tests pass. Products section populated. (2) Governance enforcement CI: `governance-enforcement.yml` — validates Articles I + VI on every registry push (promotion FSM, schema completeness, tier enum, count consistency). (3) σ_E registry integration: system-system--system in registry-v2.json as PERSONAL/sovereign (closes IRF-SYS-064, IRF-SYS-066). (4) Agentic-titan triage round 2: 30→15 open issues (16 closed, 6 labeled research). All committed + pushed. | S-phase-transition-2026-04-19 | 2026-04-19 |
 |----|------|---------|------|
 | DONE-395 | **Mole optimize fix + ~/Library/ deep clean — 37 GB reclaimed.** (1) Patched `opt_periodic_maintenance()` in `~/.config/mole/lib/optimize/tasks.sh` — Apple removed `periodic` binary from macOS Tahoe; added `command -v periodic` guard with direct `newsyslog`/`locate.updatedb`/`makewhatis` fallback. (2) Full `~/Library/` audit: 82 GB → 46 GB. Removed: Android SDK (15G, app uninstalled), Docker installer (2.3G, uninstalled), Edge (460M, uninstalled), Unity Hub (331M, uninstalled), OneDrive data (1.6G, uninstalled), Messages tmp (17G cache), iCloud conflict copies (8.1G from known sync bug), CloudKit cache (1G), CoreSimulator (1.1G). (3) GeminiAppLauncher login item investigated — false positive in Mole's SMAppService heuristic. 3 new IRF items: DOM-042 (mole persistence vacuum), DOM-043 (periodic fix tracking), DOM-044 (orphan accumulation). **VACUUM:** mole config is local-only, not tracked by chezmoi or git. | S-mole-optimize-2026-04-18 | 2026-04-18 |
@@ -1617,23 +1623,23 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-21 (S-institutional-substrate-phase-0). +1 completion: DONE-394 (Institutional Substrate Phase 0 — 6 primitives, composition engine, AEGIS formation in organvm-engine). +5 new items: IRF-INST-024 (Phase 1 follow-up), IRF-INST-025 (routing law gap), IRF-INST-026 (concordance IDs), IRF-INST-027 (seed.yaml edges), IRF-INST-028 (event tier mapping). Prior: S-sovereign-systems-maddie-questionnaire (DONE-390).
+Refreshed 2026-04-21 (S-covenant-hygiene-sprint-2026-04-21). +3 completions: DONE-397 (PR #80 CI fix), DONE-398 (domus XDG gemini dedup), DONE-399 (corpvs hygiene). +4 new items: IRF-ATN-010 (PR #80 merge decision), IRF-DOM-045 (domus task queue stale), IRF-SYS-125 (DONE-394 collision), IRF-INST-029 (graph.py duplicate method). Prior: S-institutional-substrate-phase-0 (DONE-394).
 
-- **Total IRF items:** 918 *(prior 913, +5: INST-024..028)*
-- **Open:** 533 *(prior 529, +5 new, -1 completed)*
-- **Completed:** 391 *(prior 390, +1: DONE-394)*
+- **Total IRF items:** 922 *(prior 918, +4: ATN-010, DOM-045, SYS-125, INST-029)*
+- **Open:** 534 *(prior 533, +4 new, -3 completed)*
+- **Completed:** 394 *(prior 391, +3: DONE-397..399)*
 - **Blocked:** 0
 - **Archived:** 0
-- **Completion rate:** 42.0%
+- **Completion rate:** 42.7%
 
 ### Open By Priority
 
 | Priority | Count |
 |----------|-------|
 | P0 | 10 |
-| P1 | 190 *(prior 189, +1: INST-024)* |
-| P2 | 227 *(prior 224, +3: INST-025..027)* |
-| P3 | 41 *(prior 40, +1: INST-028)* |
+| P1 | 192 *(prior 190, +2: ATN-010, SYS-125)* |
+| P2 | 229 *(prior 227, +2: DOM-045, INST-029)* |
+| P3 | 41 |
 
 ### By Domain
 
@@ -1747,6 +1753,7 @@ Refreshed 2026-04-21 (S-institutional-substrate-phase-0). +1 completion: DONE-39
 | IRF-INST-026 | **P2** | **Concordance: PRIM-INST-001–006, FORM-INST-001, COMP-* IDs unregistered.** Phase 0 introduced 6 primitive IDs (PRIM-INST-001, 002, 006, 014, 016, 020), 1 formation ID (FORM-INST-001), and 4 composition operator types. None registered in `docs/operations/concordance.md`. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
 | IRF-INST-027 | **P2** | **seed.yaml missing produces edges for institutional-primitives and composition-engine.** organvm-engine seed.yaml has 15 produces entries but none for the institutional substrate. Need 2 entries: `institutional-primitives` and `composition-engine` with META-ORGANVM consumers. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
 | IRF-INST-028 | **P3** | **EventType tier mapping missing for 6 institutional event types.** `events/spine.py` has 6 new members (PRIMITIVE_INVOKED, PRIMITIVE_ESCALATED, FORMATION_INVOKED, FORMATION_COMPLETED, GUARDIAN_ALERT, DIRECTIVE_ISSUED) but `ledger/tiers.py` TIER_MAP not updated. | Agent | S-institutional-substrate-phase-0 (2026-04-21) | None |
+| IRF-INST-029 | **P2** | **`composition/graph.py` duplicate `node_by_id` method.** Lines 50-53 define `node_by_id` with a logic bug (returns first node on first iteration regardless of match); lines 55-59 redefine it correctly. Python shadows the first with the second, so behavior is correct, but the duplicate is dead code. ruff `PL` rules should catch this (`PLR0124` or similar). | Agent | S-covenant-hygiene-sprint-2026-04-21 code review | None |
 
 ### S47 Discovered Items (Second Embodiment Session, 2026-03-31)
 
