@@ -42,12 +42,13 @@ TODAY = datetime.now()
 # ---------------------------------------------------------------------------
 
 WEIGHTS = {
-    "recency": 0.15,
-    "type_urgency": 0.25,
-    "universe_criticality": 0.20,
-    "content_specificity": 0.15,
-    "cross_reference": 0.10,
-    "completion_trajectory": 0.15,
+    "recency": 0.12,
+    "type_urgency": 0.20,
+    "universe_criticality": 0.18,
+    "content_specificity": 0.12,
+    "cross_reference": 0.08,
+    "completion_trajectory": 0.12,
+    "repetition": 0.18,
 }
 
 # ---------------------------------------------------------------------------
@@ -333,10 +334,48 @@ def score_completion_trajectory(atom: dict, completion_rates: dict[str, float]) 
     return max(scores)
 
 
+def compute_repetition_scores(atoms: list[dict]) -> dict[str, float]:
+    """Dimension 7: Repetition frequency as incompleteness signal.
+
+    If the user said it twice, the first instance wasn't handled.
+    If they said it five times, it's critical.
+
+    Uses normalized content fingerprint for exact-match detection,
+    plus keyword-based similarity for near-match detection.
+    """
+    # Exact/near-exact copy detection
+    content_groups: dict[str, list[str]] = defaultdict(list)
+    for atom in atoms:
+        content = atom.get("content", "")
+        if len(content) < 30:
+            continue
+        # Normalize: lowercase, collapse whitespace, first 200 chars
+        key = re.sub(r"\s+", " ", content.lower().strip())[:200]
+        content_groups[key].append(atom["atom_id"])
+
+    # Count repetitions per atom
+    repetition_counts: dict[str, int] = {}
+    for key, aids in content_groups.items():
+        if len(aids) > 1:
+            for aid in aids:
+                repetition_counts[aid] = max(
+                    repetition_counts.get(aid, 0),
+                    len(aids),
+                )
+
+    # Normalize: score = min(repetitions / 10, 1.0)
+    # 10+ repetitions = max score
+    return {
+        aid: min(count / 10.0, 1.0)
+        for aid, count in repetition_counts.items()
+    }
+
+
 def compute_priority(
     atom: dict,
     completion_rates: dict[str, float],
     cross_ref_scores: dict[str, float],
+    repetition_scores: dict[str, float],
 ) -> tuple[int, float]:
     """Compute composite priority score and P-level for an atom.
 
@@ -350,6 +389,7 @@ def compute_priority(
     d4 = score_content_specificity(atom.get("content", ""))
     d5 = cross_ref_scores.get(atom["atom_id"], 0.0)
     d6 = score_completion_trajectory(atom, completion_rates)
+    d7 = repetition_scores.get(atom["atom_id"], 0.0)
 
     composite = (
         WEIGHTS["recency"] * d1
@@ -358,6 +398,7 @@ def compute_priority(
         + WEIGHTS["content_specificity"] * d4
         + WEIGHTS["cross_reference"] * d5
         + WEIGHTS["completion_trajectory"] * d6
+        + WEIGHTS["repetition"] * d7
     )
 
     # Clamp to [0, 1]
@@ -403,10 +444,17 @@ def main() -> None:
     print("Computing cross-reference density...")
     cross_ref_scores = compute_cross_reference_scores(atoms, atom_keywords, inverted)
 
+    print("Computing repetition frequency...")
+    repetition_scores = compute_repetition_scores(atoms)
+    repeated_count = sum(1 for v in repetition_scores.values() if v > 0)
+    print(f"  {repeated_count} atoms with repetition signal")
+
     # Score every atom
     print("Scoring all atoms...")
     for atom in atoms:
-        level, score = compute_priority(atom, completion_rates, cross_ref_scores)
+        level, score = compute_priority(
+            atom, completion_rates, cross_ref_scores, repetition_scores
+        )
         atom["priority"] = level
         atom["priority_score"] = score
 

@@ -860,6 +860,12 @@ def run_measurement() -> list[MeasurementResult]:
             evidence_source = "none"
 
         atom["status"] = new_status
+        # Record evidence source in the atom for audit trail
+        if evidence_source != "none":
+            produced = atom.get("produced", [])
+            if evidence_source not in produced:
+                produced.append(evidence_source)
+            atom["produced"] = produced
         results.append(MeasurementResult(atom_id, old_status, new_status, evidence_source))
         status_counts[new_status] += 1
         evidence_counts[evidence_source] += 1
