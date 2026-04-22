@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: check-done-id
+        name: Validate DONE-ID assignments against counter
+        entry: python3 scripts/check-done-id.py --staged
+        language: system
+        files: INST-INDEX-RERUM-FACIENDARUM\.md
+        pass_filenames: false
