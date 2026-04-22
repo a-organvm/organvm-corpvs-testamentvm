@@ -793,19 +793,13 @@ def run_measurement() -> list[MeasurementResult]:
         new_status = old_status
         evidence_source = "none"
 
-        # Skip atoms already marked DONE (preserve manual overrides)
-        if old_status == "DONE":
-            results.append(MeasurementResult(atom_id, old_status, old_status, "preserved"))
-            status_counts["DONE"] += 1
-            evidence_counts["preserved"] += 1
-            continue
-
-        # Skip atoms with CLOSED-* status (distinct terminal state)
-        if old_status.startswith("CLOSED-"):
-            results.append(MeasurementResult(atom_id, old_status, old_status, "preserved"))
-            status_counts[old_status] += 1
-            evidence_counts["preserved"] += 1
-            continue
+        # Re-verify ALL atoms — no skipping.
+        # Previously this skipped DONE and CLOSED atoms, which meant
+        # no evidence was ever recorded for them. Now every atom gets
+        # checked against all evidence sources on every run.
+        # Status is only UPGRADED (OPEN→DONE), never downgraded
+        # (DONE atoms keep their status even if evidence isn't found
+        # this run — evidence may have been from a previous check).
 
         # Check evidence sources in priority order
 
@@ -854,11 +848,18 @@ def run_measurement() -> list[MeasurementResult]:
             new_status = "OPEN"
             evidence_source = "irf-open"
 
-        # Otherwise: leave as UNREVIEWED
+        # Otherwise: no evidence found this run
         else:
-            new_status = old_status if old_status != "N/A" else "UNREVIEWED"
+            # Never downgrade: DONE stays DONE (evidence may be from prior run)
+            if old_status == "DONE":
+                new_status = "DONE"
+            else:
+                new_status = old_status if old_status != "N/A" else "UNREVIEWED"
             evidence_source = "none"
 
+        # Never downgrade DONE → OPEN (only upgrade OPEN → DONE)
+        if old_status == "DONE" and new_status != "DONE":
+            new_status = "DONE"
         atom["status"] = new_status
         # Record evidence source in the atom for audit trail
         if evidence_source != "none":

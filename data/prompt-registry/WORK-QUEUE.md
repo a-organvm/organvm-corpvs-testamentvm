@@ -1,141 +1,141 @@
 # Work Queue
 
-**Generated:** 2026-04-22 19:39
-**Total OPEN atoms:** 11970
+**Generated:** 2026-04-22 19:55
+**Total OPEN atoms:** 16910
 
 ## Priority Items
 
-1. **[P0 0.80]** `ATM-016813` (2026-04-01, organ-iii, organ-iv, meta)
-   Future Work (All That Needs To Be)    * Stripe Vacuums: 9 roles in research_pool/ still have      location: N/A. Web-...
+1. **[P0 0.74]** `ATM-015279` (2026-03-31, organ-i, organ-ii, organ-iii)
+   Git LFS Storage I'm at 23 GB vs 8 GB quota (287%). This is mostly from docs-et-cet-alia and render-second-amendment. ...
 
-2. **[P0 0.79]** `ATM-013697` (2026-03-31, organ-i, organ-ii, organ-iv)
-   The three-hand model is complete because it's           exhaustive over power gradients. Up = asymmetric           (I...
+2. **[P0 0.72]** `ATM-014904` (2026-03-31, organ-i, organ-ii, organ-iii)
+   Git LFS Storage  I'm at 23 GB vs 8 GB quota (287%). This is mostly from docs-et-cet-alia and render-second-amendment....
 
-3. **[P0 0.76]** `ATM-015214` (2026-03-31, organ-i, organ-ii, organ-iii)
-   Actual Inventory                                                                         - ACTUAL_REPO_COUNT: 14     ...
+3. **[P0 0.71]** `ATM-011587` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete         governance. Most SOPs assume someone wants to        audit. The lat...
 
-4. **[P0 0.76]** `ATM-012826` (2026-03-31, organ-iv, meta, health)
-   1.87                                                                                                                 ...
+4. **[P0 0.71]** `ATM-013695` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-5. **[P0 0.75]** `ATM-016207` (2026-04-01, organ-i, organ-ii, organ-iii)
-   The directory is the prompt — cd into it, open an agent,   it reads its seed and executes    Let me check how your ex...
+5. **[P0 0.71]** `ATM-013747` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-6. **[P0 0.75]** `ATM-024551` (2026-04-22, organ-i, organ-ii, organ-iii)
-   Recommendations — who to ask    Every field has the exact text to paste. Reconnect Chrome and I'll start executing, o...
+6. **[P0 0.71]** `ATM-013811` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-7. **[P0 0.74]** `ATM-013667` (2026-03-31, organ-iv, meta, health)
-   30s =============================                                                                                  ⏺ ...
+7. **[P0 0.71]** `ATM-013863` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-8. **[P0 0.74]** `ATM-020607` (2026-04-06, organ-i, organ-ii, organ-iii)
-   to produce the ideal forms i feel and cant put to   words                                                            ...
+8. **[P0 0.71]** `ATM-013927` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-9. **[P0 0.73]** `ATM-016234` (2026-04-01, organ-i, organ-ii, organ-iii)
-   jsonl      /Users/4jp/.claude/projects/-Users-4jp-Workspace-meta-org      anvm/2a7812ea-2b13-4122-91f1-ec5f513ecbc6/s...
+9. **[P0 0.71]** `ATM-013979` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-10. **[P0 0.73]** `ATM-015243` (2026-03-31, organ-ii, organ-iii, organ-iv)
-   When work is blocked, move to `| DONE-247 | Cronus Metabolus Core Metabolism Loop (Ingestion, Extraction, Generation,...
+10. **[P0 0.71]** `ATM-014045` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-11. **[P0 0.73]** `ATM-010750` (2026-03-30, organ-ii, organ-iii, organ-iv)
-   FOLLOW-UP DASHBOARD         OVERDUE (30):           !!! Anthropic — Anthropic Engineering Editorial Lead             ...
+11. **[P0 0.71]** `ATM-014097` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete               governance. Most SOPs assume someone wants to              au...
 
-12. **[P0 0.72]** `ATM-010745` (2026-03-30, organ-iii, organ-iv, meta)
-   Publish Testament post-002 to LinkedIn (7/8 READY)    GEMINI (Machinist) — dispatch after Claude reviews morning dige...
+12. **[P0 0.71]** `ATM-014154` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete   governance. Most SOPs assume someone wants to   audit. The lateral blind ...
 
-13. **[P0 0.72]** `ATM-015408` (2026-03-31, organ-i, organ-ii, organ-iii)
-   Git LFS Storage                                                                                                      ...
+13. **[P0 0.71]** `ATM-014199` (2026-03-31, meta, employment, automation)
+   Motivation-blind governance is incomplete   governance. Most SOPs assume someone wants to   audit. The lateral blind ...
 
-14. **[P0 0.72]** `ATM-014998` (2026-03-31, organ-i, organ-ii, organ-iii)
-   STARVED_CONSUMER: QUERY —   skeletal--define consumes QUERY but   nothing produces it (it's an   operator-initiated s...
+14. **[P0 0.70]** `ATM-013681` (2026-03-31, organ-i, meta, UNIVERSAL)
+   The submodule list lies. .gitmodules tracks 9           repos, but 28 repos exist on disk. The                     su...
 
-15. **[P0 0.71]** `ATM-013684` (2026-03-31, organ-i, organ-iv, meta)
-   , tools/ (1)                                         META-ORGANVM (THE BODY): .atoms/ (393KB), no                 res...
+15. **[P0 0.70]** `ATM-013733` (2026-03-31, organ-i, meta, UNIVERSAL)
+   The submodule list lies. .gitmodules tracks 9           repos, but 28 repos exist on disk. The                     su...
 
-16. **[P0 0.71]** `ATM-013673` (2026-03-31, organ-ii, organ-iv, meta)
-   0.2                                                      pytest 9.0.2                                                ...
+16. **[P1 0.70]** `ATM-011628` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-17. **[P0 0.71]** `ATM-013167` (2026-03-31, organ-i, organ-ii, organ-iv)
-   Update `discover_chatgpt_projects()` in       `chatgpt_local_session.py`       EOF       )" 2>&1)   ⎿  https://github...
+17. **[P1 0.70]** `ATM-012038` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-18. **[P0 0.71]** `ATM-014995` (2026-03-31, organ-i, organ-iv, organ-v)
-   A8 — Topological Plasticity:     Mechanisms may fuse, split, or     dissolve through governed evolution.      The ete...
+18. **[P1 0.70]** `ATM-012040` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-19. **[P0 0.71]** `ATM-014143` (2026-03-31, organ-i, organ-iii, organ-iv)
-   The contribution engine overbuilt for its yield. 14 contrib workspaces,   2,800 lines of pipeline code, 164 tests — d...
+19. **[P1 0.70]** `ATM-012058` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-20. **[P0 0.71]** `ATM-015397` (2026-03-31, organ-i, organ-ii, organ-iv)
-   Remediation — deltas become actionable items with                                                                    ...
+20. **[P1 0.70]** `ATM-012070` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-21. **[P0 0.70]** `ATM-010722` (2026-03-30, organ-i, organ-ii, organ-iii)
-   Full suite: python -m pytest tests/ -q — no regressions  ⏺ Creating the context files for all four agents now.  ⏺ Wri...
+21. **[P1 0.70]** `ATM-012073` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-22. **[P0 0.70]** `ATM-013634` (2026-03-31, organ-i, organ-iv, meta)
-   1 # SOP: Superproject Topology Audit         2         3 **Date:** 2026-03-31         4 **Proven against:**          ...
+22. **[P1 0.70]** `ATM-012085` (2026-03-31, meta, UNIVERSAL)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-23. **[P1 0.70]** `ATM-015797` (2026-04-01, organ-i, organ-ii, organ-iv)
-   tests/test_intake_router.py (~60 lines):           - test_classify_organism: "third function build" → ORGANISM       ...
+23. **[P1 0.70]** `ATM-014236` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-24. **[P1 0.70]** `ATM-003416` (2026-03-20, organ-i, organ-ii, organ-iii)
-   Post the LinkedIn piece    IS EVERYTHING SAVED?    ┌───────────────────────────┬─────────────────────────────────────...
+24. **[P1 0.70]** `ATM-014248` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-25. **[P1 0.70]** `ATM-017786` (2026-04-02, organ-iii, organ-iv, organ-v)
-   Verify/clean the registry if needed  Let me start with all three tasks.  **Tool: MCP_DOCKER_issue_write**  **Input:**...
+25. **[P1 0.70]** `ATM-014268` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-26. **[P1 0.70]** `ATM-012011` (2026-03-31, organ-i, organ-ii, organ-iii)
-   Persist the audit plan under ~/Workspace/.codex/        plans/ and then produce the single-hierarchy   report.    • U...
+26. **[P1 0.70]** `ATM-014280` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-27. **[P1 0.69]** `ATM-013150` (2026-03-31, organ-i, organ-iv, meta)
-   The plist lives in domus (not CCE) because it's machine   configuration, not engine code. chezmoi apply deploys it to...
+27. **[P1 0.70]** `ATM-014305` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-28. **[P1 0.69]** `ATM-017823` (2026-04-02, organ-i, organ-ii, organ-iii)
-   Look at the registry structure                                                                                       ...
+28. **[P1 0.70]** `ATM-014317` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-29. **[P1 0.69]** `ATM-011481` (2026-03-31, organ-i, organ-iii, organ-iv)
-   The praxis-perpetua close-out SOP was not                                               updated. The agent memory was...
+29. **[P1 0.70]** `ATM-014325` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-30. **[P1 0.69]** `ATM-012785` (2026-03-31, organ-ii, organ-iii, organ-iv)
-   The three blocked human gates (spot-checks,                                             deposits, revenue) are the on...
+30. **[P1 0.70]** `ATM-014337` (2026-03-31, meta, UNIVERSAL, organ-iv)
+   Boundary Declaration (Declared Set)    - DECLARED_COUNT: 12    - DECLARED_SET:      - .github → git@github.com:meta-o...
 
-*... and 11940 more OPEN atoms*
+*... and 16880 more OPEN atoms*
 
 ## Universe Clusters
 
 | Universe | Count |
 |----------|-------|
-| unscoped | 3067 |
-| UNIVERSAL | 2027 |
-| meta | 1586 |
-| organ-iv | 1287 |
-| organ-iii | 1025 |
-| personal | 842 |
-| organ-i | 666 |
-| organ-ii | 281 |
-| persistence | 245 |
-| employment | 225 |
-| naming | 157 |
-| security | 108 |
-| housing | 84 |
-| health | 82 |
-| organ-v | 67 |
-| financial | 65 |
-| enforcement | 63 |
-| relationships | 39 |
-| organ-vi | 31 |
+| unscoped | 5006 |
+| UNIVERSAL | 3223 |
+| meta | 2421 |
+| organ-iv | 1721 |
+| organ-iii | 1278 |
+| personal | 1244 |
+| organ-i | 460 |
+| persistence | 296 |
+| employment | 253 |
+| naming | 214 |
+| organ-ii | 158 |
+| security | 154 |
+| health | 100 |
+| organ-v | 79 |
+| enforcement | 74 |
+| housing | 69 |
+| financial | 59 |
+| relationships | 48 |
+| organ-vi | 29 |
 | automation | 10 |
-| education | 8 |
+| education | 9 |
 | organ-vii | 5 |
 
 ## By Type
 
 | Type | Count |
 |------|-------|
-| implicit-signal | 4635 |
-| directive | 2375 |
-| question | 1780 |
-| governance-rule | 1516 |
-| constraint | 1473 |
-| emotional | 91 |
-| correction | 71 |
-| data | 21 |
-| command | 8 |
+| implicit-signal | 6906 |
+| directive | 3988 |
+| constraint | 2015 |
+| governance-rule | 1911 |
+| question | 1606 |
+| emotional | 312 |
+| correction | 97 |
+| data | 69 |
+| command | 6 |
 
-*Engine: generate_work_queue.py | Run: 2026-04-22T19:39:05.373619*
+*Engine: generate_work_queue.py | Run: 2026-04-22T19:55:35.154887*
