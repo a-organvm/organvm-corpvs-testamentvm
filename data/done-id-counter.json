@@ -1,8 +1,11 @@
 {
-  "next_id": 405,
-  "last_claimed_by": "S-reputation-velocity-2026-04-21",
-  "last_claimed_at": "2026-04-21",
-  "claimed_range": [400, 404],
-  "note": "5 completions: (400) ORGAN-VII contribution-merged template + pipeline registration; (401) PR status checker script; (402) openai-agents#2802 graceful closure; (403) voidborne-d re-engagement + agentic-titan #81, #82; (404) PR intelligence sweep — 21 PRs verified, 11 bumped, 2 merge-ready identified.",
+  "next_id": 414,
+  "last_claimed_by": "S-mega-session-2026-04-22",
+  "last_claimed_at": "2026-04-22",
+  "claimed_range": [
+    406,
+    413
+  ],
+  "note": "8 completions: (406) CCE LaunchAgent path fix; (407) sovereign-systems accessibility; (408) DONE-ID pre-commit hook; (409) stale a-organvm clone decommissioned; (410) INSTANCE.toml 2/3; (411) 3 enforcement hooks; (412) mail-triage disabled; (413) 72h prompt archive. COLLISION: DONE-405 already assigned, 5th incident.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
