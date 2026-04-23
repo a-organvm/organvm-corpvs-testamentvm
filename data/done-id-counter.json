@@ -1,11 +1,11 @@
 {
-  "next_id": 422,
-  "last_claimed_by": "S-vacuum-field-burn-2026-04-22",
-  "last_claimed_at": "2026-04-22",
+  "next_id": 423,
+  "last_claimed_by": "S-domus-hygiene-2026-04-23",
+  "last_claimed_at": "2026-04-23",
   "claimed_range": [
-    418,
-    421
+    422,
+    422
   ],
-  "note": "4 completions: (418) 140MB generated JSON gitignored; (419) agent-dispatch --skip-git-repo-check; (420) 2,012 duplicate atoms consolidated; (421) captain's log created.",
+  "note": "1 completion: (422) Domus cleanup sprint — dead symlinks, Docker/Codex cruft, plist test fix, ShellCheck, batch +x permissions, justfile __pycache__ exclusion, CLAUDE.md task queue + LaunchAgents table updated.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
