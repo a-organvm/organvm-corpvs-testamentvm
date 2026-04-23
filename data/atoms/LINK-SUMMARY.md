@@ -1,13 +1,13 @@
 # Atom Link Summary
-**Generated**: 2026-03-26
-**Links**: 7358 | **Threshold**: 0.3
+**Generated**: 2026-04-23
+**Links**: 15887 | **Threshold**: 0.3
 
 ## Jaccard Distribution
 
 | Range | Count | % |
 |-------|-------|---|
-| 0.50+ | 2030 | 27% |
-| 0.30–0.49 | 5328 | 72% |
+| 0.50+ | 2870 | 18% |
+| 0.30–0.49 | 13017 | 81% |
 | 0.20–0.29 | 0 | 0% |
 | 0.15–0.19 | 0 | 0% |
 | <0.15 | 0 | 0% |
@@ -16,68 +16,68 @@
 
 | Tag | Occurrences |
 |-----|-------------|
-| mcp | 5546 |
-| python | 2470 |
-| pytest | 1517 |
-| go | 1485 |
-| bash | 1468 |
-| vercel | 198 |
-| typescript | 118 |
-| fastapi | 85 |
-| astro | 83 |
-| rollup | 72 |
-| neon | 71 |
-| express | 71 |
-| zsh | 61 |
-| homebrew | 50 |
-| react | 42 |
-| node | 40 |
-| jekyll | 28 |
-| chezmoi | 22 |
-| docker | 21 |
-| vitest | 21 |
+| mcp | 11744 |
+| python | 4817 |
+| go | 3021 |
+| chezmoi | 1334 |
+| pytest | 1297 |
+| bash | 1084 |
+| node | 441 |
+| cloudflare | 386 |
+| astro | 358 |
+| homebrew | 328 |
+| zsh | 324 |
+| docker | 294 |
+| vercel | 157 |
+| three.js | 104 |
+| typescript | 68 |
+| fastapi | 55 |
+| express | 55 |
+| react | 39 |
+| rollup | 34 |
+| tailwind | 30 |
 
 ## Top Shared File References
 
 | File | Occurrences |
 |------|-------------|
-| `scripts/score.py` | 21 |
-| `scripts/run.py` | 11 |
-| `src/lib/hybrid-retrieval.ts` | 9 |
-| `organvm-corpvs-testamentvm/registry-v2.json` | 8 |
-| `conductor/session.py` | 8 |
-| `src/lib/db/schema.ts` | 7 |
-| `src/lib/query-planner.ts` | 7 |
-| `strategy/scoring-rubric.md` | 6 |
-| `scripts/ingest_top_roles.py` | 5 |
-| `src/lib/ingestion/ingest-worker.ts` | 5 |
-| `scripts/source_jobs.py` | 5 |
-| `essay-pipeline/tests/test_log_generator.py` | 4 |
-| `tests/test_score.py` | 4 |
-| `scripts/enrich.py` | 4 |
-| `public-process/_layouts/log.html` | 4 |
-| `conductor/constants.py` | 4 |
-| `tests/test_oracle.py` | 3 |
-| `scripts/standup.py` | 3 |
-| `scripts/pipeline_lib.py` | 3 |
-| `organvm-corpvs-testamentvm/data/atoms/atomized-tasks.jsonl` | 3 |
+| `scripts/run.py` | 14 |
+| `tests/conftest.py` | 11 |
+| `ontologia/inference_bridge.py` | 6 |
+| `pulse/inference_bridge.py` | 6 |
+| `private_dot_claude/settings.json.tmpl` | 6 |
+| `src/organvm_engine/cli/__init__.py` | 5 |
+| `scripts/validate.py` | 4 |
+| `tests/test_contribution_ledger.py` | 4 |
+| `tests/test_energy_ledger.py` | 4 |
+| `tests/test_timecard.py` | 4 |
+| `tests/test_wave1_integration.py` | 4 |
+| `private_dot_claude/CLAUDE.md.tmpl` | 3 |
+| `private_dot_claude/hooks/execution-discipline.py` | 3 |
+| `src/conversation_corpus_engine/provider_catalog.py` | 3 |
+| `tests/test_hive/test_conflict_detection.py` | 2 |
+| `tests/test_validate.py` | 2 |
+| `docs/handoff-maddie-spiral-path-2026-04-01.md` | 2 |
+| `tests/test_intake_router.py` | 2 |
+| `/Users/4jp/Workspace/a-organvm/cocoon-map.yaml` | 2 |
+| `/Users/4jp/Workspace/a-organvm/stranger-report-meta.md` | 2 |
 
 ## Most-Linked Tasks
 
 | Task ID | Links |
 |---------|-------|
-| 84929d1fcd12 | 104 |
-| 5f0b60f013fc | 104 |
-| d0d4eea6fe4c | 104 |
-| 77530a1afa96 | 104 |
-| 9a9f699c43e0 | 104 |
-| ca2164f82188 | 104 |
-| 226164947357 | 104 |
-| 7e13fe47f30d | 48 |
-| a89f77dd9214 | 48 |
-| 17d699cdd9c3 | 48 |
-| 178a7280edff | 30 |
-| 69ded66292fe | 29 |
-| 7d0ee6aec463 | 29 |
-| 6baa75788789 | 29 |
-| dc4791046352 | 29 |
+| c92b842ed34a | 72 |
+| 9e0503800625 | 72 |
+| f513fbc97c0b | 72 |
+| ce5765e65d5e | 72 |
+| b0b2f01dfd95 | 72 |
+| a3928bd70628 | 72 |
+| 46ae32157fdd | 69 |
+| 9bd68be6b251 | 68 |
+| 10e64729b34f | 68 |
+| 9ee56fb186f6 | 68 |
+| 4643fa3a9203 | 64 |
+| 4be36e18ff7b | 64 |
+| e1f264ebe81d | 64 |
+| aa5eaec93133 | 64 |
+| d9ca05a8410b | 63 |

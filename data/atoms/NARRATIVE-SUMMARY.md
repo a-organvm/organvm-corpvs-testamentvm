@@ -1,58 +1,57 @@
 # Prompt Narrative Analysis
-**Generated**: 2026-03-26
-**Sessions**: 811 | **Prompts**: 4877 | **Threads**: 134
+**Generated**: 2026-04-23
+**Sessions**: 729 | **Prompts**: 4295 | **Threads**: 136
 
 ## Prompt Type Distribution
 
 | Type | Count | % |
 |------|-------|---|
-| command | 2260 | 46% |
-| question | 798 | 16% |
-| context_setting | 452 | 9% |
-| git_ops | 408 | 8% |
-| continuation | 404 | 8% |
-| plan_invocation | 377 | 7% |
-| exploration | 140 | 2% |
-| correction | 38 | 0% |
+| command | 2393 | 55% |
+| question | 746 | 17% |
+| context_setting | 527 | 12% |
+| continuation | 285 | 6% |
+| git_ops | 176 | 4% |
+| exploration | 112 | 2% |
+| correction | 56 | 1% |
 
 ## Size Distribution
 
 | Class | Count | % |
 |-------|-------|---|
-| short | 1808 | 37% |
-| terse | 1161 | 23% |
-| long | 983 | 20% |
-| medium | 925 | 18% |
+| short | 1730 | 40% |
+| medium | 1101 | 25% |
+| long | 851 | 19% |
+| terse | 613 | 14% |
 
 ## Top Narrative Threads (by prompt count)
 
 | Thread | Sessions | Prompts | Date Range | Dominant Type |
 |--------|----------|---------|------------|---------------|
-| 4444J99/application-pipeline/proceed-2026-03-17..2 | 9 | 402 | 2026-03-17..2026-03-26 | command |
-| meta-organvm/implement-2026-03-06..2026-03-11 | 98 | 394 | 2026-03-06..2026-03-11 | command |
-| 4444J99/application-pipeline/implement-2026-02-23. | 69 | 306 | 2026-02-23..2026-02-27 | command |
-| 4jp/Workspace/proceed-2026-03-20..2026-03-26 | 12 | 292 | 2026-03-20..2026-03-26 | command |
-| meta-organvm/proceed-2026-03-19..2026-03-20 | 13 | 291 | 2026-03-19..2026-03-20 | command |
-| meta-organvm/implement-2026-03-12..2026-03-15 | 22 | 190 | 2026-03-12..2026-03-15 | command |
-| 4444J99/application-pipeline/implement-2026-02-28. | 38 | 180 | 2026-02-28..2026-03-05 | command |
-| 4444J99/application-pipeline/proceed-2026-03-13..2 | 9 | 172 | 2026-03-13..2026-03-15 | command |
-| organvm-iv-taxis/orchestration-start-here/contrib_ | 4 | 141 | 2026-03-22..2026-03-26 | command |
-| organvm-iii-ergon/peer-audited--behavioral-blockch | 24 | 141 | 2026-02-27..2026-03-01 | command |
-| meta-organvm/post-flood/continue-2026-03-17..2026- | 2 | 86 | 2026-03-17..2026-03-20 | command |
-| 4444J99/application-pipeline/strategy/add-2026-03- | 4 | 84 | 2026-03-17..2026-03-20 | command |
-| organvm-iii-ergon/peer-audited--behavioral-blockch | 14 | 73 | 2026-03-04..2026-03-05 | command |
+| Users/4jp/continue-2026-04-19..2026-04-23 | 31 | 303 | 2026-04-19..2026-04-23 | command |
+| 4jp/system-system--system/proceed-2026-04-04..2026 | 35 | 285 | 2026-04-04..2026-04-09 | command |
+| Users/4jp/proceed-2026-04-13..2026-04-18 | 21 | 283 | 2026-04-13..2026-04-18 | command |
+| meta-organvm/review-2026-04-01..2026-04-08 | 28 | 193 | 2026-04-01..2026-04-08 | command |
+| organvm-iv-taxis/continue-2026-04-02..2026-04-08 | 15 | 182 | 2026-04-02..2026-04-08 | command |
+| 4444J99/application-pipeline/proceed-2026-03-22..2 | 3 | 170 | 2026-03-22..2026-03-26 | command |
+| 4jp/Workspace/proceed-2026-03-20..2026-03-26 | 6 | 163 | 2026-03-20..2026-03-26 | command |
+| organvm-iv-taxis/orchestration-start-here/continue | 17 | 137 | 2026-03-31..2026-04-02 | command |
+| meta-organvm/change-2026-03-30..2026-03-31 | 8 | 137 | 2026-03-30..2026-03-31 | command |
+| meta-organvm/post-flood/review-2026-03-30..2026-03 | 7 | 102 | 2026-03-30..2026-03-31 | command |
+| 4jp/Workspace/fix-2026-04-15..2026-04-18 | 7 | 96 | 2026-04-15..2026-04-18 | command |
+| organvm-iii-ergon/sovereign-systems--elevate-align | 7 | 96 | 2026-04-03..2026-04-05 | command |
+| 4jp/Workspace/proceed-2026-04-19..2026-04-21 | 10 | 93 | 2026-04-19..2026-04-21 | command |
+| 4jp/Workspace/check-2026-04-02..2026-04-05 | 9 | 89 | 2026-04-02..2026-04-05 | command |
+| 4444J99/application-pipeline/review-2026-03-30..20 | 10 | 87 | 2026-03-30..2026-04-03 | command |
+| organvm-iv-taxis/orchestration-start-here/contrib_ | 3 | 84 | 2026-03-23..2026-03-26 | command |
+| meta-organvm/post-flood/archive_original/continue- | 8 | 71 | 2026-04-13..2026-04-17 | command |
+| 4jp/Workspace/update-2026-03-30..2026-04-01 | 6 | 71 | 2026-03-30..2026-04-01 | command |
+| organvm-iv-taxis/remove-2026-03-30..2026-03-31 | 8 | 69 | 2026-03-30..2026-03-31 | command |
+| 4444J99/application-pipeline/proceed-2026-03-27..2 | 4 | 67 | 2026-03-27..2026-03-28 | command |
 | Users/4jp/verify-2026-03-25 | 4 | 65 | 2026-03-25 | command |
-| organvm-iii-ergon/update-2026-02-28 | 7 | 65 | 2026-02-28 | command |
-| organvm-i-theoria/conversation-corpus-engine/analy | 3 | 64 | 2026-03-23..2026-03-26 | command |
-| 4444J99/portfolio/review-2026-03-17..2026-03-21 | 4 | 60 | 2026-03-17..2026-03-21 | command |
-| dwv/analyze-2026-03-21..2026-03-23 | 2 | 59 | 2026-03-21..2026-03-23 | command |
-| meta-organvm/stakeholder-portal/implement-2026-03- | 5 | 55 | 2026-03-08..2026-03-09 | command |
-| meta-organvm/stage-2026-02-24 | 14 | 55 | 2026-02-24 | command |
+| a-organvm/read-2026-03-30..2026-04-03 | 9 | 63 | 2026-03-30..2026-04-03 | command |
+| 4jp/system-system--system/proceed-2026-04-13..2026 | 7 | 57 | 2026-04-13..2026-04-16 | command |
 | 4444J99/portfolio/proceed-2026-03-23..2026-03-26 | 4 | 54 | 2026-03-23..2026-03-26 | command |
-| 4444J99/portfolio/implement-2026-03-06..2026-03-07 | 7 | 53 | 2026-03-06..2026-03-07 | command |
-| organvm-iii-ergon/peer-audited--behavioral-blockch | 17 | 51 | 2026-03-06..2026-03-07 | command |
-| meta-organvm/stakeholder-portal/implement-2026-03- | 11 | 50 | 2026-03-05..2026-03-07 | command |
-| meta-organvm/post-flood/proceed-2026-03-22..2026-0 | 1 | 49 | 2026-03-22..2026-03-25 | command |
+| organvm-iii-ergon/sovereign-systems--elevate-align | 4 | 52 | 2026-04-14..2026-04-18 | command |
 
 ## Temporal Activity
 
@@ -61,74 +60,73 @@
 | 2025-11 | 6 | 6 | 3 | Volumes/4444-iivii |
 | 2025-12 | 23 | 23 | 13 | Users/4jp |
 | 2026-01 | 13 | 15 | 9 | 4jp/Legal/padavano-v-mdc--empl |
-| 2026-02 | 195 | 914 | 23 | 4444J99/application-pipeline |
-| 2026-03 | 404 | 3919 | 89 | meta-organvm |
+| 2026-03 | 125 | 1952 | 62 | 4444J99/application-pipeline |
+| 2026-04 | 286 | 2299 | 53 | Users/4jp |
 
 ## Top Imperative Verbs
 
 | Verb | Count | % |
 |------|-------|---|
-| implement | 353 | 7% |
-| stage | 172 | 3% |
-| proceed | 131 | 2% |
-| continue | 58 | 1% |
-| analyze | 41 | 0% |
-| commit | 29 | 0% |
-| check | 28 | 0% |
-| run | 27 | 0% |
-| fix | 18 | 0% |
-| review | 18 | 0% |
-| push | 14 | 0% |
-| create | 13 | 0% |
-| update | 12 | 0% |
-| add | 11 | 0% |
-| open | 9 | 0% |
-| make | 8 | 0% |
-| build | 7 | 0% |
-| deploy | 5 | 0% |
-| clean | 5 | 0% |
-| sync | 4 | 0% |
+| proceed | 88 | 2% |
+| continue | 47 | 1% |
+| review | 44 | 1% |
+| check | 15 | 0% |
+| create | 9 | 0% |
+| fix | 6 | 0% |
+| make | 6 | 0% |
+| build | 5 | 0% |
+| find | 5 | 0% |
+| analyze | 5 | 0% |
+| add | 4 | 0% |
+| write | 3 | 0% |
+| commit | 3 | 0% |
+| explore | 3 | 0% |
+| update | 3 | 0% |
+| log | 3 | 0% |
+| read | 2 | 0% |
+| run | 2 | 0% |
+| change | 2 | 0% |
+| remove | 2 | 0% |
 
 ## Narrative Arc Patterns
 
 | Pattern | Count | Description |
 |---------|-------|-------------|
-| steady-build | 90 | Continuous command flow without major corrections |
-| single-shot | 29 | Thread with 1-2 prompts only |
-| exploration-first | 11 | Opens with questions or exploration |
-| plan-then-execute | 4 | Opens with plan invocation, bulk commands follow |
+| steady-build | 79 | Continuous command flow without major corrections |
+| single-shot | 36 | Thread with 1-2 prompts only |
+| exploration-first | 21 | Opens with questions or exploration |
 
 ## Recurring Themes (tags)
 
 | Tag | Count |
 |-----|-------|
-| python | 485 |
-| bash | 328 |
-| pytest | 310 |
-| mcp | 248 |
-| go | 227 |
-| typescript | 116 |
-| node | 98 |
-| react | 86 |
-| cloudflare | 62 |
-| vercel | 61 |
-| postgresql | 61 |
+| go | 266 |
+| python | 208 |
+| bash | 166 |
+| mcp | 153 |
+| pytest | 126 |
+| node | 117 |
+| chezmoi | 84 |
+| typescript | 78 |
+| homebrew | 77 |
+| vercel | 55 |
+| cloudflare | 54 |
 | docker | 53 |
-| express | 48 |
-| redis | 46 |
-| vite | 45 |
-| playwright | 42 |
-| zsh | 40 |
-| astro | 40 |
-| neon | 39 |
-| fastapi | 38 |
-| homebrew | 37 |
-| chezmoi | 36 |
-| vitest | 34 |
-| terraform | 33 |
-| p5.js | 28 |
-| kubernetes | 27 |
-| jekyll | 27 |
-| aws | 24 |
-| javascript | 23 |
-| openapi | 21 |
+| react | 50 |
+| astro | 46 |
+| zsh | 44 |
+| vitest | 28 |
+| p5.js | 25 |
+| vite | 24 |
+| express | 23 |
+| redis | 23 |
+| terraform | 23 |
+| javascript | 19 |
+| fastapi | 18 |
+| neon | 18 |
+| openapi | 18 |
+| rust | 17 |
+| postgresql | 17 |
+| kubernetes | 15 |
+| rollup | 15 |
+| github-actions | 15 |
