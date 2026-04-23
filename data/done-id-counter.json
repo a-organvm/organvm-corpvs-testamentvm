@@ -1,11 +1,11 @@
 {
-  "next_id": 432,
-  "last_claimed_by": "S-every-frame-a-painting-2026-04-23",
+  "next_id": 438,
+  "last_claimed_by": "S-maddie-spiral-lightening-2026-04-23",
   "last_claimed_at": "2026-04-23",
   "claimed_range": [
-    429,
-    431
+    432,
+    437
   ],
-  "note": "3 completions: (429) IRF-SYS-004 Descent Protocol — 186 repos polished, 0 gaps, (430) IRF-AOR-009 a-organvm memory verified 13/13, (431) vacuum-atoms quality filter built.",
+  "note": "6 completions: (432) spiral lightened + reduced-motion a11y, (433) node pages 1-4 enriched, (434) cycle-synced 3 branches, (435) analytics CF Web Analytics, (436) Keystatic CMS confirmed, (437) memory artifact-level capture protocol.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
