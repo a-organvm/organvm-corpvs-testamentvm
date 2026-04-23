@@ -131,6 +131,8 @@ The counter file is the single source of truth for the DONE-ID ceiling. The stat
 | IRF-SYS-128 | **P2** | **VACUUM: Semantic dedup needed — Jaccard similarity misses thematic duplicates.** Similarity engine (Jaccard threshold 0.40) catches near-exact text duplicates but not thematic duplicates (same issue, different wording). Example: 13 OPEN LFS atoms describe "23GB vs 8GB quota" with different phrasing, spread across different clusters. Need embedding-based semantic similarity (sentence-transformers or similar) to cluster by meaning, not token overlap. 2,012 Jaccard duplicates archived this session; thematic overlap is the harder remaining problem. | Agent | S-vacuum-field-burn-2026-04-22 | None |
 | IRF-SYS-129 | **P1** | **VACUUM: Similarity cluster data integrity — stale status fields.** `similarity-clusters.json` stored atom statuses at generation time. This session found CLU-0855 cluster showed all 11 members as "DONE" when actual prompt-atoms.json had them as "OPEN". Pipeline needs: regenerate similarity-clusters.json AFTER triage/status changes, or remove status caching from clusters entirely (query prompt-atoms.json at read time). Data staleness caused misleading P0 reports. | Agent | S-vacuum-field-burn-2026-04-22 | None |
 | IRF-SYS-130 | **P2** | **VACUUM: Captain's log maintenance process.** `CAPTAINS-LOG.md` created this session (DONE-421) but has no ongoing maintenance process. Each session should append entries, not reconstruct. Options: (1) session-close hook that appends to log; (2) `organvm log` CLI command; (3) template in session-close protocol. Without process, the log will drift stale within weeks. | Agent | S-vacuum-field-burn-2026-04-22 | None |
+| IRF-SYS-131 | **P1** | **VACUUM: Micro-element decomposition — atoms are multiverses, not particles.** Each prompt atom contains entity/action/domain/reference micro-elements, each implying work in multiple dimensions. The atomization pipeline went prompts→atoms but needs atoms→micro-elements→implied-work. NLP task: entity extraction + domain classification + cross-reference generation. Pipeline position: after `atomize_prompts.py`, before `triage_non_actionable.py`. Scope: 200-300 line Python script. Designed in memory (`project_micro_element_multiversality.md`), not built. The true backlog is not 14,898 atoms — it's the multiverse of implications within them. | Agent | S-priority-stratification-2026-04-22 vacuum | None |
+| IRF-SYS-132 | **P1** | **Git LFS quota 287% (23GB vs 8GB) — cross-repo audit needed.** Atom backlog identifies this as P0 but no IRF item existed. DONE-418 addressed the corpvs-testamentvm 140MB (gitignored, not LFS'd). Remaining: identify which repos contribute to the 23GB LFS usage (`gh api` per-repo LFS usage), determine what can be purged vs migrated vs accepted. Primary suspects: docs-et-cet-alia, render-s* repos. GitHub LFS quota is org-level — affects all repos under each org. | Agent | S-vacuum-field-burn-2026-04-22, ATM-014904/015279 | None |
 | IRF-SYS-008 | P2 | ESLint 9→10 migration — blocked on eslint-plugin-react support. Monitor `eslint-plugin-react` releases for v8+ with ESLint 10 compatibility | Agent | S26 | eslint-plugin-react@7.37.5 incompatible |
 | IRF-SYS-009 | **P0** | Gmail notification hygiene — filter designed in S36: `from:notifications@github.com ("dependabot[bot]" OR "github-actions[bot]")` → Skip Inbox, Apply label `github/bots`, Mark as Read. **HUMAN ACTION NEEDED:** (1) Create Gmail filter, (2) GitHub Settings > Notifications > uncheck "Automatically watch repositories", (3) Set org routing to web-only. All GitHub notification threads marked read via API in S36. | Human | S26, S36 | Human action: 2 min at github.com/settings/notifications + Gmail |
 | ~~IRF-SYS-010~~ | ~~P1~~ | ~~Full seed.yaml refresh for organvm-engine~~ — **DONE** (5 contracts → 36, CANDIDATE → GRADUATED, signal_inputs/signal_outputs added. Commit `82d043d`.) | Agent | S28 gap audit | Completed S29 |
@@ -1677,8 +1679,8 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 Refreshed 2026-04-22 (S-vacuum-field-burn-2026-04-22). +4 completions: DONE-418 (gitignore 140MB), DONE-419 (agent-dispatch flag), DONE-420 (2,012-atom dedup), DONE-421 (captain's log). +3 new vacuum items: IRF-SYS-128 (semantic dedup), IRF-SYS-129 (cluster data integrity), IRF-SYS-130 (captain's log process). Prior: S-priority-stratification-2026-04-22 (DONE-414..417).
 
-- **Total IRF items:** 930 *(prior 923, +3 new vacuums, +4 completions)*
-- **Open:** 534 *(prior 535, +3 new, -4 completed)*
+- **Total IRF items:** 932 *(prior 923, +5 new vacuums, +4 completions)*
+- **Open:** 536 *(prior 535, +5 new, -4 completed)*
 - **Completed:** 398 *(prior 394, +4: DONE-418..421)*
 - **Blocked:** 0
 - **Archived:** 0
@@ -1689,7 +1691,7 @@ Refreshed 2026-04-22 (S-vacuum-field-burn-2026-04-22). +4 completions: DONE-418 
 | Priority | Count |
 |----------|-------|
 | P0 | 10 |
-| P1 | 192 *(prior 193, -1: SYS-129 new P1, net from completions)* |
+| P1 | 194 *(prior 193, +3: SYS-129, SYS-131, SYS-132, -2 completed)* |
 | P2 | 231 *(prior 229, +2: SYS-128, SYS-130)* |
 | P3 | 41 |
 
