@@ -19,6 +19,7 @@ DATA_DIR = Path.home() / "Workspace/organvm/organvm-corpvs-testamentvm/data/atom
 PLAN_PATH = DATA_DIR / "atomized-tasks.jsonl"
 PROMPT_PATH = DATA_DIR / "prompt-atoms.jsonl"
 SHORT_PATH = DATA_DIR / "prompt-atoms-short.jsonl"
+ANNOTATED_PATH = DATA_DIR / "annotated-prompts.jsonl"
 SUB_PATH = DATA_DIR / "sub-prompt-atoms.jsonl"
 UNIFIED_OUTPUT = DATA_DIR / "unified-atoms.jsonl"
 LINEAGE_OUTPUT = DATA_DIR / "atom-lineage.jsonl"
@@ -75,6 +76,34 @@ def normalize_prompt_atom(atom: dict) -> dict:
     }
 
 
+def normalize_annotated_atom(atom: dict) -> dict:
+    source = atom.get("source", {})
+    content = atom.get("content", {})
+    classification = atom.get("classification", {})
+    signals = atom.get("signals", {})
+    text = content.get("text", atom.get("raw_text", ""))
+    ts = source.get("timestamp", "")
+    date = ts[:10] if ts and not ts.startswith("1969") else ""
+    return {
+        "unified_id": f"annotated-{atom.get('id', '')}",
+        "original_id": atom.get("id", ""),
+        "source_type": "annotated_prompt",
+        "title": text[:80] if text else "",
+        "body": text[:500] if text else "",
+        "date": date,
+        "status": "OPEN",
+        "domain": "general",
+        "priority": "P2",
+        "tags": signals.get("tags", []),
+        "actionable": True,
+        "agent": source.get("agent", ""),
+        "linked_ids": [],
+        "classification": classification,
+        "signals": signals,
+        "threading": atom.get("threading", {}),
+    }
+
+
 def normalize_sub_atom(atom: dict) -> dict:
     ts = atom.get("source", {}).get("timestamp", "")
     date = ts[:10] if ts and not ts.startswith("1969") else ""
@@ -112,17 +141,20 @@ def main():
     plan_raw = load_jsonl(PLAN_PATH)
     prompt_raw = load_jsonl(PROMPT_PATH)
     short_raw = load_jsonl(SHORT_PATH)
+    annotated_raw = load_jsonl(ANNOTATED_PATH)
     sub_raw = load_jsonl(SUB_PATH)
 
     print(f"  Plan atoms: {len(plan_raw)}")
     print(f"  Prompt atoms: {len(prompt_raw)}")
     print(f"  Short prompt atoms: {len(short_raw)}")
+    print(f"  Annotated prompt atoms: {len(annotated_raw)}")
     print(f"  Sub-prompt atoms: {len(sub_raw)}")
 
     # Normalize all
     plan_atoms = [normalize_plan_atom(a) for a in plan_raw]
     prompt_atoms = [normalize_prompt_atom(a) for a in prompt_raw]
     short_atoms = [normalize_prompt_atom(a) for a in short_raw]
+    annotated_atoms = [normalize_annotated_atom(a) for a in annotated_raw]
     sub_atoms = [normalize_sub_atom(a) for a in sub_raw]
 
     # Build domain index for plan atoms
@@ -198,7 +230,7 @@ def main():
             linked_plan_ids.add(plan_a["unified_id"])
 
     # Combine all into unified index
-    all_atoms = plan_atoms + prompt_atoms + short_atoms + sub_atoms
+    all_atoms = plan_atoms + prompt_atoms + short_atoms + annotated_atoms + sub_atoms
 
     # Write unified atoms
     tmp = str(UNIFIED_OUTPUT) + ".tmp"
@@ -225,6 +257,7 @@ def main():
     print(f"  Plan atoms: {len(plan_atoms)}")
     print(f"  Prompt atoms: {len(prompt_atoms)}")
     print(f"  Short atoms: {len(short_atoms)}")
+    print(f"  Annotated atoms: {len(annotated_atoms)}")
     print(f"  Sub-prompt atoms: {len(sub_atoms)}")
     print(f"\nLinked pairs: {len(lineage)}")
     print(f"  Linked prompts: {len(linked_prompt_ids)}")
