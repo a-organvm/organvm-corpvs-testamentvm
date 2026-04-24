@@ -1,11 +1,11 @@
 {
-  "next_id": 438,
+  "next_id": 440,
   "last_claimed_by": "S-maddie-spiral-lightening-2026-04-23",
   "last_claimed_at": "2026-04-23",
   "claimed_range": [
-    432,
-    437
+    438,
+    439
   ],
-  "note": "6 completions: (432) spiral lightened + reduced-motion a11y, (433) node pages 1-4 enriched, (434) cycle-synced 3 branches, (435) analytics CF Web Analytics, (436) Keystatic CMS confirmed, (437) memory artifact-level capture protocol.",
+  "note": "2 completions: (438) prima materia — unified contextual substrate (3-layer: rules+hook+enforcement), (439) domus Docker cleanup (fish/manifest/chezmoiignore).",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
