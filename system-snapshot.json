@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-25T07:09:35.012064+00:00",
+  "generated_at": "2026-04-25T15:42:20.692568+00:00",
   "system": {
-    "total_repos": 147,
-    "active_repos": 91,
-    "density": 0.254,
-    "entities": 147,
+    "total_repos": 148,
+    "active_repos": 92,
+    "density": 0.253,
+    "entities": 148,
     "edges": 0,
     "ci_workflows": 107,
     "code_files": 0,
@@ -14,7 +14,7 @@
     "total_words_numeric": 0,
     "published_essays": 29,
     "sprints_completed": 33,
-    "ammoi": "AMMOI:25% E:0 T:0 C:0 Ev24h:2 [ORGAN-VI:76%, ORGAN-VII:75%, PERSONAL:68%]"
+    "ammoi": "AMMOI:25% E:0 T:0 C:0 Ev24h:2 [ORGAN-VI:76%, ORGAN-VII:75%, META-ORGANVM:63%]"
   },
   "code_profile": {},
   "word_counts": {},
@@ -975,9 +975,9 @@
     {
       "key": "PERSONAL",
       "name": "Personal / Liminal",
-      "repo_count": 3,
+      "repo_count": 4,
       "flagship_count": 1,
-      "standard_count": 0,
+      "standard_count": 1,
       "infrastructure_count": 1,
       "repositories": [
         {
@@ -997,13 +997,19 @@
           "status": "GRADUATED",
           "tier": "sovereign",
           "ci": false
+        },
+        {
+          "name": "hokage-chess",
+          "status": "LOCAL",
+          "tier": "standard",
+          "ci": false
         }
       ]
     }
   ],
   "variables": {
-    "total_repos": "147",
-    "active_repos": "91",
+    "total_repos": "148",
+    "active_repos": "92",
     "archived_repos": "54",
     "total_organs": "10",
     "operational_organs": "10",
@@ -1033,7 +1039,7 @@
     "organ_name.ORGAN-VII": "Marketing",
     "organ_repos.ORGAN-PSG": "0",
     "organ_name.ORGAN-PSG": "Process Sequence Governance",
-    "organ_repos.PERSONAL": "3",
+    "organ_repos.PERSONAL": "4",
     "organ_name.PERSONAL": "Personal / Liminal",
     "organ_repos.META-ORGANVM": "14",
     "organ_name.META-ORGANVM": "Meta"
@@ -1046,7 +1052,7 @@
     "ARCHIVED": 54,
     "CANDIDATE": 1,
     "GRADUATED": 59,
-    "LOCAL": 26,
+    "LOCAL": 27,
     "PUBLIC_PROCESS": 7
   }
 }

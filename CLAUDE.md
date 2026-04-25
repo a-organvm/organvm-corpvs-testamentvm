@@ -9,7 +9,7 @@ This is a **planning and governance documentation corpus** — not a source code
 **Owner:** @4444j99 / @4444J99
 **Status:** LAUNCHED (2026-02-11) — all 8 organs OPERATIONAL
 **Repository:** `meta-organvm/organvm-corpvs-testamentvm`
-**Documentation deployed:** ~404K+ words across 147 repos + 8 org profiles + 29 meta-system essays
+**Documentation deployed:** ~404K+ words across 148 repos + 8 org profiles + 29 meta-system essays
 
 There is no build system, test suite, or runtime code here. Executable artifacts include 5 validation scripts in `scripts/` and YAML/Python workflow specifications in `docs/implementation/github-actions-spec.md`.
 

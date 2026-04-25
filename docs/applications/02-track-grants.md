@@ -30,7 +30,7 @@ Grant reviewers evaluate:
 **Why you fit:** The eight-organ system IS a formally innovative creative work. 5+ years of sustained practice. The "process of creation IS the product" thesis is genuinely novel. 42 essays document the practice in real-time.
 
 **Key evidence:**
-- 147-repo system as living creative work, not a portfolio piece
+- 148-repo system as living creative work, not a portfolio piece
 - 33 named development sprints demonstrating sustained commitment
 - Automated governance: the rules that coordinate 100 repos are as carefully designed as any artwork
 - Public process methodology: building in public as creative practice
@@ -194,11 +194,11 @@ Grant reviewers evaluate:
 >
 > **Background:**
 <<<<<<< HEAD
-> Over the past five years, I have developed an eight-organ creative-institutional system that coordinates 147 repositories across theory, generative art, commercial products, governance, public process, community, and marketing. The system includes automated governance (11 GitHub Actions workflows), a machine-readable registry, formal dependency validation, and ~404K+ words of public documentation. All eight organs are currently operational, built through 33 named development sprints using AI tools as compositional instruments.
+> Over the past five years, I have developed an eight-organ creative-institutional system that coordinates 148 repositories across theory, generative art, commercial products, governance, public process, community, and marketing. The system includes automated governance (11 GitHub Actions workflows), a machine-readable registry, formal dependency validation, and ~404K+ words of public documentation. All eight organs are currently operational, built through 33 named development sprints using AI tools as compositional instruments.
 ||||||| 905f85c
-> Over the past five years, I have developed an eight-organ creative-institutional system that coordinates 147 repositories across theory, generative art, commercial products, governance, public process, community, and marketing. The system includes automated governance (11 GitHub Actions workflows), a machine-readable registry, formal dependency validation, and ~404K+ words of public documentation. All eight organs are currently operational, built through 33 named development sprints using AI tools as compositional instruments.
+> Over the past five years, I have developed an eight-organ creative-institutional system that coordinates 148 repositories across theory, generative art, commercial products, governance, public process, community, and marketing. The system includes automated governance (11 GitHub Actions workflows), a machine-readable registry, formal dependency validation, and ~404K+ words of public documentation. All eight organs are currently operational, built through 33 named development sprints using AI tools as compositional instruments.
 =======
-> Over the past five years, I have developed an eight-organ creative-institutional system that coordinates 147 repositories across theory, generative art, commercial products, governance, public process, community, and marketing. The system includes automated governance (11 GitHub Actions workflows), a machine-readable registry, formal dependency validation, and ~404K+ words of public documentation. All eight organs are currently operational, built through 33 named development sprints using AI tools as compositional instruments.
+> Over the past five years, I have developed an eight-organ creative-institutional system that coordinates 148 repositories across theory, generative art, commercial products, governance, public process, community, and marketing. The system includes automated governance (11 GitHub Actions workflows), a machine-readable registry, formal dependency validation, and ~404K+ words of public documentation. All eight organs are currently operational, built through 33 named development sprints using AI tools as compositional instruments.
 >>>>>>> 058f269af2f5047a7873ae1949e64979f558ca81
 >
 > **What This Grant Would Fund:**
@@ -208,7 +208,7 @@ Grant reviewers evaluate:
 > The eight-organ model demonstrates that sustainable creative practice requires institutional infrastructure — not just talent. By treating governance as an artistic medium and documenting the entire system publicly, this work contributes reusable patterns for other creative technologists, small arts organizations, and practitioners operating at the intersection of art and systems design.
 >
 > **Evidence of Capacity:**
-> - 147 repositories across 8 organizations, all operational
+> - 148 repositories across 8 organizations, all operational
 > - 107+ CI/CD pipelines, 11 governance workflows, automated monthly audits
 > - 42 published essays (~150K words)
 > - Flagship projects with >1,000 tests each
