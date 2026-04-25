@@ -9,8 +9,8 @@
   "source": "Audit of 8 GitHub orgs (organvm-i-theoria through organvm-vii-kerygma + meta-organvm) + personal account 4444J99 + local repos",
   "project_status": "ORGAN-RESET 2026-03-11. Dissolved 53 boilerplate repos into materia-collider. Styx-first pipeline hardening: first product to traverse full I\u2192II\u2192III\u2192IV\u2192V\u2192VI\u2192VII chain. Previous: PROPULSIO MAXIMA Sprint 2026-02-24.",
   "summary": {
-    "total_repos": 147,
-    "total_repos_note": "145 registry entries. Reconciliation Sprint 2026-04-14: 15 repos mass-registered + portfolio in PERSONAL. Previous: 129 entries.",
+    "total_repos": 148,
+    "total_repos_note": "145 registry entries. Reconciliation Sprint 2026-04-14: 15 repos mass-registered + portfolio in PERSONAL. Previous: 129 entries. 4444J99/hokage-chess registered as PERSONAL 2026-04-25 (client engagement for Rob Bonavoglia).",
     "operational_organs": 8,
     "completion_at_launch": "Platinum Sprint COMPLETE 2026-02-11 \u2014 65 repos with CI workflows, standardized badge rows, CHANGELOGs, ADRs. 17 meta-system essays (~70K words). ~339K total words.",
     "total_organizations": 8,
@@ -3054,7 +3054,7 @@
       "completion": "100%",
       "public_visibility": "MIXED",
       "portfolio_angle": "Infrastructure discipline \u2014 reproducible environments, agent-aware configuration, XDG compliance. Includes the FORMAL stratum (\u03c3_E): axiomatic ground truth for the entire system.",
-      "repository_count": 3,
+      "repository_count": 4,
       "repositories": [
         {
           "name": "domus-semper-palingenesis",
@@ -3110,6 +3110,25 @@
           "ci_workflow": null,
           "platinum_status": false,
           "note": "SOVEREIGN \u2014 predates the organ registry. The FORMAL stratum: what adjudicates. sys.toml is authoritative config; seed.yaml bridges to governance tooling (IRF-SYS-066). Produces: formal-derivation (ALL), entity-registry, atom-registry. Consumes: operational implementations (META), governance frameworks (ORGAN-IV)."
+        },
+        {
+          "name": "hokage-chess",
+          "org": "4444j99",
+          "status": "LOCAL",
+          "updated": "2026-04-25",
+          "public": false,
+          "type": "client-project",
+          "description": "Client engagement for Rob Bonavoglia (@HokageChess); landing page + business model + course catalog for NYC chess creator (~1350 ELO).",
+          "documentation_status": "IN_PROGRESS",
+          "portfolio_relevance": "MEDIUM",
+          "dependencies": [],
+          "promotion_status": "LOCAL",
+          "tier": "standard",
+          "last_validated": "2026-04-25",
+          "implementation_status": "ACTIVE",
+          "ci_workflow": null,
+          "platinum_status": false,
+          "note": "Client engagement for Rob Bonavoglia (@HokageChess); landing page + business model + course catalog. Recreated 2026-04-25 from earlier dissolved work. Distinct from archived organvm-iii-ergon/hokage-chess (dissolved to materia-collider 2026-03-11)."
         }
       ]
     },
