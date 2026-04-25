@@ -805,6 +805,10 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | IRF-PRT-024 | P2 | **Testament wiring for portfolio** — portfolio emits no testament events. Deployments, content publishes, quality phase transitions, and omega criterion flips should emit events to testament chain. Requires: event hooks in deploy.yml, astro build chain, quality-ratchet-kit; seed.yaml subscription declarations; artifact generators for portfolio self-portrait (skills constellation SVG, project network JSON). Pattern: see testament protocol spec `docs/superpowers/specs/2026-03-19-testament-protocol-design.md`. | Agent | S-wiring-tests N/A vacuum research | Testament protocol implementation |
 | IRF-PRT-025 | P2 | **Portfolio seed.yaml produces/consumes population (IRF-PRT-005 execution plan)** — Empty arrays need: produces (quality-metrics.json → meta-organvm, OG images → external, RSS feed → kerygma, GitHub Pages index → fleet, trust-vitals.json → dashboard) and consumes (system-metrics.json from organvm-engine, essay data from corpus). Pattern: see organvm-engine/seed.yaml (12 produces, 7 consumes) and commerce--meta/seed.yaml (8 produces, 3 consumes). | Agent | S-wiring-tests N/A vacuum research | None |
 | IRF-PRT-026 | P2 | **Portfolio domain migration — Cloudflare Pages + base path change (SOP Phase 3).** Move from `4444j99.github.io/portfolio/` to `anthonypadavano.com`. Steps: (1) Create Cloudflare Pages project linked to `4444J99/portfolio`, (2) Configure custom domain `anthonypadavano.com`, (3) **High-risk:** change `base` from `/portfolio` to `/` in `astro.config.mjs` + update `canonicalBase` in `src/utils/paths.ts` + update all hardcoded `/portfolio/` prefix refs + run `npm run sync:a11y-routes` + full `npm run quality:local` gate, (4) Zero-downtime cutover — keep GitHub Pages live until Cloudflare Pages verifiably serving, (5) Update `seed.yaml` `deployment_url` from `4444j99-portfolio.netlify.app` to `https://anthonypadavano.com`. SOP: `praxis-perpetua/standards/SOP--domain-architecture-and-dns.md` §3 Phase 3. | Agent | SOP--domain-architecture-and-dns.md | IRF-DOM-031 (domains must be registered first) |
+| IRF-PRT-027 | **P0** | **hokagechess.com domain registration (Cloudflare Registrar).** Verified available 2026-04-25 via Verisign. Register through Cloudflare Registrar (at-cost, no markup) before squatters move. Required for hokage-chess landing page deploy (IRF-PRT-028) and brand identity. Add to `chezmoi/dot_zshenv.tmpl` DOMAIN_HOKAGE env var per domain SOP. | Human | S-handoff-relay-2026-04-25 | None (5-min checkout) |
+| IRF-PRT-028 | **P0** | **hokage-chess landing page deploy to Vercel.** Repo `4444J99/hokage-chess` is private; Next.js 16 build ready. Deploy to Vercel: connect GitHub repo, configure custom domain `hokagechess.com` (depends on IRF-PRT-027), set environment variables (Kit API key per IRF-PRT-030), verify build passes, configure preview deploys. Needs OG metadata + Kit API integration before public traffic (IRF-PRT-029, IRF-PRT-030). | Agent | S-handoff-relay-2026-04-25 | IRF-PRT-027 (domain registration) |
+| IRF-PRT-029 | P1 | **OG image metadata + favicon for hokage-chess landing page.** Currently default Next.js public/ assets only. Required for social sharing fidelity (Twitter/X cards, LinkedIn, iMessage previews). Steps: (1) design OG image (1200×630, brand-consistent), (2) add `<meta property="og:*">` tags to root layout, (3) replace default favicon with brand mark, (4) add Twitter Card metadata, (5) verify with `https://www.opengraph.xyz/`. | Agent | S-handoff-relay-2026-04-25 | None |
+| IRF-PRT-030 | P1 | **Kit (ConvertKit) API integration for hokage-chess email capture form.** Currently `console.log` in `src/app/page.tsx` — submissions are lost to void. Steps: (1) create Kit account or reuse existing, (2) create form with appropriate tags (`hokage-chess`, `landing-page`), (3) replace `console.log` with `fetch` POST to Kit subscriber API, (4) handle success/error states with user feedback, (5) add `KIT_API_KEY` to Vercel env vars, (6) verify with test submission. | Agent | S-handoff-relay-2026-04-25 | None |
 
 ---
 
@@ -1280,6 +1284,11 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 | DONE-439 | **Domus Docker cleanup — fish configs + manifest + .chezmoiignore.** Docker env vars removed from fish (10-env.fish), docker-cleanup alias removed (30-aliases.fish), Docker completions removed (50-completions.zsh), lazydocker removed from manifest.yaml, dead LaunchAgent ignore block removed from .chezmoiignore. ShellCheck warnings fixed in agent-dispatch and session-context. `just check-all` fully green: 251 BATS + 128 pytest, 0 failures. | S-maddie-spiral-lightening-2026-04-23 | 2026-04-23 |
 | DONE-440 | **Sovereign-systems spiral — chakra stars + round 2 lightening (Maddie 2026-04-25 feedback).** Replaced `SphereGeometry` with 5-point `ExtrudeGeometry` star; added `chakraColorForNode` interpolating 7-chakra palette (root-red → crown-violet) across all 13 nodes bottom-to-top. Round 2 lightening: BG 0x0a2d33→0x14525d, fog 0.050→0.035, exposure 1.6→1.85, ambient 0.65→0.85, helix opacity 0.45→0.6, locked emissive 0.2→0.35, locked opacity 0.3→0.45 (so upper-half locked chakras still read). Per-node emojis preserved. **Closes GH#53.** Commit `02c90a2`. Repo: `organvm-iii-ergon/sovereign-systems--elevate-align`. Live: https://sovereign-systems-spiral.pages.dev/ (deployed via local `wrangler pages deploy` — CI auto-deploy still broken per GH#52). Plan: `.claude/plans/2026-04-25-maddie-spiral-chakra-stars-round2-lightening.md`. Handoff: `docs/handoff-maddie-spiral-2026-04-25.md`. | S-maddie-spiral-chakra-stars-2026-04-25 | 2026-04-25 |
 | DONE-441 | **Sovereign-systems spiral V3 — bg matches page, helix fits in fold (same-session follow-up).** V2 introduced two visible problems: (1) BG_COLOR `0x14525d` clashed with page bg `--color-ocean-900 #071e22` — hard horizontal seam; (2) canvas `h-[85vh]` pushed bottom of helix below the fold, so the lower chakras (root/sacral/solar) were invisible without scrolling. Fixed: BG_COLOR → `0x071e22` (matches page), compensated with brighter rendering (exposure 1.85→2.0, ambient 0.85→1.0, helix opacity 0.6→0.7, locked emissive 0.35→0.55, locked opacity 0.45→0.6). HELIX_HEIGHT 20→14 (compress), camera `(0,2,22)`→`(0,0,18)` (closer + symmetric), canvas `h-[85vh]`→`h-[calc(100vh-240px)]` (fits viewport regardless of size). Commit `845fcaf` + handoff `c7bca33` + design proposals `d380086` + auto-tracked HANDOFF.md `454a047`. Also opened **GH#54** (V4 node shapes — Proposal A sacred symbols + Proposal B generative) and **GH#55** (mobile camera tuning — chakras unreadable at mobile size). | S-maddie-spiral-chakra-stars-2026-04-25 | 2026-04-25 |
+| DONE-442 | **Sovereign-systems spiral mobile camera Z viewport-aware (helps mobile readability).** Camera Z distance now responsive to viewport size — addresses GH#55 mobile readability concern from V3 follow-up. Chakras now legible at mobile breakpoints without scaling artifacts. Commit `39128e3`. Repo: `organvm-iii-ergon/sovereign-systems--elevate-align`. | S-handoff-relay-2026-04-25 | 2026-04-25 |
+| DONE-443 | **Chezmoi 51 plan files synced from runtime to source.** Runtime plan archive at `~/.claude/plans/` reconciled into chezmoi source tree under `private_dot_claude/plans/`. Plans-as-artifacts axiom honored: 51 plan files now persisted via auto-commit + auto-push pipeline; soul persists if physical dies. Commit `048e7b2`. Repo: `4444J99/domus-semper-palingenesis`. | S-handoff-relay-2026-04-25 | 2026-04-25 |
+| DONE-444 | **4444J99/hokage-chess registered in registry-v2.json (PERSONAL organ).** New client product (Rob Bonavoglia / NYC chess creator engagement) added as PERSONAL/standard entry. Triple reference axiom advanced — entity now exists in registry, on filesystem, and in this IRF. Commit `e68933d`. Repo: `meta-organvm/organvm-corpvs-testamentvm`. | S-handoff-relay-2026-04-25 | 2026-04-25 |
+| DONE-445 | **Hokage-chess seed.yaml + docs/ROB-FIRST-30-DAYS.md (client one-pager).** Repo seed.yaml created declaring organ membership, tier, and produces/consumes edges. Client-facing first-30-days one-pager drafted at `docs/ROB-FIRST-30-DAYS.md` — concrete deliverables, milestones, and engagement scope for Rob Bonavoglia (Hokage Chess). Commit `b544076`. Repo: `4444J99/hokage-chess`. | S-handoff-relay-2026-04-25 | 2026-04-25 |
+| DONE-446 | **Product-domain-engine skill (conductor for 7 skills, 4 rhetorical modes, 5-phase formalization protocol, audit script).** New conductor skill consolidating product-domain methodology: orchestrates 7 sub-skills, declares 4 rhetorical modes, codifies 5-phase formalization protocol, ships with audit script. First fully-formalized instance of the Product Domain Engine (Hokage Chess as concrete instantiation). Commit `cf92479`. Repo: `a-organvm/a-i--skills`. | S-handoff-relay-2026-04-25 | 2026-04-25 |
 | DONE-404 | **Portfolio lodash-es override bumped 4.17.23 → >=4.18.1.** Old pin was blocking Dependabot security fixes (code injection HIGH + prototype pollution MEDIUM). Commits `439df3e`, `5c3d81f` on portfolio. CLAUDE.md updated. | S-full-landscape-audit-2026-04-21 | 2026-04-21 |
 | DONE-403 | **Application-pipeline 6 Dependabot alerts resolved.** Bumped anthropic→0.96, cryptography→46.0.7, pytest→9.0.3, python-multipart→0.0.26, markdownify→1.2.2. Commit `7bcc3b9e`. 0 open alerts remaining. | S-full-landscape-audit-2026-04-21 | 2026-04-21 |
 | DONE-402 | **8 theoria false-positive security alerts closed.** `organvm-i-theoria/.github` issues #409-#425 were Gitleaks scanning its own `.secrets.baseline` (99.7% of 3,436 findings). TruffleHog step broken (v2/v3 CLI mismatch). All 8 issues closed with diagnostic comment. | S-full-landscape-audit-2026-04-21 | 2026-04-21 |
@@ -1708,35 +1717,35 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
-Refreshed 2026-04-23 (S-knowledge-base-ingest-2026-04-23). +6 completions: DONE-423 (prompt atomization pipeline), DONE-424 (UAKS v1 spec), DONE-425 (engine tests 46/46), DONE-426 (Copilot ingestion), DONE-427 (domain reclassification), DONE-428 (190 repo standards deployed). +11 new items: IRF-SYS-133..143. 3 existing items advanced: IRF-SYS-056, IRF-SYS-070, IRF-SYS-076. Prior: S-domus-hygiene-2026-04-23 (DONE-422).
+Refreshed 2026-04-25 (S-handoff-relay-2026-04-25). +5 completions: DONE-442 (spiral mobile camera Z viewport-aware), DONE-443 (chezmoi 51-plan sync), DONE-444 (hokage-chess registry registration), DONE-445 (hokage seed.yaml + Rob first-30-days one-pager), DONE-446 (product-domain-engine skill — conductor for 7 skills, 4 rhetorical modes, 5-phase formalization protocol, audit script). +4 new vacuums: IRF-PRT-027 (hokagechess.com registration P0), IRF-PRT-028 (hokage-chess Vercel deploy P0), IRF-PRT-029 (OG metadata + favicon P1), IRF-PRT-030 (Kit API integration P1). Prior: S-maddie-spiral-chakra-stars-2026-04-25 (DONE-440, 441), S-knowledge-base-ingest-2026-04-23 (DONE-423..428).
 
-- **Total IRF items:** 949 *(prior 932, +11 new items, +6 completions)*
-- **Open:** 541 *(prior 536, +11 new, -6 completed)*
-- **Completed:** 404 *(prior 398, +6: DONE-423..428)*
+- **Total IRF items:** 953 *(prior 949, +4 new items, +5 completions absorbed)*
+- **Open:** 540 *(prior 541, +4 new, -5 completed)*
+- **Completed:** 409 *(prior 404, +5: DONE-442..446)*
 - **Blocked:** 0
 - **Archived:** 0
-- **Completion rate:** 42.6%
+- **Completion rate:** 42.9%
 
 ### Open By Priority
 
 | Priority | Count |
 |----------|-------|
-| P0 | 11 *(prior 10, +1: SYS-137)* |
-| P1 | 200 *(prior 194, +6: SYS-133, SYS-136, SYS-138, SYS-141, SYS-142, SYS-143)* |
-| P2 | 235 *(prior 231, +4: SYS-134, SYS-135, SYS-139, SYS-140)* |
+| P0 | 13 *(prior 11, +2: PRT-027, PRT-028)* |
+| P1 | 202 *(prior 200, +2: PRT-029, PRT-030)* |
+| P2 | 235 |
 | P3 | 41 |
 
 ### By Domain
 
 | Domain | Count |
 |--------|-------|
-| DONE | 356 *(prior 350, +6)* |
+| DONE | 361 *(prior 356, +5)* |
 | RES | 83 |
 | APP | 55 |
 | OSS | 52 |
-| SYS | 59 *(prior 48, +11: SYS-133..143)* |
+| SYS | 59 |
 | DOM | 29 |
-| PRT | 20 |
+| PRT | 24 *(prior 20, +4: PRT-027..030)* |
 | III | 15 |
 | CCE | 25 |
 | LIQ | 11 |
@@ -1779,7 +1788,7 @@ Refreshed 2026-04-23 (S-knowledge-base-ingest-2026-04-23). +6 completions: DONE-
 
 ---
 
-*Last updated: 2026-04-23 — S-knowledge-base-ingest-2026-04-23 massive session update. +6 DONE (423..428): prompt atomization pipeline, UAKS v1, engine tests, Copilot ingestion, domain reclassification, 190 repo standards. +11 new IRF-SYS items (133..143): atom review queue, ideal forms, unclassified facets, remoteless repos, Gemini Takeout, webhook secret, domain classifier, review server persistence, dispatch envelopes, Becka McKay, application pipeline stall. 3 items advanced: SYS-056, SYS-070, SYS-076.*
+*Last updated: 2026-04-25 — S-handoff-relay-2026-04-25. +5 DONE (442..446): spiral mobile camera Z viewport-aware, chezmoi 51-plan sync, hokage-chess registry registration, hokage seed.yaml + Rob first-30-days one-pager, product-domain-engine skill (conductor for 7 skills, 4 rhetorical modes, 5-phase formalization protocol, audit script). +4 new IRF-PRT items (027..030): hokagechess.com registration (P0), hokage-chess Vercel deploy (P0), OG metadata + favicon (P1), Kit API integration (P1).*
 *Next update: After any session that produces or discovers work items*
 
 ### S36 Email Triage Discovered Items (2026-03-24)
