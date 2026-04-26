@@ -91,6 +91,16 @@ def parse_jsonl_session(filepath: Path, project_dir: str) -> list[dict]:
             continue
         if "<local-command-stdout>" in raw_content and len(raw_content) < 200:
             continue
+        # Skip harness/runtime sentinels and notification echoes (not user-authored)
+        # Why: these flow through user-message slots in JSONL but originate from the
+        # harness, not from the human. Without this filter they tag as "user prompts"
+        # and pollute downstream classification (corpus run 2026-04-26 surfaced
+        # autonomous-loop sentinels and task-notification echoes as hanging vacuums).
+        stripped = raw_content.strip()
+        if stripped.startswith("<<autonomous-loop") or stripped == "<<autonomous-loop-dynamic>>":
+            continue
+        if stripped.startswith("<task-notification>") or "<task-notification>" in stripped[:50]:
+            continue
         if raw_content.strip().startswith("<command-name>") and len(raw_content) < 200:
             # Extract slash command
             cmd_match = re.search(r"<command-name>([^<]+)</command-name>", raw_content)
