@@ -60,5 +60,5 @@ jobs:
       - name: Build portfolio with committed data snapshot policy
         run: |
           cd portfolio-site
-          npm install
+          npm ci
           npm run build
