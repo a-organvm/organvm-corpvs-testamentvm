@@ -3,7 +3,7 @@
 **Status:** ACTIVE
 **Created:** 2026-03-20
 **Authority:** META — System-wide governance instrument
-Purpose: Universal hanging index of things to be done — the canonical gap between what the system IS and what it NEEDS TO BE. (949 items, 21 domains)
+Purpose: Universal hanging index of things to be done — the canonical gap between what the system IS and what it NEEDS TO BE. (951 items, 21 domains)
 
 > *Index Rerum Faciendarum* — after the classical scholarly apparatus: *Index Locorum* (places), *Index Nominum* (names), *Index Rerum* (things). The gerundive *faciendarum* transforms reference into obligation: not things that exist, but things that must be made to exist.
 
@@ -77,6 +77,8 @@ The counter file is the single source of truth for the DONE-ID ceiling. The stat
 
 | ID | Priority | Action | Owner | Source | Blocker |
 |----|----------|--------|-------|--------|---------|
+| IRF-SYS-156 | **P1** | **SYS-156: Notification/CI cascade triage.** 1,454 unread CI failures and 16 humans-waiting items. **PARTIALLY ADVANCED (S-Achilles-A):** (1) Sourced CI ledger created (AG-03). (2) Humans-waiting queue reduced 16→8 via autonomous merging; User Decision Packet shipped (AG-02). (3) Dotfiles CI root-caused and fixed (AG-04). **Remaining:** AG-05 broader cascade triage. | Agent | S-Achilles-A | None |
+| IRF-SYS-157 | **P1** | **PRT ID Authority Discovery.** Resolve the "verification vacuum" of PRT/SYS/DONE IDs. **DONE (S-Achilles-A):** Discovered `INST-INDEX-RERUM-FACIENDARUM.md` as the canonical authority store for all governance IDs. `MEMORY.md` and audits updated to stop referencing `fossil-record.json` as the authority. | Agent | S-Achilles-A | Completed |
 | IRF-SYS-001 | P1 | Consolidate universal standards into a single CONSTITUTION.md — naming conventions, required files, required processes, design standards | Agent | S14, Memory | None |
 | IRF-SYS-002 | P2 | Deploy standard GitHub Actions workflow template across GRADUATED repos | Agent | Wants list | Need template designed first |
 | IRF-SYS-003 | P2 | Seed.yaml coverage: 72/117 → 117/117 | Agent | CLAUDE.md | Incremental |
@@ -1279,6 +1281,8 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | What | Session | Date |
 |----|----------|---------|------|
+| DONE-470 | **PRT-048 substrate skill built and indexed.** Formalized foundational domain substrate (8 strata + 4 operators) as a conductor skill in `a-i--skills`. Shipped `SKILL.md`, 8 asset templates, and `audit.sh`. Integrated into `seed.yaml` and `CLAUDE.md`. | S-Achilles-A | 2026-04-25 |
+| DONE-469 | **Dotfiles CI fix — missing organvm_dir/skills_dir root cause.** Diagnosed and fixed `macOS Integration` failure in `domus-semper-palingenesis` caused by missing configuration keys in CI chezmoi data block. Updated `.github/workflows/lint.yml`. | S-Achilles-A | 2026-04-25 |
 | DONE-461 | **IRF statistics and cross-index synchronization — hall-monitor pass.** Updated IRF stats (+4 DONE), synchronized `seed.yaml` and `CLAUDE.md` in `sovereign-systems--elevate-align` to reflect IconWorlds physics and multi-lens substrate logic. Performed bulk-mark CI noise read on GitHub notifications (advances IRF-SYS-156). | S-f4d8ffa9-4f87-4f02-be25-c534f889f4a1 | 2026-04-25 |
 | DONE-460 | **Workspace prep, HANDOFF.md update, and session history export.** Cleaned `sovereign-systems--elevate-align` working tree (gitignore residual transcripts), updated `HANDOFF.md` with V6 state + Cloudflare token rotation steps, and exported session history to `export-2026-04-25T20-24-30.md`. Commit `1f2fe8d`. | S-f4d8ffa9-4f87-4f02-be25-c534f889f4a1 | 2026-04-25 |
 | DONE-459 | **Sovereign-systems spiral — mobile camera Z viewport-aware.** Verified and documented completion of responsive camera Z distance (12 for mobile, 18 for desktop) which addresses GH#55 readability concerns. Commit `39128e3`. | S-f4d8ffa9-4f87-4f02-be25-c534f889f4a1 | 2026-04-25 |
@@ -2018,8 +2022,8 @@ Refreshed 2026-04-25 second pass (S-2026-04-25-engine-infra-landing-cross-cluste
 
 | ID | What | Session | Date |
 |----|------|---------|------|
-| DONE-463 | **BODI Autonomous Solo Execution Pass completing Phases 0-6.** Gap-map updated, actor constellation expanded to 52, lineage timeslices completed, ingestion rules expanded. PDE audit scores increased (+1 to +3 across all domains). | S-2026-04-25-bodi-autonomous-solo-execution-pass | 2026-04-25 |
-| DONE-464 | **Acknowledgment of Scott Lefler persona vacuum and memory overwrite protocol alignment.** Addressed the structural vacuum for Scott Lefler's communication response speed and domain substrate. Confirmed local/remote git persistence protocol for overwritten entity memory files. | S-2026-04-25-bodi-autonomous-solo-execution-pass | 2026-04-25 |
+| DONE-471 | **BODI Autonomous Solo Execution Pass completing Phases 0-6.** Gap-map updated, actor constellation expanded to 52, lineage timeslices completed, ingestion rules expanded. PDE audit scores increased (+1 to +3 across all domains). | S-2026-04-25-bodi-autonomous-solo-execution-pass | 2026-04-25 |
+| DONE-472 | **Acknowledgment of Scott Lefler persona vacuum and memory overwrite protocol alignment.** Addressed the structural vacuum for Scott Lefler's communication response speed and domain substrate. Confirmed local/remote git persistence protocol for overwritten entity memory files. | S-2026-04-25-bodi-autonomous-solo-execution-pass | 2026-04-25 |
 
 ### S-2026-04-25-bodi-autonomous-solo-execution-pass Discovered Items
 
