@@ -1,11 +1,11 @@
 {
-  "next_id": 491,
-  "last_claimed_by": "S-three-filters-2026-04-26",
+  "next_id": 492,
+  "last_claimed_by": "S-prompting-calendar-2026-04-26",
   "last_claimed_at": "2026-04-26",
   "claimed_range": [
-    490,
-    490
+    491,
+    491
   ],
-  "note": "Three Filters Conversational Prompt Chain documented. Filter 1: Raw abstraction. Filter 2: Domain formalization. Filter 3: Pure idea/generalizable.",
+  "note": "Ideal Universal Calendar of Prompting documented. Daily sequence, 7-day cycle, Three Filters applied to prompting, Quality Score formula, improvement protocol.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
