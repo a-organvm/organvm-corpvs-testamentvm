@@ -1,11 +1,11 @@
 {
-  "next_id": 489,
-  "last_claimed_by": "S-scrutator-vitals-2026-04-26",
+  "next_id": 490,
+  "last_claimed_by": "S-prompt-chain-2026-04-26",
   "last_claimed_at": "2026-04-26",
   "claimed_range": [
-    488,
-    488
+    489,
+    489
   ],
-  "note": "Entity Vital Signs registry added to organvm-scrutator. Tracked 8 entities with pathos/logos/ethos scores, trends, and diagnoses. IRF and corpus updated.",
+  "note": "RAW→CLEANED→ELEVATED prompt chain protocol documented in organvm-scrutator. Complete stages from witness to multiversal exploration.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
