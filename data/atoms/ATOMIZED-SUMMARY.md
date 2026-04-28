@@ -1,6 +1,6 @@
 # Plan Atomization Summary
-**Generated**: 2026-04-23
-**Plans parsed**: 873 | **Tasks extracted**: 11979
+**Generated**: 2026-04-27
+**Plans parsed**: 990 | **Tasks extracted**: 10647
 
 ## By Project
 
@@ -27,14 +27,15 @@
 | 4444J99/application-pipeline/.codex/plans | 3 | 47 | 0 | 47 | 0 |
 | 4444J99/application-pipeline/strategy/.claude/plans | 4 | 62 | 20 | 42 | 0 |
 | 4444J99/application-pipeline/strategy/.gemini/plans | 1 | 9 | 0 | 9 | 0 |
-| 4444J99/domus-semper-palingenesis/.claude/plans | 30 | 352 | 12 | 340 | 0 |
+| 4444J99/domus-semper-palingenesis/.claude/plans | 40 | 443 | 16 | 427 | 0 |
 | 4444J99/domus-semper-palingenesis/.gemini/plans | 3 | 15 | 0 | 15 | 0 |
+| 4444J99/hokage-chess/.codex/plans | 4 | 22 | 1 | 21 | 0 |
 | 4444J99/portfolio/.claude/plans | 12 | 173 | 0 | 173 | 0 |
 | 4444J99/portfolio/.codex/plans | 1 | 1 | 0 | 1 | 0 |
 | 4444J99/portfolio/.gemini/plans | 4 | 30 | 0 | 30 | 0 |
-| 4444J99/system-system--system/.claude/plans | 1 | 8 | 0 | 8 | 0 |
+| 4444J99/system-system--system/.claude/plans | 21 | 191 | 0 | 191 | 0 |
 | 4444J99/system-system--system/.gemini/plans | 2 | 23 | 14 | 9 | 0 |
-| _root | 240 | 3493 | 33 | 3460 | 0 |
+| _root | 299 | 1704 | 12 | 1692 | 0 |
 | a-organvm/.claude/plans | 13 | 260 | 0 | 260 | 0 |
 | a-organvm/.codex/plans | 1 | 1 | 1 | 0 | 0 |
 | intake/dwv/specvla-ergon--avditor-mvndi/.claude/plans | 6 | 31 | 0 | 31 | 0 |
@@ -45,20 +46,23 @@
 | organvm/alchemical-synthesizer/.claude/plans | 1 | 38 | 0 | 38 | 0 |
 | organvm/atomic-substrata/.codex/plans | 3 | 9 | 0 | 9 | 0 |
 | organvm/content-engine--asset-amplifier/.claude/plans | 1 | 8 | 0 | 8 | 0 |
-| organvm/content-engine--asset-amplifier/.gemini/plans | 2 | 33 | 33 | 0 | 0 |
+| organvm/content-engine--asset-amplifier/.gemini/plans | 5 | 58 | 33 | 25 | 0 |
 | organvm/contrib--adenhq-hive/.claude/plans | 2 | 56 | 0 | 56 | 0 |
 | organvm/contrib--grafana-k6/.claude/plans | 1 | 5 | 0 | 5 | 0 |
 | organvm/conversation-corpus-engine/.claude/plans | 7 | 144 | 0 | 144 | 0 |
 | organvm/conversation-corpus-engine/.codex/plans | 26 | 159 | 1 | 158 | 0 |
+| organvm/conversation-corpus-engine/.gemini/plans | 3 | 17 | 0 | 17 | 0 |
 | organvm/essay-pipeline/.claude/plans | 3 | 29 | 0 | 29 | 0 |
 | organvm/growth-auditor/.claude/plans | 6 | 31 | 0 | 31 | 0 |
 | organvm/materia-collider/bench/organ-reset-2026-03-11/organ-i/hierarchia-mundi/.claude/plans | 1 | 14 | 0 | 14 | 0 |
 | organvm/materia-collider/bench/organ-reset-2026-03-11/organ-iii/fetch-familiar-friends/.gemini/plans | 1 | 4 | 0 | 4 | 0 |
 | organvm/mesh/.claude/plans | 2 | 21 | 0 | 21 | 0 |
 | organvm/metasystem-master/.codex/plans | 1 | 1 | 0 | 1 | 0 |
+| organvm/my-knowledge-base/.gemini/plans | 1 | 6 | 0 | 6 | 0 |
 | organvm/orchestration-start-here/.claude/plans | 12 | 180 | 0 | 180 | 0 |
-| organvm/orchestration-start-here/.gemini/plans | 3 | 9 | 0 | 9 | 0 |
+| organvm/orchestration-start-here/.gemini/plans | 8 | 55 | 0 | 55 | 0 |
 | organvm/organvm-corpvs-testamentvm/.claude/plans | 9 | 109 | 0 | 109 | 0 |
+| organvm/organvm-corpvs-testamentvm/.gemini/plans | 2 | 12 | 0 | 12 | 0 |
 | organvm/organvm-engine/.claude/plans | 10 | 173 | 0 | 173 | 0 |
 | organvm/organvm-engine/.codex/plans | 2 | 7 | 0 | 7 | 0 |
 | organvm/organvm-mcp-server/.codex/plans | 1 | 5 | 0 | 5 | 0 |
@@ -66,11 +70,14 @@
 | organvm/peer-audited--behavioral-blockchain/.codex/plans | 28 | 58 | 0 | 58 | 0 |
 | organvm/peer-audited--behavioral-blockchain/.gemini/plans | 3 | 24 | 0 | 24 | 0 |
 | organvm/praxis-perpetua/.claude/plans | 3 | 58 | 0 | 58 | 0 |
+| organvm/praxis-perpetua/.gemini/plans | 1 | 3 | 0 | 3 | 0 |
+| organvm/public-process/.gemini/plans | 1 | 4 | 0 | 4 | 0 |
 | organvm/public-record-data-scrapper/.claude/plans | 1 | 42 | 0 | 42 | 0 |
 | organvm/public-record-data-scrapper/.codex/plans | 2 | 14 | 0 | 14 | 0 |
 | organvm/scale-threshold-emergence/.codex/plans | 4 | 16 | 0 | 16 | 0 |
 | organvm/schema-definitions/.codex/plans | 1 | 5 | 0 | 5 | 0 |
-| organvm/sovereign-systems--elevate-align/.claude/plans | 15 | 227 | 1 | 226 | 0 |
+| organvm/sovereign-systems--elevate-align/.claude/plans | 22 | 261 | 1 | 260 | 0 |
+| organvm/sovereign-systems--elevate-align/.codex/plans | 1 | 14 | 0 | 14 | 0 |
 | organvm/stakeholder-portal/.claude/plans | 12 | 140 | 0 | 140 | 0 |
 | organvm/stakeholder-portal/.codex/plans | 4 | 100 | 0 | 100 | 0 |
 | organvm/stakeholder-portal/.gemini/plans | 5 | 22 | 0 | 22 | 0 |
@@ -87,29 +94,29 @@
 
 | Type | Count | % |
 |------|-------|---|
-| generic | 4639 | 38% |
-| create_file | 1305 | 10% |
-| write_test | 941 | 7% |
-| configure | 924 | 7% |
-| modify_file | 858 | 7% |
-| document | 848 | 7% |
-| verify | 496 | 4% |
-| git_operation | 430 | 3% |
-| migrate | 404 | 3% |
-| research | 306 | 2% |
-| deploy | 298 | 2% |
-| delete_file | 224 | 1% |
-| review | 172 | 1% |
-| exploration | 63 | 0% |
-| refactor | 61 | 0% |
-| post_hoc | 10 | 0% |
+| generic | 3981 | 37% |
+| create_file | 1126 | 10% |
+| document | 1047 | 9% |
+| write_test | 847 | 7% |
+| configure | 772 | 7% |
+| modify_file | 705 | 6% |
+| verify | 411 | 3% |
+| git_operation | 371 | 3% |
+| migrate | 339 | 3% |
+| research | 287 | 2% |
+| deploy | 266 | 2% |
+| delete_file | 216 | 2% |
+| review | 163 | 1% |
+| exploration | 53 | 0% |
+| refactor | 51 | 0% |
+| post_hoc | 12 | 0% |
 
 ## By Status
 
 | Status | Count | % |
 |--------|-------|---|
-| pending | 11792 | 98% |
-| completed | 187 | 1% |
+| pending | 10476 | 98% |
+| completed | 171 | 1% |
 
 ## Largest Plans (by task count)
 
@@ -117,117 +124,98 @@
 |------|---------|-------|-------------|
 | Flat Verb Map — meta-organvm Functional Deduplicat | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 249 | 0% |
 | Directory Dissection: meta-organvm Post-Mortem → T | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 203 | 0% |
-| Directory Dissection: meta-organvm Post-Mortem → T | _root | 203 | 0% |
+| Session Export: rob-gemini-warm-clock + artifact i | _root | 181 | 0% |
 | Conductor Temporal Architecture — The Click Track | organvm/tool-interaction-design/.claude/plans | 138 | 0% |
 | Trivium — Dialectica Universalis: The Structural I | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 107 | 0% |
 | Archaeological Excavation Report: ORGAN-I / II / I | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 102 | 0% |
 | Unspoken Sentences — Full Implementation Plan | _root | 89 | 0% |
 | Ideal Form Classification — What Each Repo Reaches | a-organvm/.claude/plans | 89 | 0% |
-| Plan: S-Zettelkasten Close-Out (supersedes zettelk | _root | 81 | 0% |
 | Post-Flood Constitutional Implementation Plan | .archive/superprojects-20260420-120747/meta-organvm/post-flood/.claude/plans | 80 | 0% |
 | Content Pipeline Integration — Implementation Plan | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 80 | 0% |
-| Session S40 Implementation Plan — conversation-cor | _root | 75 | 0% |
-| Implementation Plan: sign-signal--voice-synth Laye | _root | 71 | 0% |
-| Universal Modular Fractal Alchemical Synthesizer — | _root | 69 | 0% |
 | Universal Modular Fractal Alchemical Synthesizer — | a-organvm/.claude/plans | 69 | 0% |
 | Universal Modular Fractal Alchemical Synthesizer — | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 69 | 0% |
 | Universal Modular Fractal Alchemical Synthesizer — | .archive/superprojects-20260420-120747/organvm-iv-taxis/.claude/plans | 69 | 0% |
 | Collaboration Infrastructure Implementation Plan | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 66 | 0% |
+| Untitled Plan | _root | 65 | 0% |
 | Operational Hardening Implementation Plan | organvm/conversation-corpus-engine/.claude/plans | 65 | 0% |
+| Session Handoff — 2026-04-23 (Prompt Atomization)  | _root | 64 | 0% |
 | Conversation Summary: Research Ingestion SOP Searc | .archive/superprojects-20260420-120747/organvm-iv-taxis/.claude/plans | 64 | 0% |
+| IRF System Integration — Implementation Plan | organvm/organvm-corpvs-testamentvm/.claude/plans | 63 | 0% |
+| Research Ingestion/Synthesis/Digestion SOP Discove | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | 62 | 0% |
 
 ## By Agent
 
 | Agent | Count | % |
 |-------|-------|---|
-| claude | 10682 | 89% |
-| codex | 1032 | 8% |
-| gemini | 265 | 2% |
+| claude | 9201 | 86% |
+| codex | 1068 | 10% |
+| gemini | 378 | 3% |
 
 ## By Organ
 
 | Organ | Count | % |
 |-------|-------|---|
-| _root | 4195 | 35% |
-| META | 3115 | 26% |
-| LIMINAL | 1828 | 15% |
-| I | 1291 | 10% |
-| IV | 931 | 7% |
-| III | 339 | 2% |
-| II | 114 | 0% |
-| V | 107 | 0% |
-| VII | 50 | 0% |
+| _root | 3791 | 35% |
+| LIMINAL | 2310 | 21% |
+| META | 2221 | 20% |
+| I | 1071 | 10% |
+| IV | 765 | 7% |
+| III | 237 | 2% |
+| V | 107 | 1% |
+| II | 98 | 0% |
+| VII | 38 | 0% |
 | VI | 9 | 0% |
 
 ## Non-Actionable Documents
 
 | Plan | Project | Classification |
 |------|---------|----------------|
+| Rob Evidence of Existence System Audit | 4444J99/hokage-chess/.codex/plans | post_hoc |
+| Keyword Extraction (Hokage + Spiral) and Drive Con | _root | generic |
+| Untitled Plan | _root | generic |
+| Self-Audit of the 2026-04-27 Substrate | _root | post_hoc |
+| Theoretical Specification: Omega Alpha to Omega | _root | generic |
+| Warp Performance Diagnosis — Voice Lag Root Cause  | _root | generic |
+| Renamed from: you-re-auditing-reviewing-federated- | _root | post_hoc |
+| RESEARCH_ATLAS_V3: Dissertation-Grade OS | organvm/praxis-perpetua/.gemini/plans | generic |
+| HALL-MONITOR AUDIT & CRITICAL RECOVERY PROTOCOL | organvm/organvm-corpvs-testamentvm/.gemini/plans | git_operation |
+| Visibility Schema Substrate Sweep (The Alpha to Om | organvm/orchestration-start-here/.gemini/plans | modify_file |
+| SOP: Reflexive Loop Human Anchoring (The Ouroboros | organvm/orchestration-start-here/.gemini/plans | review |
+| 2026-04-25 — Sourced CI Failure Ledger | 4444J99/domus-semper-palingenesis/.claude/plans | research |
+| 2026-04-25 — SYS-156 User Decision Packet | 4444J99/domus-semper-palingenesis/.claude/plans | research |
+| Plan — Modular-Synthesis Portfolio Unification + 7 | _root | deploy |
+| Relay — SYS-156 / Cascading CI Failure Surface | _root | create_file |
+| Rob/Hokage Prompt Corpus — Past 72 Hours (2026-04- | _root | exploration |
+| SYS-156 — GitHub Notification Triage (P0) | _root | configure |
 | Email Triage — Repeatable Process Plan | _root | create_file |
 | Sticky Note Atom Routing — 2026-04-22 | 4444J99/domus-semper-palingenesis/.claude/plans | exploration |
 | Conductor Session Handoff — 2026-04-22 v2 | _root | document |
 | Conductor Session Handoff — 2026-04-22 | _root | verify |
 | Sticky Note Atom Routing — 2026-04-22 | _root | exploration |
-| Plan: Triage 1,138 Prompt Atoms | _root | configure |
-| Plan: Triage Batch 1 Prompt Atoms (1,138 atoms) | _root | generic |
-| Plan: Triage Batch 4 — 1,137 Prompt Atoms | _root | generic |
-| Plan: Write Maddie System Report | _root | research |
 | Declarative Configuration Landscape Research | a-organvm/.claude/plans | configure |
 | Institutional Substrate Phase 0 — Implementation P | organvm/organvm-engine/.claude/plans | create_file |
 | Declarative Configuration Landscape Research | _root | configure |
 | Zeitgeist Carrier Wave — Research Dispatch Plan | _root | generic |
-| Zeitgeist Carrier Wave — Research Dispatch Plan | _root | generic |
-| Declarative Configuration Landscape Research | _root | configure |
-| Institutional Substrate Phase 0 — Implementation P | _root | create_file |
 | S-Constitutional-Wiring: Restore Corpus Access + W | organvm/organvm-engine/.claude/plans | research |
-| The Cascading Whole — Unified Atomization + Backlo | _root | configure |
-| S-Constitutional-Wiring: Restore Corpus Access + W | _root | research |
-| Plan: Inject Cross-Audit Backlog into Prompt Atoms | _root | generic |
-| Plan: Prompt Atomizer Improvements | _root | modify_file |
-| Plan: Email Triage System (mail-triage) | _root | create_file |
-| Docker Decision Framework — for a Non-Programmer B | _root | modify_file |
 | Comprehensive Maddie Request Audit — 2026-04-17 | organvm/sovereign-systems--elevate-align/.claude/plans | git_operation |
-| Dotfiles Sprawl Exploration Plan | _root | configure |
-| Full Implementation Plan — Sovereign Systems Spira | _root | document |
 | Plugin Errors + Activity Monitor Review | _root | post_hoc |
-| Governance and Orchestration Infrastructure Search | _root | generic |
 | Session Close-Out Plan: S-contrib-execution-2 (202 | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | generic |
-| Agentic-Titan: Unified Elevated State | _root | write_test |
-| Session Close-Out Plan: S-contrib-execution-2 (202 | _root | generic |
 | S-Zettelkasten Successor: Complete the Zettelkaste | .archive/superprojects-20260420-120747/meta-organvm/post-flood/.claude/plans | document |
-| Plan: Fix context sync error line accumulation | _root | generic |
-| Plan: S-Zettelkasten Close-Out (supersedes zettelk | _root | document |
-| Plan: Remove Unused GKE MCP Extension from VS Code | _root | modify_file |
 | Ideal Form Classification — What Each Repo Reaches | a-organvm/.claude/plans | generic |
-| Empirical Structure Test Suite | _root | write_test |
 | UMFAS Birth Sequence — Step 1: INVENTORY | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | git_operation |
 | Fortify-ORGANVM Postmortem: Governance Threshold M | _root | verify |
-| Universal Modular Fractal Alchemical Synthesizer — | _root | generic |
-| Archive Original Catalogue — Complete File-by-File | _root | document |
-| Birth Search — Discovery Interface Over the Invent | _root | document |
 | Universal Modular Fractal Alchemical Synthesizer — | a-organvm/.claude/plans | generic |
 | META-ORGANVM — Top-to-Bottom Structural Analysis | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | modify_file |
 | Universal Modular Fractal Alchemical Synthesizer — | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | generic |
 | Plan: Bidirectional Process Crystallization | .archive/superprojects-20260420-120747/organvm-iv-taxis/.claude/plans | create_file |
 | META-ORGANVM — Top-to-Bottom Structural Analysis | .archive/superprojects-20260420-120747/organvm-iv-taxis/.claude/plans | modify_file |
 | Universal Modular Fractal Alchemical Synthesizer — | .archive/superprojects-20260420-120747/organvm-iv-taxis/.claude/plans | generic |
-| Plan: Prompt-Atom Decomposer — Smallest Atomic Uni | _root | generic |
-| ExecTimeout Verification Report — LaunchAgent Plis | _root | generic |
-| Structural Analysis & Consolidation Planning — Con | _root | migrate |
-| Plan: Fortify a-organvm with Distilled ORGAN-IV Ta | _root | modify_file |
 | Directory Dissection: meta-organvm Post-Mortem → T | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | generic |
 | Flat Verb Map — meta-organvm Functional Deduplicat | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | document |
 | Prompt Archaeology — Full Corpus Assembly | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | configure |
 | Universal Prompt Archaeology — System-Wide Extract | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | exploration |
 | Reconciliation Handoff Groupings | .archive/superprojects-20260420-120747/meta-organvm/.codex/plans | git_operation |
-| Plan: Atom Grading → Assembly → First Deliverable | _root | exploration |
-| Universal Prompt Archaeology — System-Wide Extract | _root | exploration |
-| Prompt Archaeology — Full Corpus Assembly | _root | configure |
-| Root Hygiene + README — Repository Standards Pass | _root | delete_file |
-| Exhaustive Recursive Descent of organvm-engine | _root | write_test |
-| Directory Dissection: meta-organvm Post-Mortem → T | _root | generic |
 | Audit: Documentation Handoff Architecture | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | modify_file |
-| Audit: Documentation Handoff Architecture | _root | modify_file |
 | Plan: Define AI Agent Fleet — Limits, Abilities, a | .archive/superprojects-20260420-120747/organvm-iv-taxis/.claude/plans | generic |
 | Temporal Maturity Vacuum Audit | a-organvm/.codex/plans | post_hoc |
 | Maddie Spiral Orchestration Assignment | organvm/sovereign-systems--elevate-align/.claude/plans | review |
@@ -235,19 +223,11 @@
 | Transcript Ingestion Plan: S48/S49 Full Audit & Re | organvm/orchestration-start-here/.gemini/plans | generic |
 | Session Closure Health Audit — Two Prior Sessions | organvm/orchestration-start-here/.claude/plans | modify_file |
 | Energy-Expelling State Changes + Claude Plans Hand | organvm/orchestration-start-here/.claude/plans | configure |
-| Energy-Expelling State Changes + Claude Plans Hand | _root | configure |
-| Exit Interview Protocol — Presidential Handoff Bet | _root | migrate |
-| Session Closure Health Audit — Two Prior Sessions | _root | modify_file |
 | Full Quadrant Distribution — Work Item Specificati | 4444J99/application-pipeline/.claude/plans | exploration |
 | Patch-Based Signal Architecture for SOP Governance | .archive/superprojects-20260420-120747/meta-organvm/.claude/plans | configure |
 | S40 Plan: Full-Breath Session — Ops Recovery, Code | organvm/conversation-corpus-engine/.claude/plans | generic |
 | Conductor Temporal Architecture — The Click Track | organvm/tool-interaction-design/.claude/plans | generic |
 | Corpus Temporal Architecture — The Constitutional  | organvm/tool-interaction-design/.claude/plans | document |
-| Plan: SEED.md Constitutional Completeness | _root | verify |
-| Session S40 Implementation Plan — conversation-cor | _root | generic |
-| S40 Plan: Full-Breath Session — Ops Recovery, Code | _root | generic |
-| Post-Flood Reconstruction: Rebirth from Within | _root | document |
-| CI Simplification — From 8 Jobs to 1 | _root | migrate |
 | Context Sync Propagation Log — 2026-03-25 | organvm/stakeholder-portal/.claude/plans | deploy |
 | Exhaustive Forward Campaign v12 | organvm/conversation-corpus-engine/.codex/plans | generic |
 | Exhaustive Forward Campaign v13 | organvm/conversation-corpus-engine/.codex/plans | generic |
@@ -260,7 +240,6 @@
 | Post-Federated-Canon Forward Propulsion v8 | organvm/conversation-corpus-engine/.codex/plans | configure |
 | Session Closeout Audit v17 | organvm/conversation-corpus-engine/.codex/plans | post_hoc |
 | NLnet NGI0 Commons Fund — Application Research | .claude/plans | modify_file |
-| Session Closure Audit — S33 CCE Sweep | _root | post_hoc |
 | The Living Stratigraphy — `organvm fossil` | organvm/organvm-engine/.claude/plans | modify_file |
 | Phase 4: Scaling & Collaboration Implementation Pl | intake/dwv/specvla-ergon--avditor-mvndi/.claude/plans | modify_file |
 | Corpvs Testamentvm Decomposition Plan | .archive/superprojects-20260420-120747/meta-organvm/post-flood/.claude/plans | modify_file |
