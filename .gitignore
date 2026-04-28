@@ -10,6 +10,10 @@
 # Bulk atom pipeline outputs (committed summaries + manifest only)
 data/atoms/*.jsonl
 
+# Corpus pipeline outputs (events.jsonl can run very large; regenerable from sources)
+# IRF-SEC-010 resolution: ignore rather than LFS-track
+data/corpus/*/events.jsonl
+
 # Prompt registry pipeline outputs (regenerable via extract→atomize→triage→measure→route)
 # See data/prompt-registry/README.md for regeneration commands
 data/prompt-registry/*.json
