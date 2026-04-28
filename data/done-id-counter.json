@@ -1,11 +1,11 @@
 {
-  "next_id": 493,
-  "last_claimed_by": "S-session-timeline-2026-04-26",
-  "last_claimed_at": "2026-04-26",
+  "next_id": 497,
+  "last_claimed_by": "S-imessage-corpus-2026-04-27",
+  "last_claimed_at": "2026-04-27",
   "claimed_range": [
-    492,
-    492
+    494,
+    496
   ],
-  "note": "Session Timeline documented - 11 prompts in chronological + elevated order. Missing pieces identified. Pattern emerging analysis.",
+  "note": "Session close-out — iMessage corpus design session + extraction agent dispatch. Session exports committed to praxis-perpetua/prompt-corpus.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
