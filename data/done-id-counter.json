@@ -1,11 +1,11 @@
 {
-  "next_id": 503,
-  "last_claimed_by": "S-2026-04-29-codex-workload-closeout",
+  "next_id": 504,
+  "last_claimed_by": "S-2026-04-29-honor-the-dead",
   "last_claimed_at": "2026-04-29",
   "claimed_range": [
-    500,
-    502
+    503,
+    503
   ],
-  "note": "Codex workload close-out: sovereign layer routing plan (DONE-500), praxis-perpetua transcript exports (DONE-501), review question three-pass protocol (DONE-502). DONE-490..496 remain claimed-but-unrendered in IRF body — see IRF-MON-011 vacuum entry.",
+  "note": "Honor-the-dead session: closed IRF-DOM-047 (pre-commit hook unbound @ defect) by editing chezmoi source and pushing fix as 3a370cc — the workflow that originally tripped the bug now smoke-tests itself when this counter commit lands.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
