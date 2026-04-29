@@ -1,11 +1,11 @@
 {
-  "next_id": 507,
-  "last_claimed_by": "S-2026-04-29-maddie-spiral",
+  "next_id": 508,
+  "last_claimed_by": "S-2026-04-29-triangulation-self-application",
   "last_claimed_at": "2026-04-29",
   "claimed_range": [
-    506,
-    506
+    507,
+    507
   ],
-  "note": "Stream A (Maddie/Sovereign Spiral Visual): claiming DONE-506 for IRF-III-032 — dual nav variants (pillar-first + spiral-first). Both variants land in src/layouts/Base.astro as parallel realized artifacts, server-side rendered with one hidden via class:list against ui.navVariant default ('pillar-first' preserves ship state). Querystring override: ?nav=pillar-first|spiral-first swaps live without redeploy. Spiral-first nav: Spiral · Elevate (/nodes/1) · Align (/nodes/6) · Unlock (/nodes/11) · Research. Mobile drawer mirrors with phase-grouped node lists. Comparison memo + Maddie-ask: docs/proofs/nav-variants/2026-04-29-IRF-III-032-comparison.md.",
+  "note": "Triangulation Protocol — first SOP + memory + per-item log + IRF backfill bound this session. Closes the build-vacuum from S-225ad62f8ffe2OXOj1E21YOrnn (the protocol's own production session left all six artifacts local-only). PROVISIONAL on user A-recognition (vertex A signs via PR merge). v2-rewrite (register-preserving + study-prompt-as-creature + public-blackhole) logged as IRF-SYS-164. Conv 2 verdict-binding logged as IRF-SYS-165. SOP at organvm/praxis-perpetua/standards/SOP--triangulation-protocol.md (sha c009cde). Per-item log at organvm/sovereign-systems--elevate-align/docs/triangle/IRF-III-033.md (sha b67fb26). Plan at ~/.claude/plans/2026-04-29-triangulation-self-application.md.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
