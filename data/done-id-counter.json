@@ -1,11 +1,11 @@
 {
-  "next_id": 507,
-  "last_claimed_by": "S-2026-04-29-maddie-spiral",
+  "next_id": 522,
+  "last_claimed_by": "S-2026-04-29-goal-dapper-wall-closeout",
   "last_claimed_at": "2026-04-29",
   "claimed_range": [
-    506,
-    506
+    508,
+    521
   ],
-  "note": "Stream A (Maddie/Sovereign Spiral Visual): claiming DONE-506 for IRF-III-032 — dual nav variants (pillar-first + spiral-first). Both variants land in src/layouts/Base.astro as parallel realized artifacts, server-side rendered with one hidden via class:list against ui.navVariant default ('pillar-first' preserves ship state). Querystring override: ?nav=pillar-first|spiral-first swaps live without redeploy. Spiral-first nav: Spiral · Elevate (/nodes/1) · Align (/nodes/6) · Unlock (/nodes/11) · Research. Mobile drawer mirrors with phase-grouped node lists. Comparison memo + Maddie-ask: docs/proofs/nav-variants/2026-04-29-IRF-III-032-comparison.md.",
+  "note": "Triple-stream close-out (goal-dapper-wall). Claims DONE-508..521 (14 IDs) for: 7 Maddie M-* forms (508-514, IRF-III-035..041), 3 Rob R-* forms (515-517, IRF-PRT-047..049), 3 session-gap X-* forms (518-520, IRF-PRT-050..052), 1 cross-repo distillation map (521, IRF-META-001). DONE-507 is RESERVED for the parallel triangulation/self-application-2026-04-29 session (claim exists on that branch's tip, not yet merged to main); when triangulation merges, the canonical sequence will read 506→507(triangulation)→508-521(this close-out)→522(next free). Plan persisted at ~/.claude/plans/goal-dapper-wall.md. Public/Private Classification SOP added in praxis-perpetua/standards/SOP--public-private-classification.md (sha 13aa443) — applied to disposition of 8 untracked sovereign-spiral artifacts.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
