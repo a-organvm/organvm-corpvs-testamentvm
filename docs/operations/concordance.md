@@ -149,6 +149,7 @@ Universal work registry. 26 domain prefixes:
 | IRF-DOM-021 | CLAUDE.md missing project board URL | P1 | S-domus-board |
 | IRF-DOM-022 | OpenClaw security: 3B model + web tools, no sandbox | P1 | S43, GH#52 |
 | IRF-DOM-023 | lefthook global ghost — blocks git push system-wide | P1 | S43, GH#51 |
+| IRF-DOM-047 | Global pre-commit hook `@: unbound variable` zero-arg failure | P1 | S-2026-04-29, GH#29 |
 | ~~IRF-DOM-027~~ | ~~Remove dead serena fork MCP~~ — DONE (S-mcp-remediation) | ~~P1~~ | Completed |
 | ~~IRF-DOM-029~~ | ~~Voice-scorer MCP non-functional~~ — DONE (S-domus-vacuum) | ~~P1~~ | Completed |
 | ~~IRF-DOM-030~~ | ~~Conductor MCP untested~~ — DONE (S-domus-vacuum) | ~~P1~~ | Completed |
