@@ -2521,3 +2521,37 @@
 **Captured:** 2026-04-29T18:48:12 | **Prompts:** 7
 **Archive:** `data/prompt-registry/sessions/702449fc-ef27-4f2d-8c4b-efa38b6a31a3-prompts.md`
 
+
+### 381e9cfe-0633-45a0-baa4-204b8843cc00
+**Captured:** 2026-04-29T18:54:02 | **Prompts:** 6
+**Archive:** `data/prompt-registry/sessions/381e9cfe-0633-45a0-baa4-204b8843cc00-prompts.md`
+
+
+### 4e8735e5-b6f4-459d-b5aa-8c27826f29af
+**Captured:** 2026-04-29T18:54:24 | **Prompts:** uncounted (no prompts.md available)
+
+
+### 1e6a2e80-d141-466a-adac-db95c7f1bf2b
+**Captured:** 2026-04-29T19:08:33 | **Prompts:** 11
+**Archive:** `data/prompt-registry/sessions/1e6a2e80-d141-466a-adac-db95c7f1bf2b-prompts.md`
+
+
+### 862ddc2d-a3b1-4316-865c-34864dae3b52
+**Captured:** 2026-04-29T19:10:50 | **Prompts:** 14
+**Archive:** `data/prompt-registry/sessions/862ddc2d-a3b1-4316-865c-34864dae3b52-prompts.md`
+
+
+### a20be727-c853-417b-909c-ac95e6807ef4
+**Captured:** 2026-04-29T19:12:39 | **Prompts:** 16
+**Archive:** `data/prompt-registry/sessions/a20be727-c853-417b-909c-ac95e6807ef4-prompts.md`
+
+
+### 19674d5e-2d22-4fca-b036-89cbc4175dac
+**Captured:** 2026-04-29T19:23:54 | **Prompts:** 9
+**Archive:** `data/prompt-registry/sessions/19674d5e-2d22-4fca-b036-89cbc4175dac-prompts.md`
+
+
+### f1078957-8aae-4470-a978-05b50bfe68ec
+**Captured:** 2026-04-29T19:24:50 | **Prompts:** 7
+**Archive:** `data/prompt-registry/sessions/f1078957-8aae-4470-a978-05b50bfe68ec-prompts.md`
+
