@@ -1,11 +1,11 @@
 {
-  "next_id": 505,
+  "next_id": 506,
   "last_claimed_by": "S-2026-04-29-maddie-spiral",
   "last_claimed_at": "2026-04-29",
   "claimed_range": [
-    504,
-    504
+    505,
+    505
   ],
-  "note": "Stream A (Maddie/Sovereign Spiral Visual): claiming DONE-504 for IRF-III-033 GH#57 — spiral vessel mode wire-through. Four modes (invisible/visible/refracted-star/hybrid) plumbed through hub.config.ts UIConfig, SpiralIsland.astro querystring resolver, and spiral.ts mesh-visibility + particle-opacity-multiplier. Default ship state preserved (invisible). Comparison memo + live URLs at docs/proofs/spiral-vessel-variants/2026-04-29-IRF-III-033-comparison.md.",
+  "note": "Stream A (Maddie/Sovereign Spiral Visual): claiming DONE-505 for IRF-III-034 GH#56 — node-placement quiz + capture endpoint relocation. Quiz redesign replaces pillar-picker with 5-question affinity flow scoring against node themes (new QuizTheme union, 13 nodes annotated) + value-first result panel. Capture endpoint relocated from functions/capture.ts (silently broken — Astro _worker.js intercepted POSTs as 405) to src/pages/capture.ts (Astro APIRoute, properly registered in _routes.json). Multi-sink dispatch (KV SUBMISSIONS + GHL webhook, both optional, neither blocks UX). Smoke-log: docs/proofs/quiz-flow/2026-04-29-IRF-III-034-capture-smoke-log.md (4 cases verified: 200 quiz / 200 legacy / 400 invalid email / 400 empty body).",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
