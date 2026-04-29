@@ -1,11 +1,11 @@
 {
-  "next_id": 504,
-  "last_claimed_by": "S-2026-04-29-honor-the-dead",
+  "next_id": 505,
+  "last_claimed_by": "S-2026-04-29-maddie-spiral",
   "last_claimed_at": "2026-04-29",
   "claimed_range": [
-    503,
-    503
+    504,
+    504
   ],
-  "note": "Honor-the-dead session: closed IRF-DOM-047 (pre-commit hook unbound @ defect) by editing chezmoi source and pushing fix as 3a370cc — the workflow that originally tripped the bug now smoke-tests itself when this counter commit lands.",
+  "note": "Stream A (Maddie/Sovereign Spiral Visual): claiming DONE-504 for IRF-III-033 GH#57 — spiral vessel mode wire-through. Four modes (invisible/visible/refracted-star/hybrid) plumbed through hub.config.ts UIConfig, SpiralIsland.astro querystring resolver, and spiral.ts mesh-visibility + particle-opacity-multiplier. Default ship state preserved (invisible). Comparison memo + live URLs at docs/proofs/spiral-vessel-variants/2026-04-29-IRF-III-033-comparison.md.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
