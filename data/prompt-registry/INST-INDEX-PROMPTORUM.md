@@ -2488,3 +2488,36 @@
 **Captured:** 2026-04-28T00:07:13 | **Prompts:** 72
 **Archive:** `data/prompt-registry/sessions/2026-04-13--fuzzy-toasting-hippo-prompts.md`
 
+
+### 9adeb91a-0b8c-4ef0-bb74-bacf6344dea6
+**Captured:** 2026-04-29T17:02:53 | **Prompts:** uncounted (no prompts.md available)
+
+
+### 4a2d7e48-9d6b-4554-89a8-c698256beca7
+**Captured:** 2026-04-29T17:04:48 | **Prompts:** uncounted (no prompts.md available)
+
+
+### 4330dd64-57f4-4fc6-b953-357ac7187ac0
+**Captured:** 2026-04-29T17:23:57 | **Prompts:** 8
+**Archive:** `data/prompt-registry/sessions/4330dd64-57f4-4fc6-b953-357ac7187ac0-prompts.md`
+
+
+### 8784ba7f-b082-4218-866a-7126805112b3
+**Captured:** 2026-04-29T17:23:59 | **Prompts:** 12
+**Archive:** `data/prompt-registry/sessions/8784ba7f-b082-4218-866a-7126805112b3-prompts.md`
+
+
+### eecd757b-9d7b-42a7-8aff-75ef67b28690
+**Captured:** 2026-04-29T17:24:00 | **Prompts:** 8
+**Archive:** `data/prompt-registry/sessions/eecd757b-9d7b-42a7-8aff-75ef67b28690-prompts.md`
+
+
+### ded3c987-93ff-492a-a34e-73d53eb83096
+**Captured:** 2026-04-29T17:32:21 | **Prompts:** 5
+**Archive:** `data/prompt-registry/sessions/ded3c987-93ff-492a-a34e-73d53eb83096-prompts.md`
+
+
+### 702449fc-ef27-4f2d-8c4b-efa38b6a31a3
+**Captured:** 2026-04-29T18:48:12 | **Prompts:** 7
+**Archive:** `data/prompt-registry/sessions/702449fc-ef27-4f2d-8c4b-efa38b6a31a3-prompts.md`
+

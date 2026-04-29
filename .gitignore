@@ -4,6 +4,13 @@
 # macOS
 .DS_Store
 
+# Claude Code session exports (transcripts are on-demand, never committed — per CLAUDE.md)
+*-local-command-caveatcaveat-the-messages-below.txt
+export-*.md
+
+# Untriaged memory harvest staging — classify and route before tracking
+/memory/
+
 # Scratch/working files
 .scratch/
 
