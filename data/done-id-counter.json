@@ -1,11 +1,11 @@
 {
-  "next_id": 522,
-  "last_claimed_by": "S-2026-04-29-goal-dapper-wall-closeout",
-  "last_claimed_at": "2026-04-29",
+  "next_id": 524,
+  "last_claimed_by": "S-2026-04-30-sovereign-systems-closeout",
+  "last_claimed_at": "2026-04-30",
   "claimed_range": [
-    508,
-    521
+    522,
+    523
   ],
-  "note": "Triple-stream close-out (goal-dapper-wall). Claims DONE-508..521 (14 IDs) for: 7 Maddie M-* forms (508-514, IRF-III-035..041), 3 Rob R-* forms (515-517, IRF-PRT-047..049), 3 session-gap X-* forms (518-520, IRF-PRT-050..052), 1 cross-repo distillation map (521, IRF-META-001). DONE-507 is RESERVED for the parallel triangulation/self-application-2026-04-29 session (claim exists on that branch's tip, not yet merged to main); when triangulation merges, the canonical sequence will read 506→507(triangulation)→508-521(this close-out)→522(next free). Plan persisted at ~/.claude/plans/goal-dapper-wall.md. Public/Private Classification SOP added in praxis-perpetua/standards/SOP--public-private-classification.md (sha 13aa443) — applied to disposition of 8 untracked sovereign-spiral artifacts.",
+  "note": "Sovereign Systems closeout claims DONE-522..523 for IRF-III-033 and IRF-III-034 after GitHub issues #57 and #56 were closed on 2026-04-30 with main-branch commits and proof artifacts.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
