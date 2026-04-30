@@ -811,8 +811,6 @@ Repos: `community-hub`, `reading-groups`, `salon-events`, `learning-commons`. Ze
 | ~~IRF-III-030~~ | ~~**P1**~~ | ~~**sovereign-systems: 65-want atomization — cartographical fossil record of entire client decision surface.** All 7 Maddie PDFs (Mar 25–Apr 17) decomposed into 65 discrete wants (W-001–W-065) across 16 categories. 48 in-scope, 17 out-of-scope (separate projects: nonprofit, WWOOF, coaching, cartographical fossil record, coffee shop). Single source of truth for the client relationship. Doc: `docs/client-decisions/2026-04-17-atomized-wants.md`. | Agent | S-2026-04-17 shimmering-wobbling-orbit | None |
 | ~~IRF-III-031~~ | ~~**P1**~~ | ~~**sovereign-systems: Execute 5-PR corrective implementation — spiral-first architecture.** PR 1: homepage restructure (spiral as hero). PR 2: water page scoping (mini version). PR 3: quiz architecture (routing shell). PR 4: 13-node spiral + node pages. PR 5: polish + walkthrough. 18 of 48 in-scope wants addressed. Plan: `.claude/plans/2026-04-17-corrective-implementation.md`. | Agent | S-2026-04-17 shimmering-wobbling-orbit | None — ready to build |
 | IRF-III-032 | **P1** | **sovereign-systems: Client architectural feedback — spiral-first vs pillar-first resolution.** Maddie's voice-to-text feedback (2026-04-20) reveals persistent misalignment: she wants spiral as PRIMARY navigation (not pillars), water as single-page educational warm-up (not multi-page funnel), quiz as spiral placement tool (not pillar picker). 8-question structured questionnaire sent to pin down decisions. Blocks: water consolidation, quiz redesign, homepage finalization. Plan: `.claude/plans/2026-04-20-maddie-spiral-first-realignment.md`. **△ Blocker: BROWSER-VERIFY-PENDING (target 2026-05-13).** | Human+Agent | S-2026-04-20 maddie-questionnaire | Maddie response |
-| IRF-III-033 | **P1** | **sovereign-systems: Restore visible spiral visual fidelity.** Closeout review found both node variants generate star/symbol geometry then hide the mesh (`mesh.visible = false`), so the client sees particle clouds inside invisible boundaries rather than visible refracted-light stars or sacred-symbol vessels. Hover behavior also shows tagline near cursor while the name is always visible below, contradicting the "name pops up in center or under on hover" ask. Required: decide visible ghost vessel / refracted star / hybrid, implement hover-name behavior for pointer and touch/focus, prove with desktop/mobile browser screenshots. **GH#57.** **△ Blocker: BROWSER-VERIFY-PENDING (target 2026-05-13).** | Agent | S-2026-04-29 closeout audit | None |
-| IRF-III-034 | **P1** | **sovereign-systems: Replace Start Here pillar picker with spiral node-placement flow.** Prior GH#9 is closed, but current `quiz.astro` still renders `config.pillars.map(...)` after email gate and `ghl.quizFormUrl` remains empty. Required: weighted answer model mapping users to nodes 1-13, preserve/repair email capture, wire GoHighLevel URL or mark external blocker with owner/date, browser-test route behavior before closure. **GH#56.** **△ Blocker: BROWSER-VERIFY-PENDING (target 2026-05-13).** | Agent | S-2026-04-29 closeout audit | GHL URL / client input if external form is required |
 
 ---
 
@@ -1316,6 +1314,8 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 | ID | What | Session | Date |
 |----|----------|---------|------|
+| DONE-523 | **IRF-III-034 / GH#56 closed — Start Here quiz replaced with node-placement scoring.** Shipped weighted 13-node placement flow, value-first result panel, Astro-native capture endpoint, KV/GHL fan-out path, and proof artifact `docs/proofs/quiz-flow/2026-04-29-IRF-III-034-comparison.md`. Commits include `2804c3b`, `c59e6fa`, and `7f09cfd`; GitHub issue #56 closed 2026-04-30. Remaining GHL webhook URL is client/tooling configuration, not a blocker to the shipped quiz flow. | S-2026-04-30-sovereign-systems-closeout | 2026-04-30 |
+| DONE-522 | **IRF-III-033 / GH#57 closed — visible spiral vessel modes shipped.** Replaced hardcoded hidden vessel behavior with `invisible`, `visible`, `refracted-star`, and `hybrid` modes, querystring comparison, default config path, proof artifact `docs/proofs/spiral-vessel-variants/2026-04-29-IRF-III-033-comparison.md`, and later hybrid default/color-spectrum adjustment. Commits include `9baed08` and `070b98d`; GitHub issue #57 closed 2026-04-30. | S-2026-04-30-sovereign-systems-closeout | 2026-04-30 |
 | DONE-482 | **Phase System Architecture — 10 SOPs created.** SOPs: 001 (seeding), 002 (audit), 003 (governance), 004 (validation), 005 (classification), 006 (phase transition), 007 (CLAUDE.md), 008 (dependency mapping), 009 (IRF), 010 (orchestration). +5,894 lines. Fixed SOP-010 header corruption. | a-i--skills/phases | 2026-04-26 |
 | DONE-483 | **Phase System Research — 6 research docs created.** RD-001 (phase architecture), RD-002 (organ distribution), RD-003 (governance), RD-004 (scale), RD-005 (IRF registry), RD-006 (decision tree). +1,328 lines. | a-i--skills/phases | 2026-04-26 |
 | DONE-484 | **Phase READMEs — 10 phase variants documented.** 1A-1C (content), 2A-2B (architecture), 3A-3B (execution), 4A-4B (depth). All 10 paths documented. | a-i--skills/phases | 2026-04-26 |
@@ -1817,16 +1817,18 @@ These are not discrete tasks but organizing principles that cross-cut the entire
 
 ## Statistics
 
+Refreshed 2026-04-30 sovereign-systems closeout (S-2026-04-30-sovereign-systems-closeout). +2 completions: DONE-522 (IRF-III-033/GH#57 visible spiral vessel modes) and DONE-523 (IRF-III-034/GH#56 node-placement quiz). `organvm irf stats` after the move reports Total 897 / Open 433 / Completed 464 / Completion rate 51.7%. Note: IRF-OPS-017 remains open because the CLI undercounts markdown-bolded priority rows; these figures are CLI-visible statistics, not full-file truth.
+
 Refreshed 2026-04-25 close-out audit (S-f4d8ffa9-4f87-4f02-be25-c534f889f4a1, final pass). +4 completions: DONE-465 (IconWorlds physics); DONE-466 (Mobile camera Z); DONE-467 (Workspace prep); DONE-468 (Hall-monitor pass). Synchronized seed.yaml and CLAUDE.md. Performed bulk-mark read on CI noise (SYS-156).
 
 Refreshed 2026-04-25 close-out audit (S-f4d8ffa9-4f87-4f02-be25-c534f889f4a1, hall-monitor pass). +4 completions: DONE-458..461.
 
-- **Total IRF items:** 986
-- **Open:** 549 *(prior 553, -4 completions)*
-- **Completed:** 434 *(prior 430, +4)*
+- **Total IRF items:** 897 *(CLI-visible; see IRF-OPS-017 parser caveat)*
+- **Open:** 433
+- **Completed:** 464
 - **Blocked:** 0
 - **Archived:** 0
-- **Completion rate:** 44.0%
+- **Completion rate:** 51.7%
 
 ### Open By Priority
 
