@@ -11,7 +11,7 @@ This is a **planning and governance documentation corpus** — not a source code
 **Repository:** `meta-organvm/organvm-corpvs-testamentvm`
 **Documentation deployed:** ~404K+ words across 148 repos + 8 org profiles + 29 meta-system essays
 
-There is no build system, test suite, or runtime code here. Executable artifacts include 5 validation scripts in `scripts/` and YAML/Python workflow specifications in `docs/implementation/github-actions-spec.md`.
+There is no build system or unified test suite here. Executable artifacts include ~51 Python/shell scripts in `scripts/` (validation, deployment, audit, registry tooling), 16 GitHub Actions workflows in `.github/workflows/`, and YAML/Python workflow specifications in `docs/implementation/github-actions-spec.md`.
 
 ## The Eight-Organ Model
 
@@ -232,6 +232,46 @@ When completing tasks across the organ system, use this decision tree to determi
 ## Parent Directory Context
 
 This corpus lives at `~/Workspace/meta-organvm/organvm-corpvs-testamentvm/`, alongside `~/Workspace/meta-organvm/alchemia-ingestvm/` in the meta-organvm org directory. The old path `~/Workspace/organvm-pactvm/ingesting-organ-document-structure/` is deprecated (restructured 2026-02-16).
+
+## Commands
+
+This corpus has no build system or unified test runner. The executable surface is:
+
+```bash
+# Invocation lookup (any namespace ID, e.g. IRF-OPS-018, X1, AP-3)
+python3 scripts/invoke.py <ID>
+
+# Regenerate the auto-gen zone of this CLAUDE.md (and sibling repo docs)
+python3 scripts/generate-claude-md.py
+# or, system-wide:
+organvm refresh
+
+# Audit / inventory
+python3 scripts/organ-audit.py            # per-organ repo state
+python3 scripts/calculate-metrics.py      # registry-driven metrics
+python3 scripts/check-done-id.py          # cross-check DONE IDs vs IRF
+
+# Convergence / promotion (state machine: LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED)
+python3 scripts/convergence-validate.py
+python3 scripts/convergence-promote.py
+python3 scripts/convergence-triage.py
+
+# Daily soak / health
+bash scripts/daily-soak.sh
+bash scripts/backup-all-orgs.sh
+
+# Pre-commit (declared in .pre-commit-config.yaml)
+pre-commit run --all-files
+```
+
+GitHub Actions live in `.github/workflows/` (16 workflows). CI is `ci.yml`; metrics
+refresh, ecosystem audits, soak tests, stale detectors, and POSSE distribution run on
+schedule. Trigger any of them manually with `gh workflow run <name>`.
+
+> **Auto-generated zone below.** Everything between `<!-- ORGANVM:AUTO:START -->` and
+> `<!-- ORGANVM:AUTO:END -->` is rewritten by `organvm refresh` / `scripts/generate-claude-md.py`.
+> Edits inside the fence will be overwritten on the next regeneration. Add new content
+> ABOVE the START marker.
 
 <!-- ORGANVM:AUTO:START -->
 ## System Context (auto-generated — do not edit)
