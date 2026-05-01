@@ -11,7 +11,7 @@
 | CI/CD workflows | 107+ |
 | Dependency edges | 62 |
 | Back-edge violations | 0 |
-| Published essays | 29 |
+| Published essays | 64 |
 | Total documentation | ~386,000+ |
 | Sprints completed | 33 |
 

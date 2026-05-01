@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T08:07:38.994465+00:00",
+  "generated_at": "2026-05-01T17:58:02.403805+00:00",
   "system": {
     "total_repos": 148,
     "active_repos": 92,
@@ -12,7 +12,7 @@
     "repos_with_tests": 0,
     "total_words": "",
     "total_words_numeric": 0,
-    "published_essays": 29,
+    "published_essays": 64,
     "sprints_completed": 33,
     "ammoi": "AMMOI:25% E:0 T:0 C:0 Ev24h:2 [ORGAN-VI:76%, ORGAN-VII:75%, META-ORGANVM:63%]"
   },
@@ -1018,7 +1018,7 @@
     "total_words_short": "0K+",
     "ci_workflows": "107",
     "dependency_edges": "62",
-    "published_essays": "29",
+    "published_essays": "64",
     "sprints_completed": "33",
     "code_files": "0",
     "test_files": "0",
