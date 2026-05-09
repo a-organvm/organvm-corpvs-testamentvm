@@ -7,9 +7,8 @@ This repository was audited as part of a **REPRWA (Repository World Analysis Met
 The full 12-section analysis (executive thesis, world map, backend↔frontend matrix, audience-lens matrix, 64 product candidate cards, top-priority ranking, research contributions, client/commercial offers, public-portfolio plan, community/OSS plan, risk audit, action roadmap) lives at:
 
 - **Repo**: [`meta-organvm/meta-organvm--superproject`](https://github.com/meta-organvm/meta-organvm--superproject)
-- **Branch**: `claude/repo-world-analysis-NNyj1`
-- **PR**: [#7](https://github.com/meta-organvm/meta-organvm--superproject/pull/7)
-- **Path**: `docs/audits/`
+- **PR**: [#7](https://github.com/meta-organvm/meta-organvm--superproject/pull/7) (durable reference; tracks the audit through merge)
+- **Path** (post-merge, on `main`): `docs/audits/`
 - **Companion JSON**: `docs/audits/STRUCTURED-CANDIDATES.json`
 - **Templates**: `docs/audits/templates/` (REPRWA reusable artifacts)
 
@@ -37,7 +36,13 @@ Strongest candidates anchored to this repo (with composite priority):
 - **P-030 Constitutional Articles I-VI + Amendments A-H** (3.6) — portfolio centerpiece.
 - **P-040 Repository Standards (2,000-3,000 word READMEs)** (3.3) — would-be community standard.
 
-Specific gaps flagged: Index Locorum / Nominum / Rerum (planned, not built), `organvm` CLI (referenced but not visibly present), governance-thresholds.json semantics (opaque), Logos documentation layer (telos / pragma / praxis / receptio — explicitly MISSING).
+## Specific gaps flagged
+
+- **Index Locorum / Nominum / Rerum** — planned (IRF-IDX-001/002/003), not built.
+- **`organvm` CLI implementation** — referenced in CLAUDE.md but not visibly present in `scripts/`.
+- **Logos documentation layer** — `telos.md` / `pragma.md` / `praxis.md` / `receptio.md` explicitly MISSING (Symmetry: 0.5 GHOST per CLAUDE.md).
+- **`governance-thresholds.json` semantics** — T-series origins, radii, wave classification are opaque; needs documentation.
+- **AI-Conductor formal specification** — extensively narrated, not formally specified.
 
 ## Top-level audit findings (cross-cutting)
 
@@ -49,14 +54,14 @@ Specific gaps flagged: Index Locorum / Nominum / Rerum (planned, not built), `or
 
 ## How to engage
 
-- Read the canonical PR description at meta-organvm/meta-organvm--superproject#7 for the executive summary.
-- Pull the branch `claude/repo-world-analysis-NNyj1` on the superproject for the full deliverable.
+- Read the canonical PR description at [meta-organvm/meta-organvm--superproject#7](https://github.com/meta-organvm/meta-organvm--superproject/pull/7) for the executive summary.
+- After merge, the full deliverable lives on `main` of the superproject under `docs/audits/`.
 - For machine consumption, parse `STRUCTURED-CANDIDATES.json`.
 - For methodology reuse on another ecosystem, see `templates/`.
 
 ## Status
 
-This pointer PR is **draft**. The canonical PR (in the superproject) is also draft. Merge once the audit is reviewed.
+Audit pointer finalized.
 
 ---
 
