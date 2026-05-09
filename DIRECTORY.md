@@ -80,6 +80,22 @@ Concise map of the corpus. For detailed per-file annotations, see [`docs/ANNOTAT
 |------|---------|
 | `10-repository-standards.md` | Naming, licensing, community health standards for all 44 repos |
 | `11-specification-driven-development.md` | SDD methodology adapted for documentation deliverables |
+| `12-habitat-governance-lifecycle.md` | Habitat governance lifecycle (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED) |
+| `13-organ-identity-and-placement.md` | Organ identity, placement, and inter-organ boundary rules |
+| `14-logos-documentation-layer.md` | Inner-tier ontology: required `docs/logos/` files (`telos`, `pragma`, `praxis`, `receptio`, `alchemical-io`) per repo |
+| `15-three-pure-systems.md` | Outer-tier ontology: every non-substrate file belongs to exactly one of CORPUS / ENGINE / SURFACE; vocabulary discipline between systems |
+
+### `docs/logos/` — Layer 6: Inner-Tier Logos Narratives (this corpus)
+
+Required by `14-logos-documentation-layer.md`. Closes the previous Symmetry: 0.0 (VACUUM) status reported in CLAUDE.md auto-gen.
+
+| File | Purpose |
+|------|---------|
+| `telos.md` | The idealized form — what the corpus aspires to be |
+| `pragma.md` | The concrete realization — what the corpus currently is |
+| `praxis.md` | The remediation plan — attack vectors closing telos↔pragma gap |
+| `receptio.md` | Bidirectional reception — what is read out, what is absorbed in from the contextual universe |
+| `alchemical-io.md` | Metabolic narrative — sources, transmutation stages, returns, future self |
 
 ### `docs/agents/` — AI Agent Onboarding
 
