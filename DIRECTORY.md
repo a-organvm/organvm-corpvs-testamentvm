@@ -133,3 +133,18 @@ Superseded by v2 documents at `docs/implementation/`. Do not modify.
 | Directory | Contents |
 |-----------|----------|
 | `bronze-sprint/` | Bronze sprint spec (`spec.md`) and validation checklist |
+
+### `docs/operations/` — Standard Operating Procedures (excerpt)
+
+The full operations directory contains rolling-todo, cadence, concordance, key-workflows, and several `sop--*.md` SOPs. SOPs are flat-named under the `sop--<slug>.md` convention; canonical copies live at `praxis-perpetua/standards/SOP--<NAME>.md`.
+
+| File | Purpose |
+|------|---------|
+| `sop--corpus-ontology-instantiation.md` | **NEW** — Procedure for bringing any repo into compliance with `14-logos-documentation-layer.md` and `15-three-pure-systems.md`; closes Symmetry: 0.0 (VACUUM) status |
+| `sop--cicd-resilience.md` | CI/CD pipeline resilience and recovery |
+| `sop--document-audit-feature-extraction.md` | Document audit and feature-extraction protocol |
+| `sop--ira-grade-norming.md` | Inter-rater agreement grade norming |
+| `sop--pitch-deck-rollout.md` | Pitch deck generation and rollout |
+| `operational-cadence.md` | Anti-patterns (AP-1..AP-7), review rhythm, when-to-start-sprints discipline |
+| `rolling-todo.md` | Active P0/P1/P2/P3 work queue |
+| `concordance.md` | Universal symbol table for invocation IDs across 7 namespaces |
