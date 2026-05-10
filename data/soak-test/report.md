@@ -1,15 +1,15 @@
 # 30-Day Soak Test Report
 
-**Period:** 2026-04-04 to 2026-05-03
+**Period:** 2026-04-11 to 2026-05-10
 **Snapshots:** 30
-**Generated:** 2026-05-03 09:14 UTC
+**Generated:** 2026-05-10 09:23 UTC
 
 ---
 
 ## Validation Integrity
 
-- Days with clean validation: **19/30**
-- Registry integrity issues: 33 total across period
+- Days with clean validation: **26/30**
+- Registry integrity issues: 12 total across period
 - Dependency violations: 0 total across period
 
 ### Registry Issues Observed
@@ -20,28 +20,26 @@
 
 ## CI Stability
 
-- Average passing: **15.5** per day
-- Average failing: **2.6** per day
+- Average passing: **9.2** per day
+- Average failing: **1.5** per day
 - Average billing-locked: **11.0** per day
 - Days with CI data: 30
 
 ### Chronic Failures (3+ days)
 
-- organvm-ii-poiesis/styx-behavioral-art: failure (12 days)
-- organvm-vii-kerygma/.github: failure (12 days)
-- meta-organvm/organvm-ontologia: failure (12 days)
-- organvm-v-logos/public-process: failure (11 days)
-- organvm-iv-taxis/a-i--skills: failure (9 days)
-- organvm-vii-kerygma/social-automation: failure (7 days)
-- meta-organvm/materia-collider: failure (6 days)
-- meta-organvm/alchemia-ingestvm: failure (6 days)
+- organvm-ii-poiesis/styx-behavioral-art: failure (7 days)
+- organvm-vii-kerygma/.github: failure (7 days)
+- meta-organvm/organvm-ontologia: failure (7 days)
+- organvm-v-logos/public-process: failure (6 days)
+- meta-organvm/materia-collider: failure (5 days)
+- organvm-iv-taxis/a-i--skills: failure (4 days)
 
 ## Engagement Trends
 
 | Metric | Start | End | Delta |
 |--------|-------|-----|-------|
-| Stars | 9 | 0 | -9 |
-| Forks | 4 | 0 | -4 |
+| Stars | 0 | 0 | +0 |
+| Forks | 0 | 0 | +0 |
 
 ### Top Repo Engagement (Latest)
 
