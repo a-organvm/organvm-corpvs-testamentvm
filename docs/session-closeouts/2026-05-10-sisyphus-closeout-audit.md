@@ -35,7 +35,8 @@ The audit repaired the local persistence vacuum before commit:
 - The broader scan found older generated prompt-registry derivatives with the same historical credential strings; tracked `DISPATCH-QUEUE.md` was redacted, and ignored JSON cache derivatives were redacted locally but remain excluded by repo policy.
 - The prompt registry now indexes all 79 new `data/prompt-registry/sessions/*-prompts.md` files.
 - The prompt-index gap check returns zero missing session IDs.
-- Current tracked persistence diff in `organvm-corpvs-testamentvm` is additive: `5` added lines in `data/fossil/fossil-record.jsonl` and `410` added lines in `data/prompt-registry/INST-INDEX-PROMPTORUM.md`. The non-additive tracked change is the required secret redaction in `data/prompt-registry/DISPATCH-QUEUE.md`.
+- A broader all-tracked prompt-session check found 16 older session archives still missing from `INST-INDEX-PROMPTORUM.md`; that separate vacuum is logged as `IRF-IDX-006` / GH#350.
+- The prompt-index persistence repair added 410 lines in `data/prompt-registry/INST-INDEX-PROMPTORUM.md`. The non-additive tracked change is the required secret redaction in `data/prompt-registry/DISPATCH-QUEUE.md`.
 - `git diff --check` passes in both audited repositories.
 - The `praxis-perpetua` session bundle contains 16 files, 34,315 lines, and 6.3 MB of SpecStory rollup persistence material.
 
@@ -52,7 +53,8 @@ The audit repaired the local persistence vacuum before commit:
 | Concordance | Checked. No new ID namespace was introduced; IRF, INQ, and GH namespaces already exist. |
 | Cross-registry bridge | Checked. `data/cross-registry-bridge.json` maps the RES bundle and commission context. |
 | Prompt registry | Repaired. All 79 prompt archives are now represented in `INST-INDEX-PROMPTORUM.md`; two timeline graphs and two root exports are preserved for commit. |
-| Fossil / git persistence | Fossil gained five witnessed lines. Final safety depends on the commit and push gate for both audited repositories. |
+| Fossil / git persistence | Fossil preserved four valid witnessed lines after stale local-only witness rows from the superseded corpvs commit range were removed. Final safety depends on the commit and push gate for both audited repositories. |
+| Follow-up vacuum | Logged. The 16 older pre-existing prompt archives missing from the prompt index are tracked by `IRF-IDX-006` / GH#350. |
 
 ## N/A Vacuum Handling
 
