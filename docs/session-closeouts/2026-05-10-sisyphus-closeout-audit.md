@@ -88,4 +88,4 @@ The first `organvm-corpvs-testamentvm` push attempt was rejected because `origin
 
 The second `organvm-corpvs-testamentvm` push attempt was blocked by GitHub push protection on a GitHub OAuth token inside one prompt archive. The unpushed corpvs commit range was soft-reset to `origin/main`, the token was redacted, stale local-only fossil witness rows for the superseded commits were removed, and the corpvs work was recommitted from the redacted tree. The intermediate rebased SHAs are intentionally not remote anchors.
 
-The `praxis-perpetua` SpecStory bundle commit `f5e3ff47992ea50374ad315839f69b099c37f34b` pushed successfully before the corpvs rewrite.
+The `praxis-perpetua` SpecStory bundle commit `f5e3ff482f26b14730836e001c1b57a9631cb5e3` pushed successfully before the corpvs rewrite.
