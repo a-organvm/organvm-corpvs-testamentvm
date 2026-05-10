@@ -169,7 +169,7 @@
 - **[P1 0.52]** `ATM-003505` (2026-03-20, organ-i, financial) — **Material culture theory** — Bill Brown's "Thing Theory" (2001), Arjun Appadurai's "The Social Life of Things" (1986), Daniel Miller's material culture anthropology, Igor   Kopytoff's cultural bio...
 - **[P1 0.52]** `ATM-003593` (2026-03-20, organ-i, financial) — **Material culture theory** — Bill Brown's "Thing Theory" (2001), Arjun Appadurai's "The Social Life of Things" (1986), Daniel Miller's material culture anthropology, Igor   Kopytoff's cultural bio...
 - **[P1 0.52]** `ATM-009031` (2026-03-27, health, organ-iii) — asset-amplifier/64e64d4a-990d-426c-89b6-712b87ecb5ae/tasks/bnxyo1vqj.output</output-file> <status>failed</status> <summary>Background command "Test minimal Worker health" failed with exit code 56</...
-- **[P1 0.52]** `ATM-024204` (2026-04-21, security) — Find the app password labeled `gmail-app-pw-033526` (created 2026-03-25)
+- **[P1 0.52]** `ATM-024204` (2026-04-21, security) — Find the app password labeled `<REDACTED_GMAIL_APP_PASSWORD>` (created 2026-03-25)
 - **[P1 0.51]** `ATM-008216` (2026-03-27, meta, housing) — The Handshake: Real-World Connectivity   Propulsion requires friction against reality. We must move beyond stubs.    * Actual OAuth: Implement the Meta (Instagram) and LinkedIn OAuth flows in      ...
 - **[P1 0.51]** `ATM-018590` (2026-04-03, health) — more poetic and playful like im attempting with object / substance / ideal   on--off--  is--not--is--  /Users/4jp/is--_not  _is--not--_is--off
 - **[P1 0.51]** `ATM-022735` (2026-04-16, organ-iii, personal) — Problem Solving:    - **Topology derived from seven laws**: Rather than asking the user to choose, applied Law 2 (Well-Founded Composition: siblings at σ=1) and Law 4 (Scale Invariance: same piece/...
@@ -425,7 +425,7 @@
 - **[P2 0.41]** `ATM-003488` (2026-03-20, relationships, UNIVERSAL) — Douglas Engelbart — "The Mother of All Demos" (1968), NLS/Augment, "augmenting human intellect" as both engineering goal and philosophical stance
 - **[P2 0.41]** `ATM-003576` (2026-03-20, relationships, UNIVERSAL) — Douglas Engelbart — "The Mother of All Demos" (1968), NLS/Augment, "augmenting human intellect" as both engineering goal and philosophical stance
 - **[P2 0.41]** `ATM-003664` (2026-03-20, relationships, UNIVERSAL) — Douglas Engelbart — "The Mother of All Demos" (1968), NLS/Augment, "augmenting human intellect" as both engineering goal and philosophical stance
-- **[P2 0.41]** `ATM-007779` (2026-03-25, naming, security) — gmail app name and password: gmail-app-pw-033526  nvyr rosr yeoz lwrw
+- **[P2 0.41]** `ATM-007779` (2026-03-25, naming, security) — gmail app name and password: <REDACTED_GMAIL_APP_PASSWORD>  <REDACTED_GMAIL_APP_PASSWORD>
 - **[P2 0.41]** `ATM-000201` (2025-12-16, security) — how do i apply the password?
 - **[P2 0.41]** `ATM-000206` (2025-12-16, security) — okay what is my imap password?
 - **[P2 0.41]** `ATM-010807` (2026-03-31, organ-iii, financial) — also allows for a income layer, people needing sops but mmolded for them
@@ -4868,7 +4868,7 @@
 - **[P2 0.43]** `ATM-000854` (2025-12-26, unscoped) — Testing Guidelines  - Identify testing frameworks and coverage requirements. - State test naming conventions and how to run tests.
 - **[P2 0.43]** `ATM-021450` (2026-04-08, unscoped) — research it, plan it, log it;               ❯ there seemed to be a shit ton of issues as you proceeded
 - **[P2 0.43]** `ATM-010017` (2026-03-30, meta) — Thesis (§1):   Infrastructure      boards track the    gap between         idealized and       realized              environment —     not features        moving toward       customers. The      st...
-- **[P2 0.43]** `ATM-022524` (2026-04-16, UNIVERSAL, organ-iii) — sovereign-systems-deploy API token was successfully created  cfut_8rlftXOEwDtCEE4yojVX53G99C6XFQalQb6sdhN091601ac6 curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \ -H "Authorization...
+- **[P2 0.43]** `ATM-022524` (2026-04-16, UNIVERSAL, organ-iii) — sovereign-systems-deploy API token was successfully created  <REDACTED_CLOUDFLARE_TOKEN> curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \ -H "Authorization...
 - **[P2 0.43]** `ATM-004222` (2026-03-20, UNIVERSAL) — The institution demands delegation (the auteur must eventually stop doing everything)
 - **[P2 0.43]** `ATM-004299` (2026-03-20, UNIVERSAL) — The institution demands delegation (the auteur must eventually stop doing everything)
 - **[P2 0.43]** `ATM-003384` (2026-03-20, UNIVERSAL) — GO TO: https://zenodo.org/deposit/new           → Upload each PDF           → Metadata in DEPOSIT-GUIDE.md

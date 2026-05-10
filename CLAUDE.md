@@ -8,7 +8,7 @@ This is a **planning and governance documentation corpus** — not a source code
 
 **Owner:** @4444j99 / @4444J99
 **Status:** LAUNCHED (2026-02-11) — all 8 organs OPERATIONAL
-**Repository:** `meta-organvm/organvm-corpvs-testamentvm`
+**Repository:** `a-organvm/organvm-corpvs-testamentvm` (canonical; `meta-organvm/organvm-corpvs-testamentvm` is a GitHub redirect to the same repo — both URLs resolve identically. Local clone tracks the canonical `a-organvm/` remote.)
 **Documentation deployed:** ~404K+ words across 148 repos + 8 org profiles + 29 meta-system essays
 
 There is no build system or unified test suite here. Executable artifacts include ~51 Python/shell scripts in `scripts/` (validation, deployment, audit, registry tooling), 16 GitHub Actions workflows in `.github/workflows/`, and YAML/Python workflow specifications in `docs/implementation/github-actions-spec.md`.
@@ -142,7 +142,7 @@ All org references in docs, registry, and workflows use the resolved instance na
 - The project constitution is at `docs/memory/constitution.md` — immutable principles (Articles I-VI) and post-cross-validation amendments (A-D) that govern all specifications and quality gates.
 - Feature specifications live in `docs/specs/` — each deliverable (e.g., `docs/specs/bronze-sprint/`) contains a `spec.md` (requirements and success criteria) and `checklists/requirements.md` (validation checklist). The SDD methodology is defined in `docs/standards/11-specification-driven-development.md`.
 - The **governance quadrilateral** is: roadmap (`docs/strategy/there+back-again.md`) + cadence (`docs/operations/operational-cadence.md`) + catalog (`docs/strategy/sprint-catalog.md`) + rolling TODO (`docs/operations/rolling-todo.md`). These four documents govern all planning and execution.
-- **GitHub issue tracking:** 58 issues on `meta-organvm/organvm-corpvs-testamentvm` (omega criteria + sprint catalog) and 1 on `meta-organvm/organvm-engine` (scorecard fix). All omega criteria and unexecuted sprints have bidirectional links between issues and documentation.
+- **GitHub issue tracking:** 58 omega-criteria + sprint-catalog issues + 11 RES-bundle commission issues (2026-05-09, INQ-2026-013, #339-#349) on `a-organvm/organvm-corpvs-testamentvm`, and 1 on `a-organvm/organvm-engine` (scorecard fix). All omega criteria and unexecuted sprints have bidirectional links between issues and documentation. (Canonical repo URL is `a-organvm/...`; older `meta-organvm/...` references redirect.)
 
 ## Invocation System
 

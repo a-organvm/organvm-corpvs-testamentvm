@@ -1,0 +1,380 @@
+{
+  "$schema": "v1.0",
+  "$generated": "2026-05-09",
+  "$generated_by": "Claude session — open-tasks-vectorized-pretzel.md",
+  "$purpose": "Cross-registry foreign-key bridge connecting governance surfaces. Generalization of atom-plan-index.json to N-surface coverage. First move per ~/.claude/plans/2026-05-09-governance-ledger-unification-scoping.md (Option 1 recommendation).",
+  "$scope": "Prototype — seeded with the 11 RES P0 bundle (commission INQ-2026-013) where all aliases are known. Future entries should be backfilled from atom-plan-index.json + IRF + concordance + inquiry-log.",
+  "$canonical_id_choice": "irf — chosen because (a) all 11 seed entities have IRF rows, (b) IRF is the workspace-constitutional 'what needs doing' registry, (c) IRF row IDs already encode domain (RES, SYS, OPS, etc.). Future entries without IRF rows can fall back to ontologia_uid or commission ID as canonical.",
+  "$schema_definition": {
+    "entry": {
+      "canonical_id": "string — primary identity (typically IRF row, fallback to ontologia_uid or INQ id)",
+      "aliases": {
+        "atom": "string|null — ATM-XXXXXX (atom registry)",
+        "irf": "string|null — IRF-XXX-NNN (universal work registry)",
+        "plan": "string|null — plan filename relative to ~/.claude/plans/ or per-repo .claude/plans/",
+        "pipeline": "string|null — hash ID from organvm atoms pipeline",
+        "gh_issue": "string|null — owner/repo#NNN",
+        "gh_project_item": "string|null — project URL with issue ref",
+        "commission": "string|null — INQ-YYYY-NNN",
+        "ontologia_uid": "string|null — ent_*",
+        "concordance_id": "string|null — X1, E3, M2-II, #8, AP-1, H3, 01-33, etc."
+      },
+      "status_view": {
+        "atom": "OPEN|DONE|ARCHIVED|CLOSED-NAV|CLOSED-COMMAND|null",
+        "irf": "open|completed|blocked|archived|null",
+        "plan": "active|stale|archived|null",
+        "gh_issue": "open|closed|null",
+        "commission": "drafting|active|completed|archived|null"
+      },
+      "wave": "integer|null — RES-bundle wave assignment if applicable",
+      "motor": "string|null — RES-bundle motor classification",
+      "te_budget_k": "integer|null — refined TE estimate in thousands",
+      "tags": "array of strings — free-form categorization (motor-X, conditional, human-gated, etc.)",
+      "last_seen_session": "string — session ID or date",
+      "notes": "string|null — short free-form annotation"
+    }
+  },
+  "$known_gaps": {
+    "two_repos_one_redirect": "meta-organvm/organvm-corpvs-testamentvm and a-organvm/organvm-corpvs-testamentvm point to the same repo via GitHub redirect. Bridge entries use a-organvm/ canonical.",
+    "no_canonical_atom_for_RES": "The 11 RES entities have IRF rows but no atom counterparts (the bundle was authored as IRF P0 directly, not via atom triage). Aliases are correctly null.",
+    "ontologia_uids_not_extended_to_irf": "ontologia currently issues UIDs for repos (ent_repo_*); not yet extended to IRF rows / atoms / plans. Future RES-006 work canonicalizes vocabulary including identity-scheme alignment.",
+    "fields_not_yet_unified": "atom_status uses {OPEN, DONE, ARCHIVED, CLOSED-NAV, CLOSED-COMMAND} while irf_status uses {open, completed, blocked, archived}. The bridge preserves both; canonicalization is a Wave 4+ unification deliverable."
+  },
+  "entries": [
+    {
+      "canonical_id": "IRF-RES-006",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-006",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#339",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 1,
+      "motor": "boundary-objects",
+      "te_budget_k": 110,
+      "tags": ["irf-res", "P0-NOW", "wave-1", "motor-boundary-objects"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Bedrock — controlled vocabulary registry. Retroactive reconciliation per RP-04 §5.1 P4."
+    },
+    {
+      "canonical_id": "IRF-RES-004",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-004",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#340",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 1,
+      "motor": "measurement",
+      "te_budget_k": 200,
+      "tags": ["irf-res", "P0-NOW", "wave-1", "motor-measurement"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Bayesian factor analysis on omega scorecard. Sample-size mitigation budgeted (145 repos at lower margin of EFA viability per RP-07 §6.3)."
+    },
+    {
+      "canonical_id": "IRF-RES-011",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-011",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#341",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 2,
+      "motor": "boundary-objects",
+      "te_budget_k": 80,
+      "tags": ["irf-res", "P0-NOW", "wave-2", "motor-boundary-objects"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Hybrid topology law codification. Codification of existing invariant per RP-03 §4.6."
+    },
+    {
+      "canonical_id": "IRF-RES-013",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-013",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#342",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 2,
+      "motor": "tarskian",
+      "te_budget_k": 130,
+      "tags": ["irf-res", "P0-NOW", "wave-2", "motor-tarskian"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Temporal staging refactor. Goodhart-Campbell mathematical necessity per SYN-02 §3."
+    },
+    {
+      "canonical_id": "IRF-RES-003",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-003",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#343",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 3,
+      "motor": "measurement",
+      "te_budget_k": 180,
+      "tags": ["irf-res", "P0-NOW", "wave-3", "motor-measurement", "human-gated"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Define readiness construct + 15% gaming-debt budget per Strathern (RP-07 §7.3)."
+    },
+    {
+      "canonical_id": "IRF-RES-007",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-007",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#344",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 3,
+      "motor": "tarskian",
+      "te_budget_k": 90,
+      "tags": ["irf-res", "P0-NOW", "wave-3", "motor-tarskian"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Visible incompleteness via 5-failure-mode schema per RP-04 §3.1."
+    },
+    {
+      "canonical_id": "IRF-RES-008",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-008",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#345",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 4,
+      "motor": "tarskian",
+      "te_budget_k": 120,
+      "tags": ["irf-res", "P0-NOW", "wave-4", "motor-tarskian", "human-gated"],
+      "last_seen_session": "2026-05-09",
+      "notes": "IRA panel as Tarskian escape. External raters required per SYN-03 §5.4."
+    },
+    {
+      "canonical_id": "IRF-RES-009",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-009",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#346",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 4,
+      "motor": "tarskian",
+      "te_budget_k": 140,
+      "tags": ["irf-res", "P0-NOW", "wave-4", "motor-tarskian"],
+      "last_seen_session": "2026-05-09",
+      "notes": "seed.yaml semantic-accuracy registry. Translation-aware design per SYN-02 §3."
+    },
+    {
+      "canonical_id": "IRF-RES-014",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-014",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#347",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 4,
+      "motor": "measurement",
+      "te_budget_k": 100,
+      "tags": ["irf-res", "P0-NOW", "wave-4", "motor-measurement", "human-gated", "conditional"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Context-specific governance norms. CONDITIONAL on RES-004 multi-factor + cross-organ DIF result."
+    },
+    {
+      "canonical_id": "IRF-RES-010",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-010",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#348",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 5,
+      "motor": "tarskian",
+      "te_budget_k": 130,
+      "tags": ["irf-res", "P0-NOW", "wave-5", "motor-tarskian"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Self-maintenance / self-improvement separation. Löb-theorem escape per RP-02 §6.4."
+    },
+    {
+      "canonical_id": "IRF-RES-012",
+      "aliases": {
+        "atom": null,
+        "irf": "IRF-RES-012",
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": "a-organvm/organvm-corpvs-testamentvm#349",
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": "open",
+        "plan": "active",
+        "gh_issue": "open",
+        "commission": "drafting"
+      },
+      "wave": 5,
+      "motor": "boundary-objects",
+      "te_budget_k": 250,
+      "tags": ["irf-res", "P0-NOW", "wave-5", "motor-boundary-objects"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Boundary-object redesign of seed.yaml + CLAUDE.md + governance-rules.json. Three S&G structural types per SYN-03 §5.1."
+    },
+    {
+      "canonical_id": "INQ-2026-013",
+      "aliases": {
+        "atom": null,
+        "irf": null,
+        "plan": "open-tasks-vectorized-pretzel.md",
+        "pipeline": null,
+        "gh_issue": null,
+        "gh_project_item": "https://github.com/users/4444J99/projects/4",
+        "commission": "INQ-2026-013",
+        "ontologia_uid": null,
+        "concordance_id": null
+      },
+      "status_view": {
+        "atom": null,
+        "irf": null,
+        "plan": "active",
+        "gh_issue": null,
+        "commission": "drafting"
+      },
+      "wave": null,
+      "motor": null,
+      "te_budget_k": 1430,
+      "tags": ["commission", "implementation_commission", "RES-bundle"],
+      "last_seen_session": "2026-05-09",
+      "notes": "Umbrella commission for the 11 RES P0 items. First instance of implementation_commission tier (ratified 2026-05-09 in praxis-perpetua/governance/charter.yaml)."
+    }
+  ],
+  "$next_steps": [
+    "Backfill: ingest atom-plan-index.json (45 atoms × 19 plans) into entries[]",
+    "Backfill: parse all IRF rows (909 items) and create entries with irf alias only",
+    "Backfill: parse inquiry-log.yaml (13 commissions) and create entries with commission alias only",
+    "Backfill: parse concordance.md namespaces (X1-X4, E1-E5, M1-II..M6-II, S1-II..S6-II, G1-G3, #1-#17, H1-H5, AP-1..AP-7, 01-33) and create entries with concordance_id alias",
+    "Build CLI: 'organvm bridge resolve <any-id>' → returns full alias map for entity",
+    "Build CLI: 'organvm bridge unmapped' → returns entities present in one surface but not in others",
+    "Build drift report: surfaces with status mismatches (e.g., atom OPEN but IRF completed)",
+    "Wire into 'organvm refresh' so each session start regenerates from live registries",
+    "Resolve $known_gaps[fields_not_yet_unified] in coordination with RES-006 vocabulary registry"
+  ]
+}

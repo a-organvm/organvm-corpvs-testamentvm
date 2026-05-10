@@ -1,0 +1,2085 @@
+ ▐▛███▜▌   Claude Code v2.1.116
+▝▜█████▛▘  Opus 4.7 (1M context) · Claude Max
+  ▘▘ ▝▝    ~/Workspace/organvm/organvm-corpvs-testamentvm
+
+✻ Conversation compacted (ctrl+o for history)
+
+
+❯ /compact                                                                      
+  ⎿  Compacted (ctrl+o to see full summary)
+  ⎿  Plan file referenced (~/.claude/plans/external-streams-1-pr-335-vivid-lake.md)
+  ⎿  Skills restored (insights)
+
+❯ what is the protcol of those compactions? do they stay in memory and as       
+  separate artifacts                                                            
+
+⏺ I'll investigate this directly since I have full filesystem access, and
+  dispatch a claude-code-guide agent in parallel for the authoritative protocol
+  explanation.
+
+⏺ claude-code-guide(Compaction protocol in Claude Code)
+  ⎿  Done (16 tool uses · 85.1k tokens · 57s)
+  (ctrl+o to expand)
+
+  Listed 2 directories, searched memories (ctrl+o to expand)
+
+⏺ The Compaction Protocol
+
+  Short answer: the compaction summary is embedded into the same session JSONL
+  as a single "type":"summary" record — it is not a separate artifact, but it
+  does become the canonical "head" of the JSONL after the event. The full
+  pre-compact turns remain on disk in the same JSONL above that summary record.
+
+  What I verified on this session
+
+  Evidence: JSONL path
+  Result: /Users/4jp/.claude/projects/-Users-4jp-Workspace/862ddc2d-a3b1-4316-86
+  5c-34864dae3b52.jsonl
+  ────────────────────────────────────────
+  Evidence: Size after /compact
+  Result: 866K, 296 lines
+  ────────────────────────────────────────
+  Evidence: Summary records inside
+  Result: 1 (grep "type":"summary" → 1 match)
+  ────────────────────────────────────────
+  Evidence: Sibling artifact (e.g. …compact.md)
+  Result: None — only <uuid>.jsonl (and some newer-format <uuid>/ directories
+  for
+    multi-file sessions)
+
+  So this session has the full pre-compact transcript on disk plus the compact
+  summary, both inside one file. No separate "compaction artifact" was written.
+
+  ★ Insight ─────────────────────────────────────
+  - Compaction is a context-window operation, not a storage operation. The JSONL
+   on disk is append-only — /compact writes a summary record into it but doesn't
+   truncate prior turns. What changes is which records get replayed into 
+  Claude's context on the next turn: post-compact, only the summary + new turns
+  are loaded; the older verbatim turns are skipped over (still on disk, just not
+   in working memory).
+  - Resume reads the live tail, not the archive. claude --resume re-enters at
+  the post-compact state because that's the last context configuration written.
+  The pre-compact turns are forensically recoverable (you can jq through the
+  JSONL), but Claude on resume does not see them — only the summary plus
+  anything after it.
+  - Cross-session persistence is a different mechanism entirely. CLAUDE.md
+  (project + global), MEMORY.md, and your output style are re-injected from disk
+   every session start, regardless of compaction. That's why the guidance to
+  save artifact-paths-and-state to project_artifact_*.md matters — those survive
+   compactions and session boundaries because they live outside the JSONL.
+  ─────────────────────────────────────────────────
+
+  The decision matrix you actually care about
+
+  Information type: User prompts + your responses (verbatim)
+  Survives compact?: ✗ (replaced by summary)
+  Survives session close?: ✓ (in JSONL)
+  Stored where?: ~/.claude/projects/<cwd>/<id>.jsonl
+  ────────────────────────────────────────
+  Information type: Compact summary
+  Survives compact?: ✓
+  Survives session close?: ✓ (in JSONL)
+  Stored where?: Same JSONL, "type":"summary" record
+  ────────────────────────────────────────
+  Information type: CLAUDE.md (project + global)
+  Survives compact?: ✓ (re-injected)
+  Survives session close?: ✓
+  Stored where?: Repo + ~/.claude/CLAUDE.md
+  ────────────────────────────────────────
+  Information type: MEMORY.md + memory files
+  Survives compact?: ✓ (re-injected)
+  Survives session close?: ✓
+  Stored where?: ~/.claude/projects/<cwd>/memory/
+  ────────────────────────────────────────
+  Information type: Output style
+  Survives compact?: ✓
+  Survives session close?: ✓
+  Stored where?: Settings
+  ────────────────────────────────────────
+  Information type: Skill bodies you invoked
+  Survives compact?: ✓ (re-injected, capped 5K each / 25K total)
+  Survives session close?: ✗ unless re-invoked
+  Stored where?: Skill files
+  ────────────────────────────────────────
+  Information type: Path-scoped CLAUDE.md (nested)
+  Survives compact?: ✗
+  Survives session close?: n/a
+  Stored where?: Reloaded on matching file read
+  ────────────────────────────────────────
+  Information type: Tool outputs (older / large)
+  Survives compact?: ✗
+  Survives session close?: ✓ (in JSONL)
+  Stored where?: Same JSONL
+  ────────────────────────────────────────
+  Information type: Hooks
+  Survives compact?: n/a (code, not context)
+  Survives session close?: ✓
+  Stored where?: ~/.claude/settings.json
+
+  Practical implications for your workflow
+
+  Given your audit-heavy, cross-session reconciliation pattern (Stream 1/2/3
+  today is a clean example):
+
+  1. Forensic audit of "what did the prior session actually do?" → read the 
+  JSONL, not the summary. The compact summary loses tool-call detail by design.
+  When you sent three parallel Explore agents to verify Stream 1/2/3 claims, you
+   were essentially doing what the JSONL already encodes — except the JSONLs
+  across sessions aren't auto-cross-referenced. That's a system gap your
+  IRF-PRT-075 ticket (57 unprotected memory scopes) and the Domain D chezmoi
+  propagation are slowly closing.
+  2. Compact loses tool-call provenance. If a future session needs to know which
+   agent verified what, the summary won't carry it. Solution: write project-type
+   memory files for non-trivial verifications before compact, so the claim →
+  evidence chain survives.
+  3. The SessionStart:compact hook you saw fire in this very turn is the system
+  reinjecting memory hygiene context after compact — it's not a "compaction
+  occurred" notification, it's a re-priming hook that fires on session start and
+   on post-compact resume. The two events look identical to a hook because both
+  are "context just got rebuilt."
+
+  Where to look next if you want to dig deeper
+
+  - jq 'select(.type=="summary")' <jsonl> — extracts just the compact summary
+  records from any session
+  - jq 'select(.type=="user")' <jsonl> | wc -l — tells you how many human
+  prompts that session had
+  - The <uuid>/ directory format (vs <uuid>.jsonl) appears in newer sessions —
+  likely the sub-agent transcript bundling pattern, where parallel Agent calls
+  each get their own JSONL nested under the parent's directory. Worth a peek if
+  you want to audit how your 519 Agent-tool calls were actually serialized.
+
+  End-of-turn: protocol clarified — compaction is in-JSONL, not a separate
+  artifact, and is a context-replay decision rather than a storage decision. No
+  file changes made.
+
+✻ Churned for 2m 15s
+
+❯ yes we're cascading:::::::::::::                                              
+  look there----------                                                          
+       - Mount /Volumes/4444-livii → recover DIRECTORY_KEY                      
+       - Run npm run prepare-db then wiki-compiler.ts after triage gates clear  
+                                                                                
+       Cascades into: ALL — once W3 substrate is clean, W1/W2/W6 artifacts      
+  ingest without corrupting search                                              
+                                                                                
+       ---                                                                      
+       W4 — Voice Synthesis (sign-signal--voice-synth + Whisper)                
+                                                                                
+       Status: FORGOTTEN · recovery search required                             
+       Source: NEW — surfaced from session titles only; no artifacts found in   
+  current exploration                                                           
+                                                                                
+       Summary. Two session titles reference voice work (Installing Whisper     
+  Speech Recognition, Implementing macOS Voice Bridge                           
+       sign-signal--voice-synth). No corresponding files in any explored        
+  directory. No artifacts in brain/, ~/.claude/plans/, or any repo              
+       cited in the dump. Likely a separate experimental branch or earlier      
+  session that didn't get linked to TOTAL_RECORD or the conductor               
+       ecosystem.                                                               
+                                                                                
+       Recovery checklist (verifiable steps):                                   
+       - find ~/Workspace -type d -name 'sign-signal*' 2>/dev/null — does the   
+  repo exist locally?                                                           
+       - If yes: git -C <path> log --all --oneline | head -50                   
+       - find ~/.claude/projects -name '*.jsonl' | xargs grep -l -i             
+  'whisper\|voice bridge'                                                       
+       - find ~/.claude/plans -iname '*voice*' -o -iname '*whisper*' -o -iname  
+  '*sign-signal*'                                                               
+       - If artifacts surface: open W4 with proper repo + plan                  
+       - If not: close as session-only exploration, log IRF entry "ATTEMPTED    
+  2026-04-XX, not productionized"                                               
+                                                                                
+       Governance:                                                              
+       - Pure recovery; do not advance W1/W2/W3 actions for it until artifacts  
+  surface                                                                       
+       - If revived, W4 lives in sign-signal--voice-synth as a standalone organ 
+                                                                                
+       ---                                                                      
+       W5 — Workspace System Hygiene (META)                                     
+                                                                                
+       Status: OBSERVATIONAL · ongoing · blocks no project stream               
+       Source: NEW — synthesized from 7 session titles previously unrouted      
+                                                                                
+       Summary. A cluster of audit-style sessions: workspace timezone, terminal 
+   session history, repository hygiene, workspace activity logs,                
+        editor file history, modular architecture, recursive abstractions.      
+  These are signals about the meta-system itself — not project work.            
+        Previous refactor missed them.                                          
+                                                                                
+       Canonical destination: meta-organvm/audits/ + cross-cutting              
+  Workspace/CLAUDE.md updates                                                   
+                                                                                
+       Governance:                                                              
+       - W5 outputs are MEMOS, not features — single short markdown per audit,  
+  indexed in meta-organvm/audits/INDEX.md                                       
+       - W5 never blocks W1/W2/W3 — observation, not action                     
+       - If a W5 audit surfaces a structura                                     
+  ──── (2247 lines hidden) ──────────────────────────────────────────────────── 
+   the LaunchAgent guard.                                                       
+    4. The report's "On the Horizon" section points further: self-verifying     
+  multi-agent                                                                   
+     swarms (3-5 subagents triangulating, escalating only on divergence) and    
+  durable                                                                       
+    resumable plan-execution. Both of these connect to the qa-audit skill — it  
+  could be                                                                      
+     the seed for a multi-agent triangulation workflow rather than a            
+  single-pass audit.                                                            
+                                                                                
+    Recommendation                                                              
+                                                                                
+    Drop the LaunchAgent hook from this batch (it's a separate concern, and     
+  your global                                                                   
+     settings already fire a HARD BLOCK reminder on it). In its place, draft    
+  the                                                                           
+    push-blocking hook the report actually prescribes — something like:         
+  PreToolUse on                                                                 
+    Bash, match git push|gh pr merge|gh pr create, fail unless the most recent  
+  user                                                                          
+    prompt contains a token like EXECUTE or SHIP. That gives Scope Discipline   
+  real                                                                          
+    teeth instead of being aspirational text.                                   
+                                                                                
+    Want me to draft that hook for your review (no install — you authorize)?    
+  And should                                                                    
+     I extend the qa-audit skill toward the multi-agent triangulation pattern   
+  from "On                                                                      
+    the Horizon"?                                                               
+                                                                                
+                                                                                
+  ✻ Baked for 59s                                                               
+                                                                                
+  ❯ /export                                                                     
+                                                                                
+    ⎿  Conversation exported to:                                                
+  /Users/4jp/Workspace/2026-04-29-190613-local-command-c                        
+       aveatcaveat-the-messages-below.txt                                       
+                                                                                
+                                                                                
+  ⏺ No — I didn't review it. I treated the file:// URL as decorative metadata   
+  at the                                                                        
+    top of your paste and skipped straight to the imperative blocks. That was   
+  the exact                                                                     
+     pattern the report flags as my failure mode: "frequently picks the wrong   
+  framing                                                                       
+    on the first pass." I performed it in real time while editing rules meant   
+  to                                                                            
+    prevent it.                                                                 
+                                                                                
+                                                                                
+    Now I see what was being asked. The four CLAUDE.md sections, the qa-audit   
+  skill,                                                                        
+    and the hook are not arbitrary rules — they are crystallized findings from  
+  a usage                                                                       
+    analysis of your last 11 days (1,374 messages, 165 sessions). Each addition 
+   closes                                                                       
+    a specific gap the report named:                                            
+                                                                                
+    ┌────────────────────────────────────────────────────────                   
+  ''''''''''''';;;;;;;;;;                                                       
+
+⏺ Reading the cascade you just laid out. The recursion trap is the point —
+  other-Claude installed rules derived from a report it never opened. Before I
+  say anything else about the cascade, let me actually read that report so I
+  don't repeat the same failure.
+
+  Read 1 file, listed 2 directories (ctrl+o to expand)
+
+⏺ Read it. And the report has already been regenerated since the version
+  other-Claude saw — the paste showed 1,374 messages / 165 sessions; the live
+  file at /Users/4jp/.claude/usage-data/report.html (67K, regenerated 18:48) now
+   shows 3,192 messages / 335 sessions, 2026-03-31 → 2026-04-29. The feedback
+  loop is live: today's cascade is already feeding tomorrow's report.
+
+  The cascade artifacts you're showing me are all on disk:
+
+  ┌──────────────────────────────────────────────────────────┬──────────────┐
+  │                         Artifact                         │    State     │
+  ├──────────────────────────────────────────────────────────┼──────────────┤
+  │ feedback_preserve_compactions.md                         │ 3.6K ✓       │
+  │                                                          │ persisted    │
+  ├──────────────────────────────────────────────────────────┼──────────────┤
+  │ project_irf_phase4_collision_2026_04_29.md               │ 3.9K ✓       │
+  │                                                          │ persisted    │
+  ├──────────────────────────────────────────────────────────┼──────────────┤
+  │ 2026-04-29-190247-compaction-triple-stream-closeout-…txt │ exists,      │
+  │                                                          │ gitignored ✓ │
+  ├──────────────────────────────────────────────────────────┼──────────────┤
+  │ Workspace/CLAUDE.md 4 sections (Verification, Scope,     │ present in   │
+  │ Multi-Stream, Ledgers)                                   │ claudeMd     │
+  │                                                          │ context ✓    │
+  ├──────────────────────────────────────────────────────────┼──────────────┤
+  │                                                          │ the data     │
+  │ report.html siblings: facets/ (102) + session-meta/      │ layer that   │
+  │ (435)                                                    │ regenerates  │
+  │                                                          │ the report   │
+  └──────────────────────────────────────────────────────────┴──────────────┘
+
+  ★ Insight ─────────────────────────────────────
+  - The cascade is a self-observation loop, not a sequence of tasks. The report
+  observes failure modes → governance rules get installed to prevent them →
+  installation itself becomes session data → next report observes whether the
+  installation succeeded or reproduced the failure. Other-Claude installing
+  CLAUDE.md sections derived from a report it never opened was the loop catching
+   itself: the very rule it was writing ("Verification Before Action") would
+  have prevented the mistake of skipping the URL. The user is demonstrating the
+  loop's diagnostic power by showing me the recursion in flight.
+  - Cascade durability is multi-layer by design. Memory files (chezmoi-mirrored
+  to remote) carry decisions forward; gitignored .txt preservation files keep
+  compaction-summary detail local-only because compactions inherit
+  privilege-sensitive context; MEMORY.md pointers index the graph. Each layer
+  answers a different question: memory = "what was decided," txt preservation =
+  "what was the full reasoning," index = "where to look." If any single layer
+  fails, the others reconstitute most of the picture.
+  - session-meta/ is the substrate the report reads. 435 session-meta entries
+  means the report isn't generated from JSONLs directly — there's a precomputed
+  facet layer. So when you ran /insights a second time and the count jumped from
+   1,374 → 3,192, that wasn't a recompute over all transcripts; it was an
+  incremental update against session-meta/ and facets/. The 102 facets are the
+  dimensions the report can pivot on.
+  ─────────────────────────────────────────────────
+
+  What the cascade actually is, named
+
+  You're showing me an autopoietic governance loop: a system whose own behavior
+  is the input to the rules it generates, where compactions function as the
+  membrane that lets context cross session boundaries without leaking the full
+  transcript. The four pieces clicking together:
+
+  1. Compaction = lossy boundary crossing. Drops verbatim turns, keeps intent.
+  This conversation now has a "type":"summary" record in the JSONL marking the
+  crossing — the "preserve compactions" rule installed yesterday says: write the
+   summary to a gitignored .txt so detail survives outside JSONL too.
+  2. Memory files = doctrine that travels. feedback_preserve_compactions.md
+  itself is the rule about preservation, not the artifact preserved. Doctrine
+  pushes to remote (chezmoi) so it survives disk death. Artifacts stay local
+  because their content is privilege-classified.
+  3. CLAUDE.md edits = rules that fire on every session. The four sections you
+  installed are loaded into every fresh session's context as system reminders.
+  They are not memory — memory is recalled on demand; CLAUDE.md is reinjected
+  unconditionally. That's why the four diagnostic rules from the report had to
+  land there, not in memory.
+  4. /insights regeneration = the observer. Every session you run is grist for
+  the next report. The report tells you what the system is becoming, derived
+  from what it's been doing.
+
+  ★ Insight ─────────────────────────────────────
+  - The recursion you're showing me is the test the system was built for. If I
+  had skipped the report.html URL the way other-Claude did and just commented on
+   the pasted text, I would have failed the verification-before-acting rule that
+   the cascade itself installed. The cascade is an antibody for exactly that
+  failure: it makes the failure visible, durable, and consequential. You're not
+  asking me to fix anything — you're checking whether I see the test, and
+  whether I pass it.
+  - Two genuinely open vacuums (in case you do want them surfaced rather than
+  just observed): (a) the memory/ 676K dir at corpvs-testamentvm root remains
+  gitignored-but-unclassified — local:remote ≠ 1:1 there; (b) the push-blocking
+  hook the report's "Quick wins" actually prescribed (block git push|gh pr 
+  merge|gh pr create unless an explicit EXECUTE/SHIP token is in the prompt) was
+   not installed in the cascade — other-Claude installed a LaunchAgent guard
+  instead, which is an orthogonal house rule. The report's prescription is still
+   vacant.
+  ─────────────────────────────────────────────────
+
+  End-of-turn: read the report this time, verified the cascade artifacts on
+  disk, named the loop. No file changes. The two vacuums are flagged, not
+  auto-actioned — surfacing them respects the same
+  Verification-stops-at-verification rule the cascade encoded.
+
+❯ ❯ ❯ Provide an overview of all that was and all that is and all that needs to 
+   be based on this entire session's context; has everything been GitHub        
+  issued, saved in the directory context? Is this session safe to close? Are we 
+   certain, Sisyphus?                                                           
+  ❯ double check all work; be the hall-monitor wanting oh so badly to catch     
+  someone breaking the rules;                                                   
+  The Index Rerum Faciendarum at                                                
+  meta-organvm/organvm-corpvs-testamentvm/INST-INDEX-RERUM-FACIENDARUM.md is    
+  the universal work registry (150 items, 19 domains, IRF-XXX-NNN               
+    IDs). On start: check for P0/P1 items in your working domain. During work:  
+  note completed or discovered IRF items. On close: update the IRF — move       
+  completed items to ##                                                         
+    Completed, add new items to their domain section, update statistics.        
+  REQUIRED: propagate completions to ALL interested external indices — close    
+  GitHub issues, check omega                                                    
+    scorecard impact, update inquiry-log.yaml if SGO work, update seed.yaml if  
+  capabilities changed, update CLAUDE.md if architecture changed, update        
+  concordance if new IDs                                                        
+    introduced. Default is check-all-10-indices and skip inapplicable, not      
+  check-none. CLI: organvm irf list --priority P0 | organvm irf stats           
+  ❯ all the N/As suggest something imperative; it means their is a vacuum where 
+   something should be--research it, plan it, log it;                           
+  none-knowledge--N/A, no data, seed lacking--creates vacuum                    
+                                                                                
+                                                                                
+    ❯ all the N/As suggest something imperative; it means their is a vacuum     
+  where                                                                         
+    something should be--research it, plan it, log it;                          
+  ❯ there seemed to be a shit ton of issues as you proceeded--overwriting was   
+  not done correct? we only add? then the audit sorts it after, correct?        
+                                                                                
+  ❯ persistent memory MUST be local & remote simultaneously; if the physical    
+  manifestaion dies > soul persists;                                            
+                                                                                
+  ❯ [(local):(remote)={1:1}; correct?                                           
+  › if:dead[manifestion(physical)] > then:live[soul(persists)];                 
+  ❯ so nothing was lost? if lost, recover immediatley; this is a rule that MUST 
+   be universally contextually applied;                                         
+                                                                                
+  ❯ commit[all] push[origin]; source returned improved onnwards+upwards;        
+  ❯ all has been added to universale context ? nothing                          
+  will be lost?                                                                 
+
+⏺ Entering plan mode for the close-out audit. The existing plan file is the PR
+  #335 reconciliation plan — that's the inner loop of what you're now asking me
+  to certify is closed. Treating this as a continuation at higher altitude: the
+  new plan supersedes the old one because "is this session safe to close?" is a
+  strictly larger question than "merge PR #335." I'll edit the plan file in
+  place.
+
+  Before I write anything, I'm going to send a comprehensive verification agent
+  to refresh ground-truth — per your own rule that memory is hypothesis until
+  verified. The cascade in the prior turns established what was claimed; the
+  agent will verify what currently is.
+
+  ★ Insight ─────────────────────────────────────
+  - The hall-monitor pattern requires fresh verification, not recall. Even
+  though I verified several artifacts earlier in this conversation thread,
+  reusing those reads now would violate the very rule the close-out is
+  enforcing. Disk state may have shifted (an autoCommit could have fired on
+  chezmoi; PR #335 could have been merged in another session; a hook could have
+  failed). The audit's value comes from the read happening now, not from a
+  cached belief.
+  - "We only add" is a markdown-table fact, not a discipline choice. The IRF
+  lacks ID-uniqueness enforcement (no FK constraints, no unique index — it's
+  just a markdown table). The audit-sorts-after pattern works only if writes are
+   append-only AND ID assignment is verified-before-write. Yesterday's collision
+   (PRT-047..052 already used) was the latter check failing, not the former.
+  - Local:remote = 1:1 has a precise reading. Not byte-for-byte — caches, build
+  artifacts, and gitignored exploration are fine. The invariant is every 
+  artifact that participates in system identity has a remote shadow. The
+  membrane between participates-in-identity vs scratch is the gitignore + the
+  chezmoi mirror config. The audit's job is to find anything sitting in the
+  membrane gap.
+  ─────────────────────────────────────────────────
+
+⏺ Explore(Close-out audit ground truth)
+  ⎿  Done (25 tool uses · 139.7k tokens · 4m 13s)
+  (ctrl+o to expand)
+
+⏺ Hold the agent's verdict. Several of its claims directly contradict what I
+  verified myself earlier in this very conversation thread — specifically the
+  "memory files MISSING" finding contradicts the Bash output I got just turns
+  ago showing both files at 3.6K/3.9K with 19:04/18:53 timestamps. This is the
+  verification-of-verification problem from yesterday firing again: the agent
+  verified, but its verification needs to be verified.
+
+  Per your "memory = hypothesis until verified" rule, I'm not going to write the
+   plan based on the agent's report alone. I'll cross-check the contested items
+  directly before composing the plan.
+
+  ★ Insight ─────────────────────────────────────
+  - The agent reproduced yesterday's Domain E mistake. Yesterday, an Explore
+  agent reported Domain E as REFUTED based on hook-command presence, missing the
+   if-clause gating. Today's agent reports memory files MISSING despite my own
+  prior ls showing them present at exact byte counts. Both errors share a shape:
+   the agent searched for the concept and missed the artifact. The
+  Verification-of-Verification principle isn't optional — it's a structural
+  feature of multi-agent audits.
+  - The agent contradicted itself. It marked memory mirror as "DRIFT DETECTED"
+  while simultaneously reporting domus-semper-palingenesis as CLEAN at commit
+  e9abc80 — but yesterday's chezmoi work created exactly that commit chain
+  (28f9e26 → 6bfa869 → aadba19 → e9abc80). The agent may have searched the wrong
+   chezmoi path (the target is
+  private_dot_claude/projects/private_-Users-4jp-Workspace/memory/, with the
+  private_ prefix on -Users-4jp-Workspace). One missed _ prefix → false-positive
+   vacuum.
+  - One agent finding IS new-and-true: PR #335 commit count grew from 5 to 6.
+  Yesterday's reconciliation closed at 5 commits; the agent now reports 6, with
+  653065a (relay-handoff envelope, 21:51 UTC) as latest. Some other session
+  pushed a 6th commit. This needs to factor into the plan — the merge anchor has
+   shifted again.
+  ─────────────────────────────────────────────────
+
+  Verifying the contested items directly now (read-only, plan-mode-compliant).
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ Bash(echo "=== WORKSPACE GIT ===" && ls -la /Users/4jp/Workspace/.git
+      2>/dev/null | head -3 && echo "(or not exists:)" && [ ! -e
+      /Users/4jp/Workspace/.git ] && echo…)
+  ⎿  === WORKSPACE GIT ===
+     (or not exists:)
+     no /Users/4jp/Workspace/.git
+     … +12 lines (ctrl+o to expand)
+
+⏺ Bash(echo "=== PR 335 ===" && gh pr view 335 --repo
+      a-organvm/organvm-corpvs-testamentvm --json state,mergedAt,commits 2>&1 |
+      head -50)
+  ⎿  === PR 335 ===
+     {
+       "commits": [
+     … +129 lines (ctrl+o to expand)
+
+⏺ Bash(echo "=== SIGN-SIGNAL DIVERGENCE ===" && cd
+      /Users/4jp/Workspace/organvm/sign-signal--voice-synth 2>/dev/null && git
+      fetch origin 2>&1 | head -3 && git rev-list…)
+  ⎿  === SIGN-SIGNAL DIVERGENCE ===
+     ERROR: Repository not found.
+     fatal: Could not read from remote repository.
+     … +25 lines (ctrl+o to expand)
+
+⏺ Bash(echo "=== CHEZMOI MANAGED MEMORY ===" && chezmoi managed --path-style
+      absolute 2>/dev/null | grep -E
+      "memory/(feedback_preserve_compactions|project_irf_phase4_c…)
+  ⎿  === CHEZMOI MANAGED MEMORY ===
+     /Users/4jp/.claude/projects/-Users-4jp-Workspace/memory/feedback_prese
+     rve_compactions.md
+     … +135 lines (ctrl+o to expand)
+
+⏺ Verification complete. The hall-monitor agent generated five false-negatives —
+   exactly the failure mode the close-out is supposed to catch. Direct Bash
+  verification corrects the record:
+
+  ┌─────────────────────────┬───────────────────────────────────────────────┐
+  │       Agent claim       │              Direct verification              │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Memory files MISSING    │ Both exist at exact paths (3.6K + 3.9K, 19:04 │
+  │                         │  + 18:53)                                     │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Memory mirror DRIFT     │ Both mirrored to chezmoi target (same sizes,  │
+  │                         │ same mtimes); chezmoi managed list confirms   │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Cascade plan +          │ Both exist (27K + 3.7K)                       │
+  │ meta-audit MISSING      │                                               │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ sign-signal "2 BEHIND   │ Actually 2 AHEAD; but git fetch returns       │
+  │ origin"                 │ "Repository not found" — remote is genuinely  │
+  │                         │ broken                                        │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Workspace/CLAUDE.md     │ NOT tracked — confirmed: no .git at           │
+  │ tracked?                │ /Users/4jp/Workspace and none at /Users/4jp/  │
+  │                         │ either                                        │
+  └─────────────────────────┴───────────────────────────────────────────────┘
+
+  One agent finding stands up: PR #335 now has 6 commits (was 5 yesterday). New
+  commit 653065a at 21:51 UTC — a relay-handoff envelope from a parallel
+  session. The merge anchor moved.
+
+  ★ Insight ─────────────────────────────────────
+  - Yesterday's IRF Phase 4 collision recipe is now itself stale. The memory
+  note at project_irf_phase4_collision_2026_04_29.md proposed rebinding to
+  PRT-060..065 — direct grep of the IRF shows those IDs are in fact ALL TAKEN
+  (Kit API key, hokagechess.com, OG image, mobile QA, Character Sheet, Maddie
+  filter URLs). Any insert at that range collides. The Memory-as-Hypothesis rule
+   applied recursively: the hypothesis-correction memory itself became a
+  hypothesis that needed re-verification.
+  - My-knowledge-base was missed by yesterday's hall-monitor entirely. The
+  hall-monitor commit a65e4b9 landed in corpvs-testamentvm — but the cascade
+  artifacts (CASCADING_WORKSTREAMS.md 40K, the 27K plan, TOTAL_RECORD.md edits,
+  voice-assistant.json) all remain UNTRACKED in my-knowledge-base. Yesterday's
+  session said "domus mirror up-to-date" and called the boulder parked, but the
+  cascade boulder in my-knowledge-base never got staged. This is the genuine "if
+   lost, recover immediately" trigger.
+  - sign-signal--voice-synth has no working remote. "Repository not found" on
+  git fetch — either the org was renamed, the repo was deleted, or the URL
+  points wrong. The repo holds 2 unpushed commits + 3 untracked W4 plans +
+  bridge.js modifications — all genuinely local-only with no path to remote
+  until the URL is investigated.
+  ─────────────────────────────────────────────────
+
+  Now writing the plan. The original plan was PR #335 single-anchor; the new
+  question is universal close-out — same task at higher altitude. I'll modify
+  substantively.
+
+  Read 1 file (ctrl+o to expand)
+⏺ Updated plan
+  ⎿  /plan to preview
+
+⏺ The hook fired on the word "LaunchAgent" appearing in my plan's V10 vacuum
+  description — exactly the false-positive pattern V10 itself names. The Write
+  succeeded; the hook is advisory. This is the cascade observing itself in real
+  time: the rule the plan flags as broken just demonstrated why it's broken.
+
+  ★ Insight ─────────────────────────────────────
+  - Self-referential proof. I wrote a plan section saying "the LaunchAgent guard
+   hook fires on legitimate docs that merely mention the word" — and the hook
+  fired on exactly that section, on exactly that word. The system is
+  auto-confirming its own diagnosis. That's not a coincidence; it's what happens
+   when content-keyed hooks interact with documentation that names the content.
+  - The plan is the receipt. The hook firing is a behavioral fingerprint that
+  V10's diagnosis is correct. Filing this as evidence makes future close-outs
+  less likely to install the wrong hook.
+  ─────────────────────────────────────────────────
+
+  Loading ExitPlanMode to surface the plan for approval.
+
+⏺ ExitPlanMode loaded. Submitting the plan for approval with stage-scoped Bash
+  authorizations. The user pre-authorized commit[all] push[origin] in the
+  cascade, but the prompts are scoped per-stage so the user can stop after any
+  stage rather than running the whole sequence.
+
+  ★ Insight ─────────────────────────────────────
+  - Why per-stage authorization, not blanket. The user's "commit all + push" was
+   given before the verification revealed (a) the IRF-PRT-060..065 collision
+  recipe is stale, (b) sign-signal's remote is broken, (c) my-knowledge-base has
+   4 modified files that aren't part of the cascade. Blanket auto-execution
+  would have committed dev-config drift mixed with cascade artifacts and tried
+  to push to a dead remote. Per-stage scoping respects the cascade's own
+  discipline: artifact at a time, never batch-blind.
+  - Stage 4 is read-first by design. "Investigate sign-signal remote" doesn't
+  mean "fix it" — it means git remote -v + ls-remote to determine if the URL is
+  misconfigured, the org renamed, or the repo deleted. That diagnosis informs
+  whether the fix is git remote set-url (cheap) or "create new remote and push"
+  (heavier). Reading remote metadata is irreversible-zero, so it's safe to
+  authorize.
+  - No Stage 7/8 in allowed prompts. Vacuum logging (V5-V8) is
+  read-only-plus-IRF-row-add — but the IRF-row-add depends on a freshly-grepped
+  next-available ID, which I cannot pre-commit to without seeing that grep
+  result. That work needs another round-trip after Stages 1-2-3 land. Leaving
+  Stages 6-7-8 unauthorized forces the conversation back to me before any write
+  that could re-collide.
+  ─────────────────────────────────────────────────
+
+⏺ User approved Claude's plan
+  ⎿  Plan saved to: ~/.claude/plans/external-streams-1-pr-335-vivid-lake.md · 
+     /plan to edit
+     ---slug: external-streams-1-pr-335-vivid-lake
+     date: 2026-04-29
+     type: universal-close-out-audit
+     status: ready-for-review
+     focus: Hall-monitor close-out — every artifact durable, mirrored, 
+     IRF-tracked, committed, pushed
+     verified-by: Direct Bash/Read/Grep + Explore agent (5 false-negatives 
+     caught) + Verification-of-Verification
+     supersedes-content: prior PR #335-only scope (now absorbed as Stage 3)
+
+     Universal Session Close-Out — All Cascades Reconciled
+
+     Context
+
+     User demanded hall-monitor close-out: "Is this session safe to close? Are 
+     we
+     certain, Sisyphus?" with five supplementary axioms in the same breath:
+
+     1. Every N/A is a vacuum to log (research it, plan it, log it)
+     2. We only add (audit sorts after) — never overwrite the IRF
+     3. Persistent memory must be local AND remote (1:1) — soul persists if
+     physical dies
+     4. If lost, recover immediately — universally applied
+     5. commit[all] push[origin] — source returned improved
+
+     The question is no longer "merge PR #335" — it's "is the entire
+     conversation's
+     cascade durable, mirrored, IRF-tracked, and on origin?" The original plan
+     body
+     (PR #335 merge anchor) is absorbed into this plan as Stage 3 without loss.
+
+     Verification-of-Verification (the recursive truth)
+
+     A first Explore agent dispatched for the close-out verdict reported NOT 
+     SAFE
+     TO CLOSE with five blocking issues. Direct verification by the active
+     session
+     refuted four of the five as false-negatives:
+
+     Agent claim: Memory files MISSING at
+       /Users/4jp/.claude/projects/-Users-4jp-Workspace/memory/
+     Direct verification: Both present — feedback_preserve_compactions.md 3.6K
+       (19:04), project_irf_phase4_collision_2026_04_29.md 3.9K (18:53)
+     Outcome: FALSE NEGATIVE
+     ────────────────────────────────────────
+     Agent claim: Memory chezmoi mirror DRIFT
+     Direct verification: Both mirrored at
+       private_dot_claude/projects/private_-Users-4jp-Workspace/memory/
+     (identical
+       sizes/mtimes); chezmoi managed confirms
+     Outcome: FALSE NEGATIVE
+     ────────────────────────────────────────
+     Agent claim: .gemini/plans/2026-04-29-cascading-workstreams-refactor.md
+     MISSING
+     Direct verification: Exists at 27K (18:42)
+     Outcome: FALSE NEGATIVE
+     ────────────────────────────────────────
+     Agent claim: meta-organvm/audits/2026-04-29-INDEX.md MISSING
+     Direct verification: Exists at 3.7K (18:45) — but in non-git dir (genuine
+     V7
+       vacuum, not "missing")
+     Outcome: FALSE NEGATIVE
+     ────────────────────────────────────────
+     Agent claim: sign-signal--voice-synth "2 commits BEHIND origin"
+     Direct verification: Actually 2 AHEAD (left-right format misread); but git 
+       fetch origin → "Repository not found" — remote genuinely broken
+     Outcome: PARTIALLY TRUE (different problem)
+     ────────────────────────────────────────
+     Agent claim: PR #335 grew from 5 to 6 commits (653065a 21:51 UTC)
+     Direct verification: Confirmed via gh pr view
+     Outcome: TRUE — new finding
+
+     Lesson: The same agent failure mode as yesterday's Domain E false-positive
+     fired today on cascade artifacts. Verification-of-verification is
+     structural,
+     not optional. The plan-write step ALWAYS reads disk first, never
+     agent-only.
+
+     Verified Ground Truth (this session, 2026-04-29 ~19:15 ET)
+
+     A. PR #335 status
+
+     ┌──────────┬──────────────────────────────────────────────────────────────┐
+     │  Field   │                            Value                             │
+     ├──────────┼──────────────────────────────────────────────────────────────┤
+     │ State    │ OPEN (not merged)                                            │
+     ├──────────┼──────────────────────────────────────────────────────────────┤
+     │ Base /   │ main ← triangulation/self-application-2026-04-29             │
+     │ Head     │                                                              │
+     ├──────────┼──────────────────────────────────────────────────────────────┤
+     │ Commits  │ 6 (was 5 at yesterday's close)                               │
+     ├──────────┼──────────────────────────────────────────────────────────────┤
+     │ New      │ 653065a 21:51 UTC — chore(handoff): relay envelope for       │
+     │ commit   │ triangulation/self-application unblocks parallel close-out   │
+     ├──────────┼──────────────────────────────────────────────────────────────┤
+     │ mergedAt │ null                                                         │
+     └──────────┴──────────────────────────────────────────────────────────────┘
+
+     B. Per-repo close-out state
+
+     Repo: organvm-corpvs-testamentvm
+     HEAD: a65e4b9
+     Modified: 2 (fossil + INST-INDEX-PROMPTORUM)
+     Untracked (cascade): 3+ session-prompt md files (auto from patched
+     IRF-SYS-166
+       hook)
+     Pushable?: YES
+     ────────────────────────────────────────
+     Repo: my-knowledge-base
+     HEAD: d60469b
+     Modified: 4 (config drift, NOT cascade)
+     Untracked (cascade): CASCADING_WORKSTREAMS.md 40K + 
+       .gemini/plans/2026-04-29-cascading-workstreams-refactor.md  27K + 
+       voice-assistant.json + TOTAL_RECORD.md updates — yesterday's hall-monitor
+
+       never staged this repo
+     Pushable?: YES
+     ────────────────────────────────────────
+     Repo: sign-signal--voice-synth
+     HEAD: bbada8a
+     Modified: 2 (bridge.js, package.json)
+     Untracked (cascade): 3 W4 plans
+       (.gemini/plans/2026-04-29-{antigravity-voice-bridge-v2,timezone-ws-debugg
+     ing,voice-bridge-refinement}.md)
+     Pushable?: NO — git fetch origin returns "Repository not found"
+     ────────────────────────────────────────
+     Repo: domus-semper-palingenesis
+     HEAD: e9abc80
+     Modified: 0
+     Untracked (cascade): 0
+     Pushable?: clean — memory mirror in sync
+
+     C. IRF state — the collision recipe is itself stale
+
+     Direct grep against /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm
+     /INST-INDEX-RERUM-FACIENDARUM.md:
+
+     ┌──────────────┬────────┬──────────────────────────────────────────────────
+     ┐
+     │   ID Range   │ Status │                    Live Work
+     │
+     ├──────────────┼────────┼──────────────────────────────────────────────────
+     ┤
+     │ PRT-047..049 │ TAKEN  │ CRM unification, 8-Strata Domain substrate,
+     │
+     │              │        │ Scott Lefler persona
+     │
+     ├──────────────┼────────┼──────────────────────────────────────────────────
+     ┤
+     │ PRT-050..056 │ TAKEN  │ Spiral V5.x, Jessica stub, Maddie SLA, CF token,
+     │
+     │              │        │  GH#52, GH#3 DNS, App pipeline
+     │
+     ├──────────────┼────────┼──────────────────────────────────────────────────
+     ┤
+     │ PRT-057      │ CLOSED │ Becka McKay (ARCHIVED)
+     │
+     ├──────────────┼────────┼──────────────────────────────────────────────────
+     ┤
+     │              │        │ Rob v6, Rob constellation, Kit API key,
+     │
+     │ PRT-058..065 │ TAKEN  │ hokagechess.com, OG image, Hokage mobile,
+     │
+     │              │        │ Character Sheet, GH#49
+     │
+     ├──────────────┼────────┼──────────────────────────────────────────────────
+     ┤
+     │ PRT-070      │ TAKEN  │ Scott Lefler decision packet
+     │
+     ├──────────────┼────────┼──────────────────────────────────────────────────
+     ┤
+     │ PRT-074      │ TAKEN  │ Persons-index meta-pattern
+     │
+     └──────────────┴────────┴──────────────────────────────────────────────────
+     ┘
+
+     Yesterday's memory file project_irf_phase4_collision_2026_04_29.md proposed
+     re-binding to PRT-060..065 — those are TAKEN. The collision recipe needs
+     updating against the current IRF before any insert. Likely-free ranges:
+     PRT-066..069, PRT-071..073, PRT-075+ — must verify via fresh grep before
+     any
+     write per yesterday's lesson.
+
+     D. Cascade artifacts — disk-truth
+
+     All confirmed present except those genuinely never created:
+
+     Artifact: CASCADING_WORKSTREAMS.md (40K)
+     State: EXISTS, UNTRACKED
+     Path: /Users/4jp/Workspace/organvm/my-knowledge-base/
+     ────────────────────────────────────────
+     Artifact: 2026-04-29-cascading-workstreams-refactor.md (27K)
+     State: EXISTS, UNTRACKED
+     Path: /Users/4jp/Workspace/organvm/my-knowledge-base/.gemini/plans/
+     ────────────────────────────────────────
+     Artifact: TOTAL_RECORD.md updates (8.6K)
+     State: EXISTS, UNTRACKED
+     Path: /Users/4jp/Workspace/organvm/my-knowledge-base/
+     ────────────────────────────────────────
+     Artifact: voice-assistant.json (W4 cross-repo edge)
+     State: EXISTS, UNTRACKED
+     Path: /Users/4jp/Workspace/organvm/my-knowledge-base/
+     ────────────────────────────────────────
+     Artifact: meta-organvm/audits/2026-04-29-INDEX.md (3.7K)
+     State: EXISTS, in non-git dir
+     Path: /Users/4jp/Workspace/meta-organvm/audits/
+     ────────────────────────────────────────
+     Artifact: Workspace/CLAUDE.md (4 governance sections)
+     State: EXISTS, in non-git dir
+     Path: /Users/4jp/Workspace/CLAUDE.md
+     ────────────────────────────────────────
+     Artifact: .claude/skills/qa-audit/SKILL.md
+     State: EXISTS, in non-git dir
+     Path: /Users/4jp/Workspace/.claude/skills/qa-audit/SKILL.md
+     ────────────────────────────────────────
+     Artifact: compaction.txt preservation
+     State: EXISTS, gitignored (correct)
+     Path: /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/2026-04-29-19
+     0247-...txt
+     ────────────────────────────────────────
+     Artifact: Memory files (preserve_compactions, irf_collision)
+     State: EXISTS + chezmoi-mirrored + pushed
+     Path: /Users/4jp/.claude/projects/-Users-4jp-Workspace/memory/
+
+     Open Vacuums (priority-ordered, post-correction)
+
+     P0 — actively block close-out
+
+     V1. my-knowledge-base cascade artifacts unstaged. 40K + 27K + 8.6K of
+     yesterday's magnetic-entity work + W4 cross-repo edge artifact still
+     untracked.
+     Yesterday's hall-monitor commit went to corpvs-testamentvm only. Direct 
+     violation
+     of nothing-local-only.
+
+     V2. sign-signal--voice-synth remote broken. Repository not found on fetch.
+     Repo has 2 unpushed commits + 3 untracked W4 plans + bridge.js mods. CANNOT
+     satisfy local:remote=1:1 until URL is investigated.
+
+     V3. IRF Phase 4 collision recipe stale. Memory file's PRT-060..065 rebind
+     is
+     unworkable — those IDs are taken. Must re-grep IRF for next-available
+     before any
+     insertion. (Memory note itself needs amendment.)
+
+     P1 — should resolve before close
+
+     V4. PR #335 has 6 commits, not 5. Title is current
+     ("...IRF-SYS-164/165/166...
+     5 commits, 2 sessions bundled"); body should mention the relay envelope.
+     Optional
+     amendment before merge.
+
+     V5. /Users/4jp/Workspace/CLAUDE.md not git-tracked anywhere. Workspace root
+     has no .git; home has no .git either. The 4 governance sections from
+     /insights
+     exist on this disk only. Soul-loss risk.
+
+     V6. /Users/4jp/Workspace/.claude/skills/qa-audit/SKILL.md not git-tracked.
+     Same root cause as V5.
+
+     V7. meta-organvm/audits/2026-04-29-INDEX.md outside any git repo.
+     meta-organvm/ has no .git. The W5 hygiene index is local-only.
+
+     V8. memory/ 676K dir at corpvs-testamentvm root. Gitignored, unclassified.
+     Yesterday's TODO carried forward — appears to be foreign-project harvest
+     staged
+     but not routed.
+
+     P2 — surface as IRF rows (don't act, just log)
+
+     V9. ID-availability protocol vacuum. IRF lacks atomic ID issuance like
+     DONE counter. Should become an IRF-SYS row with rule: "verify-before-claim
+     via
+     grep." Yesterday's collision is the originating evidence.
+
+     V10. /insights-prescribed push-blocking hook never installed. The report
+     recommended a hook that blocks git push|gh pr merge|gh pr create unless an
+     explicit EXECUTE/SHIP token is in the prompt. Yesterday's session installed
+     a LaunchAgent guard instead. Genuinely vacant.
+
+     Recommended Sequence (post-approval)
+
+     Stage 1 — corpvs-testamentvm: auto-prompt commit (3 min, low risk)
+
+     Stage and commit the auto-generated session-prompt md files (3+) plus the
+     INST-INDEX-PROMPTORUM.md update and fossil-record.jsonl append — these are
+     the
+     patched hook from IRF-SYS-166 working as designed.
+
+     Files: data/fossil/fossil-record.jsonl (M),
+     data/prompt-registry/INST-INDEX-PROMPTORUM.md (M),
+     data/prompt-registry/sessions/{1e6a2e80,381e9cfe,862ddc2d,...}-prompts.md.
+
+     Commit message: chore(prompts): auto-captured session prompts via patched 
+     hook (validates IRF-SYS-166 fix). Push to main.
+
+     Stage 2 — my-knowledge-base: cascade catch-up (5 min, missing yesterday)
+
+     Stage CASCADING_WORKSTREAMS.md, TOTAL_RECORD.md (M is the W4
+     reclassification +
+     §0 master index),
+     .gemini/plans/2026-04-29-cascading-workstreams-refactor.md,
+     voice-assistant.json. Do NOT stage the 4 modified config files
+     (config.yaml,
+     config/sources.yaml, package.json, src/database.ts) — those are unrelated
+     dev
+     drift, separate concern.
+
+     Commit message: feat(workstreams): magnetic-entity W1-W6 cascade + W4 
+     reclassification (cross-repo edge w/ sign-signal--voice-synth). Push.
+
+     Stage 3 — PR #335 (HUMAN signature)
+
+     Optional 30-second body amendment to mention 653065a (relay envelope).
+     Then merge — closes IRF-SYS-163/164/165/166 + DONE-507 in one signature.
+
+     Command (after amendment if desired):
+     gh pr merge 335 --merge --repo a-organvm/organvm-corpvs-testamentvm
+
+     Stage 4 — sign-signal--voice-synth remote investigation (V2)
+
+     Read git remote -v to see configured URL. Likely renames:
+     - 4444J99/sign-signal--voice-synth (most probable)
+     - a-organvm/sign-signal--voice-synth
+     - A renamed/archived org
+
+     Once correct URL known, either git remote set-url origin <new> or
+     initialize a
+     fresh remote. Then commit + push the 2 ahead commits + the 3 untracked W4
+     plans
+     - bridge.js mods. Stage 4 cannot complete until URL is identified.
+
+     Stage 5 — IRF Phase 4 corrections (yesterday's deferred work)
+
+     Two parts:
+
+     5a. Update memory file project_irf_phase4_collision_2026_04_29.md to flag
+     that PRT-060..065 are also taken; rebind recipe needs fresh grep.
+
+     5b. Execute the 4 retroactive corrections that have full text in hand:
+     - Mark IRF-PRT-029 ✓ CLOSED with commit SHA
+     - Mark IRF-PRT-030 ✓ CLOSED with commit SHA
+     - Add Blocker: BROWSER-VERIFY-PENDING (target 2026-05-XX) to
+     IRF-III-032/033/034
+
+     These don't need new IDs — they amend existing rows.
+
+     5c. Defer the new-row insertions (M-1..M-7, R-1..R-3, X-1..X-3) — those
+     need form-write phases (yesterday's Phases 6/7) to anchor each row to its
+     artifact. Re-bind recipe must use freshly-grepped next-available IDs
+     (likely
+     PRT-066..069, PRT-071..073, PRT-075+, and SYS-167+).
+
+     Stage 6 — Vacuum logging (P2 surface, no action)
+
+     Add IRF-SYS rows for V9 (ID-protocol), V10 (push-blocking hook). Add
+     IRF-PRT rows for V5/V6/V7 (workspace persistence) and V8 (memory/ dir).
+
+     Use freshly-grepped next-available IDs (Stage 5c rule applies).
+
+     Stage 7 — Persistence vacuums (V5/V6/V7) — DEFER
+
+     Structural decision needed: where do Workspace-level meta files live? Three
+     options — pick one in a dedicated session:
+
+     (a) Initialize /Users/4jp/Workspace/.git and treat the workspace as a
+         meta-repo (would track CLAUDE.md, .claude/, the IRF index, etc.)
+     (b) Move governance content into chezmoi (CLAUDE.md.tmpl pattern already
+     exists
+         for ~/.claude/CLAUDE.md; could extend to ~/Workspace/CLAUDE.md)
+     (c) Move into a tracked subordinate repo
+         (e.g. meta-organvm/governance/ if meta-organvm becomes a repo)
+
+     Until decided: V5/V6/V7 stay logged as IRF rows, work continues without
+     their
+     local-only state being remediated.
+
+     Stage 8 — memory/ 676K classification (V8) — DEFER
+
+     Yesterday's same-stage TODO. Three sub-options:
+     (a) Foreign-harvest → route to ~/Workspace/intake/
+     (b) Canonical → commit to a tracked repo
+     (c) Scratch → delete
+
+     Requires content inspection. Defer to dedicated session.
+
+     Critical Files
+
+     - /Users/4jp/Workspace/organvm/my-knowledge-base/CASCADING_WORKSTREAMS.md —
+      Stage 2 commit candidate
+     - /Users/4jp/Workspace/organvm/my-knowledge-base/TOTAL_RECORD.md — Stage 2
+     - /Users/4jp/Workspace/organvm/my-knowledge-base/.gemini/plans/2026-04-29-c
+     ascading-workstreams-refactor.md — Stage 2
+     - /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/data/prompt-regis
+     try/sessions/ — Stage 1
+     - /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/INST-INDEX-RERUM-
+     FACIENDARUM.md — Stage 5b/6
+     - /Users/4jp/.claude/projects/-Users-4jp-Workspace/memory/project_irf_phase
+     4_collision_2026_04_29.md — Stage 5a (correction)
+     - /Users/4jp/Workspace/organvm/sign-signal--voice-synth/.git/config — Stage
+      4 (read remote URL)
+     - /Users/4jp/Workspace/CLAUDE.md — V5 vacuum (defer)
+     - /Users/4jp/Workspace/.claude/skills/qa-audit/SKILL.md — V6 vacuum (defer)
+     - /Users/4jp/Workspace/meta-organvm/audits/2026-04-29-INDEX.md — V7 vacuum
+     (defer)
+     - /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/memory/ — V8
+     vacuum (defer)
+
+     Verification (post-execution acceptance)
+
+     # 1. Stages 1+2 landed
+     git -C /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm log -1
+     --oneline
+     git -C /Users/4jp/Workspace/organvm/my-knowledge-base log -1 --oneline
+     # expected: new commits referencing prompts (Stage 1) + cascade (Stage 2)
+
+     # 2. No untracked cascade artifacts in my-knowledge-base
+     git -C /Users/4jp/Workspace/organvm/my-knowledge-base ls-files --others
+     --exclude-standard | grep -E
+     "(CASCADING|TOTAL_RECORD|cascading-workstreams)"
+     # expected: empty (all staged)
+
+     # 3. local:remote = 1:1 for resolvable repos
+     for r in organvm/organvm-corpvs-testamentvm organvm/my-knowledge-base
+     4444J99/domus-semper-palingenesis; do
+       echo "=== $r ===" ; cd "/Users/4jp/Workspace/$r" && git rev-list
+     --left-right --count "@{u}...HEAD" 2>/dev/null
+     done
+     # expected: 0\t0 for each (no divergence)
+
+     # 4. PR #335 state (Stage 3)
+     gh pr view 335 --repo a-organvm/organvm-corpvs-testamentvm --jq '.state'
+     # expected: MERGED (after merge) | OPEN if deferred
+
+     # 5. sign-signal--voice-synth remote status (Stage 4)
+     git -C /Users/4jp/Workspace/organvm/sign-signal--voice-synth remote -v
+     git -C /Users/4jp/Workspace/organvm/sign-signal--voice-synth ls-remote 2>&1
+      | head -1
+     # expected: real reachable URL — if not, V2 stays open
+
+     # 6. IRF reflects 5b/6 inserts
+     grep -c "^| IRF-PRT-029" /Users/4jp/Workspace/organvm/organvm-corpvs-testam
+     entvm/INST-INDEX-RERUM-FACIENDARUM.md
+     grep -E "✓ CLOSED" /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/
+     INST-INDEX-RERUM-FACIENDARUM.md | grep -c "PRT-029\|PRT-030"
+     # expected: PRT-029 and PRT-030 marked CLOSED
+
+     Out of Scope (explicit deferrals)
+
+     Listed to prevent scope creep:
+
+     - V5/V6/V7 structural decision — needs user direction on Workspace-meta git
+      architecture
+     - V8 memory/ classification — yesterday's TODO carries forward
+     - sign-signal--voice-synth remote restoration (V2 if URL investigation hits
+      dead end) — separate session
+     - Stream 2 Valiant Squid planting — 0/7 actions executed; needs dedicated
+     session
+     - Domain E surgical fix — if-clause restoration in rendered settings.json
+     (IRF-PRT-079)
+     - Conductor classifier extension — for "bind-the-ghosts" work-type
+     - Custodia incident registration — 23 unrecovered files; USER AUTHORIZATION
+      not yet given
+     - IRF-SYS-164 v2 — per-firing receipt emission for SessionEnd hook
+     - IRF-SYS-165 follow-on — 10 dirty repos as concrete IRF rows +
+     Tetra-checksum standard
+     - Phases 6-10 of yesterday's triple-stream close-out plan — recoverable
+     from gitignored transcript + memory file
+
+     Lineage
+
+     This plan supersedes its prior body (PR #335 single-anchor) by absorbing it
+      as
+     Stage 3 within a broader universal close-out audit. Built from:
+
+     - Direct Bash/Read verification by the active session (5 disk reads for
+     ground-truth)
+     - Explore agent ground-truth audit (cross-checked + 5 false-negatives
+     caught and corrected)
+     - IRF row-state grep against the canonical IRF
+     - Memory files at /Users/4jp/.claude/projects/-Users-4jp-Workspace/memory/
+     - /insights report at /Users/4jp/.claude/usage-data/report.html (3,192 msgs
+      / 335 sessions, 2026-03-31..29)
+
+     Three protocols earned their keep here:
+
+     1. Verification-of-verification — same agent failure mode as yesterday's
+     Domain E false-positive fired today on cascade artifacts; caught by direct
+     Bash before any plan-write or commit. The recursion is structural.
+     2. Memory = hypothesis until verified — applied to a memory note about IRF
+     ID collision; the recovery recipe itself was based on stale state.
+     PRT-060..065 are taken in current IRF, contradicting yesterday's note.
+     3. "We only add" is markdown-table fact, not discipline alone. The IRF
+     has no FK / unique constraint; ID collisions are silent corruptions, not
+     errors. The audit-after pattern works ONLY if writes verify ID availability
+     pre-insert.
+
+     End-of-day verdict: NOT YET safe to close. Stages 1-2 land in 8 minutes
+     (low risk, pure adds). Stage 3 (merge PR #335) is human-signature. Stages
+     4-8
+     have varying defer/investigate profiles. After Stages 1-2-3 land,
+     local:remote
+     = 1:1 holds for 3/4 repos; sign-signal stays open as V2 until remote URL is
+     investigated.
+
+⏺ Plan approved. Executing Stages 1, 2, 4, 5a, 5b autonomously. Stage 3 (PR #335
+   merge) I will pause on — it's human-signature work per the cascade's vertex-A
+   discipline, even with pre-authorization in allowedPrompts.
+
+  Starting with verification of current state right before staging, in parallel
+  for both repos.
+
+⏺ Bash(cd /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm && echo "===
+      CORPVS GIT STATUS ===" && git status --short && echo "" && echo "===
+      UNTRACKED prompts/…)
+  ⎿  === CORPVS GIT STATUS ===
+      M data/fossil/fossil-record.jsonl
+      M data/prompt-registry/INST-INDEX-PROMPTORUM.md
+     … +45 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/4jp/Workspace/organvm/my-knowledge-base && echo "=== MKB GIT
+      STATUS (all) ===" && git status --short && echo "" && echo "=== CASCADE
+      FILES PRESENT ===…)
+  ⎿  === MKB GIT STATUS (all) ===
+      M config.yaml
+      M config/sources.yaml
+     … +25 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/4jp/Workspace/organvm/sign-signal--voice-synth && echo "===
+      SIGN-SIGNAL REMOTE ===" && git remote -v && echo "" && echo "=== LS-REMOTE
+       TEST ===" && gi…)
+  ⎿  === SIGN-SIGNAL REMOTE ===
+     origin     git@github.com:a-organvm/sign-signal--voice-synth.git (fetch)
+     origin     git@github.com:a-organvm/sign-signal--voice-synth.git (push)
+     … +9 lines (ctrl+o to expand)
+
+⏺ Verified state matches plan. Six prompt md files exist (plan said "3+"), all
+  post-IRF-SYS-166-fix captures including this current session's 862ddc2d-....
+  My-knowledge-base has the 4 cascade artifacts plus a lot of unrelated dev
+  drift to deliberately NOT stage. Sign-signal's remote is
+  a-organvm/sign-signal--voice-synth.git — the URL is well-formed but the repo
+  at that path doesn't exist on GitHub (or auth lost).
+
+  ★ Insight ─────────────────────────────────────
+  - The patched hook is observably working. Six session-UUID prompt files were
+  captured today (Apr 29 12:51-19:23) — that's the IRF-SYS-166 fix discharging
+  its purpose. The fossil-record.jsonl gained 4 lines and
+  INST-INDEX-PROMPTORUM.md gained 34 — the registry is being filled with REAL
+  session-ids instead of the fabricated ones the prior bug was emitting. Stage
+  1's commit message becomes "validates IRF-SYS-166 fix" because the captured
+  artifacts ARE the validation.
+  - Sign-signal's remote URL is well-formed but the GitHub repo doesn't exist.
+  a-organvm/sign-signal--voice-synth is the path. Two possibilities: (a) it was
+  never created on GitHub (local-first work that hasn't been pushed for the
+  first time), or (b) it was created and then deleted/renamed. Per the workspace
+   map in ~/Workspace/CLAUDE.md, sign-signal--voice-synth could plausibly belong
+   to ORGAN-II (omni-dromenon-machina, generative art/performance) or ORGAN-III
+  (labores-profani-crux, commercial). The orgs a-organvm is documented as the
+  catch-all personal prefix. The repo needs creating; the URL might be fine.
+  - Parallel execution of Stages 1 and 2 is safe. Different repos, different
+  remotes, no shared files, both pre-authorized. Sequential would just add
+  latency without buying anything.
+  ─────────────────────────────────────────────────
+
+  Executing Stages 1 + 2 in parallel.
+
+⏺ Bash(cd /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm && git add
+      data/fossil/fossil-record.jsonl
+      data/prompt-registry/INST-INDEX-PROMPTORUM.md data/prompt-…)
+  ⎿  M  data/fossil/fossil-record.jsonl
+     M  data/prompt-registry/INST-INDEX-PROMPTORUM.md
+     A  data/prompt-registry/sessions/19674d5e-2d22-4fca-b036-89cbc4175dac-
+     … +21 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/4jp/Workspace/organvm/my-knowledge-base && git add
+      CASCADING_WORKSTREAMS.md TOTAL_RECORD.md voice-assistant.json
+      .gemini/plans/2026-04-29-cascading-wo…)
+  ⎿  A  .gemini/plans/2026-04-29-cascading-workstreams-refactor.md
+     A  CASCADING_WORKSTREAMS.md
+     A  TOTAL_RECORD.md
+     … +26 lines (ctrl+o to expand)
+
+⏺ Stages 1 and 2 landed cleanly. Two pushes:
+  - corpvs-testamentvm: a65e4b9..384aed4 — 12,610 insertions, 6 prompt-md files
+  + IRF/fossil updates
+  - my-knowledge-base: d60469b..d00dfb0 — 1,168 insertions, 4 cascade files
+  (deliberately excluded the dev-config drift)
+
+  ★ Insight ─────────────────────────────────────
+  - Both pushes triggered a benign lefthook-config-not-found warning, not an 
+  error. The warning text "No config files with names ["lefthook" ".lefthook"
+  ".config/lefthook"] have been found" comes from the lefthook git-hook
+  framework looking for its config file but not finding one. It exits zero — the
+   push succeeded. Some other tool in the stack tried to wire lefthook in but
+  didn't drop a config file. Worth noting as another kind-of-vacuum (V11?), but
+  not blocking.
+  - The 12,610-insertion size of Stage 1 is dominated by the 119K + 54K largest 
+  prompt files. Those are the goal-dapper-wall close-out (the Stage A→B→C→…
+  enumeration session) and the prior cascade conversation. Tomorrow's
+  archaeologist gets a verbatim trail of what was prompted.
+  ─────────────────────────────────────────────────
+
+  Now Stage 5a (memory file correction) + Stage 5b (IRF retroactive amendments).
+   For 5b I need to find the actual commit SHAs that closed PRT-029/030 — let me
+   read those IRF rows to see what's there.
+
+⏺ Bash(cd /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm && echo "===
+      IRF-PRT-029 + 030 ===" && grep -A 1 "^| IRF-PRT-029\|^| IRF-PRT-030"
+      INST-INDEX-RERUM-FA…)
+  ⎿  === IRF-PRT-029 + 030 ===
+     | IRF-PRT-029 | P1 | **OG image metadata + favicon for hokage-chess la
+     nding page.** Currently default Next.js public/ assets only. Required
+     … +50 lines (ctrl+o to expand)
+
+  Recalled 1 memory (ctrl+o to expand)
+
+⏺ Memory file has the SHAs (b0e3a9f for PRT-029, c253df8 for PRT-030). Now
+  executing Stage 5a (memory amendment) + Stage 5b (IRF retroactive
+  corrections).
+
+  ★ Insight ─────────────────────────────────────
+  - The "we only add" rule applied to IRF amendments means strikethrough + 
+  append, never replacement. Looking at the existing pattern at IRF-PRT-057
+  (Becka McKay closed): the original text stays in ~~strikethrough~~, then a
+  closure note appended after. Markdown tables grow, never shrink. That
+  preserves the audit trail and lets future readers see both the original
+  framing and the disposition.
+  - Memory file amendment is itself "we only add." I'll append an AMENDMENT
+  section to project_irf_phase4_collision_2026_04_29.md rather than rewriting
+  the original recipe — even though the recipe is now stale. The reader gets the
+   original recipe + the "this is stale, here's why, here's the new recipe"
+  frame. That's how doctrine accumulates: the trail of corrections IS the
+  doctrine.
+  - Picking 2026-05-13 for the BROWSER-VERIFY-PENDING target. The user's
+  original note said 2026-05-XX literal — placeholder. Two weeks out is a
+  reasonable default for visual-verification re-check; the user can adjust.
+  Better to commit a real date than leave the XX placeholder forever (which
+  would silently rot into "we never re-checked").
+  ─────────────────────────────────────────────────
+
+  Wrote 1 memory (ctrl+o to expand)
+
+⏺ Memory file amended. Now reading the IRF rows directly to get exact strings
+  for the 5 edits.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+  ⎿  Loaded CLAUDE.md
+
+⏺ Now editing the 5 IRF rows in sequence. Each old_string is unique by
+  line-start.
+⏺ Update(INST-INDEX-RERUM-FACIENDARUM.md)
+  ⎿  Added 1 line, removed 1 line
+      846  | IRF-PRT-026 | P2 | **Portfolio domain migration — Cloudflare
+            Pages + base path change (SOP Phase 3).** Move from `4444j99.
+           github.io/portfolio/` to `anthonypadavano.com`. Steps: (1) Cre
+           ate Cloudflare Pages project linked to `4444J99/portfolio`, (2
+           ) Configure custom domain `anthonypadavano.com`, (3) **High-ri
+           sk:** change `base` from `/portfolio` to `/` in `astro.config.
+           mjs` + update `canonicalBase` in `src/utils/paths.ts` + update
+            all hardcoded `/portfolio/` prefix refs + run `npm run sync:a
+           11y-routes` + full `npm run quality:local` gate, (4) Zero-down
+           time cutover — keep GitHub Pages live until Cloudflare Pages v
+           erifiably serving, (5) Update `seed.yaml` `deployment_url` fro
+           m `4444j99-portfolio.netlify.app` to `https://anthonypadavano.
+           com`. SOP: `praxis-perpetua/standards/SOP--domain-architecture
+           -and-dns.md` §3 Phase 3. | Agent | SOP--domain-architecture-an
+           d-dns.md | IRF-DOM-031 (domains must be registered first) |
+      847  | IRF-PRT-027 | **P0** | **hokagechess.com domain registration
+            (Cloudflare Registrar).** Verified available 2026-04-25 via V
+           erisign. Register through Cloudflare Registrar (at-cost, no ma
+           rkup) before squatters move. Required for hokage-chess landing
+            page deploy (IRF-PRT-028) and brand identity. Add to `chezmoi
+           /dot_zshenv.tmpl` DOMAIN_HOKAGE env var per domain SOP. | Huma
+           n | S-handoff-relay-2026-04-25 | None (5-min checkout) |
+      848  | IRF-PRT-028 | **P0** | **hokage-chess landing page deploy to
+            Vercel.** Repo `4444J99/hokage-chess` is private; Next.js 16 
+           build ready. Deploy to Vercel: connect GitHub repo, configure 
+           custom domain `hokagechess.com` (depends on IRF-PRT-027), set 
+           environment variables (Kit API key per IRF-PRT-030), verify bu
+           ild passes, configure preview deploys. Needs OG metadata + Kit
+            API integration before public traffic (IRF-PRT-029, IRF-PRT-0
+           30). | Agent | S-handoff-relay-2026-04-25 | IRF-PRT-027 (domai
+           n registration) |
+      849 -| IRF-PRT-029 | P1 | **OG image metadata + favicon for hokage-
+          -chess landing page.** Currently default Next.js public/ assets
+          - only. Required for social sharing fidelity (Twitter/X cards, 
+          -LinkedIn, iMessage previews). Steps: (1) design OG image (1200
+          -×630, brand-consistent), (2) add `<meta property="og:*">` tags
+          - to root layout, (3) replace default favicon with brand mark, 
+          -(4) add Twitter Card metadata, (5) verify with `https://www.op
+          -engraph.xyz/`. | Agent | S-handoff-relay-2026-04-25 | None |  
+      849 +| IRF-PRT-029 | ~~P1~~ | ✓ **CLOSED 2026-04-29** (commit `b0e3
+          +a9f` — OG image + favicon shipped to hokage-chess). ~~**OG ima
+          +ge metadata + favicon for hokage-chess landing page.** Current
+          +ly default Next.js public/ assets only. Required for social sh
+          +aring fidelity (Twitter/X cards, LinkedIn, iMessage previews).
+          + Steps: (1) design OG image (1200×630, brand-consistent), (2) 
+          +add `<meta property="og:*">` tags to root layout, (3) replace 
+          +default favicon with brand mark, (4) add Twitter Card metadata
+          +, (5) verify with `https://www.opengraph.xyz/`.~~ | Agent | S-
+          +handoff-relay-2026-04-25 | — (Resolved) |                     
+      850  | IRF-PRT-030 | P1 | **Kit (ConvertKit) API integration for ho
+           kage-chess email capture form.** Currently `console.log` in `s
+           rc/app/page.tsx` — submissions are lost to void. Steps: (1) cr
+           eate Kit account or reuse existing, (2) create form with appro
+           priate tags (`hokage-chess`, `landing-page`), (3) replace `con
+           sole.log` with `fetch` POST to Kit subscriber API, (4) handle 
+           success/error states with user feedback, (5) add `KIT_API_KEY`
+            to Vercel env vars, (6) verify with test submission. | Agent 
+           | S-handoff-relay-2026-04-25 | None |
+      851  | IRF-PRT-031 | **P1** | **Scaffold ChatGPT project: `consult-
+           consuls-console`.** User confirmed S-2026-04-25 "all" — build 
+           all 5 named ChatGPT projects from screenshot. Create new repo 
+           (org TBD — likely `a-organvm/` or `4444J99/`), seed.yaml, READ
+           ME, register in registry-v2.json, basic landing-engine instant
+           iation if applicable. PDE conductor methodology applies. Hokag
+           e agent's lane (or whichever session picks up first). | Agent 
+           | S-2026-04-25-engine-infra-landing-cross-cluster | Org placem
+           ent decision |
+      852  | IRF-PRT-032 | **P1** | **Scaffold ChatGPT project: `gay-horr
+           or-blender`.** User confirmed S-2026-04-25 "all" — build all 5
+           . Same scaffolding pattern as PRT-031. Genre-specific: horror 
+           narrative + queer aesthetic synthesis. | Agent | S-2026-04-25-
+           engine-infra-landing-cross-cluster | Org placement decision |
+
+⏺ Update(INST-INDEX-RERUM-FACIENDARUM.md)
+  ⎿  Added 1 line, removed 1 line
+      847  | IRF-PRT-027 | **P0** | **hokagechess.com domain registration
+            (Cloudflare Registrar).** Verified available 2026-04-25 via V
+           erisign. Register through Cloudflare Registrar (at-cost, no ma
+           rkup) before squatters move. Required for hokage-chess landing
+            page deploy (IRF-PRT-028) and brand identity. Add to `chezmoi
+           /dot_zshenv.tmpl` DOMAIN_HOKAGE env var per domain SOP. | Huma
+           n | S-handoff-relay-2026-04-25 | None (5-min checkout) |
+      848  | IRF-PRT-028 | **P0** | **hokage-chess landing page deploy to
+            Vercel.** Repo `4444J99/hokage-chess` is private; Next.js 16 
+           build ready. Deploy to Vercel: connect GitHub repo, configure 
+           custom domain `hokagechess.com` (depends on IRF-PRT-027), set 
+           environment variables (Kit API key per IRF-PRT-030), verify bu
+           ild passes, configure preview deploys. Needs OG metadata + Kit
+            API integration before public traffic (IRF-PRT-029, IRF-PRT-0
+           30). | Agent | S-handoff-relay-2026-04-25 | IRF-PRT-027 (domai
+           n registration) |
+      849  | IRF-PRT-029 | ~~P1~~ | ✓ **CLOSED 2026-04-29** (commit `b0e3
+           a9f` — OG image + favicon shipped to hokage-chess). ~~**OG ima
+           ge metadata + favicon for hokage-chess landing page.** Current
+           ly default Next.js public/ assets only. Required for social sh
+           aring fidelity (Twitter/X cards, LinkedIn, iMessage previews).
+            Steps: (1) design OG image (1200×630, brand-consistent), (2) 
+           add `<meta property="og:*">` tags to root layout, (3) replace 
+           default favicon with brand mark, (4) add Twitter Card metadata
+           , (5) verify with `https://www.opengraph.xyz/`.~~ | Agent | S-
+           handoff-relay-2026-04-25 | — (Resolved) |
+      850 -| IRF-PRT-030 | P1 | **Kit (ConvertKit) API integration for ho
+          -kage-chess email capture form.** Currently `console.log` in `s
+          -rc/app/page.tsx` — submissions are lost to void. Steps: (1) cr
+          -eate Kit account or reuse existing, (2) create form with appro
+          -priate tags (`hokage-chess`, `landing-page`), (3) replace `con
+          -sole.log` with `fetch` POST to Kit subscriber API, (4) handle 
+          -success/error states with user feedback, (5) add `KIT_API_KEY`
+          - to Vercel env vars, (6) verify with test submission. | Agent 
+          -| S-handoff-relay-2026-04-25 | None |                         
+      850 +| IRF-PRT-030 | ~~P1~~ | ✓ **CLOSED 2026-04-29** (commit `c253
+          +df8` — Kit form handler shipped). ~~**Kit (ConvertKit) API int
+          +egration for hokage-chess email capture form.** Currently `con
+          +sole.log` in `src/app/page.tsx` — submissions are lost to void
+          +. Steps: (1) create Kit account or reuse existing, (2) create 
+          +form with appropriate tags (`hokage-chess`, `landing-page`), (
+          +3) replace `console.log` with `fetch` POST to Kit subscriber A
+          +PI, (4) handle success/error states with user feedback, (5) ad
+          +d `KIT_API_KEY` to Vercel env vars, (6) verify with test submi
+          +ssion.~~ | Agent | S-handoff-relay-2026-04-25 | — (Resolved) |
+      851  | IRF-PRT-031 | **P1** | **Scaffold ChatGPT project: `consult-
+           consuls-console`.** User confirmed S-2026-04-25 "all" — build 
+           all 5 named ChatGPT projects from screenshot. Create new repo 
+           (org TBD — likely `a-organvm/` or `4444J99/`), seed.yaml, READ
+           ME, register in registry-v2.json, basic landing-engine instant
+           iation if applicable. PDE conductor methodology applies. Hokag
+           e agent's lane (or whichever session picks up first). | Agent 
+           | S-2026-04-25-engine-infra-landing-cross-cluster | Org placem
+           ent decision |
+      852  | IRF-PRT-032 | **P1** | **Scaffold ChatGPT project: `gay-horr
+           or-blender`.** User confirmed S-2026-04-25 "all" — build all 5
+           . Same scaffolding pattern as PRT-031. Genre-specific: horror 
+           narrative + queer aesthetic synthesis. | Agent | S-2026-04-25-
+           engine-infra-landing-cross-cluster | Org placement decision |
+      853  | IRF-PRT-033 | **P1** | **Scaffold ChatGPT project: `atomic-k
+           nowledge-assembler`.** User confirmed S-2026-04-25 "all" — bui
+           ld all 5. Knowledge-graph / atomization tool (likely consumes 
+           conversation-corpus-engine output downstream — check edges bef
+           ore scaffolding). | Agent | S-2026-04-25-engine-infra-landing-
+           cross-cluster | Org placement decision |
+
+⏺ Update(INST-INDEX-RERUM-FACIENDARUM.md)
+  ⎿  Added 1 line, removed 1 line
+      800  | ~~IRF-III-029~~ | ~~**P0**~~ | ~~**sovereign-systems: Archit
+           ectural misalignment — site is water-first, Maddie wants spira
+           l-first.** Full 7-PDF review (Mar 25–Apr 17) reveals the homep
+           age is a thin pass-through to the water page. Spiral is decora
+           tive, not the hero. Water page is 147 lines / 10 sections when
+            Maddie described it as "essentially just a mini version." 5-P
+           R corrective plan written. **GH#43.** Plan: `.claude/plans/202
+           6-04-17-corrective-implementation.md`. | Agent | S-2026-04-17 
+           shimmering-wobbling-orbit | None |
+      801  | ~~IRF-III-030~~ | ~~**P1**~~ | ~~**sovereign-systems: 65-wan
+           t atomization — cartographical fossil record of entire client 
+           decision surface.** All 7 Maddie PDFs (Mar 25–Apr 17) decompos
+           ed into 65 discrete wants (W-001–W-065) across 16 categories. 
+           48 in-scope, 17 out-of-scope (separate projects: nonprofit, WW
+           OOF, coaching, cartographical fossil record, coffee shop). Sin
+           gle source of truth for the client relationship. Doc: `docs/cl
+           ient-decisions/2026-04-17-atomized-wants.md`. | Agent | S-2026
+           -04-17 shimmering-wobbling-orbit | None |
+      802  | ~~IRF-III-031~~ | ~~**P1**~~ | ~~**sovereign-systems: Execut
+           e 5-PR corrective implementation — spiral-first architecture.*
+           * PR 1: homepage restructure (spiral as hero). PR 2: water pag
+           e scoping (mini version). PR 3: quiz architecture (routing she
+           ll). PR 4: 13-node spiral + node pages. PR 5: polish + walkthr
+           ough. 18 of 48 in-scope wants addressed. Plan: `.claude/plans/
+           2026-04-17-corrective-implementation.md`. | Agent | S-2026-04-
+           17 shimmering-wobbling-orbit | None — ready to build |
+      803 -| IRF-III-032 | **P1** | **sovereign-systems: Client architect
+          -ural feedback — spiral-first vs pillar-first resolution.** Mad
+          -die's voice-to-text feedback (2026-04-20) reveals persistent m
+          -isalignment: she wants spiral as PRIMARY navigation (not pilla
+          -rs), water as single-page educational warm-up (not multi-page 
+          -funnel), quiz as spiral placement tool (not pillar picker). 8-
+          -question structured questionnaire sent to pin down decisions. 
+          -Blocks: water consolidation, quiz redesign, homepage finalizat
+          -ion. Plan: `.claude/plans/2026-04-20-maddie-spiral-first-reali
+          -gnment.md`. | Human+Agent | S-2026-04-20 maddie-questionnaire 
+          -| Maddie response |                                           
+      803 +| IRF-III-032 | **P1** | **sovereign-systems: Client architect
+          +ural feedback — spiral-first vs pillar-first resolution.** Mad
+          +die's voice-to-text feedback (2026-04-20) reveals persistent m
+          +isalignment: she wants spiral as PRIMARY navigation (not pilla
+          +rs), water as single-page educational warm-up (not multi-page 
+          +funnel), quiz as spiral placement tool (not pillar picker). 8-
+          +question structured questionnaire sent to pin down decisions. 
+          +Blocks: water consolidation, quiz redesign, homepage finalizat
+          +ion. Plan: `.claude/plans/2026-04-20-maddie-spiral-first-reali
+          +gnment.md`. **△ Blocker: BROWSER-VERIFY-PENDING (target 2026-0
+          +5-13).** | Human+Agent | S-2026-04-20 maddie-questionnaire | M
+          +addie response |                                              
+      804  | IRF-III-033 | **P1** | **sovereign-systems: Restore visible 
+           spiral visual fidelity.** Closeout review found both node vari
+           ants generate star/symbol geometry then hide the mesh (`mesh.v
+           isible = false`), so the client sees particle clouds inside in
+           visible boundaries rather than visible refracted-light stars o
+           r sacred-symbol vessels. Hover behavior also shows tagline nea
+           r cursor while the name is always visible below, contradicting
+            the "name pops up in center or under on hover" ask. Required:
+            decide visible ghost vessel / refracted star / hybrid, implem
+           ent hover-name behavior for pointer and touch/focus, prove wit
+           h desktop/mobile browser screenshots. **GH#57.** | Agent | S-2
+           026-04-29 closeout audit | None |
+      805  | IRF-III-034 | **P1** | **sovereign-systems: Replace Start He
+           re pillar picker with spiral node-placement flow.** Prior GH#9
+            is closed, but current `quiz.astro` still renders `config.pil
+           lars.map(...)` after email gate and `ghl.quizFormUrl` remains 
+           empty. Required: weighted answer model mapping users to nodes 
+           1-13, preserve/repair email capture, wire GoHighLevel URL or m
+           ark external blocker with owner/date, browser-test route behav
+           ior before closure. **GH#56.** | Agent | S-2026-04-29 closeout
+            audit | GHL URL / client input if external form is required |
+      806  
+
+⏺ Update(INST-INDEX-RERUM-FACIENDARUM.md)
+  ⎿  Added 1 line, removed 1 line
+      801  | ~~IRF-III-030~~ | ~~**P1**~~ | ~~**sovereign-systems: 65-wan
+           t atomization — cartographical fossil record of entire client 
+           decision surface.** All 7 Maddie PDFs (Mar 25–Apr 17) decompos
+           ed into 65 discrete wants (W-001–W-065) across 16 categories. 
+           48 in-scope, 17 out-of-scope (separate projects: nonprofit, WW
+           OOF, coaching, cartographical fossil record, coffee shop). Sin
+           gle source of truth for the client relationship. Doc: `docs/cl
+           ient-decisions/2026-04-17-atomized-wants.md`. | Agent | S-2026
+           -04-17 shimmering-wobbling-orbit | None |
+      802  | ~~IRF-III-031~~ | ~~**P1**~~ | ~~**sovereign-systems: Execut
+           e 5-PR corrective implementation — spiral-first architecture.*
+           * PR 1: homepage restructure (spiral as hero). PR 2: water pag
+           e scoping (mini version). PR 3: quiz architecture (routing she
+           ll). PR 4: 13-node spiral + node pages. PR 5: polish + walkthr
+           ough. 18 of 48 in-scope wants addressed. Plan: `.claude/plans/
+           2026-04-17-corrective-implementation.md`. | Agent | S-2026-04-
+           17 shimmering-wobbling-orbit | None — ready to build |
+      803  | IRF-III-032 | **P1** | **sovereign-systems: Client architect
+           ural feedback — spiral-first vs pillar-first resolution.** Mad
+           die's voice-to-text feedback (2026-04-20) reveals persistent m
+           isalignment: she wants spiral as PRIMARY navigation (not pilla
+           rs), water as single-page educational warm-up (not multi-page 
+           funnel), quiz as spiral placement tool (not pillar picker). 8-
+           question structured questionnaire sent to pin down decisions. 
+           Blocks: water consolidation, quiz redesign, homepage finalizat
+           ion. Plan: `.claude/plans/2026-04-20-maddie-spiral-first-reali
+           gnment.md`. **△ Blocker: BROWSER-VERIFY-PENDING (target 2026-0
+           5-13).** | Human+Agent | S-2026-04-20 maddie-questionnaire | M
+           addie response |
+      804 -| IRF-III-033 | **P1** | **sovereign-systems: Restore visible 
+          -spiral visual fidelity.** Closeout review found both node vari
+          -ants generate star/symbol geometry then hide the mesh (`mesh.v
+          -isible = false`), so the client sees particle clouds inside in
+          -visible boundaries rather than visible refracted-light stars o
+          -r sacred-symbol vessels. Hover behavior also shows tagline nea
+          -r cursor while the name is always visible below, contradicting
+          - the "name pops up in center or under on hover" ask. Required:
+          - decide visible ghost vessel / refracted star / hybrid, implem
+          -ent hover-name behavior for pointer and touch/focus, prove wit
+          -h desktop/mobile browser screenshots. **GH#57.** | Agent | S-2
+          -026-04-29 closeout audit | None |                             
+      804 +| IRF-III-033 | **P1** | **sovereign-systems: Restore visible 
+          +spiral visual fidelity.** Closeout review found both node vari
+          +ants generate star/symbol geometry then hide the mesh (`mesh.v
+          +isible = false`), so the client sees particle clouds inside in
+          +visible boundaries rather than visible refracted-light stars o
+          +r sacred-symbol vessels. Hover behavior also shows tagline nea
+          +r cursor while the name is always visible below, contradicting
+          + the "name pops up in center or under on hover" ask. Required:
+          + decide visible ghost vessel / refracted star / hybrid, implem
+          +ent hover-name behavior for pointer and touch/focus, prove wit
+          +h desktop/mobile browser screenshots. **GH#57.** **△ Blocker: 
+          +BROWSER-VERIFY-PENDING (target 2026-05-13).** | Agent | S-2026
+          +-04-29 closeout audit | None |                                
+      805  | IRF-III-034 | **P1** | **sovereign-systems: Replace Start He
+           re pillar picker with spiral node-placement flow.** Prior GH#9
+            is closed, but current `quiz.astro` still renders `config.pil
+           lars.map(...)` after email gate and `ghl.quizFormUrl` remains 
+           empty. Required: weighted answer model mapping users to nodes 
+           1-13, preserve/repair email capture, wire GoHighLevel URL or m
+           ark external blocker with owner/date, browser-test route behav
+           ior before closure. **GH#56.** | Agent | S-2026-04-29 closeout
+            audit | GHL URL / client input if external form is required |
+      806  
+      807  ---
+
+⏺ Update(INST-INDEX-RERUM-FACIENDARUM.md)
+  ⎿  Added 1 line, removed 1 line
+      802  | ~~IRF-III-031~~ | ~~**P1**~~ | ~~**sovereign-systems: Execut
+           e 5-PR corrective implementation — spiral-first architecture.*
+           * PR 1: homepage restructure (spiral as hero). PR 2: water pag
+           e scoping (mini version). PR 3: quiz architecture (routing she
+           ll). PR 4: 13-node spiral + node pages. PR 5: polish + walkthr
+           ough. 18 of 48 in-scope wants addressed. Plan: `.claude/plans/
+           2026-04-17-corrective-implementation.md`. | Agent | S-2026-04-
+           17 shimmering-wobbling-orbit | None — ready to build |
+      803  | IRF-III-032 | **P1** | **sovereign-systems: Client architect
+           ural feedback — spiral-first vs pillar-first resolution.** Mad
+           die's voice-to-text feedback (2026-04-20) reveals persistent m
+           isalignment: she wants spiral as PRIMARY navigation (not pilla
+           rs), water as single-page educational warm-up (not multi-page 
+           funnel), quiz as spiral placement tool (not pillar picker). 8-
+           question structured questionnaire sent to pin down decisions. 
+           Blocks: water consolidation, quiz redesign, homepage finalizat
+           ion. Plan: `.claude/plans/2026-04-20-maddie-spiral-first-reali
+           gnment.md`. **△ Blocker: BROWSER-VERIFY-PENDING (target 2026-0
+           5-13).** | Human+Agent | S-2026-04-20 maddie-questionnaire | M
+           addie response |
+      804  | IRF-III-033 | **P1** | **sovereign-systems: Restore visible 
+           spiral visual fidelity.** Closeout review found both node vari
+           ants generate star/symbol geometry then hide the mesh (`mesh.v
+           isible = false`), so the client sees particle clouds inside in
+           visible boundaries rather than visible refracted-light stars o
+           r sacred-symbol vessels. Hover behavior also shows tagline nea
+           r cursor while the name is always visible below, contradicting
+            the "name pops up in center or under on hover" ask. Required:
+            decide visible ghost vessel / refracted star / hybrid, implem
+           ent hover-name behavior for pointer and touch/focus, prove wit
+           h desktop/mobile browser screenshots. **GH#57.** **△ Blocker: 
+           BROWSER-VERIFY-PENDING (target 2026-05-13).** | Agent | S-2026
+           -04-29 closeout audit | None |
+      805 -| IRF-III-034 | **P1** | **sovereign-systems: Replace Start He
+          -re pillar picker with spiral node-placement flow.** Prior GH#9
+          - is closed, but current `quiz.astro` still renders `config.pil
+          -lars.map(...)` after email gate and `ghl.quizFormUrl` remains 
+          -empty. Required: weighted answer model mapping users to nodes 
+          -1-13, preserve/repair email capture, wire GoHighLevel URL or m
+          -ark external blocker with owner/date, browser-test route behav
+          -ior before closure. **GH#56.** | Agent | S-2026-04-29 closeout
+          - audit | GHL URL / client input if external form is required |
+      805 +| IRF-III-034 | **P1** | **sovereign-systems: Replace Start He
+          +re pillar picker with spiral node-placement flow.** Prior GH#9
+          + is closed, but current `quiz.astro` still renders `config.pil
+          +lars.map(...)` after email gate and `ghl.quizFormUrl` remains 
+          +empty. Required: weighted answer model mapping users to nodes 
+          +1-13, preserve/repair email capture, wire GoHighLevel URL or m
+          +ark external blocker with owner/date, browser-test route behav
+          +ior before closure. **GH#56.** **△ Blocker: BROWSER-VERIFY-PEN
+          +DING (target 2026-05-13).** | Agent | S-2026-04-29 closeout au
+          +dit | GHL URL / client input if external form is required |   
+      806  
+      807  ---
+      808  
+
+⏺ All 5 IRF edits applied. Now committing/pushing the IRF + chezmoi-mirroring
+  the memory file in parallel.
+
+⏺ Bash(git add INST-INDEX-RERUM-FACIENDARUM.md && git diff --cached --stat |
+      head -5 && echo "--- COMMIT ---" && git commit -m "$(cat <<'EOF'
+      docs(irf): retroactive Ph…)
+  ⎿   INST-INDEX-RERUM-FACIENDARUM.md | 10 +++++-----
+      1 file changed, 5 insertions(+), 5 deletions(-)
+     --- COMMIT ---
+     … +11 lines (ctrl+o to expand)
+
+⏺ Bash(echo "=== CHEZMOI RE-ADD memory file ===" && chezmoi re-add
+      /Users/4jp/.claude/projects/-Users-4jp-Workspace/memory/project_irf_phase4
+      _collision_2026_04_29.md 2…)
+  ⎿  === CHEZMOI RE-ADD memory file ===
+     [master b6d1cf0] Update .claude/projects/-Users-4jp-Workspace/memory/p
+     roject_irf_phase4_collision_2026_04_29.md
+     … +11 lines (ctrl+o to expand)
+
+⏺ Both stages landed. Three commits pushed total in this session:
+  - 384aed4 corpvs-testamentvm Stage 1 (prompts)
+  - d00dfb0 my-knowledge-base Stage 2 (cascade)
+  - a861f9c corpvs-testamentvm Stage 5b (IRF amendments)
+  - b6d1cf0 domus-semper-palingenesis Stage 5a (memory mirror via chezmoi)
+
+  ★ Insight ─────────────────────────────────────
+  - The IRF commit triggered the DONE-ID validation hook this time, which 
+  passed. Notice the difference from Stages 1 + 2 where the hook was "skipped —
+  no files to check": the IRF commit contains DONE references, so the validator
+  activated and ran. This is a working pre-commit guard that yesterday's
+  hall-monitor session also got — it would catch DONE-counter/IRF-row drift if
+  any existed. Useful to know the validator is path-active, not always-on.
+  - chezmoi autoCommit+autoPush is the cheapest local:remote=1:1 enforcement we 
+  have. Edit a managed file, run chezmoi re-add, and the mirror auto-commits and
+   pushes without a separate ceremony. The memory file's amendment got to remote
+   in one command. This is the architecture pattern for V5/V6/V7 if option (b)
+  (move workspace governance into chezmoi templates) ever gets picked.
+  ─────────────────────────────────────────────────
+
+  Running the verification suite now.
+
+⏺ Bash(echo "=== 1. ALL 4 REPOS HEAD ===" && for d in
+      /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm
+      /Users/4jp/Workspace/organvm/my-knowledge-base /Users/4jp…)
+  ⎿  === 1. ALL 4 REPOS HEAD ===
+     organvm-corpvs-testamentvm:                        a861f9c docs(irf):
+     retroactive Phase 4 corrections — close PRT-029/030, blocker on III-03
+     … +15 lines (ctrl+o to expand)
+
+⏺ Output truncated mid-check. Quick verification of the remaining items, then
+  final close-out report.
+
+⏺ Bash(echo "=== PR 335 ===" && gh pr view 335 --repo
+      a-organvm/organvm-corpvs-testamentvm --jq '{state, commits: (.commits |
+      length), url}' 2>&1 && echo "" && echo "=…)
+  ⎿  === PR 335 ===
+     cannot use `--jq` without specifying `--json`
+
+⏺ Bash(echo "=== PR 335 ===" && gh pr view 335 --repo
+      a-organvm/organvm-corpvs-testamentvm --json state,url,commits --jq
+      '{state, commits: (.commits | length), url}' &…)
+  ⎿  === PR 335 ===
+     {
+       "commits": 6,
+     … +17 lines (ctrl+o to expand)
+
+⏺ All verification passed. Producing the final close-out report.
+
+  ★ Insight ─────────────────────────────────────
+  - The strikethrough+append pattern proves out at scale. PRT-029/030 each show
+  original text crossed through, plus the closure marker prepended. A future
+  reader scanning the IRF sees ✓ first, then the historical context
+  strikethrough'd. This preserves "we only add" while still surfacing closure
+  prominently. The △ glyph on III-032/033/034 differentiates "intentionally
+  pending visual verification" from ✓ "definitively closed" — visual vocabulary
+  that scales without needing legend lookup.
+  - The plan file itself is a covered vacuum I should surface.
+  /Users/4jp/.claude/plans/external-streams-1-pr-335-vivid-lake.md was
+  substantively rewritten today but lives in ~/.claude/plans/ which may not be
+  chezmoi-managed. If managed, it auto-mirrored via the autoCommit pipe. If not,
+   it's another local-only artifact. Worth one quick check before declaring
+  close-out.
+  ─────────────────────────────────────────────────
+
+⏺ Bash(echo "=== PLAN FILE CHEZMOI STATUS ===" && chezmoi managed --path-style
+      absolute 2>/dev/null | grep -F "external-streams-1-pr-335-vivid-lake.md"
+      && echo "" && e…)
+  ⎿  Error: Exit code 1
+     === PLAN FILE CHEZMOI STATUS ===
+
+⏺ The plan file at ~/.claude/plans/external-streams-1-pr-335-vivid-lake.md is
+  NOT chezmoi-managed — that's a fresh local-only vacuum (call it V11). The
+  user's CLAUDE.md has a standing rule for exactly this case: copy global plans
+  into the relevant project's plans directory. The natural project for this
+  close-out plan is corpvs-testamentvm (where the IRF lives, which is the
+  close-out's primary artifact). Let me mirror + commit before declaring
+  close-out complete.
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ Bash(cp /Users/4jp/.claude/plans/external-streams-1-pr-335-vivid-lake.md
+      /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/.claude/plans/2026
+      -04-29-universal-c…)
+  ⎿  -rw-r--r--@ 1 4jp  staff    18K Apr 29 19:36 .claude/plans/2026-04-29-
+     universal-close-out-audit.md
+     [WARNING] Unstaged files detected.
+     … +17 lines (ctrl+o to expand)
+
+⏺ V11 closed. Plan now lives at both
+  ~/.claude/plans/external-streams-1-pr-335-vivid-lake.md AND organvm-corpvs-tes
+  tamentvm/.claude/plans/2026-04-29-universal-close-out-audit.md (committed
+  b810e57, pushed). The cp pattern is the cheapest soul-persistence path the
+  workspace has.
+
+  ---
+  Close-Out Report — Session Safe to Close
+
+  Sisyphus Verdict
+
+  Yes, safe to close. The boulder is at the saddle, not at the summit.
+  Everything committable is committed; everything mirrorable is mirrored. Stages
+   1, 2, 5a, 5b, V11 all landed in this session. Stage 3 (PR #335 merge) and
+  Stage 4 (sign-signal remote) are pending vertex-A or external action — not
+  Claude-fixable.
+
+  What Was (this session, post-compaction)
+
+  ┌───────────────┬─────────┬───────────────────────────────────────────────┐
+  │     Stage     │ Commit  │                     Where                     │
+  ├───────────────┼─────────┼───────────────────────────────────────────────┤
+  │ Stage 1 —     │         │ corpvs-testamentvm — 6 session-prompt md      │
+  │ prompts       │ 384aed4 │ files (12,610 inserts) validating IRF-SYS-166 │
+  │               │         │  fix                                          │
+  ├───────────────┼─────────┼───────────────────────────────────────────────┤
+  │ Stage 2 —     │         │ my-knowledge-base — CASCADING_WORKSTREAMS.md  │
+  │ cascade       │ d00dfb0 │ + companions (1,168 inserts) — yesterday's    │
+  │               │         │ miss recovered                                │
+  ├───────────────┼─────────┼───────────────────────────────────────────────┤
+  │ Stage 5b —    │         │ corpvs-testamentvm — PRT-029/030 ✓ CLOSED +   │
+  │ IRF           │ a861f9c │ III-032/033/034 △ blocker text                │
+  │ amendments    │         │                                               │
+  ├───────────────┼─────────┼───────────────────────────────────────────────┤
+  │ Stage 5a —    │ b6d1cf0 │ domus-semper-palingenesis — collision recipe  │
+  │ memory mirror │         │ amendment via chezmoi autoCommit              │
+  ├───────────────┼─────────┼───────────────────────────────────────────────┤
+  │ V11 — plan    │ b810e57 │ corpvs-testamentvm — plan file copied to      │
+  │ mirror        │         │ project plans dir                             │
+  └───────────────┴─────────┴───────────────────────────────────────────────┘
+
+  5 commits, 4 repos, 5 remote pushes, 0 lost artifacts.
+
+  What Is (verified state)
+
+  ┌────────────────────────────┬─────────┬────────────────────┐
+  │            Repo            │  HEAD   │    local:remote    │
+  ├────────────────────────────┼─────────┼────────────────────┤
+  │ organvm-corpvs-testamentvm │ b810e57 │ 0/0 ✓              │
+  ├────────────────────────────┼─────────┼────────────────────┤
+  │ my-knowledge-base          │ d00dfb0 │ 0/0 ✓              │
+  ├────────────────────────────┼─────────┼────────────────────┤
+  │ domus-semper-palingenesis  │ b6d1cf0 │ 0/0 ✓              │
+  ├────────────────────────────┼─────────┼────────────────────┤
+  │ sign-signal--voice-synth   │ bbada8a │ broken remote (V2) │
+  └────────────────────────────┴─────────┴────────────────────┘
+
+  Verification suite: all 6 acceptance checks pass:
+  - Stages 1-2 commits present with new HEADs
+  - Zero untracked cascade artifacts in my-knowledge-base
+  - 0/0 ahead/behind for 3/4 repos
+  - PR #335 OPEN with 6 commits at
+  https://github.com/a-organvm/organvm-corpvs-testamentvm/pull/335
+  - IRF closures for PRT-029/030 marked with strikethrough + ✓ + commit SHAs
+  - 3 instances of BROWSER-VERIFY-PENDING (target 2026-05-13) (one each for
+  III-032/033/034)
+
+  What Needs To Be (carried forward)
+
+  Awaiting human signature
+
+  - Stage 3 — Merge PR #335. One signature closes IRF-SYS-163/164/165/166 +
+  DONE-507. Optional: amend body to mention 653065a (relay envelope, the 6th
+  commit).
+
+  Awaiting external action
+
+  - V2 — sign-signal--voice-synth remote at
+  git@github.com:a-organvm/sign-signal--voice-synth.git returns "Repository not
+  found." Repo needs creating on GitHub OR URL needs correcting (could be
+  4444J99 or omni-dromenon-machina). Until resolved, that repo holds 2
+  ahead-of-origin commits + 3 untracked W4 plans + bridge.js modifications, all
+  genuinely local-only.
+
+  Structural decisions (defer to dedicated session)
+
+  - V5/V6/V7 — Workspace meta files (/Users/4jp/Workspace/CLAUDE.md,
+  .claude/skills/qa-audit/SKILL.md, meta-organvm/audits/2026-04-29-INDEX.md)
+  live in non-git locations. Three options on the table: workspace root .git,
+  chezmoi templates, or move into a tracked subordinate repo.
+  - V8 — corpvs-testamentvm/memory/ 676K dir (gitignored, unclassified).
+  Foreign-harvest? canonical? scratch?
+  - V9/V10 — IRF-SYS rows for ID-availability protocol + the never-installed
+  push-blocking hook. Need freshly-grepped next-available IDs.
+
+  Yesterday's deferred work (per memory note)
+
+  - Phases 6-10 of the original triple-stream close-out plan (Maddie forms, Rob
+  forms, distillation map, density pulse, full verification). Recoverable from
+  the gitignored compaction transcript + the project memory file.
+  - Stream 2 Valiant Squid — 0/7 actions executed.
+  - Domain E — if-clause restoration in rendered settings.json (IRF-PRT-079).
+
+  Sisyphus's Certainty
+
+  Are we certain? Three layers of certainty:
+
+  1. Disk certainty — every file referenced by this session has been
+  read-verified at end-of-session (not from cache, not from agent reports, not
+  from memory).
+  2. Remote certainty — every commit pushed has a confirmed <old-sha>..<new-sha>
+   line in the push output; verification step confirms 0/0 ahead/behind for all
+  resolvable repos.
+  3. Recoverable certainty — if the disk dies right now: corpvs-testamentvm has
+  the IRF + the plan + the prompt registry on GitHub; my-knowledge-base has the
+  cascade artifacts on GitHub; the memory files have chezmoi mirrors on GitHub.
+  The soul persists.
+
+  Are we done? No — the close-out audit closes today's commitments, not the
+  broader work. The remaining vacuums are named (IRF-trackable), classified
+  (P1/P2/P3), and pointed-to (the plan file is the receipt). Tomorrow's session
+  can resume from a known-clean state.
+
+  ★ Insight ─────────────────────────────────────
+  - The "if lost, recover immediately" rule operated retroactively this session.
+   I didn't lose anything — but the universal close-out audit itself was the
+  recovery mechanism for yesterday's missed my-knowledge-base commit. The
+  cascade caught it before it became "lost." Verification-discovered work IS
+  recovered work; the rule generalizes from "after data loss" to "before data
+  loss is certified by absence of audit."
+  - V11 is a recursion: the plan file describing the close-out audit needed its 
+  own close-out. The plan was the artifact prescribing how to close out other
+  artifacts; it was itself a local-only artifact at session-end. Closing V11 was
+   a single cp + commit + push. The pattern is generalizable: any plan-mode
+  artifact should be auto-mirrored to a project's plans dir as a final-stage
+  protocol step. Worth codifying as a feedback memory in a future session if the
+   pattern repeats.
+  - The session has produced exactly one new IRF-tracked closure pair 
+  (PRT-029/030) and one IRF-tracked blocker triple (III-032/033/034). Modest by
+  aggregate — but every one of those amendments was previously unreachable for
+  the close-out (the original Phase 4 collision blocked them). The bottleneck
+  wasn't the work; it was the safe-to-write protocol. Once
+  verification-of-verification cleared the recipe, the actual amendments took 5
+  sequential Edit calls.
+  ─────────────────────────────────────────────────
+
+  End-of-session: safe to close. Five commits pushed, three pull-side echoes
+  confirmed. The remaining vacuums are named in the IRF-mirror plan at b810e57.
+  Tomorrow's session inherits a 0/0 working tree across three repos with all
+  named blockers documented, prioritized, and routed.
+✻ Crunched for 23m 49s
+
+❯ /export                                                                       
+  ⎿  Conversation exported to:
+     /Users/4jp/Workspace/organvm/organvm-corpvs-testamentvm/2026-04-29-194034-t
+     his-session-is-being-continued-from-a-previous-c.txt
+
+❯ /diff 
+  ⎿  Diff dialog dismissed
+
+❯ /init                                                                         
+
+⏺ Reading the current state of /Users/4jp/Workspace/CLAUDE.md fresh, then
+  producing improvement suggestions per /init discipline (suggest, don't
+  auto-rewrite).
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ The existing /Users/4jp/Workspace/CLAUDE.md is well-structured (223 lines, 8
+  sections + governance + auto-generated). Per /init discipline ("suggest
+  improvements" not "rewrite"), here are the concrete gaps surfaced by today's
+  session — ranked by priority. I'll batch them into a single proposal so you
+  can pick which to apply.
+
+  ★ Insight ─────────────────────────────────────
+  - The CLAUDE.md is itself the V5 vacuum. The file at
+  /Users/4jp/Workspace/CLAUDE.md is local-only — the Workspace root has no .git
+  (verified today). Edits I make right now propagate to no remote unless the
+  user picks one of the V5 options (workspace .git / chezmoi templates /
+  move-to-tracked-repo). This is the recursive case: the file that documents the
+   workspace doesn't itself live in the workspace's persistence model.
+  - Several improvements come from refusing to invent lore. The /init prompt
+  explicitly says "Do not make up information such as 'Common Development
+  Tasks', 'Tips for Development'" — so I'm only proposing additions that are
+  derived from verified disk state or explicit session evidence (today's
+  cascade, today's IRF state, today's commits). Anything I don't know with
+  certainty stays out.
+  - The biggest single gap is a factual path error. Line 71 says the IRF lives
+  at meta-organvm/organvm-corpvs-testamentvm/.... Today's grep confirmed
+  canonical IRF is at organvm/organvm-corpvs-testamentvm/... (the meta-organvm/
+  path also exists but holds stale content). This trips every future session
+  that follows the doc.
+  ─────────────────────────────────────────────────
+
+  Proposed Improvements
+
+  Priority 1 — Factual corrections (the file currently lies)
+
+  1.1. IRF location path bug — Line 71 refers to a stale path
+  - The **universal work registry** lives at 
+  `meta-organvm/organvm-corpvs-testamentvm/INST-INDEX-RERUM-FACIENDARUM.md`.
+  + The **universal work registry** lives at 
+  `organvm/organvm-corpvs-testamentvm/INST-INDEX-RERUM-FACIENDARUM.md`.
+  + (A stale archive copy at 
+  `meta-organvm/organvm-corpvs-testamentvm/INST-INDEX-RERUM-FACIENDARUM.md` 
+  exists; do NOT edit that one.)
+  Why: today's grep shows the canonical IRF is at
+  organvm/organvm-corpvs-testamentvm/. The meta-organvm/... path has stale rows
+  (PRT-040..049 only). Any future session following this doc would amend the
+  wrong file.
+
+  1.2. Workspace Map missing organvm/ row — Lines 13-25 list every top-level dir
+   except organvm/ itself, which holds critical repos like
+  organvm-corpvs-testamentvm, my-knowledge-base, sign-signal--voice-synth. Add:
+  + | `organvm/` | — | Mixed: meta-corpus, knowledge-base, voice-synth, 
+  cross-organ utilities | `a-organvm` | ~10+ |
+  Insert between meta-organvm/ and 4444J99/.
+
+  Priority 2 — Lessons from this session that generalize
+
+  2.1. Strengthen "Verification Before Action" with the recursive case
+  After the existing 3 bullets, add:
+  + - **Verification-of-verification.** Verifications themselves are hypotheses.
+   When an Explore agent reports a finding (especially MISSING/REFUTED), verify 
+  the agent's claim with direct Read/Bash before acting on it. Today's cascade 
+  caught 5 false-negatives from a single agent pass.
+  + - **Memory recall is hypothesis recursively.** A memory file recording 
+  yesterday's discovery may itself be stale by today (recovery recipes go stale 
+  the same way original plans do). Re-grep current state at action-time, never 
+  trust prior memory snapshots for ID ranges, file paths, or branch states.
+
+  2.2. Add IRF amendment discipline to the Index Rerum Faciendarum section
+  After line 75, add:
+  + - **ID-availability protocol.** Before claiming any IRF row IDs, grep for 
+  the exact range against the current file. The DONE counter has atomic 
+  claim-before-use; IRF row IDs do not. Markdown tables silently accept 
+  duplicate IDs. Today's Phase 4 collision was the lesson; the recovery memory 
+  note went stale before it could be used.
+  + - **"We only add" pattern.** Amend rows via strikethrough + append, never 
+  wholesale replacement. Closure: `~~P1~~ | ✓ **CLOSED YYYY-MM-DD** (commit 
+  \`<sha>\`). ~~original text~~`. Pending verification: append `**△ Blocker: 
+  BROWSER-VERIFY-PENDING (target YYYY-MM-DD)**` to the description.
+
+  Priority 3 — Self-awareness gaps (the file doesn't know itself)
+
+  3.1. Note that CLAUDE.md is local-only — at top of file, after line 3, add:
+  + > **NOTE on this file's persistence:** `/Users/4jp/Workspace/` has no 
+  `.git`, so this CLAUDE.md is local-only by default. Edits do NOT propagate to 
+  remote unless mirrored via chezmoi (the user's standard pattern) or copied 
+  into a tracked subordinate repo. See user-global `~/CLAUDE.md` for the full 
+  plan-discipline rule. (Tracked as IRF vacuum V5 in the active close-out plan.)
+
+  3.2. Reference the user-global plan discipline — after Session Start Protocol,
+   add a new section:
+  + ## Plan File Discipline
+  +
+  + Plan-mode artifacts auto-write to `~/.claude/plans/<auto-slug>.md`. Per 
+  user-global rule, copy each plan to the relevant project's 
+  `.claude/plans/YYYY-MM-DD-<descriptive-slug>.md` so the project retains its 
+  own plan history. Never overwrite — versioning suffix `-v2.md`, `-v3.md`. See 
+  `~/CLAUDE.md` for the full discipline.
+
+  Priority 4 — Live-system pointers (what works that future Claudes should know)
+
+  4.1. Note the patched prompt-registry hook
+  Add to "Conventions" section or new "Live System Hooks" section:
+  + ## Live System Hooks (verified 2026-04-29)
+  +
+  + - **Session-prompt capture.** A patched SessionEnd hook at 
+  `~/.claude/hooks/session-prompt-capture.sh` (IRF-SYS-166 fix, deployed via 
+  chezmoi commit `89bbe98`) writes each session's prompts to `organvm/organvm-co
+  rpvs-testamentvm/data/prompt-registry/sessions/<uuid>-prompts.md`. These files
+   are auto-generated and safe to commit (precedent: corpvs commit `384aed4` 
+  2026-04-29).
+  + - **chezmoi autoCommit + autoPush.** Editing any file managed by chezmoi at 
+  `~/Workspace/4444J99/domus-semper-palingenesis/` (e.g., via `chezmoi re-add`) 
+  auto-commits and pushes to remote. This is the standard mechanism for making 
+  local-only files (memory, dotfiles) durable.
+  + - **/insights report.** `~/.claude/usage-data/report.html` is regenerated on
+   `/insights` from `session-meta/` (435 entries) and `facets/` (102 
+  dimensions). Read it before installing any governance change derived from 
+  Claude usage analysis.
+  + - **qa-audit skill.** Available at 
+  `~/Workspace/.claude/skills/qa-audit/SKILL.md` (added 2026-04-29). Use for 
+  verify-claims-against-disk audits with a STOP-at-verification gate.
+
+  4.2. Note the gitignored transcript pattern
+  Add to "Conventions":
+  + - **Session transcripts and compactions are local-only.** 
+  `*-local-command-caveatcaveat-the-messages-below.txt` and 
+  `2026-*-compaction-*.txt` are gitignored conventions across repos. Don't 
+  commit them — they may carry privilege-sensitive context. For doctrine derived
+   from a compaction, write a memory file (which IS pushed) referencing the 
+  local-only artifact.
+
+  Priority 5 — Optional housekeeping
+
+  5.1. Mark auto-generated section staleness
+  - *Last synced: 2026-04-14T21:32:19Z*
+  + *Last synced: 2026-04-14T21:32:19Z (15 days stale; refresh via `organvm 
+  refresh` or `python3 -m conductor patch --json`)*
+
+  5.2. Cross-repo edges discovery from W4 — note the produces/consumes drift
+  between sign-signal--voice-synth/voice-assistant.json (561B source) and
+  my-knowledge-base/voice-assistant.json (735B consumer). Could go in Critical
+  Structural Rules or a new "Cross-Repo Edges" section. Worth deferring until V5
+   is decided (the file isn't tracked anyway).
+
+  ---
+  How to apply
+
+  Want me to apply some/all/none? Three calibrations:
+
+  (a) Apply only Priority 1 (bug fixes) — lowest-risk, highest-value,
+  single-Edit per item
+  (b) Apply Priority 1 + 2 + 3 — corrects + adds today's lessons +
+  self-awareness; leaves the live-system pointers (P4) for a future session that
+   wants more verification
+  (c) Apply all 5 priorities — comprehensive update; ~10 Edit calls
+
+  Whichever you pick, the same persistence question applies: edits to
+  /Users/4jp/Workspace/CLAUDE.md are local-only until V5 is resolved. If you
+  want the changes durable today, the cheapest path is (i) apply edits, then
+  (ii) cp the file into a tracked repo's .claude/CLAUDE.md (e.g.,
+  corpvs-testamentvm has one) and commit. Otherwise the improvements live until
+  the next disk event.
+
+  Note: if you don't pick — none get applied. Per /init's "suggest improvements"
+   framing, I'm holding the proposal at the door rather than walking it through.
+
+✻ Baked for 2m 28s
+
+❯ /copy                                                                         
+  ⎿  Copied to clipboard (8607 characters, 98 lines)
+     Also written to /tmp/claude/response.md
+
+❯ /export                                                                       
+  ⎿  Conversation copied to clipboard
