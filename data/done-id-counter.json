@@ -1,11 +1,11 @@
 {
-  "next_id": 526,
-  "last_claimed_by": "S-2026-05-05-skills-shipping",
-  "last_claimed_at": "2026-05-05",
+  "next_id": 532,
+  "last_claimed_by": "S-2026-05-11-bound-decomposition-to-meta-organvm",
+  "last_claimed_at": "2026-05-11",
   "claimed_range": [
-    524,
-    525
+    526,
+    531
   ],
-  "note": "Skills-shipping closeout claims DONE-524..525 for IRF-SKL-003 (premortem skill) and IRF-SKL-004 (expansive-inquiry skill) after a-i--skills PR #18 opened on 2026-05-05 with all 4 CI checks green.",
+  "note": "bound/ decomposition closeout claims DONE-526..531: persona-fleet remote + first push (526), substrate import to persona-fleet docs/ (527), digital-income-organism-inquiry repo creation (528), sherlock-scanner WIP preserved on wip/sherlock-cli (529), bound/CLAUDE.md rewritten post-move (530), plan-of-record + 3 memory files chezmoi-synced (531). Plan: ~/.claude/plans/the-personal-profile-is-composed-octopus.md.",
   "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
 }
