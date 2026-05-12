@@ -1,0 +1,181 @@
+path	git_type	worktree_of	remotes	ahead	behind	detached	uncommitted	untracked	stash_count	branch_drift	submodule_drift	classification
+/Users/4jp/.openclaw/workspace	regular			0	0	false	0	8	0		false	NO_REMOTE
+/Users/4jp/Code/.archive/superprojects-20260420-120747/meta-organvm	regular		origin	0	0	false	383	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/meta-organvm/.github	regular		origin	0	4	false	0	0	0	main:behind 4	false	BRANCH_DRIFT
+/Users/4jp/Code/.archive/superprojects-20260420-120747/meta-organvm/intake/alchemical-synthesizer	regular		origin	0	10	false	0	0	0	main:behind 10	false	BRANCH_DRIFT
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-i-theoria	regular		origin	0	0	false	13	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-ii-poiesis	regular		origin	0	0	false	6	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-ii-poiesis/.github	regular		origin	0	0	false	0	0	0	main:behind 3	false	BRANCH_DRIFT
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-iii-ergon	regular		origin	0	0	false	9	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-iii-ergon/.github	regular		origin	0	0	false	0	0	0	main:behind 4	false	BRANCH_DRIFT
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-iv-taxis	regular		origin	0	0	false	10	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-v-logos	regular		origin	0	0	false	5	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-v-logos/.github	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-vi-koinonia	regular		origin	0	0	false	5	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-vi-koinonia/.github	regular		origin	0	0	false	0	0	0	main:behind 3	false	BRANCH_DRIFT
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-vii-kerygma	regular		origin	0	0	false	5	0	0		true	DIRTY_UNCOMMITTED
+/Users/4jp/Code/.archive/superprojects-20260420-120747/organvm-vii-kerygma/.github	regular		origin	0	0	false	0	0	0	main:behind 3	false	BRANCH_DRIFT
+/Users/4jp/Code/autonomous-treasury/ventures/bountyscope	regular		origin	0	0	false	1	4	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/autonomous-treasury/ventures/edgarflash	regular		origin	0	0	false	1	4	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/autonomous-treasury/ventures/promptscope	regular		origin	0	0	false	2	2	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/autonomous-treasury/ventures/trendpulse	regular		origin	0	0	false	1	4	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/autonomous-treasury/ventures/vulnpulse	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/autonomous-treasury/ventures/writelens	regular		origin	0	0	false	1	4	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/dvd	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/income-2026-05-04/awesome-claude-code	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/income-2026-05-04/cve-watch	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/income-2026-05-04/lido-dao	regular		origin	0	0	false	0	0	0		true	SUBMODULE_DRIFT
+/Users/4jp/Code/income-2026-05-04/lido-v3-audit-2026-05-04	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/income-2026-05-04/portfolio-site	regular		origin	0	0	false	0	0	0	main:ahead 1	false	BRANCH_DRIFT
+/Users/4jp/Code/intake/dwv/consilivm-simplex	regular		origin	0	1	false	0	0	0	main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Code/intake/dwv/specvla-ergon--avditor-mvndi	regular		origin	0	1	false	0	0	0	feat/stargate-shader:behind 15;main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/a-i--skills	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/a-mavs-olevm	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/adaptive-personal-syllabus	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/aerarium--res-publica	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/agent--claude-smith	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/agentic-titan	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/agentkit	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/alchemia-ingestvm	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/alchemical-synthesizer	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/analytics-engine	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/announcement-templates	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/atomic-substrata	regular		origin	0	0	false	0	1	0		false	DIRTY_UNTRACKED
+/Users/4jp/Code/organvm/auto-revision-epistemic-engine	regular		origin	0	0	false	0	0	1		false	STASH_PRESENT
+/Users/4jp/Code/organvm/blender-mcp	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/brainstorm-20260423	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/call-function--ontological	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/carrier-wave--zeitgeist-thesis	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/chthon-oneiros	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/classroom-rpg-aetheria	regular		origin	0	0	false	0	1	0	palette-sound-a11y-7682003740480512592:gone	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/cognitive-archaelogy-tribunal	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/collective-persona-operations	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/commerce--meta	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/community-hub	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/content-engine--asset-amplifier	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/conversation-corpus-engine	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/custodia-securitatis	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/cvrsvs-honorvm	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/digital-income-organism-inquiry	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/distribution-strategy	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/editorial-standards	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/essay-pipeline	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/fastmcp	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/gemini-cli-blender-extension	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/growth-auditor	regular		origin	0	0	false	0	1	0		false	DIRTY_UNTRACKED
+/Users/4jp/Code/organvm/ivi374ivi027-05	regular		origin	0	1	false	0	0	0	main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/k6-contrib	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/kerygma-pipeline	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/kerygma-profiles	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/koinonia-db	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/krypto-velamen	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/life-my--midst--in	regular		origin	0	3	false	6	7	0	master:behind 3	false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/organvm/linguistic-atomization-framework	regular		origin	0	0	false	77	0	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/organvm/materia-collider	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/mesh	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/metasystem-master	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/my-knowledge-base	regular		origin	0	0	false	4	17	1		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/organvm/narratological-algorithmic-lenses	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/nexus--babel-alexandria	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/openai-agents-contrib	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/orchestration-start-here	regular		origin	0	0	false	0	0	0	feat/governance-templates:ahead 1	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/org-dotgithub	regular		origin	0	0	false	0	0	0	main:gone	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/organvm-corpvs-testamentvm	regular		origin	0	0	false	0	1	2	fix/shell-injection-security:ahead 1	false	STASH_PRESENT
+/Users/4jp/Code/organvm/organvm-engine	regular		origin	0	0	false	0	4	1		false	STASH_PRESENT
+/Users/4jp/Code/organvm/organvm-mcp-server	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/organvm-ontologia	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/organvm-scrutator	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/peer-audited--behavioral-blockchain	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/petasum-super-petasum	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/praxis-perpetua	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/praxis-perpetua/content-pipeline/amp-lab/object-lessons	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/public-process	regular		origin	0	0	false	0	0	1	merge/eval-growth-sync:gone	false	STASH_PRESENT
+/Users/4jp/Code/organvm/public-record-data-scrapper	regular		origin	0	0	false	0	0	0	main:behind 2	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/python-sdk	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/reading-group-curriculum	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/reading-observatory	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/recursive-engine--generative-entity	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/reverse-engine-recursive-run	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/rules-system-bound	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/salon-archive	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/scale-threshold-emergence	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/schema-definitions	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/sema-metra--alchemica-mundi	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/sign-signal--voice-synth	regular		origin	0	0	false	2	7	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/organvm/social-automation	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/sovereign--ground	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/sovereign-systems--elevate-align	regular		origin	0	0	false	0	0	0	feat/phase-1-water-page:behind 1;feat/phase-2-ewg-hydration-node:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/sovereign-systems--layer-above-hokage	regular		origin	0	0	false	0	2	0		false	DIRTY_UNTRACKED
+/Users/4jp/Code/organvm/stakeholder-portal	regular		origin	0	0	false	0	0	0	chore/dep-upgrades-eslint10-next162:gone	false	BRANCH_DRIFT
+/Users/4jp/Code/organvm/styx-behavioral-art	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/styx-behavioral-economics-theory	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/system-dashboard	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/system-governance-framework	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/system-system--system--monad	worktree	/Users/4jp/system-system--system/.git/worktrees/system-system--system--monad		0	0	false	0	0	0		false	NO_REMOTE
+/Users/4jp/Code/organvm/system-system--system	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/the-actual-news	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/tmp_organvm-i-theoria.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/tool-interaction-design	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/universal-node-network	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/vigiles-aeternae--agon-cosmogonicum	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/vigiles-aeternae--corpus-mythicum	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/vox--architectura-gubernatio	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/organvm/vox--publica	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/persona-fleet	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--a2aproject-a2a-python	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--adenhq-hive	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--adenhq-hive/repo	regular		origin,upstream	0	0	false	0	0	0	main:ahead 1	false	BRANCH_DRIFT
+/Users/4jp/Code/upstream/community/contrib--anthropic-skills	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--anthropic-skills/repo	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--anthropics-anthropic-sdk-python	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--camel-ai-camel	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--clyra-gait	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--clyra-gait/repo	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--dapr-dapr	regular		origin,upstream	0	0	false	0	0	0	fix/subscription-fallthru-consistency:gone	false	BRANCH_DRIFT
+/Users/4jp/Code/upstream/community/contrib--databricks-dbt-databricks	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--datadog-guarddog	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--dbt-mcp	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--dbt-mcp/repo	regular		origin,upstream	0	0	false	0	0	0	main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Code/upstream/community/contrib--grafana-k6	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--indeedeng-iwf	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--indeedeng-iwf/repo	regular		origin,upstream	0	0	false	0	0	0		true	SUBMODULE_DRIFT
+/Users/4jp/Code/upstream/community/contrib--ipqwery-ipapi-py	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--ipqwery-ipapi-py/repo	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--jairus-dagster-sdlc	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--jairus-dagster-sdlc/repo	regular		origin,upstream	0	0	false	1	0	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Code/upstream/community/contrib--langchain-langgraph	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--langchain-langgraph/repo	regular		origin,upstream	0	0	false	0	0	0	main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Code/upstream/community/contrib--m13v-summarize-recent-commit	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--m13v-summarize-recent-commit/repo	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--modelcontextprotocol-python-sdk	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--notion-mcp-server	regular		origin,upstream	87	1	false	0	0	0	fix/issue-82-children-schema-type:gone;main:ahead 87, behind 1	false	DIVERGED
+/Users/4jp/Code/upstream/community/contrib--openai-agents-python	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--prefecthq-fastmcp	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--primeinc-github-stars	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--primeinc-github-stars/repo	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--tadata-org-fastapi-mcp	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--temporal-sdk-python	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Code/upstream/community/contrib--temporal-sdk-python/repo	regular		origin,upstream	0	0	false	0	0	0		true	SUBMODULE_DRIFT
+/Users/4jp/Code/vigiles-aeternae--theatrum-mundi	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99	regular		origin	0	0	false	2	0	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Workspace/4444J99/4444J99	regular		origin	0	3	false	0	0	0	main:behind 3	false	BRANCH_DRIFT
+/Users/4jp/Workspace/4444J99/application-pipeline	regular		origin	0	0	false	20	0	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Workspace/4444J99/domus-semper-palingenesis	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/hokage-chess	regular		origin	0	0	false	1	11	0		false	DIRTY_UNCOMMITTED
+/Users/4jp/Workspace/4444J99/intake	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/padavano	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/meta-organvm.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-i-theoria.github.io	regular		origin	0	1	false	0	0	0	main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-ii-poiesis.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-iii-ergon.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-iv-taxis.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-v-logos.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-vi-koinonia.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/portfolio/.tmp-org-deploy/organvm-vii-kerygma.github.io	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/4444J99/system-system--system	regular		origin	0	1	false	0	0	0	main:behind 1	false	BRANCH_DRIFT
+/Users/4jp/Workspace/a-organvm	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/composition-1-2	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/organvm/.archive-coinbase-iter1-20260502	regular		origin,upstream	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/organvm/.github-org	regular		origin	0	0	false	0	0	0		false	PARITY_OK
+/Users/4jp/Workspace/organvm/.github	regular		origin	0	0	false	0	0	1		false	STASH_PRESENT
