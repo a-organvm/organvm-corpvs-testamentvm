@@ -238,10 +238,38 @@ def parse_chatgpt_export(filepath: Path) -> list[dict]:
     return prompts
 
 
+_SHELL_PROMPT_RE = re.compile(r"^\s*[\w.-]+@[\w.-]+\s+[~/].*?[%$#]\s")
+_BREW_OUTPUT_RE = re.compile(r"^==>\s|^Pouring\s|^Caveats\s|^Error: (No available formula|Cannot install)")
+_LOGIN_BANNER_RE = re.compile(r"^Last login:\s")
+
+
+def _is_scrollback_paste(text: str) -> bool:
+    """Heuristic: detect when text is a pasted terminal scrollback rather than a user prompt.
+
+    Why: Codex's history.jsonl captures user-typed text, but users frequently paste
+    raw terminal output (often including `4jp@Mac ~ % brew upgrade` followed by
+    Homebrew "==> Pouring..." banners). The atomizer then shreds this into dozens
+    of fake "prompt atoms" (43 found in run 2026-05-13). This filter drops pastes
+    where shell-output patterns dominate, while preserving real prompts that
+    happen to quote one or two error lines.
+    """
+    body_lines = text.splitlines()
+    if len(body_lines) < 5:
+        return False
+    shell_signal = 0
+    for line in body_lines:
+        if _LOGIN_BANNER_RE.match(line) or _SHELL_PROMPT_RE.match(line) or _BREW_OUTPUT_RE.match(line):
+            shell_signal += 1
+            if shell_signal >= 3:
+                return True
+    return False
+
+
 def parse_codex_history(filepath: Path) -> list[dict]:
     """Parse Codex history.jsonl and extract all user prompts."""
     prompts = []
     session_counters: dict[str, int] = {}
+    skipped_scrollback = 0
 
     try:
         with open(filepath, "r", encoding="utf-8") as f:
@@ -260,6 +288,10 @@ def parse_codex_history(filepath: Path) -> list[dict]:
 
         text = entry.get("text", "")
         if not text or not text.strip():
+            continue
+
+        if _is_scrollback_paste(text):
+            skipped_scrollback += 1
             continue
 
         session_id = entry.get("session_id", "unknown")
@@ -293,6 +325,8 @@ def parse_codex_history(filepath: Path) -> list[dict]:
             "source": "codex",
         })
 
+    if skipped_scrollback:
+        print(f"Codex: skipped {skipped_scrollback} scrollback-paste entries")
     return prompts
 
 
