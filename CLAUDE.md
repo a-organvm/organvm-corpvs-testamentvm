@@ -280,18 +280,15 @@ schedule. Trigger any of them manually with `gh workflow run <name>`.
 **Org:** `meta-organvm` | **Repo:** `organvm-corpvs-testamentvm`
 
 ### Edges
-- **Produces** → `ORGAN-IV`: meta-documentation
-- **Produces** → `META-ORGANVM/organvm-engine, META-ORGANVM/praxis-perpetua`: research-tasks
-- **Produces** → `ALL`: work-registry
-- **Consumes** ← `ORGAN-IV`: orchestration-artifact
+- *No inter-repo edges declared in seed.yaml*
 
 ### Siblings in Meta
-`.github`, `alchemia-ingestvm`, `schema-definitions`, `organvm-engine`, `system-dashboard`, `organvm-mcp-server`, `praxis-perpetua`, `stakeholder-portal`, `materia-collider`, `organvm-ontologia`, `vigiles-aeternae--agon-cosmogonicum`, `cvrsvs-honorvm`
+`.github`, `alchemia-ingestvm`, `schema-definitions`, `organvm-engine`, `system-dashboard`, `organvm-mcp-server`, `praxis-perpetua`, `stakeholder-portal`, `materia-collider`, `organvm-ontologia`, `vigiles-aeternae--agon-cosmogonicum`, `cvrsvs-honorvm`, `custodia-securitatis`
 
 ### Governance
 - *Standard ORGANVM governance applies*
 
-*Last synced: 2026-04-14T21:32:13Z*
+*Last synced: 2026-05-16T20:28:43Z*
 
 ## Active Handoff Protocol
 
@@ -318,149 +315,51 @@ Transcripts are on-demand (never committed):
 
 ## System Library
 
-Plans: 269 indexed | Chains: 5 available | SOPs: 121 active
+Plans: 269 indexed | Chains: 5 available | SOPs: 8 active
 Discover: `organvm plans search <query>` | `organvm chains list` | `organvm sop lifecycle`
-Library: `meta-organvm/praxis-perpetua/library/`
+Library: `/Users/4jp/Code/organvm/praxis-perpetua/library`
 
 
 ## Active Directives
 
 | Scope | Phase | Name | Description |
 |-------|-------|------|-------------|
-| repo | any | registry-update-protocol | registry-update-protocol |
-| organ | any | commit-and-release-workflow | Commit & Release Workflow |
-| organ | any | session-state-management | session-state-management |
-| organ | any | submodule-sync-protocol | submodule-sync-protocol |
 | system | any | atomic-clock | The Atomic Clock |
 | system | any | execution-sequence | Execution Sequence |
 | system | any | multi-agent-dispatch | Multi-Agent Dispatch |
 | system | any | session-handoff-avalanche | Session Handoff Avalanche |
 | system | any | system-loops | System Loops |
-| system | any | prompting-standards | Prompting Standards |
-| system | any | research-standards-bibliography | APPENDIX: Research Standards Bibliography |
-| system | any | phase-closing-and-forward-plan | METADOC: Phase-Closing Commemoration & Forward Attack Plan |
-| system | any | research-standards | METADOC: Architectural Typology & Research Standards |
-| system | any | sop-ecosystem | METADOC: SOP Ecosystem — Taxonomy, Inventory & Coverage |
-| system | any | autonomous-content-syndication | SOP: Autonomous Content Syndication (The Broadcast Protocol) |
-| system | any | autopoietic-systems-diagnostics | SOP: Autopoietic Systems Diagnostics (The Mirror of Eternity) |
-| system | any | background-task-resilience | background-task-resilience |
-| system | any | cicd-resilience-and-recovery | SOP: CI/CD Pipeline Resilience & Recovery |
-| system | any | community-event-facilitation | SOP: Community Event Facilitation (The Dialectic Crucible) |
-| system | any | context-window-conservation | context-window-conservation |
-| system | any | conversation-to-content-pipeline | SOP — Conversation-to-Content Pipeline |
-| system | any | cross-agent-handoff | SOP: Cross-Agent Session Handoff |
-| system | any | cross-channel-publishing-metrics | SOP: Cross-Channel Publishing Metrics (The Echo Protocol) |
-| system | any | data-migration-and-backup | SOP: Data Migration and Backup Protocol (The Memory Vault) |
-| system | any | document-audit-feature-extraction | SOP: Document Audit & Feature Extraction |
-| system | any | dynamic-lens-assembly | SOP: Dynamic Lens Assembly |
-| system | any | essay-publishing-and-distribution | SOP: Essay Publishing & Distribution |
-| system | any | formal-methods-applied-protocols | SOP: Formal Methods Applied Protocols |
-| system | any | formal-methods-master-taxonomy | SOP: Formal Methods Master Taxonomy (The Blueprint of Proof) |
-| system | any | formal-methods-tla-pluscal | SOP: Formal Methods — TLA+ and PlusCal Verification (The Blueprint Verifier) |
-| system | any | generative-art-deployment | SOP: Generative Art Deployment (The Gallery Protocol) |
-| system | any | market-gap-analysis | SOP: Full-Breath Market-Gap Analysis & Defensive Parrying |
-| system | any | mcp-server-fleet-management | SOP: MCP Server Fleet Management (The Server Protocol) |
-| system | any | multi-agent-swarm-orchestration | SOP: Multi-Agent Swarm Orchestration (The Polymorphic Swarm) |
-| system | any | network-testament-protocol | SOP: Network Testament Protocol (The Mirror Protocol) |
-| system | any | open-source-licensing-and-ip | SOP: Open Source Licensing and IP (The Commons Protocol) |
-| system | any | performance-interface-design | SOP: Performance Interface Design (The Stage Protocol) |
-| system | any | pitch-deck-rollout | SOP: Pitch Deck Generation & Rollout |
-| system | any | polymorphic-agent-testing | SOP: Polymorphic Agent Testing (The Adversarial Protocol) |
-| system | any | promotion-and-state-transitions | SOP: Promotion & State Transitions |
-| system | any | recursive-study-feedback | SOP: Recursive Study & Feedback Loop (The Ouroboros) |
-| system | any | repo-onboarding-and-habitat-creation | SOP: Repo Onboarding & Habitat Creation |
-| system | any | research-to-implementation-pipeline | SOP: Research-to-Implementation Pipeline (The Gold Path) |
-| system | any | security-and-accessibility-audit | SOP: Security & Accessibility Audit |
-| system | any | session-self-critique | session-self-critique |
-| system | any | smart-contract-audit-and-legal-wrap | SOP: Smart Contract Audit and Legal Wrap (The Ledger Protocol) |
-| system | any | source-evaluation-and-bibliography | SOP: Source Evaluation & Annotated Bibliography (The Refinery) |
-| system | any | stranger-test-protocol | SOP: Stranger Test Protocol |
-| system | any | strategic-foresight-and-futures | SOP: Strategic Foresight & Futures (The Telescope) |
-| system | any | styx-pipeline-traversal | SOP: Styx Pipeline Traversal (The 7-Organ Transmutation) |
-| system | any | system-dashboard-telemetry | SOP: System Dashboard Telemetry (The Panopticon Protocol) |
-| system | any | the-descent-protocol | the-descent-protocol |
-| system | any | the-membrane-protocol | the-membrane-protocol |
-| system | any | theoretical-concept-versioning | SOP: Theoretical Concept Versioning (The Epistemic Protocol) |
-| system | any | theory-to-concrete-gate | theory-to-concrete-gate |
-| system | any | typological-hermeneutic-analysis | SOP: Typological & Hermeneutic Analysis (The Archaeology) |
-| unknown | any | SOP-001-vector-pipeline-activation | SOP-001: Vector Pipeline Activation |
-| unknown | any | cicd-resilience | SOP: CI/CD Pipeline Resilience & Recovery |
-| unknown | any | document-audit-feature-extraction | SOP: Document Audit & Feature Extraction v2.0 |
-| unknown | any | ira-grade-norming | SOP: Diagnostic Inter-Rater Agreement (IRA) Grade Norming |
-| unknown | any | ira-grade-norming | ira-grade-norming |
-| unknown | any | pitch-deck-rollout | SOP: Pitch Deck Generation & Rollout |
-| unknown | any | SOP-GENESIS-TEMPLATE | SOP: Genesis Template (SPEC-023) |
-| unknown | any | SOP-TRIADIC-REVIEW-PROTOCOL | Triadic Review Protocol (TRP) |
 
-Linked skills: cicd-resilience-and-recovery, continuous-learning-agent, cross-agent-handoff, evaluation-to-growth, genesis-dna, multi-agent-workforce-planner, promotion-and-state-transitions, quality-gate-baseline-calibration, repo-onboarding-and-habitat-creation, session-self-critique, structural-integrity-audit
+
 
 
 **Prompting (Anthropic)**: context 200K tokens, format: XML tags, thinking: extended thinking (budget_tokens)
 
 
-## Ecosystem Status
-
-- **delivery**: 1/2 live, 1 planned
-- **content**: 1/2 live, 0 planned
-
-Run: `organvm ecosystem show organvm-corpvs-testamentvm` | `organvm ecosystem validate --organ META`
-
-
 ## Task Queue (from pipeline)
 
-**9** pending tasks | Last pipeline: unknown
+**292** pending tasks | Last pipeline: unknown
 
-- `59fa8d4ca738` P0 — #1,#3,#17 [mcp]
-- `761cbaa238ba` P1 — #9,#10 [mcp]
-- `3aed48a1e4b2` P2 — #7 [mcp]
-- `7130133e7f08` P3 — #12 [mcp]
-- `854081a9892b` P4 — #2 [mcp]
-- `8e800df88867` P5 — #11 [mcp]
-- `acaa66097b58` P6 — #15 [mcp]
-- `9580e4c16191` P7 — #4,#16 [mcp]
-- ... and 1 more
+- `cf0e6a3618d5` Vacuum Field Burn — 2026-04-22 Continuation (COMPLETED) [astro, chezmoi, python]
+- `32bbf53c387b` Contains a specific, concrete, verifiable build/create/implement action [python]
+- `0cf55989523a` Not a conversational fragment [python]
+- `2132a5f8a357` Plausibly unfulfilled (not from a session that completed the work) [python]
+- `df6c41742d78` Not a governance rule or behavioral constraint [python]
+- `752ce7f34b39` Loads triage-batch-1.json [python]
+- `62a994d3e34f` Applies classification rules in priority order [python]
+- `f2b23b51a154` Writes {atom_id: status} mapping to triage-result-1.json [python]
+- ... and 284 more
 
-Cross-organ links: 549 | Top tags: `python`, `bash`, `mcp`, `pytest`, `typescript`
+Cross-organ links: 200 | Top tags: `mcp`, `python`, `rollup`, `chezmoi`, `bash`
 
 Run: `organvm atoms pipeline --write && organvm atoms fanout --write`
 
 
-## Entity Identity (Ontologia)
-
-**UID:** `ent_repo_01KKKX3RVRY839D7ASSWA4HEZB` | **Matched by:** primary_name
-
-Resolve: `organvm ontologia resolve organvm-corpvs-testamentvm` | History: `organvm ontologia history ent_repo_01KKKX3RVRY839D7ASSWA4HEZB`
-
-
-## Live System Variables (Ontologia)
-
-| Variable | Value | Scope | Updated |
-|----------|-------|-------|---------|
-| `active_repos` | 89 | global | 2026-04-14 |
-| `archived_repos` | 54 | global | 2026-04-14 |
-| `ci_workflows` | 107 | global | 2026-04-14 |
-| `code_files` | 0 | global | 2026-04-14 |
-| `dependency_edges` | 60 | global | 2026-04-14 |
-| `operational_organs` | 10 | global | 2026-04-14 |
-| `published_essays` | 29 | global | 2026-04-14 |
-| `repos_with_tests` | 0 | global | 2026-04-14 |
-| `sprints_completed` | 33 | global | 2026-04-14 |
-| `test_files` | 0 | global | 2026-04-14 |
-| `total_organs` | 10 | global | 2026-04-14 |
-| `total_repos` | 145 | global | 2026-04-14 |
-| `total_words_formatted` | 0 | global | 2026-04-14 |
-| `total_words_numeric` | 0 | global | 2026-04-14 |
-| `total_words_short` | 0K+ | global | 2026-04-14 |
-
-Metrics: 9 registered | Observations: 32128 recorded
-Resolve: `organvm ontologia status` | Refresh: `organvm refresh`
-
-
 ## System Density (auto-generated)
 
-AMMOI: 58% | Edges: 42 | Tensions: 33 | Clusters: 5 | Adv: 23 | Events(24h): 32336
-Structure: 8 organs / 145 repos / 1654 components (depth 17) | Inference: 98% | Organs: META-ORGANVM:65%, ORGAN-I:53%, ORGAN-II:48%, ORGAN-III:54% +5 more
-Last pulse: 2026-04-14T21:31:36 | Δ24h: -1.0% | Δ7d: n/a
+AMMOI: 25% | Edges: 0 | Tensions: 0 | Clusters: 0 | Adv: 27 | Events(24h): 37375
+Structure: 8 organs / 148 repos / 1654 components (depth 17) | Inference: 0% | Organs: META-ORGANVM:63%, ORGAN-I:53%, ORGAN-II:48%, ORGAN-III:54% +5 more
+Last pulse: 2026-05-16T20:28:27 | Δ24h: n/a | Δ7d: n/a
 
 
 ## Dialect Identity (Trivium)
