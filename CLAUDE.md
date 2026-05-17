@@ -268,19 +268,19 @@ GitHub Actions live in `.github/workflows/` (16 workflows). CI is `ci.yml`; metr
 refresh, ecosystem audits, soak tests, stale detectors, and POSSE distribution run on
 schedule. Trigger any of them manually with `gh workflow run <name>`.
 
-> **Auto-generated zone below.** Everything between `<!-- ORGANVM:AUTO:START -->` and
-> `<!-- ORGANVM:AUTO:END -->` is rewritten by `organvm refresh` / `scripts/generate-claude-md.py`.
-> Edits inside the fence will be overwritten on the next regeneration. Add new content
-> ABOVE the START marker.
-
-<!-- ORGANVM:AUTO:START -->
+> **Auto-generated zone below.** Everything between `<!-- ORGANVM:AUTO:START -->
 ## System Context (auto-generated — do not edit)
 
 **Organ:** META-ORGANVM (Meta) | **Tier:** flagship | **Status:** GRADUATED
 **Org:** `meta-organvm` | **Repo:** `organvm-corpvs-testamentvm`
 
 ### Edges
-- *No inter-repo edges declared in seed.yaml*
+- **Produces** → `ORGAN-IV`: meta-documentation
+- **Produces** → `META-ORGANVM/organvm-engine, META-ORGANVM/praxis-perpetua`: research-tasks
+- **Produces** → `ALL`: work-registry
+- **Produces** → `ALL`: prompt-registry
+- **Produces** → `ALL`: session-continuation-prompts
+- **Consumes** ← `ORGAN-IV`: orchestration-artifact
 
 ### Siblings in Meta
 `.github`, `alchemia-ingestvm`, `schema-definitions`, `organvm-engine`, `system-dashboard`, `organvm-mcp-server`, `praxis-perpetua`, `stakeholder-portal`, `materia-collider`, `organvm-ontologia`, `vigiles-aeternae--agon-cosmogonicum`, `cvrsvs-honorvm`, `custodia-securitatis`
@@ -288,7 +288,7 @@ schedule. Trigger any of them manually with `gh workflow run <name>`.
 ### Governance
 - *Standard ORGANVM governance applies*
 
-*Last synced: 2026-05-16T20:28:43Z*
+*Last synced: 2026-05-17T20:43:01Z*
 
 ## Active Handoff Protocol
 
@@ -324,13 +324,29 @@ Library: `/Users/4jp/Code/organvm/praxis-perpetua/library`
 
 | Scope | Phase | Name | Description |
 |-------|-------|------|-------------|
+| repo | any | registry-update-protocol | registry-update-protocol |
 | system | any | atomic-clock | The Atomic Clock |
 | system | any | execution-sequence | Execution Sequence |
 | system | any | multi-agent-dispatch | Multi-Agent Dispatch |
 | system | any | session-handoff-avalanche | Session Handoff Avalanche |
 | system | any | system-loops | System Loops |
+| system | any | prompting-standards | Prompting Standards |
+| system | any | background-task-resilience | background-task-resilience |
+| system | any | context-window-conservation | context-window-conservation |
+| system | any | session-self-critique | session-self-critique |
+| system | any | the-descent-protocol | the-descent-protocol |
+| system | any | the-membrane-protocol | the-membrane-protocol |
+| system | any | theory-to-concrete-gate | theory-to-concrete-gate |
+| system | any | triangulation-protocol | triangulation-protocol |
+| unknown | any | cicd-resilience | SOP: CI/CD Pipeline Resilience & Recovery |
+| unknown | any | corpus-ontology-instantiation | SOP: Corpus Ontology Instantiation |
+| unknown | any | document-audit-feature-extraction | SOP: Document Audit & Feature Extraction v2.0 |
+| unknown | any | ira-grade-norming | SOP: Diagnostic Inter-Rater Agreement (IRA) Grade Norming |
+| unknown | any | pitch-deck-rollout | SOP: Pitch Deck Generation & Rollout |
+| unknown | any | ira-grade-norming | ira-grade-norming |
+| unknown | any | SOP-001-vector-pipeline-activation | SOP-001: Vector Pipeline Activation |
 
-
+Linked skills: SOP-TRIADIC-REVIEW-PROTOCOL, cicd-resilience-and-recovery, continuous-learning-agent, evaluation-to-growth, genesis-dna, multi-agent-workforce-planner, promotion-and-state-transitions, quality-gate-baseline-calibration, repo-onboarding-and-habitat-creation, session-self-critique, structural-integrity-audit, the-membrane-protocol, triple-reference
 
 
 **Prompting (Anthropic)**: context 200K tokens, format: XML tags, thinking: extended thinking (budget_tokens)
@@ -350,16 +366,16 @@ Library: `/Users/4jp/Code/organvm/praxis-perpetua/library`
 - `f2b23b51a154` Writes {atom_id: status} mapping to triage-result-1.json [python]
 - ... and 284 more
 
-Cross-organ links: 200 | Top tags: `mcp`, `python`, `rollup`, `chezmoi`, `bash`
+Cross-organ links: 264 | Top tags: `mcp`, `python`, `rollup`, `chezmoi`, `bash`
 
 Run: `organvm atoms pipeline --write && organvm atoms fanout --write`
 
 
 ## System Density (auto-generated)
 
-AMMOI: 25% | Edges: 0 | Tensions: 0 | Clusters: 0 | Adv: 27 | Events(24h): 37375
+AMMOI: 25% | Edges: 0 | Tensions: 0 | Clusters: 0 | Adv: 27 | Events(24h): 37441
 Structure: 8 organs / 148 repos / 1654 components (depth 17) | Inference: 0% | Organs: META-ORGANVM:63%, ORGAN-I:53%, ORGAN-II:48%, ORGAN-III:54% +5 more
-Last pulse: 2026-05-16T20:28:27 | Δ24h: n/a | Δ7d: n/a
+Last pulse: 2026-05-17T20:42:36 | Δ24h: n/a | Δ7d: n/a
 
 
 ## Dialect Identity (Trivium)
@@ -391,6 +407,7 @@ Nature demands a documentation counterpart. This formation maintains its narrati
 *Compliance: Formation is currently void.*
 
 <!-- ORGANVM:AUTO:END -->
+
 
 
 

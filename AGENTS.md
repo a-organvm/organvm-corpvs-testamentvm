@@ -11,6 +11,8 @@ This repo participates in the **META-ORGANVM (Meta)** swarm.
 - **Produce** `meta-documentation` for ORGAN-IV
 - **Produce** `research-tasks` for META-ORGANVM/organvm-engine, META-ORGANVM/praxis-perpetua
 - **Produce** `work-registry` for ALL
+- **Produce** `prompt-registry` for ALL
+- **Produce** `session-continuation-prompts` for ALL
 
 ### External Dependencies
 - **Consume** `orchestration-artifact` from `ORGAN-IV`
@@ -19,5 +21,5 @@ This repo participates in the **META-ORGANVM (Meta)** swarm.
 - Adhere to unidirectional flow: I→II→III
 - Never commit secrets or credentials
 
-*Last synced: 2026-04-14T21:32:14Z*
+*Last synced: 2026-05-17T20:43:01Z*
 <!-- ORGANVM:AUTO:END -->
