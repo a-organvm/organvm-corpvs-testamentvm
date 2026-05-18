@@ -1,6 +1,6 @@
 # Plan Atomization Summary
-**Generated**: 2026-05-16
-**Plans parsed**: 970 | **Tasks extracted**: 11236
+**Generated**: 2026-05-17
+**Plans parsed**: 1001 | **Tasks extracted**: 11610
 
 ## By Project
 
@@ -24,38 +24,39 @@
 | 4444J99/portfolio/.gemini/plans | 4 | 30 | 0 | 30 | 0 |
 | 4444J99/system-system--system/.claude/plans | 21 | 191 | 0 | 191 | 0 |
 | 4444J99/system-system--system/.gemini/plans | 2 | 23 | 14 | 9 | 0 |
-| _root | 787 | 8888 | 416 | 8472 | 0 |
+| _root | 813 | 9132 | 448 | 8684 | 0 |
 | a-organvm/.claude/plans | 13 | 260 | 0 | 260 | 0 |
 | a-organvm/.codex/plans | 1 | 1 | 1 | 0 | 0 |
+| a-organvm/my-knowledge-base/.gemini/plans | 5 | 130 | 7 | 123 | 0 |
 | composition-1-2/.claude/plans | 2 | 18 | 9 | 9 | 0 |
 
 ## By Task Type
 
 | Type | Count | % |
 |------|-------|---|
-| generic | 4127 | 36% |
-| document | 1936 | 17% |
-| create_file | 952 | 8% |
-| configure | 817 | 7% |
-| modify_file | 735 | 6% |
-| write_test | 528 | 4% |
-| verify | 439 | 3% |
-| deploy | 354 | 3% |
-| git_operation | 331 | 2% |
-| delete_file | 284 | 2% |
-| research | 283 | 2% |
-| migrate | 263 | 2% |
-| review | 89 | 0% |
-| exploration | 47 | 0% |
-| refactor | 38 | 0% |
-| post_hoc | 13 | 0% |
+| generic | 4235 | 36% |
+| document | 2053 | 17% |
+| create_file | 1000 | 8% |
+| configure | 835 | 7% |
+| modify_file | 761 | 6% |
+| write_test | 517 | 4% |
+| verify | 457 | 3% |
+| deploy | 361 | 3% |
+| git_operation | 326 | 2% |
+| delete_file | 299 | 2% |
+| research | 298 | 2% |
+| migrate | 271 | 2% |
+| review | 93 | 0% |
+| exploration | 49 | 0% |
+| refactor | 40 | 0% |
+| post_hoc | 15 | 0% |
 
 ## By Status
 
 | Status | Count | % |
 |--------|-------|---|
-| pending | 10755 | 95% |
-| completed | 481 | 4% |
+| pending | 11090 | 95% |
+| completed | 520 | 4% |
 
 ## Largest Plans (by task count)
 
@@ -67,9 +68,9 @@
 | Session Export: rob-gemini-warm-clock + artifact i | _root | 181 | 0% |
 | Workspace Relocation Manifest | _root | 160 | 0% |
 | Spiral Artifact Evolution Timeline | _root | 103 | 0% |
-| Unspoken Sentences — Full Implementation Plan | _root | 89 | 0% |
 | Ideal Form Classification — What Each Repo Reaches | a-organvm/.claude/plans | 89 | 0% |
 | Plan: S-Zettelkasten Close-Out (supersedes zettelk | _root | 81 | 0% |
+| Refactor: Raw Dump → Cascading Workstreams | a-organvm/my-knowledge-base/.gemini/plans | 80 | 0% |
 | Refactor: Raw Dump → Cascading Workstreams | _root | 80 | 0% |
 | Session S40 Implementation Plan — conversation-cor | _root | 75 | 0% |
 | Implementation Plan: sign-signal--voice-synth Laye | _root | 71 | 0% |
@@ -86,20 +87,20 @@
 
 | Agent | Count | % |
 |-------|-------|---|
-| claude | 11033 | 98% |
-| gemini | 127 | 1% |
+| claude | 11277 | 97% |
+| gemini | 257 | 2% |
 | codex | 76 | 0% |
 
 ## By Organ
 
 | Organ | Count | % |
 |-------|-------|---|
-| _root | 4290 | 38% |
-| LIMINAL | 3219 | 28% |
-| META | 2084 | 18% |
-| I | 879 | 7% |
-| III | 383 | 3% |
-| IV | 353 | 3% |
+| _root | 4523 | 38% |
+| LIMINAL | 3396 | 29% |
+| META | 2099 | 18% |
+| I | 790 | 6% |
+| III | 417 | 3% |
+| IV | 357 | 3% |
 | II | 16 | 0% |
 | VII | 12 | 0% |
 
@@ -107,6 +108,12 @@
 
 | Plan | Project | Classification |
 |------|---------|----------------|
+| Cross-Agent Handoff — post-transcription-audit-gap | _root | post_hoc |
+| Session Close-Out — 2026-05-17 (Phase-4 findings + | _root | post_hoc |
+| Session Close-Out — 2026-05-17 (transcription-audi | _root | post_hoc |
+| Skills Need To Be Lazy, Valiant — v2 (broader scop | _root | document |
+| Plugin-Surface Reconciliation: Grading / Auditing  | _root | document |
+| Agent Handoff: sovereign-systems-spiral triage-swe | _root | document |
 | Agent Handoff: AUTOGEN banner + carry-forward clos | _root | git_operation |
 | Agent Handoff: post-content-leak-scrub aftermath ( | _root | post_hoc |
 | Agent Handoff: post-content-leak-scrub aftermath | _root | document |
@@ -206,6 +213,7 @@
 | Hall-Monitor Audit + Close-Out Plan — Sovereign Sp | _root | modify_file |
 | Plan: Absorb 100% context from 6 TMPDIR session ex | _root | document |
 | /init Audit Workflows — Design | _root | post_hoc |
+| Refactor: Raw Dump → Cascading Workstreams | a-organvm/my-knowledge-base/.gemini/plans | configure |
 | Plan: Reconcile and Apply CLAUDE.md Improvements ( | _root | modify_file |
 | Plan: CLAUDE.md improvements for sovereign-systems | _root | modify_file |
 | Plan — Session-as-Black-Hole Operating Model | _root | exploration |
@@ -236,7 +244,6 @@
 | Declarative Configuration Landscape Research | a-organvm/.claude/plans | configure |
 | Declarative Configuration Landscape Research | _root | configure |
 | Zeitgeist Carrier Wave — Research Dispatch Plan | _root | generic |
-| Plugin Errors + Activity Monitor Review | _root | post_hoc |
 | Ideal Form Classification — What Each Repo Reaches | a-organvm/.claude/plans | generic |
 | Fortify-ORGANVM Postmortem: Governance Threshold M | _root | verify |
 | Universal Modular Fractal Alchemical Synthesizer — | a-organvm/.claude/plans | generic |

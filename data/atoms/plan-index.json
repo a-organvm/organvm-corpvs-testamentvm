@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-17T03:18:30Z",
-  "total_plans": 183,
-  "total_tasks": 2348,
+  "generated": "2026-05-18T02:23:42Z",
+  "total_plans": 188,
+  "total_tasks": 2478,
   "entries": [
     {
       "qualified_id": "claude:LIMINAL:composition-1-2:closeout-2026-05-12",
@@ -312,6 +312,85 @@
       "domain_fingerprint": "e3b0c44298fc1c14"
     },
     {
+      "qualified_id": "gemini:LIMINAL:hokage-chess:cascading-workstreams-refactor",
+      "path": "/Users/4jp/Workspace/a-organvm/my-knowledge-base/.gemini/plans/2026-04-29-cascading-workstreams-refactor.md",
+      "agent": "gemini",
+      "organ": "LIMINAL",
+      "repo": "hokage-chess",
+      "slug": "cascading-workstreams-refactor",
+      "date": "2026-04-29",
+      "version": 1,
+      "status": "active",
+      "title": "Refactor: Raw Dump → Cascading Workstreams",
+      "size_bytes": 27739,
+      "has_verification": true,
+      "archetype": "checkbox",
+      "task_count": 80,
+      "completed_count": 0,
+      "tags": [
+        "chezmoi",
+        "go",
+        "node",
+        "typescript"
+      ],
+      "file_refs": [
+        "gap_tracker.md.resolved",
+        "meta-organvm/audits/2026-04-29-INDEX.md",
+        "2026-04-04-reusable-processes.md",
+        "refactored_workstreams.md",
+        "docs/intake/maddie_spiral_wishes.md",
+        "docs/audits/spiral_audit_and_forms.md",
+        "src/data/hub.config.ts",
+        "docs/business/workstreams/README.md",
+        "docs/audits/gap_tracker.md",
+        "config/sources.yaml",
+        "src/wiki-compiler.ts",
+        "docs/process-extraction/2026-04-04-reusable-processes.md",
+        "brain/5efe471b/.../refactored_workstreams.md.resolved",
+        "my-knowledge-base/CASCADING_WORKSTREAMS.md",
+        "my-knowledge-base/.gemini/plans/2026-04-28-master-file-mapping-and-assembly.md",
+        "my-knowledge-base/.gemini/plans/2026-04-28-master-file-map-v2.md",
+        "my-knowledge-base/.gemini/plans/2026-04-28-total-record-consolidation.md",
+        "my-knowledge-base/TOTAL_RECORD.md",
+        "my-knowledge-base/config/sources.yaml",
+        "sovereign-systems--elevate-align/.gemini/plans/2026-04-28-spiral-catalog-audit-and-brainstorming-forms.md",
+        "sovereign-systems--elevate-align/docs/process-extraction/2026-04-04-reusable-processes.md",
+        "sovereign-systems--elevate-align/docs/intake/maddie_spiral_wishes.md",
+        "sovereign-systems--elevate-align/docs/audits/spiral_audit_and_forms.md",
+        "my-knowledge-base/docs/audits/gap_tracker.md",
+        "sovereign-systems--elevate-align/src/data/hub.config.ts",
+        "hokage-chess/docs/business/workstreams/README.md",
+        "hokage-chess/docs/business/workstreams/sequencing.md",
+        "domus-semper-palingenesis/private_dot_claude/plans/2026-04-28-audit-reverify-and-external-forms-package.md",
+        "hokage-chess/docs/business/2026-04-25-business-plan-v2.md",
+        "hokage-chess/docs/business/2026-04-25-strategy-v6-master.md",
+        "hokage-chess/docs/business/2026-04-27-rob-evidence-of-existence-system-audit.md",
+        "workstreams/README.md",
+        "my-knowledge-base/src/wiki-compiler.ts",
+        "db/knowledge.db",
+        "intake/audits/antigravity-files.pdf",
+        "Workspace/CLAUDE.md",
+        "meta-organvm/audits/INDEX.md",
+        ".gemini/plans/2026-04-28-spiral-catalog-audit-and-brainstorming-forms.md",
+        "private_dot_claude/plans/2026-04-28-audit-reverify-and-external-forms-package.md",
+        ".gemini/plans/2026-04-28-master-file-map-v2.md",
+        ".gemini/plans/2026-04-28-total-record-consolidation.md",
+        "audits/2026-04-29-INDEX.md",
+        "/Users/4jp/Workspace/organvm/my-knowledge-base/TOTAL_RECORD.md",
+        "/Users/4jp/.gemini/antigravity/brain/5efe471b-36e1-4565-bd21-785466e74a77/artifacts/refactored_workstreams.md.resolved",
+        "/Users/4jp/.gemini/antigravity/brain/5efe471b-36e1-4565-bd21-785466e74a77/artifacts/gap_tracker.md.resolved",
+        "/Users/4jp/.gemini/antigravity/brain/f0c19e07-9a3e-4209-b7d7-a6b845486c1f/artifacts/maddie_spiral_wishes.md.resolved",
+        "/Users/4jp/.gemini/antigravity/brain/4feea892-69a5-4253-a6ac-af10871df164/artifacts/spiral_audit_and_forms.md.resolved",
+        "/Users/4jp/Workspace/organvm/my-knowledge-base/.gemini/plans/2026-04-28-master-file-map-v2.md",
+        "/Users/4jp/Workspace/organvm/my-knowledge-base/.gemini/plans/2026-04-28-master-file-mapping-and-assembly.md",
+        "/Users/4jp/Workspace/organvm/my-knowledge-base/.gemini/plans/2026-04-28-total-record-consolidation.md",
+        "/Users/4jp/Workspace/organvm/my-knowledge-base/config/sources.yaml",
+        "/Users/4jp/Workspace/organvm/sovereign-systems--elevate-align/.gemini/plans/2026-04-28-spiral-catalog-audit-and-brainstorming-forms.md",
+        "/Users/4jp/Workspace/organvm/sovereign-systems--elevate-align/docs/process-extraction/2026-04-04-reusable-processes.md"
+      ],
+      "domain_fingerprint": "aa2f01469df5cfc5"
+    },
+    {
       "qualified_id": "codex:LIMINAL:hokage-chess:project-manifest-ingest-plan",
       "path": "/Users/4jp/Workspace/4444J99/hokage-chess/.codex/plans/2026-04-29-project-manifest-ingest-plan.md",
       "agent": "codex",
@@ -381,6 +460,82 @@
       "tags": [],
       "file_refs": [],
       "domain_fingerprint": "e3b0c44298fc1c14"
+    },
+    {
+      "qualified_id": "gemini:_root:_global:master-file-map",
+      "path": "/Users/4jp/Workspace/a-organvm/my-knowledge-base/.gemini/plans/2026-04-28-master-file-map-v2.md",
+      "agent": "gemini",
+      "organ": "_root",
+      "repo": "_global",
+      "slug": "master-file-map",
+      "date": "2026-04-28",
+      "version": 2,
+      "status": "active",
+      "title": "Master File Map & Assembly Plan (v2)",
+      "size_bytes": 3497,
+      "has_verification": false,
+      "archetype": "checkbox",
+      "task_count": 13,
+      "completed_count": 3,
+      "tags": [
+        "bash"
+      ],
+      "file_refs": [
+        "src/export.ts",
+        "src/wiki-compiler/wiki-compiler-cli.ts",
+        "/Users/4jp/Desktop/antigravity-files.pdf",
+        "intake/drafts/Distilling...Patterns.md",
+        "intake/drafts/Potentials...Routing.md",
+        "intake/drafts/Untitled-1.md",
+        "intake/audits/antigravity-files-v2.pdf"
+      ],
+      "domain_fingerprint": "4d8f38e5e365404d"
+    },
+    {
+      "qualified_id": "gemini:_root:_global:master-file-mapping-and-assembly",
+      "path": "/Users/4jp/Workspace/a-organvm/my-knowledge-base/.gemini/plans/2026-04-28-master-file-mapping-and-assembly.md",
+      "agent": "gemini",
+      "organ": "_root",
+      "repo": "_global",
+      "slug": "master-file-mapping-and-assembly",
+      "date": "2026-04-28",
+      "version": 1,
+      "status": "active",
+      "title": "Master File Map & Assembly Plan",
+      "size_bytes": 3615,
+      "has_verification": false,
+      "archetype": "phase_checkbox",
+      "task_count": 19,
+      "completed_count": 4,
+      "tags": [],
+      "file_refs": [
+        "TOTAL_RECORD.md",
+        "/Users/4jp/Desktop/antigravity-files.pdf"
+      ],
+      "domain_fingerprint": "6ea66b55170c6cf2"
+    },
+    {
+      "qualified_id": "gemini:_root:_global:total-record-consolidation",
+      "path": "/Users/4jp/Workspace/a-organvm/my-knowledge-base/.gemini/plans/2026-04-28-total-record-consolidation.md",
+      "agent": "gemini",
+      "organ": "_root",
+      "repo": "_global",
+      "slug": "total-record-consolidation",
+      "date": "2026-04-28",
+      "version": 1,
+      "status": "active",
+      "title": "Implementation Plan: Total Record Consolidation",
+      "size_bytes": 2226,
+      "has_verification": false,
+      "archetype": "checkbox",
+      "task_count": 12,
+      "completed_count": 0,
+      "tags": [],
+      "file_refs": [
+        "/Users/4jp/Desktop/antigravity-files.pdf",
+        "db/knowledge.db"
+      ],
+      "domain_fingerprint": "88b6e2ae17735c71"
     },
     {
       "qualified_id": "gemini:LIMINAL:hokage-chess:refactored-workstreams-maddie-spiral-and-rob-infra",
@@ -465,6 +620,29 @@
         "4444J99/docs/federation-graph.svg"
       ],
       "domain_fingerprint": "04e3a7b7ea8215be"
+    },
+    {
+      "qualified_id": "gemini:_root:_global:karpathy-pattern-adoption",
+      "path": "/Users/4jp/Workspace/a-organvm/my-knowledge-base/.gemini/plans/2026-04-27-karpathy-pattern-adoption.md",
+      "agent": "gemini",
+      "organ": "_root",
+      "repo": "_global",
+      "slug": "karpathy-pattern-adoption",
+      "date": "2026-04-27",
+      "version": 1,
+      "status": "active",
+      "title": "Spec: Karpathy LLM-Wiki Pattern Adoption for `my-knowledge-base`",
+      "size_bytes": 3121,
+      "has_verification": false,
+      "archetype": "sequenced_list",
+      "task_count": 6,
+      "completed_count": 0,
+      "tags": [
+        "astro",
+        "jekyll"
+      ],
+      "file_refs": [],
+      "domain_fingerprint": "317741cec36343d2"
     },
     {
       "qualified_id": "codex:LIMINAL:hokage-chess:rob-evidence-of-existence-system-audit",
@@ -5603,11 +5781,11 @@
     },
     "LIMINAL": {
       "organ_key": "LIMINAL",
-      "total_plans": 156,
-      "active_plans": 153,
-      "total_tasks": 1942,
+      "total_plans": 157,
+      "active_plans": 154,
+      "total_tasks": 2022,
       "completed_tasks": 64,
-      "completion_pct": 3.3,
+      "completion_pct": 3.2,
       "agents_active": [
         "claude",
         "codex",
@@ -5652,11 +5830,11 @@
     },
     "_root": {
       "organ_key": "_root",
-      "total_plans": 21,
-      "active_plans": 21,
-      "total_tasks": 332,
-      "completed_tasks": 1,
-      "completion_pct": 0.3,
+      "total_plans": 25,
+      "active_plans": 25,
+      "total_tasks": 382,
+      "completed_tasks": 8,
+      "completion_pct": 2.1,
       "agents_active": [
         "claude",
         "codex",
@@ -5668,11 +5846,11 @@
         "chezmoi",
         "mcp",
         "node",
+        "bash",
+        "astro",
         "go",
         "fastapi",
-        "typescript",
-        "terraform",
-        "astro"
+        "typescript"
       ],
       "cross_organ_refs": [],
       "stale_count": 17
@@ -5884,6 +6062,21 @@
       ],
       "severity": "info",
       "jaccard": 0.364
+    },
+    {
+      "domain": "shared file refs",
+      "plans": [
+        "gemini:_root:_global:master-file-mapping-and-assembly",
+        "gemini:_root:_global:total-record-consolidation"
+      ],
+      "agents": [
+        "gemini"
+      ],
+      "organs": [
+        "_root"
+      ],
+      "severity": "info",
+      "jaccard": 0.333
     },
     {
       "domain": "bash",
