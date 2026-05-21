@@ -131,3 +131,36 @@ If next session finds state mismatch:
 4. Re-read IRF to confirm DONE-533, DONE-534 are logged
 
 *— end envelope —*
+---
+
+## Addendum: 2026-05-21 — Four-Runtime Protocol Alignment (Claude session)
+
+**Scope:** Orthogonal to the 2026-05-17 KB-export work above. Triggered by Codex SessionStart printout showing `NEON_API_KEY for MCP server 'Neon' is empty` and the user's reframe: "design ideal interactive ecosystem; not Claude only."
+
+**Plans authored this session (both IN-PROGRESS, no DONE-NNN):**
+
+| Plan | Path | Status |
+|---|---|---|
+| Four-runtime interactive ecosystem alignment | ~/.claude/plans/2026-05-21-four-runtime-interactive-ecosystem-alignment.md | IN-PROGRESS |
+| Agent integration protocols past/present/potential | ~/.claude/plans/2026-05-21-agent-integration-protocols-past-present-potential.md | IN-PROGRESS |
+
+**Key finding (the structural reframe):** Original three-layer plan (Secrets · MCP · Hooks) is incomplete. Honest decomposition is five layers: L1 Secrets, L2 Agent↔tool (MCP), L3 Hooks, L4 Editor↔agent (ACP — new), L5 Agent↔agent (A2A — new). Four runtimes participate in different subsets depending on driver/driven role.
+
+**Files NOT modified:** INST-INDEX-RERUM-FACIENDARUM.md, prompt-atoms.json, registry-v2.json, this repo's working tree.
+
+**Recovery for next session resuming this scope:**
+1. Read four-runtime-interactive-ecosystem-alignment.md (the design).
+2. Then agent-integration-protocols-past-present-potential.md (the research that reframed it).
+3. User has NOT approved Phase 1 BUILD; do not implement until edge-priority decision is made.
+
+*— end 2026-05-21 addendum —*
+
+## Resolution received 2026-05-21 (supersedes prior "Phase 1 NOT approved" line above)
+
+**Edge-priority answer (user, 2026-05-21):** All five layers — L1 Secrets · L2 MCP · L3 Hooks · L4 ACP · L5 A2A — are in scope, phased over multiple quarters. The three-of-four collapse from the closeout applies: Phase 0a (NEON_API_KEY injection trace), Phase 0e (per-runtime ACP audit), Phase 0f (conductor↔A2A reconciliation) are all UNFROZEN.
+
+**Neon-fate answer (user, 2026-05-21, verbatim):** "notate, research all lanes, arrive at elevated plain" — do NOT collapse to vestigial (delete) or wanted (1Password wire) yet. Instead: document each runtime's current secret-handling, research per-lane mechanisms (Codex `bearer_token_env_var`, Claude's untraced injection, Gemini's settings.json, OpenCode's per-server env block), then synthesize at higher altitude. Phase 1a is gated on this research, not on a binary fix.
+
+**What unfreezes for next session:** Phase 0 investigation (read-only; trace + audit + reconcile) plus the multi-lane Neon-handling notation. Phase 1 BUILD remains gated on the synthesis output, not on a fresh user decision.
+
+*— end resolution block —*
