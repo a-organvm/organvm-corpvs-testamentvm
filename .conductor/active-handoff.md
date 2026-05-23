@@ -255,3 +255,31 @@ The PostToolUse `domus-memory-sync` hook fires on Write but NOT Edit. Sibling se
 - Closeout: `~/.Codex/plans/closeout-2026-05-22-hall-monitor-artifact-routing.md`
 - Session memory: `[[2026-05-22-hall-monitor-artifact-routing]]`
 - IRF rows shipped: IRF-OPS-066, IRF-OPS-067
+
+---
+
+## 2026-05-22 — Onslaught Synthesis + Hall-Monitor Cycle (session 704ff1f1)
+
+**Closed via:** `~/.claude/plans/closeout-2026-05-22-onslaught-synthesis-hall-monitor.md`
+
+**Substrate shipped:**
+- Synthesis plan: `~/.claude/plans/2026-05-22-onslaught-collected-sibling-sessions.md` (25 clusters from 18 sibling close-outs)
+- 14 IRF rows: OPS-070..079 + CRP-015..018 (corpvs `046a57f` → `8bd59cf`, row count 866 → 880)
+- GH issue: #361 (14-checkbox tracking, V3 remediation per CLAUDE.md propagation requirement)
+- 2 memory entries: `feedback_self_catch_synthesis_own_pattern.md`, `project_session_onslaught_sudoers_role.md`
+
+**Hall-monitor outcome:** 3 violations (V1 sibling-stranded, V2 Edit→chezmoi-add asymmetry firing on own synthesis output, V3 GH-issue vacuum). All 3 remediated same-session. Self-catch rate 2/3 reflexive, 1/3 user-surfaced.
+
+**N/A atomization:** 3 indices terminal-N/A with reason, 1 was a real vacuum (V3 GH issue, closed).
+
+**Parity (per-repo):**
+- domus chezmoi-source: `bc3907e` == origin/master, 1:1
+- corpvs: `8bd59cf` == origin/main, 1:1
+
+**What's locked / not-yet-attempted:**
+- 4 first-wave executables named in synthesis (C8 rebase-merge rm, C9 INDEX regenerator, C10 hook deploy, C19 atuin orphan) — await new authorization
+- P2 user-gated batch (CRP-015..018 + OPS-077) — needs user decision
+- Codex/Gemini dispatch envelopes for IRF-OPS-074/075 — not generated this turn
+- GH#361 14 checkboxes — close as individual IRF rows complete
+
+**Next session pickup:** the synthesis is the lens; execution is downstream. Start at the first-wave executables list or surface the P2 batch for user decision.
