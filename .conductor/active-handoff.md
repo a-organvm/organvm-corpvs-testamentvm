@@ -164,3 +164,94 @@ If next session finds state mismatch:
 **What unfreezes for next session:** Phase 0 investigation (read-only; trace + audit + reconcile) plus the multi-lane Neon-handling notation. Phase 1 BUILD remains gated on the synthesis output, not on a fresh user decision.
 
 *— end resolution block —*
+
+---
+
+# Agent Handoff: Hall-Monitor Cascade + Artifact Routing
+
+**From:** Session 2026-05-22 Claude hall-monitor + artifact routing | **Date:** 2026-05-22 21:00 EDT | **Phase:** Complete (closeout executing)
+
+## Current State
+
+### Artifacts on Disk (this session's contributions)
+
+| Artifact | Location | Status |
+|---|---|---|
+| docs/audits/2026-05-22-four-roots-private-bin-opt-usr.md | corpvs | Pushed `eba90cc` |
+| docs/audits/2026-05-21-sysdiagnose/ (REPORT.md + findings/ + dispatch-envelopes/ + 4 companions) | corpvs | Pushed `eba90cc` |
+| docs/governance/directory-taxonomy-touch-policy.html | corpvs | Pushed `eba90cc` |
+| IRF-OPS-066 (routing precedent) + IRF-OPS-067 (additive correction) | corpvs/INST-INDEX-RERUM-FACIENDARUM.md | Pushed `8410240` |
+| Memory: feedback_four_layer_classification_check.md | chezmoi-runtime + source | Pushed `c052f93` |
+| Memory: feedback_reflog_as_hidden_actor_forensic.md | chezmoi-runtime + source | Pushed `7ab5066` |
+| Memory: project_artifact_2026_05_22_outside_git_artifact_routing.md | chezmoi-runtime + source | Pushed `5d50695` |
+| Memory: project_session_2026_05_22_hall_monitor_artifact_routing.md | chezmoi-runtime + source | Pushed `52887a4` |
+| MEMORY.md index (4 new pointers added) | chezmoi-runtime + source | Pushed `f4f1411` |
+
+### Git State
+
+- corpvs: `main` at `8410240`, **1:1 parity** with origin
+- domus-semper-palingenesis: `master` at `6534e1d+`, **1:1 parity** with origin (continued sibling auto-commits expected)
+- a-i--skills: `main` at `3e6a249`, **1:1 parity** (untouched this session)
+
+## Completed Work
+
+- [x] Hall-monitor cascade audit across 3 load-bearing git repos
+- [x] Identified 3 candidate Rule-#2 violations (routed to corpvs/docs/)
+- [x] Discovered recursive own-violation of [[verification-precedes-classification]] (4 hrs old at time of violation)
+- [x] Codified [[four-layer-classification-check]] amendment
+- [x] Codified [[reflog-as-hidden-actor-forensic]] as forensic instrument for sibling-actor activity
+- [x] Filed IRF-OPS-066 (precedent) + IRF-OPS-067 (additive correction)
+- [x] Reconciled chezmoi drift caused by MOVE operations (converted to COPY + chezmoi add)
+- [x] Two-layer preservation established for all 3 originally-flagged artifacts (chezmoi byte-mirror + corpvs governance home)
+
+## Key Decisions
+
+| Decision | Rationale |
+|---|---|
+| Move 2 files + symlink 1 back, copy sysdiagnose outputs | Symmetric "minimum access-pattern disruption" per artifact nature |
+| Reconcile chezmoi drift via `chezmoi add` (not `chezmoi apply`) | Runtime version was user's latest editing; source should follow |
+| Additive correction via IRF-OPS-067 (not edit OPS-066) | Honors [[feedback-additive-only-policy]] — corrections accumulate as new rows |
+| docs/audits/YYYY-MM-DD-<topic>/ as new convention | docs/evaluation/ reserved for ongoing scoring; docs/audits/ for point-in-time inspections |
+| 813 MB sysdiagnose raw bundle stays at ~/Workspace/_diagnostics/ | Git is wrong-medium for kernel evidence dumps; only narrative mirror at corpvs |
+
+## Critical Context for Next Session
+
+### The recursive-violation lesson is the meta-finding
+
+[[feedback-verification-precedes-classification]] was authored at 15:20 today. By 19:45 the same session violated it. **A feedback memory's mere existence does not prevent its violation by the agent who authored it** — the verification step has to be operationalized into the *action protocol*, not left as a passive rule. IRF-OPS-067 + [[four-layer-classification-check]] operationalize this with a concrete four-bullet checklist.
+
+### Four-layer Rule-#2 check (next session: use this)
+
+Before classifying any file as "outside-git" / "Rule-#2 violating", check ALL four layers:
+1. Direct `.git` ancestry (walk from file path upward)
+2. `chezmoi managed | grep <file>` — chezmoi-source is its own pushed git repo
+3. Sibling dotfile managers (yadm, dotbot, stow)
+4. Per-tool config-sync surfaces (Codex `~/.codex/config.toml`, etc.)
+
+Single-layer audit is the most common decay mode. Caught me this session.
+
+### Pre-existing chezmoi drift NOT addressed (sibling-session territory)
+
+- 7 DA: `.claude/plans/2026-04-22-*.md` (source has, runtime deleted)
+- 1 DA: `seed.yaml` (intentional user trashing per IRF-OPS-040; restore would undo decision)
+- 5 MM: settings.json, MEMORY.md, claude_desktop_config.json, FIND-010-posttooluse-sync-scope-gap.md
+- 1 R: validate-no-hardcoded-paths.sh
+- 1 M: GEMINI.md (runtime-only)
+
+Surface for user / next session.
+
+### Hook gap discovered
+
+The PostToolUse `domus-memory-sync` hook fires on Write but NOT Edit. Sibling session already filed `reference_domus_memory_sync_modify_blind_spot.md` documenting. Workaround: after Edit on a memory file, manually run `chezmoi add <runtime-path>`.
+
+## What's Locked / Not-Yet-Attempted
+
+- The 470 OPEN IRF items (12 P0, 147 P1) — the broad vacuum field, untouched this session
+- The 4 engine N/A vacuums (Edges/Tensions/Clusters=0, Δ24h/Δ7d=n/a, Inference=0%, sprint_names erased) — pre-existing, not addressed
+- Per-file reconciliation of pre-existing chezmoi drift — requires per-file user decisions
+
+## Pointers
+
+- Closeout: `~/.Codex/plans/closeout-2026-05-22-hall-monitor-artifact-routing.md`
+- Session memory: `[[2026-05-22-hall-monitor-artifact-routing]]`
+- IRF rows shipped: IRF-OPS-066, IRF-OPS-067
