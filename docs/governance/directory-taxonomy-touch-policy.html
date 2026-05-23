@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Where files live, who owns them, who touches them.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A three-axis schema for filesystem ontology — color-coded touch policy, role-tagged ownership, convention-anchored origin — applied across macOS, Windows, and Linux, and to a real homedir drift audit. Single-file artifact, no external deps.">
+<style>
+:root {
+  --bg: #faf9f7;
+  --fg: #1a1a1a;
+  --fg-muted: #5b5b5b;
+  --rule: #d8d4cc;
+  --code-bg: #f0ede5;
+  --link: #b0461e;
+  --link-hover: #8a3617;
+
+  --never:   #c0392b;
+  --admin:   #d35400;
+  --app:     #c19a1b;
+  --user:    #2d8c4e;
+  --dev:     #2370a3;
+  --hybrid:  #7d3da0;
+  --virtual: #2c3e50;
+}
+
+/* Dark mode — warm-dark variant preserving the design's character.
+   Chip colors keep their saturated values; only the canvas inverts. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1814;
+    --fg: #e8e4dc;
+    --fg-muted: #a39d92;
+    --rule: #3a342c;
+    --code-bg: #25221c;
+    --link: #e0834f;
+    --link-hover: #f0a070;
+
+    /* slight chip-color brightening for dark canvas legibility */
+    --never:   #e0573f;
+    --admin:   #e57534;
+    --app:     #d4b13a;
+    --user:    #45a96b;
+    --dev:     #3a90c5;
+    --hybrid:  #9d5bc0;
+    --virtual: #5e7a96;
+  }
+  body { -webkit-font-smoothing: antialiased; }
+  .insight { background: rgba(58, 144, 197, 0.08); }
+  .finding { background: rgba(255, 255, 255, 0.02); }
+  .self-ref { background: var(--code-bg); border-color: var(--fg-muted); }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.58;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 32px 96px;
+}
+
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; }
+a:hover { color: var(--link-hover); }
+
+/* ── HERO ─────────────────────────────────────── */
+.hero {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 44px;
+  margin-bottom: 52px;
+}
+.hero h1 {
+  font-size: 2.75em;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+.hero .deck {
+  font-size: 1.18em;
+  color: var(--fg-muted);
+  margin: 0;
+  max-width: 62ch;
+}
+.hero .meta {
+  margin-top: 28px;
+  font-size: 0.82em;
+  color: var(--fg-muted);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  letter-spacing: 0.01em;
+}
+
+/* ── TOC ──────────────────────────────────────── */
+.toc {
+  background: var(--code-bg);
+  border-left: 3px solid var(--fg);
+  padding: 22px 26px;
+  margin: 0 0 56px;
+}
+.toc h2 {
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 12px;
+  color: var(--fg-muted);
+  font-weight: 600;
+  padding: 0;
+  border: 0;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 22px;
+  columns: 2;
+  column-gap: 32px;
+  font-size: 0.95em;
+}
+.toc li { padding: 3px 0; break-inside: avoid; }
+.toc a {
+  color: var(--fg);
+  border-bottom: 1px dotted var(--fg-muted);
+}
+.toc a:hover { color: var(--link); border-bottom-color: var(--link); }
+
+/* ── SECTIONS ─────────────────────────────────── */
+section { margin: 56px 0; }
+h2 {
+  font-size: 1.75em;
+  letter-spacing: -0.018em;
+  margin: 0 0 22px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.15em;
+  margin: 30px 0 10px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 0.95em;
+  margin: 24px 0 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+p { margin: 0 0 14px; }
+
+/* ── CHIPS (the schema rendered) ──────────────── */
+.chip {
+  display: inline-block;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.76em;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: white;
+  line-height: 1.45;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  vertical-align: 1px;
+}
+.c-never   { background: var(--never); }
+.c-admin   { background: var(--admin); }
+.c-app     { background: var(--app); color: #1a1a1a; }
+.c-user    { background: var(--user); }
+.c-dev     { background: var(--dev); }
+.c-hybrid  { background: var(--hybrid); }
+.c-virtual { background: var(--virtual); }
+
+.tag {
+  display: inline-block;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.76em;
+  padding: 2px 7px;
+  border: 1px solid var(--fg-muted);
+  border-radius: 3px;
+  color: var(--fg-muted);
+  background: transparent;
+  letter-spacing: 0.04em;
+  margin-left: 2px;
+}
+
+/* ── TABLES ───────────────────────────────────── */
+table { width: 100%; border-collapse: collapse; margin: 14px 0 28px; }
+
+.legend th, .legend td {
+  text-align: left;
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.94em;
+  vertical-align: top;
+}
+.legend th {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  font-weight: 600;
+  border-bottom: 2px solid var(--fg);
+}
+.legend td.swatch { width: 1%; white-space: nowrap; }
+.legend td.label  { width: 18%; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.88em; }
+
+.territory {
+  font-size: 0.93em;
+}
+.territory th {
+  text-align: left;
+  padding: 11px 12px;
+  border-bottom: 2px solid var(--fg);
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  font-weight: 600;
+}
+.territory td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+.territory td.path {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.86em;
+  white-space: nowrap;
+}
+.territory td.tier {
+  white-space: nowrap;
+  width: 1%;
+}
+.territory td.note { color: var(--fg-muted); }
+
+/* ── CODE ─────────────────────────────────────── */
+code, pre {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+code {
+  background: var(--code-bg);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+pre {
+  background: var(--code-bg);
+  padding: 14px 18px;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.5;
+  font-size: 0.84em;
+  margin: 14px 0 20px;
+}
+pre code { background: transparent; padding: 0; }
+
+/* ── DRIFT FINDINGS ───────────────────────────── */
+.finding {
+  display: flex;
+  gap: 16px;
+  margin: 14px 0;
+  padding: 14px 18px;
+  border-left: 4px solid var(--rule);
+  background: rgba(0,0,0,0.018);
+  border-radius: 0 4px 4px 0;
+}
+.finding.severe   { border-color: var(--never); }
+.finding.moderate { border-color: var(--admin); }
+.finding.minor    { border-color: var(--user); }
+.finding .severity {
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  white-space: nowrap;
+  padding-top: 3px;
+  min-width: 84px;
+  flex-shrink: 0;
+}
+.finding.severe   .severity { color: var(--never); }
+.finding.moderate .severity { color: var(--admin); }
+.finding.minor    .severity { color: var(--user); }
+.finding .body { flex: 1; min-width: 0; }
+.finding p { margin: 0 0 6px; }
+.finding p:last-child { margin: 0; }
+.finding strong { font-weight: 600; }
+
+/* ── INSIGHT CALLOUT ──────────────────────────── */
+.insight {
+  margin: 28px 0;
+  padding: 18px 22px;
+  border-left: 3px solid var(--dev);
+  background: rgba(35, 112, 163, 0.05);
+  font-size: 0.94em;
+  border-radius: 0 4px 4px 0;
+}
+.insight .insight-label {
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dev);
+  margin-bottom: 10px;
+}
+.insight ul { margin: 0; padding-left: 22px; }
+.insight li { margin: 5px 0; }
+
+/* ── DEMONSTRATIVE SELF-REFERENCE ─────────────── */
+.self-ref {
+  margin: 32px 0 0;
+  padding: 18px 22px;
+  background: var(--code-bg);
+  border: 1px dashed var(--fg-muted);
+  border-radius: 4px;
+  font-size: 0.92em;
+  color: var(--fg-muted);
+}
+.self-ref strong { color: var(--fg); }
+
+/* ── FOOTER ───────────────────────────────────── */
+footer {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85em;
+  color: var(--fg-muted);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  line-height: 1.7;
+}
+
+/* ── PRINT ────────────────────────────────────── */
+@media print {
+  body { background: white; }
+  .toc, .insight, .self-ref { background: white; }
+  .container { padding: 0; max-width: none; }
+  .finding { background: white; }
+  a { color: var(--fg); }
+}
+
+/* ── SMALL SCREENS ────────────────────────────── */
+@media (max-width: 640px) {
+  .container { padding: 44px 20px 64px; }
+  .hero h1 { font-size: 2.05em; }
+  .toc ol { columns: 1; }
+  .finding { flex-direction: column; gap: 6px; }
+  .finding .severity { min-width: 0; padding-top: 0; }
+  .territory td.path { white-space: normal; }
+}
+</style>
+</head>
+<body>
+<main class="container">
+
+<!-- ═══════════════════════════════════════════════════ HERO -->
+<header class="hero">
+<h1>Where files live, who owns them, who touches them.</h1>
+<p class="deck">A three-axis schema for filesystem ontology — color-coded touch policy, role-tagged ownership, convention-anchored origin — applied across macOS, Windows, and Linux, and to a real audit of <code>/Users/4jp</code>.</p>
+<p class="meta">2026-05-21 · branched session · single-file artifact · no external deps</p>
+</header>
+
+<!-- ═══════════════════════════════════════════════════ TOC -->
+<nav class="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#thesis">Thesis</a></li>
+<li><a href="#schema">The schema</a></li>
+<li><a href="#roles">Three roles</a></li>
+<li><a href="#telos">Teleological catalog</a></li>
+<li><a href="#macos">macOS territory</a></li>
+<li><a href="#windows">Windows territory</a></li>
+<li><a href="#linux">Linux territory</a></li>
+<li><a href="#cross">Cross-OS comparison</a></li>
+<li><a href="#audit">Home-dir drift audit</a></li>
+<li><a href="#hardening">Visual hardening</a></li>
+<li><a href="#rules">Two minimal rules</a></li>
+</ol>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ THESIS -->
+<section id="thesis">
+<h2>Thesis</h2>
+<p>Every filesystem path encodes three independent claims: <em>how risky it is to edit</em>, <em>who legitimately owns it</em>, and <em>which convention defined it</em>. Most homedir drift is a conflation of those axes — config shipped to <code>~/Documents/</code>, cache where state belongs, user-dev surfaces treated as if they were vendor territory.</p>
+<p>Most OSes hand you 50+ such paths and expect you to internalize the taxonomy by osmosis. This page makes it explicit, then applies it.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ SCHEMA -->
+<section id="schema">
+<h2>The schema</h2>
+
+<h3>Axis 1 — Touch policy (color)</h3>
+<table class="legend">
+<thead><tr><th>Tier</th><th>Label</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td class="swatch"><span class="chip c-never">🟥 N</span></td><td class="label">NEVER TOUCH</td><td>OS-protected. SIP / WRP / root-owned virtual filesystem. Edits either physically blocked or break the system.</td></tr>
+<tr><td class="swatch"><span class="chip c-admin">🟧 A</span></td><td class="label">ADMIN ONLY</td><td>Requires sudo / Administrator / elevation. Legitimate edits possible but always intentional.</td></tr>
+<tr><td class="swatch"><span class="chip c-app">🟨 X</span></td><td class="label">APP-MANAGED</td><td>An app owns this; <em>it</em> writes, <em>you</em> generally don't. Hand-edit only when fixing something specific.</td></tr>
+<tr><td class="swatch"><span class="chip c-user">🟩 U</span></td><td class="label">USER FREELY</td><td>Your daily work surface. Touch without ceremony.</td></tr>
+<tr><td class="swatch"><span class="chip c-dev">🟦 D</span></td><td class="label">DEV FREELY</td><td>Dev scope; touch without ceremony, but with awareness (track in dotfiles, mind the cascade).</td></tr>
+<tr><td class="swatch"><span class="chip c-hybrid">🟪 H</span></td><td class="label">HYBRID</td><td>Multiple roles legitimately edit (e.g., <code>/etc/hosts</code> — admin owns; both admin and dev edit).</td></tr>
+<tr><td class="swatch"><span class="chip c-virtual">⬛ V</span></td><td class="label">VIRTUAL</td><td>Not a real file. Reading reports state; writing changes kernel/runtime state. (Linux <code>/proc/</code>, <code>/sys/</code>.)</td></tr>
+</tbody>
+</table>
+
+<h3>Axis 2 — Role owner (tag prefix)</h3>
+<table class="legend">
+<tbody>
+<tr><td class="swatch"><span class="tag">[OS]</span></td><td class="label">OS maintainer</td><td>Vendor (Apple, Microsoft, distro).</td></tr>
+<tr><td class="swatch"><span class="tag">[ADM]</span></td><td class="label">Admin / installer</td><td>You-with-sudo, or installer software.</td></tr>
+<tr><td class="swatch"><span class="tag">[USR]</span></td><td class="label">User</td><td>You, without elevation.</td></tr>
+<tr><td class="swatch"><span class="tag">[DEV]</span></td><td class="label">User-dev</td><td>You, with dev tooling.</td></tr>
+</tbody>
+</table>
+
+<h3>Axis 3 — Convention origin (tag suffix)</h3>
+<table class="legend">
+<tbody>
+<tr><td class="swatch"><span class="tag">(HIG)</span></td><td class="label">Apple HIG</td><td>macOS Human Interface Guidelines.</td></tr>
+<tr><td class="swatch"><span class="tag">(XDG)</span></td><td class="label">XDG</td><td>XDG Base Directory Specification.</td></tr>
+<tr><td class="swatch"><span class="tag">(FHS)</span></td><td class="label">FHS</td><td>Filesystem Hierarchy Standard (Linux).</td></tr>
+<tr><td class="swatch"><span class="tag">(NT)</span></td><td class="label">Windows NT</td><td>Microsoft convention.</td></tr>
+<tr><td class="swatch"><span class="tag">(Legacy)</span></td><td class="label">Legacy</td><td>Pre-XDG Unix dotfiles.</td></tr>
+<tr><td class="swatch"><span class="tag">(Custom)</span></td><td class="label">Custom</td><td>User-invented; no standard.</td></tr>
+</tbody>
+</table>
+
+<p>A combined tag reads as <em>policy + role + convention</em>:</p>
+<ul>
+<li><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span> <span class="tag">(HIG)</span> — vendor-owned, never touch, macOS-specific.</li>
+<li><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span> <span class="tag">(XDG)</span> — dev-owned, touch freely, modern XDG.</li>
+<li><span class="chip c-hybrid">🟪 H</span> <span class="tag">[ADM]</span> <span class="tag">(FHS)</span> — admin-owned but multi-role-edited, Linux FHS.</li>
+</ul>
+
+<div class="insight">
+<div class="insight-label">Why three axes</div>
+<ul>
+<li>Color and tag are doing different work. Color signals <em>what happens if you touch it wrong</em>; tag signals <em>who legitimately owns it</em>. Conflating them loses information: <code>/etc/</code> and <code>~/.config/</code> have similar semantic role (declarative config) but very different touch risk (sudo vs free).</li>
+<li>Convention tags exist because the same role can have multiple historical homes. <code>~/.gitconfig</code> <span class="tag">(Legacy)</span> and <code>~/.config/git/config</code> <span class="tag">(XDG)</span> are both legitimate; knowing which lineage a path belongs to predicts whether other tools will look there.</li>
+</ul>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ ROLES -->
+<section id="roles">
+<h2>Three roles</h2>
+<table class="legend">
+<thead><tr><th>Role</th><th>What they do</th><th>Privilege</th></tr></thead>
+<tbody>
+<tr><td><strong>OS maintainer</strong></td><td>Installs / updates the OS itself, system packages, drivers, system services.</td><td>Root / Administrator / sudo</td></tr>
+<tr><td><strong>User</strong></td><td>Day-to-day file creation, GUI settings, app installs through installers or stores.</td><td>Own home only (no root)</td></tr>
+<tr><td><strong>User-dev</strong></td><td>All of "user" + installs dev tools, manages source, writes scripts, edits configs in text.</td><td>Home + selective sudo for system-scope installs</td></tr>
+</tbody>
+</table>
+<p>On a personal machine, all three roles are the same person. The <em>territory</em> is what's distinct.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ TELOS -->
+<section id="telos">
+<h2>Teleological catalog</h2>
+<p>The ideal use of each canonical directory. "What is this directory <em>for</em>?"</p>
+
+<h4>macOS-canonical (HIG)</h4>
+<table class="territory">
+<tbody>
+<tr><td class="path">~/Desktop/</td><td class="tier"><span class="chip c-user">🟩 U</span></td><td>Ephemeral worktop — what's actively in front of you this week. Should auto-decay; >2 weeks = belongs elsewhere.</td></tr>
+<tr><td class="path">~/Documents/</td><td class="tier"><span class="chip c-user">🟩 U</span></td><td>Durable personal documents — long-lived, user-owned, <em>not</em> app data.</td></tr>
+<tr><td class="path">~/Downloads/</td><td class="tier"><span class="chip c-user">🟩 U</span></td><td>Network inbox — files arrived from outside awaiting triage. Should be near-empty most of the time.</td></tr>
+<tr><td class="path">~/Library/</td><td class="tier"><span class="chip c-app">🟨 X</span></td><td>Opaque app substrate. App preferences, Application Support, Caches, Containers. Edit only to fix something specific.</td></tr>
+<tr><td class="path">~/Movies, Music, Pictures/</td><td class="tier"><span class="chip c-user">🟩 U</span></td><td>Media silos — segregated by media type.</td></tr>
+<tr><td class="path">~/Public/</td><td class="tier"><span class="chip c-user">🟩 U</span></td><td>Network share — files exposed via macOS File Sharing.</td></tr>
+<tr><td class="path">~/Developer/</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>Apple-blessed dev dir. Finder gives it the hammer icon; Xcode preferences default here.</td></tr>
+</tbody>
+</table>
+
+<h4>XDG (modern Unix)</h4>
+<table class="territory">
+<tbody>
+<tr><td class="path">~/.config/</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>Declarative config — hand-editable text describing how tools behave.</td></tr>
+<tr><td class="path">~/.local/share/</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>App data — generated files apps own and keep. Backup-worthy.</td></tr>
+<tr><td class="path">~/.local/state/</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>State — logs, undo history, "last-X" memory. Not config; not cache.</td></tr>
+<tr><td class="path">~/.cache/</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>Disposable cache — <code>rm -rf</code> should never break anything important.</td></tr>
+<tr><td class="path">~/.local/bin/</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>User-installed binaries on PATH.</td></tr>
+</tbody>
+</table>
+
+<h4>Legacy (pre-XDG)</h4>
+<table class="territory">
+<tbody>
+<tr><td class="path">~/.ssh, .gnupg, .gitconfig</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>Identity / crypto — resistant to XDG migration for permission reasons.</td></tr>
+<tr><td class="path">~/.zshrc, .zshenv, .editorconfig</td><td class="tier"><span class="chip c-dev">🟦 D</span></td><td>Shell + universal config — paths the tool hardcodes.</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ MACOS -->
+<section id="macos">
+<h2>macOS territory</h2>
+<table class="territory">
+<thead><tr><th>Path</th><th>Tier</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="path">/System/</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">SIP-protected; Apple kernel territory.</td></tr>
+<tr><td class="path">/usr/, /bin/, /sbin/</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">SIP-protected system binaries.</td></tr>
+<tr><td class="path">/private/, /dev/, /Volumes/</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">OS-managed backing storage / device nodes.</td></tr>
+<tr><td class="path">/.Spotlight-V100, /.fseventsd, /cores</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">macOS subsystem hidden dirs.</td></tr>
+<tr><td class="path">/Library/ (most)</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">System-wide app data; installer-managed.</td></tr>
+<tr><td class="path">/Library/LaunchDaemons, LaunchAgents</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">Your rule #9 forbids creating these.</td></tr>
+<tr><td class="path">/etc/ → /private/etc/</td><td class="tier"><span class="chip c-hybrid">🟪 H</span> <span class="tag">[ADM]</span></td><td class="note">Admin owns; dev edits <code>/etc/hosts</code> etc.</td></tr>
+<tr><td class="path">/Applications/</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">Install apps here.</td></tr>
+<tr><td class="path">/opt/homebrew/</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">User-owned package prefix (Apple Silicon).</td></tr>
+<tr><td class="path">~/Library/</td><td class="tier"><span class="chip c-app">🟨 X</span> <span class="tag">[USR]</span></td><td class="note">App-managed; touch with reason.</td></tr>
+<tr><td class="path">~/Library/Containers/</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">Sandbox-managed; manual edits break apps.</td></tr>
+<tr><td class="path">~/Desktop, Documents, Downloads</td><td class="tier"><span class="chip c-user">🟩 U</span> <span class="tag">[USR]</span></td><td class="note">Work surface.</td></tr>
+<tr><td class="path">~/Movies, Music, Pictures, Public</td><td class="tier"><span class="chip c-user">🟩 U</span> <span class="tag">[USR]</span></td><td class="note">Media silos.</td></tr>
+<tr><td class="path">~/Developer/</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Apple-blessed dev dir.</td></tr>
+<tr><td class="path">~/.config/, ~/.local/, ~/.cache/</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Modern XDG dev surface.</td></tr>
+<tr><td class="path">~/.ssh, .gnupg, .zshrc</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Legacy dotfiles; mind permissions.</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ WINDOWS -->
+<section id="windows">
+<h2>Windows territory</h2>
+<table class="territory">
+<thead><tr><th>Path</th><th>Tier</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="path">C:\Windows\</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">WRP-protected kernel territory.</td></tr>
+<tr><td class="path">C:\Windows\System32\</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">Core DLLs/EXEs; deletion = unbootable.</td></tr>
+<tr><td class="path">C:\Windows\WinSxS\</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">Side-by-side store; never hand-prune.</td></tr>
+<tr><td class="path">C:\$Recycle.Bin\, Recovery\</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">OS-managed metadata.</td></tr>
+<tr><td class="path">C:\Program Files\ (x86)\</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">App install destination.</td></tr>
+<tr><td class="path">C:\ProgramData\</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">System-wide app data.</td></tr>
+<tr><td class="path">Registry HKLM\</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">System-wide settings.</td></tr>
+<tr><td class="path">Registry HKCU\</td><td class="tier"><span class="chip c-app">🟨 X</span> <span class="tag">[USR]</span></td><td class="note">Per-user; apps manage.</td></tr>
+<tr><td class="path">C:\Users\&lt;u&gt;\Desktop, Documents...</td><td class="tier"><span class="chip c-user">🟩 U</span> <span class="tag">[USR]</span></td><td class="note">Work surface.</td></tr>
+<tr><td class="path">OneDrive\</td><td class="tier"><span class="chip c-user">🟩 U</span> <span class="tag">[USR]</span></td><td class="note">Cloud-synced work surface (now default).</td></tr>
+<tr><td class="path">%LOCALAPPDATA%, %APPDATA%</td><td class="tier"><span class="chip c-app">🟨 X</span> <span class="tag">[USR]</span></td><td class="note">App-managed; selective edits.</td></tr>
+<tr><td class="path">~\.ssh\, .gitconfig</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Unix-style dotfiles inside Windows.</td></tr>
+<tr><td class="path">~\source\repos\</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Visual Studio default code dir.</td></tr>
+<tr><td class="path">~\scoop\</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">User-scope package manager.</td></tr>
+<tr><td class="path">\\wsl$\&lt;distro&gt;\home\&lt;u&gt;\</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Linux home inside WSL — full Unix semantics.</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ LINUX -->
+<section id="linux">
+<h2>Linux territory</h2>
+<table class="territory">
+<thead><tr><th>Path</th><th>Tier</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="path">/boot/</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">Kernel + bootloader.</td></tr>
+<tr><td class="path">/bin, /sbin, /lib, /lib64</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">Often symlinks to <code>/usr/*</code>.</td></tr>
+<tr><td class="path">/usr/bin, /usr/lib, /usr/share</td><td class="tier"><span class="chip c-never">🟥 N</span> <span class="tag">[OS]</span></td><td class="note">Distro package-manager owned.</td></tr>
+<tr><td class="path">/proc/, /sys/</td><td class="tier"><span class="chip c-virtual">⬛ V</span> <span class="tag">[OS]</span></td><td class="note">Kernel-exposed virtual filesystems.</td></tr>
+<tr><td class="path">/dev/</td><td class="tier"><span class="chip c-virtual">⬛ V</span> <span class="tag">[OS]</span></td><td class="note">Device nodes (<code>udev</code>-managed).</td></tr>
+<tr><td class="path">/etc/</td><td class="tier"><span class="chip c-hybrid">🟪 H</span> <span class="tag">[ADM]</span></td><td class="note">Main admin surface; multi-role edits.</td></tr>
+<tr><td class="path">/opt/, /usr/local/, /srv/</td><td class="tier"><span class="chip c-admin">🟧 A</span> <span class="tag">[ADM]</span></td><td class="note">Vendor bundles / self-compiled / server data.</td></tr>
+<tr><td class="path">/var/log/, /var/cache/, /var/spool/</td><td class="tier"><span class="chip c-app">🟨 X</span> <span class="tag">[OS]</span></td><td class="note">Read for debugging; service-owned.</td></tr>
+<tr><td class="path">~/Desktop, Documents... (XDG user-dirs)</td><td class="tier"><span class="chip c-user">🟩 U</span> <span class="tag">[USR]</span></td><td class="note">XDG user-dirs spec.</td></tr>
+<tr><td class="path">~/.config/, ~/.local/, ~/.cache/</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Modern XDG.</td></tr>
+<tr><td class="path">~/.ssh, .gnupg, .bashrc, .zshrc</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">Legacy dotfiles.</td></tr>
+<tr><td class="path">~/src/, ~/code/, ~/projects/</td><td class="tier"><span class="chip c-dev">🟦 D</span> <span class="tag">[DEV]</span></td><td class="note">User-chosen dev dir; no convention.</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ CROSS -->
+<section id="cross">
+<h2>Cross-OS comparison</h2>
+<table class="territory">
+<thead><tr><th>Concept</th><th>macOS</th><th>Windows</th><th>Linux</th></tr></thead>
+<tbody>
+<tr><td><strong>Untouchable</strong></td><td><code>/System/</code>, <code>/usr/</code> (SIP)</td><td><code>C:\Windows\System32\</code> (WRP)</td><td><code>/proc/</code>, <code>/sys/</code>, <code>/boot/</code></td></tr>
+<tr><td><strong>Admin / install</strong></td><td><code>/Applications/</code>, <code>/opt/homebrew/</code></td><td><code>C:\Program Files\</code>, HKLM, ProgramData</td><td><code>/etc/</code>, <code>/usr/local/</code>, package mgr</td></tr>
+<tr><td><strong>Home root</strong></td><td><code>~/</code></td><td><code>C:\Users\&lt;u&gt;\</code></td><td><code>/home/&lt;u&gt;/</code></td></tr>
+<tr><td><strong>Work surface</strong></td><td>Desktop/Documents/Downloads + media</td><td>Desktop/Documents/Downloads (+ OneDrive)</td><td>XDG user-dirs</td></tr>
+<tr><td><strong>Opaque app data</strong></td><td><code>~/Library/</code></td><td>AppData\Local, AppData\Roaming</td><td><code>~/.local/share/</code></td></tr>
+<tr><td><strong>Blessed dev dir</strong></td><td><code>~/Developer/</code></td><td>(none; VS = <code>~/source/repos/</code>)</td><td>(none; user invents)</td></tr>
+<tr><td><strong>XDG adoption</strong></td><td>Partial (~30% of CLI tools)</td><td>None (uses AppData)</td><td>Strong</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<div class="insight-label">Three philosophies, one topology</div>
+<ul>
+<li>All three OSes share the same structural pattern: <strong>reserved kernel territory</strong>, <strong>shared installer territory</strong>, <strong>per-user sandbox</strong>. The labels differ; the topology doesn't.</li>
+<li>"User-dev" is a <em>cultural</em> construct on macOS and Windows (the OS doesn't formally recognize it), but is almost the <em>default</em> personal-machine mode on Linux. This asymmetry shapes how leakage between user and dev territory happens.</li>
+<li><span class="chip c-virtual">⬛ V</span> is unique to Linux at any meaningful scale. <code>/proc/</code> and <code>/sys/</code> are entire universes of "files" that aren't files. macOS hides equivalent functionality in syscalls; Windows in the Registry. This is a real architectural difference worth tagging distinctly.</li>
+</ul>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ AUDIT -->
+<section id="audit">
+<h2>Home-dir drift audit — <code>/Users/4jp</code></h2>
+<p>Findings verified against current disk state, ranked by severity.</p>
+
+<div class="finding moderate">
+<div class="severity">Moderate</div>
+<div class="body">
+<p><strong>Two active dev directories plus four empty namespace stubs.</strong> Investigation revised the first-pass finding.</p>
+<p><strong>Active:</strong> <code>~/Code/</code> 53 GB · <code>~/Workspace/</code> 11 GB. Real operational split worth probing before consolidation.</p>
+<p><strong>Empty stubs (0 B each):</strong> <code>~/Projects/</code> · <code>~/Development/</code> · <code>~/Studio/</code> · <code>~/WORK/</code>. Drift type is <em>orphan namespace claims</em>, not size-bearing competition — likely the residue of past organizational attempts. Trivially removable.</p>
+<p><code>~/Developer/</code> (Apple-blessed dev dir) is still <strong>missing</strong>.</p>
+</div>
+</div>
+
+<div class="finding severe">
+<div class="severity">Severe</div>
+<div class="body">
+<p><strong>~25 loose files at home root.</strong> Should be in <code>Documents/</code>, version control, or trash. Includes <code>package-lock.json</code> (revealed by inspection to be an empty <code>npm init -y</code> shell — name <code>"4jp"</code>, zero packages; harmless cruft, deletable), <code>LICENSE</code>, 9 × <code>session-ses_*.md</code>, multiple <code>export-*</code>, <code>premortem-*</code>, <code>transcript-*</code>, plus <code>.zsh_history_</code> (149 B ASCII, stray-underscore typo of <code>.zsh_history</code>).</p>
+</div>
+</div>
+
+<div class="finding severe">
+<div class="severity">Severe</div>
+<div class="body">
+<p><strong>15 <code>expansive-inquiry-*</code> dirs sprawled at home root.</strong> Vertical pollution — depth-1 dirs that should be depth-2 under one parent (e.g., <code>~/Workspace/expansive-inquiries/</code>).</p>
+</div>
+</div>
+
+<div class="finding moderate">
+<div class="severity">Moderate</div>
+<div class="body">
+<p><strong>Two co-equal empty namespace stubs.</strong> <em>Investigation correction:</em> <code>workspace-autopsy-governance/</code> and <code>workspace-autopsy-governance 2/</code> are BOTH empty dirs (4 KB each, no contents) — not a Finder-accident duplicate of a substantial directory. Same drift class as the empty dev-dir stubs above.</p>
+<p><em>Previously claimed but verified absent:</em> <code>~/2/</code> does not exist (original audit parse error); <code>~/Vault/</code> does not exist (only <code>~/Obsidian Vault/</code> exists, 23 MB, the real vault).</p>
+</div>
+</div>
+
+<div class="finding severe">
+<div class="severity">Severe</div>
+<div class="body">
+<p><strong>5 <code>.claude.json.bak.*</code> backup files at home root.</strong> Telos says <code>~/.local/state/claude/backups/</code> or pruned.</p>
+</div>
+</div>
+
+<div class="finding moderate">
+<div class="severity">Moderate</div>
+<div class="body">
+<p><strong>~12 agent dotdirs that could follow XDG.</strong> <code>.agents/</code>, <code>.agentmemory/</code>, <code>.conductor/</code>, <code>.copilot/</code>, <code>.cline/</code>, <code>.cursorless/</code>, <code>.iii/</code>, <code>.kimi/</code>, <code>.openclaw/</code>, <code>.my-father-mother/</code>, <code>.materia/</code>, <code>.metasystem/</code>, <code>.titan/</code>, <code>.tooluniverse/</code>.</p>
+</div>
+</div>
+
+<div class="finding moderate">
+<div class="severity">Moderate</div>
+<div class="body">
+<p><strong>~10 cruft dotdirs from possibly-retired tools.</strong> <code>.solc-select/</code>, <code>.halmos/</code>, <code>.wallaby/</code>, <code>.quokka/</code>, <code>.sonarlint/</code>, <code>.foundry/</code>, <code>.fly/</code>, <code>.cloudflared/</code>, <code>.kube/</code>, <code>.minikube/</code>. Run <code>du -sh ~/.X/</code> to find retirement candidates.</p>
+</div>
+</div>
+
+<div class="finding moderate">
+<div class="severity">Moderate</div>
+<div class="body">
+<p><strong><code>~/_dot-config/</code> is a fourth parallel substrate</strong> alongside <code>~/.config/</code>, <code>~/Library/</code>, and legacy home dotfiles. Intentional, but widens the convention surface from 3 to 4.</p>
+</div>
+</div>
+
+<h3>Ideal-form layout</h3>
+<p>Applying the rubric strictly, the home dir should reduce to:</p>
+<pre><code>~/
+├── Desktop/   Documents/   Downloads/                  <span style="color:var(--user)">🟩 HIG</span>
+├── Movies/    Music/       Pictures/   Public/         <span style="color:var(--user)">🟩 HIG</span>
+├── Library/                                            <span style="color:var(--app)">🟨 HIG</span>
+├── Applications/                                       <span style="color:var(--user)">🟩 HIG</span>
+│
+├── Developer/                                          <span style="color:var(--dev)">🟦 HIG (dev)</span>
+│   ├── organvm/        ← currently ~/Code/organvm/
+│   ├── 4444J99/        ← currently ~/Workspace/4444J99/
+│   └── ...
+│
+├── .config/   .cache/   .local/                        <span style="color:var(--dev)">🟦 XDG</span>
+├── .ssh/      .gnupg/   .docker/   .npm/  .aws/        <span style="color:var(--dev)">🟦 Legacy</span>
+└── .zshrc     .zshenv   .editorconfig                  <span style="color:var(--dev)">🟦 Legacy</span></code></pre>
+
+<div class="insight">
+<div class="insight-label">Highest-information findings</div>
+<ul>
+<li>The single most diagnostic fact: <code>~/Code/</code> is 53 GB and <code>~/Workspace/</code> is 11 GB. That's not "I tried two conventions" — that's a real operational split. Before consolidating, surface <em>why</em> the split exists; it may be load-bearing.</li>
+<li>The four empty-stub dev dirs (<code>~/Projects/</code>, <code>~/Development/</code>, <code>~/Studio/</code>, <code>~/WORK/</code>, all 0 B) reveal a different drift: <em>past organizational attempts that never took root</em>. Empty namespace claims are easier to remove than competing repositories, but they pollute mental search-space at the same rate.</li>
+<li>The <code>expansive-inquiry-*</code> sprawl is a symptom of a missing intermediate concept — they want to be grouped, but no parent directory exists yet to hold them. Choosing the parent name is itself an ontological act.</li>
+<li>Apple's <code>~/Developer/</code> getting the hammer icon is a tiny detail but real — if you want a dev-dir choice with <em>external</em> convention backing, it's the only one that exists on macOS. Picking <code>~/Code/</code> chooses aesthetic consistency with <code>~/Documents/</code> over Apple's blessing; defensible, just a tradeoff worth knowing.</li>
+</ul>
+</div>
+
+<h3>Regenerate this audit</h3>
+<p>The findings above are point-in-time. To re-run them on current disk state:</p>
+<pre><code># Dev-dir sizes (severe finding)
+du -sh ~/Code ~/Workspace ~/Projects ~/Development ~/Studio ~/WORK 2&gt;/dev/null
+
+# Loose files at home root
+find ~ -maxdepth 1 -type f ! -name ".*" | sort
+
+# Hidden backup files at home root
+ls -la ~/.claude.json.bak.* 2&gt;/dev/null
+
+# expansive-inquiry-* sprawl count
+ls -d ~/expansive-inquiry-*/ 2&gt;/dev/null | wc -l
+
+# Apple-blessed dev dir presence
+test -d ~/Developer &amp;&amp; echo "✓ Developer present (hammer icon)" || echo "✗ Developer missing"
+
+# Cruft-candidate dotdirs (size-sorted)
+du -sh ~/.* 2&gt;/dev/null | sort -hr | head -20</code></pre>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ HARDENING -->
+<section id="hardening">
+<h2>Visual hardening across surfaces</h2>
+<p>Color tags in a markdown table are step one — propagating them across surfaces is step two. The schema hardens by repetition.</p>
+
+<h4>Terminal — <code>EZA_COLORS</code> / <code>LS_COLORS</code></h4>
+<pre><code>export EZA_COLORS="di=34:ow=34:tw=34"   # dir = blue</code></pre>
+
+<h4>Prompt — Starship substitutions</h4>
+<pre><code># ~/.config/starship.toml
+[directory]
+substitutions = {
+  "~/.config" = "[🟦 config]",
+  "~/.local"  = "[🟦 local]",
+  "/etc"      = "[🟪 etc]"
+}</code></pre>
+
+<h4>IDE — VS Code / Cursor workspace colors</h4>
+<pre><code>// .vscode/settings.json
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#2370a3",  // 🟦 dev project
+    "titleBar.activeForeground": "#ffffff"
+  }
+}</code></pre>
+
+<h4>Finder — native colored tags (macOS)</h4>
+<pre><code>tag -a Red ~/2/                                 # 🟥 DO NOT TOUCH (or delete)
+tag -a Orange ~/workspace-autopsy-governance\ 2/  # 🟧 review &amp; merge</code></pre>
+
+<h4>Documentation — propagate the legend</h4>
+<p>Add the color squares to every README, CLAUDE.md, plan, or ontology doc that lists paths. The schema only hardens if it appears everywhere the concept appears — <span class="chip c-never">🟥 N</span> becomes recognizable as "kernel territory" only after the third or fourth time you see it.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ RULES -->
+<section id="rules">
+<h2>Two minimal rules that travel across all three OSes</h2>
+<ol>
+<li><strong>If your package manager put a file there, don't hand-edit it.</strong> Apt, dnf, brew, choco, scoop, the Mac App Store — they all expect to <em>own</em> certain dirs and will overwrite or break on conflict. Use them, don't fight them.</li>
+<li><strong>If you didn't create the dir and don't know what's in it, leave it alone.</strong> Especially for hidden / system / virtual dirs. The default answer to "what does <code>/sys/class/block/</code> do" is "nothing of yours."</li>
+</ol>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ SELF-REF -->
+<aside class="self-ref">
+<strong>This page demonstrating itself:</strong> Located at <code>~/Documents/directory-taxonomy-touch-policy.html</code> — classified <span class="chip c-user">🟩 U</span> <span class="tag">[USR]</span> <span class="tag">(HIG)</span>. Durable personal document, user work surface, free to touch. Saving it to <code>~/Desktop/</code> would communicate "throwaway"; <code>~/.local/state/</code> would be wrong-tier. The schema applies to its own artifacts.
+</aside>
+
+<footer>
+2026-05-21 · <code>/Users/4jp/Documents/directory-taxonomy-touch-policy.html</code><br>
+Single-file artifact · inline CSS · no JavaScript · no external deps<br>
+Aesthetic inspired by <a href="https://thariqs.github.io/html-effectiveness/">thariqs.github.io/html-effectiveness</a> — "HTML is an underrated medium for communication."<br>
+Canonical schema source: <code>~/.claude/projects/-Users-4jp/memory/reference_directory_touch_policy.md</code><br>
+Open with: <code>open ~/Documents/directory-taxonomy-touch-policy.html</code>
+</footer>
+
+</main>
+</body>
+</html>
