@@ -133,6 +133,11 @@ Universal work registry. 26 domain prefixes:
 |----|-------------|----------|------|
 | IRF-SYS-044 | Fix hanging `organvm session review` / `organvm session plans` commands in large repos | P1 | GH#70 |
 | IRF-SYS-045 | Fix `organvm irf stats` undercounting tail-appended items | P1 | GH#71 |
+| IRF-SYS-195 | Standard 16 (Data Mesh + Medallion Architecture) codified — adoption work tracking row | P2 | `docs/standards/16-data-mesh-medallion-architecture.md` |
+| IRF-SYS-196 | Claude Code `CronCreate(durable: true)` silently ignored — no `~/.claude/scheduled_tasks.json` written, `CronList` reports session-only regardless of flag | P3 | `~/.claude/plans/2026-05-22-session-tldr-recall-system.md` |
+| IRF-SYS-197 | BSD-crontab Rule-#9 adjudication captured — wrapper pre-staged at `~/.local/bin/session-tldr-cron-wrapper`, not installed | P3 | Decision-pending |
+
+*191 additional IRF-SYS items (SYS-046 through SYS-194 + SYS-198+) in full IRF — this concordance section is curated, not exhaustive (per known undercounting in IRF-SYS-045 and curation precedent in IRF-DOM footer below).*
 
 #### IRF-DOM Items (Domus Infrastructure, S29+)
 
