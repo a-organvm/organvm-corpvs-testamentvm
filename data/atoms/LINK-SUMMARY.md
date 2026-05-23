@@ -1,13 +1,13 @@
 # Atom Link Summary
-**Generated**: 2026-05-21
-**Links**: 39478 | **Threshold**: 0.3
+**Generated**: 2026-05-22
+**Links**: 41175 | **Threshold**: 0.3
 
 ## Jaccard Distribution
 
 | Range | Count | % |
 |-------|-------|---|
-| 0.50+ | 7704 | 19% |
-| 0.30–0.49 | 31774 | 80% |
+| 0.50+ | 8145 | 19% |
+| 0.30–0.49 | 33030 | 80% |
 | 0.20–0.29 | 0 | 0% |
 | 0.15–0.19 | 0 | 0% |
 | <0.15 | 0 | 0% |
@@ -16,36 +16,36 @@
 
 | Tag | Occurrences |
 |-----|-------------|
-| chezmoi | 21087 |
-| go | 14363 |
-| python | 11822 |
-| bash | 10425 |
-| mcp | 9588 |
-| zsh | 2769 |
-| homebrew | 2461 |
-| cloudflare | 1218 |
-| astro | 870 |
-| node | 870 |
-| docker | 629 |
-| vercel | 510 |
-| pytest | 432 |
-| neon | 398 |
+| chezmoi | 22410 |
+| go | 14913 |
+| python | 13222 |
+| bash | 10565 |
+| mcp | 9421 |
+| zsh | 3062 |
+| homebrew | 2724 |
+| cloudflare | 1220 |
+| node | 1023 |
+| astro | 896 |
+| docker | 738 |
+| vercel | 584 |
+| neon | 537 |
 | three.js | 343 |
-| typescript | 181 |
-| playwright | 104 |
-| fastapi | 69 |
-| vite | 45 |
-| rust | 34 |
+| pytest | 332 |
+| typescript | 329 |
+| playwright | 207 |
+| fastapi | 191 |
+| aws | 179 |
+| javascript | 153 |
 
 ## Top Shared File References
 
 | File | Occurrences |
 |------|-------------|
 | `data/prompt-registry/prompt-atoms.json` | 70 |
-| `.conductor/active-handoff.md` | 55 |
+| `.conductor/active-handoff.md` | 60 |
 | `private_dot_claude/settings.json.tmpl` | 41 |
 | `src/components/spiral/spiral.ts` | 23 |
-| `/Users/4jp/CLAUDE.md` | 15 |
+| `/Users/4jp/CLAUDE.md` | 16 |
 | `src/data/hub.config.ts` | 11 |
 | `scripts/refresh_skill_collections.py` | 11 |
 | `scripts/run.py` | 10 |
@@ -66,18 +66,18 @@
 
 | Task ID | Links |
 |---------|-------|
-| 50ffd0669eea | 157 |
-| 7f13857e43b2 | 154 |
-| efb873114092 | 154 |
-| 8256b2dca013 | 154 |
-| 5def74d2b78f | 154 |
-| 66028b523b91 | 154 |
-| 314c5a239943 | 154 |
-| 8cd9f31e0a73 | 154 |
-| 30bd2f357e8f | 154 |
-| bc28ef714571 | 154 |
-| de3001f2a859 | 154 |
-| 7c8877e56bbc | 127 |
-| d348af35d922 | 127 |
-| d2e9bf9ddec5 | 127 |
-| 5d45eb392771 | 127 |
+| 50ffd0669eea | 164 |
+| 7f13857e43b2 | 161 |
+| efb873114092 | 161 |
+| 8256b2dca013 | 161 |
+| 5def74d2b78f | 161 |
+| 66028b523b91 | 161 |
+| 314c5a239943 | 161 |
+| 8cd9f31e0a73 | 161 |
+| 30bd2f357e8f | 161 |
+| bc28ef714571 | 161 |
+| de3001f2a859 | 161 |
+| 16aa6a0596a3 | 135 |
+| 662ebfcf7b3c | 135 |
+| c4dee9bb2b5e | 135 |
+| a7d2f5ea70e0 | 135 |

@@ -18,7 +18,7 @@
 ### Governance
 - *Standard ORGANVM governance applies*
 
-*Last synced: 2026-05-18T02:20:45Z*
+*Last synced: 2026-05-23T00:26:31Z*
 
 ## Active Handoff Protocol
 
@@ -84,8 +84,9 @@ Linked skills: SOP-TRIADIC-REVIEW-PROTOCOL, cicd-resilience-and-recovery, contin
 
 ## Task Queue (from pipeline)
 
-**292** pending tasks | Last pipeline: unknown
+**293** pending tasks | Last pipeline: unknown
 
+- `e374137b1279` Session Close-Out — 2026-05-17 (IRF-DOM-048 engine fix execution) [pytest]
 - `cf0e6a3618d5` Vacuum Field Burn — 2026-04-22 Continuation (COMPLETED) [astro, chezmoi, python]
 - `32bbf53c387b` Contains a specific, concrete, verifiable build/create/implement action [python]
 - `0cf55989523a` Not a conversational fragment [python]
@@ -93,19 +94,18 @@ Linked skills: SOP-TRIADIC-REVIEW-PROTOCOL, cicd-resilience-and-recovery, contin
 - `df6c41742d78` Not a governance rule or behavioral constraint [python]
 - `752ce7f34b39` Loads triage-batch-1.json [python]
 - `62a994d3e34f` Applies classification rules in priority order [python]
-- `f2b23b51a154` Writes {atom_id: status} mapping to triage-result-1.json [python]
-- ... and 284 more
+- ... and 285 more
 
-Cross-organ links: 264 | Top tags: `mcp`, `python`, `rollup`, `chezmoi`, `bash`
+Cross-organ links: 168 | Top tags: `mcp`, `python`, `rollup`, `chezmoi`, `bash`
 
 Run: `organvm atoms pipeline --write && organvm atoms fanout --write`
 
 
 ## System Density (auto-generated)
 
-AMMOI: 25% | Edges: 0 | Tensions: 0 | Clusters: 0 | Adv: 27 | Events(24h): 37452
+AMMOI: 25% | Edges: 0 | Tensions: 0 | Clusters: 0 | Adv: 27 | Events(24h): 37975
 Structure: 8 organs / 148 repos / 1654 components (depth 17) | Inference: 0% | Organs: META-ORGANVM:63%, ORGAN-I:53%, ORGAN-II:48%, ORGAN-III:54% +5 more
-Last pulse: 2026-05-18T02:20:27 | Δ24h: n/a | Δ7d: n/a
+Last pulse: 2026-05-23T00:26:28 | Δ24h: n/a | Δ7d: n/a
 
 
 ## Dialect Identity (Trivium)
@@ -137,6 +137,7 @@ Nature demands a documentation counterpart. This formation maintains its narrati
 *Compliance: Formation is currently void.*
 
 <!-- ORGANVM:AUTO:END -->
+
 
 
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-21T19:44:39Z",
+  "generated": "2026-05-23T00:28:54Z",
   "total_plans": 232,
   "total_tasks": 2942,
   "entries": [
@@ -7095,7 +7095,7 @@
         "III",
         "META"
       ],
-      "stale_count": 121
+      "stale_count": 147
     },
     "META": {
       "organ_key": "META",
@@ -7113,7 +7113,7 @@
         "bash"
       ],
       "cross_organ_refs": [],
-      "stale_count": 2
+      "stale_count": 3
     },
     "_root": {
       "organ_key": "_root",
@@ -7140,7 +7140,7 @@
         "typescript"
       ],
       "cross_organ_refs": [],
-      "stale_count": 17
+      "stale_count": 18
     }
   },
   "overlaps": [
@@ -7593,6 +7593,34 @@
     }
   ],
   "stale_candidates": [
+    "claude:LIMINAL:domus-semper-palingenesis:client-acquisition-strategy",
+    "claude:LIMINAL:domus-semper-palingenesis:domus-sort-routing-analysis",
+    "claude:LIMINAL:domus-semper-palingenesis:padavano-consulting-presence",
+    "claude:LIMINAL:domus-semper-palingenesis:session-lifecycle-phrases",
+    "claude:LIMINAL:domus-semper-palingenesis:sticky-atom-routing",
+    "claude:LIMINAL:system-system--system:markdown-linting-governance",
+    "claude:LIMINAL:domus-semper-palingenesis:client-acquisition-strategy",
+    "claude:LIMINAL:domus-semper-palingenesis:domus-sort-routing-analysis",
+    "claude:LIMINAL:domus-semper-palingenesis:padavano-consulting-presence",
+    "claude:LIMINAL:domus-semper-palingenesis:session-lifecycle-phrases",
+    "claude:LIMINAL:domus-semper-palingenesis:sticky-atom-routing",
+    "claude:_root:_global:declarative-config-landscape-research",
+    "claude:META:alchemia-ingestvm:respiratory-ingest-fifth-function",
+    "claude:LIMINAL:domus-semper-palingenesis:activate-mail-triage",
+    "claude:LIMINAL:domus-semper-palingenesis:agent-dispatch-pipeline-research",
+    "claude:LIMINAL:domus-semper-palingenesis:brewfile-and-ci-green",
+    "claude:LIMINAL:domus-semper-palingenesis:doctor-all-green",
+    "claude:LIMINAL:domus-semper-palingenesis:fix-stale-domus-root",
+    "claude:LIMINAL:domus-semper-palingenesis:full-landscape-audit",
+    "claude:LIMINAL:domus-semper-palingenesis:memory-sync-xdg-cleanup",
+    "claude:LIMINAL:system-system--system:phase-b2-deep-formalization",
+    "claude:LIMINAL:domus-semper-palingenesis:activate-mail-triage",
+    "claude:LIMINAL:domus-semper-palingenesis:agent-dispatch-pipeline-research",
+    "claude:LIMINAL:domus-semper-palingenesis:brewfile-and-ci-green",
+    "claude:LIMINAL:domus-semper-palingenesis:doctor-all-green",
+    "claude:LIMINAL:domus-semper-palingenesis:fix-stale-domus-root",
+    "claude:LIMINAL:domus-semper-palingenesis:full-landscape-audit",
+    "claude:LIMINAL:domus-semper-palingenesis:memory-sync-xdg-cleanup",
     "claude:LIMINAL:domus-semper-palingenesis:docker-mcp-to-native",
     "claude:LIMINAL:domus-semper-palingenesis:docker-mcp-to-native",
     "claude:LIMINAL:domus-semper-palingenesis:login-items-cleanup",

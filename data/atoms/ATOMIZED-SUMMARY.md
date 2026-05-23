@@ -1,6 +1,6 @@
 # Plan Atomization Summary
-**Generated**: 2026-05-21
-**Plans parsed**: 1110 | **Tasks extracted**: 12002
+**Generated**: 2026-05-22
+**Plans parsed**: 1150 | **Tasks extracted**: 12884
 
 ## By Project
 
@@ -26,7 +26,7 @@
 | 4444J99/portfolio/.gemini/plans | 4 | 30 | 0 | 30 | 0 |
 | 4444J99/system-system--system/.claude/plans | 21 | 191 | 0 | 191 | 0 |
 | 4444J99/system-system--system/.gemini/plans | 2 | 23 | 14 | 9 | 0 |
-| _root | 878 | 9060 | 520 | 8540 | 0 |
+| _root | 918 | 9942 | 572 | 9370 | 0 |
 | a-organvm/.claude/plans | 13 | 260 | 0 | 260 | 0 |
 | a-organvm/.codex/plans | 1 | 1 | 1 | 0 | 0 |
 | a-organvm/my-knowledge-base/.gemini/plans | 5 | 130 | 7 | 123 | 0 |
@@ -36,39 +36,41 @@
 
 | Type | Count | % |
 |------|-------|---|
-| generic | 4110 | 34% |
-| document | 2123 | 17% |
-| create_file | 1051 | 8% |
-| configure | 931 | 7% |
-| modify_file | 860 | 7% |
-| write_test | 525 | 4% |
-| verify | 474 | 3% |
-| deploy | 375 | 3% |
-| git_operation | 362 | 3% |
-| delete_file | 338 | 2% |
-| research | 334 | 2% |
-| migrate | 291 | 2% |
+| generic | 4595 | 35% |
+| document | 2203 | 17% |
+| create_file | 1100 | 8% |
+| configure | 985 | 7% |
+| modify_file | 894 | 6% |
+| write_test | 567 | 4% |
+| verify | 514 | 3% |
+| deploy | 415 | 3% |
+| git_operation | 382 | 2% |
+| delete_file | 351 | 2% |
+| research | 340 | 2% |
+| migrate | 305 | 2% |
 | review | 98 | 0% |
 | refactor | 57 | 0% |
-| exploration | 54 | 0% |
-| post_hoc | 19 | 0% |
+| exploration | 56 | 0% |
+| post_hoc | 22 | 0% |
 
 ## By Status
 
 | Status | Count | % |
 |--------|-------|---|
-| pending | 11394 | 94% |
-| completed | 608 | 5% |
+| pending | 12224 | 94% |
+| completed | 660 | 5% |
 
 ## Largest Plans (by task count)
 
 | Plan | Project | Tasks | Completed % |
 |------|---------|-------|-------------|
+| The Ark — Past-Week Prompt Corpus | _root | 557 | 2% |
 | Plans Index | _root | 486 | 0% |
 | Directory Dissection: meta-organvm Post-Mortem → T | _root | 203 | 0% |
 | Session Export: rob-gemini-warm-clock + artifact i | _root | 181 | 0% |
 | Workspace Relocation Manifest | _root | 160 | 0% |
 | Spiral Artifact Evolution Timeline | _root | 103 | 0% |
+| Unspoken Sentences — Full Implementation Plan | _root | 89 | 0% |
 | Ideal Form Classification — What Each Repo Reaches | a-organvm/.claude/plans | 89 | 0% |
 | Plan: S-Zettelkasten Close-Out (supersedes zettelk | _root | 81 | 0% |
 | Refactor: Raw Dump → Cascading Workstreams | a-organvm/my-knowledge-base/.gemini/plans | 80 | 0% |
@@ -82,14 +84,12 @@
 | Full Implementation Plan — Sovereign Systems Spira | _root | 60 | 0% |
 | Evaluation-to-Growth: Codebase Study v2 | 4444J99/application-pipeline/.claude/plans | 56 | 0% |
 | Keyword Extraction (Hokage + Spiral) and Drive Con | _root | 55 | 0% |
-| Portfolio Project: Complete Failure Modes & Invari | 4444J99/portfolio/.claude/plans | 52 | 0% |
-| BACKLOG-007: Stripe Integration Scaffold for publi | _root | 49 | 0% |
 
 ## By Agent
 
 | Agent | Count | % |
 |-------|-------|---|
-| claude | 11648 | 97% |
+| claude | 12530 | 97% |
 | gemini | 278 | 2% |
 | codex | 76 | 0% |
 
@@ -97,12 +97,12 @@
 
 | Organ | Count | % |
 |-------|-------|---|
-| _root | 4181 | 34% |
-| LIMINAL | 4086 | 34% |
-| META | 2157 | 17% |
-| I | 738 | 6% |
+| _root | 4787 | 37% |
+| LIMINAL | 4165 | 32% |
+| META | 2203 | 17% |
+| I | 889 | 6% |
 | III | 436 | 3% |
-| IV | 372 | 3% |
+| IV | 372 | 2% |
 | II | 16 | 0% |
 | VII | 12 | 0% |
 | V | 4 | 0% |
@@ -111,9 +111,16 @@
 
 | Plan | Project | Classification |
 |------|---------|----------------|
+| Local Git Cleanout Safety Audit | _root | post_hoc |
+| Parity Workstreams Synthesis (post-audit) | _root | deploy |
+| Sysdiagnose + Netlog Forensic Audit — Full Dev Eco | _root | delete_file |
+| Session Close-Out — 2026-05-22 (sysdiagnose forens | _root | post_hoc |
+| Cross-Agent Handoff — 2026-05-21 — uncertainty-cas | _root | create_file |
+| Sysdiagnose + Netlog Forensic Audit — Full Dev Eco | _root | delete_file |
 | Agent Integration Protocols — Past / Present / Pot | _root | migrate |
 | Research: `cleanupPeriodDays` — what it actually d | _root | deploy |
 | Agent Handoff: brewup-claude-drift + Ghostty TCC + | _root | generic |
+| Untitled Plan | _root | generic |
 | Feature: Home-Dir Cleanup Recommendation Report | _root | modify_file |
 | Feature: Review-Surfaced Fix Bundle for Directory- | _root | research |
 | Session Close-Out — 2026-05-21 (npm-audit-sweep ex | _root | post_hoc |
@@ -121,7 +128,9 @@
 | Session Close-Out — 2026-05-21 (opencode commands  | _root | post_hoc |
 | Session Close-Out — 2026-05-21 (Preview iCloud sco | _root | post_hoc |
 | Close-Out — Preview/iCloud Session Listing | _root | post_hoc |
+| Session Close-Out v2 — 2026-05-21 — Memorializatio | _root | document |
 | Agent Handoff: SessionEnd hook perma-fix | _root | research |
+| Codex Session Forensics — Bug/Error Review | _root | research |
 | Artifact Intake Routing — All Plans, Sessions, Ins | _root | generic |
 | Agent Handoff: Push 14 signed commits across 2 rep | _root | document |
 | Agent Handoff: statusLine Tier 1 Extension | _root | generic |
@@ -249,6 +258,7 @@
 | QA & Completeness Pass — Disparate Lens-Protocol / | _root | document |
 | Files Opened or Touched in This Session | _root | document |
 | Rob Evidence of Existence System Audit | 4444J99/hokage-chess/.codex/plans | post_hoc |
+| The Ark — Past-Week Prompt Corpus | _root | generic |
 | Keyword Extraction (Hokage + Spiral) and Drive Con | _root | generic |
 | Untitled Plan | _root | generic |
 | Self-Audit of the 2026-04-27 Substrate | _root | post_hoc |
@@ -266,12 +276,10 @@
 | Email Triage — Repeatable Process Plan | _root | create_file |
 | Sticky Note Atom Routing — 2026-04-22 | 4444J99/domus-semper-palingenesis/.claude/plans | exploration |
 | Sticky Note Atom Routing — 2026-04-22 | 4444J99/domus-semper-palingenesis/.claude/worktrees/housekeeping-enforcement/.claude/plans | exploration |
-| Conductor Session Handoff — 2026-04-22 v2 | _root | document |
-| Conductor Session Handoff — 2026-04-22 | _root | verify |
-| Sticky Note Atom Routing — 2026-04-22 | _root | exploration |
 | Declarative Configuration Landscape Research | a-organvm/.claude/plans | configure |
 | Declarative Configuration Landscape Research | _root | configure |
 | Zeitgeist Carrier Wave — Research Dispatch Plan | _root | generic |
+| Plugin Errors + Activity Monitor Review | _root | post_hoc |
 | Ideal Form Classification — What Each Repo Reaches | a-organvm/.claude/plans | generic |
 | Fortify-ORGANVM Postmortem: Governance Threshold M | _root | verify |
 | Universal Modular Fractal Alchemical Synthesizer — | a-organvm/.claude/plans | generic |
