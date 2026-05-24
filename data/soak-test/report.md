@@ -1,8 +1,8 @@
 # 30-Day Soak Test Report
 
-**Period:** 2026-04-18 to 2026-05-17
+**Period:** 2026-04-25 to 2026-05-24
 **Snapshots:** 30
-**Generated:** 2026-05-17 09:28 UTC
+**Generated:** 2026-05-24 09:48 UTC
 
 ---
 
@@ -14,25 +14,17 @@
 
 ## CI Stability
 
-- Average passing: **5.4** per day
-- Average failing: **0.8** per day
+- Average passing: **0.0** per day
+- Average failing: **0.0** per day
 - Average billing-locked: **11.0** per day
 - Days with CI data: 30
-
-### Chronic Failures (3+ days)
-
-- organvm-ii-poiesis/styx-behavioral-art: failure (4 days)
-- organvm-vii-kerygma/.github: failure (4 days)
-- meta-organvm/materia-collider: failure (4 days)
-- meta-organvm/organvm-ontologia: failure (4 days)
-- organvm-v-logos/public-process: failure (3 days)
 
 ## Engagement Trends
 
 | Metric | Start | End | Delta |
 |--------|-------|-----|-------|
-| Stars | 9 | 0 | -9 |
-| Forks | 5 | 0 | -5 |
+| Stars | 0 | 0 | +0 |
+| Forks | 0 | 0 | +0 |
 
 ### Top Repo Engagement (Latest)
 
