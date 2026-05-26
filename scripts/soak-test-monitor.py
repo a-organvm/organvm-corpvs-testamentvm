@@ -90,8 +90,8 @@ def validate_registry(registry: dict) -> dict:
     issues = []
     repo_map, all_repos = build_repo_map(registry)
 
-    # Every organ should exist
-    expected_organs = [f"ORGAN-{n}" for n in ["I", "II", "III", "IV", "V", "VI", "VII"]]
+    # Every organ should exist (ORGAN I-VII + Meta = the canonical eight)
+    expected_organs = [f"ORGAN-{n}" for n in ["I", "II", "III", "IV", "V", "VI", "VII"]] + ["META-ORGANVM"]
     for organ in expected_organs:
         if organ not in registry.get("organs", {}):
             issues.append(f"Missing organ: {organ}")

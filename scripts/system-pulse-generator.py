@@ -112,6 +112,22 @@ def _week_ago():
     return (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
 
 
+def _present(value, default="n/a"):
+    """Return value if meaningfully present, else a clean placeholder."""
+    return value if value not in (None, "", "?") else default
+
+
+def _resolve_total_words(computed, manual):
+    """Prefer engine-computed word_counts, fall back to manual, else n/a."""
+    wc = computed.get("word_counts") or {}
+    total = wc.get("total")
+    if total is None:
+        total = manual.get("total_words")
+    if isinstance(total, (int, float)):
+        return f"{int(total):,}"
+    return _present(total)
+
+
 def generate_pulse(metrics, registry, snapshots, commits, skip_api=False):
     """Generate the pulse markdown document."""
     now = datetime.now(timezone.utc)
@@ -146,12 +162,13 @@ def generate_pulse(metrics, registry, snapshots, commits, skip_api=False):
         f"- Total repos: {computed.get('total_repos', '?')}",
         f"- Active repos: {computed.get('active_repos', '?')}",
         f"- Archived repos: {computed.get('archived_repos', '?')}",
+        f"- Prototype repos: {computed.get('implementation_status', {}).get('PROTOTYPE', 0)}",
         f"- Published essays: {computed.get('published_essays', '?')}",
         f"- Sprints completed: {computed.get('sprints_completed', '?')}",
-        f"- Organs operational: {computed.get('operational_organs', '?')}/8",
-        f"- Total words: {manual.get('total_words', '?')}",
-        f"- Code files: {manual.get('code_files', '?')}",
-        f"- Test files: {manual.get('test_files', '?')}",
+        f"- Organs operational: {computed.get('operational_organs', '?')}/{computed.get('total_organs', 8)}",
+        f"- Total words: {_resolve_total_words(computed, manual)}",
+        f"- Code files: {_present(manual.get('code_files'))}",
+        f"- Test files: {_present(manual.get('test_files'))}",
     ]
 
     # Section 3: Engagement Delta
@@ -173,6 +190,7 @@ def generate_pulse(metrics, registry, snapshots, commits, skip_api=False):
         ci_lines.append(f"- Passing: {latest_ci.get('passing', 0)}")
         ci_lines.append(f"- Failing: {latest_ci.get('failing', 0)}")
         ci_lines.append(f"- Unknown: {latest_ci.get('unknown', 0)}")
+        ci_lines.append(f"- Billing-locked: {latest_ci.get('billing_locked', 0)}")
         failures = latest_ci.get("failures", [])
         if failures:
             ci_lines.append(f"- Failures: {', '.join(failures[:5])}")
@@ -231,7 +249,7 @@ def generate_pulse(metrics, registry, snapshots, commits, skip_api=False):
         "---",
         "",
         "*This report is generated automatically every Sunday at 12:00 UTC*",
-        "*by the AUTOMATA sprint autonomous pipeline.*",
+        "*by the System Pulse Weekly workflow (.github/workflows/system-pulse-weekly.yml).*",
         "",
     ]
 

@@ -186,7 +186,14 @@ def generate_dashboard(metrics, snapshots):
     # VIGILIA timer
     soak_start = datetime(2026, 2, 16, tzinfo=timezone.utc)
     elapsed_days = (now - soak_start).days
-    vigilia_bar = progress_bar_html(min(elapsed_days, 30), 30, "VIGILIA (30-Day Soak Test)", MAGENTA)
+    soak_day = min(elapsed_days, 30)
+    soak_complete = elapsed_days >= 30
+    vigilia_bar = progress_bar_html(soak_day, 30, "VIGILIA (30-Day Soak Test)", MAGENTA)
+    vigilia_note = (
+        "Soak test ran 2026-02-16 → 2026-03-18. Completed: 30 of 30 days."
+        if soak_complete
+        else f"Soak test started 2026-02-16. Completes ~2026-03-18. Day {soak_day} of 30."
+    )
 
     # Organ distribution
     per_organ = computed.get("per_organ", {})
@@ -199,7 +206,7 @@ def generate_dashboard(metrics, snapshots):
 
     organ_chart = svg_bar(
         organ_counts, organ_names,
-        organ_colors[:len(organ_names)],
+        [organ_colors[i % len(organ_colors)] for i in range(len(organ_names))],
         width=460, title="Repositories per Organ"
     )
 
@@ -230,6 +237,14 @@ def generate_dashboard(metrics, snapshots):
     reg_status = status_dot(latest_val.get("registry_pass", False))
     dep_status = status_dot(latest_val.get("dependency_pass", False))
 
+    # Resolve optional metric values (prefer computed, fall back gracefully)
+    wc = computed.get("word_counts") or {}
+    _tw = wc.get("total") if wc.get("total") is not None else manual.get("total_words")
+    words_display = f"{int(_tw):,}" if isinstance(_tw, (int, float)) else "n/a"
+    code_files = manual.get("code_files") if manual.get("code_files") not in (None, "", "?") else "n/a"
+    test_files = manual.get("test_files") if manual.get("test_files") not in (None, "", "?") else "n/a"
+    organs_display = f"{computed.get('operational_organs', '?')}/{computed.get('total_organs', '?')}"
+
     # System numbers
     stats_html = f"""
     <div class="stat-grid">
@@ -237,10 +252,10 @@ def generate_dashboard(metrics, snapshots):
       <div class="stat"><div class="stat-num">{computed.get('active_repos', '?')}</div><div class="stat-label">Active</div></div>
       <div class="stat"><div class="stat-num">{computed.get('published_essays', '?')}</div><div class="stat-label">Essays</div></div>
       <div class="stat"><div class="stat-num">{computed.get('sprints_completed', '?')}</div><div class="stat-label">Sprints</div></div>
-      <div class="stat"><div class="stat-num">{manual.get('code_files', '?')}</div><div class="stat-label">Code Files</div></div>
-      <div class="stat"><div class="stat-num">{manual.get('test_files', '?')}</div><div class="stat-label">Test Files</div></div>
-      <div class="stat"><div class="stat-num">{manual.get('total_words_short', '?')}</div><div class="stat-label">Words</div></div>
-      <div class="stat"><div class="stat-num">8/8</div><div class="stat-label">Organs</div></div>
+      <div class="stat"><div class="stat-num">{code_files}</div><div class="stat-label">Code Files</div></div>
+      <div class="stat"><div class="stat-num">{test_files}</div><div class="stat-label">Test Files</div></div>
+      <div class="stat"><div class="stat-num">{words_display}</div><div class="stat-label">Words</div></div>
+      <div class="stat"><div class="stat-num">{organs_display}</div><div class="stat-label">Organs</div></div>
     </div>"""
 
     html = f"""<!DOCTYPE html>
@@ -343,7 +358,7 @@ def generate_dashboard(metrics, snapshots):
   <h2>VIGILIA Timer</h2>
   {vigilia_bar}
   <p style="font-size: 13px; color: {GRAY}; margin-top: 8px;">
-    Soak test started 2026-02-16. Completes ~2026-03-18. Day {elapsed_days} of 30.
+    {vigilia_note}
   </p>
 </div>
 
