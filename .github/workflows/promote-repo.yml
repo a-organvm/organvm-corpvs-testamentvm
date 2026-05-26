@@ -28,9 +28,9 @@ jobs:
 
       - name: Parse Promotion Request
         id: parse
+        env:
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          LABELS="${{ join(github.event.issue.labels.*.name, ',') }}"
-
           if [[ "$LABELS" == *"promote-to-art"* ]]; then
             echo "promotion_type=promote-to-art" >> "$GITHUB_OUTPUT"
             echo "target_org=organvm-ii-poiesis" >> "$GITHUB_OUTPUT"
@@ -52,13 +52,16 @@ jobs:
         id: validate
         env:
           GH_TOKEN: ${{ secrets.ORCHESTRATION_PAT }}
+          PROMOTION_TYPE: ${{ steps.parse.outputs.promotion_type }}
+          SOURCE_REPO: ${{ github.repository }}
         run: |
           python3 - <<'PYEOF'
           import json
+          import os
           import sys
 
-          PROMOTION_TYPE = "${{ steps.parse.outputs.promotion_type }}"
-          SOURCE_REPO = "${{ github.repository }}"
+          PROMOTION_TYPE = os.environ["PROMOTION_TYPE"]
+          SOURCE_REPO = os.environ["SOURCE_REPO"]
 
           with open("registry-v2.json") as f:
               registry = json.load(f)
@@ -133,10 +136,10 @@ jobs:
 
       - name: Derive New Repo Name
         id: naming
+        env:
+          SOURCE_NAME: ${{ github.event.repository.name }}
+          PROMO_TYPE: ${{ steps.parse.outputs.promotion_type }}
         run: |
-          SOURCE_NAME="${{ github.event.repository.name }}"
-          PROMO_TYPE="${{ steps.parse.outputs.promotion_type }}"
-
           if [[ "$PROMO_TYPE" == "promote-to-art" ]]; then
             NEW_REPO="art-from--${SOURCE_NAME}"
           elif [[ "$PROMO_TYPE" == "promote-to-public-process" ]]; then
@@ -151,34 +154,40 @@ jobs:
       - name: Create Destination Repo
         env:
           GH_TOKEN: ${{ secrets.ORCHESTRATION_PAT }}
+          TARGET_ORG: ${{ steps.parse.outputs.target_org }}
+          NEW_REPO: ${{ steps.naming.outputs.new_repo }}
+          SOURCE_FULL_REPO: ${{ github.repository }}
         run: |
-          TARGET_ORG="${{ steps.parse.outputs.target_org }}"
-          NEW_REPO="${{ steps.naming.outputs.new_repo }}"
-
           # Check if repo already exists
           if gh repo view "${TARGET_ORG}/${NEW_REPO}" &>/dev/null; then
             echo "::warning::Repo ${TARGET_ORG}/${NEW_REPO} already exists, skipping creation"
           else
             gh repo create "${TARGET_ORG}/${NEW_REPO}" \
               --public \
-              --description "Promoted from ${{ github.repository }} via ORGAN-IV orchestration" \
+              --description "Promoted from ${SOURCE_FULL_REPO} via ORGAN-IV orchestration" \
               --clone=false
             echo "Created ${TARGET_ORG}/${NEW_REPO}"
           fi
 
       - name: Update Registry with Promotion Link
+        env:
+          SOURCE_REPO: ${{ github.repository }}
+          DEST_REPO: ${{ steps.naming.outputs.new_repo }}
+          TARGET_ORG: ${{ steps.parse.outputs.target_org }}
+          PROMOTION_TYPE: ${{ steps.parse.outputs.promotion_type }}
         run: |
           python3 - <<'PYEOF'
           import json
+          import os
           from datetime import datetime, timezone
 
           with open("registry-v2.json") as f:
               registry = json.load(f)
 
-          source_repo = "${{ github.repository }}"
-          dest_repo = "${{ steps.naming.outputs.new_repo }}"
-          target_org = "${{ steps.parse.outputs.target_org }}"
-          promotion_type = "${{ steps.parse.outputs.promotion_type }}"
+          source_repo = os.environ["SOURCE_REPO"]
+          dest_repo = os.environ["DEST_REPO"]
+          target_org = os.environ["TARGET_ORG"]
+          promotion_type = os.environ["PROMOTION_TYPE"]
 
           for organ_key, organ_data in registry.get("organs", {}).items():
               for repo in organ_data.get("repositories", []):
@@ -198,6 +207,10 @@ jobs:
           PYEOF
 
       - name: Commit Registry Update
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
+          TARGET_ORG: ${{ steps.parse.outputs.target_org }}
+          NEW_REPO: ${{ steps.naming.outputs.new_repo }}
         run: |
           git config user.name "ORGAN-IV Promotion Bot"
           git config user.email "promote@organvm.org"
@@ -205,17 +218,17 @@ jobs:
           if git diff --cached --quiet; then
             echo "No registry changes"
           else
-            git commit -m "promote: ${{ github.event.repository.name }} -> ${{ steps.parse.outputs.target_org }}/${{ steps.naming.outputs.new_repo }}"
+            git commit -m "promote: ${REPO_NAME} -> ${TARGET_ORG}/${NEW_REPO}"
             git push
           fi
 
       - name: Open Issue in Destination Repo
         env:
           GH_TOKEN: ${{ secrets.ORCHESTRATION_PAT }}
+          TARGET_ORG: ${{ steps.parse.outputs.target_org }}
+          NEW_REPO: ${{ steps.naming.outputs.new_repo }}
+          SOURCE_REPO: ${{ github.repository }}
         run: |
-          TARGET_ORG="${{ steps.parse.outputs.target_org }}"
-          NEW_REPO="${{ steps.naming.outputs.new_repo }}"
-          SOURCE_REPO="${{ github.repository }}"
 
           BODY=$(cat <<'ISSUEEOF'
           This repo was promoted via ORGAN-IV orchestration.
@@ -244,11 +257,15 @@ jobs:
 
       - name: Comment on Source Issue
         uses: actions/github-script@v8
+        env:
+          TARGET_ORG: ${{ steps.parse.outputs.target_org }}
+          NEW_REPO: ${{ steps.naming.outputs.new_repo }}
+          TARGET_ORGAN: ${{ steps.parse.outputs.target_organ }}
         with:
           script: |
-            const targetOrg = '${{ steps.parse.outputs.target_org }}';
-            const newRepo = '${{ steps.naming.outputs.new_repo }}';
-            const targetOrgan = '${{ steps.parse.outputs.target_organ }}';
+            const targetOrg = process.env.TARGET_ORG;
+            const newRepo = process.env.NEW_REPO;
+            const targetOrgan = process.env.TARGET_ORGAN;
 
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
