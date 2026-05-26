@@ -1,8 +1,7 @@
 {
-  "next_id": 545,
-  "last_claimed_by": "S-2026-05-26-opencode-plan-parity-g5-backfill",
+  "next_id": 548,
+  "last_claimed_by": "S-2026-05-26-p1-triple-fix-apply",
   "last_claimed_at": "2026-05-26",
-  "claimed_range": [537, 544],
-  "note": "Cross-agent infrastructure build: DONE-537 G5 backfill (OpenCode 164/165 sessions agent+model), DONE-538 G5-CODEX backfill (31/31 threads agent_nickname+role), DONE-539 cross-agent session ID injection script (inject-session-id), DONE-540 auto-sync to session-meta (sync-plans-to-session-meta), DONE-541 unified plan index (build-unified-plan-index, 1,188 entries), DONE-542 content-level plan↔diff matching (build-plan-diff-map, 91 refs), DONE-543 hook deployment (Claude+Codex PostToolUse), DONE-544 OpenCode/Gemini plugin hooks research (definitive findings). All verified local:remote=1:1.",
-  "protocol": "CLAIM-BEFORE-USE: git pull, read next_id, increment by count needed, commit+push THIS FILE, then assign IDs. If push fails (non-fast-forward), pull, re-read, retry. Never assign DONE-NNN without claiming here first."
+  "claimed_range": [545, 547],
+  "note": "P1 triple fix: DONE-545 SYS-170/171 if-matcher redundancy removed + auto-sync noop closed, DONE-546 OPS-053 domus-memory-sync UX (--help, --dry-run, stderr), DONE-547 PROC-004 process-audit-daily.sh SessionEnd hook + process schema + housekeeping buckets. Verified chezmoi apply + git push."
 }
