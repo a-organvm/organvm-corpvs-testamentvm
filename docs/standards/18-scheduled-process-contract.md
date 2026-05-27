@@ -138,6 +138,78 @@ The retirement signal: any P0 incident traceable to a LaunchAgent that satisfied
 
 ---
 
+## 9. Audit-log universal applicability (extends (d) from LaunchAgent-only to all Class-(I) routines)
+
+**Codified 2026-05-27** following the 2026-05-26 defect inventory which revealed that 7 of 8 active scheduled-tasks-MCP routines did not write to the audit log on every fire (only `monthly-launchagent-audit` did, because it explicitly cited Rule #55a (d)).
+
+The original Rule #55a (d) applies to LaunchAgents. This section extends the same discipline to every Class-(I) routine (scheduled-tasks-MCP entries + any future fire-on-cadence work in the conductor's local-token surface).
+
+### The invariant
+
+**Every Class-(I) fire MUST write start + end entries to `~/.claude/scheduled-tasks/audit/YYYY-MM-DD.log` regardless of whether the routine performs any writes.**
+
+Rationale: the audit log is the **canonical fire registry**. Absence of an entry means defect (the routine forgot to log), not no-fire. Without this invariant, the `lastRunAt` MCP field becomes the only fire-tracking surface — and that field doesn't survive task retirement or MCP-tool changes the way an append-only TSV does.
+
+### The bookend pattern (mechanical implementation)
+
+Two invocations per fire, top and bottom of every SKILL.md prompt:
+
+```bash
+# Phase 0 (top of prompt):
+~/.local/bin/scheduled-task-audit-bookend <task-id> start
+
+# … main routine work …
+
+# Phase Final (bottom of prompt):
+~/.local/bin/scheduled-task-audit-bookend <task-id> end <one-line-status>
+```
+
+The shim `~/.local/bin/scheduled-task-audit-bookend` (shipped 2026-05-27, source at `${DOMUS_ROOT}/dot_local/bin/executable_scheduled-task-audit-bookend`) handles:
+- TSV formatting with UTC timestamp
+- Per-day log rotation
+- Tab-stripping in status strings (safety)
+- Never-fail-parent semantics (audit-log write should never block the routine)
+
+### Status format (the `<one-line-status>` parameter)
+
+- **Hyphen-separated** (no whitespace, no tabs) — the audit log is TSV
+- **Summarize the fire's headline finding** — what would a human want to see if reading `tail -1 audit/<date>.log`?
+- **Embed counts where relevant** — `204-repos-3-unpushed-0-pushes`, `71-prs-0-writes`, `8-orphan-705-stale`
+- **Use `no-X` form for null findings** — `no-drift`, `no-orphans-no-stale`, `no-violations`
+- **Use `key=value` form for multi-metric** — `compliant=2-exempt=8-violation=0`
+
+### Per-action audit writes preserved
+
+The existing per-action audit writes from Rule #55a (d) and standards doc 17 § 10 continue to apply. Bookend `start`/`end` are the **outer envelope**; per-action writes are inner detail. Example timeline for a fire with 2 writes:
+
+```
+2026-05-27T13:00:42Z  daily-pr-management  -  -  start  -
+2026-05-27T13:01:15Z  daily-pr-management  portfolio  84  draft-to-ready  success
+2026-05-27T13:02:30Z  daily-pr-management  domus  142  auto-merge-enable  success
+2026-05-27T13:08:55Z  daily-pr-management  -  -  end  71-prs-tier2=2-promotions=1-merges=1
+```
+
+### Per-routine status conventions (canonical examples)
+
+| Routine | Status format |
+|---|---|
+| `daily-hook-drift` | `no-drift` OR `drift-detected-<event-types>` |
+| `daily-repo-hygiene` | `<N>-repos-<U>-unpushed-<O>-orphan-<S>-stale-<P>-pushes` |
+| `daily-pr-management` | `<N>-prs-tier1=<X>-tier2=<Y>-tier3=<Z>-writes=<W>` |
+| `daily-worktree-triage-and-cleanup` | `<R>-repos-<W>-worktrees-<C>-removals-<D>-dirty-<L>-locked` |
+| `daily-code-review` | `<N>-commits-summarized-<R>-repos` OR `no-commits-since-yesterday` |
+| `weekly-irf-aging` | `<R>-rows-<A>-aging-<S>-shipped-<O>-overdue` |
+| `weekly-sibling-scope-drift` | `<S>-scopes-<C>-cross-3plus-<P>-promotion-candidates` |
+| `monthly-launchagent-audit` | `compliant=<C>-exempt=<E>-violation=<V>` |
+
+### Defect-detection by the invariant
+
+A future `weekly-audit-log-coverage-witness` Class-(I) routine (to be authored) can grep the audit log to verify: for every active scheduled task, every expected-firing date has exactly one `start` + one `end` entry. Missing pairs = routine-defect; mismatched counts (start without end, or vice versa) = mid-fire failure.
+
+This closes the loop: the audit-log invariant is itself audited by a routine that writes to the audit log.
+
+---
+
 ## 7. Cross-references
 
 - **Universal Rule #55** (strict ban): `dot_config/ai-context/universal-rules.md.tmpl` line 65 (domus)
