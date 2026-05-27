@@ -95,7 +95,6 @@ jobs:
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           MASTODON_INSTANCE: ${{ vars.MASTODON_INSTANCE || 'https://mastodon.social' }}
         run: |
-          TITLE="${{ steps.metadata.outputs.title }}"
           EXCERPT="${{ steps.metadata.outputs.excerpt }}"
           ISSUE_URL="${{ steps.metadata.outputs.issue_url }}"
 
