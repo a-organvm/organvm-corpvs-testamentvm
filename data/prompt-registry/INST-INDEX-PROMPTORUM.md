@@ -3229,3 +3229,11 @@
 **Captured:** 2026-05-29T14:29:49 | **Prompts:** 62 | **Effort:** default
 **Archive:** `data/prompt-registry/sessions/8f4dfa67-9bf5-404a-b486-a8e077290a44-prompts.md`
 
+
+### 752e3b82-569e-475d-b87e-05e7fcd2458c
+**Captured:** 2026-05-29T16:08:44 | **Prompts:** uncounted | **Effort:** default (no prompts.md available)
+
+
+### 8c6272d4-3a14-456f-b86d-7f391a4d1bef
+**Captured:** 2026-05-29T16:09:36 | **Prompts:** uncounted | **Effort:** default (no prompts.md available)
+
