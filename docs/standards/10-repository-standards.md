@@ -343,3 +343,4 @@ This document is **Layer 1 (Phase 1 Planning)** in the document architecture, nu
 - For README *validation*, defer to `04-per-organ-validation-checklists.md`
 - For tier *classification*, defer to `08-canonical-action-plan.md` D-07
 - For root hygiene, community health, badges, visibility, and curation, **this document is authoritative**
+- For *internal* directory layout (src/-vs-flat, monorepo `apps/`+`packages/`, feature-vs-type organization, doc taxonomy, nesting, environments), defer to `26-internal-directory-layout--monorepo-feature-organization.md` (added 2026-05-29)
