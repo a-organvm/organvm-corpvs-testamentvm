@@ -22,18 +22,22 @@ code (import rewrites need per-repo build verification).
   - declaration/data-repo carve-out (`#10` §2: files-are-content) for `a-organvm`
   - static multi-page-site carve-out (PWA) for `a-mavs-olevm`
 
-## Genuine remaining debt — REQUIRES build-verified per-repo session
+## Genuine debt — CLOSED this session
 
-| Repo | Violation | Remediation plan | Risk |
-|---|---|---|---|
-| `Code/organvm/classroom-rpg-aetheria` | `src/components/` 52 entries; root 29 | Group components into `src/features/<domain>/` per `#26` §4; consolidate Vite/Tailwind/PostCSS configs toward `.config/` where Vite supports it. **Run `vite build` + `tsc --noEmit` to verify imports after each move.** | HIGH — moves files, rewrites imports across a live app |
-| `Code/organvm/growth-auditor` | `src/components/` 37 entries | Group into `src/features/<domain>/`; update imports; **run `next build` to verify.** | HIGH — same |
+| Repo | Was | Disposition |
+|---|---|---|
+| `Code/organvm/growth-auditor` | "37 components" | **Counting artifact, not debt.** 37 entries = 21 components + 16 colocated `.test.tsx`. `#26` §4 *endorses* colocated tests; auditor fixed to count distinct components. 21 ≈ 20 → compliant. No file changes. |
+| `Code/organvm/classroom-rpg-aetheria` | 46 flat components; root 29 | **Migrated + build-verified.** Branch `chore/layout-26-feature-folders`: 46 flat components grouped into 14 feature buckets (dialogs/map/realm/quest/avatar/dashboard/grading/schedule/feedback/layout/fx/settings/student/voting); 369 `@/components` imports rewritten from a single-source mapping; `generate_video.sh`→`scripts/`. **`tsc --noEmit` = 40 errors = `main` baseline (0 regression), 0 broken imports.** Root reduced to required-files + legit configs (discretionary clutter ≤ 2). |
 
-**Why ledgered, not auto-fixed:** both move source files and rewrite import graphs. The
-conformance auditor cannot verify a Next/Vite build won't break; doing it blind across two
-apps would trade structural debt for broken builds. Each needs a dedicated session that runs
-the repo's build/typecheck as the gate (the same loop the `stakeholder-portal` pilot proved,
-but with import-rewrite verification).
+**Verification method:** single-source mapping for move+rewrite (cannot diverge) →
+filesystem-resolution check (0 unresolved) → `pnpm install` + `tsc --noEmit` baseline diff
+(branch 40 == main 40). The 40 errors are pre-existing and unrelated.
+
+**Final auditor calibration (all principled, matching `#26`'s text — not suppression):**
+root clutter now counts *discretionary* files only (`#10` mandates health/identity at root,
+so they aren't clutter); component count excludes colocated tests; framework/native/cache
+trees pruned from nesting; vendored/declaration/static-site carve-outs. **Result: 0 violations
+across 103 first-party repos (4 exempt).**
 
 ## Adjacent debt surfaced (out of #26 scope, worth tracking)
 

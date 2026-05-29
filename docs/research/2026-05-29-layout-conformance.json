@@ -1,28 +1,17 @@
 [
   {
-    "repo": "Code/organvm/classroom-rpg-aetheria",
-    "layout": "src",
+    "repo": "Code/organvm/tool-interaction-design",
+    "layout": "flat",
     "framework": null,
     "is_code": true,
-    "root_files": 29,
-    "violations": [
-      "root file count 29 >25 (consolidate; \u00a78)",
-      "src/components/ has 52 entries >20 \u2014 switch to feature folders (\u00a74/\u00a78)"
+    "root_files": 19,
+    "violations": [],
+    "notes": [
+      "9 discretionary root files (>6; \u00a78 watch)",
+      "flat layout on a code repo \u2014 justify or move to src/ (\u00a72)",
+      "type-folder(s) ['hooks'] under tool-interaction-design \u2014 prefer feature folders (\u00a74)"
     ],
-    "notes": [],
-    "score": 50
-  },
-  {
-    "repo": "Code/organvm/growth-auditor",
-    "layout": "src",
-    "framework": "nextjs",
-    "is_code": true,
-    "root_files": 9,
-    "violations": [
-      "src/components/ has 37 entries >20 \u2014 switch to feature folders (\u00a74/\u00a78)"
-    ],
-    "notes": [],
-    "score": 75
+    "score": 85
   },
   {
     "repo": "Workspace/a-organvm",
@@ -60,19 +49,6 @@
     "notes": [
       "flat layout on a code repo \u2014 justify or move to src/ (\u00a72)",
       "type-folder(s) ['services'] under the-actual-news \u2014 prefer feature folders (\u00a74)"
-    ],
-    "score": 90
-  },
-  {
-    "repo": "Code/organvm/tool-interaction-design",
-    "layout": "flat",
-    "framework": null,
-    "is_code": true,
-    "root_files": 19,
-    "violations": [],
-    "notes": [
-      "flat layout on a code repo \u2014 justify or move to src/ (\u00a72)",
-      "type-folder(s) ['hooks'] under tool-interaction-design \u2014 prefer feature folders (\u00a74)"
     ],
     "score": 90
   },
@@ -125,6 +101,18 @@
     "score": 95
   },
   {
+    "repo": "Code/organvm/auto-revision-epistemic-engine",
+    "layout": "src",
+    "framework": null,
+    "is_code": true,
+    "root_files": 18,
+    "violations": [],
+    "notes": [
+      "7 discretionary root files (>6; \u00a78 watch)"
+    ],
+    "score": 95
+  },
+  {
     "repo": "Code/organvm/call-function--ontological",
     "layout": "flat",
     "framework": null,
@@ -133,6 +121,18 @@
     "violations": [],
     "notes": [
       "flat layout on a code repo \u2014 justify or move to src/ (\u00a72)"
+    ],
+    "score": 95
+  },
+  {
+    "repo": "Code/organvm/classroom-rpg-aetheria",
+    "layout": "src",
+    "framework": null,
+    "is_code": true,
+    "root_files": 28,
+    "violations": [],
+    "notes": [
+      "type-folder(s) ['components', 'hooks'] under src \u2014 prefer feature folders (\u00a74)"
     ],
     "score": 95
   },
@@ -173,6 +173,18 @@
     "score": 95
   },
   {
+    "repo": "Code/organvm/growth-auditor",
+    "layout": "src",
+    "framework": "nextjs",
+    "is_code": true,
+    "root_files": 9,
+    "violations": [],
+    "notes": [
+      "src/components/ has 21 flat components (~20 target; \u00a74)"
+    ],
+    "score": 95
+  },
+  {
     "repo": "Code/organvm/kerygma-pipeline",
     "layout": "flat",
     "framework": null,
@@ -209,14 +221,14 @@
     "score": 95
   },
   {
-    "repo": "Code/organvm/life-my--midst--in",
-    "layout": "monorepo",
+    "repo": "Code/organvm/mesh",
+    "layout": "src",
     "framework": null,
     "is_code": true,
-    "root_files": 21,
+    "root_files": 12,
     "violations": [],
     "notes": [
-      "root file count 21 >20 (above #10 target; \u00a78)"
+      "7 discretionary root files (>6; \u00a78 watch)"
     ],
     "score": 95
   },
@@ -245,6 +257,18 @@
     "score": 95
   },
   {
+    "repo": "Code/organvm/orchestration-start-here",
+    "layout": "src",
+    "framework": null,
+    "is_code": true,
+    "root_files": 19,
+    "violations": [],
+    "notes": [
+      "8 discretionary root files (>6; \u00a78 watch)"
+    ],
+    "score": 95
+  },
+  {
     "repo": "Code/organvm/organvm-scrutator",
     "layout": "src",
     "framework": null,
@@ -253,18 +277,6 @@
     "violations": [],
     "notes": [
       "type-folder(s) ['hooks'] under organvm-scrutator \u2014 prefer feature folders (\u00a74)"
-    ],
-    "score": 95
-  },
-  {
-    "repo": "Code/organvm/public-record-data-scrapper",
-    "layout": "monorepo",
-    "framework": null,
-    "is_code": true,
-    "root_files": 21,
-    "violations": [],
-    "notes": [
-      "root file count 21 >20 (above #10 target; \u00a78)"
     ],
     "score": 95
   },
@@ -301,6 +313,18 @@
     "violations": [],
     "notes": [
       "flat layout on a code repo \u2014 justify or move to src/ (\u00a72)"
+    ],
+    "score": 95
+  },
+  {
+    "repo": "Code/organvm/sign-signal--voice-synth",
+    "layout": "monorepo",
+    "framework": null,
+    "is_code": true,
+    "root_files": 17,
+    "violations": [],
+    "notes": [
+      "9 discretionary root files (>6; \u00a78 watch)"
     ],
     "score": 95
   },
@@ -532,16 +556,6 @@
     "score": 100
   },
   {
-    "repo": "Code/organvm/auto-revision-epistemic-engine",
-    "layout": "src",
-    "framework": null,
-    "is_code": true,
-    "root_files": 18,
-    "violations": [],
-    "notes": [],
-    "score": 100
-  },
-  {
     "repo": "Code/organvm/blender-mcp",
     "layout": "src",
     "framework": null,
@@ -725,6 +739,16 @@
     "score": 100
   },
   {
+    "repo": "Code/organvm/life-my--midst--in",
+    "layout": "monorepo",
+    "framework": null,
+    "is_code": true,
+    "root_files": 21,
+    "violations": [],
+    "notes": [],
+    "score": 100
+  },
+  {
     "repo": "Code/organvm/linguistic-atomization-framework",
     "layout": "flat",
     "framework": null,
@@ -740,16 +764,6 @@
     "framework": null,
     "is_code": true,
     "root_files": 9,
-    "violations": [],
-    "notes": [],
-    "score": 100
-  },
-  {
-    "repo": "Code/organvm/mesh",
-    "layout": "src",
-    "framework": null,
-    "is_code": true,
-    "root_files": 12,
     "violations": [],
     "notes": [],
     "score": 100
@@ -786,16 +800,6 @@
     ],
     "score": 100,
     "exempt": "vendored/fork"
-  },
-  {
-    "repo": "Code/organvm/orchestration-start-here",
-    "layout": "src",
-    "framework": null,
-    "is_code": true,
-    "root_files": 19,
-    "violations": [],
-    "notes": [],
-    "score": 100
   },
   {
     "repo": "Code/organvm/org-dotgithub",
@@ -888,6 +892,16 @@
     "score": 100
   },
   {
+    "repo": "Code/organvm/public-record-data-scrapper",
+    "layout": "monorepo",
+    "framework": null,
+    "is_code": true,
+    "root_files": 21,
+    "violations": [],
+    "notes": [],
+    "score": 100
+  },
+  {
     "repo": "Code/organvm/python-sdk",
     "layout": "src",
     "framework": null,
@@ -956,16 +970,6 @@
     "framework": null,
     "is_code": true,
     "root_files": 18,
-    "violations": [],
-    "notes": [],
-    "score": 100
-  },
-  {
-    "repo": "Code/organvm/sign-signal--voice-synth",
-    "layout": "monorepo",
-    "framework": null,
-    "is_code": true,
-    "root_files": 17,
     "violations": [],
     "notes": [],
     "score": 100

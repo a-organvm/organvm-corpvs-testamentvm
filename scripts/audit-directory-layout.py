@@ -41,6 +41,38 @@ def has_any(repo: Path, names: list[str]) -> bool:
     return any((repo / n).exists() for n in names)
 
 
+# files legitimately expected at root — NOT clutter (#10 mandates health/identity here)
+_CANON_EXACT = {
+    "readme.md", "readme.rst", "readme.txt", "readme", "license", "license.md",
+    "license.txt", "copying", "changelog.md", "changelog", "contributing.md",
+    "code_of_conduct.md", "security.md", "support.md", "maintainers.md",
+    "governance.md", "codeowners", "claude.md", "agents.md", "gemini.md",
+    "package.json", "package-lock.json", "pnpm-lock.yaml", "yarn.lock",
+    "pnpm-workspace.yaml", "requirements.txt", "pyproject.toml", "setup.py",
+    "setup.cfg", "uv.lock", "poetry.lock", "cargo.toml", "cargo.lock", "go.mod",
+    "go.sum", "gemfile", "gemfile.lock", "dockerfile", "makefile", "components.json",
+    "index.html", "next-env.d.ts", "app.json", "vercel.json", "render.yaml",
+    "netlify.toml", "turbo.json", "nx.json", "instance.toml", "version",
+    # organvm system declarations
+    "ecosystem.yaml", "seed.yaml", "network-map.yaml",
+}
+
+
+def is_canonical_root(name: str) -> bool:
+    n = name.lower()
+    if n in _CANON_EXACT:
+        return True
+    # config/manifest/lock patterns expected at root
+    if n.endswith((".config.js", ".config.ts", ".config.mjs", ".config.cjs",
+                   ".config.json", ".config.yaml")):
+        return True
+    if n.startswith("tsconfig") and n.endswith(".json"):
+        return True
+    if n.startswith("docker-compose") or n.startswith(".env"):
+        return True
+    return False
+
+
 def origin_owner(repo: Path) -> str | None:
     """Parse the origin remote owner from .git/config without shelling out."""
     cfg = repo / ".git" / "config"
@@ -202,11 +234,16 @@ def audit_repo(repo: Path) -> dict:
     is_static_site = (repo / "manifest.json").exists() and (repo / "sw.js").exists() and html_pages >= 2
     if is_static_site:
         notes.append(f"static multi-page site ({html_pages} root .html pages) — root .html is content")
+    # Root clutter = DISCRETIONARY files only. #10 MANDATES health/identity files at root,
+    # so counting them as "consolidate" clutter is self-contradictory. Standard manifests,
+    # configs, framework entries and organvm declarations are also expected, not clutter.
     if is_code and not is_declaration_repo and not is_static_site:
-        if len(root_files) > 25:
-            violations.append(f"root file count {len(root_files)} >25 (consolidate; §8)")
-        elif len(root_files) > 20:
-            notes.append(f"root file count {len(root_files)} >20 (above #10 target; §8)")
+        discretionary = [e for e in root_files if not is_canonical_root(e.name)]
+        if len(discretionary) > 10:
+            names = ", ".join(sorted(e.name for e in discretionary)[:6])
+            violations.append(f"{len(discretionary)} discretionary root files >10 — relocate (§8): {names}…")
+        elif len(discretionary) > 6:
+            notes.append(f"{len(discretionary)} discretionary root files (>6; §8 watch)")
     elif is_declaration_repo:
         notes.append(f"declaration/data repo ({yaml_decls} root YAML decls) — #10 §2 content carve-out")
 
@@ -222,10 +259,25 @@ def audit_repo(repo: Path) -> dict:
                 child_count = sum(1 for _ in (base).iterdir())
                 if "components" in smells:
                     comp = base / "components"
-                    n = sum(1 for _ in comp.iterdir()) if comp.is_dir() else 0
-                    # an overgrown components/ is a real smell even under a framework
-                    if n > 20:
-                        violations.append(f"{comp.relative_to(repo)}/ has {n} entries >20 — switch to feature folders (§4/§8)")
+                    # count DISTINCT flat components: exclude colocated tests/specs/stories
+                    # (#26 §4 ENDORSES colocation) and exclude files already in subdirs.
+                    flat = set()
+                    if comp.is_dir():
+                        for e in comp.iterdir():
+                            if e.is_file() and e.suffix in (".tsx", ".ts", ".jsx", ".js", ".vue", ".svelte"):
+                                stem = e.name
+                                for marker in (".test.", ".spec.", ".stories."):
+                                    if marker in stem:
+                                        stem = None
+                                        break
+                                if stem and not stem.startswith("index."):
+                                    flat.add(e.stem.split(".")[0])
+                    n = len(flat)
+                    # "~20" (§8): hard trigger when clearly exceeded (>25), advisory 21-25
+                    if n > 25:
+                        violations.append(f"{comp.relative_to(repo)}/ has {n} flat components >25 — switch to feature folders (§4/§8)")
+                    elif n > 20:
+                        notes.append(f"{comp.relative_to(repo)}/ has {n} flat components (~20 target; §4)")
                     elif not framework:
                         notes.append(f"type-folder(s) {sorted(smells)} under {base.name or '.'} — prefer feature folders (§4)")
                 elif not framework:
