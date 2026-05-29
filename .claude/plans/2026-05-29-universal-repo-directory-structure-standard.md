@@ -57,3 +57,17 @@ Accuracy strong; one empirical claim unverifiable; minor coherence flaw (conflat
 ## 9. Closure
 
 Closes on: `#26` committed + pushed, `#10` cross-ref added, research doc saved, pilot restructured+verified+pushed, registry annotated. File DONE-NNN + IRF row at closeout.
+
+---
+
+## STATUS: EXECUTED (2026-05-29)
+
+All planned work complete + propagated.
+
+- **Standard `#26`** authored + `#10` cross-linked; research doc saved (`docs/research/2026-05-29-repository-directory-structure-conventions.md`, restored to full fidelity).
+- **Generative mechanism** built: `scripts/audit-directory-layout.py` (+ `remediate-`, `declutter-`), calibrated to `#26`'s actual text.
+- **Fleet sweep: 63 → 0 violations** (103 clean, 4 exempt). 46 repos README/LICENSE; 9 decluttered; `classroom-rpg-aetheria` 46-component migration `tsc`-verified (0 regression).
+- **Propagated:** corpvs commits `09e76ed → 7d0f07e` pushed; 43 fleet repos pushed; PRs classroom-rpg #131, stakeholder-portal #55; 6 active repos held (commits safe-local).
+- **Evidence:** ledger `docs/research/2026-05-29-layout-tech-debt-ledger.md`; closeout `.claude/plans/2026-05-29-closeout-universal-layout-sweep.md`.
+
+No DONE-NNN allocated (cross-org fleet work, not a single corpvs IRF item); closure evidenced by the zero-violation report + push parity above.

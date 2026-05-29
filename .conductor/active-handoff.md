@@ -1,3 +1,24 @@
+# Agent Handoff: Universal Directory-Layout Standard (#26) + Fleet Conformance Sweep
+
+**From:** Session 2026-05-29 layout-standard-and-sweep | **Date:** 2026-05-29 | **Phase:** Complete (closeout executed)
+
+## Completed Work (This Session)
+- Authored standard `docs/standards/26-internal-directory-layout--monorepo-feature-organization.md` (additive to #10; reconciles Diátaxis↔Logos #14, defers naming to #22, disambiguates apps/ from GitHub-Apps #21).
+- Built 3 tools in `scripts/`: `audit-directory-layout.py` (conformance auditor), `remediate-directory-layout.py` (README/LICENSE), `declutter-root-docs.py`. Calibrated auditor to #26's actual text (discretionary-only root clutter, distinct-component count excl colocated tests, framework/native/cache pruning, vendored/declaration/static-site carve-outs).
+- **Fleet sweep: 63→0 violations (103 clean, 4 exempt).** Added README/LICENSE to 46 repos; decluttered 9; migrated `classroom-rpg-aetheria` 46 flat components→14 feature folders (tsc-verified, 0 regression).
+- Reports + ledger at `docs/research/2026-05-29-layout-*`.
+
+## Propagation State
+- corpvs pushed `main` 0/0 (through `7d0f07e`).
+- 43 fleet repos pushed (main + 1 rebased); 2 PRs: classroom-rpg #131, stakeholder-portal #55.
+- **6 repos HELD** (per "unless active currently"): `a-mavs-olevm`, `ivi374ivi027-05`, `my-knowledge-base`, `organvm-scrutator`, `public-record-data-scrapper` (active feature branches w/ others' WIP) + `digital-income-organism-inquiry` (concurrent README/LICENSE conflict, rebase aborted clean). Their fix commits are safe-local.
+
+## Next Actions
+- When the 6 held repos' sessions go idle: push their fix commits (or let owning sessions land them; digital-income's gap is being closed concurrently).
+- Re-run `python3 scripts/audit-directory-layout.py` any time — conformance recomputes from #26.
+
+---
+
 # Agent Handoff: CI Workflow Fixes
 
 **From:** Session addressing failing workflows | **Date:** 2026-05-29 | **Phase:** Complete
