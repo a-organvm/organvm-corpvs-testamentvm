@@ -1,35 +1,8 @@
 [
   {
-    "repo": "Code/organvm/stakeholder-portal",
-    "layout": "src",
-    "is_code": true,
-    "root_files": 22,
-    "violations": [
-      "missing root LICENSE",
-      "root file count 22 >20 (consolidate; \u00a78)",
-      "src/ nesting depth 4 >3 (\u00a74)"
-    ],
-    "notes": [
-      "type-folder(s) ['components'] under src \u2014 prefer feature folders (\u00a74)"
-    ],
-    "score": 20
-  },
-  {
-    "repo": "Code/organvm/growth-auditor",
-    "layout": "src",
-    "is_code": true,
-    "root_files": 8,
-    "violations": [
-      "missing root LICENSE",
-      "src/components/ has 37 entries >20 \u2014 switch to feature folders (\u00a74/\u00a78)",
-      "src/ nesting depth 5 >3 (\u00a74)"
-    ],
-    "notes": [],
-    "score": 25
-  },
-  {
     "repo": "Code/organvm/tool-interaction-design",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 17,
     "violations": [
@@ -45,6 +18,7 @@
   {
     "repo": "Workspace/a-organvm",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 83,
     "violations": [
@@ -59,6 +33,7 @@
   {
     "repo": "Code/organvm/kerygma-pipeline",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [
@@ -73,6 +48,7 @@
   {
     "repo": "Code/organvm/kerygma-profiles",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 6,
     "violations": [
@@ -87,6 +63,7 @@
   {
     "repo": "Code/organvm/organvm-scrutator",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 3,
     "violations": [
@@ -101,6 +78,7 @@
   {
     "repo": "Workspace/meta-organvm/glyph-cascade",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 6,
     "violations": [
@@ -113,6 +91,7 @@
   {
     "repo": "Workspace/organvm/.archive-coinbase-iter1-20260502",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 1,
     "violations": [
@@ -125,6 +104,7 @@
   {
     "repo": "Code/organvm/carrier-wave--zeitgeist-thesis",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 3,
     "violations": [
@@ -137,6 +117,7 @@
   {
     "repo": "Code/organvm/classroom-rpg-aetheria",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 36,
     "violations": [
@@ -149,6 +130,7 @@
   {
     "repo": "Code/organvm/digital-income-organism-inquiry",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 9,
     "violations": [
@@ -159,8 +141,22 @@
     "score": 50
   },
   {
+    "repo": "Code/organvm/growth-auditor",
+    "layout": "src",
+    "framework": "nextjs",
+    "is_code": true,
+    "root_files": 8,
+    "violations": [
+      "missing root LICENSE",
+      "src/components/ has 37 entries >20 \u2014 switch to feature folders (\u00a74/\u00a78)"
+    ],
+    "notes": [],
+    "score": 50
+  },
+  {
     "repo": "Code/organvm/mesh",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [
@@ -173,6 +169,7 @@
   {
     "repo": "Code/organvm/my-knowledge-base",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 25,
     "violations": [
@@ -185,6 +182,7 @@
   {
     "repo": "Code/organvm/organvm-ontologia",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 7,
     "violations": [
@@ -197,6 +195,7 @@
   {
     "repo": "Code/organvm/sign-signal--voice-synth",
     "layout": "monorepo",
+    "framework": null,
     "is_code": true,
     "root_files": 15,
     "violations": [
@@ -209,6 +208,7 @@
   {
     "repo": "Code/organvm/sovereign--ground",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 10,
     "violations": [
@@ -221,6 +221,7 @@
   {
     "repo": "Code/organvm/sovereign-systems--layer-above-hokage",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 2,
     "violations": [
@@ -233,6 +234,7 @@
   {
     "repo": "Code/organvm/studium-generale",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 4,
     "violations": [
@@ -245,6 +247,7 @@
   {
     "repo": "Workspace/session-meta",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 4,
     "violations": [
@@ -258,6 +261,7 @@
   {
     "repo": "Code/organvm/a-mavs-olevm",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 48,
     "violations": [
@@ -271,6 +275,7 @@
   {
     "repo": "Code/organvm/cognitive-archaelogy-tribunal",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 21,
     "violations": [
@@ -284,6 +289,7 @@
   {
     "repo": "Code/organvm/content-engine--asset-amplifier",
     "layout": "monorepo",
+    "framework": null,
     "is_code": true,
     "root_files": 17,
     "violations": [
@@ -295,21 +301,9 @@
     "score": 70
   },
   {
-    "repo": "Code/organvm/ivi374ivi027-05",
-    "layout": "src",
-    "is_code": true,
-    "root_files": 18,
-    "violations": [
-      "missing root LICENSE"
-    ],
-    "notes": [
-      "type-folder(s) ['components', 'hooks'] under src \u2014 prefer feature folders (\u00a74)"
-    ],
-    "score": 70
-  },
-  {
     "repo": "Code/organvm/schema-definitions",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [
@@ -323,6 +317,7 @@
   {
     "repo": "Code/organvm/sovereign-systems--elevate-align",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 15,
     "violations": [
@@ -336,6 +331,7 @@
   {
     "repo": "Workspace/4444J99",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 6,
     "violations": [
@@ -347,6 +343,7 @@
   {
     "repo": "Workspace/composition-1-2",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 4,
     "violations": [
@@ -358,6 +355,7 @@
   {
     "repo": "Workspace/organvm/.github",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 18,
     "violations": [
@@ -369,6 +367,7 @@
   {
     "repo": "Workspace/speculum-opencode",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 2,
     "violations": [
@@ -380,6 +379,7 @@
   {
     "repo": "Code/agent-runtime",
     "layout": "monorepo",
+    "framework": null,
     "is_code": true,
     "root_files": 8,
     "violations": [
@@ -391,6 +391,7 @@
   {
     "repo": "Code/speech-score-engine",
     "layout": "monorepo",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [
@@ -402,6 +403,7 @@
   {
     "repo": "Code/organvm/aerarium--res-publica",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 3,
     "violations": [
@@ -413,6 +415,7 @@
   {
     "repo": "Code/organvm/agentkit",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 10,
     "violations": [
@@ -424,6 +427,7 @@
   {
     "repo": "Code/organvm/alchemia-ingestvm",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [
@@ -435,6 +439,7 @@
   {
     "repo": "Code/organvm/atomic-substrata",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [
@@ -446,6 +451,7 @@
   {
     "repo": "Code/organvm/brainstorm-20260423",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 3,
     "violations": [
@@ -457,6 +463,7 @@
   {
     "repo": "Code/organvm/chthon-oneiros",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 6,
     "violations": [
@@ -468,6 +475,7 @@
   {
     "repo": "Code/organvm/community-hub",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 11,
     "violations": [
@@ -479,6 +487,7 @@
   {
     "repo": "Code/organvm/custodia-securitatis",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 5,
     "violations": [
@@ -490,6 +499,7 @@
   {
     "repo": "Code/organvm/cvrsvs-honorvm",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 5,
     "violations": [
@@ -501,6 +511,7 @@
   {
     "repo": "Code/organvm/fastmcp",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 12,
     "violations": [
@@ -510,8 +521,21 @@
     "score": 75
   },
   {
+    "repo": "Code/organvm/ivi374ivi027-05",
+    "layout": "src",
+    "framework": "nextjs",
+    "is_code": true,
+    "root_files": 18,
+    "violations": [
+      "missing root LICENSE"
+    ],
+    "notes": [],
+    "score": 75
+  },
+  {
     "repo": "Code/organvm/k6-contrib",
     "layout": "go",
+    "framework": null,
     "is_code": true,
     "root_files": 18,
     "violations": [
@@ -523,6 +547,7 @@
   {
     "repo": "Code/organvm/koinonia-db",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [
@@ -534,6 +559,7 @@
   {
     "repo": "Code/organvm/life-my--midst--in",
     "layout": "monorepo",
+    "framework": null,
     "is_code": true,
     "root_files": 22,
     "violations": [
@@ -545,6 +571,7 @@
   {
     "repo": "Code/organvm/materia-collider",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 8,
     "violations": [
@@ -556,6 +583,7 @@
   {
     "repo": "Code/organvm/openai-agents-contrib",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [
@@ -567,6 +595,7 @@
   {
     "repo": "Code/organvm/organvm-engine",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 12,
     "violations": [
@@ -578,6 +607,7 @@
   {
     "repo": "Code/organvm/organvm-mcp-server",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 8,
     "violations": [
@@ -589,6 +619,7 @@
   {
     "repo": "Code/organvm/peer-audited--behavioral-blockchain",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 13,
     "violations": [
@@ -600,6 +631,7 @@
   {
     "repo": "Code/organvm/petasum-super-petasum",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 21,
     "violations": [
@@ -611,6 +643,7 @@
   {
     "repo": "Code/organvm/praxis-perpetua",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 7,
     "violations": [
@@ -622,6 +655,7 @@
   {
     "repo": "Code/organvm/public-record-data-scrapper",
     "layout": "monorepo",
+    "framework": null,
     "is_code": true,
     "root_files": 29,
     "violations": [
@@ -633,6 +667,7 @@
   {
     "repo": "Code/organvm/python-sdk",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 11,
     "violations": [
@@ -644,6 +679,7 @@
   {
     "repo": "Code/organvm/rules-system-bound",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 6,
     "violations": [
@@ -655,6 +691,7 @@
   {
     "repo": "Code/organvm/scale-threshold-emergence",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [
@@ -666,6 +703,7 @@
   {
     "repo": "Code/organvm/styx-behavioral-art",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 6,
     "violations": [
@@ -677,6 +715,7 @@
   {
     "repo": "Code/organvm/styx-behavioral-economics-theory",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 6,
     "violations": [
@@ -688,6 +727,7 @@
   {
     "repo": "Code/organvm/system-dashboard",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [
@@ -699,6 +739,7 @@
   {
     "repo": "Code/organvm/system-governance-framework",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 24,
     "violations": [
@@ -710,6 +751,7 @@
   {
     "repo": "Code/organvm/system-system--system",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 16,
     "violations": [
@@ -721,6 +763,7 @@
   {
     "repo": "Code/organvm/system-system--system--monad",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 33,
     "violations": [
@@ -732,6 +775,7 @@
   {
     "repo": "Code/organvm/tmp_organvm-i-theoria.github.io",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 2,
     "violations": [
@@ -743,6 +787,7 @@
   {
     "repo": "Code/persona-fleet",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 5,
     "violations": [
@@ -754,6 +799,7 @@
   {
     "repo": "Code/organvm/the-actual-news",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 14,
     "violations": [],
@@ -766,6 +812,7 @@
   {
     "repo": "Code/organvm/agent--claude-smith",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 13,
     "violations": [],
@@ -777,6 +824,7 @@
   {
     "repo": "Code/organvm/agentic-titan",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 16,
     "violations": [],
@@ -788,6 +836,7 @@
   {
     "repo": "Code/organvm/announcement-templates",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -799,6 +848,7 @@
   {
     "repo": "Code/organvm/call-function--ontological",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 15,
     "violations": [],
@@ -810,6 +860,7 @@
   {
     "repo": "Code/organvm/distribution-strategy",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -821,6 +872,7 @@
   {
     "repo": "Code/organvm/krypto-velamen",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 7,
     "violations": [],
@@ -832,6 +884,7 @@
   {
     "repo": "Code/organvm/metasystem-master",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 16,
     "violations": [],
@@ -843,6 +896,7 @@
   {
     "repo": "Code/organvm/narratological-algorithmic-lenses",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 12,
     "violations": [],
@@ -854,6 +908,7 @@
   {
     "repo": "Code/organvm/recursive-engine--generative-entity",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 15,
     "violations": [],
@@ -865,6 +920,7 @@
   {
     "repo": "Code/organvm/reverse-engine-recursive-run",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 13,
     "violations": [],
@@ -876,6 +932,7 @@
   {
     "repo": "Code/organvm/social-automation",
     "layout": "flat",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [],
@@ -887,6 +944,7 @@
   {
     "repo": "Workspace/_diagnostics",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 2,
     "violations": [],
@@ -896,6 +954,7 @@
   {
     "repo": "Workspace/organvm/.github-org",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 11,
     "violations": [],
@@ -905,6 +964,7 @@
   {
     "repo": "Code/organvm/a-i--skills",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 10,
     "violations": [],
@@ -914,6 +974,7 @@
   {
     "repo": "Code/organvm/a-i--skills.broken-xattr-2026-05-16",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 10,
     "violations": [],
@@ -923,6 +984,7 @@
   {
     "repo": "Code/organvm/a-i--skills.fresh",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 10,
     "violations": [],
@@ -932,6 +994,7 @@
   {
     "repo": "Code/organvm/adaptive-personal-syllabus",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [],
@@ -941,6 +1004,7 @@
   {
     "repo": "Code/organvm/alchemical-synthesizer",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 9,
     "violations": [],
@@ -950,6 +1014,7 @@
   {
     "repo": "Code/organvm/analytics-engine",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -959,6 +1024,7 @@
   {
     "repo": "Code/organvm/auto-revision-epistemic-engine",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 18,
     "violations": [],
@@ -968,6 +1034,7 @@
   {
     "repo": "Code/organvm/blender-mcp",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 7,
     "violations": [],
@@ -977,6 +1044,7 @@
   {
     "repo": "Code/organvm/collective-persona-operations",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -986,6 +1054,7 @@
   {
     "repo": "Code/organvm/commerce--meta",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 7,
     "violations": [],
@@ -995,6 +1064,7 @@
   {
     "repo": "Code/organvm/conversation-corpus-engine",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 11,
     "violations": [],
@@ -1004,6 +1074,7 @@
   {
     "repo": "Code/organvm/editorial-standards",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 8,
     "violations": [],
@@ -1013,6 +1084,7 @@
   {
     "repo": "Code/organvm/essay-pipeline",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 11,
     "violations": [],
@@ -1022,6 +1094,7 @@
   {
     "repo": "Code/organvm/gemini-cli-blender-extension",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 3,
     "violations": [],
@@ -1031,6 +1104,7 @@
   {
     "repo": "Code/organvm/linguistic-atomization-framework",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 13,
     "violations": [],
@@ -1040,6 +1114,7 @@
   {
     "repo": "Code/organvm/nexus--babel-alexandria",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 14,
     "violations": [],
@@ -1049,6 +1124,7 @@
   {
     "repo": "Code/organvm/orchestration-start-here",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 19,
     "violations": [],
@@ -1058,6 +1134,7 @@
   {
     "repo": "Code/organvm/org-dotgithub",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 11,
     "violations": [],
@@ -1067,6 +1144,7 @@
   {
     "repo": "Code/organvm/organvm-corpvs-testamentvm",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 57,
     "violations": [],
@@ -1076,6 +1154,7 @@
   {
     "repo": "Code/organvm/public-process",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 22,
     "violations": [],
@@ -1085,6 +1164,7 @@
   {
     "repo": "Code/organvm/reading-group-curriculum",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [],
@@ -1094,6 +1174,7 @@
   {
     "repo": "Code/organvm/reading-observatory",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -1103,6 +1184,7 @@
   {
     "repo": "Code/organvm/salon-archive",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 10,
     "violations": [],
@@ -1112,6 +1194,7 @@
   {
     "repo": "Code/organvm/sema-metra--alchemica-mundi",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 18,
     "violations": [],
@@ -1119,8 +1202,19 @@
     "score": 100
   },
   {
+    "repo": "Code/organvm/stakeholder-portal",
+    "layout": "src",
+    "framework": "nextjs",
+    "is_code": true,
+    "root_files": 20,
+    "violations": [],
+    "notes": [],
+    "score": 100
+  },
+  {
     "repo": "Code/organvm/universal-node-network",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 11,
     "violations": [],
@@ -1130,6 +1224,7 @@
   {
     "repo": "Code/organvm/vigiles-aeternae--agon-cosmogonicum",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -1139,6 +1234,7 @@
   {
     "repo": "Code/organvm/vigiles-aeternae--corpus-mythicum",
     "layout": "flat",
+    "framework": null,
     "is_code": false,
     "root_files": 8,
     "violations": [],
@@ -1148,6 +1244,7 @@
   {
     "repo": "Code/organvm/vox--architectura-gubernatio",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 9,
     "violations": [],
@@ -1157,6 +1254,7 @@
   {
     "repo": "Code/organvm/vox--publica",
     "layout": "src",
+    "framework": null,
     "is_code": true,
     "root_files": 13,
     "violations": [],

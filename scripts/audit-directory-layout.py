@@ -62,6 +62,25 @@ def max_depth(base: Path, limit: int = 8) -> int:
     return best
 
 
+def detect_framework(repo: Path) -> str | None:
+    """Frameworks that IMPOSE directory structure (#26 §4 exemption).
+
+    Their mandated nesting (e.g. Next.js src/app/<route>/...) and idiomatic
+    type-folders (src/components/) are NOT violations.
+    """
+    if list(repo.glob("next.config.*")) or (repo / "src" / "app").is_dir() and (repo / "package.json").exists():
+        # confirm it's actually Next-ish, not a coincidental app/ dir
+        if list(repo.glob("next.config.*")) or (repo / "next-env.d.ts").exists():
+            return "nextjs"
+    if list(repo.glob("svelte.config.*")):
+        return "sveltekit"
+    if list(repo.glob("nuxt.config.*")):
+        return "nuxt"
+    if list(repo.glob("remix.config.*")):
+        return "remix"
+    return None
+
+
 def classify_layout(repo: Path) -> str:
     has_apps = (repo / "apps").is_dir()
     has_pkgs = (repo / "packages").is_dir() or (repo / "libs").is_dir()
@@ -83,6 +102,7 @@ def audit_repo(repo: Path) -> dict:
     root_entries = [e for e in repo.iterdir() if not e.name.startswith(".")]
     root_files = [e for e in root_entries if e.is_file()]
     layout = classify_layout(repo)
+    framework = detect_framework(repo)
     is_code = any((repo / m).exists() for m in
                   ("package.json", "pyproject.toml", "go.mod", "Cargo.toml", "setup.py"))
 
@@ -108,16 +128,17 @@ def audit_repo(repo: Path) -> dict:
                 if "components" in smells:
                     comp = base / "components"
                     n = sum(1 for _ in comp.iterdir()) if comp.is_dir() else 0
+                    # an overgrown components/ is a real smell even under a framework
                     if n > 20:
                         violations.append(f"{comp.relative_to(repo)}/ has {n} entries >20 — switch to feature folders (§4/§8)")
-                    else:
+                    elif not framework:
                         notes.append(f"type-folder(s) {sorted(smells)} under {base.name or '.'} — prefer feature folders (§4)")
-                else:
+                elif not framework:
                     notes.append(f"type-folder(s) {sorted(smells)} under {base.name or '.'} — prefer feature folders (§4)")
 
-    # §4 nesting depth under src/
+    # §4 nesting depth under src/ — exempt framework-imposed routing (Next app/, etc.)
     src = repo / "src"
-    if src.is_dir():
+    if src.is_dir() and not framework:
         d = max_depth(src)
         if d > MAX_NESTING:
             violations.append(f"src/ nesting depth {d} >{MAX_NESTING} (§4)")
@@ -130,6 +151,7 @@ def audit_repo(repo: Path) -> dict:
     return {
         "repo": str(repo.relative_to(HOME)),
         "layout": layout,
+        "framework": framework,
         "is_code": is_code,
         "root_files": len(root_files),
         "violations": violations,

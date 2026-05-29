@@ -1,16 +1,7 @@
 # Standard #26 conformance — 107 repos scanned
 
-Clean (no violations): 43/107
+Clean (no violations): 44/107
 
-!! [ 20] Code/organvm/stakeholder-portal  (src, 22 root files)
-      ✗ missing root LICENSE
-      ✗ root file count 22 >20 (consolidate; §8)
-      ✗ src/ nesting depth 4 >3 (§4)
-      · type-folder(s) ['components'] under src — prefer feature folders (§4)
-!! [ 25] Code/organvm/growth-auditor  (src, 8 root files)
-      ✗ missing root LICENSE
-      ✗ src/components/ has 37 entries >20 — switch to feature folders (§4/§8)
-      ✗ src/ nesting depth 5 >3 (§4)
 !! [ 40] Code/organvm/tool-interaction-design  (flat, 17 root files)
       ✗ missing root README.md
       ✗ missing root LICENSE
@@ -47,6 +38,9 @@ Clean (no violations): 43/107
 !! [ 50] Code/organvm/digital-income-organism-inquiry  (flat, 9 root files)
       ✗ missing root README.md
       ✗ missing root LICENSE
+!! [ 50] Code/organvm/growth-auditor  (src, 8 root files)
+      ✗ missing root LICENSE
+      ✗ src/components/ has 37 entries >20 — switch to feature folders (§4/§8)
 !! [ 50] Code/organvm/mesh  (src, 10 root files)
       ✗ missing root README.md
       ✗ missing root LICENSE
@@ -80,9 +74,6 @@ Clean (no violations): 43/107
 !! [ 70] Code/organvm/content-engine--asset-amplifier  (monorepo, 17 root files)
       ✗ missing root LICENSE
       · type-folder(s) ['services'] under content-engine--asset-amplifier — prefer feature folders (§4)
-!! [ 70] Code/organvm/ivi374ivi027-05  (src, 18 root files)
-      ✗ missing root LICENSE
-      · type-folder(s) ['components', 'hooks'] under src — prefer feature folders (§4)
 !! [ 70] Code/organvm/schema-definitions  (flat, 10 root files)
       ✗ missing root LICENSE
       · flat layout on a code repo — justify or move to src/ (§2)
@@ -121,6 +112,8 @@ Clean (no violations): 43/107
       ✗ missing root LICENSE
 !! [ 75] Code/organvm/fastmcp  (src, 12 root files)
       ✗ src/ nesting depth 5 >3 (§4)
+!! [ 75] Code/organvm/ivi374ivi027-05  (src, 18 root files)
+      ✗ missing root LICENSE
 !! [ 75] Code/organvm/k6-contrib  (go, 18 root files)
       ✗ missing root LICENSE
 !! [ 75] Code/organvm/koinonia-db  (src, 10 root files)
@@ -216,6 +209,7 @@ OK [100] Code/organvm/reading-group-curriculum  (src, 10 root files)
 OK [100] Code/organvm/reading-observatory  (src, 9 root files)
 OK [100] Code/organvm/salon-archive  (src, 10 root files)
 OK [100] Code/organvm/sema-metra--alchemica-mundi  (src, 18 root files)
+OK [100] Code/organvm/stakeholder-portal  (src, 20 root files)
 OK [100] Code/organvm/universal-node-network  (src, 11 root files)
 OK [100] Code/organvm/vigiles-aeternae--agon-cosmogonicum  (src, 9 root files)
 OK [100] Code/organvm/vigiles-aeternae--corpus-mythicum  (flat, 8 root files)
