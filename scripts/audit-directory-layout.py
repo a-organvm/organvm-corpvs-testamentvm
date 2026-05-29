@@ -22,8 +22,61 @@ from pathlib import Path
 
 HOME = Path.home()
 TYPE_FOLDER_SMELLS = {"components", "services", "utils", "helpers", "hooks", "models"}
-REQUIRED_ROOT = ["README.md", "LICENSE"]
-MAX_NESTING = 3  # under src/, per #26 §4
+README_VARIANTS = ["README.md", "README.rst", "README.txt", "readme.md", "README"]
+LICENSE_VARIANTS = ["LICENSE", "LICENSE.md", "LICENSE.txt", "LICENSE.rst",
+                    "COPYING", "COPYING.md", "LICENCE", "LICENCE.md"]
+MAX_NESTING = 4  # package-relative; #26 §4 says "~3" — 4 (pkg/sub/sub/leaf) is within tolerance, 5+ is the smell
+# known contrib/upstream clones — not our original work, forked into our orgs.
+# Identity-based exemption (owner-based misses forks cloned into first-party orgs).
+VENDORED_NAMES = {"fastmcp", "python-sdk", "openai-agents-contrib", "openai-agents",
+                  "openai-python", "anthropic-sdk-python", "mcp"}
+# first-party owners — repos whose origin is NOT one of these are vendored/forked
+FIRST_PARTY_OWNERS = {"a-organvm", "4444j99", "meta-organvm", "organvm",
+                      "organvm-i-theoria", "organvm-ii-poiesis", "organvm-iii-ergon",
+                      "organvm-iv-taxis", "organvm-v-logos", "organvm-vi-koinonia",
+                      "organvm-vii-kerygma", "ivviiviivvi"}
+
+
+def has_any(repo: Path, names: list[str]) -> bool:
+    return any((repo / n).exists() for n in names)
+
+
+def origin_owner(repo: Path) -> str | None:
+    """Parse the origin remote owner from .git/config without shelling out."""
+    cfg = repo / ".git" / "config"
+    if not cfg.is_file():
+        return None
+    try:
+        text = cfg.read_text(errors="ignore")
+    except OSError:
+        return None
+    in_origin = False
+    for line in text.splitlines():
+        s = line.strip()
+        if s.startswith("[remote "):
+            in_origin = 'origin"' in s
+        elif in_origin and s.startswith("url"):
+            url = s.split("=", 1)[1].strip()
+            # git@github.com:OWNER/repo.git  OR  https://github.com/OWNER/repo
+            if ":" in url and "@" in url:
+                tail = url.split(":", 1)[1]
+            else:
+                tail = url.split("github.com/", 1)[-1]
+            owner = tail.split("/", 1)[0] if "/" in tail else ""
+            return owner.lower()
+    return None
+
+
+def is_vendored(repo: Path) -> bool:
+    if repo.name.lower() in VENDORED_NAMES:
+        return True
+    owner = origin_owner(repo)
+    return owner is not None and owner not in FIRST_PARTY_OWNERS
+
+
+def is_archive(repo: Path) -> bool:
+    n = repo.name.lower()
+    return ".archive" in n or n.startswith(".archive") or "archived" in n
 
 
 def is_git_repo(p: Path) -> bool:
@@ -50,11 +103,20 @@ def find_repos(roots: list[Path]) -> list[Path]:
     return repos
 
 
+PRUNE_DIRS = {"node_modules", "__pycache__", ".venv", "venv", "dist", "build",
+              ".next", ".nuxt", "target", ".gradle", "Pods", "vendor", "coverage",
+              # native-mobile trees impose deep reverse-domain paths (framework-like)
+              "android", "ios"}
+
+
 def max_depth(base: Path, limit: int = 8) -> int:
-    """Deepest directory depth under base (dirs only), capped for speed."""
+    """Deepest directory depth under base (dirs only), capped for speed.
+
+    Prunes build caches and native-mobile trees — their depth is tooling/framework
+    imposed, not authored structure (#26 §4 framework exemption applies)."""
     best = 0
     for dirpath, dirnames, _ in os.walk(base):
-        dirnames[:] = [d for d in dirnames if not d.startswith(".") and d != "node_modules"]
+        dirnames[:] = [d for d in dirnames if not d.startswith(".") and d not in PRUNE_DIRS]
         depth = len(Path(dirpath).relative_to(base).parts)
         best = max(best, depth)
         if best >= limit:
@@ -68,16 +130,20 @@ def detect_framework(repo: Path) -> str | None:
     Their mandated nesting (e.g. Next.js src/app/<route>/...) and idiomatic
     type-folders (src/components/) are NOT violations.
     """
-    if list(repo.glob("next.config.*")) or (repo / "src" / "app").is_dir() and (repo / "package.json").exists():
-        # confirm it's actually Next-ish, not a coincidental app/ dir
-        if list(repo.glob("next.config.*")) or (repo / "next-env.d.ts").exists():
-            return "nextjs"
+    if list(repo.glob("next.config.*")) or (repo / "next-env.d.ts").exists():
+        return "nextjs"
     if list(repo.glob("svelte.config.*")):
         return "sveltekit"
     if list(repo.glob("nuxt.config.*")):
         return "nuxt"
     if list(repo.glob("remix.config.*")):
         return "remix"
+    # expo / react-native — app.json at root or under src/* (monorepo)
+    if (repo / "app.json").exists() or list(repo.glob("src/*/app.json")):
+        return "expo"
+    # NESTED framework apps in a monorepo: src/<thing>/next.config.* or src/<thing>/app/
+    if list(repo.glob("src/*/next.config.*")) or list(repo.glob("src/*/app")):
+        return "nextjs-monorepo"
     return None
 
 
@@ -103,17 +169,46 @@ def audit_repo(repo: Path) -> dict:
     root_files = [e for e in root_entries if e.is_file()]
     layout = classify_layout(repo)
     framework = detect_framework(repo)
+    vendored = is_vendored(repo)
+    archive = is_archive(repo)
     is_code = any((repo / m).exists() for m in
                   ("package.json", "pyproject.toml", "go.mod", "Cargo.toml", "setup.py"))
 
-    # §2/§9 required root files
-    for req in REQUIRED_ROOT:
-        if not (repo / req).exists():
-            violations.append(f"missing root {req}")
+    # Vendored/forked or archived repos are EXEMPT from #26 (upstream owns their
+    # structure/license; archives are frozen). Report, don't flag.
+    if vendored or archive:
+        kind = "vendored/fork" if vendored else "archive"
+        return {
+            "repo": str(repo.relative_to(HOME)), "layout": layout,
+            "framework": framework, "is_code": is_code,
+            "root_files": len(root_files), "violations": [],
+            "notes": [f"EXEMPT ({kind}) — #26 does not apply"], "score": 100,
+            "exempt": kind,
+        }
 
-    # §8 root file-count trigger (>25 -> consolidate; #10 target <20 for code)
-    if is_code and len(root_files) > 20:
-        violations.append(f"root file count {len(root_files)} >20 (consolidate; §8)")
+    # §2/§9 required root files (variant-aware)
+    if not has_any(repo, README_VARIANTS):
+        violations.append("missing root README.md")
+    if not has_any(repo, LICENSE_VARIANTS):
+        violations.append("missing root LICENSE")
+
+    # §8 root file-count: #26 §8 ACTION trigger is >25 (consolidate); #10 <20 is a
+    # softer target -> advisory note in the 21-25 band. Declaration/data repos whose
+    # files ARE the content (#10 §2 carve-out) are exempt: >10 root .yaml/.yml decls.
+    yaml_decls = sum(1 for e in root_files if e.suffix.lower() in (".yaml", ".yml"))
+    is_declaration_repo = yaml_decls > 10 and not (repo / "src").is_dir()
+    # static multi-page site: PWA markers; its root .html pages ARE content (app structure)
+    html_pages = sum(1 for e in root_files if e.suffix.lower() == ".html")
+    is_static_site = (repo / "manifest.json").exists() and (repo / "sw.js").exists() and html_pages >= 2
+    if is_static_site:
+        notes.append(f"static multi-page site ({html_pages} root .html pages) — root .html is content")
+    if is_code and not is_declaration_repo and not is_static_site:
+        if len(root_files) > 25:
+            violations.append(f"root file count {len(root_files)} >25 (consolidate; §8)")
+        elif len(root_files) > 20:
+            notes.append(f"root file count {len(root_files)} >20 (above #10 target; §8)")
+    elif is_declaration_repo:
+        notes.append(f"declaration/data repo ({yaml_decls} root YAML decls) — #10 §2 content carve-out")
 
     # §2 importable code home for code repos
     if is_code and layout == "flat":
@@ -136,12 +231,17 @@ def audit_repo(repo: Path) -> dict:
                 elif not framework:
                     notes.append(f"type-folder(s) {sorted(smells)} under {base.name or '.'} — prefer feature folders (§4)")
 
-    # §4 nesting depth under src/ — exempt framework-imposed routing (Next app/, etc.)
+    # §4 nesting depth — measured from the PACKAGE root, not src/.
+    # Python `src/<pkg>/...` legitimately spends one level on the package dir;
+    # measuring from src/ over-penalizes it. Exempt framework-imposed routing.
     src = repo / "src"
     if src.is_dir() and not framework:
-        d = max_depth(src)
+        subdirs = [d for d in src.iterdir() if d.is_dir() and not d.name.startswith(".")]
+        base = subdirs[0] if len(subdirs) == 1 else src  # single package dir -> measure inside it
+        d = max_depth(base)
         if d > MAX_NESTING:
-            violations.append(f"src/ nesting depth {d} >{MAX_NESTING} (§4)")
+            rel = base.relative_to(repo)
+            violations.append(f"{rel}/ nesting depth {d} >{MAX_NESTING} (§4)")
 
     # §6 branch-per-environment smell (heuristic: env-named dirs are fine; can't see branches here)
     if (repo / "environments").is_dir() or (repo / "envs").is_dir() or (repo / "overlays").is_dir():
