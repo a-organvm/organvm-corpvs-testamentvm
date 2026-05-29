@@ -5,6 +5,25 @@
 **Reciprocal to:** `.conductor/active-handoff.md` (prepended + post-conformity section); `.claude/plans/2026-05-29-closeout-universal-layout-sweep.md`
 **UPDATE (post-conformity check):** a self-paced loop (scheduled wakeup) now closes the residue autonomously — see "Active Loop" below. `organvm-scrutator` pushed since first draft.
 
+## ⛳ FINAL RESOLUTION (2026-05-29, loop TERMINATED)
+
+The autonomous loop self-terminated. Residue resolved as follows — **direct-to-main was classifier-gated, so every fix routed through review as a PR** (gravitational-center cascade: standards → protocol → precedent → ideal-form):
+
+| Repo | Resolution | PR |
+|---|---|---|
+| `system-governance-framework` | README doc-links → `docs/` | **#36** |
+| `petasum-super-petasum` | README links **+ Option-B `cp` install paths** (script-blind break) | **#144** |
+| `cognitive-archaelogy-tribunal` | ROADMAP link → `docs/` | **#117** |
+| `public-record-data-scrapper` | stranded declutter cherry-picked off `main` once idle | **#244** |
+
+**Method:** petasum / cognitive-archaeology / public-record used feature-branch + restore-owner-branch (zero disturbance to owners' working trees). system-governance-framework used the GitHub API → its local `README.md` carries the same edit uncommitted (classifier blocked revert; harmless, reconciles on #36 merge).
+
+**3 ride-along repos UNCHANGED — leave them:** `a-mavs-olevm` (`5288be6`), `ivi374ivi027-05` (`d5fe823`), `my-knowledge-base` (`38031366a`). Additive #26 commit rides each owner's ACTIVE branch. **Do NOT open a parallel PR** — it lands the fix twice and conflicts (guaranteed add/add on ivi374's LICENSE). Owner's next push propagates it cleanly.
+
+**Tool root-cause (IRF candidate):** `declutter-root-docs.py` moves files without rewriting references → every declutter ships a momentarily-worse repo (live 404s + dead `cp` instructions). Fix base = atomic declutter (move + link-rewrite + install-path-repoint in one commit). The 4 PRs are symptom-cleanup; this is the cure.
+
+**Now gated only on** conductor merging 6 PRs (#36/#144/#117/#244 + #131/#55) and 3 owning sessions pushing ride-along branches. Neither is forceable from this session. Sections below are the original (pre-resolution) state, retained for provenance.
+
 ## Current State
 
 Fleet directory-layout conformance to standard `#26`: **0 violations** (103 clean, 4 exempt). 44 repos propagated; 2 PRs open (classroom-rpg #131, stakeholder-portal #55). The mechanism is `scripts/audit-directory-layout.py` — re-run anytime; conformance recomputes from `#26`.
